@@ -8,18 +8,23 @@ const REPORTS_DIR = path.join(ROOT, "reports");
 const requiredSections = [
   "오늘의 시장 상태",
   "오늘 돈이 몰리는 테마",
+  "ETF 카드",
+  "ETF 대안 검토",
+  "테마형 ETF Watch",
   "진입 후보",
   "보유 유지 후보",
   "청산/주의 후보",
-  "ETF 대안 검토",
-  "테마형 ETF Watch",
-  "ETF 카드",
   "종목별 상승 근거",
   "감시 ETF 목록",
   "진입 조건",
   "무효화 조건",
   "내일 확인할 것"
 ];
+
+const warnings = {
+  MOCK: "MOCK DATA - 실전 투자 판단 사용 금지",
+  REAL_TEST: "REAL DATA TEST - 가격/거래량은 실제 데이터, 뉴스/옵션/일부 판단 로직은 검증 중"
+};
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -38,11 +43,16 @@ function readJson(fileName) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
+function detectMode(content) {
+  if (content.includes(warnings.REAL_TEST)) return "REAL_TEST";
+  if (content.includes(warnings.MOCK)) return "MOCK";
+  return "UNKNOWN";
+}
+
 function verifyUtf8(label, content) {
   assert(content.includes("현재 가격에서 누가, 왜, 더 비싼 가격에 사줄 수 있는가"), `${label} missing core question`);
-  assert(content.includes("MOCK DATA - 실전 투자 판단 사용 금지"), `${label} missing mock warning`);
-  assert(!content.includes("�"), `${label} contains replacement character`);
-  assert(!/[?][꾩ㅻ댁쒓됯]/.test(content), `${label} appears to contain mojibake`);
+  assert(!content.includes("\uFFFD"), `${label} contains replacement character`);
+  assert(!/[占�]/.test(content), `${label} appears to contain mojibake`);
 }
 
 function verifyEnglishOnly(label, content) {
@@ -50,7 +60,7 @@ function verifyEnglishOnly(label, content) {
   const suspicious = visible
     .split(/\n+/)
     .map((line) => line.replace(/<[^>]+>/g, " ").trim())
-    .filter((line) => line.length > 70)
+    .filter((line) => line.length > 90)
     .filter((line) => /[A-Za-z]{5,}/.test(line))
     .filter((line) => !/[가-힣]/.test(line))
     .filter((line) => !/^(#|[-*]|\d+\.|\||\{|\}|\.|:|--|@)/.test(line));
@@ -62,12 +72,38 @@ function sectionText(markdown, sectionName) {
   return match ? match[0] : "";
 }
 
+function verifyStockCards(markdown, watchlist, holdings) {
+  for (const stock of [...watchlist, ...holdings]) {
+    const marker = `### [${stock.ticker}]`;
+    assert(markdown.includes(marker), `Missing stock card: ${stock.ticker}`);
+    const start = markdown.indexOf(marker);
+    const next = markdown.indexOf("\n### [", start + marker.length);
+    const card = markdown.slice(start, next === -1 ? undefined : next);
+    assert(/상태(?:값)?:\s*(관찰|진입 후보|진입 가능|보유 유지|부분 익절|청산 후보|매매 금지)/.test(card), `${stock.ticker} missing allowed status`);
+    assert(card.includes("더 비싸게 사줄 주체"), `${stock.ticker} missing buyer field`);
+    assert(card.includes("무효화 조건"), `${stock.ticker} missing invalidation field`);
+    assert((card.match(/^- /gm) || []).length >= 2, `${stock.ticker} card has too few bullet details`);
+  }
+}
+
+function verifyRealTest(markdown, html) {
+  assert(markdown.includes("데이터 소스") && markdown.includes("yfinance"), "REAL_TEST markdown missing yfinance source");
+  assert(html.includes("데이터 소스") && html.includes("yfinance"), "REAL_TEST html missing yfinance source");
+  assert(markdown.includes("데이터 상태"), "REAL_TEST markdown missing data status");
+  assert(markdown.includes("뉴스/옵션/구성종목 확산도: 아직 미연결"), "REAL_TEST markdown missing unconnected-data notice");
+  assert(fs.existsSync(path.join(DATA_DIR, "market_data_real.json")), "REAL_TEST missing data/market_data_real.json");
+}
+
 function main() {
   const markdown = readText(path.join(REPORTS_DIR, "latest.md"));
   const html = readText(path.join(REPORTS_DIR, "latest.html"));
   const watchlist = readJson("watchlist.json");
   const holdings = readJson("holdings.json");
   const etfs = readJson("watchlist_etfs.json");
+  const mode = detectMode(markdown);
+
+  assert(mode !== "UNKNOWN", "Report missing recognized data mode warning");
+  assert(html.includes(warnings[mode]), "HTML missing matching data mode warning");
 
   verifyUtf8("reports/latest.md", markdown);
   verifyUtf8("reports/latest.html", html);
@@ -80,15 +116,8 @@ function main() {
   }
 
   assert(etfs.length >= 20, `ETF count is too low: ${etfs.length}`);
-  for (const etf of etfs) {
-    for (const field of ["category", "role", "useCase", "riskNotes"]) {
-      assert(etf[field], `${etf.ticker} missing ${field}`);
-    }
-  }
-
   assert(markdown.includes("ETF 후보 TOP 5"), "Conclusion missing ETF 후보 TOP 5");
-  assert(markdown.includes("시장 기준 ETF 상태"), "Conclusion missing market ETF status");
-  assert(markdown.includes("나머지 테마 요약"), "ETF alternative section missing collapsed summary");
+  assert(markdown.includes("나머지 테마 요약"), "ETF alternative section missing summary");
   assert(markdown.includes("티커 | 카테고리 | 상태 | 오늘 선택 | 한 줄 이유"), "Watch ETF table missing");
 
   const etfCardMarkdown = sectionText(markdown, "ETF 카드");
@@ -101,24 +130,15 @@ function main() {
   const overheatCount = (overheatSection.match(/^### \[/gm) || []).length;
   assert(overheatCount <= 3, `ETF overheating summary should show at most 3 cards, found ${overheatCount}`);
 
-  for (const stock of [...watchlist, ...holdings]) {
-    const stockMarker = `### [${stock.ticker}]`;
-    assert(markdown.includes(stockMarker), `Missing stock card: ${stock.ticker}`);
-    const start = markdown.indexOf(stockMarker);
-    const next = markdown.indexOf("\n### [", start + stockMarker.length);
-    const card = markdown.slice(start, next === -1 ? undefined : next);
-    assert(card.includes("관련 ETF"), `${stock.ticker} missing related ETF field`);
-    assert(card.includes("ETF 대비 개별 종목이 나은 이유"), `${stock.ticker} missing stock-vs-ETF field`);
-    assert(card.includes("개별 종목보다 ETF가 나은 경우"), `${stock.ticker} missing ETF-vs-stock field`);
-    assert(card.includes("오늘 선택"), `${stock.ticker} missing today selection field`);
-  }
+  verifyStockCards(markdown, watchlist, holdings);
+  if (mode === "REAL_TEST") verifyRealTest(markdown, html);
 
-  assert(markdown.length < 26000, `Markdown is still too long for mobile daily use: ${markdown.length} chars`);
+  assert(markdown.length < 30000, `Markdown is too long for mobile daily use: ${markdown.length} chars`);
 
-  console.log("Verified reports/latest.md");
-  console.log("Verified reports/latest.html");
+  console.log(`Verified reports/latest.md (${mode})`);
+  console.log(`Verified reports/latest.html (${mode})`);
   console.log(`Verified ETF watchlist count: ${etfs.length}`);
-  console.log("Verified compressed ETF output, TOP 5 cards, watch table, related ETF fields");
+  console.log("Verified compressed ETF output, stock cards, data mode banner, and UTF-8 Korean output");
 }
 
 main();

@@ -23,12 +23,23 @@ function extractGeneratedAt(html) {
   return match ? match[1].trim().replace(/\s+/g, " ") : new Date().toLocaleString("ko-KR", { timeZone: "Asia/Seoul" });
 }
 
+function detectDataMode(html) {
+  if (html.includes("REAL DATA TEST")) {
+    return "REAL_TEST - 가격/거래량은 실제 데이터, 뉴스/옵션/일부 판단 로직은 검증 중";
+  }
+  if (html.includes("MOCK DATA")) {
+    return "MOCK DATA - 실전 투자 판단 사용 금지";
+  }
+  return "UNKNOWN";
+}
+
 function injectPagesLinks(html) {
   const generatedAt = extractGeneratedAt(html);
+  const dataMode = detectDataMode(html);
   const links = `
     <section class="pages-links" data-pages-links>
       <h2>웹 리포트 링크</h2>
-      <p><strong>데이터 모드:</strong> MOCK DATA - 실전 투자 판단 사용 금지</p>
+      <p><strong>데이터 모드:</strong> ${dataMode}</p>
       <p><strong>생성 시각:</strong> ${generatedAt}</p>
       <p>
         <a href="latest.md">Markdown 원문 보기</a>

@@ -5,12 +5,16 @@
   "description": "Local daily trading thesis report generator using mock data.",
   "scripts": {
     "daily-report": "node src/main.js",
+    "fetch-real-data": "node scripts/run-fetch-real-data.js",
+    "daily-report:real-test": "node src/main.js --real-test",
     "verify-report": "node scripts/verify-report.js",
     "screenshot-report": "node scripts/screenshot-report.js",
     "daily-check": "node src/main.js && node scripts/verify-report.js && node scripts/screenshot-report.js",
     "daily-check:win": "node src/main.js && node scripts/verify-report.js && node scripts/screenshot-report.js",
+    "daily-check:real-test": "npm.cmd run fetch-real-data && npm.cmd run daily-report:real-test && npm.cmd run verify-report && npm.cmd run screenshot-report",
     "prepare-pages": "node scripts/prepare-pages.js",
-    "daily-publish": "npm.cmd run daily-check:win && npm.cmd run prepare-pages"
+    "daily-publish": "npm.cmd run daily-check:win && npm.cmd run prepare-pages",
+    "daily-publish:real-test": "npm.cmd run daily-check:real-test && npm.cmd run prepare-pages"
   },
   "devDependencies": {
     "playwright": "^1.53.0"

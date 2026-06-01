@@ -6,44 +6,16 @@
     "theme": "AI 인프라",
     "status": "진입 가능",
     "score": 91,
-    "scoreBreakdown": {
-      "catalyst": 22,
-      "flow": 24,
-      "narrative": 20,
-      "priceLocation": 17,
-      "riskDeduction": -8
-    },
+    "scoreBreakdown": { "catalyst": 22, "flow": 24, "narrative": 20, "priceLocation": 17, "riskDeduction": -8 },
     "currentPrice": 1120.4,
     "changePct": 2.8,
     "relativeVolume": 1.7,
-    "buyers": [
-      "AI/반도체 모멘텀 추종 기관",
-      "반도체 ETF 리밸런싱 수요",
-      "단기 옵션 플로우"
-    ],
-    "buyerReasons": [
-      "시장이 NVDA를 가장 유동성 높은 AI 인프라 대표주로 보기 때문",
-      "강한 거래량이 유지되면 추세 추종 자금이 추가 유입될 수 있기 때문"
-    ],
-    "bullishEvidence": [
-      "AI 가속기 수요 서사가 유지됨",
-      "대형주 모멘텀 자금의 대표 노출처로 기능함",
-      "상대 거래량이 mock 기준 평균을 웃돎"
-    ],
-    "entryConditions": [
-      "장 초반 90분 거래량이 mock 평균 대비 1.5배 이상",
-      "전일 고점 위에서 지지 확인",
-      "SOXX가 약세 전환하지 않을 것"
-    ],
-    "invalidationConditions": [
-      "5일 이동평균선 이탈",
-      "돌파 후 재진입 실패",
-      "SOXX 동반 약세 전환"
-    ],
-    "todayAction": [
-      "갭상승 추격 금지",
-      "눌림 후 VWAP 회복 시에만 진입 후보 유지"
-    ],
+    "buyers": ["AI/반도체 모멘텀 추종 기관", "반도체 ETF 리밸런싱 수요", "단기 옵션 플로우"],
+    "buyerReasons": ["시장이 NVDA를 가장 유동성 높은 AI 인프라 대표주로 보기 때문", "강한 거래량이 유지되면 추세 추종 자금이 추가 유입될 수 있기 때문"],
+    "bullishEvidence": ["AI 가속기 수요 서사 유지", "대형주 모멘텀 자금 유입 가능성", "상대 거래량 증가"],
+    "entryConditions": ["장 초반 90분 거래량이 평균 대비 1.5배 이상", "전일 고점 위에서 지지 확인", "SOXX가 약세 전환하지 않을 것"],
+    "invalidationConditions": ["5일 이동평균선 이탈", "돌파 후 재진입 실패", "SOXX 동반 약세 전환"],
+    "todayAction": ["갭상승 추격 금지", "눌림 후 VWAP 회복 시에만 진입 후보 유지"],
     "dataReliability": "MOCK DATA"
   },
   {
@@ -53,44 +25,16 @@
     "theme": "반도체 공급망",
     "status": "진입 후보",
     "score": 82,
-    "scoreBreakdown": {
-      "catalyst": 20,
-      "flow": 20,
-      "narrative": 18,
-      "priceLocation": 16,
-      "riskDeduction": -8
-    },
+    "scoreBreakdown": { "catalyst": 20, "flow": 20, "narrative": 18, "priceLocation": 16, "riskDeduction": -8 },
     "currentPrice": 168.2,
     "changePct": 1.9,
     "relativeVolume": 1.3,
-    "buyers": [
-      "AI 설비투자 확산을 보는 기관",
-      "반도체 공급망으로 확산을 확인하려는 추세 자금",
-      "NVDA 외 대안을 찾는 섹터 자금"
-    ],
-    "buyerReasons": [
-      "AI 하드웨어 수요가 파운드리 노출로 확산될 수 있기 때문",
-      "주도주가 넓어질 때 공급망 종목이 후속 관심을 받을 수 있기 때문"
-    ],
-    "bullishEvidence": [
-      "AI capex 서사가 반도체 공급망으로 이어짐",
-      "주도주 외 대체 노출처로 해석될 수 있음",
-      "SOXX 강세가 유지되면 확인 신호가 됨"
-    ],
-    "entryConditions": [
-      "전일 가치 영역 위에서 거래 유지",
-      "SOXX가 양호한 흐름 유지",
-      "장중 눌림에서 VWAP 회복 확인"
-    ],
-    "invalidationConditions": [
-      "저항 구간에서 반복적으로 밀림",
-      "SOXX가 음전",
-      "상대 거래량이 mock 기준 1.0배 아래로 둔화"
-    ],
-    "todayAction": [
-      "주도주가 아니라 확산 확인용으로 관찰",
-      "SOXX 약세 전환 시 진입 후보에서 제외"
-    ],
+    "buyers": ["AI 수혜 확산을 보는 기관", "반도체 공급망으로 확산을 확인하려는 추세 자금", "NVDA 대안을 찾는 섹터 자금"],
+    "buyerReasons": ["AI 하드웨어 수요가 파운드리 매출로 확산될 수 있기 때문", "주도주가 비싸질 때 공급망 종목이 후속 관심을 받을 수 있기 때문"],
+    "bullishEvidence": ["AI capex 서사가 반도체 공급망으로 이어짐", "주도주의 대체 매수처로 해석 가능", "SOXX 강세가 유지되면 확인 신호"],
+    "entryConditions": ["전일 가치 영역 위에서 거래 유지", "SOXX가 양호한 흐름 유지", "장중 눌림에서 VWAP 회복 확인"],
+    "invalidationConditions": ["지지 구간에서 반복적으로 밀림", "SOXX가 약세 전환", "상대 거래량이 1.0배 아래로 둔화"],
+    "todayAction": ["주도주가 아닌 확산 확인용으로 관찰", "SOXX 약세 전환 시 진입 후보에서 제외"],
     "dataReliability": "MOCK DATA"
   },
   {
@@ -100,44 +44,16 @@
     "theme": "AI 소프트웨어",
     "status": "진입 후보",
     "score": 78,
-    "scoreBreakdown": {
-      "catalyst": 18,
-      "flow": 22,
-      "narrative": 17,
-      "priceLocation": 15,
-      "riskDeduction": -6
-    },
+    "scoreBreakdown": { "catalyst": 18, "flow": 22, "narrative": 17, "priceLocation": 15, "riskDeduction": -6 },
     "currentPrice": 24.8,
     "changePct": 4.4,
     "relativeVolume": 2.1,
-    "buyers": [
-      "고베타 AI 소프트웨어 모멘텀 자금",
-      "단기 옵션 플로우",
-      "개인 트레이딩 수급"
-    ],
-    "buyerReasons": [
-      "AI 소프트웨어 테마가 강할 때 변동성이 큰 종목으로 자금이 몰릴 수 있기 때문",
-      "거래량이 동반되면 장중 돌파 추종 수요가 붙을 수 있기 때문"
-    ],
-    "bullishEvidence": [
-      "mock 기준 상대 거래량이 가장 높음",
-      "AI 소프트웨어 고베타 종목 선호가 살아 있음",
-      "시장 breadth가 양호하면 돌파 시도가 보상받을 수 있음"
-    ],
-    "entryConditions": [
-      "시초가 범위 상단 돌파 후 재눌림 확인",
-      "VWAP 위 재안착",
-      "소프트웨어 성장주가 동반 약세가 아닐 것"
-    ],
-    "invalidationConditions": [
-      "VWAP 이탈 후 회복 실패",
-      "돌파 실패 뒤 거래량 감소",
-      "QQQ가 급격히 약세 전환"
-    ],
-    "todayAction": [
-      "장 초반 급등 추격 금지",
-      "VWAP 재회복이 확인될 때만 진입 후보 유지"
-    ],
+    "buyers": ["고베타 AI 소프트웨어 모멘텀 자금", "단기 옵션 플로우", "개인 트레이딩 수급"],
+    "buyerReasons": ["AI 소프트웨어 테마가 강할 때 변동성이 큰 종목으로 자금이 몰릴 수 있기 때문", "거래량이 동반되면 장중 돌파 추종 수요가 붙을 수 있기 때문"],
+    "bullishEvidence": ["상대 거래량 증가", "AI 소프트웨어 고베타 선호", "시장 breadth가 좋으면 돌파 시도 보상 가능"],
+    "entryConditions": ["시초가 범위 상단 돌파 후 눌림 확인", "VWAP 위 안착", "소프트웨어 성장주가 동반 약세가 아닐 것"],
+    "invalidationConditions": ["VWAP 이탈 후 회복 실패", "돌파 실패 후 거래량 감소", "QQQ가 급격한 약세 전환"],
+    "todayAction": ["장 초반 급등 추격 금지", "VWAP 재회복이 확인될 때만 진입 후보 유지"],
     "dataReliability": "MOCK DATA"
   },
   {
@@ -147,42 +63,16 @@
     "theme": "에너지 방어",
     "status": "관찰",
     "score": 54,
-    "scoreBreakdown": {
-      "catalyst": 12,
-      "flow": 12,
-      "narrative": 11,
-      "priceLocation": 12,
-      "riskDeduction": -7
-    },
+    "scoreBreakdown": { "catalyst": 12, "flow": 12, "narrative": 11, "priceLocation": 12, "riskDeduction": -7 },
     "currentPrice": 116.5,
     "changePct": -0.6,
     "relativeVolume": 0.9,
-    "buyers": [
-      "기술주 과열을 피하려는 방어적 자금",
-      "유가 반등을 확인하는 에너지 섹터 자금"
-    ],
-    "buyerReasons": [
-      "기술주 모멘텀이 식을 때 대체 섹터로 관심이 이동할 수 있기 때문",
-      "유가가 강해지면 에너지 섹터 회전이 발생할 수 있기 때문"
-    ],
-    "bullishEvidence": [
-      "기술주 과열 시 방어 섹터로 해석될 여지가 있음",
-      "유가 반등이 동반되면 관심 후보가 될 수 있음"
-    ],
-    "entryConditions": [
-      "원유 가격과 XLE가 동시에 양전",
-      "상대 거래량이 mock 기준 1.2배 이상으로 개선",
-      "S&P 500 대비 상대강도 개선"
-    ],
-    "invalidationConditions": [
-      "원유 가격 약세 지속",
-      "XLE가 S&P 500 대비 언더퍼폼",
-      "상대 거래량 부진 지속"
-    ],
-    "todayAction": [
-      "현재는 관찰 우선",
-      "에너지 섹터 회전이 확인되기 전까지 진입 후보로 격상하지 않음"
-    ],
+    "buyers": ["기술주 과열을 피하려는 방어 자금", "유가 반등을 확인하는 에너지 섹터 자금"],
+    "buyerReasons": ["기술주 모멘텀이 식을 때 대체 섹터로 관심이 이동할 수 있기 때문", "유가가 강해지면 에너지 섹터 회전이 발생할 수 있기 때문"],
+    "bullishEvidence": ["기술주 과열 시 방어 섹터로 해석 여지", "유가 반등 동반 시 관심 후보"],
+    "entryConditions": ["원유 가격과 XLE가 동시에 양전", "상대 거래량 1.2배 이상으로 개선", "S&P 500 대비 상대강도 개선"],
+    "invalidationConditions": ["원유 가격 약세 지속", "XLE가 S&P 500 대비 언더퍼폼", "상대 거래량 부진 지속"],
+    "todayAction": ["현재는 관찰 우선", "에너지 섹터 회전 확인 전까지 진입 후보로 격상하지 않음"],
     "dataReliability": "MOCK DATA"
   }
 ]
