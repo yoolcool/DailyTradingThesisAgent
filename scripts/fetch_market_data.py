@@ -77,6 +77,15 @@ def fetch_one(ticker, asset_type):
       avg_volume_20d = float(volume.tail(20).mean()) if len(volume) >= 1 else None
       high_52w = float(history["High"].max()) if "High" in history else None
       data_date = history.index[-1].date().isoformat()
+      chart_history = []
+      for idx, row in history.tail(60).iterrows():
+          close_value = row.get("Close")
+          if close_value is None or pd.isna(close_value):
+              continue
+          chart_history.append({
+              "date": idx.date().isoformat(),
+              "close": safe_float(close_value),
+          })
 
       relative_volume = None
       if latest_volume is not None and avg_volume_20d and avg_volume_20d > 0:
@@ -101,6 +110,7 @@ def fetch_one(ticker, asset_type):
           "dataDate": data_date,
           "dataSource": "yfinance",
           "dataStatus": "ok",
+          "history": chart_history,
       }
     except Exception as exc:
       return {

@@ -4,6 +4,8 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const REPORTS_DIR = path.join(ROOT, "reports");
 const DOCS_DIR = path.join(ROOT, "docs");
+const REPORT_CHARTS_DIR = path.join(REPORTS_DIR, "charts");
+const DOCS_CHARTS_DIR = path.join(DOCS_DIR, "charts");
 
 const files = {
   html: path.join(REPORTS_DIR, "latest.html"),
@@ -17,6 +19,20 @@ function assertFile(filePath) {
   }
 }
 
+function copyDir(source, target) {
+  if (!fs.existsSync(source)) return;
+  fs.mkdirSync(target, { recursive: true });
+  for (const entry of fs.readdirSync(source, { withFileTypes: true })) {
+    const from = path.join(source, entry.name);
+    const to = path.join(target, entry.name);
+    if (entry.isDirectory()) {
+      copyDir(from, to);
+    } else {
+      fs.copyFileSync(from, to);
+    }
+  }
+}
+
 function extractGeneratedAt(html) {
   const text = html.replace(/<[^>]+>/g, " ");
   const match = text.match(/생성 시각:\s*([^<\n]+)/);
@@ -25,10 +41,10 @@ function extractGeneratedAt(html) {
 
 function detectDataMode(html) {
   if (html.includes("REAL DATA TEST")) {
-    return "REAL_TEST - 가격/거래량은 실제 데이터, 뉴스/옵션/일부 판단 로직은 검증 중";
+    return "REAL_TEST - 가격/거래량은 실제 데이터, 뉴스/옵션/ETF 구성종목 확산도 등은 아직 미연결";
   }
   if (html.includes("MOCK DATA")) {
-    return "MOCK DATA - 실전 투자 판단 사용 금지";
+    return "MOCK DATA - 실전 매매 판단 사용 금지";
   }
   return "UNKNOWN";
 }
@@ -78,10 +94,12 @@ function main() {
   fs.writeFileSync(path.join(DOCS_DIR, "index.html"), indexHtml, "utf8");
   fs.copyFileSync(files.markdown, path.join(DOCS_DIR, "latest.md"));
   fs.copyFileSync(files.png, path.join(DOCS_DIR, "latest.png"));
+  copyDir(REPORT_CHARTS_DIR, DOCS_CHARTS_DIR);
 
   console.log(`Prepared ${path.join(DOCS_DIR, "index.html")}`);
   console.log(`Prepared ${path.join(DOCS_DIR, "latest.md")}`);
   console.log(`Prepared ${path.join(DOCS_DIR, "latest.png")}`);
+  if (fs.existsSync(DOCS_CHARTS_DIR)) console.log(`Prepared ${DOCS_CHARTS_DIR}`);
 }
 
 main();

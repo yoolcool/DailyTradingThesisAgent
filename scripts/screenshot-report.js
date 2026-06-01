@@ -51,9 +51,10 @@ async function main() {
         warning,
         stockCards: document.querySelectorAll("[data-stock-card]").length,
         etfCards: document.querySelectorAll("[data-etf-card]").length,
+        chartImages: document.querySelectorAll("img.chart").length,
         hasConclusion: body.includes("오늘의 결론"),
-        hasCoreQuestion: body.includes("현재 가격에서 누가, 왜, 더 비싼 가격에 사줄 수 있는가"),
-        hasValidWarning: warning.includes("MOCK DATA - 실전 투자 판단 사용 금지") || warning.includes("REAL DATA TEST - 가격/거래량은 실제 데이터")
+        hasCoreQuestion: body.includes("현재 가격에서 살까"),
+        hasValidWarning: warning.includes("MOCK DATA") || warning.includes("REAL DATA TEST")
       };
     });
 
@@ -77,6 +78,9 @@ async function main() {
     }
     if (checks.etfCards !== 5) {
       throw new Error(`Rendered page should have exactly 5 detailed ETF cards, found ${checks.etfCards}.`);
+    }
+    if (checks.chartImages < 1) {
+      throw new Error("Rendered page has no chart images.");
     }
 
     await page.screenshot({ path: pngPath, fullPage: true });
