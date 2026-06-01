@@ -8,27 +8,41 @@
 
 ## 모바일 실행
 
-모바일에서는 아래 한 줄만 입력하면 된다.
+모바일에서 매일 사용할 한 줄 명령:
 
 ```text
-MOBILE_DAILY_PROMPT.md 절차대로 오늘 리포트 생성하고 모바일 요약으로 보고해줘.
+모바일 데일리 루틴 실행
 ```
 
-상세 절차는 `MOBILE_DAILY_PROMPT.md`를 따른다.
+이 명령을 받으면 `daily-publish` 또는 `daily-check:win + prepare-pages`를 실행하고, 모바일 요약에는 반드시 아래 웹 리포트 링크를 포함한다.
+
+https://yoolcool.github.io/DailyTradingThesisAgent/
+
+상세 절차와 모바일 보고 형식은 `MOBILE_DAILY_PROMPT.md`를 따른다.
 
 ## Windows 운영 표준 명령
 
 PowerShell의 `npm.ps1` 실행 정책 문제를 피하기 위해 Windows에서는 아래 명령을 표준으로 사용한다.
 
 ```powershell
-npm.cmd run daily-check:win
+npm.cmd run daily-publish
 ```
 
-성공하면 아래 세 파일이 모두 갱신되고 검증된다.
+`daily-publish`가 없으면 아래 순서로 실행한다.
+
+```powershell
+npm.cmd run daily-check:win
+npm.cmd run prepare-pages
+```
+
+성공하면 아래 파일이 모두 갱신되고 검증된다.
 
 - `reports/latest.md`
 - `reports/latest.html`
 - `reports/latest.png`
+- `docs/index.html`
+- `docs/latest.md`
+- `docs/latest.png`
 
 ## ETF 판단 철학
 

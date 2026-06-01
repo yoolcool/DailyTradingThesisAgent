@@ -8,19 +8,25 @@
 
 ## 모바일 실행
 
-모바일에서는 아래 한 줄만 입력하면 된다.
+모바일에서 매일 사용할 한 줄 명령:
 
 ```text
-MOBILE_DAILY_PROMPT.md 절차대로 오늘 리포트 생성하고 모바일 요약으로 보고해줘.
+모바일 데일리 루틴 실행
 ```
 
+이 명령을 받으면 `daily-publish` 또는 `daily-check:win + prepare-pages`를 실행하고, 모바일 요약에는 반드시 아래 웹 리포트 링크를 포함한다.
+
+https://yoolcool.github.io/DailyTradingThesisAgent/
+
 ## Windows 실행 명령
+
+기본 검증:
 
 ```powershell
 npm.cmd run daily-check:win
 ```
 
-GitHub Pages 배포용 파일까지 준비하려면 아래 명령을 사용한다.
+GitHub Pages 배포용 파일까지 준비:
 
 ```powershell
 npm.cmd run daily-publish
@@ -47,8 +53,6 @@ npm.cmd run daily-publish
 6. 저장한다.
 7. 배포 URL을 확인한다.
 
-예상 웹 리포트 링크:
+웹 리포트 링크:
 
-```text
 https://yoolcool.github.io/DailyTradingThesisAgent/
-```

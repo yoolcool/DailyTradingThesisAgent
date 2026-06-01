@@ -1,82 +1,114 @@
 # Mobile Daily Prompt
 
-모바일 ChatGPT 앱의 Codex 탭에서 아래 한 줄만 입력하면 된다.
+## 매일 사용할 한 줄 명령
 
 ```text
-MOBILE_DAILY_PROMPT.md 절차대로 오늘 리포트 생성하고 모바일 요약으로 보고해줘.
+모바일 데일리 루틴 실행
 ```
 
-## 프로젝트 경로
+이 한 줄 명령을 받으면 반드시 아래 절차를 따른다.
 
-```text
-C:\Users\yool\Documents\Daily Trading Thesis Agent
-```
+## 실행 절차
 
-## 실행 전 확인
+1. 프로젝트 폴더로 이동한다.
 
-1. 현재 위치가 프로젝트 루트인지 확인한다.
-2. `package.json`이 있는지 확인한다.
-3. 현재 폴더가 다르면 올바른 프로젝트 루트로 이동한다.
-4. 실행 전 `git status`를 확인한다.
+   ```text
+   C:\Users\yool\Documents\Daily Trading Thesis Agent
+   ```
 
-## 실행 명령
+2. `package.json`이 있는 프로젝트 루트인지 확인한다.
+   없으면 실행하지 말고 `package.json` 위치를 찾아 이동한다.
 
-기본 리포트만 생성할 때:
+3. `git status`를 확인한다.
 
-```powershell
-npm.cmd run daily-check:win
-```
+4. Windows 기준으로 아래 명령을 실행한다.
 
-GitHub Pages 배포용 `docs/` 파일까지 준비할 때:
+   ```powershell
+   npm.cmd run daily-publish
+   ```
 
-```powershell
-npm.cmd run daily-publish
-```
+5. `daily-publish`가 없다면 아래 순서로 실행한다.
 
-## 생성 확인
+   ```powershell
+   npm.cmd run daily-check:win
+   npm.cmd run prepare-pages
+   ```
 
-- `reports/latest.md`
-- `reports/latest.html`
-- `reports/latest.png`
-- `docs/index.html`
-- `docs/latest.md`
-- `docs/latest.png`
+6. 생성 파일을 확인한다.
+
+   - `reports/latest.md`
+   - `reports/latest.html`
+   - `reports/latest.png`
+   - `docs/index.html`
+   - `docs/latest.md`
+   - `docs/latest.png`
+
+7. GitHub Pages 배포를 위해 변경사항을 확인한다.
+
+   ```powershell
+   git status
+   ```
+
+8. 사용자가 이미 push 허용 규칙을 정해두었다면 `git add`, `git commit`, `git push`를 진행한다.
+   아직 허용 규칙이 없다면 push 전에 확인을 요청한다.
+
+9. 모바일 보고에는 반드시 아래 GitHub Pages 웹 리포트 링크를 포함한다.
+
+   ```text
+   https://yoolcool.github.io/DailyTradingThesisAgent/
+   ```
 
 ## 주의사항
 
-- mock 데이터면 반드시 mock이라고 표시한다.
-- 실제 데이터처럼 단정하지 않는다.
-- Codex 인앱 브라우저 스냅샷 실패는 치명 오류로 보지 않는다.
-- `reports/latest.png` 또는 `docs/latest.png` 생성 성공을 시각 검증 성공 기준으로 본다.
-- 리포트 전체를 모바일에 길게 붙여넣지 말고 요약만 보고한다.
-- 배포 실패는 로컬 리포트 생성 실패와 구분해서 보고한다.
-- `git push`가 필요하면 사용자 확인을 먼저 요청한다.
-
-## 웹 리포트 링크
-
-실제 GitHub Pages URL을 모를 때는 아래 placeholder를 사용한다.
+- 리포트 전문을 모바일에 길게 붙여넣지 않는다.
+- `latest.html` 전체 내용을 출력하지 않는다.
+- mock 데이터면 반드시 실전 판단 금지라고 표시한다.
+- GitHub Pages 링크가 아직 활성화되지 않았다면 “배포 대기 중일 수 있음”이라고 적는다.
+- 웹 리포트 링크는 모바일에서 클릭 가능하도록 단독 줄에 표시한다.
+- GitHub Pages 링크는 항상 아래 주소를 사용한다.
 
 ```text
 https://yoolcool.github.io/DailyTradingThesisAgent/
 ```
 
-## 완료 후 모바일 보고 형식
+## 모바일 보고 형식
 
 ```text
 [오늘의 데일리 트레이딩 요약]
 
-- 생성 성공 여부:
-- 데이터 모드:
-- 시장 상태:
-- 강한 테마 TOP 3:
-- ETF 후보 TOP 5:
-- 개별 종목보다 ETF가 나은 테마:
-- 진입 후보 TOP 3:
+✅ 생성 성공 / 데이터 모드: MOCK 또는 REAL
+
+시장:
+- 위험선호 / 위험회피 / 중립 중 하나
+
+오늘 결론:
+- 핵심 판단 3줄 이내
+
+ETF 후보 TOP 5:
+1. 티커 - 한 줄 이유
+2. 티커 - 한 줄 이유
+3. 티커 - 한 줄 이유
+4. 티커 - 한 줄 이유
+5. 티커 - 한 줄 이유
+
+개별 종목:
+- 진입 후보:
 - 보유 유지:
 - 청산/주의:
-- ETF 과열 주의:
-- 오늘 반드시 확인할 조건 3개:
-- 리포트 파일 위치:
-- 웹 리포트 링크:
-- 남은 문제:
+
+오늘 체크:
+1. 가장 중요한 확인 조건
+2. 두 번째 확인 조건
+3. 세 번째 확인 조건
+
+웹 리포트:
+https://yoolcool.github.io/DailyTradingThesisAgent/
+
+로컬 파일:
+- reports/latest.md
+- reports/latest.html
+- reports/latest.png
+
+남은 문제:
+- 없으면 “없음”이라고 적는다.
 ```
