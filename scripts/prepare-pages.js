@@ -1,0 +1,76 @@
+const fs = require("fs");
+const path = require("path");
+
+const ROOT = path.resolve(__dirname, "..");
+const REPORTS_DIR = path.join(ROOT, "reports");
+const DOCS_DIR = path.join(ROOT, "docs");
+
+const files = {
+  html: path.join(REPORTS_DIR, "latest.html"),
+  markdown: path.join(REPORTS_DIR, "latest.md"),
+  png: path.join(REPORTS_DIR, "latest.png")
+};
+
+function assertFile(filePath) {
+  if (!fs.existsSync(filePath)) {
+    throw new Error(`Missing required report file: ${filePath}`);
+  }
+}
+
+function extractGeneratedAt(html) {
+  const text = html.replace(/<[^>]+>/g, " ");
+  const match = text.match(/생성 시각:\s*([^<\n]+)/);
+  return match ? match[1].trim().replace(/\s+/g, " ") : new Date().toLocaleString("ko-KR", { timeZone: "Asia/Seoul" });
+}
+
+function injectPagesLinks(html) {
+  const generatedAt = extractGeneratedAt(html);
+  const links = `
+    <section class="pages-links" data-pages-links>
+      <h2>웹 리포트 링크</h2>
+      <p><strong>데이터 모드:</strong> MOCK DATA - 실전 투자 판단 사용 금지</p>
+      <p><strong>생성 시각:</strong> ${generatedAt}</p>
+      <p>
+        <a href="latest.md">Markdown 원문 보기</a>
+        <span aria-hidden="true"> · </span>
+        <a href="latest.png">스크린샷 보기</a>
+      </p>
+    </section>`;
+
+  const styles = `
+    <style data-pages-links-style>
+      .pages-links {
+        background: #fff7ed;
+        border: 1px solid #fdba74;
+      }
+      .pages-links a {
+        color: #0f766e;
+        font-weight: 700;
+      }
+    </style>`;
+
+  const withoutOldLinks = html.replace(/\s*<section class="pages-links"[\s\S]*?<\/section>/, "");
+  const withStyles = withoutOldLinks.includes("data-pages-links-style")
+    ? withoutOldLinks
+    : withoutOldLinks.replace("</head>", `${styles}\n</head>`);
+
+  return withStyles.replace("<main>", `<main>${links}`);
+}
+
+function main() {
+  Object.values(files).forEach(assertFile);
+  fs.mkdirSync(DOCS_DIR, { recursive: true });
+
+  const html = fs.readFileSync(files.html, "utf8");
+  const indexHtml = injectPagesLinks(html);
+
+  fs.writeFileSync(path.join(DOCS_DIR, "index.html"), indexHtml, "utf8");
+  fs.copyFileSync(files.markdown, path.join(DOCS_DIR, "latest.md"));
+  fs.copyFileSync(files.png, path.join(DOCS_DIR, "latest.png"));
+
+  console.log(`Prepared ${path.join(DOCS_DIR, "index.html")}`);
+  console.log(`Prepared ${path.join(DOCS_DIR, "latest.md")}`);
+  console.log(`Prepared ${path.join(DOCS_DIR, "latest.png")}`);
+}
+
+main();

@@ -1,0 +1,21 @@
+{
+  "name": "daily-trading-thesis-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local daily trading thesis report generator using mock data.",
+  "scripts": {
+    "daily-report": "node src/main.js",
+    "verify-report": "node scripts/verify-report.js",
+    "screenshot-report": "node scripts/screenshot-report.js",
+    "daily-check": "node src/main.js && node scripts/verify-report.js && node scripts/screenshot-report.js",
+    "daily-check:win": "node src/main.js && node scripts/verify-report.js && node scripts/screenshot-report.js",
+    "prepare-pages": "node scripts/prepare-pages.js",
+    "daily-publish": "npm.cmd run daily-check:win && npm.cmd run prepare-pages"
+  },
+  "devDependencies": {
+    "playwright": "^1.53.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
