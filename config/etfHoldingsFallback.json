@@ -1,0 +1,15 @@
+{
+  "IGV": ["MSFT", "PLTR", "AAPL"],
+  "AIQ": ["NVDA", "MSFT", "PLTR", "AAPL"],
+  "HACK": ["PLTR", "MSFT"],
+  "CIBR": ["PLTR", "MSFT"],
+  "SMH": ["NVDA", "TSM", "MU"],
+  "SOXX": ["NVDA", "TSM", "MU"],
+  "SOXQ": ["NVDA", "TSM", "MU"],
+  "QQQ": ["NVDA", "MSFT", "AAPL"],
+  "SPY": ["NVDA", "MSFT", "AAPL", "XOM"],
+  "XLE": ["XOM"],
+  "OIH": ["XOM"],
+  "IBIT": ["IREN", "CIFR", "RIOT", "MARA"],
+  "BLOK": ["IREN", "CIFR", "RIOT", "MARA"]
+}

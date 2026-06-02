@@ -65,10 +65,22 @@ commit할 변경사항이 없으면 `변경사항 없음, push 생략`으로 보
 
 ## 데이터 모드
 
-- `REAL_TEST`: yfinance 실제 가격/거래량 데이터를 사용합니다. 뉴스, 옵션, ETF 구성종목 확산도, 스프레드 등은 아직 미연결 상태로 표시합니다.
+- `REAL_TEST`: yfinance 실제 가격/거래량 데이터를 사용합니다. 뉴스, 옵션, ETF 구성종목 확산도, 유동성/스프레드는 가능한 provider와 fallback 상태에 따라 동적으로 반영합니다.
 - `MOCK`: mock 데이터 모드입니다. 기본 모바일 데일리 루틴에서는 사용하지 않습니다.
 
-뉴스/이벤트 데이터가 미연결이면 `reasonConfidence`를 `HIGH`로 표시하지 않습니다. 데이터가 없으면 숫자를 지어내지 않고 `데이터 없음`으로 표시합니다.
+뉴스/옵션/ETF 확산도/유동성 데이터가 부족하면 `reasonConfidence`를 `HIGH`로 올리지 않습니다. 데이터가 없으면 숫자를 지어내지 않고 `데이터 없음`, `미연결`, `수집 실패`, `fallback`으로 표시합니다.
+
+## 선택 데이터 provider
+
+API 키가 없어도 가격/거래량 기반 REAL_TEST 리포트는 생성됩니다. 선택 키는 `.env.example` 또는 GitHub Actions secrets에 둘 수 있습니다.
+
+- 가격/거래량: yfinance, 필수
+- 뉴스: Yahoo Finance RSS fallback, 향후 `FINNHUB_API_KEY`, `NEWS_API_KEY`, `FMP_API_KEY` 등으로 확장 가능
+- 옵션: Yahoo Finance options endpoint fallback, 향후 `POLYGON_API_KEY`, `TRADIER_API_KEY` 등으로 확장 가능
+- ETF holdings/breadth: `config/etfHoldingsFallback.json` 샘플 기반 확산도
+- 유동성/스프레드: bid/ask가 없으면 가격 * 거래량의 거래대금 fallback
+
+provider 호출 실패, API rate limit, API 키 미설정은 전체 빌드를 실패시키지 않습니다. 실패한 데이터는 리포트 하단 `데이터 수집 상태`에 기록되고 점수와 confidence에는 제한적으로만 반영됩니다.
 
 ## 리포트 주요 필드
 

@@ -13,7 +13,8 @@ const requiredSections = [
   "1. ETF 트레이딩 보고서",
   "2. 개별 종목 트레이딩 보고서",
   "감시 ETF 목록",
-  "3. 최종 실행 판단"
+  "3. 최종 실행 판단",
+  "데이터 수집 상태"
 ];
 
 function assert(condition, message) {
@@ -46,6 +47,7 @@ function main() {
 
   assert(markdown.includes("REAL DATA TEST") || markdown.includes("MOCK DATA"), "Report missing data mode banner");
   assert(html.includes("REAL DATA TEST") || html.includes("MOCK DATA"), "HTML missing data mode banner");
+  assert(!markdown.includes("뉴스/옵션/ETF 구성종목 확산도 등은 아직 미연결"), "Data mode banner should not be hardcoded to disconnected state");
   assert(markdown.includes("돈이 몰리는 근거와 다음 매수 주체"), "Markdown missing report purpose");
   assert(html.includes("돈이 몰리는 근거와 다음 매수 주체"), "HTML missing report purpose");
   assert(!markdown.includes("\uFFFD") && !html.includes("\uFFFD"), "Report contains replacement characters");
@@ -68,6 +70,7 @@ function main() {
   assert(scoreGuide.includes("장기 가치평가 점수가 아니다"), "Score guide must explain score is not valuation");
   assert(scoreGuide.includes("80점 이상"), "Score guide missing score band interpretation");
   assert(scoreGuide.includes("매수 추천 점수가 아니다"), "Score guide missing warning");
+  assert(scoreGuide.includes("ETF 대비 상대강도"), "Score guide missing relative strength factor");
 
   const nvdaCard = markdown.match(/### \[NVDA\][\s\S]*?(?=\n### \[|$)/)?.[0] || "";
   assert(nvdaCard.includes("relatedEtfs: SMH, SOXX, SOXQ, AIQ, QQQ"), "NVDA related ETF mapping is not refined");
@@ -86,11 +89,24 @@ function main() {
 
   assert(markdown.includes("moneyFlowScore:"), "Markdown missing moneyFlowScore");
   assert(markdown.includes("moneyFlowScore 산정 근거:"), "Markdown missing moneyFlowScore rationale");
+  assert(markdown.includes("뉴스 점수:"), "Markdown missing news score");
+  assert(markdown.includes("옵션 점수:"), "Markdown missing options score");
+  assert(markdown.includes("유동성 점수:"), "Markdown missing liquidity score");
+  assert(markdown.includes("데이터 사용 현황:"), "Markdown missing data usage block");
+  assert(markdown.includes("뉴스 확인:"), "Markdown missing news block");
+  assert(markdown.includes("옵션 수급:"), "Markdown missing options block");
+  assert(markdown.includes("ETF 구성종목 확산도:"), "Markdown missing ETF breadth block");
+  assert(markdown.includes("유동성/스프레드:"), "Markdown missing liquidity block");
+  assert(markdown.includes("reasonConfidence 근거:"), "Markdown missing confidence rationale");
   assert(html.includes("moneyFlowScore 산정 근거"), "HTML missing moneyFlowScore rationale");
+  assert(html.includes("<details"), "HTML should use collapsible details for mobile readability");
   assert(markdown.includes("whyMoneyIsFlowing:"), "Markdown missing whyMoneyIsFlowing");
   assert(markdown.includes("likelyNextBuyer:"), "Markdown missing likelyNextBuyer");
   assert(markdown.includes("whyThisCouldTradeHigher:"), "Markdown missing whyThisCouldTradeHigher");
-  assert(!markdown.includes("reasonConfidence: HIGH"), "HIGH confidence must not appear while news/event data is disconnected");
+  if (markdown.includes("reasonConfidence: HIGH")) {
+    assert(markdown.includes("뉴스: 사용") || markdown.includes("옵션: 사용"), "HIGH confidence requires news or options usage");
+    assert(markdown.includes("유동성/스프레드: 사용"), "HIGH confidence requires liquidity usage");
+  }
   assert(markdown.includes("ETF에서 할 일:"), "Final action missing ETF task");
   assert(markdown.includes("개별 종목에서 할 일:"), "Final action missing stock task");
   assert(markdown.includes("하지 말아야 할 일:"), "Final action missing do-not-do task");
@@ -99,8 +115,11 @@ function main() {
   const chartFiles = fs.readdirSync(chartsDir).filter((name) => name.endsWith(".png"));
   assert(chartFiles.length > 0, "No chart images were generated");
   assert(html.includes('<img class="chart"'), "HTML card charts are not linked");
+  for (const file of ["src/data/newsProvider.js", "src/data/optionsProvider.js", "src/data/etfHoldingsProvider.js", "src/data/liquidityProvider.js", ".env.example"]) {
+    assert(fs.existsSync(path.join(ROOT, file)), `Missing provider/env file: ${file}`);
+  }
 
-  console.log("Verified split ETF/stock report sections, moneyFlowScore rationale, ETF mapping, scoring fields, and charts");
+  console.log("Verified provider-aware report sections, dynamic data status, scoring fields, ETF mapping, and charts");
   console.log(`Verified chart count: ${chartFiles.length}`);
 }
 
