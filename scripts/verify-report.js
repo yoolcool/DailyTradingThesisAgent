@@ -33,7 +33,11 @@ function main() {
 
   assert(markdown.includes("REAL DATA TEST") || markdown.includes("MOCK DATA"), "Report missing data mode banner");
   assert(html.includes("REAL DATA TEST") || html.includes("MOCK DATA"), "HTML missing data mode banner");
-  assert(!markdown.includes("\uFFFD") && !html.includes("\uFFFD"), "Report contains replacement characters");
+
+  for (const pattern of ["\uFFFD", "?꾪", "?좏", "?댁", "?뺤", "?좊", "?덉", "?섎", "?곌"]) {
+    assert(!markdown.includes(pattern), `Markdown contains broken Korean pattern: ${pattern}`);
+    assert(!html.includes(pattern), `HTML contains broken Korean pattern: ${pattern}`);
+  }
 
   const forbiddenTerms = [
     "\uC635\uC158",
@@ -48,11 +52,11 @@ function main() {
   }
 
   for (const snippet of [
-    "오늘의 분리 결론",
-    "ETF 행동 후보",
-    "개별 종목 행동 후보",
+    "오늘 실제 행동 후보",
+    "ETF 후보 TOP 5",
+    "오늘 개별 종목 신규 후보 TOP 5",
     "오늘 돈이 몰리는 테마",
-    "돈이 몰린다고 보는 이유",
+    "왜 돈이 몰리는가",
     "Nasdaq-100 전체 moneyFlowScore(1차) 표",
     "데이터 수집 상태",
     "참고: moneyFlowScore 산정 방식"
@@ -65,6 +69,7 @@ function main() {
   assert(html.includes('class="score-details"'), "Score details should be rendered as collapsed details");
   assert(html.includes("data-stock-universe-table"), "HTML missing Nasdaq-100 score table");
   assert(html.includes("table-scroll"), "HTML missing scroll wrapper for wide table");
+  assert(markdown.includes("상세 근거"), "Markdown should move detailed evidence below candidate cards");
 
   assert(fs.existsSync(chartsDir), "Missing reports/charts directory");
   const chartFiles = fs.readdirSync(chartsDir).filter((name) => name.endsWith(".png"));
@@ -76,7 +81,6 @@ function main() {
     "src/data/etfHoldingsProvider.js",
     "src/data/liquidityProvider.js",
     "src/data/nasdaq100Universe.js",
-    ".env.example",
     "config/nasdaq100Fallback.json",
     "data/latest-report.json"
   ]) {
@@ -91,7 +95,11 @@ function main() {
   assert(scanResults.length >= 90, "Snapshot missing stockUniverseScan results");
   assert(scanResults[0].moneyFlowScoreInitial >= scanResults.at(-1).moneyFlowScoreInitial, "Snapshot stockUniverseScan results should be sorted by initial score");
 
+  const actionCandidates = latestSnapshot.actionCandidates || [];
+  assert(actionCandidates.length <= 3, "Today actual action candidates should be limited to 3");
+
   const scoredItems = [
+    ...actionCandidates,
     ...(latestSnapshot.stockActionCandidates || []),
     ...(latestSnapshot.etfActionCandidates || []),
     ...(latestSnapshot.stockEntryCandidates || []),
@@ -101,8 +109,17 @@ function main() {
   for (const item of scoredItems) {
     assert(item.moneyFlowScoreInitial !== undefined, `Snapshot missing initial score for ${item.ticker}`);
     assert(item.moneyFlowScoreFinal !== undefined, `Snapshot missing final score for ${item.ticker}`);
+    assert(item.finalRawScore !== undefined, `Snapshot missing finalRawScore for ${item.ticker}`);
     assert(!JSON.stringify(item).includes("options"), `Snapshot scored item still includes options text for ${item.ticker}`);
+    if (item.reasonConfidence === "HIGH") {
+      assert(item.directCatalyst && item.directCatalyst.startsWith("직접 촉매:"), `HIGH confidence item missing direct catalyst: ${item.ticker}`);
+    }
   }
+
+  assert(markdown.includes("finalRawScore"), "Markdown TOP/action cards should show finalRawScore");
+  assert(html.includes("finalRawScore"), "HTML TOP/action cards should show finalRawScore");
+  assert(markdown.includes("tie-breaker"), "Markdown TOP/action cards should show tie-breaker");
+  assert(html.includes("tie-breaker"), "HTML TOP/action cards should show tie-breaker");
 
   const candidatesWithRisk = [
     ...(latestSnapshot.stockActionCandidates || []),
@@ -112,7 +129,7 @@ function main() {
     assert(row.riskPenaltySummary.totalPenalty === sumRiskPenalty(row.riskPenaltySummary), `Risk penalty item sum mismatch for ${row.ticker}`);
   }
 
-  console.log("Verified simplified report, option-free output, collapsed details, Nasdaq-100 table, snapshots, and charts");
+  console.log("Verified concise report, UTF-8 output, HIGH catalyst rules, raw-score ranking, collapsed details, and charts");
   console.log(`Verified chart count: ${chartFiles.length}`);
 }
 
