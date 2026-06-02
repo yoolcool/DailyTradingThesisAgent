@@ -6,6 +6,8 @@ const REPORTS_DIR = path.join(ROOT, "reports");
 const DOCS_DIR = path.join(ROOT, "docs");
 const REPORT_CHARTS_DIR = path.join(REPORTS_DIR, "charts");
 const DOCS_CHARTS_DIR = path.join(DOCS_DIR, "charts");
+const DATA_DIR = path.join(ROOT, "data");
+const DOCS_DATA_DIR = path.join(DOCS_DIR, "data");
 
 const files = {
   html: path.join(REPORTS_DIR, "latest.html"),
@@ -95,11 +97,20 @@ function main() {
   fs.copyFileSync(files.markdown, path.join(DOCS_DIR, "latest.md"));
   fs.copyFileSync(files.png, path.join(DOCS_DIR, "latest.png"));
   copyDir(REPORT_CHARTS_DIR, DOCS_CHARTS_DIR);
+  copyDir(path.join(DATA_DIR, "dailyReports"), path.join(DOCS_DATA_DIR, "dailyReports"));
+  for (const name of ["latest-report.json", "previous-report.json"]) {
+    const source = path.join(DATA_DIR, name);
+    if (fs.existsSync(source)) {
+      fs.mkdirSync(DOCS_DATA_DIR, { recursive: true });
+      fs.copyFileSync(source, path.join(DOCS_DATA_DIR, name));
+    }
+  }
 
   console.log(`Prepared ${path.join(DOCS_DIR, "index.html")}`);
   console.log(`Prepared ${path.join(DOCS_DIR, "latest.md")}`);
   console.log(`Prepared ${path.join(DOCS_DIR, "latest.png")}`);
   if (fs.existsSync(DOCS_CHARTS_DIR)) console.log(`Prepared ${DOCS_CHARTS_DIR}`);
+  if (fs.existsSync(DOCS_DATA_DIR)) console.log(`Prepared ${DOCS_DATA_DIR}`);
 }
 
 main();

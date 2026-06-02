@@ -3,6 +3,7 @@ const path = require("path");
 const zlib = require("zlib");
 const { calculateEtfBreadth, fetchEtfHoldings } = require("./data/etfHoldingsProvider");
 const { fetchLiquiditySpread } = require("./data/liquidityProvider");
+const { fetchNasdaq100Universe } = require("./data/nasdaq100Universe");
 const { fetchNewsForTicker } = require("./data/newsProvider");
 const { fetchOptionsFlow } = require("./data/optionsProvider");
 const { aggregateStatus, statusLabel } = require("./data/providerUtils");
@@ -11,6 +12,7 @@ const ROOT = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(ROOT, "data");
 const REPORTS_DIR = path.join(ROOT, "reports");
 const CHARTS_DIR = path.join(REPORTS_DIR, "charts");
+const DAILY_REPORTS_DIR = path.join(DATA_DIR, "dailyReports");
 
 const MODE = process.env.REPORT_MODE === "REAL_TEST" || process.argv.includes("--real-test") ? "REAL_TEST" : "MOCK";
 const REAL_WARNING = "REAL DATA TEST - 가격/거래량은 실제 데이터, 보조 데이터 연결 상태는 런타임에 동적으로 표시";
@@ -384,7 +386,7 @@ function enrichEtf(etf, marketData, supplementalData = {}) {
 
 function enrichStock(stock, etfs, marketData, supplementalData = {}) {
   const market = marketItem(marketData, stock.ticker);
-  const relatedEtfs = relatedEtfsForStock(stock.ticker, etfs);
+  const relatedEtfs = relatedEtfsForStock(stock.ticker, etfs, stock);
   const relatedEtfStrength = relatedEtfs.length ? Math.max(...relatedEtfs.map((etf) => etf.moneyFlowScore || 0)) : 0;
   const supplemental = supplementalData.byTicker?.[stock.ticker] || {};
   const scored = MODE === "REAL_TEST" ? scoreAsset(market, "STOCK", relatedEtfStrength, supplemental) : scoreAsset(mockMarket(stock), "STOCK", relatedEtfStrength, supplemental);
@@ -402,6 +404,8 @@ function enrichStock(stock, etfs, marketData, supplementalData = {}) {
     ...stock,
     assetType: "STOCK",
     ...STOCK_META[stock.ticker],
+    primaryTheme: stock.primaryTheme || STOCK_META[stock.ticker]?.primaryTheme,
+    primarySector: stock.primarySector || STOCK_META[stock.ticker]?.primarySector,
     market,
     relatedEtfs,
     newsSummary: supplemental.news,
@@ -411,6 +415,7 @@ function enrichStock(stock, etfs, marketData, supplementalData = {}) {
     whyStockOverEtf: whyStockOverEtf(stock.ticker, relativeStrength, stockVsEtfDecision),
     whenEtfIsBetter: whenEtfIsBetter(stock.ticker, relativeStrength),
     stockVsEtfDecision,
+    relatedEtfMappingNote: stock.relatedEtfMappingNote || (stock.relatedEtfSymbols ? "rule-based mapping" : "정밀 ETF 매핑 부족"),
     chartPath: `charts/${stock.ticker}.png`,
     chartSummary: chartSummary(market),
     ...scored,
@@ -511,12 +516,56 @@ function mockMarket(row) {
   };
 }
 
-function relatedEtfsForStock(ticker, etfs) {
-  const priorities = RELATED_ETF_PRIORITY[ticker] || [];
+function relatedEtfsForStock(ticker, etfs, stock = {}) {
+  const priorities = stock.relatedEtfSymbols || RELATED_ETF_PRIORITY[ticker] || ["QQQ"];
   return priorities
     .map((symbol) => etfs.find((etf) => etf.ticker === symbol))
     .filter(Boolean)
     .sort((a, b) => priorities.indexOf(a.ticker) - priorities.indexOf(b.ticker));
+}
+
+function relatedEtfSymbolsForUniverseMember(member) {
+  const ticker = member.ticker;
+  if (RELATED_ETF_PRIORITY[ticker]) return { symbols: RELATED_ETF_PRIORITY[ticker], mappingNote: "ticker-specific mapping" };
+  const semiconductor = ["NVDA", "AMD", "AVGO", "QCOM", "MRVL", "ARM", "MU", "KLAC", "LRCX", "AMAT", "ASML", "TSM", "INTC", "ADI", "NXPI", "MCHP", "MPWR"];
+  const software = ["MSFT", "PLTR", "CRM", "NOW", "ADBE", "INTU", "TEAM", "DDOG", "SNOW", "WDAY", "ADSK", "CDNS", "SNPS", "ROP", "SHOP", "APP"];
+  const cyber = ["CRWD", "PANW", "ZS", "FTNT", "OKTA"];
+  const ecommerceTravel = ["AMZN", "MELI", "PDD", "BKNG", "ABNB", "DASH"];
+  const comms = ["GOOGL", "GOOG", "META", "NFLX", "WBD", "TTWO", "EA"];
+  const bio = ["BIIB", "GILD", "REGN", "VRTX", "ALNY", "INSM", "AMGN"];
+  const staples = ["COST", "PEP", "MDLZ", "KDP", "CCEP", "KHC", "MNST", "WMT"];
+  if (semiconductor.includes(ticker)) return { symbols: ["SMH", "SOXX", "SOXQ", "AIQ"], mappingNote: "semiconductor rule" };
+  if (cyber.includes(ticker)) return { symbols: ["HACK", "CIBR", "IHAK", "IGV"], mappingNote: "cybersecurity rule" };
+  if (software.includes(ticker)) return { symbols: ["IGV", "AIQ", "QQQ"], mappingNote: "software rule" };
+  if (ecommerceTravel.includes(ticker)) return { symbols: ["QQQ", "FDN", "XLY"], mappingNote: "ecommerce/travel rule" };
+  if (comms.includes(ticker)) return { symbols: ["QQQ", "XLC"], mappingNote: "communication services rule" };
+  if (ticker === "TSLA") return { symbols: ["QQQ", "XLY", "DRIV"], mappingNote: "tesla rule" };
+  if (bio.includes(ticker)) return { symbols: ["IBB", "XBI", "QQQ"], mappingNote: "biotech rule" };
+  if (staples.includes(ticker)) return { symbols: ["QQQ", "XLP"], mappingNote: "consumer staples rule" };
+  const sector = `${member.sector || ""} ${member.industry || ""}`.toLowerCase();
+  if (sector.includes("semiconductor")) return { symbols: ["SMH", "SOXX", "SOXQ", "AIQ"], mappingNote: "sector semiconductor fallback" };
+  if (sector.includes("software")) return { symbols: ["IGV", "AIQ", "QQQ"], mappingNote: "sector software fallback" };
+  if (sector.includes("biotech") || sector.includes("health")) return { symbols: ["IBB", "XBI", "QQQ"], mappingNote: "sector healthcare fallback" };
+  return { symbols: ["QQQ"], mappingNote: "정밀 ETF 매핑 부족 - QQQ 기본값" };
+}
+
+function universeMemberToStock(member) {
+  const mapping = relatedEtfSymbolsForUniverseMember(member);
+  return {
+    ticker: member.ticker,
+    name: member.name || member.ticker,
+    market: "US",
+    theme: member.sector || "Nasdaq-100",
+    primaryTheme: member.sector || "Nasdaq-100",
+    primarySector: member.sector || "데이터 없음",
+    industry: member.industry || "데이터 없음",
+    isNewScanCandidate: true,
+    universeName: "NASDAQ_100",
+    universeSource: member.source,
+    universeAsOfDate: member.asOfDate,
+    relatedEtfSymbols: mapping.symbols,
+    relatedEtfMappingNote: mapping.mappingNote
+  };
 }
 
 function entryCondition(item) {
@@ -581,11 +630,18 @@ async function buildReport() {
   const rawHoldings = readJson("holdings.json", []);
   const marketData = MODE === "REAL_TEST" ? readJson("market_data_real.json", { items: {} }) : null;
   const rawEtfs = readJson("watchlist_etfs.json", []);
-  const supplementalData = await collectSupplementalData(rawWatchlist, rawHoldings, rawEtfs, marketData);
+  const stockUniverse = await fetchNasdaq100Universe();
+  const rawScanStocks = stockUniverse.members.map(universeMemberToStock);
+  const baseSupplementalData = createBaseSupplementalData(rawScanStocks, rawEtfs, marketData);
+  const preliminaryEtfs = rawEtfs.map((etf) => enrichEtf(etf, marketData, baseSupplementalData));
+  const preliminaryScanStocks = rawScanStocks.map((stock) => enrichStock(stock, preliminaryEtfs, marketData, baseSupplementalData));
+  const detailedScanTickers = new Set(preliminaryScanStocks.sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 20).map((row) => row.ticker));
+  const detailedScanStocks = rawScanStocks.filter((row) => detailedScanTickers.has(row.ticker));
+  const supplementalData = await collectSupplementalData(detailedScanStocks, [], rawEtfs, marketData);
   const etfs = rawEtfs.map((etf) => enrichEtf(etf, marketData, supplementalData));
-  const watchlist = rawWatchlist.map((stock) => enrichStock(stock, etfs, marketData, supplementalData));
-  const holdings = rawHoldings.map((stock) => enrichStock(stock, etfs, marketData, supplementalData));
-  const stocks = [...watchlist, ...holdings];
+  const watchlist = rawScanStocks.map((stock) => enrichStock(stock, etfs, marketData, supplementalData));
+  const holdings = [];
+  const stocks = watchlist;
   const validEtfs = etfs.filter((etf) => MODE !== "REAL_TEST" || etf.market.dataStatus === "ok");
   const etfTop5 = [...validEtfs].sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 5);
   const stockTop5 = [...stocks].sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 5);
@@ -599,21 +655,30 @@ async function buildReport() {
   const overheat = etfOverheat;
   const actionCandidates = chooseActionCandidates(stocks, etfs);
   const topExecutionCandidate = chooseTopExecutionCandidate(etfActionCandidates, stockActionCandidates);
+  const previousSnapshot = loadPreviousRecommendationSnapshot();
+  const previousRecommendationReviews = buildPreviousRecommendationReviews(previousSnapshot, stocks, etfs);
+  const stockScanSummary = buildStockScanSummary(stockUniverse, stocks, detailedScanTickers);
   const chartTickers = unique([
     ...actionCandidates.map((row) => row.ticker),
     ...etfTop5.map((row) => row.ticker),
-    ...stockTop5.slice(0, 5).map((row) => row.ticker)
+    ...stockTop5.slice(0, 5).map((row) => row.ticker),
+    ...previousRecommendationReviews.map((row) => row.ticker)
   ]);
   const chartCount = generateCharts(chartTickers, marketData);
 
-  return {
+  const report = {
     generatedAt: new Intl.DateTimeFormat("ko-KR", { timeZone: "Asia/Seoul", dateStyle: "full", timeStyle: "short" }).format(new Date()),
+    reportDate: new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul" }).format(new Date()),
     dataMode: MODE,
     dataWarning: MODE === "REAL_TEST" ? dynamicDataWarning(supplementalData.connectionStatus) : MOCK_WARNING,
     dataConnectionStatus: supplementalData.connectionStatus,
     supplementalData,
     marketData,
     marketLabel: marketStatus(etfs),
+    stockUniverse,
+    stockScanSummary,
+    previousSnapshot,
+    previousRecommendationReviews,
     etfs,
     watchlist,
     holdings,
@@ -634,6 +699,152 @@ async function buildReport() {
     topExecutionCandidate,
     chartCount
   };
+  saveDailyRecommendationSnapshot(report);
+  return report;
+}
+
+function createBaseSupplementalData(rawStocks, rawEtfs, marketData) {
+  const tickers = unique([...rawStocks.map((row) => row.ticker), ...rawEtfs.map((row) => row.ticker)]);
+  const byTicker = Object.fromEntries(tickers.map((ticker) => [ticker, {
+    liquidity: fetchLiquiditySpread(ticker, marketItem(marketData, ticker))
+  }]));
+  return {
+    byTicker,
+    connectionStatus: {
+      priceVolume: marketData?.items && Object.values(marketData.items).some((item) => item.dataStatus === "ok") ? "CONNECTED" : "FAILED",
+      news: "DISABLED",
+      options: "DISABLED",
+      etfBreadth: "DISABLED",
+      liquiditySpread: aggregateStatus(tickers.map((ticker) => byTicker[ticker]?.liquidity?.status)),
+      lastUpdated: new Date().toISOString(),
+      notes: ["preliminary price/volume scan; detailed providers limited to top stock candidates"]
+    }
+  };
+}
+
+function buildStockScanSummary(stockUniverse, stocks, detailedScanTickers) {
+  const total = stockUniverse.members.length;
+  const success = stocks.filter((row) => row.market?.dataStatus === "ok").length;
+  const failed = total - success;
+  const entry = stocks.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED" && [STATUS.ENTRY_READY, STATUS.ENTRY_CANDIDATE].includes(row.status)).length;
+  const pullback = stocks.filter((row) => row.status === STATUS.ENTRY_CANDIDATE && row.stockVsEtfDecision !== "STOCK_PREFERRED").length;
+  const watch = stocks.filter((row) => row.status === STATUS.WATCH).length;
+  const ban = stocks.filter((row) => row.status === STATUS.BAN).length;
+  return {
+    universeName: stockUniverse.universeName,
+    universeSource: stockUniverse.source,
+    universeFetchStatus: stockUniverse.fetchStatus,
+    universeNotes: stockUniverse.notes || [],
+    total,
+    success,
+    failed,
+    detailedCount: detailedScanTickers.size,
+    entry,
+    pullback,
+    watch,
+    ban
+  };
+}
+
+function loadPreviousRecommendationSnapshot() {
+  const previousPath = path.join(DATA_DIR, "previous-report.json");
+  const latestPath = path.join(DATA_DIR, "latest-report.json");
+  if (fs.existsSync(previousPath)) {
+    return JSON.parse(fs.readFileSync(previousPath, "utf8"));
+  }
+  if (fs.existsSync(latestPath)) {
+    return JSON.parse(fs.readFileSync(latestPath, "utf8"));
+  }
+  return null;
+}
+
+function saveDailyRecommendationSnapshot(report) {
+  ensureDir(DAILY_REPORTS_DIR);
+  const latestPath = path.join(DATA_DIR, "latest-report.json");
+  const previousPath = path.join(DATA_DIR, "previous-report.json");
+  if (fs.existsSync(latestPath)) {
+    try {
+      fs.copyFileSync(latestPath, previousPath);
+    } catch (_error) {
+      // Snapshot rollover should never break report generation.
+    }
+  }
+  const snapshot = createRecommendationSnapshot(report);
+  const datedPath = path.join(DAILY_REPORTS_DIR, `${snapshot.reportDate}.json`);
+  fs.writeFileSync(datedPath, JSON.stringify(snapshot, null, 2), "utf8");
+  fs.writeFileSync(latestPath, JSON.stringify(snapshot, null, 2), "utf8");
+}
+
+function createRecommendationSnapshot(report) {
+  return {
+    reportDate: report.reportDate,
+    generatedAt: report.generatedAt,
+    etfActionCandidates: report.etfActionCandidates.map(snapshotItem),
+    stockActionCandidates: report.stockActionCandidates.map(snapshotItem),
+    stockEntryCandidates: report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map(snapshotItem),
+    stockPullbackCandidates: report.stockActionCandidates.filter((row) => row.stockVsEtfDecision !== "STOCK_PREFERRED").map(snapshotItem),
+    stockWatchCandidates: report.stockCautionRows.filter((row) => row.status === STATUS.WATCH).map(snapshotItem),
+    finalTopPick: report.topExecutionCandidate ? snapshotItem(report.topExecutionCandidate) : undefined,
+    dataMode: report.dataMode
+  };
+}
+
+function snapshotItem(row) {
+  return {
+    ticker: row.ticker,
+    assetType: row.assetType,
+    name: row.name,
+    actionLabel: row.todayActionLabel,
+    moneyFlowScore: row.moneyFlowScore,
+    reasonConfidence: row.reasonConfidence,
+    entryCondition: row.entryCondition,
+    invalidationCondition: row.invalidationCondition,
+    relatedEtfs: row.relatedEtfs?.map((etf) => etf.ticker) || [],
+    closePriceAtRecommendation: row.market?.lastClose ?? null,
+    recommendationDate: row.market?.dataDate || new Date().toISOString().slice(0, 10)
+  };
+}
+
+function buildPreviousRecommendationReviews(previousSnapshot, stocks, etfs) {
+  if (!previousSnapshot) return [];
+  const items = [
+    ...(previousSnapshot.stockActionCandidates || []),
+    ...(previousSnapshot.stockEntryCandidates || []),
+    ...(previousSnapshot.stockPullbackCandidates || [])
+  ].filter((row) => row.assetType === "STOCK");
+  const uniqueItems = new Map();
+  for (const item of items) uniqueItems.set(item.ticker, item);
+  return [...uniqueItems.values()].map((item) => {
+    const current = stocks.find((row) => row.ticker === item.ticker);
+    if (!current) {
+      return {
+        ...item,
+        todayStatus: "데이터 없음",
+        todayReason: "오늘 Nasdaq-100 스캔 결과에서 현재 데이터를 찾지 못함",
+        nextCondition: "다음 리포트에서 데이터 재확인"
+      };
+    }
+    const base = Number(item.closePriceAtRecommendation);
+    const now = Number(current.market?.lastClose);
+    const returnSinceRecommendation = Number.isFinite(base) && base > 0 && Number.isFinite(now) ? ((now - base) / base) * 100 : null;
+    const invalidated = current.status === STATUS.BAN || current.stockVsEtfDecision === "DO_NOT_TRADE";
+    const weakVsEtf = current.stockVsEtfDecision === "ETF_PREFERRED";
+    const hot = current.overheatingRisk === "높음" || current.overheatingRisk === "중간";
+    const todayStatus = invalidated ? "무효화" : weakVsEtf ? "매매 금지로 하향" : hot && returnSinceRecommendation > 0 ? "이익 보호" : current.status === STATUS.ENTRY_CANDIDATE ? "눌림 대기" : "유지";
+    const todayReason = `${current.ticker}는 전일 추천 이후 ${returnSinceRecommendation === null ? "수익률 데이터 없음" : pct(returnSinceRecommendation)} 변화. ${current.relativeStrengthVsEtf}`;
+    return {
+      ...item,
+      current,
+      todayClose: current.market?.lastClose ?? null,
+      returnSinceRecommendation,
+      entryConditionMet: current.status === STATUS.ENTRY_READY || current.status === STATUS.ENTRY_CANDIDATE,
+      invalidationTriggered: invalidated,
+      relativeStrengthMaintained: !weakVsEtf,
+      todayStatus,
+      todayReason,
+      nextCondition: current.invalidationCondition
+    };
+  });
 }
 
 async function collectSupplementalData(rawWatchlist, rawHoldings, rawEtfs, marketData) {
@@ -761,10 +972,19 @@ function renderMarkdown(report) {
 
 - ETF 행동 후보: ${report.etfActionCandidates.map((row) => row.ticker).join(", ") || "없음"}
 - 개별 종목 행동 후보: ${report.stockActionCandidates.map((row) => row.ticker).join(", ") || "없음"}
+- Nasdaq-100 신규 스캔 결과:
+  - 총 스캔: ${report.stockScanSummary.total}
+  - 최종 후보: ${report.stockActionCandidates.length}
+  - 제외: ${report.stockScanSummary.failed + report.stockScanSummary.ban}
+- 전일 추천 종목 점검:
+  - 점검 대상: ${report.previousRecommendationReviews.length}
+  - 유지: ${report.previousRecommendationReviews.filter((row) => row.todayStatus === "유지").length}
+  - 하향: ${report.previousRecommendationReviews.filter((row) => row.todayStatus === "매매 금지로 하향" || row.todayStatus === "눌림 대기").length}
+  - 무효화: ${report.previousRecommendationReviews.filter((row) => row.todayStatus === "무효화").length}
 - ETF 우선 테마: ${report.etfTop5.slice(0, 3).map((row) => row.categoryType).filter((value, index, arr) => arr.indexOf(value) === index).join(", ") || "데이터 없음"}
 - 개별 종목 우선 테마: ${report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.primaryTheme).filter(Boolean).join(", ") || "관련 ETF 대비 추가 확인 필요"}
 - 오늘 최우선 실행 후보: ${report.topExecutionCandidate ? `${report.topExecutionCandidate.ticker} - ${report.topExecutionCandidate.explanation}` : "조건 충족 후보 없음"}
-- 하지 말아야 할 것: 추격 매수 금지 / ETF와 개별 종목 중복 베팅 금지 / 데이터 미연결 상태에서 과신 금지
+- 하지 말아야 할 것: 추격 매수 금지 / ETF와 개별 종목 중복 베팅 금지 / 오늘 새 후보와 전일 추천 점검 종목을 같은 의미로 섞어 해석하지 않기
 
 ## moneyFlowScore 산정 방식
 
@@ -832,19 +1052,35 @@ ${report.etfBanRows.map((row) => `#### [${row.ticker}] ${row.name}
 
 ## 2. 개별 종목 트레이딩 보고서
 
-### 2-1. 개별 종목 결론
+### 2-1. 오늘 Nasdaq-100 신규 발굴 요약
+- 신규 발굴 풀: Nasdaq-100 구성종목 전체
+- universe source: ${report.stockUniverse.source}
+- universe fetchStatus: ${report.stockUniverse.fetchStatus}
+- 총 스캔 종목 수: ${report.stockScanSummary.total}
+- 데이터 수집 성공: ${report.stockScanSummary.success}
+- 데이터 수집 실패: ${report.stockScanSummary.failed}
+- 상세 데이터 수집 대상: 가격/거래량 1차 스캔 상위 ${report.stockScanSummary.detailedCount}개
+- 오늘 진입 후보: ${report.stockScanSummary.entry}
+- 오늘 눌림 대기: ${report.stockScanSummary.pullback}
+- 오늘 관찰: ${report.stockScanSummary.watch}
+- 오늘 매매 금지: ${report.stockScanSummary.ban}
 - 개별 종목 진입 후보: ${report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.ticker).join(", ") || "없음"}
 - 개별 종목 눌림 대기: ${report.stockActionCandidates.filter((row) => row.stockVsEtfDecision !== "STOCK_PREFERRED").map((row) => row.ticker).join(", ") || "없음"}
-- 개별 종목 보유 점검: ${report.holdRows.map((row) => row.ticker).join(", ") || "없음"}
 - 개별 종목 매매 금지: ${report.stockCautionRows.filter((row) => row.status === STATUS.BAN).map((row) => row.ticker).join(", ") || "없음"}
 - 오늘 개별 종목 최우선 1개: ${stockBest ? `${stockBest.ticker} - ${stockBest.relativeStrengthVsEtf}` : "없음"}
 - 개별 종목 섹션 해석: 이 섹션은 ETF로 확인된 테마 자금 흐름 안에서 ETF보다 더 나은 알파를 줄 수 있는 개별 종목만 선별하는 영역이다.
 
-### 2-2. 개별 종목 후보 TOP 5
+### 2-2. 오늘 개별 종목 신규 후보 TOP 5
 
 ${report.stockTop5.map(renderStockMarkdown).join("\n\n") || "데이터 없음"}
 
-### 2-3. ETF 대비 개별 종목 판단 로직
+### 2-3. 전일 추천 종목 점검
+이 섹션은 실제 계좌 보유 종목이 아니라 전일 리포트에서 제시된 개별 종목 후보의 사후 점검이다.
+실제 보유 수량/평단이 입력되지 않았으므로 계좌 수익률이 아니라 추천 기준일 이후 가격 변화를 추적한다.
+
+${report.previousRecommendationReviews.length ? report.previousRecommendationReviews.map(renderPreviousReviewMarkdown).join("\n\n") : "전일 추천 종목 데이터 없음"}
+
+### 2-4. ETF 대비 개별 종목 판단 로직
 
 - 관련 ETF의 5일/20일 수익률과 개별 종목의 5일/20일 수익률을 비교한다.
 - 관련 ETF의 상대 거래량과 개별 종목의 상대 거래량을 비교한다.
@@ -852,7 +1088,7 @@ ${report.stockTop5.map(renderStockMarkdown).join("\n\n") || "데이터 없음"}
 - 개별 종목이 관련 ETF와 비슷하거나 약하면 “ETF 우선 / 개별 종목 관찰”로 낮춘다.
 - 관련 ETF가 더 강하면 개별 종목 대신 ETF를 우선한다.
 
-### 2-4. 개별 종목 제외/주의 후보
+### 2-5. 개별 종목 제외/주의 후보
 
 ${report.stockCautionRows.map((row) => `#### [${row.ticker}] ${row.name}
 - moneyFlowScore: ${row.moneyFlowScore}
@@ -1057,6 +1293,17 @@ function renderDataCollectionMarkdown(report) {
   - 수집 가능 ETF 수: ${breadthCount}
   - fallback 사용 여부: 사용
 
+- Nasdaq-100 구성종목:
+  - 상태: ${report.stockUniverse.fetchStatus}
+  - 소스: ${report.stockUniverse.source}
+  - 총 구성종목 수: ${report.stockUniverse.members.length}
+  - 비고: ${(report.stockUniverse.notes || []).join("; ") || "특이사항 없음"}
+
+- 전일 추천 snapshot:
+  - 상태: ${report.previousSnapshot ? "연결됨" : "데이터 없음"}
+  - 점검 대상: ${report.previousRecommendationReviews.length}
+  - 저장 위치: data/latest-report.json, data/previous-report.json, data/dailyReports/
+
 - 유동성/스프레드:
   - 상태: ${statusLabel(report.dataConnectionStatus.liquiditySpread)}
   - 소스: 가격/거래량 기반 거래대금 fallback
@@ -1162,6 +1409,22 @@ ${row.holdingInfo ? `- 보유 정보: ${row.holdingInfo}\n` : ""}- 차트 요약
 - ${marketLine(row.market)}`;
 }
 
+function renderPreviousReviewMarkdown(row) {
+  return `#### [${row.ticker}] ${row.name || row.ticker}
+- 전일 추천일: ${row.recommendationDate || "데이터 없음"}
+- 전일 actionLabel: ${row.actionLabel || "데이터 없음"}
+- 전일 moneyFlowScore: ${row.moneyFlowScore ?? "데이터 없음"}
+- 전일 종가 또는 추천 기준가: ${price(row.closePriceAtRecommendation)}
+- 오늘 종가: ${price(row.todayClose)}
+- 추천 이후 수익률: ${row.returnSinceRecommendation === null || row.returnSinceRecommendation === undefined ? "데이터 없음" : pct(row.returnSinceRecommendation)}
+- 진입 조건 충족 여부: ${row.entryConditionMet ? "충족 또는 유지" : "미충족"}
+- 무효화 조건 발생 여부: ${row.invalidationTriggered ? "발생" : "미발생"}
+- 관련 ETF 대비 상대강도 유지 여부: ${row.relativeStrengthMaintained ? "유지" : "약화"}
+- 오늘 상태: ${row.todayStatus}
+- 오늘 판단 근거: ${row.todayReason}
+- 다음 확인 조건: ${row.nextCondition || "데이터 없음"}`;
+}
+
 function renderHtml(report) {
   const etfBest = report.etfActionCandidates[0];
   const stockBest = report.stockActionCandidates[0];
@@ -1217,18 +1480,27 @@ function renderHtml(report) {
       <h3>1-4. ETF 제외/매매 금지 후보</h3>${htmlList(report.etfBanRows.map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | 재검토: ${escapeHtml(row.entryCondition)}`))}
     </section>
     <section><h2>2. 개별 종목 트레이딩 보고서</h2>
-      <h3>2-1. 개별 종목 결론</h3>
+      <h3>2-1. 오늘 Nasdaq-100 신규 발굴 요약</h3>
       ${htmlList([
+        "신규 발굴 풀: Nasdaq-100 구성종목 전체",
+        `universe source: ${escapeHtml(report.stockUniverse.source)}`,
+        `universe fetchStatus: ${escapeHtml(report.stockUniverse.fetchStatus)}`,
+        `총 스캔 종목 수: ${report.stockScanSummary.total}`,
+        `데이터 수집 성공: ${report.stockScanSummary.success}`,
+        `데이터 수집 실패: ${report.stockScanSummary.failed}`,
+        `상세 데이터 수집 대상: 가격/거래량 1차 스캔 상위 ${report.stockScanSummary.detailedCount}개`,
         `개별 종목 진입 후보: ${escapeHtml(report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.ticker).join(", ") || "없음")}`,
         `개별 종목 눌림 대기: ${escapeHtml(report.stockActionCandidates.filter((row) => row.stockVsEtfDecision !== "STOCK_PREFERRED").map((row) => row.ticker).join(", ") || "없음")}`,
-        `개별 종목 보유 점검: ${escapeHtml(report.holdRows.map((row) => row.ticker).join(", ") || "없음")}`,
         `개별 종목 매매 금지: ${escapeHtml(report.stockCautionRows.filter((row) => row.status === STATUS.BAN).map((row) => row.ticker).join(", ") || "없음")}`,
         `오늘 개별 종목 최우선 1개: ${escapeHtml(stockBest ? `${stockBest.ticker} - ${stockBest.relativeStrengthVsEtf}` : "없음")}`,
         "개별 종목 섹션 해석: 이 섹션은 ETF로 확인된 테마 자금 흐름 안에서 ETF보다 더 나은 알파를 줄 수 있는 개별 종목만 선별하는 영역이다."
       ])}
-      <h3>2-2. 개별 종목 후보 TOP 5</h3>${report.stockTop5.map(renderStockHtml).join("") || "<p>데이터 없음</p>"}
-      <h3>2-3. ETF 대비 개별 종목 판단 로직</h3>${htmlList(["관련 ETF의 5일/20일 수익률과 개별 종목의 5일/20일 수익률을 비교한다.", "관련 ETF의 상대 거래량과 개별 종목의 상대 거래량을 비교한다.", "개별 종목이 관련 ETF보다 강하면 개별 종목 우선 가능으로 본다.", "관련 ETF가 더 강하면 개별 종목 대신 ETF를 우선한다."])}
-      <h3>2-4. 개별 종목 제외/주의 후보</h3>${htmlList(report.stockCautionRows.map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | 재검토: ${escapeHtml(row.entryCondition)}`))}
+      <h3>2-2. 오늘 개별 종목 신규 후보 TOP 5</h3>${report.stockTop5.map(renderStockHtml).join("") || "<p>데이터 없음</p>"}
+      <h3>2-3. 전일 추천 종목 점검</h3>
+      <p class="muted">이 섹션은 실제 계좌 보유 종목이 아니라 전일 리포트에서 제시된 개별 종목 후보의 사후 점검이다. 실제 보유 수량/평단이 입력되지 않았으므로 계좌 수익률이 아니라 추천 기준일 이후 가격 변화를 추적한다.</p>
+      ${report.previousRecommendationReviews.length ? report.previousRecommendationReviews.map(renderPreviousReviewHtml).join("") : "<p>전일 추천 종목 데이터 없음</p>"}
+      <h3>2-4. ETF 대비 개별 종목 판단 로직</h3>${htmlList(["관련 ETF의 5일/20일 수익률과 개별 종목의 5일/20일 수익률을 비교한다.", "관련 ETF의 상대 거래량과 개별 종목의 상대 거래량을 비교한다.", "개별 종목이 관련 ETF보다 강하면 개별 종목 우선 가능으로 본다.", "관련 ETF가 더 강하면 개별 종목 대신 ETF를 우선한다."])}
+      <h3>2-5. 개별 종목 제외/주의 후보</h3>${htmlList(report.stockCautionRows.map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | 재검토: ${escapeHtml(row.entryCondition)}`))}
     </section>
     <section><h2>감시 ETF 목록</h2>${renderEtfTable(report.etfs)}</section>
     <section><h2>3. 최종 실행 판단</h2>
@@ -1267,10 +1539,12 @@ function renderSplitConclusionHtml(report) {
   return `<section><h2>오늘의 분리 결론</h2><div class="grid">
     ${tile("ETF 행동 후보", report.etfActionCandidates.map((row) => row.ticker).join(", ") || "없음")}
     ${tile("개별 종목 행동 후보", report.stockActionCandidates.map((row) => row.ticker).join(", ") || "없음")}
+    ${tile("Nasdaq-100 신규 스캔 결과", `${report.stockScanSummary.total}개 중 ${report.stockActionCandidates.length}개 후보, 제외 ${report.stockScanSummary.failed + report.stockScanSummary.ban}개`)}
+    ${tile("전일 추천 종목 점검", `${report.previousRecommendationReviews.length}개 대상 / 유지 ${report.previousRecommendationReviews.filter((row) => row.todayStatus === "유지").length} / 무효화 ${report.previousRecommendationReviews.filter((row) => row.todayStatus === "무효화").length}`)}
     ${tile("ETF 우선 테마", report.etfTop5.slice(0, 3).map((row) => row.categoryType).filter((value, index, arr) => arr.indexOf(value) === index).join(", ") || "데이터 없음")}
     ${tile("개별 종목 우선 테마", report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.primaryTheme).filter(Boolean).join(", ") || "관련 ETF 대비 추가 확인 필요")}
     ${tile("오늘 최우선 실행 후보", report.topExecutionCandidate ? `${report.topExecutionCandidate.ticker} - ${report.topExecutionCandidate.explanation}` : "조건 충족 후보 없음")}
-    ${tile("하지 말아야 할 것", "추격 매수 금지 / ETF와 개별 종목 중복 베팅 금지 / 데이터 미연결 과신 금지")}
+    ${tile("하지 말아야 할 것", "추격 매수 금지 / 신규 후보와 전일 추천 점검을 섞어 해석하지 않기")}
   </div></section>`;
 }
 
@@ -1316,6 +1590,23 @@ function renderStockHtml(row) {
     ${row.holdingInfo ? `<p class="muted">${escapeHtml(row.holdingInfo)}</p>` : ""}
     ${chartImage(row)}
     <p class="muted">${escapeHtml(marketLine(row.market))}</p>
+  </article>`;
+}
+
+function renderPreviousReviewHtml(row) {
+  return `<article data-previous-review-card="${escapeHtml(row.ticker)}"><h3>[${escapeHtml(row.ticker)}] ${escapeHtml(row.name || row.ticker)} ${badge(row.todayStatus)}</h3>
+    <div class="grid">
+      ${tile("전일 추천일", row.recommendationDate || "데이터 없음")}
+      ${tile("전일 actionLabel", row.actionLabel || "데이터 없음")}
+      ${tile("전일 moneyFlowScore", row.moneyFlowScore ?? "데이터 없음")}
+      ${tile("전일 기준가", price(row.closePriceAtRecommendation))}
+      ${tile("오늘 종가", price(row.todayClose))}
+      ${tile("추천 이후 수익률", row.returnSinceRecommendation === null || row.returnSinceRecommendation === undefined ? "데이터 없음" : pct(row.returnSinceRecommendation))}
+      ${tile("진입 조건", row.entryConditionMet ? "충족 또는 유지" : "미충족")}
+      ${tile("무효화 조건", row.invalidationTriggered ? "발생" : "미발생")}
+      ${tile("ETF 대비 상대강도", row.relativeStrengthMaintained ? "유지" : "약화")}
+    </div>
+    ${htmlList([`오늘 판단 근거: ${escapeHtml(row.todayReason)}`, `다음 확인 조건: ${escapeHtml(row.nextCondition || "데이터 없음")}`])}
   </article>`;
 }
 

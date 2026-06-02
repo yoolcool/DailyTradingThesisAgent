@@ -1,0 +1,307 @@
+{
+  "reportDate": "2026-06-02",
+  "generatedAt": "2026년 6월 2일 화요일 오후 12:31",
+  "etfActionCandidates": [
+    {
+      "ticker": "IGV",
+      "assetType": "ETF",
+      "name": "iShares Expanded Tech-Software Sector ETF",
+      "actionLabel": "ETF 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "20일선 위에서 눌림 후 재상승 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 107.7,
+      "recommendationDate": "2026-06-01"
+    },
+    {
+      "ticker": "AIQ",
+      "assetType": "ETF",
+      "name": "Global X Artificial Intelligence & Technology ETF",
+      "actionLabel": "ETF 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 69.44,
+      "recommendationDate": "2026-06-01"
+    },
+    {
+      "ticker": "CIBR",
+      "assetType": "ETF",
+      "name": "First Trust NASDAQ Cybersecurity ETF",
+      "actionLabel": "ETF 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 94.15,
+      "recommendationDate": "2026-06-01"
+    },
+    {
+      "ticker": "HACK",
+      "assetType": "ETF",
+      "name": "Amplify Cybersecurity ETF",
+      "actionLabel": "ETF 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "MEDIUM",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 105,
+      "recommendationDate": "2026-06-01"
+    },
+    {
+      "ticker": "IPO",
+      "assetType": "ETF",
+      "name": "Renaissance IPO ETF",
+      "actionLabel": "ETF 우선",
+      "moneyFlowScore": 94,
+      "reasonConfidence": "MEDIUM",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 58.12,
+      "recommendationDate": "2026-06-01"
+    }
+  ],
+  "stockActionCandidates": [
+    {
+      "ticker": "AVGO",
+      "assetType": "STOCK",
+      "name": "Broadcom Inc.",
+      "actionLabel": "개별 종목 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 459.97,
+      "recommendationDate": "2026-06-01"
+    },
+    {
+      "ticker": "ARM",
+      "assetType": "STOCK",
+      "name": "Arm Holdings plc",
+      "actionLabel": "개별 종목 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 408.85,
+      "recommendationDate": "2026-06-01"
+    },
+    {
+      "ticker": "PANW",
+      "assetType": "STOCK",
+      "name": "Palo Alto Networks Inc.",
+      "actionLabel": "개별 종목 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [
+        "HACK",
+        "CIBR",
+        "IHAK",
+        "IGV"
+      ],
+      "closePriceAtRecommendation": 300.48,
+      "recommendationDate": "2026-06-01"
+    },
+    {
+      "ticker": "CRWD",
+      "assetType": "STOCK",
+      "name": "CrowdStrike Holdings Inc.",
+      "actionLabel": "개별 종목 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [
+        "HACK",
+        "CIBR",
+        "IHAK",
+        "IGV"
+      ],
+      "closePriceAtRecommendation": 782.17,
+      "recommendationDate": "2026-06-01"
+    },
+    {
+      "ticker": "ADBE",
+      "assetType": "STOCK",
+      "name": "Adobe Inc.",
+      "actionLabel": "개별 종목 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "20일선 위에서 눌림 후 재상승 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [
+        "IGV",
+        "AIQ",
+        "QQQ"
+      ],
+      "closePriceAtRecommendation": 274.03,
+      "recommendationDate": "2026-06-01"
+    }
+  ],
+  "stockEntryCandidates": [
+    {
+      "ticker": "ARM",
+      "assetType": "STOCK",
+      "name": "Arm Holdings plc",
+      "actionLabel": "개별 종목 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 408.85,
+      "recommendationDate": "2026-06-01"
+    },
+    {
+      "ticker": "PANW",
+      "assetType": "STOCK",
+      "name": "Palo Alto Networks Inc.",
+      "actionLabel": "개별 종목 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [
+        "HACK",
+        "CIBR",
+        "IHAK",
+        "IGV"
+      ],
+      "closePriceAtRecommendation": 300.48,
+      "recommendationDate": "2026-06-01"
+    },
+    {
+      "ticker": "CRWD",
+      "assetType": "STOCK",
+      "name": "CrowdStrike Holdings Inc.",
+      "actionLabel": "개별 종목 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [
+        "HACK",
+        "CIBR",
+        "IHAK",
+        "IGV"
+      ],
+      "closePriceAtRecommendation": 782.17,
+      "recommendationDate": "2026-06-01"
+    }
+  ],
+  "stockPullbackCandidates": [
+    {
+      "ticker": "AVGO",
+      "assetType": "STOCK",
+      "name": "Broadcom Inc.",
+      "actionLabel": "개별 종목 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 459.97,
+      "recommendationDate": "2026-06-01"
+    },
+    {
+      "ticker": "ADBE",
+      "assetType": "STOCK",
+      "name": "Adobe Inc.",
+      "actionLabel": "개별 종목 우선",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "20일선 위에서 눌림 후 재상승 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [
+        "IGV",
+        "AIQ",
+        "QQQ"
+      ],
+      "closePriceAtRecommendation": 274.03,
+      "recommendationDate": "2026-06-01"
+    }
+  ],
+  "stockWatchCandidates": [
+    {
+      "ticker": "MRVL",
+      "assetType": "STOCK",
+      "name": "Marvell Technology Inc.",
+      "actionLabel": "돌파 확인 후 관찰",
+      "moneyFlowScore": 100,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 219.43,
+      "recommendationDate": "2026-06-01"
+    },
+    {
+      "ticker": "FTNT",
+      "assetType": "STOCK",
+      "name": "Fortinet Inc.",
+      "actionLabel": "돌파 확인 후 관찰",
+      "moneyFlowScore": 99,
+      "reasonConfidence": "HIGH",
+      "entryCondition": "전일 고점 돌파 후 5일선 위 유지",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "relatedEtfs": [
+        "HACK",
+        "CIBR",
+        "IHAK",
+        "IGV"
+      ],
+      "closePriceAtRecommendation": 147.14,
+      "recommendationDate": "2026-06-01"
+    }
+  ],
+  "finalTopPick": {
+    "ticker": "IGV",
+    "assetType": "ETF",
+    "name": "iShares Expanded Tech-Software Sector ETF",
+    "actionLabel": "ETF 우선",
+    "moneyFlowScore": 100,
+    "reasonConfidence": "HIGH",
+    "entryCondition": "20일선 위에서 눌림 후 재상승 확인",
+    "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+    "relatedEtfs": [],
+    "closePriceAtRecommendation": 107.7,
+    "recommendationDate": "2026-06-01"
+  },
+  "dataMode": "REAL_TEST"
+}

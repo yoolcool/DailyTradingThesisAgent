@@ -38,7 +38,7 @@
     <section class="pages-links" data-pages-links>
       <h2>웹 리포트 링크</h2>
       <p><strong>데이터 모드:</strong> REAL_TEST - 가격/거래량은 실제 데이터, 뉴스/옵션/ETF 구성종목 확산도 등은 아직 미연결</p>
-      <p><strong>생성 시각:</strong> 2026년 6월 2일 화요일 오후 12:09</p>
+      <p><strong>생성 시각:</strong> 2026년 6월 2일 화요일 오후 12:31</p>
       <p>
         <a href="latest.md">Markdown 원문 보기</a>
         <span aria-hidden="true"> · </span>
@@ -49,7 +49,7 @@
     <div class="hero">
       <h1>오늘의 데일리 트레이딩 요약</h1>
       <p class="purpose">이 리포트는 최근 오른 자산을 나열하는 것이 아니라, 돈이 몰리는 근거와 다음 매수 주체가 확인되는 트레이딩 후보를 찾기 위한 보고서다.</p>
-      <p class="muted">생성 시각: 2026년 6월 2일 화요일 오후 12:09</p>
+      <p class="muted">생성 시각: 2026년 6월 2일 화요일 오후 12:31</p>
       <p><strong>핵심 질문:</strong> 현재 가격에서 살까, 누가 왜 더 비싸게 사줄 수 있는가?</p>
       <p class="muted">뉴스/옵션/ETF 구성종목 확산도/스프레드 데이터는 아직 미연결이다. HIGH confidence는 사용하지 않는다.</p>
     </div>
@@ -60,19 +60,21 @@
     <div class="tile"><strong>옵션</strong>실패</div>
     <div class="tile"><strong>ETF 구성종목 확산도</strong>일부 연결</div>
     <div class="tile"><strong>스프레드/유동성</strong>일부 연결</div>
-    <div class="tile"><strong>생성 시각</strong>2026년 6월 2일 화요일 오후 12:09</div>
+    <div class="tile"><strong>생성 시각</strong>2026년 6월 2일 화요일 오후 12:31</div>
     <div class="tile"><strong>시장 상태</strong>위험선호</div>
     <div class="tile"><strong>오늘 돈의 방향</strong>성장/테마 ETF 쪽 ETF 자금 흐름이 가장 선명함</div>
-    <div class="tile"><strong>강한 테마 TOP 3</strong>반도체 공급망(97), AI 소프트웨어(97), AI 플랫폼(90)</div>
+    <div class="tile"><strong>강한 테마 TOP 3</strong>반도체/기술 ETF(76), Technology(60), 성장/테마 ETF(44)</div>
     <div class="tile"><strong>오늘의 원칙</strong>ETF는 테마 흐름, 개별 종목은 ETF보다 강할 때만 알파 후보</div>
   </div><ul><li>API 키 또는 provider 상태에 따라 보조 데이터 반영 범위가 달라짐</li><li>수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한</li><li>reasonConfidence HIGH는 추가 데이터가 충분히 연결된 후보에만 사용</li></ul></section>
     <section><h2>오늘의 분리 결론</h2><div class="grid">
     <div class="tile"><strong>ETF 행동 후보</strong>IGV, AIQ, CIBR, HACK, IPO</div>
-    <div class="tile"><strong>개별 종목 행동 후보</strong>TSM, PLTR, NVDA</div>
+    <div class="tile"><strong>개별 종목 행동 후보</strong>AVGO, ARM, PANW, CRWD, ADBE</div>
+    <div class="tile"><strong>Nasdaq-100 신규 스캔 결과</strong>101개 중 5개 후보, 제외 60개</div>
+    <div class="tile"><strong>전일 추천 종목 점검</strong>5개 대상 / 유지 5 / 무효화 0</div>
     <div class="tile"><strong>ETF 우선 테마</strong>성장/테마 ETF</div>
-    <div class="tile"><strong>개별 종목 우선 테마</strong>관련 ETF 대비 추가 확인 필요</div>
+    <div class="tile"><strong>개별 종목 우선 테마</strong>Technology, Technology, Technology</div>
     <div class="tile"><strong>오늘 최우선 실행 후보</strong>IGV - IGV는 ETF라 테마 단위 자금 흐름을 직접 먹는 후보이고, 현재 점수가 개별 종목 후보보다 우선한다.</div>
-    <div class="tile"><strong>하지 말아야 할 것</strong>추격 매수 금지 / ETF와 개별 종목 중복 베팅 금지 / 데이터 미연결 과신 금지</div>
+    <div class="tile"><strong>하지 말아야 할 것</strong>추격 매수 금지 / 신규 후보와 전일 추천 점검을 섞어 해석하지 않기</div>
   </div></section>
     <section><h2>moneyFlowScore 산정 방식</h2>
     <h3>score의 의미</h3>
@@ -84,7 +86,7 @@
     <ul><li>80점 이상: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.</li><li>65점 이상 80점 미만: 관심 후보. 눌림 또는 돌파 확인 후 진입 검토.</li><li>50점 이상 65점 미만: 관찰 후보. 흐름은 있으나 우선순위는 낮음.</li><li>50점 미만: 매매 금지 또는 후순위 후보.</li></ul>
     <p><strong>주의:</strong> moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 자금 흐름 후보 점수이며, 진입 여부는 반드시 진입 조건과 무효화 조건을 함께 확인해야 한다.</p>
   </section>
-    <section><h2>오늘 돈이 몰리는 테마</h2><ul><li>반도체 공급망: TSM | 평균 moneyFlowScore 97</li><li>AI 소프트웨어: PLTR | 평균 moneyFlowScore 97</li><li>AI 플랫폼: MSFT | 평균 moneyFlowScore 90</li><li>AI 반도체: NVDA | 평균 moneyFlowScore 84</li><li>반도체/기술 ETF: DRAM, SMH, SOXX, SOXQ | 평균 moneyFlowScore 76</li><li>성장/테마 ETF: IGV, AIQ, BOTZ, ROBO, CIBR, HACK | 평균 moneyFlowScore 44</li></ul></section>
+    <section><h2>오늘 돈이 몰리는 테마</h2><ul><li>반도체/기술 ETF: DRAM, SMH, SOXX, SOXQ | 평균 moneyFlowScore 76</li><li>Technology: NVDA, AAPL, MSFT, AVGO, MU, AMD | 평균 moneyFlowScore 60</li><li>성장/테마 ETF: IGV, AIQ, BOTZ, ROBO, CIBR, HACK | 평균 moneyFlowScore 44</li><li>시장 기준 ETF: QQQ, SPY, IWM | 평균 moneyFlowScore 43</li><li>Industrials: HON, ADP, CSX, CTAS, PCAR, FAST | 평균 moneyFlowScore 41</li><li>방산 ETF: ITA, XAR, SHLD, PPA | 평균 moneyFlowScore 40</li></ul></section>
     <section><h2>1. ETF 트레이딩 보고서</h2>
       <h3>1-1. ETF 결론</h3>
       <ul><li>ETF 우선 후보: IGV, AIQ, CIBR, HACK, IPO</li><li>ETF 관찰 후보: DRAM, BOTZ, IHAK, ITA, PPA</li><li>ETF 매매 금지: IFRA, URA, NLR, OIH, KWEB</li><li>오늘 ETF 최우선 1개: IGV - 20일선 위에서 눌림 후 재상승 확인</li><li>ETF 섹션 해석: 이 섹션은 개별 종목 선택이 아니라 테마/섹터 단위의 자금 흐름을 ETF로 매매할지 판단하기 위한 영역이다.</li></ul>
@@ -268,18 +270,18 @@
       <h3>1-4. ETF 제외/매매 금지 후보</h3><ul><li>IFRA | moneyFlowScore 0 | 유동성/스프레드 주의. 주의: 옵션 데이터 미연결 또는 수집 실패, ETF 구성종목 확산도 데이터 미연결. | 재검토: 상대 거래량 1.0배 회복 후 관찰</li><li>URA | moneyFlowScore 0 | 뉴스 흐름이 가격/거래량 근거를 보강, 거래대금 기준 유동성 양호. 주의: 옵션 데이터 미연결 또는 수집 실패, ETF 구성종목 확산도 데이터 미연결. | 재검토: 상대 거래량 1.0배 회복 후 관찰</li><li>NLR | moneyFlowScore 0 | 뉴스 흐름이 가격/거래량 근거를 보강, 유동성/스프레드 주의. 주의: 옵션 데이터 미연결 또는 수집 실패, ETF 구성종목 확산도 데이터 미연결. | 재검토: 상대 거래량 1.0배 회복 후 관찰</li><li>OIH | moneyFlowScore 0 | 뉴스 흐름이 가격/거래량 근거를 보강, 거래대금 기준 유동성 양호. 주의: 옵션 데이터 미연결 또는 수집 실패. | 재검토: 상대 거래량 1.0배 회복 후 관찰</li><li>KWEB | moneyFlowScore 0 | 1일 단기 모멘텀 확인, 거래대금 기준 유동성 양호. 주의: 옵션 데이터 미연결 또는 수집 실패, ETF 구성종목 확산도 데이터 미연결. | 재검토: 상대 거래량 1.0배 회복 후 관찰</li></ul>
     </section>
     <section><h2>2. 개별 종목 트레이딩 보고서</h2>
-      <h3>2-1. 개별 종목 결론</h3>
-      <ul><li>개별 종목 진입 후보: 없음</li><li>개별 종목 눌림 대기: TSM, PLTR, NVDA</li><li>개별 종목 보유 점검: MSFT, AAPL</li><li>개별 종목 매매 금지: XOM</li><li>오늘 개별 종목 최우선 1개: TSM - 관련 ETF와 비슷함 | 주식 5일 +7.69% vs ETF 평균 +6.04%, 주식 20일 +9.55% vs ETF 평균 +21.48%, 상대 거래량 1.35배 vs ETF 평균 0.84배</li><li>개별 종목 섹션 해석: 이 섹션은 ETF로 확인된 테마 자금 흐름 안에서 ETF보다 더 나은 알파를 줄 수 있는 개별 종목만 선별하는 영역이다.</li></ul>
-      <h3>2-2. 개별 종목 후보 TOP 5</h3><article data-stock-card="TSM"><h3>[TSM] Taiwan Semiconductor <span class="badge ready">진입 가능</span></h3>
-    <div class="grid"><div class="tile"><strong>자산 유형</strong>STOCK</div><div class="tile"><strong>primaryTheme</strong>반도체 공급망</div><div class="tile"><strong>relatedEtfs</strong>SMH, SOXX, SOXQ</div><div class="tile"><strong>moneyFlowScore</strong>97</div><div class="tile"><strong>reasonConfidence</strong>HIGH</div><div class="tile"><strong>todayActionLabel</strong>개별 종목 우선</div><div class="tile"><strong>ETF 대비 상대강도</strong>관련 ETF와 비슷함 | 주식 5일 +7.69% vs ETF 평균 +6.04%, 주식 20일 +9.55% vs ETF 평균 +21.48%, 상대 거래량 1.35배 vs ETF 평균 0.84배</div></div>
+      <h3>2-1. 오늘 Nasdaq-100 신규 발굴 요약</h3>
+      <ul><li>신규 발굴 풀: Nasdaq-100 구성종목 전체</li><li>universe source: fallback from StockAnalysis Nasdaq-100 list checked 2026-06-02</li><li>universe fetchStatus: FALLBACK</li><li>총 스캔 종목 수: 101</li><li>데이터 수집 성공: 101</li><li>데이터 수집 실패: 0</li><li>상세 데이터 수집 대상: 가격/거래량 1차 스캔 상위 20개</li><li>개별 종목 진입 후보: ARM, PANW, CRWD</li><li>개별 종목 눌림 대기: AVGO, ADBE</li><li>개별 종목 매매 금지: 없음</li><li>오늘 개별 종목 최우선 1개: AVGO - 관련 ETF와 비슷함 | 주식 5일 +11.07% vs ETF 평균 +7.17%, 주식 20일 +9.18% vs ETF 평균 +21.66%, 상대 거래량 1.43배 vs ETF 평균 1.03배</li><li>개별 종목 섹션 해석: 이 섹션은 ETF로 확인된 테마 자금 흐름 안에서 ETF보다 더 나은 알파를 줄 수 있는 개별 종목만 선별하는 영역이다.</li></ul>
+      <h3>2-2. 오늘 개별 종목 신규 후보 TOP 5</h3><article data-stock-card="AVGO"><h3>[AVGO] Broadcom Inc. <span class="badge ready">진입 가능</span></h3>
+    <div class="grid"><div class="tile"><strong>자산 유형</strong>STOCK</div><div class="tile"><strong>primaryTheme</strong>Technology</div><div class="tile"><strong>relatedEtfs</strong>SMH, SOXX, SOXQ, AIQ</div><div class="tile"><strong>moneyFlowScore</strong>100</div><div class="tile"><strong>reasonConfidence</strong>HIGH</div><div class="tile"><strong>todayActionLabel</strong>개별 종목 우선</div><div class="tile"><strong>ETF 대비 상대강도</strong>관련 ETF와 비슷함 | 주식 5일 +11.07% vs ETF 평균 +7.17%, 주식 20일 +9.18% vs ETF 평균 +21.66%, 상대 거래량 1.43배 vs ETF 평균 1.03배</div></div>
     <details open>
     <summary><strong>moneyFlowScore 산정 근거</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총점</strong>97</div>
+      <div class="tile"><strong>총점</strong>100</div>
       <div class="tile"><strong>점수 해석</strong>강한 자금 유입 후보. 단, 과열 여부 확인 필수.</div>
-      <div class="tile"><strong>가격/거래량 점수</strong>+75</div>
-      <div class="tile"><strong>추세 점수</strong>+18</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+11</div>
+      <div class="tile"><strong>가격/거래량 점수</strong>+80</div>
+      <div class="tile"><strong>추세 점수</strong>+21</div>
+      <div class="tile"><strong>단기 모멘텀</strong>+12</div>
       <div class="tile"><strong>중기 모멘텀</strong>+6</div>
       <div class="tile"><strong>거래량 점수</strong>+14</div>
       <div class="tile"><strong>신고가 근접 점수</strong>+12</div>
@@ -288,43 +290,6 @@
       <div class="tile"><strong>옵션 점수</strong>0</div>
       
       <div class="tile"><strong>유동성 점수</strong>+5</div>
-      <div class="tile"><strong>ETF 대비 상대강도 점수</strong>+7</div>
-      <div class="tile"><strong>리스크 패널티</strong>0</div>
-    </div>
-    <p class="muted">20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 옵션 데이터 미연결 또는 수집 실패.</p>
-  </details>
-    <details>
-    <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
-    <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>옵션: 실패</li><li>ETF 확산도: 관련 ETF에서 확인</li><li>유동성/스프레드: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 연결됨</li><li>긍정/중립/부정: 7/1/0</li><li>핵심 뉴스 요약: Nvidia Expands Into CPUs As AI Partnerships Grow And Valuation Stretches</li><li>점수 반영: +10</li><li>주의: 특이사항 없음</li></ul>
-    <h4>옵션 수급</h4><ul><li>옵션 데이터 상태: 실패</li><li>Put/Call 거래량 비율: 데이터 없음</li><li>콜 거래량: 데이터 없음</li><li>풋 거래량: 데이터 없음</li><li>IV 상태: 데이터 없음</li><li>해석: 뚜렷한 옵션 방향성 없음</li><li>점수 반영: 0</li></ul>
-    <h4>ETF 구성종목 확산도</h4><ul><li>관련 ETF에서 확인</li></ul>
-    <h4>유동성/스프레드</h4><ul><li>데이터 상태: 일부 연결</li><li>스프레드: bid/ask 데이터 없음</li><li>거래대금: $7,836,474,449</li><li>평균 거래대금: $5,795,238,601</li><li>유동성 판단: LIQUID</li><li>매매 영향: 거래대금 기준 실제 매매 가능성에 큰 문제는 낮음</li></ul>
-    <h4>reasonConfidence 근거</h4><p class="muted">가격/거래량, 뉴스, 유동성 데이터가 확인되어 신뢰도를 높임.</p>
-  </details>
-    <ul><li><strong>기준일:</strong> 2026-06-01 / <strong>종가:</strong> $435.63 / <strong>1일:</strong> +4.11% / <strong>5일:</strong> +7.69% / <strong>20일:</strong> +9.55% / <strong>상대 거래량:</strong> 1.35배</li><li><strong>whyMoneyIsFlowing:</strong> 20일 +9.55%, 5일 +7.69%, 상대 거래량 1.35배로 가격과 거래량이 함께 개선. 뉴스: Nvidia Expands Into CPUs As AI Partnerships Grow And Valuation Stretches / 유동성: LIQUID</li><li><strong>likelyNextBuyer:</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 스윙 트레이더</li><li><strong>whyThisCouldTradeHigher:</strong> 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</li><li><strong>진입 조건:</strong> 전일 고점 돌파 후 5일선 위 유지</li><li><strong>무효화 조건:</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>차트 요약:</strong> 최근 20거래일 우상향, 5일선이 20일선 위에 있음</li></ul>
-    <ul><li><strong>왜 ETF가 아니라 이 종목인가?</strong> 관련 ETF와 비슷함 | 주식 5일 +7.69% vs ETF 평균 +6.04%, 주식 20일 +9.55% vs ETF 평균 +21.48%, 상대 거래량 1.35배 vs ETF 평균 0.84배. 개별 종목 우선으로 격상하려면 관련 ETF 대비 상대강도 유지가 더 필요하다.</li><li><strong>ETF가 더 나은 경우</strong> TSM가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목 대신 관련 ETF를 우선한다.</li></ul>
-    
-    <img class="chart" src="charts/TSM.png" alt="TSM price chart">
-    <p class="muted">기준일 2026-06-01 | 종가 $435.63 | 1일 +4.11% | 5일 +7.69% | 20일 +9.55% | 상대 거래량 1.35배 | 52주 고점 대비 -3.06% | 데이터 소스: yfinance</p>
-  </article><article data-stock-card="PLTR"><h3>[PLTR] Palantir <span class="badge ready">진입 가능</span></h3>
-    <div class="grid"><div class="tile"><strong>자산 유형</strong>STOCK</div><div class="tile"><strong>primaryTheme</strong>AI 소프트웨어</div><div class="tile"><strong>relatedEtfs</strong>IGV, AIQ, CIBR, QQQ</div><div class="tile"><strong>moneyFlowScore</strong>97</div><div class="tile"><strong>reasonConfidence</strong>HIGH</div><div class="tile"><strong>todayActionLabel</strong>개별 종목 우선</div><div class="tile"><strong>ETF 대비 상대강도</strong>관련 ETF와 비슷함 | 주식 5일 +17.37% vs ETF 평균 +10.08%, 주식 20일 +11.51% vs ETF 평균 +23.41%, 상대 거래량 1.22배 vs ETF 평균 1.42배</div></div>
-    <details open>
-    <summary><strong>moneyFlowScore 산정 근거</strong></summary>
-    <div class="grid">
-      <div class="tile"><strong>총점</strong>97</div>
-      <div class="tile"><strong>점수 해석</strong>강한 자금 유입 후보. 단, 과열 여부 확인 필수.</div>
-      <div class="tile"><strong>가격/거래량 점수</strong>+74</div>
-      <div class="tile"><strong>추세 점수</strong>+23</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+15</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+7</div>
-      <div class="tile"><strong>거래량 점수</strong>+14</div>
-      <div class="tile"><strong>신고가 근접 점수</strong>0</div>
-      <div class="tile"><strong>이동평균 점수</strong>+14</div>
-      <div class="tile"><strong>뉴스 점수</strong>+10</div>
-      <div class="tile"><strong>옵션 점수</strong>0</div>
-      
-      <div class="tile"><strong>유동성 점수</strong>+5</div>
       <div class="tile"><strong>ETF 대비 상대강도 점수</strong>+8</div>
       <div class="tile"><strong>리스크 패널티</strong>0</div>
     </div>
@@ -333,67 +298,67 @@
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>옵션: 실패</li><li>ETF 확산도: 관련 ETF에서 확인</li><li>유동성/스프레드: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 연결됨</li><li>긍정/중립/부정: 4/4/0</li><li>핵심 뉴스 요약: Nvidia Highlights New AI Products at Computex</li><li>점수 반영: +10</li><li>주의: 특이사항 없음</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 연결됨</li><li>긍정/중립/부정: 7/1/0</li><li>핵심 뉴스 요약: Dow Jones Futures Slide: Broadcom, Micron, Nvidia, Sandisk, Tesla Are Big Movers; AI Stock Credo Plunges On Earnings</li><li>점수 반영: +10</li><li>주의: 특이사항 없음</li></ul>
     <h4>옵션 수급</h4><ul><li>옵션 데이터 상태: 실패</li><li>Put/Call 거래량 비율: 데이터 없음</li><li>콜 거래량: 데이터 없음</li><li>풋 거래량: 데이터 없음</li><li>IV 상태: 데이터 없음</li><li>해석: 뚜렷한 옵션 방향성 없음</li><li>점수 반영: 0</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>관련 ETF에서 확인</li></ul>
-    <h4>유동성/스프레드</h4><ul><li>데이터 상태: 일부 연결</li><li>스프레드: bid/ask 데이터 없음</li><li>거래대금: $9,095,577,759</li><li>평균 거래대금: $7,426,751,022</li><li>유동성 판단: LIQUID</li><li>매매 영향: 거래대금 기준 실제 매매 가능성에 큰 문제는 낮음</li></ul>
+    <h4>유동성/스프레드</h4><ul><li>데이터 상태: 일부 연결</li><li>스프레드: bid/ask 데이터 없음</li><li>거래대금: $13,473,909,949</li><li>평균 거래대금: $9,401,055,448</li><li>유동성 판단: LIQUID</li><li>매매 영향: 거래대금 기준 실제 매매 가능성에 큰 문제는 낮음</li></ul>
     <h4>reasonConfidence 근거</h4><p class="muted">가격/거래량, 뉴스, 유동성 데이터가 확인되어 신뢰도를 높임.</p>
   </details>
-    <ul><li><strong>기준일:</strong> 2026-06-01 / <strong>종가:</strong> $160.65 / <strong>1일:</strong> +2.63% / <strong>5일:</strong> +17.37% / <strong>20일:</strong> +11.51% / <strong>상대 거래량:</strong> 1.22배</li><li><strong>whyMoneyIsFlowing:</strong> 20일 +11.51%, 5일 +17.37%, 상대 거래량 1.22배로 가격과 거래량이 함께 개선. 뉴스: Nvidia Highlights New AI Products at Computex / 유동성: LIQUID</li><li><strong>likelyNextBuyer:</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 스윙 트레이더</li><li><strong>whyThisCouldTradeHigher:</strong> 단기 추세가 유지되고 거래량이 1.0배 이상이면 되돌림 이후 재상승을 시도할 수 있음</li><li><strong>진입 조건:</strong> 20일선 위에서 눌림 후 재상승 확인</li><li><strong>무효화 조건:</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>차트 요약:</strong> 최근 20거래일 우상향, 5일선이 20일선 위에 있음</li></ul>
-    <ul><li><strong>왜 ETF가 아니라 이 종목인가?</strong> 관련 ETF와 비슷함 | 주식 5일 +17.37% vs ETF 평균 +10.08%, 주식 20일 +11.51% vs ETF 평균 +23.41%, 상대 거래량 1.22배 vs ETF 평균 1.42배. 개별 종목 우선으로 격상하려면 관련 ETF 대비 상대강도 유지가 더 필요하다.</li><li><strong>ETF가 더 나은 경우</strong> PLTR가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목 대신 관련 ETF를 우선한다.</li></ul>
+    <ul><li><strong>기준일:</strong> 2026-06-01 / <strong>종가:</strong> $459.97 / <strong>1일:</strong> +2.95% / <strong>5일:</strong> +11.07% / <strong>20일:</strong> +9.18% / <strong>상대 거래량:</strong> 1.43배</li><li><strong>whyMoneyIsFlowing:</strong> 20일 +9.18%, 5일 +11.07%, 상대 거래량 1.43배로 가격과 거래량이 함께 개선. 뉴스: Dow Jones Futures Slide: Broadcom, Micron, Nvidia, Sandisk, Tesla Are Big Movers; AI Stock Credo Plunges On Earnings / 유동성: LIQUID</li><li><strong>likelyNextBuyer:</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 스윙 트레이더</li><li><strong>whyThisCouldTradeHigher:</strong> 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</li><li><strong>진입 조건:</strong> 전일 고점 돌파 후 5일선 위 유지</li><li><strong>무효화 조건:</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>차트 요약:</strong> 최근 20거래일 우상향, 5일선이 20일선 위에 있음</li></ul>
+    <ul><li><strong>왜 ETF가 아니라 이 종목인가?</strong> 관련 ETF와 비슷함 | 주식 5일 +11.07% vs ETF 평균 +7.17%, 주식 20일 +9.18% vs ETF 평균 +21.66%, 상대 거래량 1.43배 vs ETF 평균 1.03배. 개별 종목 우선으로 격상하려면 관련 ETF 대비 상대강도 유지가 더 필요하다.</li><li><strong>ETF가 더 나은 경우</strong> AVGO가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목 대신 관련 ETF를 우선한다.</li></ul>
     
-    <img class="chart" src="charts/PLTR.png" alt="PLTR price chart">
-    <p class="muted">기준일 2026-06-01 | 종가 $160.65 | 1일 +2.63% | 5일 +17.37% | 20일 +11.51% | 상대 거래량 1.22배 | 52주 고점 대비 -22.59% | 데이터 소스: yfinance</p>
-  </article><article data-stock-card="MSFT"><h3>[MSFT] Microsoft <span class="badge hold">보유 유지</span></h3>
-    <div class="grid"><div class="tile"><strong>자산 유형</strong>STOCK</div><div class="tile"><strong>primaryTheme</strong>AI 플랫폼</div><div class="tile"><strong>relatedEtfs</strong>QQQ, MAGS, IGV, AIQ</div><div class="tile"><strong>moneyFlowScore</strong>90</div><div class="tile"><strong>reasonConfidence</strong>HIGH</div><div class="tile"><strong>todayActionLabel</strong>보유 정보 확인</div><div class="tile"><strong>ETF 대비 상대강도</strong>관련 ETF와 비슷함 | 주식 5일 +10.02% vs ETF 평균 +7.34%, 주식 20일 +11.12% vs ETF 평균 +15.29%, 상대 거래량 1.45배 vs ETF 평균 1.46배</div></div>
+    <img class="chart" src="charts/AVGO.png" alt="AVGO price chart">
+    <p class="muted">기준일 2026-06-01 | 종가 $459.97 | 1일 +2.95% | 5일 +11.07% | 20일 +9.18% | 상대 거래량 1.43배 | 52주 고점 대비 -1.29% | 데이터 소스: yfinance</p>
+  </article><article data-stock-card="ARM"><h3>[ARM] Arm Holdings plc <span class="badge ready">진입 가능</span></h3>
+    <div class="grid"><div class="tile"><strong>자산 유형</strong>STOCK</div><div class="tile"><strong>primaryTheme</strong>Technology</div><div class="tile"><strong>relatedEtfs</strong>SMH, SOXX, SOXQ, AIQ</div><div class="tile"><strong>moneyFlowScore</strong>100</div><div class="tile"><strong>reasonConfidence</strong>HIGH</div><div class="tile"><strong>todayActionLabel</strong>개별 종목 우선</div><div class="tile"><strong>ETF 대비 상대강도</strong>관련 ETF보다 강함 | 주식 5일 +33.39% vs ETF 평균 +7.17%, 주식 20일 +93.60% vs ETF 평균 +21.66%, 상대 거래량 1.57배 vs ETF 평균 1.03배</div></div>
     <details open>
     <summary><strong>moneyFlowScore 산정 근거</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총점</strong>90</div>
+      <div class="tile"><strong>총점</strong>100</div>
       <div class="tile"><strong>점수 해석</strong>강한 자금 유입 후보. 단, 과열 여부 확인 필수.</div>
-      <div class="tile"><strong>가격/거래량 점수</strong>+67</div>
-      <div class="tile"><strong>추세 점수</strong>+21</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+11</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+7</div>
-      <div class="tile"><strong>거래량 점수</strong>+14</div>
-      <div class="tile"><strong>신고가 근접 점수</strong>0</div>
+      <div class="tile"><strong>가격/거래량 점수</strong>+110</div>
+      <div class="tile"><strong>추세 점수</strong>+30</div>
+      <div class="tile"><strong>단기 모멘텀</strong>+20</div>
+      <div class="tile"><strong>중기 모멘텀</strong>+16</div>
+      <div class="tile"><strong>거래량 점수</strong>+18</div>
+      <div class="tile"><strong>신고가 근접 점수</strong>+12</div>
       <div class="tile"><strong>이동평균 점수</strong>+14</div>
       <div class="tile"><strong>뉴스 점수</strong>+10</div>
       <div class="tile"><strong>옵션 점수</strong>0</div>
       
       <div class="tile"><strong>유동성 점수</strong>+5</div>
       <div class="tile"><strong>ETF 대비 상대강도 점수</strong>+8</div>
-      <div class="tile"><strong>리스크 패널티</strong>0</div>
+      <div class="tile"><strong>리스크 패널티</strong>-8</div>
     </div>
-    <p class="muted">20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 옵션 데이터 미연결 또는 수집 실패.</p>
+    <p class="muted">20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.</p>
   </details>
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>옵션: 실패</li><li>ETF 확산도: 관련 ETF에서 확인</li><li>유동성/스프레드: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 연결됨</li><li>긍정/중립/부정: 6/2/0</li><li>핵심 뉴스 요약: Microsoft And Nvidia RTX Spark Puts AI PCs In Investor Focus</li><li>점수 반영: +10</li><li>주의: 특이사항 없음</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 연결됨</li><li>긍정/중립/부정: 7/1/0</li><li>핵심 뉴스 요약: Arm’s Role Widens In AI PCs And Data Centers With Nvidia</li><li>점수 반영: +10</li><li>주의: 특이사항 없음</li></ul>
     <h4>옵션 수급</h4><ul><li>옵션 데이터 상태: 실패</li><li>Put/Call 거래량 비율: 데이터 없음</li><li>콜 거래량: 데이터 없음</li><li>풋 거래량: 데이터 없음</li><li>IV 상태: 데이터 없음</li><li>해석: 뚜렷한 옵션 방향성 없음</li><li>점수 반영: 0</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>관련 ETF에서 확인</li></ul>
-    <h4>유동성/스프레드</h4><ul><li>데이터 상태: 일부 연결</li><li>스프레드: bid/ask 데이터 없음</li><li>거래대금: $23,996,764,647</li><li>평균 거래대금: $16,571,590,229</li><li>유동성 판단: LIQUID</li><li>매매 영향: 거래대금 기준 실제 매매 가능성에 큰 문제는 낮음</li></ul>
+    <h4>유동성/스프레드</h4><ul><li>데이터 상태: 일부 연결</li><li>스프레드: bid/ask 데이터 없음</li><li>거래대금: $8,360,777,666</li><li>평균 거래대금: $5,317,792,975</li><li>유동성 판단: LIQUID</li><li>매매 영향: 거래대금 기준 실제 매매 가능성에 큰 문제는 낮음</li></ul>
     <h4>reasonConfidence 근거</h4><p class="muted">가격/거래량, 뉴스, 유동성 데이터가 확인되어 신뢰도를 높임.</p>
   </details>
-    <ul><li><strong>기준일:</strong> 2026-06-01 / <strong>종가:</strong> $460.52 / <strong>1일:</strong> +2.28% / <strong>5일:</strong> +10.02% / <strong>20일:</strong> +11.12% / <strong>상대 거래량:</strong> 1.45배</li><li><strong>whyMoneyIsFlowing:</strong> 20일 +11.12%, 5일 +10.02%, 상대 거래량 1.45배로 가격과 거래량이 함께 개선. 뉴스: Microsoft And Nvidia RTX Spark Puts AI PCs In Investor Focus / 유동성: LIQUID</li><li><strong>likelyNextBuyer:</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 스윙 트레이더</li><li><strong>whyThisCouldTradeHigher:</strong> 단기 추세가 유지되고 거래량이 1.0배 이상이면 되돌림 이후 재상승을 시도할 수 있음</li><li><strong>진입 조건:</strong> 20일선 위에서 눌림 후 재상승 확인</li><li><strong>무효화 조건:</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>차트 요약:</strong> 최근 20거래일 우상향, 5일선이 20일선 위에 있음</li></ul>
-    <ul><li><strong>왜 ETF가 아니라 이 종목인가?</strong> 관련 ETF와 비슷함 | 주식 5일 +10.02% vs ETF 평균 +7.34%, 주식 20일 +11.12% vs ETF 평균 +15.29%, 상대 거래량 1.45배 vs ETF 평균 1.46배. 개별 종목 우선으로 격상하려면 관련 ETF 대비 상대강도 유지가 더 필요하다.</li><li><strong>ETF가 더 나은 경우</strong> MSFT가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목 대신 관련 ETF를 우선한다.</li></ul>
-    <p class="muted">보유 정보 미입력 - 기존 mock 진입가/수익률은 실전 판단에 사용하지 않음</p>
-    <img class="chart" src="charts/MSFT.png" alt="MSFT price chart">
-    <p class="muted">기준일 2026-06-01 | 종가 $460.52 | 1일 +2.28% | 5일 +10.02% | 20일 +11.12% | 상대 거래량 1.45배 | 52주 고점 대비 -17.09% | 데이터 소스: yfinance</p>
-  </article><article data-stock-card="NVDA"><h3>[NVDA] NVIDIA <span class="badge candidate">진입 후보</span></h3>
-    <div class="grid"><div class="tile"><strong>자산 유형</strong>STOCK</div><div class="tile"><strong>primaryTheme</strong>AI 반도체</div><div class="tile"><strong>relatedEtfs</strong>SMH, SOXX, SOXQ, AIQ, QQQ</div><div class="tile"><strong>moneyFlowScore</strong>84</div><div class="tile"><strong>reasonConfidence</strong>HIGH</div><div class="tile"><strong>todayActionLabel</strong>눌림 매수 대기</div><div class="tile"><strong>ETF 대비 상대강도</strong>관련 ETF보다 약함 | 주식 5일 +4.19% vs ETF 평균 +6.44%, 주식 20일 +13.06% vs ETF 평균 +19.36%, 상대 거래량 1.16배 vs ETF 평균 0.98배</div></div>
+    <ul><li><strong>기준일:</strong> 2026-06-01 / <strong>종가:</strong> $408.85 / <strong>1일:</strong> +15.73% / <strong>5일:</strong> +33.39% / <strong>20일:</strong> +93.60% / <strong>상대 거래량:</strong> 1.57배</li><li><strong>whyMoneyIsFlowing:</strong> 20일 +93.60%, 5일 +33.39%, 상대 거래량 1.57배로 가격과 거래량이 함께 개선. 뉴스: Arm’s Role Widens In AI PCs And Data Centers With Nvidia / 유동성: LIQUID</li><li><strong>likelyNextBuyer:</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 스윙 트레이더</li><li><strong>whyThisCouldTradeHigher:</strong> 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</li><li><strong>진입 조건:</strong> 전일 고점 돌파 후 5일선 위 유지</li><li><strong>무효화 조건:</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>차트 요약:</strong> 최근 20거래일 우상향, 5일선이 20일선 위에 있음</li></ul>
+    <ul><li><strong>왜 ETF가 아니라 이 종목인가?</strong> ARM가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 더 강해 개별 종목 알파 후보로 본다.</li><li><strong>ETF가 더 나은 경우</strong> ARM가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목 대신 관련 ETF를 우선한다.</li></ul>
+    
+    <img class="chart" src="charts/ARM.png" alt="ARM price chart">
+    <p class="muted">기준일 2026-06-01 | 종가 $408.85 | 1일 +15.73% | 5일 +33.39% | 20일 +93.60% | 상대 거래량 1.57배 | 52주 고점 대비 -3.04% | 데이터 소스: yfinance</p>
+  </article><article data-stock-card="PANW"><h3>[PANW] Palo Alto Networks Inc. <span class="badge ready">진입 가능</span></h3>
+    <div class="grid"><div class="tile"><strong>자산 유형</strong>STOCK</div><div class="tile"><strong>primaryTheme</strong>Technology</div><div class="tile"><strong>relatedEtfs</strong>HACK, CIBR, IHAK, IGV</div><div class="tile"><strong>moneyFlowScore</strong>100</div><div class="tile"><strong>reasonConfidence</strong>HIGH</div><div class="tile"><strong>todayActionLabel</strong>개별 종목 우선</div><div class="tile"><strong>ETF 대비 상대강도</strong>관련 ETF보다 강함 | 주식 5일 +15.31% vs ETF 평균 +11.47%, 주식 20일 +65.94% vs ETF 평균 +29.72%, 상대 거래량 1.51배 vs ETF 평균 1.49배</div></div>
     <details open>
     <summary><strong>moneyFlowScore 산정 근거</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총점</strong>84</div>
+      <div class="tile"><strong>총점</strong>100</div>
       <div class="tile"><strong>점수 해석</strong>강한 자금 유입 후보. 단, 과열 여부 확인 필수.</div>
-      <div class="tile"><strong>가격/거래량 점수</strong>+65</div>
-      <div class="tile"><strong>추세 점수</strong>+16</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+11</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+8</div>
-      <div class="tile"><strong>거래량 점수</strong>+10</div>
-      <div class="tile"><strong>신고가 근접 점수</strong>+6</div>
+      <div class="tile"><strong>가격/거래량 점수</strong>+104</div>
+      <div class="tile"><strong>추세 점수</strong>+24</div>
+      <div class="tile"><strong>단기 모멘텀</strong>+20</div>
+      <div class="tile"><strong>중기 모멘텀</strong>+16</div>
+      <div class="tile"><strong>거래량 점수</strong>+18</div>
+      <div class="tile"><strong>신고가 근접 점수</strong>+12</div>
       <div class="tile"><strong>이동평균 점수</strong>+14</div>
       <div class="tile"><strong>뉴스 점수</strong>+10</div>
       <div class="tile"><strong>옵션 점수</strong>0</div>
@@ -402,71 +367,176 @@
       <div class="tile"><strong>ETF 대비 상대강도 점수</strong>+8</div>
       <div class="tile"><strong>리스크 패널티</strong>-4</div>
     </div>
-    <p class="muted">20일 수익률 강함, 1일 단기 모멘텀 확인, 이동평균 위 추세 유지. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.</p>
+    <p class="muted">20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.</p>
   </details>
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>옵션: 실패</li><li>ETF 확산도: 관련 ETF에서 확인</li><li>유동성/스프레드: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 연결됨</li><li>긍정/중립/부정: 3/5/0</li><li>핵심 뉴스 요약: NYB.AI Launches Vecura 2.0, Bringing Agentic AI Workflows to Molecular Discovery, with NVIDIA</li><li>점수 반영: +10</li><li>주의: 특이사항 없음</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 연결됨</li><li>긍정/중립/부정: 3/5/0</li><li>핵심 뉴스 요약: Credo Technology Group Holding Ltd. (CRDO) Q4 Earnings and Revenues Beat Estimates</li><li>점수 반영: +10</li><li>주의: 특이사항 없음</li></ul>
     <h4>옵션 수급</h4><ul><li>옵션 데이터 상태: 실패</li><li>Put/Call 거래량 비율: 데이터 없음</li><li>콜 거래량: 데이터 없음</li><li>풋 거래량: 데이터 없음</li><li>IV 상태: 데이터 없음</li><li>해석: 뚜렷한 옵션 방향성 없음</li><li>점수 반영: 0</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>관련 ETF에서 확인</li></ul>
-    <h4>유동성/스프레드</h4><ul><li>데이터 상태: 일부 연결</li><li>스프레드: bid/ask 데이터 없음</li><li>거래대금: $44,250,419,594</li><li>평균 거래대금: $38,067,421,906</li><li>유동성 판단: LIQUID</li><li>매매 영향: 거래대금 기준 실제 매매 가능성에 큰 문제는 낮음</li></ul>
+    <h4>유동성/스프레드</h4><ul><li>데이터 상태: 일부 연결</li><li>스프레드: bid/ask 데이터 없음</li><li>거래대금: $4,028,035,962</li><li>평균 거래대금: $2,670,274,414</li><li>유동성 판단: LIQUID</li><li>매매 영향: 거래대금 기준 실제 매매 가능성에 큰 문제는 낮음</li></ul>
     <h4>reasonConfidence 근거</h4><p class="muted">가격/거래량, 뉴스, 유동성 데이터가 확인되어 신뢰도를 높임.</p>
   </details>
-    <ul><li><strong>기준일:</strong> 2026-06-01 / <strong>종가:</strong> $224.36 / <strong>1일:</strong> +6.26% / <strong>5일:</strong> +4.19% / <strong>20일:</strong> +13.06% / <strong>상대 거래량:</strong> 1.16배</li><li><strong>whyMoneyIsFlowing:</strong> 20일 +13.06%, 5일 +4.19%, 상대 거래량 1.16배로 가격과 거래량이 함께 개선. 뉴스: NYB.AI Launches Vecura 2.0, Bringing Agentic AI Workflows to Molecular Discovery, with NVIDIA / 유동성: LIQUID</li><li><strong>likelyNextBuyer:</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 스윙 트레이더</li><li><strong>whyThisCouldTradeHigher:</strong> 단기 추세가 유지되고 거래량이 1.0배 이상이면 되돌림 이후 재상승을 시도할 수 있음</li><li><strong>진입 조건:</strong> 20일선 위에서 눌림 후 재상승 확인</li><li><strong>무효화 조건:</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>차트 요약:</strong> 단기 추세는 중립</li></ul>
-    <ul><li><strong>왜 ETF가 아니라 이 종목인가?</strong> NVDA보다 관련 ETF 쪽 흐름이 더 선명해 오늘은 ETF 우선으로 본다.</li><li><strong>ETF가 더 나은 경우</strong> NVDA가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목 대신 관련 ETF를 우선한다.</li></ul>
+    <ul><li><strong>기준일:</strong> 2026-06-01 / <strong>종가:</strong> $300.48 / <strong>1일:</strong> +6.67% / <strong>5일:</strong> +15.31% / <strong>20일:</strong> +65.94% / <strong>상대 거래량:</strong> 1.51배</li><li><strong>whyMoneyIsFlowing:</strong> 20일 +65.94%, 5일 +15.31%, 상대 거래량 1.51배로 가격과 거래량이 함께 개선. 뉴스: Credo Technology Group Holding Ltd. (CRDO) Q4 Earnings and Revenues Beat Estimates / 유동성: LIQUID</li><li><strong>likelyNextBuyer:</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 스윙 트레이더</li><li><strong>whyThisCouldTradeHigher:</strong> 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</li><li><strong>진입 조건:</strong> 전일 고점 돌파 후 5일선 위 유지</li><li><strong>무효화 조건:</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>차트 요약:</strong> 최근 20거래일 우상향, 5일선이 20일선 위에 있음</li></ul>
+    <ul><li><strong>왜 ETF가 아니라 이 종목인가?</strong> PANW가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 더 강해 개별 종목 알파 후보로 본다.</li><li><strong>ETF가 더 나은 경우</strong> PANW가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목 대신 관련 ETF를 우선한다.</li></ul>
     
-    <img class="chart" src="charts/NVDA.png" alt="NVDA price chart">
-    <p class="muted">기준일 2026-06-01 | 종가 $224.36 | 1일 +6.26% | 5일 +4.19% | 20일 +13.06% | 상대 거래량 1.16배 | 52주 고점 대비 -5.15% | 데이터 소스: yfinance</p>
-  </article><article data-stock-card="AAPL"><h3>[AAPL] Apple <span class="badge hold">보유 유지</span></h3>
-    <div class="grid"><div class="tile"><strong>자산 유형</strong>STOCK</div><div class="tile"><strong>primaryTheme</strong>메가캡 기술</div><div class="tile"><strong>relatedEtfs</strong>QQQ, MAGS, SPY</div><div class="tile"><strong>moneyFlowScore</strong>40</div><div class="tile"><strong>reasonConfidence</strong>LOW</div><div class="tile"><strong>todayActionLabel</strong>보유 정보 확인</div><div class="tile"><strong>ETF 대비 상대강도</strong>관련 ETF와 비슷함 | 주식 5일 -0.81% vs ETF 평균 +1.99%, 주식 20일 +9.34% vs ETF 평균 +6.63%, 상대 거래량 0.93배 vs ETF 평균 1.08배</div></div>
+    <img class="chart" src="charts/PANW.png" alt="PANW price chart">
+    <p class="muted">기준일 2026-06-01 | 종가 $300.48 | 1일 +6.67% | 5일 +15.31% | 20일 +65.94% | 상대 거래량 1.51배 | 52주 고점 대비 -0.82% | 데이터 소스: yfinance</p>
+  </article><article data-stock-card="CRWD"><h3>[CRWD] CrowdStrike Holdings Inc. <span class="badge ready">진입 가능</span></h3>
+    <div class="grid"><div class="tile"><strong>자산 유형</strong>STOCK</div><div class="tile"><strong>primaryTheme</strong>Technology</div><div class="tile"><strong>relatedEtfs</strong>HACK, CIBR, IHAK, IGV</div><div class="tile"><strong>moneyFlowScore</strong>100</div><div class="tile"><strong>reasonConfidence</strong>HIGH</div><div class="tile"><strong>todayActionLabel</strong>개별 종목 우선</div><div class="tile"><strong>ETF 대비 상대강도</strong>관련 ETF보다 강함 | 주식 5일 +17.89% vs ETF 평균 +11.47%, 주식 20일 +71.66% vs ETF 평균 +29.72%, 상대 거래량 1.34배 vs ETF 평균 1.49배</div></div>
     <details open>
     <summary><strong>moneyFlowScore 산정 근거</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총점</strong>40</div>
-      <div class="tile"><strong>점수 해석</strong>매매 금지 또는 후순위 후보.</div>
-      <div class="tile"><strong>가격/거래량 점수</strong>+21</div>
-      <div class="tile"><strong>추세 점수</strong>+3</div>
-      <div class="tile"><strong>단기 모멘텀</strong>-3</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+6</div>
-      <div class="tile"><strong>거래량 점수</strong>-8</div>
+      <div class="tile"><strong>총점</strong>100</div>
+      <div class="tile"><strong>점수 해석</strong>강한 자금 유입 후보. 단, 과열 여부 확인 필수.</div>
+      <div class="tile"><strong>가격/거래량 점수</strong>+100</div>
+      <div class="tile"><strong>추세 점수</strong>+24</div>
+      <div class="tile"><strong>단기 모멘텀</strong>+20</div>
+      <div class="tile"><strong>중기 모멘텀</strong>+16</div>
+      <div class="tile"><strong>거래량 점수</strong>+14</div>
       <div class="tile"><strong>신고가 근접 점수</strong>+12</div>
-      <div class="tile"><strong>이동평균 점수</strong>+10</div>
+      <div class="tile"><strong>이동평균 점수</strong>+14</div>
       <div class="tile"><strong>뉴스 점수</strong>+10</div>
       <div class="tile"><strong>옵션 점수</strong>0</div>
       
       <div class="tile"><strong>유동성 점수</strong>+5</div>
-      <div class="tile"><strong>ETF 대비 상대강도 점수</strong>+5</div>
-      <div class="tile"><strong>리스크 패널티</strong>0</div>
+      <div class="tile"><strong>ETF 대비 상대강도 점수</strong>+8</div>
+      <div class="tile"><strong>리스크 패널티</strong>-4</div>
     </div>
-    <p class="muted">20일 수익률 강함, 52주 고점 근처, 관련 ETF 강세 테마 안의 개별 종목. 주의: 옵션 데이터 미연결 또는 수집 실패.</p>
+    <p class="muted">20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.</p>
   </details>
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>옵션: 실패</li><li>ETF 확산도: 관련 ETF에서 확인</li><li>유동성/스프레드: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 연결됨</li><li>긍정/중립/부정: 4/4/0</li><li>핵심 뉴스 요약: TSMC executive drops blunt message on AI chip’s next frontier</li><li>점수 반영: +10</li><li>주의: 특이사항 없음</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 연결됨</li><li>긍정/중립/부정: 4/4/0</li><li>핵심 뉴스 요약: Update: S&amp;amp;P 500 Companies&#39; Earnings Grow 28% as Reporting Season Approaches End, Oppenheimer Says</li><li>점수 반영: +10</li><li>주의: 특이사항 없음</li></ul>
     <h4>옵션 수급</h4><ul><li>옵션 데이터 상태: 실패</li><li>Put/Call 거래량 비율: 데이터 없음</li><li>콜 거래량: 데이터 없음</li><li>풋 거래량: 데이터 없음</li><li>IV 상태: 데이터 없음</li><li>해석: 뚜렷한 옵션 방향성 없음</li><li>점수 반영: 0</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>관련 ETF에서 확인</li></ul>
-    <h4>유동성/스프레드</h4><ul><li>데이터 상태: 일부 연결</li><li>스프레드: bid/ask 데이터 없음</li><li>거래대금: $13,529,890,666</li><li>평균 거래대금: $14,481,442,068</li><li>유동성 판단: LIQUID</li><li>매매 영향: 거래대금 기준 실제 매매 가능성에 큰 문제는 낮음</li></ul>
-    <h4>reasonConfidence 근거</h4><p class="muted">가격/거래량이 약하거나 주요 데이터가 부족해 낮음.</p>
+    <h4>유동성/스프레드</h4><ul><li>데이터 상태: 일부 연결</li><li>스프레드: bid/ask 데이터 없음</li><li>거래대금: $3,530,670,014</li><li>평균 거래대금: $2,643,880,866</li><li>유동성 판단: LIQUID</li><li>매매 영향: 거래대금 기준 실제 매매 가능성에 큰 문제는 낮음</li></ul>
+    <h4>reasonConfidence 근거</h4><p class="muted">가격/거래량, 뉴스, 유동성 데이터가 확인되어 신뢰도를 높임.</p>
   </details>
-    <ul><li><strong>기준일:</strong> 2026-06-01 / <strong>종가:</strong> $306.31 / <strong>1일:</strong> -1.84% / <strong>5일:</strong> -0.81% / <strong>20일:</strong> +9.34% / <strong>상대 거래량:</strong> 0.93배</li><li><strong>whyMoneyIsFlowing:</strong> 최근 수익률은 확인되지만 상대 거래량 0.93배라 신규 자금 유입 강도는 약함. 뉴스: TSMC executive drops blunt message on AI chip’s next frontier / 유동성: LIQUID</li><li><strong>likelyNextBuyer:</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 스윙 트레이더</li><li><strong>whyThisCouldTradeHigher:</strong> 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</li><li><strong>진입 조건:</strong> 상대 거래량 1.0배 회복 후 관찰</li><li><strong>무효화 조건:</strong> 거래량 회복 실패</li><li><strong>차트 요약:</strong> 20일선 위에서 단기 눌림 확인 구간</li></ul>
-    <ul><li><strong>왜 ETF가 아니라 이 종목인가?</strong> 관련 ETF와 비슷함 | 주식 5일 -0.81% vs ETF 평균 +1.99%, 주식 20일 +9.34% vs ETF 평균 +6.63%, 상대 거래량 0.93배 vs ETF 평균 1.08배. 개별 종목 우선으로 격상하려면 관련 ETF 대비 상대강도 유지가 더 필요하다.</li><li><strong>ETF가 더 나은 경우</strong> AAPL가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목 대신 관련 ETF를 우선한다.</li></ul>
-    <p class="muted">보유 정보 미입력 - 기존 mock 진입가/수익률은 실전 판단에 사용하지 않음</p>
-    <img class="chart" src="charts/AAPL.png" alt="AAPL price chart">
-    <p class="muted">기준일 2026-06-01 | 종가 $306.31 | 1일 -1.84% | 5일 -0.81% | 20일 +9.34% | 상대 거래량 0.93배 | 52주 고점 대비 -2.76% | 데이터 소스: yfinance</p>
+    <ul><li><strong>기준일:</strong> 2026-06-01 / <strong>종가:</strong> $782.17 / <strong>1일:</strong> +7.00% / <strong>5일:</strong> +17.89% / <strong>20일:</strong> +71.66% / <strong>상대 거래량:</strong> 1.34배</li><li><strong>whyMoneyIsFlowing:</strong> 20일 +71.66%, 5일 +17.89%, 상대 거래량 1.34배로 가격과 거래량이 함께 개선. 뉴스: Update: S&amp;amp;P 500 Companies&#39; Earnings Grow 28% as Reporting Season Approaches End, Oppenheimer Says / 유동성: LIQUID</li><li><strong>likelyNextBuyer:</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 스윙 트레이더</li><li><strong>whyThisCouldTradeHigher:</strong> 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</li><li><strong>진입 조건:</strong> 전일 고점 돌파 후 5일선 위 유지</li><li><strong>무효화 조건:</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>차트 요약:</strong> 최근 20거래일 우상향, 5일선이 20일선 위에 있음</li></ul>
+    <ul><li><strong>왜 ETF가 아니라 이 종목인가?</strong> CRWD가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 더 강해 개별 종목 알파 후보로 본다.</li><li><strong>ETF가 더 나은 경우</strong> CRWD가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목 대신 관련 ETF를 우선한다.</li></ul>
+    
+    <img class="chart" src="charts/CRWD.png" alt="CRWD price chart">
+    <p class="muted">기준일 2026-06-01 | 종가 $782.17 | 1일 +7.00% | 5일 +17.89% | 20일 +71.66% | 상대 거래량 1.34배 | 52주 고점 대비 -0.44% | 데이터 소스: yfinance</p>
+  </article><article data-stock-card="MRVL"><h3>[MRVL] Marvell Technology Inc. <span class="badge watch">관찰</span></h3>
+    <div class="grid"><div class="tile"><strong>자산 유형</strong>STOCK</div><div class="tile"><strong>primaryTheme</strong>Technology</div><div class="tile"><strong>relatedEtfs</strong>SMH, SOXX, SOXQ, AIQ</div><div class="tile"><strong>moneyFlowScore</strong>100</div><div class="tile"><strong>reasonConfidence</strong>HIGH</div><div class="tile"><strong>todayActionLabel</strong>돌파 확인 후 관찰</div><div class="tile"><strong>ETF 대비 상대강도</strong>관련 ETF보다 강함 | 주식 5일 +11.77% vs ETF 평균 +7.17%, 주식 20일 +33.03% vs ETF 평균 +21.66%, 상대 거래량 1.14배 vs ETF 평균 1.03배</div></div>
+    <details open>
+    <summary><strong>moneyFlowScore 산정 근거</strong></summary>
+    <div class="grid">
+      <div class="tile"><strong>총점</strong>100</div>
+      <div class="tile"><strong>점수 해석</strong>강한 자금 유입 후보. 단, 과열 여부 확인 필수.</div>
+      <div class="tile"><strong>가격/거래량 점수</strong>+99</div>
+      <div class="tile"><strong>추세 점수</strong>+30</div>
+      <div class="tile"><strong>단기 모멘텀</strong>+17</div>
+      <div class="tile"><strong>중기 모멘텀</strong>+16</div>
+      <div class="tile"><strong>거래량 점수</strong>+10</div>
+      <div class="tile"><strong>신고가 근접 점수</strong>+12</div>
+      <div class="tile"><strong>이동평균 점수</strong>+14</div>
+      <div class="tile"><strong>뉴스 점수</strong>+10</div>
+      <div class="tile"><strong>옵션 점수</strong>0</div>
+      
+      <div class="tile"><strong>유동성 점수</strong>+5</div>
+      <div class="tile"><strong>ETF 대비 상대강도 점수</strong>+8</div>
+      <div class="tile"><strong>리스크 패널티</strong>-14</div>
+    </div>
+    <p class="muted">20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.</p>
+  </details>
+    <details>
+    <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
+    <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>옵션: 실패</li><li>ETF 확산도: 관련 ETF에서 확인</li><li>유동성/스프레드: 사용</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 연결됨</li><li>긍정/중립/부정: 3/5/0</li><li>핵심 뉴스 요약: Marvell Announces Availability of Industry’s First 102.4 Tbps Switch Purpose-Built for AI and Cloud Data Center Infrastructure</li><li>점수 반영: +10</li><li>주의: 특이사항 없음</li></ul>
+    <h4>옵션 수급</h4><ul><li>옵션 데이터 상태: 실패</li><li>Put/Call 거래량 비율: 데이터 없음</li><li>콜 거래량: 데이터 없음</li><li>풋 거래량: 데이터 없음</li><li>IV 상태: 데이터 없음</li><li>해석: 뚜렷한 옵션 방향성 없음</li><li>점수 반영: 0</li></ul>
+    <h4>ETF 구성종목 확산도</h4><ul><li>관련 ETF에서 확인</li></ul>
+    <h4>유동성/스프레드</h4><ul><li>데이터 상태: 일부 연결</li><li>스프레드: bid/ask 데이터 없음</li><li>거래대금: $7,163,963,806</li><li>평균 거래대금: $6,303,562,977</li><li>유동성 판단: LIQUID</li><li>매매 영향: 거래대금 기준 실제 매매 가능성에 큰 문제는 낮음</li></ul>
+    <h4>reasonConfidence 근거</h4><p class="muted">가격/거래량, 뉴스, 유동성 데이터가 확인되어 신뢰도를 높임.</p>
+  </details>
+    <ul><li><strong>기준일:</strong> 2026-06-01 / <strong>종가:</strong> $219.43 / <strong>1일:</strong> +7.04% / <strong>5일:</strong> +11.77% / <strong>20일:</strong> +33.03% / <strong>상대 거래량:</strong> 1.14배</li><li><strong>whyMoneyIsFlowing:</strong> 20일 +33.03%, 5일 +11.77%, 상대 거래량 1.14배로 가격과 거래량이 함께 개선. 뉴스: Marvell Announces Availability of Industry’s First 102.4 Tbps Switch Purpose-Built for AI and Cloud Data Center Infrastructure / 유동성: LIQUID</li><li><strong>likelyNextBuyer:</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 스윙 트레이더</li><li><strong>whyThisCouldTradeHigher:</strong> 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</li><li><strong>진입 조건:</strong> 전일 고점 돌파 후 5일선 위 유지</li><li><strong>무효화 조건:</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>차트 요약:</strong> 최근 20거래일 우상향, 5일선이 20일선 위에 있음</li></ul>
+    <ul><li><strong>왜 ETF가 아니라 이 종목인가?</strong> MRVL가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 더 강해 개별 종목 알파 후보로 본다.</li><li><strong>ETF가 더 나은 경우</strong> MRVL가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목 대신 관련 ETF를 우선한다.</li></ul>
+    
+    <img class="chart" src="charts/MRVL.png" alt="MRVL price chart">
+    <p class="muted">기준일 2026-06-01 | 종가 $219.43 | 1일 +7.04% | 5일 +11.77% | 20일 +33.03% | 상대 거래량 1.14배 | 52주 고점 대비 -2.54% | 데이터 소스: yfinance</p>
   </article>
-      <h3>2-3. ETF 대비 개별 종목 판단 로직</h3><ul><li>관련 ETF의 5일/20일 수익률과 개별 종목의 5일/20일 수익률을 비교한다.</li><li>관련 ETF의 상대 거래량과 개별 종목의 상대 거래량을 비교한다.</li><li>개별 종목이 관련 ETF보다 강하면 개별 종목 우선 가능으로 본다.</li><li>관련 ETF가 더 강하면 개별 종목 대신 ETF를 우선한다.</li></ul>
-      <h3>2-4. 개별 종목 제외/주의 후보</h3><ul><li>TSM | moneyFlowScore 97 | 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 옵션 데이터 미연결 또는 수집 실패. | 재검토: 전일 고점 돌파 후 5일선 위 유지</li><li>PLTR | moneyFlowScore 97 | 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 옵션 데이터 미연결 또는 수집 실패. | 재검토: 20일선 위에서 눌림 후 재상승 확인</li><li>NVDA | moneyFlowScore 84 | 20일 수익률 강함, 1일 단기 모멘텀 확인, 이동평균 위 추세 유지. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패. | 재검토: 20일선 위에서 눌림 후 재상승 확인</li><li>XOM | moneyFlowScore 0 | 1일 단기 모멘텀 확인, 관련 ETF 강세 테마 안의 개별 종목, 뉴스 흐름이 가격/거래량 근거를 보강. 주의: 옵션 데이터 미연결 또는 수집 실패. | 재검토: 상대 거래량 1.0배 회복 후 관찰</li></ul>
+      <h3>2-3. 전일 추천 종목 점검</h3>
+      <p class="muted">이 섹션은 실제 계좌 보유 종목이 아니라 전일 리포트에서 제시된 개별 종목 후보의 사후 점검이다. 실제 보유 수량/평단이 입력되지 않았으므로 계좌 수익률이 아니라 추천 기준일 이후 가격 변화를 추적한다.</p>
+      <article data-previous-review-card="AVGO"><h3>[AVGO] Broadcom Inc. <span class="badge watch">유지</span></h3>
+    <div class="grid">
+      <div class="tile"><strong>전일 추천일</strong>2026-06-01</div>
+      <div class="tile"><strong>전일 actionLabel</strong>개별 종목 우선</div>
+      <div class="tile"><strong>전일 moneyFlowScore</strong>100</div>
+      <div class="tile"><strong>전일 기준가</strong>$459.97</div>
+      <div class="tile"><strong>오늘 종가</strong>$459.97</div>
+      <div class="tile"><strong>추천 이후 수익률</strong>0.00%</div>
+      <div class="tile"><strong>진입 조건</strong>충족 또는 유지</div>
+      <div class="tile"><strong>무효화 조건</strong>미발생</div>
+      <div class="tile"><strong>ETF 대비 상대강도</strong>유지</div>
+    </div>
+    <ul><li>오늘 판단 근거: AVGO는 전일 추천 이후 0.00% 변화. 관련 ETF와 비슷함 | 주식 5일 +11.07% vs ETF 평균 +7.17%, 주식 20일 +9.18% vs ETF 평균 +21.66%, 상대 거래량 1.43배 vs ETF 평균 1.03배</li><li>다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li></ul>
+  </article><article data-previous-review-card="ARM"><h3>[ARM] Arm Holdings plc <span class="badge watch">유지</span></h3>
+    <div class="grid">
+      <div class="tile"><strong>전일 추천일</strong>2026-06-01</div>
+      <div class="tile"><strong>전일 actionLabel</strong>개별 종목 우선</div>
+      <div class="tile"><strong>전일 moneyFlowScore</strong>100</div>
+      <div class="tile"><strong>전일 기준가</strong>$408.85</div>
+      <div class="tile"><strong>오늘 종가</strong>$408.85</div>
+      <div class="tile"><strong>추천 이후 수익률</strong>0.00%</div>
+      <div class="tile"><strong>진입 조건</strong>충족 또는 유지</div>
+      <div class="tile"><strong>무효화 조건</strong>미발생</div>
+      <div class="tile"><strong>ETF 대비 상대강도</strong>유지</div>
+    </div>
+    <ul><li>오늘 판단 근거: ARM는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +33.39% vs ETF 평균 +7.17%, 주식 20일 +93.60% vs ETF 평균 +21.66%, 상대 거래량 1.57배 vs ETF 평균 1.03배</li><li>다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li></ul>
+  </article><article data-previous-review-card="PANW"><h3>[PANW] Palo Alto Networks Inc. <span class="badge watch">유지</span></h3>
+    <div class="grid">
+      <div class="tile"><strong>전일 추천일</strong>2026-06-01</div>
+      <div class="tile"><strong>전일 actionLabel</strong>개별 종목 우선</div>
+      <div class="tile"><strong>전일 moneyFlowScore</strong>100</div>
+      <div class="tile"><strong>전일 기준가</strong>$300.48</div>
+      <div class="tile"><strong>오늘 종가</strong>$300.48</div>
+      <div class="tile"><strong>추천 이후 수익률</strong>0.00%</div>
+      <div class="tile"><strong>진입 조건</strong>충족 또는 유지</div>
+      <div class="tile"><strong>무효화 조건</strong>미발생</div>
+      <div class="tile"><strong>ETF 대비 상대강도</strong>유지</div>
+    </div>
+    <ul><li>오늘 판단 근거: PANW는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +15.31% vs ETF 평균 +11.47%, 주식 20일 +65.94% vs ETF 평균 +29.72%, 상대 거래량 1.51배 vs ETF 평균 1.49배</li><li>다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li></ul>
+  </article><article data-previous-review-card="CRWD"><h3>[CRWD] CrowdStrike Holdings Inc. <span class="badge watch">유지</span></h3>
+    <div class="grid">
+      <div class="tile"><strong>전일 추천일</strong>2026-06-01</div>
+      <div class="tile"><strong>전일 actionLabel</strong>개별 종목 우선</div>
+      <div class="tile"><strong>전일 moneyFlowScore</strong>100</div>
+      <div class="tile"><strong>전일 기준가</strong>$782.17</div>
+      <div class="tile"><strong>오늘 종가</strong>$782.17</div>
+      <div class="tile"><strong>추천 이후 수익률</strong>0.00%</div>
+      <div class="tile"><strong>진입 조건</strong>충족 또는 유지</div>
+      <div class="tile"><strong>무효화 조건</strong>미발생</div>
+      <div class="tile"><strong>ETF 대비 상대강도</strong>유지</div>
+    </div>
+    <ul><li>오늘 판단 근거: CRWD는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +17.89% vs ETF 평균 +11.47%, 주식 20일 +71.66% vs ETF 평균 +29.72%, 상대 거래량 1.34배 vs ETF 평균 1.49배</li><li>다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li></ul>
+  </article><article data-previous-review-card="ADBE"><h3>[ADBE] Adobe Inc. <span class="badge watch">유지</span></h3>
+    <div class="grid">
+      <div class="tile"><strong>전일 추천일</strong>2026-06-01</div>
+      <div class="tile"><strong>전일 actionLabel</strong>개별 종목 우선</div>
+      <div class="tile"><strong>전일 moneyFlowScore</strong>100</div>
+      <div class="tile"><strong>전일 기준가</strong>$274.03</div>
+      <div class="tile"><strong>오늘 종가</strong>$274.03</div>
+      <div class="tile"><strong>추천 이후 수익률</strong>0.00%</div>
+      <div class="tile"><strong>진입 조건</strong>충족 또는 유지</div>
+      <div class="tile"><strong>무효화 조건</strong>미발생</div>
+      <div class="tile"><strong>ETF 대비 상대강도</strong>유지</div>
+    </div>
+    <ul><li>오늘 판단 근거: ADBE는 전일 추천 이후 0.00% 변화. 관련 ETF와 비슷함 | 주식 5일 +11.96% vs ETF 평균 +9.54%, 주식 20일 +9.30% vs ETF 평균 +18.90%, 상대 거래량 1.74배 vs ETF 평균 1.41배</li><li>다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li></ul>
+  </article>
+      <h3>2-4. ETF 대비 개별 종목 판단 로직</h3><ul><li>관련 ETF의 5일/20일 수익률과 개별 종목의 5일/20일 수익률을 비교한다.</li><li>관련 ETF의 상대 거래량과 개별 종목의 상대 거래량을 비교한다.</li><li>개별 종목이 관련 ETF보다 강하면 개별 종목 우선 가능으로 본다.</li><li>관련 ETF가 더 강하면 개별 종목 대신 ETF를 우선한다.</li></ul>
+      <h3>2-5. 개별 종목 제외/주의 후보</h3><ul><li>AVGO | moneyFlowScore 100 | 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 옵션 데이터 미연결 또는 수집 실패. | 재검토: 전일 고점 돌파 후 5일선 위 유지</li><li>MRVL | moneyFlowScore 100 | 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패. | 재검토: 전일 고점 돌파 후 5일선 위 유지</li><li>ADBE | moneyFlowScore 100 | 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 옵션 데이터 미연결 또는 수집 실패. | 재검토: 20일선 위에서 눌림 후 재상승 확인</li><li>CDNS | moneyFlowScore 100 | 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패. | 재검토: 전일 고점 돌파 후 5일선 위 유지</li><li>FTNT | moneyFlowScore 99 | 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패. | 재검토: 전일 고점 돌파 후 5일선 위 유지</li></ul>
     </section>
     <section><h2>감시 ETF 목록</h2><table><thead><tr><th>티커</th><th>카테고리</th><th>moneyFlowScore</th><th>상태</th><th>reasonConfidence</th><th>한 줄 이유</th></tr></thead><tbody><tr><td>DRAM</td><td>반도체/기술 ETF</td><td>75</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.96배라 신규 자금 유입 강도는 약함. 뉴스: Daily ETF Flows: DRAM Back In The Top 10 / 유동성: LIQUID</td></tr><tr><td>SMH</td><td>반도체/기술 ETF</td><td>74</td><td><span class="badge ready">진입 가능</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.83배라 신규 자금 유입 강도는 약함. 뉴스: Top ETF Stories of May 2026: Iran Deal Hopes, AI Rally / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID</td></tr><tr><td>SOXX</td><td>반도체/기술 ETF</td><td>78</td><td><span class="badge ready">진입 가능</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.80배라 신규 자금 유입 강도는 약함. 뉴스: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID</td></tr><tr><td>SOXQ</td><td>반도체/기술 ETF</td><td>76</td><td><span class="badge ready">진입 가능</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.89배라 신규 자금 유입 강도는 약함. 뉴스: Your Portfolio Isn’t Invested in the Right Kind of AI Unless You Hold This ETF / ETF 확산도: BROAD_ADVANCE / 유동성: ACCEPTABLE</td></tr><tr><td>IGV</td><td>성장/테마 ETF</td><td>100</td><td><span class="badge ready">진입 가능</span></td><td>HIGH</td><td>20일 +24.32%, 5일 +14.56%, 상대 거래량 1.82배로 가격과 거래량이 함께 개선. 뉴스: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID</td></tr><tr><td>AIQ</td><td>성장/테마 ETF</td><td>100</td><td><span class="badge ready">진입 가능</span></td><td>HIGH</td><td>20일 +22.21%, 5일 +10.56%, 상대 거래량 1.59배로 가격과 거래량이 함께 개선. 뉴스: OpenAI Reportedly Set to File for IPO as Early as Friday / ETF 확산도: BROAD_ADVANCE / 유동성: ACCEPTABLE</td></tr><tr><td>BOTZ</td><td>성장/테마 ETF</td><td>49</td><td><span class="badge watch">관찰</span></td><td>MEDIUM</td><td>20일 +5.18%, 5일 +0.77%, 상대 거래량 1.13배로 가격과 거래량이 함께 개선. 뉴스: Three Humanoid Robotics ETFs Built for the Tesla Optimus and Figure AI Era Most Investors Have Never Heard Of</td></tr><tr><td>ROBO</td><td>성장/테마 ETF</td><td>63</td><td><span class="badge candidate">진입 후보</span></td><td>MEDIUM</td><td>20일 +9.31%, 5일 +2.60%, 상대 거래량 1.03배로 가격과 거래량이 함께 개선. 뉴스: Three Humanoid Robotics ETFs Built for the Tesla Optimus and Figure AI Era Most Investors Have Never Heard Of</td></tr><tr><td>CIBR</td><td>성장/테마 ETF</td><td>100</td><td><span class="badge ready">진입 가능</span></td><td>HIGH</td><td>20일 +36.93%, 5일 +11.71%, 상대 거래량 1.45배로 가격과 거래량이 함께 개선. 뉴스: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout / ETF 확산도: BROAD_ADVANCE / 유동성: ACCEPTABLE</td></tr><tr><td>HACK</td><td>성장/테마 ETF</td><td>100</td><td><span class="badge ready">진입 가능</span></td><td>MEDIUM</td><td>20일 +29.98%, 5일 +10.70%, 상대 거래량 1.56배로 가격과 거래량이 함께 개선. 뉴스: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout / ETF 확산도: BROAD_ADVANCE</td></tr><tr><td>IHAK</td><td>성장/테마 ETF</td><td>88</td><td><span class="badge watch">관찰</span></td><td>MEDIUM</td><td>20일 +27.66%, 5일 +8.91%, 상대 거래량 1.11배로 가격과 거래량이 함께 개선. 뉴스: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout</td></tr><tr><td>ITA</td><td>방산 ETF</td><td>47</td><td><span class="badge watch">관찰</span></td><td>MEDIUM</td><td>20일 +6.31%, 5일 +2.01%, 상대 거래량 1.14배로 가격과 거래량이 함께 개선. 뉴스: Ondas Holdings Adds High-Margin AI Software to Its Autonomous Defense Portfolio. Here’s What That Means for ONDS Stock. / 유동성: ACCEPTABLE</td></tr><tr><td>XAR</td><td>방산 ETF</td><td>60</td><td><span class="badge candidate">진입 후보</span></td><td>MEDIUM</td><td>20일 +9.19%, 5일 +3.25%, 상대 거래량 1.70배로 가격과 거래량이 함께 개선. 뉴스: This 1 ETF Can Deliver Massive Gains After This Fragile Ceasefire / 유동성: ACCEPTABLE</td></tr><tr><td>SHLD</td><td>방산 ETF</td><td>17</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>20일 -3.39%, 5일 +0.72%, 상대 거래량 1.03배로 가격과 거래량이 함께 개선. 뉴스: GLOBAL X ANNOUNCES CHANGES TO RISK RATINGS FOR CERTAIN ETFs / 유동성: ACCEPTABLE</td></tr><tr><td>PPA</td><td>방산 ETF</td><td>37</td><td><span class="badge watch">관찰</span></td><td>MEDIUM</td><td>20일 +4.84%, 5일 +1.97%, 상대 거래량 1.35배로 가격과 거래량이 함께 개선</td></tr><tr><td>PAVE</td><td>성장/테마 ETF</td><td>8</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.69배라 신규 자금 유입 강도는 약함. 뉴스: Thematic ETFs 101: How to Invest in AI, Clean Energy Other Megatrends</td></tr><tr><td>GRID</td><td>성장/테마 ETF</td><td>15</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.91배라 신규 자금 유입 강도는 약함. 뉴스: Peter Thiel Bets $140M on Ocean-Powered Energy for AI / 유동성: ACCEPTABLE</td></tr><tr><td>IFRA</td><td>성장/테마 ETF</td><td>0</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.83배라 신규 자금 유입 강도는 약함</td></tr><tr><td>XLU</td><td>성장/테마 ETF</td><td>6</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>20일 -7.41%, 5일 -4.96%, 상대 거래량 1.44배로 가격과 거래량이 함께 개선. 뉴스: XLU Investors: Watch PJM’s March 2027 Data Center Framework Decision / 유동성: LIQUID</td></tr><tr><td>URA</td><td>성장/테마 ETF</td><td>0</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.78배라 신규 자금 유입 강도는 약함. 뉴스: Nuclear Power Is the Only Real Answer to AI Electricity Demand and These 3 ETFs Own the Trade / 유동성: ACCEPTABLE</td></tr><tr><td>NLR</td><td>성장/테마 ETF</td><td>0</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.77배라 신규 자금 유입 강도는 약함. 뉴스: Nuclear ETFs to Gain as the Globe Rides the Atomic Wave</td></tr><tr><td>LIT</td><td>성장/테마 ETF</td><td>18</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>20일 -2.96%, 5일 +0.95%, 상대 거래량 2.08배로 가격과 거래량이 함께 개선. 뉴스: 3 Market Themes Driving Stocks Right Now: AI, Alt Energy and Commodities</td></tr><tr><td>COPX</td><td>성장/테마 ETF</td><td>57</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.87배라 신규 자금 유입 강도는 약함. 뉴스: This Copper ETF Returned 156% in a Year and Pays 9.7% While You Wait for the 4x Case to Play Out. / 유동성: ACCEPTABLE</td></tr><tr><td>XME</td><td>성장/테마 ETF</td><td>51</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. 뉴스: 3 Market Themes Driving Stocks Right Now: AI, Alt Energy and Commodities / 유동성: ACCEPTABLE</td></tr><tr><td>XLE</td><td>성장/테마 ETF</td><td>20</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>20일 -2.63%, 5일 -3.68%, 상대 거래량 1.32배로 가격과 거래량이 함께 개선. 뉴스: Sector Update: Energy Stocks Gain Monday Afternoon / 유동성: LIQUID</td></tr><tr><td>OIH</td><td>성장/테마 ETF</td><td>0</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.87배라 신규 자금 유입 강도는 약함. 뉴스: Oil &amp;amp; Gas Following the AI Capex Boom as Crude Hovers at $100 / 유동성: ACCEPTABLE</td></tr><tr><td>ARKK</td><td>성장/테마 ETF</td><td>30</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.87배라 신규 자금 유입 강도는 약함. 뉴스: Cathie Wood Just Loaded Up on This Sizzling Artificial Intelligence (AI) Semiconductor IPO Stock / 유동성: ACCEPTABLE</td></tr><tr><td>IPO</td><td>성장/테마 ETF</td><td>94</td><td><span class="badge ready">진입 가능</span></td><td>MEDIUM</td><td>20일 +17.01%, 5일 +9.54%, 상대 거래량 2.35배로 가격과 거래량이 함께 개선. 뉴스: Bill Ackman’s Pershing Square to Raise $5 Billion from IPO</td></tr><tr><td>KWEB</td><td>성장/테마 ETF</td><td>0</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.62배라 신규 자금 유입 강도는 약함. 유동성: ACCEPTABLE</td></tr><tr><td>MAGS</td><td>성장/테마 ETF</td><td>58</td><td><span class="badge candidate">진입 후보</span></td><td>MEDIUM</td><td>20일 +4.47%, 5일 +0.72%, 상대 거래량 1.60배로 가격과 거래량이 함께 개선. 뉴스: Magnificent Seven Post Best Earnings In Nearly 5 Years. Sign Of A Bubble? / 유동성: ACCEPTABLE</td></tr><tr><td>QQQ</td><td>시장 기준 ETF</td><td>57</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.81배라 신규 자금 유입 강도는 약함. 뉴스: Dow, S&amp;amp;P 500, Nasdaq Futures Slip After Record Rally As US-Iran War Confusion Eclipses AI Gains: TSLA, BB, META, HPE, NVDA Stocks In Focus / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID</td></tr><tr><td>SPY</td><td>시장 기준 ETF</td><td>42</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.82배라 신규 자금 유입 강도는 약함. 뉴스: Dow, S&amp;amp;P 500, Nasdaq Futures Slip After Record Rally As US-Iran War Confusion Eclipses AI Gains: TSLA, BB, META, HPE, NVDA Stocks In Focus / ETF 확산도: NARROW_LEADERSHIP / 유동성: LIQUID</td></tr><tr><td>IWM</td><td>시장 기준 ETF</td><td>29</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.87배라 신규 자금 유입 강도는 약함. 뉴스: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / 유동성: LIQUID</td></tr><tr><td>TLT</td><td>채권 ETF</td><td>10</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.94배라 신규 자금 유입 강도는 약함. 유동성: LIQUID</td></tr><tr><td>GLD</td><td>금 ETF</td><td>0</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.99배라 신규 자금 유입 강도는 약함. 뉴스: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / 유동성: LIQUID</td></tr><tr><td>IBIT</td><td>비트코인 ETF</td><td>0</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>20일 -8.95%, 5일 -5.75%, 상대 거래량 1.36배로 가격과 거래량이 함께 개선. 유동성: LIQUID</td></tr><tr><td>BLOK</td><td>비트코인 ETF</td><td>74</td><td><span class="badge ready">진입 가능</span></td><td>MEDIUM</td><td>20일 +14.36%, 5일 +7.53%, 상대 거래량 1.38배로 가격과 거래량이 함께 개선. 뉴스: Despite Bitcoin Falling 7%, Amplify Blockchain Technology’s ETF has Soared 32% | BLOK</td></tr></tbody></table></section>
     <section><h2>3. 최종 실행 판단</h2>
       <h3>3-1. 오늘 실제로 할 일</h3>
-      <ul><li>ETF에서 할 일: IGV 포함 ETF 후보의 전일 고점 돌파와 5일선 유지를 확인한다.</li><li>개별 종목에서 할 일: TSM 등은 관련 ETF 대비 상대강도가 유지되는지 확인한 뒤 눌림 또는 돌파 조건에서만 검토한다.</li><li>하지 말아야 할 일: ETF와 개별 종목을 같은 테마 안에서 중복 매수하지 않는다.</li></ul>
+      <ul><li>ETF에서 할 일: IGV 포함 ETF 후보의 전일 고점 돌파와 5일선 유지를 확인한다.</li><li>개별 종목에서 할 일: AVGO 등은 관련 ETF 대비 상대강도가 유지되는지 확인한 뒤 눌림 또는 돌파 조건에서만 검토한다.</li><li>하지 말아야 할 일: ETF와 개별 종목을 같은 테마 안에서 중복 매수하지 않는다.</li></ul>
       <h3>3-2. 내일 확인할 조건</h3>
       <ul><li>ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인</li><li>개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인</li><li>시장 상태 확인 조건: QQQ/SPY의 5일/20일 추세와 위험선호 유지 여부 확인</li><li>데이터 보강 필요 항목: 뉴스, 옵션, 스프레드, ETF 구성종목 확산도, 실제 보유 진입가</li></ul>
     </section>
-    <section><h2>데이터 수집 상태</h2><ul><li>가격/거래량:</li><li>상태: 연결됨</li><li>소스: yfinance</li><li>비고: 기존 REAL_TEST 가격/거래량 및 차트 생성 유지</li><li>뉴스:</li><li>상태: 연결됨</li><li>소스: Yahoo Finance RSS fallback</li><li>수집된 뉴스 수: 333</li><li>실패/제한 사유: 특이사항 없음</li><li>옵션:</li><li>상태: 실패</li><li>소스: Yahoo Finance options endpoint</li><li>수집 가능 티커 수: 0</li><li>실패/제한 사유: HTTP 401 from https://query2.finance.yahoo.com/v7/finance/options/NVDA; HTTP 401 from https://query2.finance.yahoo.com/v7/finance/options/TSM; HTTP 401 from https://query2.finance.yahoo.com/v7/finance/options/PLTR</li><li>ETF 구성종목 확산도:</li><li>상태: 일부 연결</li><li>소스: config/etfHoldingsFallback.json 샘플</li><li>수집 가능 ETF 수: 11</li><li>fallback 사용 여부: 사용</li><li>유동성/스프레드:</li><li>상태: 일부 연결</li><li>소스: 가격/거래량 기반 거래대금 fallback</li><li>bid/ask 사용 여부: 미사용</li><li>거래대금 fallback 사용 여부: 사용</li><li>전체 비고:</li><li>옵션 수집 실패 티커 43개</li><li>ETF 구성종목 확산도는 fallback sample 13개 사용</li><li>스프레드/유동성은 bid/ask 대신 거래대금 fallback 43개 사용</li></ul></section>
+    <section><h2>데이터 수집 상태</h2><ul><li>가격/거래량:</li><li>상태: 연결됨</li><li>소스: yfinance</li><li>비고: 기존 REAL_TEST 가격/거래량 및 차트 생성 유지</li><li>뉴스:</li><li>상태: 연결됨</li><li>소스: Yahoo Finance RSS fallback</li><li>수집된 뉴스 수: 445</li><li>실패/제한 사유: 특이사항 없음</li><li>옵션:</li><li>상태: 실패</li><li>소스: Yahoo Finance options endpoint</li><li>수집 가능 티커 수: 0</li><li>실패/제한 사유: HTTP 401 from https://query2.finance.yahoo.com/v7/finance/options/NVDA; HTTP 401 from https://query2.finance.yahoo.com/v7/finance/options/MSFT; HTTP 401 from https://query2.finance.yahoo.com/v7/finance/options/AVGO</li><li>ETF 구성종목 확산도:</li><li>상태: 일부 연결</li><li>소스: config/etfHoldingsFallback.json 샘플</li><li>수집 가능 ETF 수: 11</li><li>fallback 사용 여부: 사용</li><li>Nasdaq-100 구성종목:</li><li>상태: FALLBACK</li><li>소스: fallback from StockAnalysis Nasdaq-100 list checked 2026-06-02</li><li>총 구성종목 수: 101</li><li>비고: remote source returned too few members: 0</li><li>전일 추천 snapshot:</li><li>상태: 연결됨</li><li>점검 대상: 5</li><li>저장 위치: data/latest-report.json, data/previous-report.json, data/dailyReports/</li><li>유동성/스프레드:</li><li>상태: 일부 연결</li><li>소스: 가격/거래량 기반 거래대금 fallback</li><li>bid/ask 사용 여부: 미사용</li><li>거래대금 fallback 사용 여부: 사용</li><li>전체 비고:</li><li>옵션 수집 실패 티커 57개</li><li>ETF 구성종목 확산도는 fallback sample 13개 사용</li><li>스프레드/유동성은 bid/ask 대신 거래대금 fallback 57개 사용</li></ul></section>
   </main>
 </body>
 </html>

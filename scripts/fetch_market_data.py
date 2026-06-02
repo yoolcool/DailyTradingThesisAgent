@@ -9,6 +9,7 @@ import yfinance as yf
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 OUTPUT_PATH = DATA_DIR / "market_data_real.json"
+NASDAQ100_FALLBACK_PATH = ROOT / "config" / "nasdaq100Fallback.json"
 
 TICKER_ALIASES = {
     "DRAM": "DRAM",
@@ -35,18 +36,9 @@ def safe_float(value):
         return None
     return round(float(value), 4)
 
-
-def fetch_one(ticker, asset_type):
-    yf_ticker = normalize_ticker(ticker)
-    try:
-      history = yf.download(
-          yf_ticker,
-          period="1y",
-          interval="1d",
-          progress=False,
-          auto_adjust=False,
-          threads=False,
-      )
+def summarize_history(ticker, asset_type, history):
+      if isinstance(history.columns, pd.MultiIndex):
+          history.columns = history.columns.get_level_values(-1)
       if history is None or history.empty:
           return {
               "ticker": ticker,
@@ -54,9 +46,6 @@ def fetch_one(ticker, asset_type):
               "dataStatus": "missing",
               "error": "empty history from yfinance",
           }
-
-      if isinstance(history.columns, pd.MultiIndex):
-          history.columns = history.columns.get_level_values(0)
 
       history = history.dropna(subset=["Close"])
       if len(history) < 2:
@@ -112,6 +101,20 @@ def fetch_one(ticker, asset_type):
           "dataStatus": "ok",
           "history": chart_history,
       }
+
+
+def fetch_one(ticker, asset_type):
+    yf_ticker = normalize_ticker(ticker)
+    try:
+      history = yf.download(
+          yf_ticker,
+          period="1y",
+          interval="1d",
+          progress=False,
+          auto_adjust=False,
+          threads=False,
+      )
+      return summarize_history(ticker, asset_type, history)
     except Exception as exc:
       return {
           "ticker": ticker,
@@ -121,13 +124,70 @@ def fetch_one(ticker, asset_type):
       }
 
 
+def ticker_history_from_batch(batch_history, yf_ticker):
+    if batch_history is None or batch_history.empty:
+        return None
+    if not isinstance(batch_history.columns, pd.MultiIndex):
+        return batch_history
+    level0 = list(batch_history.columns.get_level_values(0).unique())
+    level1 = list(batch_history.columns.get_level_values(1).unique())
+    if yf_ticker in level0:
+        return batch_history[yf_ticker]
+    if yf_ticker in level1:
+        return batch_history.xs(yf_ticker, axis=1, level=1)
+    return None
+
+
+def fetch_many(targets):
+    if not targets:
+        return {}
+    yf_symbols = [normalize_ticker(ticker) for ticker, _asset_type in targets]
+    ticker_to_asset = {normalize_ticker(ticker): (ticker, asset_type) for ticker, asset_type in targets}
+    results = {}
+    try:
+        batch_history = yf.download(
+            yf_symbols,
+            period="1y",
+            interval="1d",
+            progress=False,
+            auto_adjust=False,
+            threads=True,
+            group_by="ticker",
+        )
+        for yf_ticker in yf_symbols:
+            original_ticker, asset_type = ticker_to_asset[yf_ticker]
+            ticker_history = ticker_history_from_batch(batch_history, yf_ticker)
+            if ticker_history is None or ticker_history.empty:
+                results[original_ticker] = fetch_one(original_ticker, asset_type)
+            else:
+                results[original_ticker] = summarize_history(original_ticker, asset_type, ticker_history.copy())
+    except Exception:
+        for ticker, asset_type in targets:
+            results[ticker] = fetch_one(ticker, asset_type)
+    return results
+
+
+def load_nasdaq100_members():
+    if not NASDAQ100_FALLBACK_PATH.exists():
+        return []
+    with NASDAQ100_FALLBACK_PATH.open("r", encoding="utf-8") as file:
+        data = json.load(file)
+    return [row for row in data.get("members", []) if row.get("isActive", True)]
+
+
 def main():
     watchlist = load_json("watchlist.json")
     holdings = load_json("holdings.json")
     etfs = load_json("watchlist_etfs.json")
+    nasdaq100_members = load_nasdaq100_members()
 
     targets = []
     seen = set()
+    for row in nasdaq100_members:
+        ticker = row["ticker"]
+        if ticker not in seen:
+            targets.append((ticker, "STOCK"))
+            seen.add(ticker)
     for row in watchlist + holdings:
         ticker = row["ticker"]
         if ticker not in seen:
@@ -139,13 +199,16 @@ def main():
             targets.append((ticker, "ETF"))
             seen.add(ticker)
 
-    results = {}
-    for ticker, asset_type in targets:
-        results[ticker] = fetch_one(ticker, asset_type)
+    results = fetch_many(targets)
 
     output = {
         "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
         "dataSource": "yfinance",
+        "universe": {
+            "stockUniverse": "NASDAQ_100",
+            "stockUniverseCount": len(nasdaq100_members),
+            "stockUniverseSource": str(NASDAQ100_FALLBACK_PATH),
+        },
         "items": results,
     }
     with OUTPUT_PATH.open("w", encoding="utf-8") as file:

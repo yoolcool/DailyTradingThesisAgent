@@ -65,6 +65,8 @@ function main() {
   const splitSection = sectionText(markdown, "오늘의 분리 결론");
   assert(splitSection.includes("ETF 행동 후보:"), "Split conclusion missing ETF action candidates");
   assert(splitSection.includes("개별 종목 행동 후보:"), "Split conclusion missing stock action candidates");
+  assert(splitSection.includes("Nasdaq-100 신규 스캔 결과:"), "Split conclusion missing Nasdaq-100 scan summary");
+  assert(splitSection.includes("전일 추천 종목 점검:"), "Split conclusion missing previous recommendation summary");
 
   const scoreGuide = sectionText(markdown, "moneyFlowScore 산정 방식");
   assert(scoreGuide.includes("장기 가치평가 점수가 아니다"), "Score guide must explain score is not valuation");
@@ -73,10 +75,12 @@ function main() {
   assert(scoreGuide.includes("ETF 대비 상대강도"), "Score guide missing relative strength factor");
 
   const nvdaCard = markdown.match(/### \[NVDA\][\s\S]*?(?=\n### \[|$)/)?.[0] || "";
-  assert(nvdaCard.includes("relatedEtfs: SMH, SOXX, SOXQ, AIQ, QQQ"), "NVDA related ETF mapping is not refined");
-  assert(!nvdaCard.includes("HACK") && !nvdaCard.includes("CIBR"), "NVDA should not map to cybersecurity ETFs");
-  assert(nvdaCard.includes("왜 ETF가 아니라 이 종목인가?"), "Stock card missing stock-over-ETF explanation");
-  assert(nvdaCard.includes("ETF가 더 나은 경우"), "Stock card missing ETF-better explanation");
+  if (nvdaCard) {
+    assert(nvdaCard.includes("relatedEtfs: SMH, SOXX, SOXQ, AIQ"), "NVDA related ETF mapping is not refined");
+    assert(!nvdaCard.includes("HACK") && !nvdaCard.includes("CIBR"), "NVDA should not map to cybersecurity ETFs");
+  }
+  assert(markdown.includes("왜 ETF가 아니라 이 종목인가?"), "Stock cards missing stock-over-ETF explanation");
+  assert(markdown.includes("ETF가 더 나은 경우"), "Stock cards missing ETF-better explanation");
 
   const etfSection = sectionText(markdown, "1. ETF 트레이딩 보고서");
   const stockSection = sectionText(markdown, "2. 개별 종목 트레이딩 보고서");
@@ -110,14 +114,21 @@ function main() {
   assert(markdown.includes("ETF에서 할 일:"), "Final action missing ETF task");
   assert(markdown.includes("개별 종목에서 할 일:"), "Final action missing stock task");
   assert(markdown.includes("하지 말아야 할 일:"), "Final action missing do-not-do task");
+  assert(markdown.includes("신규 발굴 풀: Nasdaq-100 구성종목 전체"), "Markdown missing Nasdaq-100 discovery pool");
+  assert(markdown.includes("총 스캔 종목 수:"), "Markdown missing stock scan count");
+  assert(markdown.includes("상세 데이터 수집 대상: 가격/거래량 1차 스캔 상위 20개"), "Markdown missing staged detailed data collection note");
+  assert(markdown.includes("전일 추천 종목 점검"), "Markdown missing previous recommendation review");
+  assert(markdown.includes("실제 계좌 보유 종목이 아니라 전일 리포트"), "Previous review must distinguish account holdings from report tracking");
 
   assert(fs.existsSync(chartsDir), "Missing reports/charts directory");
   const chartFiles = fs.readdirSync(chartsDir).filter((name) => name.endsWith(".png"));
   assert(chartFiles.length > 0, "No chart images were generated");
   assert(html.includes('<img class="chart"'), "HTML card charts are not linked");
-  for (const file of ["src/data/newsProvider.js", "src/data/optionsProvider.js", "src/data/etfHoldingsProvider.js", "src/data/liquidityProvider.js", ".env.example"]) {
+  for (const file of ["src/data/newsProvider.js", "src/data/optionsProvider.js", "src/data/etfHoldingsProvider.js", "src/data/liquidityProvider.js", "src/data/nasdaq100Universe.js", ".env.example", "config/nasdaq100Fallback.json", "data/latest-report.json"]) {
     assert(fs.existsSync(path.join(ROOT, file)), `Missing provider/env file: ${file}`);
   }
+  const marketData = readJson("market_data_real.json");
+  assert((marketData.universe?.stockUniverseCount || 0) >= 90, "Market data missing expanded Nasdaq-100 universe count");
 
   console.log("Verified provider-aware report sections, dynamic data status, scoring fields, ETF mapping, and charts");
   console.log(`Verified chart count: ${chartFiles.length}`);
