@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-02",
-  "generatedAt": "2026년 6월 2일 화요일 오후 4:06",
+  "generatedAt": "2026년 6월 2일 화요일 오후 4:25",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -34,7 +34,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "媛뺥븳 ?먭툑 ?좎엯 ?꾨낫",
+        "scoreBandLabel": "강한 자금 유입 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -57,7 +57,7 @@
           "AIQ",
           "QQQ"
         ],
-        "scoreBandLabel": "媛뺥븳 ?먭툑 ?좎엯 ?꾨낫",
+        "scoreBandLabel": "강한 자금 유입 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -81,7 +81,7 @@
           "IHAK",
           "IGV"
         ],
-        "scoreBandLabel": "媛뺥븳 ?먭툑 ?좎엯 ?꾨낫",
+        "scoreBandLabel": "강한 자금 유입 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -105,7 +105,7 @@
           "IHAK",
           "IGV"
         ],
-        "scoreBandLabel": "媛뺥븳 ?먭툑 ?좎엯 ?꾨낫",
+        "scoreBandLabel": "강한 자금 유입 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -128,7 +128,7 @@
           "AIQ",
           "QQQ"
         ],
-        "scoreBandLabel": "媛뺥븳 ?먭툑 ?좎엯 ?꾨낫",
+        "scoreBandLabel": "강한 자금 유입 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -152,7 +152,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "媛뺥븳 ?먭툑 ?좎엯 ?꾨낫",
+        "scoreBandLabel": "강한 자금 유입 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -175,7 +175,7 @@
           "AIQ",
           "QQQ"
         ],
-        "scoreBandLabel": "媛뺥븳 ?먭툑 ?좎엯 ?꾨낫",
+        "scoreBandLabel": "강한 자금 유입 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -198,7 +198,7 @@
           "AIQ",
           "QQQ"
         ],
-        "scoreBandLabel": "媛뺥븳 ?먭툑 ?좎엯 ?꾨낫",
+        "scoreBandLabel": "강한 자금 유입 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -222,7 +222,7 @@
           "IHAK",
           "IGV"
         ],
-        "scoreBandLabel": "媛뺥븳 ?먭툑 ?좎엯 ?꾨낫",
+        "scoreBandLabel": "강한 자금 유입 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -243,7 +243,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "媛뺥븳 ?먭툑 ?좎엯 ?꾨낫",
+        "scoreBandLabel": "강한 자금 유입 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -267,7 +267,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "媛뺥븳 ?먭툑 ?좎엯 ?꾨낫",
+        "scoreBandLabel": "강한 자금 유입 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -291,7 +291,7 @@
           "SOXX",
           "SOXQ"
         ],
-        "scoreBandLabel": "愿???꾨낫",
+        "scoreBandLabel": "관심 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -314,7 +314,7 @@
           "AIQ",
           "QQQ"
         ],
-        "scoreBandLabel": "愿???꾨낫",
+        "scoreBandLabel": "관심 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -338,7 +338,7 @@
           "CIBR",
           "QQQ"
         ],
-        "scoreBandLabel": "愿???꾨낫",
+        "scoreBandLabel": "관심 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -359,7 +359,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "愿???꾨낫",
+        "scoreBandLabel": "관심 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -380,7 +380,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "愿???꾨낫",
+        "scoreBandLabel": "관심 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -401,7 +401,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "愿???꾨낫",
+        "scoreBandLabel": "관심 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -426,7 +426,7 @@
           "AIQ",
           "QQQ"
         ],
-        "scoreBandLabel": "愿???꾨낫",
+        "scoreBandLabel": "관심 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -450,7 +450,7 @@
           "IGV",
           "AIQ"
         ],
-        "scoreBandLabel": "愿???꾨낫",
+        "scoreBandLabel": "관심 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -471,7 +471,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "愿李??꾨낫",
+        "scoreBandLabel": "관찰 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -495,7 +495,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "愿李??꾨낫",
+        "scoreBandLabel": "관찰 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -516,7 +516,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "愿李??꾨낫",
+        "scoreBandLabel": "관찰 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -539,7 +539,7 @@
           "AIQ",
           "QQQ"
         ],
-        "scoreBandLabel": "愿李??꾨낫",
+        "scoreBandLabel": "관찰 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -560,7 +560,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "愿李??꾨낫",
+        "scoreBandLabel": "관찰 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -581,7 +581,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "愿李??꾨낫",
+        "scoreBandLabel": "관찰 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -604,7 +604,7 @@
           "AIQ",
           "QQQ"
         ],
-        "scoreBandLabel": "愿李??꾨낫",
+        "scoreBandLabel": "관찰 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -625,7 +625,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "愿李??꾨낫",
+        "scoreBandLabel": "관찰 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -649,7 +649,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "愿李??꾨낫",
+        "scoreBandLabel": "관찰 후보",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -670,7 +670,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -694,7 +694,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -715,7 +715,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -736,7 +736,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -757,7 +757,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -778,7 +778,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -802,7 +802,7 @@
           "IHAK",
           "IGV"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -823,7 +823,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -844,7 +844,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -867,7 +867,7 @@
           "MAGS",
           "SPY"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -891,7 +891,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -914,7 +914,7 @@
           "AIQ",
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -937,7 +937,7 @@
           "AIQ",
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -958,7 +958,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -982,7 +982,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1003,7 +1003,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1026,7 +1026,7 @@
           "AIQ",
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1047,7 +1047,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1071,7 +1071,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1092,7 +1092,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1113,7 +1113,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1134,7 +1134,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1155,7 +1155,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1176,7 +1176,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1197,7 +1197,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1218,7 +1218,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1239,7 +1239,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1263,7 +1263,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1284,7 +1284,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1305,7 +1305,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1329,7 +1329,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1350,7 +1350,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1371,7 +1371,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1392,7 +1392,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1415,7 +1415,7 @@
           "AIQ",
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1436,7 +1436,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1457,7 +1457,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1478,7 +1478,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1499,7 +1499,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1520,7 +1520,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1541,7 +1541,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1562,7 +1562,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1583,7 +1583,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1607,7 +1607,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1628,7 +1628,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1649,7 +1649,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1670,7 +1670,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1691,7 +1691,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1715,7 +1715,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1736,7 +1736,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1757,7 +1757,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1778,7 +1778,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1802,7 +1802,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1823,7 +1823,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1844,7 +1844,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1865,7 +1865,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1886,7 +1886,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1907,7 +1907,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1928,7 +1928,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1949,7 +1949,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1970,7 +1970,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -1991,7 +1991,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -2012,7 +2012,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -2033,7 +2033,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -2054,7 +2054,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -2075,7 +2075,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -2096,7 +2096,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -2119,7 +2119,7 @@
           "AIQ",
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -2140,7 +2140,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -2161,7 +2161,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -2182,7 +2182,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -2206,7 +2206,7 @@
           "SOXQ",
           "AIQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       },
@@ -2227,7 +2227,7 @@
         "relatedEtfs": [
           "QQQ"
         ],
-        "scoreBandLabel": "?꾩닚??留ㅻℓ 湲덉?",
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
       }
@@ -2255,7 +2255,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "吏곸젒 媛먯젏??二쇱슂 由ъ뒪?щ뒗 ?놁?留?愿李?由ъ뒪?щ뒗 怨꾩냽 ?뺤씤?댁빞 ?쒕떎."
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "20일선 위 눌림 후 재상승 확인",
@@ -2285,7 +2285,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "吏곸젒 媛먯젏??二쇱슂 由ъ뒪?щ뒗 ?놁?留?愿李?由ъ뒪?щ뒗 怨꾩냽 ?뺤씤?댁빞 ?쒕떎."
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -2315,7 +2315,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "吏곸젒 媛먯젏??二쇱슂 由ъ뒪?щ뒗 ?놁?留?愿李?由ъ뒪?щ뒗 怨꾩냽 ?뺤씤?댁빞 ?쒕떎."
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -2353,7 +2353,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "1媛?媛먯젏 由ъ뒪?щ줈 珥?-5??諛섏쁺."
+        "summary": "1개 감점 리스크로 총 -5점 반영."
       },
       "reasonConfidence": "MEDIUM",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -2392,7 +2392,7 @@
           "options data not connected or unavailable",
           "ETF breadth data not connected"
         ],
-        "summary": "1媛?媛먯젏 由ъ뒪?щ줈 珥?-5??諛섏쁺."
+        "summary": "1개 감점 리스크로 총 -5점 반영."
       },
       "reasonConfidence": "MEDIUM",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -2432,7 +2432,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "1媛?媛먯젏 由ъ뒪?щ줈 珥?-4??諛섏쁺."
+        "summary": "1개 감점 리스크로 총 -4점 반영."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -2482,7 +2482,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "2媛?媛먯젏 由ъ뒪?щ줈 珥?-10??諛섏쁺."
+        "summary": "2개 감점 리스크로 총 -10점 반영."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -2532,7 +2532,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "2媛?媛먯젏 由ъ뒪?щ줈 珥?-10??諛섏쁺."
+        "summary": "2개 감점 리스크로 총 -10점 반영."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -2574,7 +2574,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "1媛?媛먯젏 由ъ뒪?щ줈 珥?-4??諛섏쁺."
+        "summary": "1개 감점 리스크로 총 -4점 반영."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -2624,7 +2624,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "2媛?媛먯젏 由ъ뒪?щ줈 珥?-10??諛섏쁺."
+        "summary": "2개 감점 리스크로 총 -10점 반영."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "20일선 위 눌림 후 재상승 확인",
@@ -2668,7 +2668,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "1媛?媛먯젏 由ъ뒪?щ줈 珥?-4??諛섏쁺."
+        "summary": "1개 감점 리스크로 총 -4점 반영."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -2718,7 +2718,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "2媛?媛먯젏 由ъ뒪?щ줈 珥?-10??諛섏쁺."
+        "summary": "2개 감점 리스크로 총 -10점 반영."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -2768,7 +2768,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "2媛?媛먯젏 由ъ뒪?щ줈 珥?-10??諛섏쁺."
+        "summary": "2개 감점 리스크로 총 -10점 반영."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -2810,7 +2810,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "1媛?媛먯젏 由ъ뒪?щ줈 珥?-4??諛섏쁺."
+        "summary": "1개 감점 리스크로 총 -4점 반영."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -2860,7 +2860,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "2媛?媛먯젏 由ъ뒪?щ줈 珥?-10??諛섏쁺."
+        "summary": "2개 감점 리스크로 총 -10점 반영."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "20일선 위 눌림 후 재상승 확인",
@@ -2912,7 +2912,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "2媛?媛먯젏 由ъ뒪?щ줈 珥?-8??諛섏쁺."
+        "summary": "2개 감점 리스크로 총 -8점 반영."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -2962,7 +2962,7 @@
         "watchItems": [
           "options data not connected or unavailable"
         ],
-        "summary": "2媛?媛먯젏 由ъ뒪?щ줈 珥?-8??諛섏쁺."
+        "summary": "2개 감점 리스크로 총 -8점 반영."
       },
       "reasonConfidence": "HIGH",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
@@ -3006,7 +3006,7 @@
       "watchItems": [
         "options data not connected or unavailable"
       ],
-      "summary": "1媛?媛먯젏 由ъ뒪?щ줈 珥?-4??諛섏쁺."
+      "summary": "1개 감점 리스크로 총 -4점 반영."
     },
     "reasonConfidence": "HIGH",
     "entryCondition": "전일 고점 돌파와 5일선 유지 확인",

@@ -15,10 +15,10 @@ const CHARTS_DIR = path.join(REPORTS_DIR, "charts");
 const DAILY_REPORTS_DIR = path.join(DATA_DIR, "dailyReports");
 
 const MODE = process.env.REPORT_MODE === "REAL_TEST" || process.argv.includes("--real-test") ? "REAL_TEST" : "MOCK";
-const REAL_WARNING = "REAL DATA TEST - 媛寃?嫄곕옒?됱? ?ㅼ젣 ?곗씠?? 蹂댁“ ?곗씠???곌껐 ?곹깭???고??꾩뿉 ?숈쟻?쇰줈 ?쒖떆";
-const MOCK_WARNING = "MOCK DATA - ?ㅼ쟾 留ㅻℓ ?먮떒 ?ъ슜 湲덉?";
+const REAL_WARNING = "REAL DATA TEST - 가격/거래량은 실제 데이터이며 보조 데이터 연결 상태를 함께 표시";
+const MOCK_WARNING = "MOCK DATA - 실전 매매 판단 사용 금지";
 const PURPOSE =
-  "??由ы룷?몃뒗 理쒓렐 ?ㅻⅨ ?먯궛???섏뿴?섎뒗 寃껋씠 ?꾨땲?? ?덉씠 紐곕━??洹쇨굅? ?ㅼ쓬 留ㅼ닔 二쇱껜媛 ?뺤씤?섎뒗 ?몃젅?대뵫 ?꾨낫瑜?李얘린 ?꾪븳 蹂닿퀬?쒕떎.";
+  "이 리포트는 최근 오른 자산을 나열하는 것이 아니라, 돈이 몰리는 근거와 다음 매수 주체가 확인할 트레이딩 후보를 찾기 위한 보고서다.";
 
 const STATUS = {
   WATCH: "관찰",
@@ -67,28 +67,28 @@ const STOCK_META = {
 };
 
 const ETF_CATEGORY = {
-  DRAM: "諛섎룄泥?湲곗닠 ETF",
-  SMH: "諛섎룄泥?湲곗닠 ETF",
-  SOXX: "諛섎룄泥?湲곗닠 ETF",
-  SOXQ: "諛섎룄泥?湲곗닠 ETF",
-  IGV: "?깆옣/?뚮쭏 ETF",
-  AIQ: "?깆옣/?뚮쭏 ETF",
-  BOTZ: "?깆옣/?뚮쭏 ETF",
-  ROBO: "?깆옣/?뚮쭏 ETF",
-  CIBR: "?깆옣/?뚮쭏 ETF",
-  HACK: "?깆옣/?뚮쭏 ETF",
-  IHAK: "?깆옣/?뚮쭏 ETF",
-  ITA: "諛⑹궛 ETF",
-  XAR: "諛⑹궛 ETF",
-  SHLD: "諛⑹궛 ETF",
-  PPA: "諛⑹궛 ETF",
-  QQQ: "?쒖옣 湲곗? ETF",
-  SPY: "?쒖옣 湲곗? ETF",
-  IWM: "?쒖옣 湲곗? ETF",
-  TLT: "梨꾧텒 ETF",
-  GLD: "湲?ETF",
-  IBIT: "鍮꾪듃肄붿씤 ETF",
-  BLOK: "鍮꾪듃肄붿씤 ETF"
+  DRAM: "반도체 기술 ETF",
+  SMH: "반도체 기술 ETF",
+  SOXX: "반도체 기술 ETF",
+  SOXQ: "반도체 기술 ETF",
+  IGV: "성장/테마 ETF",
+  AIQ: "성장/테마 ETF",
+  BOTZ: "성장/테마 ETF",
+  ROBO: "성장/테마 ETF",
+  CIBR: "성장/테마 ETF",
+  HACK: "성장/테마 ETF",
+  IHAK: "성장/테마 ETF",
+  ITA: "방산 ETF",
+  XAR: "방산 ETF",
+  SHLD: "방산 ETF",
+  PPA: "방산 ETF",
+  QQQ: "시장 기준 ETF",
+  SPY: "시장 기준 ETF",
+  IWM: "시장 기준 ETF",
+  TLT: "채권 ETF",
+  GLD: "금 ETF",
+  IBIT: "비트코인 ETF",
+  BLOK: "비트코인 ETF"
 };
 
 function readJson(fileName, fallback = null) {
@@ -116,30 +116,30 @@ function escapeHtml(value) {
 }
 
 function pct(value) {
-  if (value === null || value === undefined || Number.isNaN(Number(value))) return "?곗씠???놁쓬";
+  if (value === null || value === undefined || Number.isNaN(Number(value))) return "데이터 없음";
   return `${Number(value) > 0 ? "+" : ""}${Number(value).toFixed(2)}%`;
 }
 
 function num(value, digits = 0) {
-  if (value === null || value === undefined || Number.isNaN(Number(value))) return "?곗씠???놁쓬";
+  if (value === null || value === undefined || Number.isNaN(Number(value))) return "데이터 없음";
   return Number(value).toFixed(digits);
 }
 
 function price(value) {
-  if (value === null || value === undefined || Number.isNaN(Number(value))) return "?곗씠???놁쓬";
+  if (value === null || value === undefined || Number.isNaN(Number(value))) return "데이터 없음";
   return `$${Number(value).toLocaleString("en-US", { maximumFractionDigits: 2 })}`;
 }
 
-function mdList(items, empty = "- ?대떦 ?놁쓬") {
+function mdList(items, empty = "- 해당 없음") {
   return items.length ? items.map((item) => `- ${item}`).join("\n") : empty;
 }
 
 function htmlList(items) {
-  return `<ul>${items.map((item) => `<li>${item}</li>`).join("") || "<li>?대떦 ?놁쓬</li>"}</ul>`;
+  return `<ul>${items.map((item) => `<li>${item}</li>`).join("") || "<li>해당 없음</li>"}</ul>`;
 }
 
 function marketItem(marketData, ticker) {
-  return marketData?.items?.[ticker] || { ticker, dataStatus: "missing", error: "?곗씠???놁쓬" };
+  return marketData?.items?.[ticker] || { ticker, dataStatus: "missing", error: "데이터 없음" };
 }
 
 function clamp(value, min, max) {
@@ -196,8 +196,8 @@ function riskPenaltySummary(items, watchItems) {
     items,
     watchItems,
     summary: items.length
-      ? `${items.length}媛?媛먯젏 由ъ뒪?щ줈 珥?${totalPenalty}??諛섏쁺.`
-      : "吏곸젒 媛먯젏??二쇱슂 由ъ뒪?щ뒗 ?놁?留?愿李?由ъ뒪?щ뒗 怨꾩냽 ?뺤씤?댁빞 ?쒕떎."
+      ? `${items.length}개 감점 리스크로 총 ${totalPenalty}점 반영.`
+      : "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
   };
 }
 
@@ -233,7 +233,7 @@ function scoreAsset(item, assetType, relatedEtfStrength = 0, supplemental = {}) 
       wasCapped: false,
       capReason: "cap not applied",
       formulaText: "0 = price/volume data missing",
-      reasons: ["媛寃?嫄곕옒???곗씠???놁쓬"],
+      reasons: ["가격/거래량 데이터 없음"],
       dataUsed: dataUsedFlags(supplemental, false)
     };
     return {
@@ -242,13 +242,13 @@ function scoreAsset(item, assetType, relatedEtfStrength = 0, supplemental = {}) 
       moneyFlowScoreFinal: 0,
       moneyFlowScoreBreakdown: emptyBreakdown,
       moneyFlowScoreReasons: emptyBreakdown.reasons,
-      overheatingRisk: "?곗씠???놁쓬",
-      overheatingReason: "媛寃?嫄곕옒???곗씠???놁쓬",
+      overheatingRisk: "데이터 없음",
+      overheatingReason: "가격/거래량 데이터 없음",
       reasonConfidence: "LOW",
       status: STATUS.BAN,
-      whyMoneyIsFlowing: "?곗씠???놁쓬",
-      likelyNextBuyer: "?곗씠???놁쓬",
-      whyThisCouldTradeHigher: "?곗씠???놁쓬"
+      whyMoneyIsFlowing: "데이터 없음",
+      likelyNextBuyer: "데이터 없음",
+      whyThisCouldTradeHigher: "데이터 없음"
     };
   }
 
@@ -319,25 +319,25 @@ function scoreAsset(item, assetType, relatedEtfStrength = 0, supplemental = {}) 
   const riskPenalty = riskSummary.totalPenalty;
   const dataConfidencePenalty = 0;
   const reasons = [];
-  if (r20 > 8) reasons.push("20???섏씡瑜?媛뺥븿");
-  if (r5 > 5) reasons.push("5???섏씡瑜?媛뺥븿");
-  if (daily > 2) reasons.push("1???④린 紐⑤찘? ?뺤씤");
-  if (relVol >= 1.2) reasons.push("?곷? 嫄곕옒??利앷?");
-  if (highProximity) reasons.push("52二?怨좎젏 洹쇱쿂");
-  if (aboveMa5 && aboveMa20) reasons.push("?대룞?됯퇏 ??異붿꽭 ?좎?");
-  if (assetType === "STOCK" && relatedEtfStrength > 0) reasons.push("愿??ETF 媛뺤꽭 ?뚮쭏 ?덉쓽 媛쒕퀎 醫낅ぉ");
-  if (newsScore > 0) reasons.push("?댁뒪 ?먮쫫??媛寃?嫄곕옒??洹쇨굅瑜?蹂닿컯");
-  if (optionsScore > 0) reasons.push("?듭뀡 ?섍툒???④린 留ㅼ닔?몃? 蹂닿컯");
+  if (r20 > 8) reasons.push("20일 수익률 강함");
+  if (r5 > 5) reasons.push("5일 수익률 강함");
+  if (daily > 2) reasons.push("1일 단기 모멘텀 확인");
+  if (relVol >= 1.2) reasons.push("상대 거래량 증가");
+  if (highProximity) reasons.push("52주 고점 근처");
+  if (aboveMa5 && aboveMa20) reasons.push("이동평균 위 추세 유지");
+  if (assetType === "STOCK" && relatedEtfStrength > 0) reasons.push("관련 ETF 강세 테마 안의 개별 종목");
+  if (newsScore > 0) reasons.push("뉴스 흐름이 가격/거래량 근거 보강");
+  if (optionsScore > 0) reasons.push("옵션 수급이 단기 매수세 보강");
   if (assetType === "ETF" && etfBreadthScore > 0) reasons.push("ETF 구성종목 확산도 양호");
-  if (liquidityScore > 0) reasons.push("嫄곕옒?湲?湲곗? ?좊룞???묓샇");
+  if (liquidityScore > 0) reasons.push("거래대금 기준 유동성 양호");
   if (newsScore < 0) reasons.push("부정 뉴스 또는 이벤트 리스크");
   if (optionsScore < 0) reasons.push("옵션 수급 방어적");
-  if (liquidityScore < 0) reasons.push("?좊룞???ㅽ봽?덈뱶 二쇱쓽");
-  if (riskPenalty < 0) reasons.push("?④린 怨쇱뿴/異붽꺽 ?꾪뿕 議댁옱");
-  if (!isConnectedLike(supplemental.news?.status)) reasons.push("?댁뒪 ?곗씠??誘몄뿰寃??먮뒗 ?섏쭛 ?ㅽ뙣");
-  if (!isConnectedLike(supplemental.options?.status)) reasons.push("?듭뀡 ?곗씠??誘몄뿰寃??먮뒗 ?섏쭛 ?ㅽ뙣");
+  if (liquidityScore < 0) reasons.push("유동성/스프레드 주의");
+  if (riskPenalty < 0) reasons.push("단기 과열/추격 위험 존재");
+  if (!isConnectedLike(supplemental.news?.status)) reasons.push("뉴스 데이터 미연결 또는 수집 실패");
+  if (!isConnectedLike(supplemental.options?.status)) reasons.push("옵션 데이터 미연결 또는 수집 실패");
   if (assetType === "ETF" && !isConnectedLike(supplemental.etfBreadth?.status)) reasons.push("ETF 구성종목 확산도 데이터 미연결");
-  if (!isConnectedLike(supplemental.liquidity?.status)) reasons.push("?ㅽ봽?덈뱶/?좊룞???곗씠??誘몄뿰寃??먮뒗 fallback ?쒗븳");
+  if (!isConnectedLike(supplemental.liquidity?.status)) reasons.push("스프레드/유동성 데이터 미연결 또는 fallback 제한");
 
   const priceVolumeScore = trendScore + shortMomentumScore + mediumMomentumScore + volumeScore + highProximityScore + movingAverageScore;
   const initialRawScore = rounded(priceVolumeScore);
@@ -382,20 +382,20 @@ function scoreAsset(item, assetType, relatedEtfStrength = 0, supplemental = {}) 
 
   const reasonConfidence = computeReasonConfidence(assetType, item, finalDisplayScore, weakVolume, supplemental, relatedEtfStrength);
   const status = finalDisplayScore >= 72 && !overheatingFlag ? STATUS.ENTRY_READY : finalDisplayScore >= 58 && !overheatingFlag ? STATUS.ENTRY_CANDIDATE : finalDisplayScore >= 35 ? STATUS.WATCH : STATUS.BAN;
-  const overheatingRisk = blowoffFlag ? "?믪쓬" : overheatingFlag ? "以묎컙" : highProximity && daily > 2 ? "??쓬~以묎컙" : "??쓬";
+  const overheatingRisk = blowoffFlag ? "높음" : overheatingFlag ? "중간" : highProximity && daily > 2 ? "낮음~중간" : "낮음";
   const overheatingReason = etfOverheatingReason(assetType, item, overheatingRisk);
 
   const whyMoneyIsFlowing = weakVolume
-    ? `理쒓렐 ?섏씡瑜좎? ?뺤씤?섏?留??곷? 嫄곕옒??${num(relVol, 2)}諛곕씪 ?좉퇋 ?먭툑 ?좎엯 媛뺣룄???쏀븿`
-    : `20??${pct(r20)}, 5??${pct(r5)}, ?곷? 嫄곕옒??${num(relVol, 2)}諛곕줈 媛寃⑷낵 嫄곕옒?됱씠 ?④퍡 媛쒖꽑`;
+    ? `최근 수익률은 확인되지만 상대 거래량 ${num(relVol, 2)}배라 신규 자금 유입 강도는 약함`
+    : `20일 ${pct(r20)}, 5일 ${pct(r5)}, 상대 거래량 ${num(relVol, 2)}배로 가격과 거래량이 함께 개선`;
   const supplementalReason = supplementalReasonLine(assetType, supplemental);
   const likelyNextBuyer =
     assetType === "ETF"
-      ? "?뱁꽣 踰좏?瑜??щ젮???④린 紐⑤찘? ?먭툑怨?由щ갭?곗떛 ?먭툑"
-      : "媛쒕퀎 二쇰룄二쇰? ?곕씪遺숇뒗 ?④린 紐⑤찘? ?먭툑怨?愿??ETF 媛뺤꽭瑜??뺤씤???ㅼ쐷 ?몃젅?대뜑";
+      ? "섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금"
+      : "개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더";
   const whyThisCouldTradeHigher = highProximity
-    ? "52二?怨좎젏 遺洹쇱씠???뚰뙆媛 ?뺤씤?섎㈃ ?좉퀬媛 異붿쥌 留ㅼ닔媛 遺숈쓣 ???덉쓬"
-    : "?④린 異붿꽭媛 ?좎??섍퀬 嫄곕옒?됱씠 1.0諛??댁긽?대㈃ ?섎룎由??댄썑 ?ъ긽?뱀쓣 ?쒕룄?????덉쓬";
+    ? "52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음"
+    : "단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음";
 
   return {
     moneyFlowScore: finalDisplayScore,
@@ -464,15 +464,15 @@ function etfOverheatingReason(assetType, item, risk) {
 
 function chartSummary(item) {
   const history = item?.history || [];
-  if (history.length < 20) return "李⑦듃 ?곗씠???놁쓬";
+  if (history.length < 20) return "차트 데이터 없음";
   const closes = history.map((row) => row.close).filter((value) => Number.isFinite(value));
   const last = closes.at(-1);
   const ma5 = average(closes.slice(-5));
   const ma20 = average(closes.slice(-20));
-  if (last >= ma5 && ma5 >= ma20) return "理쒓렐 20嫄곕옒???곗긽?? 5?쇱꽑??20?쇱꽑 ?꾩뿉 ?덉쓬";
-  if (last >= ma20 && last < ma5) return "20?쇱꽑 ?꾩뿉???④린 ?뚮┝ ?뺤씤 援ш컙";
-  if (last < ma20) return "20?쇱꽑 ?꾨옒??異붿꽭 ?뺤씤 ?꾧퉴吏 蹂댁닔???묎렐";
-  return "?④린 異붿꽭??以묐┰";
+  if (last >= ma5 && ma5 >= ma20) return "최근 20거래일 기준 5일선이 20일선 위에 있음";
+  if (last >= ma20 && last < ma5) return "20일선 위에서 단기 눌림 확인 구간";
+  if (last < ma20) return "20일선 아래라 추세 확인 전까지 보수적 접근";
+  return "단기 추세 중립";
 }
 
 function average(values) {
@@ -484,7 +484,7 @@ function enrichEtf(etf, marketData, supplementalData = {}) {
   const market = marketItem(marketData, etf.ticker);
   const supplemental = supplementalData.byTicker?.[etf.ticker] || {};
   const scored = MODE === "REAL_TEST" ? scoreAsset(market, "ETF", 0, supplemental) : scoreAsset(mockMarket(etf), "ETF", 0, supplemental);
-  const categoryType = ETF_CATEGORY[etf.ticker] || "?깆옣/?뚮쭏 ETF";
+  const categoryType = ETF_CATEGORY[etf.ticker] || "성장/테마 ETF";
   return {
     ...etf,
     assetType: "ETF",
@@ -544,7 +544,7 @@ function enrichStock(stock, etfs, marketData, supplementalData = {}) {
     todayActionLabel: status === STATUS.ENTRY_READY ? "개별 종목 우선" : status === STATUS.ENTRY_CANDIDATE ? "눌림 매수 대기" : status === STATUS.HOLD ? "전일 추천 추적" : "돌파 확인 후 관찰",
     entryCondition: entryCondition(market),
     invalidationCondition: invalidationCondition(market),
-    holdingInfo: isHolding ? "蹂댁쑀 ?뺣낫 誘몄엯??- 湲곗〈 mock 吏꾩엯媛/?섏씡瑜좎? ?ㅼ쟾 ?먮떒???ъ슜?섏? ?딆쓬" : ""
+    holdingInfo: isHolding ? "보유 정보 미입력 - 기존 mock 진입가/수익률은 실전 판단에 사용하지 않음" : ""
   };
 }
 
@@ -678,8 +678,8 @@ function universeMemberToStock(member) {
     market: "US",
     theme: member.sector || "Nasdaq-100",
     primaryTheme: member.sector || "Nasdaq-100",
-    primarySector: member.sector || "?곗씠???놁쓬",
-    industry: member.industry || "?곗씠???놁쓬",
+    primarySector: member.sector || "데이터 없음",
+    industry: member.industry || "데이터 없음",
     isNewScanCandidate: true,
     universeName: "NASDAQ_100",
     universeSource: member.source,
@@ -716,7 +716,7 @@ function marketStatus(etfs) {
 function groupThemes(stocks, etfs) {
   const rows = new Map();
   for (const stock of stocks) {
-    const theme = stock.primaryTheme || stock.theme || "湲고?";
+    const theme = stock.primaryTheme || stock.theme || "기타";
     const row = rows.get(theme) || { theme, tickers: [], score: 0, count: 0 };
     row.tickers.push(stock.ticker);
     row.score += stock.moneyFlowScore || 0;
@@ -770,7 +770,7 @@ async function buildReport() {
   const stockActionCandidates = watchlist.filter((row) => [STATUS.ENTRY_CANDIDATE, STATUS.ENTRY_READY].includes(row.status)).sort(compareFinalScore).slice(0, 5);
   const entryCandidates = stockActionCandidates;
   const cautionRows = stocks.filter((row) => [STATUS.EXIT, STATUS.BAN].includes(row.status));
-  const etfOverheat = validEtfs.filter((row) => ["?믪쓬", "以묎컙", "??쓬~以묎컙"].includes(row.overheatingRisk)).sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 5);
+  const etfOverheat = validEtfs.filter((row) => ["높음", "중간", "낮음~중간"].includes(row.overheatingRisk)).sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 5);
   const stockCautionRows = watchlist.filter((row) => [STATUS.WATCH, STATUS.BAN].includes(row.status) || row.stockVsEtfDecision !== "STOCK_PREFERRED").sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 5);
   const etfBanRows = validEtfs.filter((row) => row.status === STATUS.BAN || row.moneyFlowScore < 50).sort((a, b) => a.moneyFlowScore - b.moneyFlowScore).slice(0, 5);
   const overheat = etfOverheat;
@@ -905,8 +905,8 @@ function stockScanResult(row) {
     fiveDayReturn: row.market?.return5dPct ?? null,
     twentyDayReturn: row.market?.return20dPct ?? null,
     relativeVolume: row.market?.relativeVolume ?? null,
-    relatedEtfs: row.relatedEtfs?.map((etf) => etf.ticker) || row.relatedEtfSymbols || ["QQQ 湲곕낯 留ㅽ븨"],
-    scoreBandLabel: ok ? scoreBandLabel(row.moneyFlowScoreInitial) : "怨꾩궛 ?ㅽ뙣",
+    relatedEtfs: row.relatedEtfs?.map((etf) => etf.ticker) || row.relatedEtfSymbols || ["QQQ 기본 매핑"],
+    scoreBandLabel: ok ? scoreBandLabel(row.moneyFlowScoreInitial) : "계산 실패",
     scanStatus: ok ? "OK" : "FAILED",
     failureReason: ok ? "" : row.market?.error || "price/volume data missing or score calculation failed"
   };
@@ -925,10 +925,10 @@ function compareStockScanResults(a, b) {
 }
 
 function scoreBandLabel(score) {
-  if (score >= 80) return "媛뺥븳 ?먭툑 ?좎엯 ?꾨낫";
-  if (score >= 65) return "愿???꾨낫";
-  if (score >= 50) return "愿李??꾨낫";
-  return "?꾩닚??留ㅻℓ 湲덉?";
+  if (score >= 80) return "강한 자금 유입 후보";
+  if (score >= 65) return "관심 후보";
+  if (score >= 50) return "관찰 후보";
+  return "우선순위 낮음/매매 금지";
 }
 
 function loadPreviousRecommendationSnapshot() {
@@ -1116,12 +1116,12 @@ function chooseTopExecutionCandidate(etfCandidates, stockCandidates) {
   if (bestEtf && (!bestStock || compareFinalScore(bestEtf, bestStock) <= 0)) {
     return {
       ...bestEtf,
-      explanation: `${bestEtf.ticker}??ETF???뚮쭏 ?⑥쐞 ?먭툑 ?먮쫫??吏곸젒 癒밸뒗 ?꾨낫?닿퀬, ?꾩옱 ?먯닔媛 媛쒕퀎 醫낅ぉ ?꾨낫蹂대떎 ?곗꽑?쒕떎.`
+      explanation: `${bestEtf.ticker}는 ETF 단위 테마 자금 흐름을 직접 담는 후보이고, 현재 점수가 개별 종목 후보보다 우선한다.`
     };
   }
   return {
     ...bestStock,
-    explanation: `${bestStock.ticker}??愿??ETF ?鍮??곷?媛뺣룄 ?뺤씤???꾩슂??媛쒕퀎 醫낅ぉ ?꾨낫??議곌굔 異⑹” ??ETF蹂대떎 ?뚰뙆瑜?湲곕??????덈떎.`
+    explanation: `${bestStock.ticker}는 관련 ETF 대비 상대강도를 확인해야 하지만, 개별 종목 후보 조건 충족 시 ETF보다 탄력적인 돌파를 기대할 수 있다.`
   };
 }
 
@@ -1130,83 +1130,81 @@ function unique(values) {
 }
 
 function marketLine(item) {
-  if (!item || item.dataStatus !== "ok") return "?곗씠???곹깭: ?곗씠???놁쓬";
-  return `湲곗???${item.dataDate} | 醫낃? ${price(item.lastClose)} | 1??${pct(item.dailyChangePct)} | 5??${pct(item.return5dPct)} | 20??${pct(item.return20dPct)} | ?곷? 嫄곕옒??${num(item.relativeVolume, 2)}諛?| 52二?怨좎젏 ?鍮?${pct(item.drawdownFrom52wHighPct)} | ?곗씠???뚯뒪: ${item.dataSource}`;
+  if (!item || item.dataStatus !== "ok") return "데이터 상태: 데이터 없음";
+  return `기준일 ${item.dataDate} | 종가 ${price(item.lastClose)} | 1일 ${pct(item.dailyChangePct)} | 5일 ${pct(item.return5dPct)} | 20일 ${pct(item.return20dPct)} | 상대 거래량 ${num(item.relativeVolume, 2)}배 | 52주 고점 대비 ${pct(item.drawdownFrom52wHighPct)} | 데이터 소스: ${item.dataSource}`;
 }
 
 function renderMarkdown(report) {
   const etfBest = report.etfActionCandidates[0];
   const stockBest = report.stockActionCandidates[0];
-  return `# ?ㅻ뒛???곗씪由??몃젅?대뵫 ?붿빟
+  return `# 오늘의 데일리 트레이딩 요약
 
 **${report.dataWarning}**
 
-**紐⑹쟻:** ${PURPOSE}
+**목적:** ${PURPOSE}
 
-> ?듭떖 吏덈Ц: ?꾩옱 媛寃⑹뿉???닿퉴, ?꾧? ????鍮꾩떥寃??ъ쨪 ???덈뒗媛?
+> 핵심 질문: 현재 가격에서 누가 사고 있고, 누가 앞으로 더 비싸게 사줄 수 있는가?
 
-## 0. ?쒖옣 ?곹깭
+## 0. 시장 상태
 
-- ?곗씠??紐⑤뱶: ${report.dataMode}
-- 媛寃?嫄곕옒?? ${statusLabel(report.dataConnectionStatus.priceVolume)}
-- ?댁뒪: ${statusLabel(report.dataConnectionStatus.news)}
-- ?듭뀡: ${statusLabel(report.dataConnectionStatus.options)}
-- ETF 援ъ꽦醫낅ぉ ?뺤궛?? ${statusLabel(report.dataConnectionStatus.etfBreadth)}
-- ?ㅽ봽?덈뱶/?좊룞?? ${statusLabel(report.dataConnectionStatus.liquiditySpread)}
-- ?앹꽦 ?쒓컖: ${report.generatedAt}
-- ?쒖옣 ?곹깭: ${report.marketLabel}
-- ?ㅻ뒛 ?덉쓽 諛⑺뼢: ${moneyDirection(report)}
-- 媛뺥븳 ?뚮쭏 TOP 3: ${report.themes.slice(0, 3).map((row) => `${row.theme}(${row.avgScore.toFixed(0)})`).join(", ") || "?곗씠???놁쓬"}
-- ?ㅻ뒛???먯튃: ETF???뚮쭏 ?먭툑 ?먮쫫, 媛쒕퀎 醫낅ぉ? ETF蹂대떎 媛뺥븷 ?뚮쭔 ?뚰뙆 ?꾨낫濡?蹂몃떎.
-- ?곗씠???쒓퀎:
-  - API ???먮뒗 provider ?곹깭???곕씪 ?댁뒪/?듭뀡/?뺤궛???ㅽ봽?덈뱶 諛섏쁺 踰붿쐞媛 ?щ씪吏?  - ?섏쭛 ?ㅽ뙣 ?곗씠?곕뒗 ?먯닔 諛섏쁺?먯꽌 ?쒖쇅?섍굅??confidence瑜??쒗븳
-  - reasonConfidence HIGH??異붽? ?곗씠?곌? 異⑸텇???곌껐???꾨낫?먮쭔 ?ъ슜
+- 데이터 모드: ${report.dataMode}
+- 가격/거래량: ${statusLabel(report.dataConnectionStatus.priceVolume)}
+- 뉴스: ${statusLabel(report.dataConnectionStatus.news)}
+- 옵션: ${statusLabel(report.dataConnectionStatus.options)}
+- ETF 구성종목 확산도: ${statusLabel(report.dataConnectionStatus.etfBreadth)}
+- 스프레드/유동성: ${statusLabel(report.dataConnectionStatus.liquiditySpread)}
+- 생성 시각: ${report.generatedAt}
+- 시장 상태: ${report.marketLabel}
+- 오늘 돈의 방향: ${moneyDirection(report)}
+- 강한 테마 TOP 3: ${report.themes.slice(0, 3).map((row) => `${row.theme}(${row.avgScore.toFixed(0)})`).join(", ") || "데이터 없음"}
+- 오늘의 원칙: ETF는 테마 자금 흐름을 보고, 개별 종목은 관련 ETF보다 강할 때만 돌파 후보로 본다.
+- 데이터 한계:
+  - API 또는 provider 상태에 따라 뉴스/옵션/ETF 확산도/스프레드 반영 범위가 달라질 수 있다.
+  - 수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한한다.
+  - reasonConfidence HIGH는 추가 데이터가 충분히 연결된 후보에만 사용한다.
 
-## ?ㅻ뒛??遺꾨━ 寃곕줎
+## 오늘의 분리 결론
 
-- ETF ?됰룞 ?꾨낫: ${report.etfActionCandidates.map((row) => row.ticker).join(", ") || "?놁쓬"}
-- 媛쒕퀎 醫낅ぉ ?됰룞 ?꾨낫: ${report.stockActionCandidates.map((row) => row.ticker).join(", ") || "?놁쓬"}
-- Nasdaq-100 ?좉퇋 ?ㅼ틪 寃곌낵:
-  - 珥??ㅼ틪: ${report.stockScanSummary.total}
-  - 理쒖쥌 ?꾨낫: ${report.stockActionCandidates.length}
-  - ?쒖쇅: ${report.stockScanSummary.failed + report.stockScanSummary.ban}
-- ?꾩씪 異붿쿇 醫낅ぉ ?먭?:
-  - ?먭? ??? ${report.previousRecommendationReviews.length}
+- ETF 행동 후보: ${report.etfActionCandidates.map((row) => row.ticker).join(", ") || "없음"}
+- 개별 종목 행동 후보: ${report.stockActionCandidates.map((row) => row.ticker).join(", ") || "없음"}
+- Nasdaq-100 신규 스캔 결과:
+  - 총 스캔: ${report.stockScanSummary.total}
+  - 최종 후보: ${report.stockActionCandidates.length}
+  - 제외: ${report.stockScanSummary.failed + report.stockScanSummary.ban}
+- 전일 추천 종목 점검:
+  - 점검 대상: ${report.previousRecommendationReviews.length}
   - 유지: ${report.previousRecommendationReviews.filter((row) => row.todayStatus === "유지").length}
   - 하향: ${report.previousRecommendationReviews.filter((row) => row.todayStatus === "매매 금지로 하향" || row.todayStatus === "눌림 대기").length}
   - 무효화: ${report.previousRecommendationReviews.filter((row) => row.todayStatus === "무효화").length}
-- ETF ?곗꽑 ?뚮쭏: ${report.etfTop5.slice(0, 3).map((row) => row.categoryType).filter((value, index, arr) => arr.indexOf(value) === index).join(", ") || "?곗씠???놁쓬"}
-- 媛쒕퀎 醫낅ぉ ?곗꽑 ?뚮쭏: ${report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.primaryTheme).filter(Boolean).join(", ") || "愿??ETF ?鍮?異붽? ?뺤씤 ?꾩슂"}
-- ?ㅻ뒛 理쒖슦???ㅽ뻾 ?꾨낫: ${report.topExecutionCandidate ? `${report.topExecutionCandidate.ticker} - ${report.topExecutionCandidate.explanation}` : "議곌굔 異⑹” ?꾨낫 ?놁쓬"}
-- ?섏? 留먯븘????寃? 異붽꺽 留ㅼ닔 湲덉? / ETF? 媛쒕퀎 醫낅ぉ 以묐났 踰좏똿 湲덉? / ?ㅻ뒛 ???꾨낫? ?꾩씪 異붿쿇 ?먭? 醫낅ぉ??媛숈? ?섎?濡??욎뼱 ?댁꽍?섏? ?딄린
+- ETF 우선 테마: ${report.etfTop5.slice(0, 3).map((row) => row.categoryType).filter((value, index, arr) => arr.indexOf(value) === index).join(", ") || "데이터 없음"}
+- 개별 종목 우선 테마: ${report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.primaryTheme).filter(Boolean).join(", ") || "관련 ETF 대비 추가 확인 필요"}
+- 오늘 최우선 실행 후보: ${report.topExecutionCandidate ? `${report.topExecutionCandidate.ticker} - ${report.topExecutionCandidate.explanation}` : "조건 충족 후보 없음"}
+- 하지 말아야 할 것: 추격 매수 금지 / ETF와 개별 종목 중복 베팅 금지 / 오늘 신규 후보와 전일 추천 점검 종목을 같은 의미로 섞어 해석하지 않기
 
-## moneyFlowScore ?곗젙 諛⑹떇
+## moneyFlowScore 산정 방식
 
-### score???섎?
-moneyFlowScore???쒗쁽???대떦 ETF ?먮뒗 醫낅ぉ?쇰줈 ?덉씠 紐곕━怨??덈뒗 ?뺣룄?앸? 媛寃? 嫄곕옒?? 異붿꽭, ?좉퀬媛 洹쇱젒?? ETF ?鍮??곷?媛뺣룄 ?깆쓣 諛뷀깢?쇰줈 ?섏튂?뷀븳 ?먯닔??
+moneyFlowScore는 해당 ETF 또는 종목으로 돈이 몰리는 정도를 가격, 거래량, 추세, 신고가 근접도, 관련 ETF 대비 상대강도 등을 바탕으로 수치화한 점수다.
 
-???먯닔???κ린 媛移섑룊媛 ?먯닔媛 ?꾨땲??
-???먯닔???쒖?湲??쒖옣 李몄뿬?먮뱾????鍮꾩떥寃??ъ쨪 媛?μ꽦???덈뒗 ?몃젅?대뵫 ?꾨낫?멸???앸? ?먮떒?섍린 ?꾪븳 ?④린/以묎린 紐⑤찘? ?먯닔??
+이 점수는 장기 가치평가 점수가 아니다. 지금 시장 참여자들이 더 비싸게 사줄 가능성이 있는 트레이딩 후보를 찾기 위한 단기/중기 모멘텀 점수다.
 
-### 湲곕낯 ?곗젙 ?붿냼
-- 20???섏씡瑜? 理쒓렐 1媛쒖썡 ?섏???以묎린 異붿꽭瑜?諛섏쁺?쒕떎.
-- 5???섏씡瑜? 理쒓렐 1二쇱씪 ?섏????④린 ?먭툑 ?좎엯??諛섏쁺?쒕떎.
-- 1???섏씡瑜? 吏곸쟾 嫄곕옒?쇱쓽 ?④린 異붽꺽 留ㅼ닔?몃? 諛섏쁺?쒕떎.
-- ?곷? 嫄곕옒?? 媛寃??곸듅怨??④퍡 嫄곕옒?됱씠 ?섎㈃ ?ㅼ젣 ?먭툑 ?좎엯 媛?μ꽦???믨쾶 蹂몃떎.
-- 52二?怨좎젏 ?鍮??꾩튂: 怨좎젏 洹쇱쿂 ?먯궛? 異붿꽭 異붿쥌 ?먭툑 ?좎엯 媛?μ꽦???덈떎.
-- 異붿꽭 ?곹깭: 5?쇱꽑/20?쇱꽑/50?쇱꽑 ?꾩뿉 ?덈뒗吏 ?뺤씤?쒕떎.
-- ETF ?鍮??곷?媛뺣룄: 媛쒕퀎 醫낅ぉ?먮쭔 ?곸슜?섎ŉ, 愿??ETF蹂대떎 媛뺥븷 ??媛쒕퀎 醫낅ぉ ?곗꽑 媛?μ꽦???щ씪媛꾨떎.
-- ?곗씠???좊ː???⑤꼸?? ?댁뒪/?듭뀡/?ㅽ봽?덈뱶/ETF 援ъ꽦醫낅ぉ ?뺤궛???곗씠?곌? 誘몄뿰寃곗씠硫?HIGH confidence瑜??ъ슜?섏? ?딅뒗??
+### 기본 산정 요소
+- 20일 수익률: 최근 1개월 수준의 중기 추세를 반영한다.
+- 5일 수익률: 최근 1주일 수준의 단기 자금 유입을 반영한다.
+- 1일 수익률: 직전 거래일의 단기 추격 매수세를 반영한다.
+- 상대 거래량: 가격 상승과 함께 거래량이 늘면 실제 자금 유입 가능성을 높게 본다.
+- 52주 고점 대비 위치: 고점 근처 자산은 추세 추종 자금 유입 가능성이 있다.
+- 추세 상태: 5일선/20일선/50일선 위에 있는지 확인한다.
+- ETF 대비 상대강도: 개별 종목에만 적용하며, 관련 ETF보다 강할 때 개별 종목 우선 가능성이 올라간다.
+- 데이터 신뢰도: 뉴스/옵션/스프레드/ETF 구성종목 확산도 데이터가 미연결이면 HIGH confidence를 사용하지 않는다.
 
-### ?먯닔 援ш컙 ?댁꽍
-- 80???댁긽: 媛뺥븳 ?먭툑 ?좎엯 ?꾨낫. ?? 怨쇱뿴 ?щ? ?뺤씤 ?꾩닔.
-- 65???댁긽 80??誘몃쭔: 愿???꾨낫. ?뚮┝ ?먮뒗 ?뚰뙆 ?뺤씤 ??吏꾩엯 寃??
-- 50???댁긽 65??誘몃쭔: 愿李??꾨낫. ?먮쫫? ?덉쑝???곗꽑?쒖쐞????쓬.
-- 50??誘몃쭔: 留ㅻℓ 湲덉? ?먮뒗 ?꾩닚???꾨낫.
+### 점수 구간 해석
+- 80점 이상: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
+- 65점 이상 80점 미만: 관심 후보. 눌림 또는 돌파 확인 후 진입 검토.
+- 50점 이상 65점 미만: 관찰 후보. 자금 흐름은 있으나 우선순위는 낮음.
+- 50점 미만: 매매 금지 또는 우선순위 낮은 후보.
 
-### 二쇱쓽 臾멸뎄
-moneyFlowScore??留ㅼ닔 異붿쿇 ?먯닔媛 ?꾨땲??
-媛寃?嫄곕옒??湲곕컲???먭툑 ?먮쫫 ?꾨낫 ?먯닔?대ŉ, 吏꾩엯 ?щ???諛섎뱶??吏꾩엯 議곌굔怨?臾댄슚??議곌굔???④퍡 ?뺤씤?댁빞 ?쒕떎.
+### 주의 문구
+moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 자금 흐름 후보 점수이며, 진입 여부는 반드시 진입 조건과 무효화 조건을 함께 확인해야 한다.
 
 ### moneyFlowScore(1차/최종) 계산 구조
 - moneyFlowScore(1차) = 추세 + 단기 모멘텀 + 중기 모멘텀 + 거래량 + 신고가 근접 + 이동평균
@@ -1215,62 +1213,63 @@ moneyFlowScore??留ㅼ닔 異붿쿇 ?먯닔媛 ?꾨땲??
 - 리스크 패널티는 -6, -4처럼 음수로 저장하고 계산식에 그대로 더한다.
 - 최종 표시 점수가 100점으로 같아도 정렬에는 최종 원점수를 tie-breaker로 사용한다.
 
-## ?ㅻ뒛 ?덉씠 紐곕━???뚮쭏
+## 오늘 돈이 몰리는 테마
 
-${mdList(report.themes.slice(0, 6).map((row) => `**${row.theme}**: ${row.tickers.slice(0, 6).join(", ")} | ?됯퇏 moneyFlowScore ${row.avgScore.toFixed(0)}`))}
+${mdList(report.themes.slice(0, 6).map((row) => `**${row.theme}**: ${row.tickers.slice(0, 6).join(", ")} | 평균 moneyFlowScore ${row.avgScore.toFixed(0)}`))}
 
-## 1. ETF ?몃젅?대뵫 蹂닿퀬??
-### 1-1. ETF 寃곕줎
-- ETF ?곗꽑 ?꾨낫: ${report.etfActionCandidates.filter((row) => row.status === STATUS.ENTRY_READY).map((row) => row.ticker).join(", ") || "?놁쓬"}
-- ETF 愿李??꾨낫: ${report.etfs.filter((row) => row.status === STATUS.WATCH).slice(0, 5).map((row) => row.ticker).join(", ") || "?놁쓬"}
-- ETF 留ㅻℓ 湲덉?: ${report.etfBanRows.map((row) => row.ticker).join(", ") || "?놁쓬"}
-- ?ㅻ뒛 ETF 理쒖슦??1媛? ${etfBest ? `${etfBest.ticker} - ${etfBest.entryCondition}` : "?놁쓬"}
-- ETF ?뱀뀡 ?댁꽍: ???뱀뀡? 媛쒕퀎 醫낅ぉ ?좏깮???꾨땲???뚮쭏/?뱁꽣 ?⑥쐞???먭툑 ?먮쫫??ETF濡?留ㅻℓ?좎? ?먮떒?섍린 ?꾪븳 ?곸뿭?대떎.
+## 1. ETF 트레이딩 보고서
+### 1-1. ETF 결론
+- ETF 우선 후보: ${report.etfActionCandidates.filter((row) => row.status === STATUS.ENTRY_READY).map((row) => row.ticker).join(", ") || "없음"}
+- ETF 관찰 후보: ${report.etfs.filter((row) => row.status === STATUS.WATCH).slice(0, 5).map((row) => row.ticker).join(", ") || "없음"}
+- ETF 매매 금지: ${report.etfBanRows.map((row) => row.ticker).join(", ") || "없음"}
+- 오늘 ETF 최우선 1개: ${etfBest ? `${etfBest.ticker} - ${etfBest.entryCondition}` : "없음"}
+- ETF 섹션 해석: 이 섹션은 개별 종목 선택이 아니라 테마/섹터 단위 자금 흐름을 ETF로 매매할지 판단하기 위한 영역이다.
 
-### 1-2. ETF ?꾨낫 TOP 5
+### 1-2. ETF 후보 TOP 5
 
 선정 기준: ETF 후보는 가격/거래량 1차 점수에 뉴스, 옵션, ETF 구성종목 확산도, 유동성, 리스크 패널티를 반영한 moneyFlowScore(최종) 기준으로 정렬한다. 최종 표시 점수가 같으면 최종 원점수를 tie-breaker로 사용한다.
 
-${report.etfTop5.map(renderEtfMarkdown).join("\n\n") || "?곗씠???놁쓬"}
+${report.etfTop5.map(renderEtfMarkdown).join("\n\n") || "데이터 없음"}
 
-### 1-3. ETF 怨쇱뿴/二쇱쓽 ?꾨낫
+### 1-3. ETF 과열/주의 후보
 
 ${report.etfOverheat.slice(0, 5).map((row) => `#### [${row.ticker}] ${row.name}
 - moneyFlowScore(최종): ${row.moneyFlowScoreFinal ?? row.moneyFlowScore}
-- moneyFlowScore ?곗젙 洹쇨굅 ?붿빟: ${scoreOneLine(row)}
-- 怨쇱뿴 由ъ뒪?? ${row.overheatingRisk}
-- 怨쇱뿴 洹쇨굅: ${row.overheatingReason}
+- moneyFlowScore 산정 근거 요약: ${scoreOneLine(row)}
+- 과열 리스크: ${row.overheatingRisk}
+- 과열 근거: ${row.overheatingReason}
 - 대응: ${row.overheatingRisk === "높음" ? "추격 금지" : row.overheatingRisk === "중간" ? "눌림 대기" : "돌파 확인 후 진입"}
-`).join("\n") || "?대떦 ?놁쓬"}
+`).join("\n") || "해당 없음"}
 
-### 1-4. ETF ?쒖쇅/留ㅻℓ 湲덉? ?꾨낫
+### 1-4. ETF 제외/매매 금지 후보
 
 ${report.etfBanRows.map((row) => `#### [${row.ticker}] ${row.name}
 - moneyFlowScore(최종): ${row.moneyFlowScoreFinal ?? row.moneyFlowScore}
-- moneyFlowScore ?곗젙 洹쇨굅 ?붿빟: ${scoreOneLine(row)}
+- moneyFlowScore 산정 근거 요약: ${scoreOneLine(row)}
 - 제외 사유: ${row.moneyFlowScore < 50 ? "테마 자금 흐름 약함" : "매매 조건 미충족"}
-- ?ш???議곌굔: ${row.entryCondition}
-`).join("\n") || "?대떦 ?놁쓬"}
+- 해제 조건: ${row.entryCondition}
+`).join("\n") || "해당 없음"}
 
-## 2. 媛쒕퀎 醫낅ぉ ?몃젅?대뵫 蹂닿퀬??
-### 2-1. ?ㅻ뒛 Nasdaq-100 ?좉퇋 諛쒓뎬 ?붿빟
-- ?좉퇋 諛쒓뎬 ?: Nasdaq-100 援ъ꽦醫낅ぉ ?꾩껜
+## 2. 개별 종목 트레이딩 보고서
+### 2-1. 오늘 Nasdaq-100 신규 발굴 요약
+- 신규 발굴 풀: Nasdaq-100 구성종목 전체
 - universe source: ${report.stockUniverse.source}
 - universe fetchStatus: ${report.stockUniverse.fetchStatus}
-- 珥??ㅼ틪 醫낅ぉ ?? ${report.stockScanSummary.total}
-- ?곗씠???섏쭛 ?깃났: ${report.stockScanSummary.success}
-- ?곗씠???섏쭛 ?ㅽ뙣: ${report.stockScanSummary.failed}
-- ?곸꽭 ?곗씠???섏쭛 ??? 媛寃?嫄곕옒??1李??ㅼ틪 ?곸쐞 ${report.stockScanSummary.detailedCount}媛?- ?ㅻ뒛 吏꾩엯 ?꾨낫: ${report.stockScanSummary.entry}
-- ?ㅻ뒛 ?뚮┝ ?湲? ${report.stockScanSummary.pullback}
-- ?ㅻ뒛 愿李? ${report.stockScanSummary.watch}
-- ?ㅻ뒛 留ㅻℓ 湲덉?: ${report.stockScanSummary.ban}
-- 媛쒕퀎 醫낅ぉ 吏꾩엯 ?꾨낫: ${report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.ticker).join(", ") || "?놁쓬"}
-- 媛쒕퀎 醫낅ぉ ?뚮┝ ?湲? ${report.stockActionCandidates.filter((row) => row.stockVsEtfDecision !== "STOCK_PREFERRED").map((row) => row.ticker).join(", ") || "?놁쓬"}
-- 媛쒕퀎 醫낅ぉ 留ㅻℓ 湲덉?: ${report.stockCautionRows.filter((row) => row.status === STATUS.BAN).map((row) => row.ticker).join(", ") || "?놁쓬"}
-- ?ㅻ뒛 媛쒕퀎 醫낅ぉ 理쒖슦??1媛? ${stockBest ? `${stockBest.ticker} - ${stockBest.relativeStrengthVsEtf}` : "?놁쓬"}
-- 媛쒕퀎 醫낅ぉ ?뱀뀡 ?댁꽍: ???뱀뀡? ETF濡??뺤씤???뚮쭏 ?먭툑 ?먮쫫 ?덉뿉??ETF蹂대떎 ???섏? ?뚰뙆瑜?以????덈뒗 媛쒕퀎 醫낅ぉ留??좊퀎?섎뒗 ?곸뿭?대떎.
+- 총 스캔 종목 수: ${report.stockScanSummary.total}
+- 데이터 수집 성공: ${report.stockScanSummary.success}
+- 데이터 수집 실패: ${report.stockScanSummary.failed}
+- 상세 데이터 수집 대상: 가격/거래량 1차 스캔 상위 ${report.stockScanSummary.detailedCount}개
+- 오늘 진입 후보: ${report.stockScanSummary.entry}
+- 오늘 눌림 대기: ${report.stockScanSummary.pullback}
+- 오늘 관찰: ${report.stockScanSummary.watch}
+- 오늘 매매 금지: ${report.stockScanSummary.ban}
+- 개별 종목 진입 후보: ${report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.ticker).join(", ") || "없음"}
+- 개별 종목 눌림 대기: ${report.stockActionCandidates.filter((row) => row.stockVsEtfDecision !== "STOCK_PREFERRED").map((row) => row.ticker).join(", ") || "없음"}
+- 개별 종목 매매 금지: ${report.stockCautionRows.filter((row) => row.status === STATUS.BAN).map((row) => row.ticker).join(", ") || "없음"}
+- 오늘 개별 종목 최우선 1개: ${stockBest ? `${stockBest.ticker} - ${stockBest.relativeStrengthVsEtf}` : "없음"}
+- 개별 종목 섹션 해석: 이 섹션은 ETF로 확인된 테마 자금 흐름 안에서 ETF보다 더 강한 돌파 가능성이 있는 개별 종목만 선별하는 영역이다.
 
-### 2-2. ?ㅻ뒛 媛쒕퀎 醫낅ぉ ?좉퇋 ?꾨낫 TOP 5
+### 2-2. 오늘 개별 종목 신규 후보 TOP 5
 
 선정 기준:
 1. Nasdaq-100 전체를 moneyFlowScore(1차)로 먼저 스캔
@@ -1278,53 +1277,54 @@ ${report.etfBanRows.map((row) => `#### [${row.ticker}] ${row.name}
 3. 뉴스/옵션/유동성/관련 ETF 대비 상대강도/리스크 패널티를 반영
 4. moneyFlowScore(최종), 최종 원점수, 리스크 패널티, 5일 수익률, 상대 거래량 순으로 재정렬
 
-${report.stockTop5.map(renderStockMarkdown).join("\n\n") || "?곗씠???놁쓬"}
+${report.stockTop5.map(renderStockMarkdown).join("\n\n") || "데이터 없음"}
 
-### 2-3. ?꾩씪 異붿쿇 醫낅ぉ ?먭?
-???뱀뀡? ?ㅼ젣 怨꾩쥖 蹂댁쑀 醫낅ぉ???꾨땲???꾩씪 由ы룷?몄뿉???쒖떆??媛쒕퀎 醫낅ぉ ?꾨낫???ы썑 ?먭??대떎.
-?ㅼ젣 蹂댁쑀 ?섎웾/?됰떒???낅젰?섏? ?딆븯?쇰?濡?怨꾩쥖 ?섏씡瑜좎씠 ?꾨땲??異붿쿇 湲곗????댄썑 媛寃?蹂?붾? 異붿쟻?쒕떎.
+### 2-3. 전일 추천 종목 점검
+이 섹션은 실제 계좌 보유 종목이 아니라 전일 리포트에서 제시된 개별 종목 후보의 사후 점검이다.
+실제 보유 수량/평단이 입력되지 않았으므로 계좌 수익률이 아니라 추천 기준일 이후 가격 변화를 추적한다.
 
-${report.previousRecommendationReviews.length ? report.previousRecommendationReviews.map(renderPreviousReviewMarkdown).join("\n\n") : "?꾩씪 異붿쿇 醫낅ぉ ?곗씠???놁쓬"}
+${report.previousRecommendationReviews.length ? report.previousRecommendationReviews.map(renderPreviousReviewMarkdown).join("\n\n") : "전일 추천 종목 데이터 없음"}
 
-### 2-4. ETF ?鍮?媛쒕퀎 醫낅ぉ ?먮떒 濡쒖쭅
+### 2-4. ETF 대비 개별 종목 판단 로직
 
-- 愿??ETF??5??20???섏씡瑜좉낵 媛쒕퀎 醫낅ぉ??5??20???섏씡瑜좎쓣 鍮꾧탳?쒕떎.
-- 愿??ETF???곷? 嫄곕옒?됯낵 媛쒕퀎 醫낅ぉ???곷? 嫄곕옒?됱쓣 鍮꾧탳?쒕떎.
-- 媛쒕퀎 醫낅ぉ??愿??ETF蹂대떎 媛뺥븯硫??쒓컻蹂?醫낅ぉ ?곗꽑??媛?μ쑝濡?蹂몃떎.
-- 媛쒕퀎 醫낅ぉ??愿??ETF? 鍮꾩듂?섍굅???쏀븯硫??쏣TF ?곗꽑 / 媛쒕퀎 醫낅ぉ 愿李겸앸줈 ??텣??
-- 愿??ETF媛 ??媛뺥븯硫?媛쒕퀎 醫낅ぉ ???ETF瑜??곗꽑?쒕떎.
+- 관련 ETF의 5일/20일 수익률과 개별 종목의 5일/20일 수익률을 비교한다.
+- 관련 ETF의 상대 거래량과 개별 종목의 상대 거래량을 비교한다.
+- 개별 종목이 관련 ETF보다 강하면 개별 종목 우선 가능성으로 본다.
+- 개별 종목이 관련 ETF와 비슷하거나 약하면 ETF 우선 / 개별 종목 관찰로 낮춘다.
+- 관련 ETF가 더 강하면 개별 종목 대신 ETF를 우선한다.
 
-### 2-5. 媛쒕퀎 醫낅ぉ ?쒖쇅/二쇱쓽 ?꾨낫
+### 2-5. 개별 종목 제외/주의 후보
 
 ${report.stockCautionRows.map((row) => `#### [${row.ticker}] ${row.name}
 - moneyFlowScore(최종): ${row.moneyFlowScoreFinal ?? row.moneyFlowScore}
-- moneyFlowScore ?곗젙 洹쇨굅 ?붿빟: ${scoreOneLine(row)}
+- moneyFlowScore 산정 근거 요약: ${scoreOneLine(row)}
 - 제외/주의 사유: ${row.stockVsEtfDecision === "ETF_PREFERRED" ? "ETF 대비 약세" : row.status === STATUS.BAN ? "매매 조건 미충족" : "개별 종목 우선 근거 부족"}
-- ?ш???議곌굔: ${row.entryCondition}
-`).join("\n") || "?대떦 ?놁쓬"}
+- 해제 조건: ${row.entryCondition}
+`).join("\n") || "해당 없음"}
 
 ### Nasdaq-100 전체 moneyFlowScore(1차) 표
 ${renderStockUniverseScoreMarkdown(report.stockUniverseScan)}
 
-## 媛먯떆 ETF 紐⑸줉
+## 감시 ETF 목록
 
-| ?곗빱 | 移댄뀒怨좊━ | moneyFlowScore | ?곹깭 | reasonConfidence | ??以??댁쑀 |
+| 티커 | 카테고리 | moneyFlowScore | 상태 | reasonConfidence | 주요 이유 |
 | --- | --- | ---: | --- | --- | --- |
 ${report.etfs.map((row) => `| ${row.ticker} | ${row.categoryType} | ${row.moneyFlowScore} | ${row.status} | ${row.reasonConfidence} | ${row.whyMoneyIsFlowing} |`).join("\n")}
 
-## 3. 理쒖쥌 ?ㅽ뻾 ?먮떒
+## 3. 최종 실행 판단
 
-### 3-1. ?ㅻ뒛 ?ㅼ젣濡?????1. ETF?먯꽌 ???? ${etfBest ? `${etfBest.ticker} ?ы븿 ETF ?꾨낫???꾩씪 怨좎젏 ?뚰뙆? 5?쇱꽑 ?좎?瑜??뺤씤?쒕떎.` : "ETF ?꾨낫??愿李고븳??"}
-2. 媛쒕퀎 醫낅ぉ?먯꽌 ???? ${stockBest ? `${stockBest.ticker} ?깆? 愿??ETF ?鍮??곷?媛뺣룄媛 ?좎??섎뒗吏 ?뺤씤?????뚮┝ ?먮뒗 ?뚰뙆 議곌굔?먯꽌留?寃?좏븳??` : "媛쒕퀎 醫낅ぉ? 愿??ETF ?鍮??곷?媛뺣룄 ?뺤씤 ?꾧퉴吏 愿李고븳??"}
-3. ?섏? 留먯븘?????? ETF? 媛쒕퀎 醫낅ぉ??媛숈? ?뚮쭏 ?덉뿉??以묐났 留ㅼ닔?섏? ?딅뒗??
+### 3-1. 오늘 실제로 할 일
+1. ETF에서 할 일: ${etfBest ? `${etfBest.ticker} 포함 ETF 후보의 전일 고점 돌파와 5일선 유지를 확인한다.` : "ETF 후보는 관찰한다."}
+2. 개별 종목에서 할 일: ${stockBest ? `${stockBest.ticker} 등은 관련 ETF 대비 상대강도가 유지되는지 확인하고 눌림 또는 돌파 조건에서만 검토한다.` : "개별 종목은 관련 ETF 대비 상대강도 확인 전까지 관찰한다."}
+3. 하지 말아야 할 일: ETF와 개별 종목을 같은 테마 안에서 중복 매수하지 않는다.
 
-### 3-2. ?댁씪 ?뺤씤??議곌굔
-- ETF ?뺤씤 議곌굔: ETF ?꾨낫 TOP 5媛 20?쇱꽑 ?꾩뿉???좎??섎뒗吏 ?뺤씤
-- 媛쒕퀎 醫낅ぉ ?뺤씤 議곌굔: 愿??ETF ?鍮?5??20???곷?媛뺣룄? ?곷? 嫄곕옒???좎? ?뺤씤
-- ?쒖옣 ?곹깭 ?뺤씤 議곌굔: QQQ/SPY??5??20??異붿꽭? ?꾪뿕?좏샇 ?좎? ?щ? ?뺤씤
-- ?곗씠??蹂닿컯 ?꾩슂 ??ぉ: ?댁뒪, ?듭뀡, ?ㅽ봽?덈뱶, ETF 援ъ꽦醫낅ぉ ?뺤궛?? ?ㅼ젣 蹂댁쑀 吏꾩엯媛
+### 3-2. 내일 확인할 조건
+- ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인
+- 개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인
+- 시장 상태 확인 조건: QQQ/SPY의 5일/20일 추세와 위험선호 유지 여부 확인
+- 데이터 보강 필요 항목: 뉴스, 옵션, 스프레드, ETF 구성종목 확산도, 실제 보유 진입가
 
-## ?곗씠???섏쭛 ?곹깭
+## 데이터 수집 상태
 
 ${renderDataCollectionMarkdown(report)}
 `;
@@ -1332,16 +1332,16 @@ ${renderDataCollectionMarkdown(report)}
 
 function renderActionMarkdown(row) {
   return `### ${row.rank}. [${row.ticker}] ${row.name || row.ticker}
-- ?먯궛 ?좏삎: ${row.assetType}
-- ?꾩옱 ?덉씠 紐곕┛?ㅺ퀬 蹂대뒗 ?댁쑀: ${row.whyMoneyIsFlowing}
-- ?꾧? ??鍮꾩떥寃??ъ쨪 ???덈뒗吏: ${row.likelyNextBuyer}
-- 吏꾩엯 議곌굔: ${row.entryCondition}
-- 臾댄슚??議곌굔: ${row.invalidationCondition}
+- 자산 유형: ${row.assetType}
+- 현재 돈이 몰린다고 보는 이유: ${row.whyMoneyIsFlowing}
+- 누가 더 비싸게 사줄 수 있는지: ${row.likelyNextBuyer}
+- 진입 조건: ${row.entryCondition}
+- 무효화 조건: ${row.invalidationCondition}
 - reasonConfidence: ${row.reasonConfidence}
 - todayActionLabel: ${row.todayActionLabel}
 - moneyFlowScore: ${row.moneyFlowScore}
-- 怨쇱뿴 由ъ뒪?? ${row.overheatingRisk}
-- 李⑦듃: ![${row.ticker} chart](${row.chartPath})`;
+- 과열 리스크: ${row.overheatingRisk}
+- 차트: ![${row.ticker} chart](${row.chartPath})`;
 }
 
 function moneyDirection(report) {
@@ -1372,7 +1372,7 @@ function scoreOneLine(row) {
 
 function scoreBreakdownMarkdown(row) {
   const b = row.moneyFlowScoreBreakdown;
-  if (!b) return "moneyFlowScore ?곗젙 洹쇨굅: ?곗씠???놁쓬";
+  if (!b) return "moneyFlowScore 산정 근거: 데이터 없음";
   const relativeLine = row.assetType === "STOCK" ? `\n  - ETF 대비 상대강도: ${signed(b.relativeStrengthScore ?? 0)}` : "";
   const breadthLine = row.assetType === "ETF" ? `\n  - ETF 확산도: ${signed(b.etfBreadthScore ?? 0)}` : "";
   return `moneyFlowScore(최종) 산정 근거:
@@ -1429,60 +1429,60 @@ function dataUsageMarkdown(row) {
 }
 
 function newsMarkdown(summary) {
-  if (!summary) return "  - 理쒓렐 ?댁뒪 ?곹깭: ?곗씠???놁쓬";
+  if (!summary) return "  - 최근 뉴스 상태: 데이터 없음";
   const counts = summary.sentimentCounts || {};
-  return `  - 理쒓렐 ?댁뒪 ?곹깭: ${statusLabel(summary.status)}
-  - 湲띿젙/以묐┰/遺?? ${counts.positive || 0}/${counts.neutral || 0}/${counts.negative || 0}
-  - ?듭떖 ?댁뒪 ?붿빟: ${summary.headlineSummary || "?섎? ?덈뒗 ?좉퇋 ?댁뒪 ?놁쓬"}
-  - ?먯닔 諛섏쁺: ${signed(summary.newsScore || 0)}
-  - 二쇱쓽: ${(summary.notes || []).join("; ") || "?뱀씠?ы빆 ?놁쓬"}`;
+  return `  - 최근 뉴스 상태: ${statusLabel(summary.status)}
+  - 긍정/중립/부정: ${counts.positive || 0}/${counts.neutral || 0}/${counts.negative || 0}
+  - 핵심 뉴스 요약: ${summary.headlineSummary || "의미 있는 신규 뉴스 없음"}
+  - 점수 반영: ${signed(summary.newsScore || 0)}
+  - 주의: ${(summary.notes || []).join("; ") || "특이사항 없음"}`;
 }
 
 function optionsMarkdown(summary) {
-  if (!summary) return "  - ?듭뀡 ?곗씠???곹깭: ?곗씠???놁쓬";
-  const iv = summary.impliedVolatilityAvg ? `${(summary.impliedVolatilityAvg * 100).toFixed(1)}%` : "?곗씠???놁쓬";
+  if (!summary) return "  - 옵션 데이터 상태: 데이터 없음";
+  const iv = summary.impliedVolatilityAvg ? `${(summary.impliedVolatilityAvg * 100).toFixed(1)}%` : "데이터 없음";
   const interpretation = summary.bullishOptionsSignal
-    ? "肄쒖샃???곗쐞濡??④린 ?ш린??留ㅼ닔??媛?μ꽦"
+    ? "콜옵션 우위로 단기 기대 매수세 가능성"
     : summary.bearishOptionsSignal
-      ? "?뗭샃???곗쐞濡?諛⑹뼱???섍툒 ?먮뒗 ?섎갑 ?ㅼ? 二쇱쓽"
-      : "?쒕졆???듭뀡 諛⑺뼢???놁쓬";
-  return `  - ?듭뀡 ?곗씠???곹깭: ${statusLabel(summary.status)}
-  - Put/Call 嫄곕옒??鍮꾩쑉: ${summary.putCallVolumeRatio ?? "?곗씠???놁쓬"}
-  - 肄?嫄곕옒?? ${summary.callVolume ?? "?곗씠???놁쓬"}
-  - ??嫄곕옒?? ${summary.putVolume ?? "?곗씠???놁쓬"}
-  - IV ?곹깭: ${iv}
-  - ?댁꽍: ${interpretation}
-  - ?먯닔 諛섏쁺: ${signed(summary.optionsScore || 0)}`;
+      ? "풋옵션 우위로 방어 수급 또는 하방 리스크 주의"
+      : "뚜렷한 옵션 방향성 없음";
+  return `  - 옵션 데이터 상태: ${statusLabel(summary.status)}
+  - Put/Call 거래량 비율: ${summary.putCallVolumeRatio ?? "데이터 없음"}
+  - 콜 거래량: ${summary.callVolume ?? "데이터 없음"}
+  - 풋 거래량: ${summary.putVolume ?? "데이터 없음"}
+  - IV 상태: ${iv}
+  - 해석: ${interpretation}
+  - 점수 반영: ${signed(summary.optionsScore || 0)}`;
 }
 
 function etfBreadthMarkdown(summary) {
-  if (!summary) return "  - 援ъ꽦醫낅ぉ ?곗씠???곹깭: ?곗씠???놁쓬";
-  return `  - 援ъ꽦醫낅ぉ ?곗씠???곹깭: ${statusLabel(summary.status)}
-  - ?섑뵆 ?? ${summary.sampledHoldingsCount || 0}/${summary.holdingsCount || 0}
-  - ?곸듅 醫낅ぉ 鍮꾩쑉: ${summary.advancersRatio !== undefined ? `${Math.round(summary.advancersRatio * 100)}%` : "?곗씠???놁쓬"}
-  - 20?쇱꽑 ??鍮꾩쑉: ${summary.holdingsAbove20DMA !== undefined ? `${Math.round(summary.holdingsAbove20DMA * 100)}%` : "?곗씠???놁쓬"}
-  - 50?쇱꽑 ??鍮꾩쑉: ${summary.holdingsAbove50DMA !== undefined ? `${Math.round(summary.holdingsAbove50DMA * 100)}%` : "?곗씠???놁쓬"}
-  - ?곸쐞 湲곗뿬 醫낅ぉ: ${(summary.topContributors || []).join(", ") || "?곗씠???놁쓬"}
-  - ?뺤궛???먮떒: ${summary.breadthSignal || "UNKNOWN"}
-  - ?먯닔 諛섏쁺: ${signed(summary.etfBreadthScore || 0)}`;
+  if (!summary) return "  - 구성종목 데이터 상태: 데이터 없음";
+  return `  - 구성종목 데이터 상태: ${statusLabel(summary.status)}
+  - 샘플 수: ${summary.sampledHoldingsCount || 0}/${summary.holdingsCount || 0}
+  - 상승 종목 비율: ${summary.advancersRatio !== undefined ? `${Math.round(summary.advancersRatio * 100)}%` : "데이터 없음"}
+  - 20일선 위 비율: ${summary.holdingsAbove20DMA !== undefined ? `${Math.round(summary.holdingsAbove20DMA * 100)}%` : "데이터 없음"}
+  - 50일선 위 비율: ${summary.holdingsAbove50DMA !== undefined ? `${Math.round(summary.holdingsAbove50DMA * 100)}%` : "데이터 없음"}
+  - 상위 기여 종목: ${(summary.topContributors || []).join(", ") || "데이터 없음"}
+  - 확산도 판단: ${summary.breadthSignal || "UNKNOWN"}
+  - 점수 반영: ${signed(summary.etfBreadthScore || 0)}`;
 }
 
 function liquidityMarkdown(summary) {
-  if (!summary) return "  - ?곗씠???곹깭: ?곗씠???놁쓬";
-  return `  - ?곗씠???곹깭: ${statusLabel(summary.status)}
-  - ?ㅽ봽?덈뱶: ${summary.spreadPct !== null && summary.spreadPct !== undefined ? pct(summary.spreadPct) : "bid/ask ?곗씠???놁쓬"}
-  - 嫄곕옒?湲? ${summary.dollarVolume ? `$${summary.dollarVolume.toLocaleString("en-US")}` : "?곗씠???놁쓬"}
-  - ?됯퇏 嫄곕옒?湲? ${summary.avgDollarVolume20D ? `$${summary.avgDollarVolume20D.toLocaleString("en-US")}` : "?곗씠???놁쓬"}
-  - ?좊룞???먮떒: ${summary.liquiditySignal || "UNKNOWN"}
-  - 留ㅻℓ ?곹뼢: ${liquidityImpact(summary)}`;
+  if (!summary) return "  - 데이터 상태: 데이터 없음";
+  return `  - 데이터 상태: ${statusLabel(summary.status)}
+  - 스프레드: ${summary.spreadPct !== null && summary.spreadPct !== undefined ? pct(summary.spreadPct) : "bid/ask 데이터 없음"}
+  - 거래대금: ${summary.dollarVolume ? `$${summary.dollarVolume.toLocaleString("en-US")}` : "데이터 없음"}
+  - 평균 거래대금: ${summary.avgDollarVolume20D ? `$${summary.avgDollarVolume20D.toLocaleString("en-US")}` : "데이터 없음"}
+  - 유동성 판단: ${summary.liquiditySignal || "UNKNOWN"}
+  - 매매 영향: ${liquidityImpact(summary)}`;
 }
 
 function liquidityImpact(summary) {
-  if (!summary) return "?곗씠???놁쓬";
-  if (summary.liquiditySignal === "LIQUID") return "嫄곕옒?湲?湲곗? ?ㅼ젣 留ㅻℓ 媛?μ꽦????臾몄젣????쓬";
-  if (summary.liquiditySignal === "ACCEPTABLE") return "嫄곕옒?湲덉? ?섏슜 媛?ν븯??bid/ask ?뺤씤 ?꾩슂";
-  if (summary.liquiditySignal === "LOW_LIQUIDITY") return "?좊룞??遺議깆쑝濡?異붽꺽 湲덉? ?먮뒗 ?곗꽑?쒖쐞 ?섑뼢";
-  return "?ㅽ봽?덈뱶 ?곗씠?곌? ?놁뼱 嫄곕옒?湲?湲곕컲?쇰줈留??먮떒";
+  if (!summary) return "데이터 없음";
+  if (summary.liquiditySignal === "LIQUID") return "거래대금 기준 실제 매매 가능성에 큰 문제 없음";
+  if (summary.liquiditySignal === "ACCEPTABLE") return "거래대금은 허용 가능하나 bid/ask 확인 필요";
+  if (summary.liquiditySignal === "LOW_LIQUIDITY") return "유동성 부족으로 추격 금지 또는 우선순위 하향";
+  return "스프레드 데이터가 없어 거래대금 기준으로만 판단";
 }
 
 function confidenceReason(row) {
@@ -1507,48 +1507,48 @@ function renderDataCollectionMarkdown(report) {
   const breadthCount = rows.filter((row) => row.etfBreadth?.sampledHoldingsCount > 0).length;
   const quoteCount = rows.filter((row) => row.liquidity?.hasQuoteData).length;
   const liquidityFallback = rows.filter((row) => row.liquidity?.status === "PARTIAL").length;
-  return `- 媛寃?嫄곕옒??
-  - ?곹깭: ${statusLabel(report.dataConnectionStatus.priceVolume)}
-  - ?뚯뒪: yfinance
-  - 鍮꾧퀬: 湲곗〈 REAL_TEST 媛寃?嫄곕옒??諛?李⑦듃 ?앹꽦 ?좎?
+  return `- 가격/거래량:
+  - 상태: ${statusLabel(report.dataConnectionStatus.priceVolume)}
+  - 소스: yfinance
+  - 비고: REAL_TEST 가격/거래량 및 차트 생성 사용
 
-- ?댁뒪:
-  - ?곹깭: ${statusLabel(report.dataConnectionStatus.news)}
-  - ?뚯뒪: Yahoo Finance RSS fallback
-  - ?섏쭛???댁뒪 ?? ${newsCount}
-  - ?ㅽ뙣/?쒗븳 ?ъ쑀: ${providerNotes(rows, "news")}
+- 뉴스:
+  - 상태: ${statusLabel(report.dataConnectionStatus.news)}
+  - 소스: Yahoo Finance RSS fallback
+  - 수집 뉴스 수: ${newsCount}
+  - 실패/제한 사유: ${providerNotes(rows, "news")}
 
-- ?듭뀡:
-  - ?곹깭: ${statusLabel(report.dataConnectionStatus.options)}
-  - ?뚯뒪: Yahoo Finance options endpoint
-  - ?섏쭛 媛???곗빱 ?? ${optionsCount}
-  - ?ㅽ뙣/?쒗븳 ?ъ쑀: ${providerNotes(rows, "options")}
+- 옵션:
+  - 상태: ${statusLabel(report.dataConnectionStatus.options)}
+  - 소스: Yahoo Finance options endpoint
+  - 수집 가능 티커 수: ${optionsCount}
+  - 실패/제한 사유: ${providerNotes(rows, "options")}
 
-- ETF 援ъ꽦醫낅ぉ ?뺤궛??
-  - ?곹깭: ${statusLabel(report.dataConnectionStatus.etfBreadth)}
-  - ?뚯뒪: config/etfHoldingsFallback.json ?섑뵆
-  - ?섏쭛 媛??ETF ?? ${breadthCount}
-  - fallback ?ъ슜 ?щ?: ?ъ슜
+- ETF 구성종목 확산도:
+  - 상태: ${statusLabel(report.dataConnectionStatus.etfBreadth)}
+  - 소스: config/etfHoldingsFallback.json 샘플
+  - 수집 가능 ETF 수: ${breadthCount}
+  - fallback 사용 여부: 사용
 
-- Nasdaq-100 援ъ꽦醫낅ぉ:
-  - ?곹깭: ${report.stockUniverse.fetchStatus}
-  - ?뚯뒪: ${report.stockUniverse.source}
-  - 珥?援ъ꽦醫낅ぉ ?? ${report.stockUniverse.members.length}
-  - 鍮꾧퀬: ${(report.stockUniverse.notes || []).join("; ") || "?뱀씠?ы빆 ?놁쓬"}
+- Nasdaq-100 구성종목:
+  - 상태: ${report.stockUniverse.fetchStatus}
+  - 소스: ${report.stockUniverse.source}
+  - 총 구성종목 수: ${report.stockUniverse.members.length}
+  - 비고: ${(report.stockUniverse.notes || []).join("; ") || "특이사항 없음"}
 
-- ?꾩씪 異붿쿇 snapshot:
+- 전일 추천 snapshot:
   - 상태: ${report.previousSnapshot ? "연결됨" : "데이터 없음"}
-  - ?먭? ??? ${report.previousRecommendationReviews.length}
-  - ????꾩튂: data/latest-report.json, data/previous-report.json, data/dailyReports/
+  - 점검 대상: ${report.previousRecommendationReviews.length}
+  - 저장 위치: data/latest-report.json, data/previous-report.json, data/dailyReports/
 
-- ?좊룞???ㅽ봽?덈뱶:
-  - ?곹깭: ${statusLabel(report.dataConnectionStatus.liquiditySpread)}
-  - ?뚯뒪: 媛寃?嫄곕옒??湲곕컲 嫄곕옒?湲?fallback
+- 유동성/스프레드:
+  - 상태: ${statusLabel(report.dataConnectionStatus.liquiditySpread)}
+  - 소스: 가격/거래량 기반 거래대금 fallback
   - bid/ask 사용 여부: ${quoteCount > 0 ? "일부 사용" : "미사용"}
   - 거래대금 fallback 사용 여부: ${liquidityFallback > 0 ? "사용" : "미사용"}
 
-- ?꾩껜 鍮꾧퀬:
-${mdList((report.dataConnectionStatus.notes || []).map((note) => note), "- ?뱀씠?ы빆 ?놁쓬")}`;
+- 전체 비고:
+${mdList((report.dataConnectionStatus.notes || []).map((note) => note), "- 특이사항 없음")}`;
 }
 
 function renderDataCollectionHtml(report) {
@@ -1557,7 +1557,7 @@ function renderDataCollectionHtml(report) {
 
 function providerNotes(rows, key) {
   const notes = rows.flatMap((row) => row[key]?.notes || []).filter(Boolean);
-  return unique(notes).slice(0, 3).join("; ") || "?뱀씠?ы빆 ?놁쓬";
+  return unique(notes).slice(0, 3).join("; ") || "특이사항 없음";
 }
 
 function signed(value) {
@@ -1567,115 +1567,117 @@ function signed(value) {
 
 function renderEtfMarkdown(row) {
   return `### [ETF ${row.ticker}] ${row.name}
-- ?먯궛 ?좏삎: ETF
-- ETF ?몃? 移댄뀒怨좊━: ${row.etfCategory}
-- ETF ??븷: ${row.etfRole}
-- ?곹깭: ${row.status}
+- 자산 유형: ETF
+- ETF 세부 카테고리: ${row.etfCategory}
+- ETF 역할: ${row.etfRole}
+- 상태: ${row.status}
 - moneyFlowScore: ${row.moneyFlowScore}
 - ${scoreBreakdownMarkdown(row)}
-- 怨쇱뿴 由ъ뒪?? ${row.overheatingRisk}
+- 과열 리스크: ${row.overheatingRisk}
 - reasonConfidence: ${row.reasonConfidence}
 - todayActionLabel: ${row.todayActionLabel}
-- 湲곗??? ${row.market?.dataDate || "?곗씠???놁쓬"}
-- 醫낃?: ${price(row.market?.lastClose)}
-- 1???섏씡瑜? ${pct(row.market?.dailyChangePct)}
-- 5???섏씡瑜? ${pct(row.market?.return5dPct)}
-- 20???섏씡瑜? ${pct(row.market?.return20dPct)}
-- ?곷? 嫄곕옒?? ${num(row.market?.relativeVolume, 2)}諛?- 52二?怨좎젏 ?鍮??꾩튂: ${pct(row.market?.drawdownFrom52wHighPct)}
+- 기준일: ${row.market?.dataDate || "데이터 없음"}
+- 종가: ${price(row.market?.lastClose)}
+- 1일 수익률: ${pct(row.market?.dailyChangePct)}
+- 5일 수익률: ${pct(row.market?.return5dPct)}
+- 20일 수익률: ${pct(row.market?.return20dPct)}
+- 상대 거래량: ${num(row.market?.relativeVolume, 2)}배
+- 52주 고점 대비 위치: ${pct(row.market?.drawdownFrom52wHighPct)}
 - whyMoneyIsFlowing: ${row.whyMoneyIsFlowing}
 - likelyNextBuyer: ${row.likelyNextBuyer}
 - whyThisCouldTradeHigher: ${row.whyThisCouldTradeHigher}
-- ?곗씠???ъ슜 ?꾪솴:
+- 데이터 사용 현황:
 ${dataUsageMarkdown(row)}
-- ?댁뒪 ?뺤씤:
+- 뉴스 확인:
 ${newsMarkdown(row.newsSummary)}
-- ?듭뀡 ?섍툒:
+- 옵션 수급:
 ${optionsMarkdown(row.optionsSummary)}
-- ETF 援ъ꽦醫낅ぉ ?뺤궛??
+- ETF 구성종목 확산도:
 ${etfBreadthMarkdown(row.etfBreadthSummary)}
-- ?좊룞???ㅽ봽?덈뱶:
+- 유동성/스프레드:
 ${liquidityMarkdown(row.liquiditySummary)}
-- reasonConfidence 洹쇨굅: ${confidenceReason(row)}
-- 吏꾩엯 議곌굔: ${row.entryCondition}
-- 臾댄슚??議곌굔: ${row.invalidationCondition}
-- 李⑦듃 ?붿빟: ${row.chartSummary}
-- 李⑦듃: ![${row.ticker} chart](${row.chartPath})
+- reasonConfidence 근거: ${confidenceReason(row)}
+- 진입 조건: ${row.entryCondition}
+- 무효화 조건: ${row.invalidationCondition}
+- 차트 요약: ${row.chartSummary}
+- 차트: ![${row.ticker} chart](${row.chartPath})
 - ${marketLine(row.market)}`;
 }
 
 function renderStockMarkdown(row) {
   return `### [${row.ticker}] ${row.name}
-- ?먯궛 ?좏삎: STOCK
-- ?곹깭: ${row.status}
-- primaryTheme: ${row.primaryTheme || "?곗씠???놁쓬"}
-- primarySector: ${row.primarySector || "?곗씠???놁쓬"}
+- 자산 유형: STOCK
+- 상태: ${row.status}
+- primaryTheme: ${row.primaryTheme || "데이터 없음"}
+- primarySector: ${row.primarySector || "데이터 없음"}
 - relatedEtfs: ${row.relatedEtfs.map((etf) => etf.ticker).join(", ") || "관련 ETF 데이터 부족"}
 - moneyFlowScore: ${row.moneyFlowScore}
 - ${scoreBreakdownMarkdown(row)}
-- 怨쇱뿴 由ъ뒪?? ${row.overheatingRisk}
+- 과열 리스크: ${row.overheatingRisk}
 - reasonConfidence: ${row.reasonConfidence}
 - todayActionLabel: ${row.todayActionLabel}
-- 湲곗??? ${row.market?.dataDate || "?곗씠???놁쓬"}
-- 醫낃?: ${price(row.market?.lastClose)}
-- 1???섏씡瑜? ${pct(row.market?.dailyChangePct)}
-- 5???섏씡瑜? ${pct(row.market?.return5dPct)}
-- 20???섏씡瑜? ${pct(row.market?.return20dPct)}
-- ?곷? 嫄곕옒?? ${num(row.market?.relativeVolume, 2)}諛?- 52二?怨좎젏 ?鍮??꾩튂: ${pct(row.market?.drawdownFrom52wHighPct)}
-- 愿??ETF ?鍮??곷?媛뺣룄: ${row.relativeStrengthVsEtf}
+- 기준일: ${row.market?.dataDate || "데이터 없음"}
+- 종가: ${price(row.market?.lastClose)}
+- 1일 수익률: ${pct(row.market?.dailyChangePct)}
+- 5일 수익률: ${pct(row.market?.return5dPct)}
+- 20일 수익률: ${pct(row.market?.return20dPct)}
+- 상대 거래량: ${num(row.market?.relativeVolume, 2)}배
+- 52주 고점 대비 위치: ${pct(row.market?.drawdownFrom52wHighPct)}
+- 관련 ETF 대비 상대강도: ${row.relativeStrengthVsEtf}
 - whyMoneyIsFlowing: ${row.whyMoneyIsFlowing}
 - likelyNextBuyer: ${row.likelyNextBuyer}
 - whyThisCouldTradeHigher: ${row.whyThisCouldTradeHigher}
-- ??ETF媛 ?꾨땲????醫낅ぉ?멸??: ${row.whyStockOverEtf}
-- ETF媛 ???섏? 寃쎌슦: ${row.whenEtfIsBetter}
-- ?곗씠???ъ슜 ?꾪솴:
+- 왜 ETF가 아니라 이 종목인가: ${row.whyStockOverEtf}
+- ETF가 더 나은 경우: ${row.whenEtfIsBetter}
+- 데이터 사용 현황:
 ${dataUsageMarkdown(row)}
-- ?댁뒪 ?뺤씤:
+- 뉴스 확인:
 ${newsMarkdown(row.newsSummary)}
-- ?듭뀡 ?섍툒:
+- 옵션 수급:
 ${optionsMarkdown(row.optionsSummary)}
-- ETF 援ъ꽦醫낅ぉ ?뺤궛?? 愿??ETF?먯꽌 ?뺤씤
-- ?좊룞???ㅽ봽?덈뱶:
+- ETF 구성종목 확산도: 관련 ETF에서 확인
+- 유동성/스프레드:
 ${liquidityMarkdown(row.liquiditySummary)}
-- reasonConfidence 洹쇨굅: ${confidenceReason(row)}
-- 吏꾩엯 議곌굔: ${row.entryCondition}
-- 臾댄슚??議곌굔: ${row.invalidationCondition}
-${row.holdingInfo ? `- 蹂댁쑀 ?뺣낫: ${row.holdingInfo}\n` : ""}- 李⑦듃 ?붿빟: ${row.chartSummary}
-- 李⑦듃: ![${row.ticker} chart](${row.chartPath})
+- reasonConfidence 근거: ${confidenceReason(row)}
+- 진입 조건: ${row.entryCondition}
+- 무효화 조건: ${row.invalidationCondition}
+${row.holdingInfo ? `- 보유 정보: ${row.holdingInfo}\n` : ""}- 차트 요약: ${row.chartSummary}
+- 차트: ![${row.ticker} chart](${row.chartPath})
 - ${marketLine(row.market)}`;
 }
 
 function renderPreviousReviewMarkdown(row) {
   return `#### [${row.ticker}] ${row.name || row.ticker}
-- ?꾩씪 異붿쿇?? ${row.recommendationDate || "?곗씠???놁쓬"}
-- ?꾩씪 actionLabel: ${row.actionLabel || "?곗씠???놁쓬"}
-- ?꾩씪 moneyFlowScore: ${row.moneyFlowScore ?? "?곗씠???놁쓬"}
-- ?꾩씪 醫낃? ?먮뒗 異붿쿇 湲곗?媛: ${price(row.closePriceAtRecommendation)}
-- ?ㅻ뒛 醫낃?: ${price(row.todayClose)}
-- 異붿쿇 ?댄썑 ?섏씡瑜? ${row.returnSinceRecommendation === null || row.returnSinceRecommendation === undefined ? "?곗씠???놁쓬" : pct(row.returnSinceRecommendation)}
+- 전일 추천일: ${row.recommendationDate || "데이터 없음"}
+- 전일 actionLabel: ${row.actionLabel || "데이터 없음"}
+- 전일 moneyFlowScore: ${row.moneyFlowScore ?? "데이터 없음"}
+- 전일 종가 또는 추천 기준가: ${price(row.closePriceAtRecommendation)}
+- 오늘 종가: ${price(row.todayClose)}
+- 추천 이후 수익률: ${row.returnSinceRecommendation === null || row.returnSinceRecommendation === undefined ? "데이터 없음" : pct(row.returnSinceRecommendation)}
 - 진입 조건 충족 여부: ${row.entryConditionMet ? "충족 또는 유지" : "미충족"}
 - 무효화 조건 발생 여부: ${row.invalidationTriggered ? "발생" : "미발생"}
 - 관련 ETF 대비 상대강도 유지 여부: ${row.relativeStrengthMaintained ? "유지" : "약화"}
-- ?ㅻ뒛 ?곹깭: ${row.todayStatus}
-- ?ㅻ뒛 ?먮떒 洹쇨굅: ${row.todayReason}
-- ?ㅼ쓬 ?뺤씤 議곌굔: ${row.nextCondition || "?곗씠???놁쓬"}`;
+- 오늘 상태: ${row.todayStatus}
+- 오늘 판단 근거: ${row.todayReason}
+- 다음 확인 조건: ${row.nextCondition || "데이터 없음"}`;
 }
 
 function renderStockUniverseScoreMarkdown(scan) {
-  if (!scan) return "Nasdaq-100 ?꾩껜 ?ㅼ틪 ?곗씠???놁쓬";
+  if (!scan) return "Nasdaq-100 전체 스캔 데이터 없음";
   const failures = scan.results.filter((row) => row.scanStatus !== "OK");
   return `이 표는 Nasdaq-100 전체 구성종목을 가격/거래량/추세 중심으로 빠르게 스캔한 moneyFlowScore(1차) 결과다. 뉴스, 옵션, 유동성, 관련 ETF 대비 상대강도, 리스크 패널티를 모두 반영한 최종 추천 점수는 Top5 카드의 moneyFlowScore(최종)에서 확인한다.
 
 주의: Top5 카드의 moneyFlowScore(최종)는 1차 점수에 상세 데이터 가감점과 리스크 패널티를 더한 값이다. 따라서 아래 전체 표의 1차 순위와 Top5 최종 순위는 다를 수 있다.
 
-- 珥??ㅼ틪 醫낅ぉ ?? ${scan.totalCount}
-- ?먯닔 怨꾩궛 ?깃났: ${scan.successCount}
-- ?먯닔 怨꾩궛 ?ㅽ뙣: ${scan.failedCount}
+- 총 스캔 종목 수: ${scan.totalCount}
+- 점수 계산 성공: ${scan.successCount}
+- 점수 계산 실패: ${scan.failedCount}
 - moneyFlowScore(1차) 80점 이상: ${scan.scoreBands.strong}
 - moneyFlowScore(1차) 65~79점: ${scan.scoreBands.interest}
 - moneyFlowScore(1차) 50~64점: ${scan.scoreBands.watch}
 - moneyFlowScore(1차) 50점 미만: ${scan.scoreBands.low}
 
-?곸쐞 20媛??붿빟:
+상위 20개 요약:
 
 ${stockScoreTableMarkdown(scan.results.slice(0, 20))}
 
@@ -1686,8 +1688,8 @@ ${stockScoreTableMarkdown(scan.results)}
 
 </details>
 
-#### ?곗씠???섏쭛 ?ㅽ뙣 醫낅ぉ
-${failures.length ? failures.map((row) => `- ${row.ticker}: ${row.failureReason || "score calculation failed"}`).join("\n") : "?곗씠???섏쭛 ?ㅽ뙣 醫낅ぉ ?놁쓬"}`;
+#### 데이터 수집 실패 종목
+${failures.length ? failures.map((row) => `- ${row.ticker}: ${row.failureReason || "score calculation failed"}`).join("\n") : "데이터 수집 실패 종목 없음"}`;
 }
 
 function stockScoreTableMarkdown(rows) {
@@ -1737,31 +1739,31 @@ function renderHtml(report) {
   <main>
     <div class="banner" data-report-warning>${escapeHtml(report.dataWarning)}</div>
     <div class="hero">
-      <h1>?ㅻ뒛???곗씪由??몃젅?대뵫 ?붿빟</h1>
+      <h1>오늘의 데일리 트레이딩 요약</h1>
       <p class="purpose">${escapeHtml(PURPOSE)}</p>
-      <p class="muted">?앹꽦 ?쒓컖: ${escapeHtml(report.generatedAt)}</p>
-      <p><strong>?듭떖 吏덈Ц:</strong> ?꾩옱 媛寃⑹뿉???닿퉴, ?꾧? ????鍮꾩떥寃??ъ쨪 ???덈뒗媛?</p>
-      <p class="muted">?댁뒪/?듭뀡/ETF 援ъ꽦醫낅ぉ ?뺤궛???ㅽ봽?덈뱶 ?곗씠?곕뒗 ?꾩쭅 誘몄뿰寃곗씠?? HIGH confidence???ъ슜?섏? ?딅뒗??</p>
+      <p class="muted">생성 시각: ${escapeHtml(report.generatedAt)}</p>
+      <p><strong>핵심 질문:</strong> 현재 가격에서 누가 사고 있고, 누가 앞으로 더 비싸게 사줄 수 있는가?</p>
+      <p class="muted">뉴스/옵션/ETF 구성종목 확산도/스프레드 데이터가 미연결이면 HIGH confidence를 사용하지 않는다.</p>
     </div>
     ${renderMarketStatusHtml(report)}
     ${renderSplitConclusionHtml(report)}
     ${renderScoreGuideHtml()}
-    <section><h2>?ㅻ뒛 ?덉씠 紐곕━???뚮쭏</h2>${htmlList(report.themes.slice(0, 6).map((row) => `${escapeHtml(row.theme)}: ${escapeHtml(row.tickers.slice(0, 6).join(", "))} | ?됯퇏 moneyFlowScore ${row.avgScore.toFixed(0)}`))}</section>
-    <section><h2>1. ETF ?몃젅?대뵫 蹂닿퀬??/h2>
-      <h3>1-1. ETF 寃곕줎</h3>
+    <section><h2>오늘 돈이 몰리는 테마</h2>${htmlList(report.themes.slice(0, 6).map((row) => `${escapeHtml(row.theme)}: ${escapeHtml(row.tickers.slice(0, 6).join(", "))} | 평균 moneyFlowScore ${row.avgScore.toFixed(0)}`))}</section>
+    <section><h2>1. ETF 트레이딩 보고서</h2>
+      <h3>1-1. ETF 결론</h3>
       ${htmlList([
-        `ETF ?곗꽑 ?꾨낫: ${escapeHtml(report.etfActionCandidates.filter((row) => row.status === STATUS.ENTRY_READY).map((row) => row.ticker).join(", ") || "?놁쓬")}`,
-        `ETF 愿李??꾨낫: ${escapeHtml(report.etfs.filter((row) => row.status === STATUS.WATCH).slice(0, 5).map((row) => row.ticker).join(", ") || "?놁쓬")}`,
-        `ETF 留ㅻℓ 湲덉?: ${escapeHtml(report.etfBanRows.map((row) => row.ticker).join(", ") || "?놁쓬")}`,
-        `?ㅻ뒛 ETF 理쒖슦??1媛? ${escapeHtml(etfBest ? `${etfBest.ticker} - ${etfBest.entryCondition}` : "?놁쓬")}`,
-        "ETF ?뱀뀡 ?댁꽍: ???뱀뀡? 媛쒕퀎 醫낅ぉ ?좏깮???꾨땲???뚮쭏/?뱁꽣 ?⑥쐞???먭툑 ?먮쫫??ETF濡?留ㅻℓ?좎? ?먮떒?섍린 ?꾪븳 ?곸뿭?대떎."
+        `ETF 우선 후보: ${escapeHtml(report.etfActionCandidates.filter((row) => row.status === STATUS.ENTRY_READY).map((row) => row.ticker).join(", ") || "없음")}`,
+        `ETF 관찰 후보: ${escapeHtml(report.etfs.filter((row) => row.status === STATUS.WATCH).slice(0, 5).map((row) => row.ticker).join(", ") || "없음")}`,
+        `ETF 매매 금지: ${escapeHtml(report.etfBanRows.map((row) => row.ticker).join(", ") || "없음")}`,
+        `오늘 ETF 최우선 1개: ${escapeHtml(etfBest ? `${etfBest.ticker} - ${etfBest.entryCondition}` : "없음")}`,
+        "ETF 섹션 해석: 이 섹션은 개별 종목 선택이 아니라 테마/섹터 단위 자금 흐름을 ETF로 매매할지 판단하기 위한 영역이다."
       ])}
-      <h3>1-2. ETF ?꾨낫 TOP 5</h3>${report.etfTop5.map(renderEtfHtml).join("") || "<p>?곗씠???놁쓬</p>"}
-      <h3>1-3. ETF 怨쇱뿴/二쇱쓽 ?꾨낫</h3>${htmlList(report.etfOverheat.slice(0, 5).map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | ${escapeHtml(row.overheatingRisk)} | ${escapeHtml(row.overheatingReason)}`))}
-      <h3>1-4. ETF ?쒖쇅/留ㅻℓ 湲덉? ?꾨낫</h3>${htmlList(report.etfBanRows.map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | ?ш??? ${escapeHtml(row.entryCondition)}`))}
+      <h3>1-2. ETF 후보 TOP 5</h3>${report.etfTop5.map(renderEtfHtml).join("") || "<p>데이터 없음</p>"}
+      <h3>1-3. ETF 과열/주의 후보</h3>${htmlList(report.etfOverheat.slice(0, 5).map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | ${escapeHtml(row.overheatingRisk)} | ${escapeHtml(row.overheatingReason)}`))}
+      <h3>1-4. ETF 제외/매매 금지 후보</h3>${htmlList(report.etfBanRows.map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | 해제 조건 ${escapeHtml(row.entryCondition)}`))}
     </section>
-    <section><h2>2. 媛쒕퀎 醫낅ぉ ?몃젅?대뵫 蹂닿퀬??/h2>
-      <h3>2-1. ?ㅻ뒛 Nasdaq-100 ?좉퇋 諛쒓뎬 ?붿빟</h3>
+    <section><h2>2. 개별 종목 트레이딩 보고서</h2>
+      <h3>2-1. 오늘 Nasdaq-100 신규 발굴 요약</h3>
       ${htmlList([
         "신규 발굴 풀: Nasdaq-100 구성종목 전체",
         `universe source: ${escapeHtml(report.stockUniverse.source)}`,
@@ -1774,28 +1776,28 @@ function renderHtml(report) {
         `개별 종목 눌림 대기: ${escapeHtml(report.stockActionCandidates.filter((row) => row.stockVsEtfDecision !== "STOCK_PREFERRED").map((row) => row.ticker).join(", ") || "없음")}`,
         `개별 종목 매매 금지: ${escapeHtml(report.stockCautionRows.filter((row) => row.status === STATUS.BAN).map((row) => row.ticker).join(", ") || "없음")}`,
         `오늘 개별 종목 최우선 1개: ${escapeHtml(stockBest ? `${stockBest.ticker} - ${stockBest.relativeStrengthVsEtf}` : "없음")}`,
-        "媛쒕퀎 醫낅ぉ ?뱀뀡 ?댁꽍: ???뱀뀡? ETF濡??뺤씤???뚮쭏 ?먭툑 ?먮쫫 ?덉뿉??ETF蹂대떎 ???섏? ?뚰뙆瑜?以????덈뒗 媛쒕퀎 醫낅ぉ留??좊퀎?섎뒗 ?곸뿭?대떎."
+        "개별 종목 섹션 해석: 이 섹션은 ETF로 확인된 테마 자금 흐름 안에서 ETF보다 더 강한 돌파 가능성이 있는 개별 종목만 선별하는 영역이다."
       ])}
-      <h3>2-2. ?ㅻ뒛 媛쒕퀎 醫낅ぉ ?좉퇋 ?꾨낫 TOP 5</h3>${report.stockTop5.map(renderStockHtml).join("") || "<p>?곗씠???놁쓬</p>"}
-      <h3>2-3. ?꾩씪 異붿쿇 醫낅ぉ ?먭?</h3>
-      <p class="muted">???뱀뀡? ?ㅼ젣 怨꾩쥖 蹂댁쑀 醫낅ぉ???꾨땲???꾩씪 由ы룷?몄뿉???쒖떆??媛쒕퀎 醫낅ぉ ?꾨낫???ы썑 ?먭??대떎. ?ㅼ젣 蹂댁쑀 ?섎웾/?됰떒???낅젰?섏? ?딆븯?쇰?濡?怨꾩쥖 ?섏씡瑜좎씠 ?꾨땲??異붿쿇 湲곗????댄썑 媛寃?蹂?붾? 異붿쟻?쒕떎.</p>
-      ${report.previousRecommendationReviews.length ? report.previousRecommendationReviews.map(renderPreviousReviewHtml).join("") : "<p>?꾩씪 異붿쿇 醫낅ぉ ?곗씠???놁쓬</p>"}
-      <h3>2-4. ETF ?鍮?媛쒕퀎 醫낅ぉ ?먮떒 濡쒖쭅</h3>${htmlList(["愿??ETF??5??20???섏씡瑜좉낵 媛쒕퀎 醫낅ぉ??5??20???섏씡瑜좎쓣 鍮꾧탳?쒕떎.", "愿??ETF???곷? 嫄곕옒?됯낵 媛쒕퀎 醫낅ぉ???곷? 嫄곕옒?됱쓣 鍮꾧탳?쒕떎.", "媛쒕퀎 醫낅ぉ??愿??ETF蹂대떎 媛뺥븯硫?媛쒕퀎 醫낅ぉ ?곗꽑 媛?μ쑝濡?蹂몃떎.", "愿??ETF媛 ??媛뺥븯硫?媛쒕퀎 醫낅ぉ ???ETF瑜??곗꽑?쒕떎."])}
-      <h3>2-5. 媛쒕퀎 醫낅ぉ ?쒖쇅/二쇱쓽 ?꾨낫</h3>${htmlList(report.stockCautionRows.map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | ?ш??? ${escapeHtml(row.entryCondition)}`))}
+      <h3>2-2. 오늘 개별 종목 신규 후보 TOP 5</h3>${report.stockTop5.map(renderStockHtml).join("") || "<p>데이터 없음</p>"}
+      <h3>2-3. 전일 추천 종목 점검</h3>
+      <p class="muted">이 섹션은 실제 계좌 보유 종목이 아니라 전일 리포트에서 제시된 개별 종목 후보의 사후 점검이다. 실제 보유 수량/평단이 입력되지 않았으므로 계좌 수익률이 아니라 추천 기준일 이후 가격 변화를 추적한다.</p>
+      ${report.previousRecommendationReviews.length ? report.previousRecommendationReviews.map(renderPreviousReviewHtml).join("") : "<p>전일 추천 종목 데이터 없음</p>"}
+      <h3>2-4. ETF 대비 개별 종목 판단 로직</h3>${htmlList(["관련 ETF의 5일/20일 수익률과 개별 종목의 5일/20일 수익률을 비교한다.", "관련 ETF의 상대 거래량과 개별 종목의 상대 거래량을 비교한다.", "개별 종목이 관련 ETF보다 강하면 개별 종목 우선 가능성으로 본다.", "관련 ETF가 더 강하면 개별 종목 대신 ETF를 우선한다."])}
+      <h3>2-5. 개별 종목 제외/주의 후보</h3>${htmlList(report.stockCautionRows.map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | 해제 조건 ${escapeHtml(row.entryCondition)}`))}
       <h3>Nasdaq-100 전체 moneyFlowScore(1차) 표</h3>${renderStockUniverseScoreHtml(report.stockUniverseScan)}
     </section>
-    <section><h2>媛먯떆 ETF 紐⑸줉</h2>${renderEtfTable(report.etfs)}</section>
-    <section><h2>3. 理쒖쥌 ?ㅽ뻾 ?먮떒</h2>
-      <h3>3-1. ?ㅻ뒛 ?ㅼ젣濡?????/h3>
+    <section><h2>감시 ETF 목록</h2>${renderEtfTable(report.etfs)}</section>
+    <section><h2>3. 최종 실행 판단</h2>
+      <h3>3-1. 오늘 실제로 할 일</h3>
       ${htmlList([
-        `ETF?먯꽌 ???? ${escapeHtml(etfBest ? `${etfBest.ticker} ?ы븿 ETF ?꾨낫???꾩씪 怨좎젏 ?뚰뙆? 5?쇱꽑 ?좎?瑜??뺤씤?쒕떎.` : "ETF ?꾨낫??愿李고븳??")}`,
-        `媛쒕퀎 醫낅ぉ?먯꽌 ???? ${escapeHtml(stockBest ? `${stockBest.ticker} ?깆? 愿??ETF ?鍮??곷?媛뺣룄媛 ?좎??섎뒗吏 ?뺤씤?????뚮┝ ?먮뒗 ?뚰뙆 議곌굔?먯꽌留?寃?좏븳??` : "媛쒕퀎 醫낅ぉ? 愿??ETF ?鍮??곷?媛뺣룄 ?뺤씤 ?꾧퉴吏 愿李고븳??")}`,
-        "?섏? 留먯븘?????? ETF? 媛쒕퀎 醫낅ぉ??媛숈? ?뚮쭏 ?덉뿉??以묐났 留ㅼ닔?섏? ?딅뒗??"
+        `ETF에서 할 일: ${escapeHtml(etfBest ? `${etfBest.ticker} 포함 ETF 후보의 전일 고점 돌파와 5일선 유지를 확인한다.` : "ETF 후보는 관찰한다.")}`,
+        `개별 종목에서 할 일: ${escapeHtml(stockBest ? `${stockBest.ticker} 등은 관련 ETF 대비 상대강도가 유지되는지 확인하고 눌림 또는 돌파 조건에서만 검토한다.` : "개별 종목은 관련 ETF 대비 상대강도 확인 전까지 관찰한다.")}`,
+        "하지 말아야 할 일: ETF와 개별 종목을 같은 테마 안에서 중복 매수하지 않는다."
       ])}
-      <h3>3-2. ?댁씪 ?뺤씤??議곌굔</h3>
-      ${htmlList(["ETF ?뺤씤 議곌굔: ETF ?꾨낫 TOP 5媛 20?쇱꽑 ?꾩뿉???좎??섎뒗吏 ?뺤씤", "媛쒕퀎 醫낅ぉ ?뺤씤 議곌굔: 愿??ETF ?鍮?5??20???곷?媛뺣룄? ?곷? 嫄곕옒???좎? ?뺤씤", "?쒖옣 ?곹깭 ?뺤씤 議곌굔: QQQ/SPY??5??20??異붿꽭? ?꾪뿕?좏샇 ?좎? ?щ? ?뺤씤", "?곗씠??蹂닿컯 ?꾩슂 ??ぉ: ?댁뒪, ?듭뀡, ?ㅽ봽?덈뱶, ETF 援ъ꽦醫낅ぉ ?뺤궛?? ?ㅼ젣 蹂댁쑀 吏꾩엯媛"])}
+      <h3>3-2. 내일 확인할 조건</h3>
+      ${htmlList(["ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인", "개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인", "시장 상태 확인 조건: QQQ/SPY의 5일/20일 추세와 위험선호 유지 여부 확인", "데이터 보강 필요 항목: 뉴스, 옵션, 스프레드, ETF 구성종목 확산도, 실제 보유 진입가"])}
     </section>
-    <section><h2>?곗씠???섏쭛 ?곹깭</h2>${renderDataCollectionHtml(report)}</section>
+    <section><h2>데이터 수집 상태</h2>${renderDataCollectionHtml(report)}</section>
   </main>
 </body>
 </html>`;
@@ -1850,7 +1852,7 @@ function renderScoreGuideHtml() {
 
 function renderActionHtml(row) {
   return `<article data-action-card="${escapeHtml(row.ticker)}"><h3>${row.rank}. [${escapeHtml(row.ticker)}] ${escapeHtml(row.name || row.ticker)} ${badge(row.status)}</h3>
-    <div class="grid">${tile("?먯궛 ?좏삎", row.assetType)}${tile("moneyFlowScore(최종)", row.moneyFlowScoreFinal ?? row.moneyFlowScore)}${tile("reasonConfidence", row.reasonConfidence)}</div>
+    <div class="grid">${tile("자산 유형", row.assetType)}${tile("moneyFlowScore(최종)", row.moneyFlowScoreFinal ?? row.moneyFlowScore)}${tile("reasonConfidence", row.reasonConfidence)}</div>
     ${fieldList(row)}
     ${chartImage(row)}
   </article>`;
@@ -1873,7 +1875,7 @@ function renderStockHtml(row) {
     ${scoreBreakdownHtml(row)}
     ${supplementalDetailsHtml(row)}
     ${fieldList(row)}
-    ${htmlList([`<strong>??ETF媛 ?꾨땲????醫낅ぉ?멸??</strong> ${escapeHtml(row.whyStockOverEtf)}`, `<strong>ETF媛 ???섏? 寃쎌슦</strong> ${escapeHtml(row.whenEtfIsBetter)}`])}
+    ${htmlList([`<strong>왜 ETF가 아니라 이 종목인가</strong> ${escapeHtml(row.whyStockOverEtf)}`, `<strong>ETF가 더 나은 경우</strong> ${escapeHtml(row.whenEtfIsBetter)}`])}
     ${row.holdingInfo ? `<p class="muted">${escapeHtml(row.holdingInfo)}</p>` : ""}
     ${chartImage(row)}
     <p class="muted">${escapeHtml(marketLine(row.market))}</p>
@@ -1898,7 +1900,7 @@ function renderPreviousReviewHtml(row) {
 }
 
 function renderStockUniverseScoreHtml(scan) {
-  if (!scan) return "<p>Nasdaq-100 ?꾩껜 ?ㅼ틪 ?곗씠???놁쓬</p>";
+  if (!scan) return "<p>Nasdaq-100 전체 스캔 데이터 없음</p>";
   const failures = scan.results.filter((row) => row.scanStatus !== "OK");
   return `<p>이 표는 Nasdaq-100 전체 구성종목을 가격/거래량/추세 중심으로 빠르게 스캔한 moneyFlowScore(1차) 결과다. 뉴스, 옵션, 유동성, 관련 ETF 대비 상대강도, 리스크 패널티를 모두 반영한 최종 추천 점수는 Top5 카드의 moneyFlowScore(최종)에서 확인한다.</p>
     <p class="muted">Top5 카드의 moneyFlowScore(최종)는 1차 점수에 상세 데이터 가감점과 리스크 패널티를 더한 값이다. 따라서 아래 전체 표의 1차 순위와 Top5 최종 순위는 다를 수 있다.</p>
@@ -1911,14 +1913,14 @@ function renderStockUniverseScoreHtml(scan) {
       ${tile("moneyFlowScore(1차) 50~64점", scan.scoreBands.watch)}
       ${tile("moneyFlowScore(1차) 50점 미만", scan.scoreBands.low)}
     </div>
-    <h4>?곸쐞 20媛??붿빟</h4>
+    <h4>상위 20개 요약</h4>
     <div class="table-scroll">${stockScoreTableHtml(scan.results.slice(0, 20))}</div>
     <details>
       <summary><strong>Nasdaq-100 전체 moneyFlowScore(1차) 표 펼치기</strong></summary>
       <div class="table-scroll">${stockScoreTableHtml(scan.results)}</div>
     </details>
-    <h4>?곗씠???섏쭛 ?ㅽ뙣 醫낅ぉ</h4>
-    ${htmlList(failures.length ? failures.map((row) => `${escapeHtml(row.ticker)}: ${escapeHtml(row.failureReason || "score calculation failed")}`) : ["?곗씠???섏쭛 ?ㅽ뙣 醫낅ぉ ?놁쓬"])}`;
+    <h4>데이터 수집 실패 종목</h4>
+    ${htmlList(failures.length ? failures.map((row) => `${escapeHtml(row.ticker)}: ${escapeHtml(row.failureReason || "score calculation failed")}`) : ["데이터 수집 실패 종목 없음"])}`;
 }
 
 function stockScoreTableHtml(rows) {
@@ -1927,13 +1929,13 @@ function stockScoreTableHtml(rows) {
 
 function supplementalDetailsHtml(row) {
   return `<details>
-    <summary><strong>?곗씠???ъ슜 ?꾪솴怨?蹂댁“ ?곗씠??/strong></summary>
-    <h4>?곗씠???ъ슜 ?꾪솴</h4>${htmlList(dataUsageHtmlItems(row))}
-    <h4>?댁뒪 ?뺤씤</h4>${htmlList(newsHtmlItems(row.newsSummary))}
-    <h4>?듭뀡 ?섍툒</h4>${htmlList(optionsHtmlItems(row.optionsSummary))}
-    <h4>ETF 援ъ꽦醫낅ぉ ?뺤궛??/h4>${row.assetType === "ETF" ? htmlList(etfBreadthHtmlItems(row.etfBreadthSummary)) : htmlList(["愿??ETF?먯꽌 ?뺤씤"])}
-    <h4>?좊룞???ㅽ봽?덈뱶</h4>${htmlList(liquidityHtmlItems(row.liquiditySummary))}
-    <h4>reasonConfidence 洹쇨굅</h4><p class="muted">${escapeHtml(confidenceReason(row))}</p>
+    <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
+    <h4>데이터 사용 현황</h4>${htmlList(dataUsageHtmlItems(row))}
+    <h4>뉴스 확인</h4>${htmlList(newsHtmlItems(row.newsSummary))}
+    <h4>옵션 수급</h4>${htmlList(optionsHtmlItems(row.optionsSummary))}
+    <h4>ETF 구성종목 확산도</h4>${row.assetType === "ETF" ? htmlList(etfBreadthHtmlItems(row.etfBreadthSummary)) : htmlList(["관련 ETF에서 확인"])}
+    <h4>유동성/스프레드</h4>${htmlList(liquidityHtmlItems(row.liquiditySummary))}
+    <h4>reasonConfidence 근거</h4><p class="muted">${escapeHtml(confidenceReason(row))}</p>
   </details>`;
 }
 
@@ -1963,15 +1965,15 @@ function fieldList(row) {
     `<strong>whyMoneyIsFlowing:</strong> ${escapeHtml(row.whyMoneyIsFlowing)}`,
     `<strong>likelyNextBuyer:</strong> ${escapeHtml(row.likelyNextBuyer)}`,
     `<strong>whyThisCouldTradeHigher:</strong> ${escapeHtml(row.whyThisCouldTradeHigher)}`,
-    `<strong>吏꾩엯 議곌굔:</strong> ${escapeHtml(row.entryCondition)}`,
-    `<strong>臾댄슚??議곌굔:</strong> ${escapeHtml(row.invalidationCondition)}`,
-    `<strong>李⑦듃 ?붿빟:</strong> ${escapeHtml(row.chartSummary)}`
+    `<strong>진입 조건:</strong> ${escapeHtml(row.entryCondition)}`,
+    `<strong>무효화 조건:</strong> ${escapeHtml(row.invalidationCondition)}`,
+    `<strong>차트 요약:</strong> ${escapeHtml(row.chartSummary)}`
   ]);
 }
 
 function scoreBreakdownHtml(row) {
   const b = row.moneyFlowScoreBreakdown;
-  if (!b) return "<p>moneyFlowScore ?곗젙 洹쇨굅: ?곗씠???놁쓬</p>";
+  if (!b) return "<p>moneyFlowScore 산정 근거: 데이터 없음</p>";
   const relative = row.assetType === "STOCK" ? `${tile("ETF 대비 상대강도", signed(b.relativeStrengthScore ?? 0))}` : "";
   const breadth = row.assetType === "ETF" ? `${tile("ETF 확산도", signed(b.etfBreadthScore ?? 0))}` : "";
   return `<details open>
