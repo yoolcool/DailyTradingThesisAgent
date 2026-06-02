@@ -6,20 +6,14 @@ const DATA_DIR = path.join(ROOT, "data");
 const REPORTS_DIR = path.join(ROOT, "reports");
 
 const requiredSections = [
-  "오늘의 결론",
-  "오늘 실제 행동 후보",
-  "오늘의 시장 상태",
+  "0. 시장 상태",
+  "오늘의 분리 결론",
+  "moneyFlowScore 산정 방식",
   "오늘 돈이 몰리는 테마",
-  "ETF 카드",
-  "ETF 과열 주의 후보",
-  "진입 후보",
-  "보유 유지 후보",
-  "청산/주의 후보",
-  "종목별 상승 근거",
+  "1. ETF 트레이딩 보고서",
+  "2. 개별 종목 트레이딩 보고서",
   "감시 ETF 목록",
-  "진입 조건",
-  "무효화 조건",
-  "내일 확인할 것"
+  "3. 최종 실행 판단"
 ];
 
 function assert(condition, message) {
@@ -62,38 +56,51 @@ function main() {
   }
 
   assert(etfs.length >= 20, `ETF count is too low: ${etfs.length}`);
-  assert((sectionText(markdown, "ETF 카드").match(/### \[ETF /g) || []).length === 5, "Markdown should show exactly 5 ETF cards");
+  assert((sectionText(markdown, "1. ETF 트레이딩 보고서").match(/### \[ETF /g) || []).length === 5, "Markdown should show exactly 5 ETF cards");
   assert((html.match(/data-etf-card=/g) || []).length === 5, "HTML should show exactly 5 ETF cards");
+  assert((html.match(/data-stock-card=/g) || []).length >= 5, "HTML should show stock cards");
 
-  const actionSection = sectionText(markdown, "오늘 실제 행동 후보");
-  const actionCount = (actionSection.match(/^### \d+\./gm) || []).length;
-  assert(actionCount <= 3, `Action candidates should be 3 or fewer, found ${actionCount}`);
-  if (actionCount > 0) {
-    assert(actionSection.includes("reasonConfidence:"), "Action candidates missing reasonConfidence");
-    assert(actionSection.includes("todayActionLabel:"), "Action candidates missing todayActionLabel");
-  }
+  const splitSection = sectionText(markdown, "오늘의 분리 결론");
+  assert(splitSection.includes("ETF 행동 후보:"), "Split conclusion missing ETF action candidates");
+  assert(splitSection.includes("개별 종목 행동 후보:"), "Split conclusion missing stock action candidates");
 
-  const entrySection = sectionText(markdown, "진입 후보");
-  assert(!entrySection.includes("상태: 관찰"), "Entry section must not include watch status");
-  const cautionSection = sectionText(markdown, "청산/주의 후보");
-  assert(!cautionSection.includes("상태: 관찰"), "Caution section must not include watch status");
+  const scoreGuide = sectionText(markdown, "moneyFlowScore 산정 방식");
+  assert(scoreGuide.includes("장기 가치평가 점수가 아니다"), "Score guide must explain score is not valuation");
+  assert(scoreGuide.includes("80점 이상"), "Score guide missing score band interpretation");
+  assert(scoreGuide.includes("매수 추천 점수가 아니다"), "Score guide missing warning");
 
   const nvdaCard = markdown.match(/### \[NVDA\][\s\S]*?(?=\n### \[|$)/)?.[0] || "";
-  assert(nvdaCard.includes("관련 ETF: SMH, SOXX, SOXQ, AIQ, QQQ"), "NVDA related ETF mapping is not refined");
+  assert(nvdaCard.includes("relatedEtfs: SMH, SOXX, SOXQ, AIQ, QQQ"), "NVDA related ETF mapping is not refined");
   assert(!nvdaCard.includes("HACK") && !nvdaCard.includes("CIBR"), "NVDA should not map to cybersecurity ETFs");
+  assert(nvdaCard.includes("왜 ETF가 아니라 이 종목인가?"), "Stock card missing stock-over-ETF explanation");
+  assert(nvdaCard.includes("ETF가 더 나은 경우"), "Stock card missing ETF-better explanation");
+
+  const etfSection = sectionText(markdown, "1. ETF 트레이딩 보고서");
+  const stockSection = sectionText(markdown, "2. 개별 종목 트레이딩 보고서");
+  for (const stockTicker of ["PLTR", "NVDA", "TSM", "MSFT", "AAPL"]) {
+    assert(!etfSection.includes(`### [${stockTicker}]`), `ETF section must not include stock card: ${stockTicker}`);
+  }
+  for (const etfTicker of ["HACK", "IGV", "AIQ", "CIBR", "IPO"]) {
+    assert(!stockSection.includes(`### [ETF ${etfTicker}]`), `Stock section must not include ETF card: ${etfTicker}`);
+  }
 
   assert(markdown.includes("moneyFlowScore:"), "Markdown missing moneyFlowScore");
+  assert(markdown.includes("moneyFlowScore 산정 근거:"), "Markdown missing moneyFlowScore rationale");
+  assert(html.includes("moneyFlowScore 산정 근거"), "HTML missing moneyFlowScore rationale");
   assert(markdown.includes("whyMoneyIsFlowing:"), "Markdown missing whyMoneyIsFlowing");
   assert(markdown.includes("likelyNextBuyer:"), "Markdown missing likelyNextBuyer");
   assert(markdown.includes("whyThisCouldTradeHigher:"), "Markdown missing whyThisCouldTradeHigher");
   assert(!markdown.includes("reasonConfidence: HIGH"), "HIGH confidence must not appear while news/event data is disconnected");
+  assert(markdown.includes("ETF에서 할 일:"), "Final action missing ETF task");
+  assert(markdown.includes("개별 종목에서 할 일:"), "Final action missing stock task");
+  assert(markdown.includes("하지 말아야 할 일:"), "Final action missing do-not-do task");
 
   assert(fs.existsSync(chartsDir), "Missing reports/charts directory");
   const chartFiles = fs.readdirSync(chartsDir).filter((name) => name.endsWith(".png"));
   assert(chartFiles.length > 0, "No chart images were generated");
   assert(html.includes('<img class="chart"'), "HTML card charts are not linked");
 
-  console.log("Verified improved report purpose, sections, action candidates, ETF mapping, scoring fields, and charts");
+  console.log("Verified split ETF/stock report sections, moneyFlowScore rationale, ETF mapping, scoring fields, and charts");
   console.log(`Verified chart count: ${chartFiles.length}`);
 }
 

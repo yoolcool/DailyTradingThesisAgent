@@ -52,7 +52,9 @@ async function main() {
         stockCards: document.querySelectorAll("[data-stock-card]").length,
         etfCards: document.querySelectorAll("[data-etf-card]").length,
         chartImages: document.querySelectorAll("img.chart").length,
-        hasConclusion: body.includes("오늘의 결론"),
+        hasConclusion: body.includes("오늘의 분리 결론"),
+        hasScoreGuide: body.includes("moneyFlowScore 산정 방식"),
+        hasFinalAction: body.includes("ETF에서 할 일") && body.includes("개별 종목에서 할 일") && body.includes("하지 말아야 할 일"),
         hasCoreQuestion: body.includes("현재 가격에서 살까"),
         hasValidWarning: warning.includes("MOCK DATA") || warning.includes("REAL DATA TEST")
       };
@@ -61,14 +63,20 @@ async function main() {
     if (checks.title !== "Daily Trading Thesis Report") {
       throw new Error(`Unexpected page title: ${checks.title}`);
     }
-    if (checks.h1 !== "Daily Trading Thesis Report") {
+    if (checks.h1 !== "오늘의 데일리 트레이딩 요약") {
       throw new Error(`Unexpected h1: ${checks.h1}`);
     }
     if (!checks.hasValidWarning) {
       throw new Error("Rendered page is missing a recognized data mode warning banner.");
     }
     if (!checks.hasConclusion) {
-      throw new Error("Rendered page is missing today's conclusion section.");
+      throw new Error("Rendered page is missing split conclusion section.");
+    }
+    if (!checks.hasScoreGuide) {
+      throw new Error("Rendered page is missing moneyFlowScore guide section.");
+    }
+    if (!checks.hasFinalAction) {
+      throw new Error("Rendered page is missing final separated action section.");
     }
     if (!checks.hasCoreQuestion) {
       throw new Error("Rendered page is missing the core buyer question.");

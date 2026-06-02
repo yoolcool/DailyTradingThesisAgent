@@ -141,8 +141,23 @@ function clamp(value, min, max) {
 
 function scoreAsset(item, assetType, relatedEtfStrength = 0) {
   if (!item || item.dataStatus !== "ok") {
+    const emptyBreakdown = {
+      totalScore: 0,
+      trendScore: 0,
+      shortMomentumScore: 0,
+      mediumMomentumScore: 0,
+      volumeScore: 0,
+      highProximityScore: 0,
+      movingAverageScore: 0,
+      relativeStrengthScore: assetType === "STOCK" ? 0 : undefined,
+      riskPenalty: 0,
+      dataConfidencePenalty: 0,
+      reasons: ["가격/거래량 데이터 없음"]
+    };
     return {
       moneyFlowScore: 0,
+      moneyFlowScoreBreakdown: emptyBreakdown,
+      moneyFlowScoreReasons: emptyBreakdown.reasons,
       overheatingRisk: "데이터 없음",
       overheatingReason: "가격/거래량 데이터 없음",
       reasonConfidence: "LOW",
@@ -164,18 +179,53 @@ function scoreAsset(item, assetType, relatedEtfStrength = 0) {
   const weakVolume = relVol < 1;
   const overheatingFlag = daily >= 4 && highProximity && relVol < 1.2;
   const blowoffFlag = daily >= 6 && highProximity && relVol >= 1.8;
+  const closes = (item.history || []).map((row) => row.close).filter((value) => Number.isFinite(value));
+  const lastClose = closes.at(-1) ?? item.lastClose;
+  const ma5 = average(closes.slice(-5));
+  const ma20 = average(closes.slice(-20));
+  const ma50 = average(closes.slice(-50));
+  const aboveMa5 = Number.isFinite(lastClose) && Number.isFinite(ma5) && lastClose >= ma5;
+  const aboveMa20 = Number.isFinite(lastClose) && Number.isFinite(ma20) && lastClose >= ma20;
+  const aboveMa50 = Number.isFinite(lastClose) && Number.isFinite(ma50) && lastClose >= ma50;
 
-  let score = 0;
-  score += clamp(daily * 2, -10, 16);
-  score += clamp(r5 * 1.8, -12, 24);
-  score += clamp(r20 * 1.1, -10, 24);
-  score += relVol >= 1.5 ? 18 : relVol >= 1 ? 10 : -8;
-  score += highProximity ? 12 : drawdown > -12 ? 6 : 0;
-  score += clamp(relatedEtfStrength / 12, 0, 8);
-  if (trendAcceleration) score += 10;
-  if (overheatingFlag) score -= 10;
-  if (blowoffFlag) score -= 6;
+  const trendScore = clamp(r5 * 1.0, -6, 12) + clamp(r20 * 0.45, -4, 12) + (trendAcceleration ? 6 : 0);
+  const shortMomentumScore = clamp(daily * 1.2, -6, 8) + clamp(r5 * 0.8, -6, 12);
+  const mediumMomentumScore = clamp(r20 * 0.65, -8, 16);
+  const volumeScore = relVol >= 1.5 ? 18 : relVol >= 1.2 ? 14 : relVol >= 1 ? 10 : -8;
+  const highProximityScore = highProximity ? 12 : drawdown > -12 ? 6 : 0;
+  const movingAverageScore = (aboveMa5 ? 4 : 0) + (aboveMa20 ? 6 : -6) + (aboveMa50 ? 4 : 0);
+  const relativeStrengthScore = assetType === "STOCK" ? clamp(relatedEtfStrength / 12, 0, 8) : undefined;
+  const riskPenalty = (overheatingFlag ? 10 : 0) + (blowoffFlag ? 6 : 0) + (daily >= 6 ? 4 : 0) + (r5 >= 18 ? 4 : 0);
+  const dataConfidencePenalty = 0;
+  const reasons = [];
+  if (r20 > 8) reasons.push("20일 수익률 강함");
+  if (r5 > 5) reasons.push("5일 수익률 강함");
+  if (daily > 2) reasons.push("1일 단기 모멘텀 확인");
+  if (relVol >= 1.2) reasons.push("상대 거래량 증가");
+  if (highProximity) reasons.push("52주 고점 근처");
+  if (aboveMa5 && aboveMa20) reasons.push("이동평균 위 추세 유지");
+  if (assetType === "STOCK" && relatedEtfStrength > 0) reasons.push("관련 ETF 강세 테마 안의 개별 종목");
+  if (riskPenalty > 0) reasons.push("단기 과열/추격 위험 존재");
+  reasons.push("뉴스/옵션/스프레드/ETF 구성종목 확산도 데이터 미연결");
+
+  let score = trendScore + shortMomentumScore + mediumMomentumScore + volumeScore + highProximityScore + movingAverageScore;
+  if (assetType === "STOCK") score += relativeStrengthScore;
+  score -= riskPenalty;
+  score -= dataConfidencePenalty;
   score = Math.round(clamp(score, 0, 100));
+  const breakdown = {
+    totalScore: score,
+    trendScore: Math.round(trendScore),
+    shortMomentumScore: Math.round(shortMomentumScore),
+    mediumMomentumScore: Math.round(mediumMomentumScore),
+    volumeScore: Math.round(volumeScore),
+    highProximityScore: Math.round(highProximityScore),
+    movingAverageScore: Math.round(movingAverageScore),
+    relativeStrengthScore: assetType === "STOCK" ? Math.round(relativeStrengthScore) : undefined,
+    riskPenalty,
+    dataConfidencePenalty,
+    reasons
+  };
 
   const reasonConfidence = weakVolume ? "LOW" : score >= 45 ? "MEDIUM" : "LOW";
   const status = score >= 72 && !overheatingFlag ? STATUS.ENTRY_READY : score >= 58 && !overheatingFlag ? STATUS.ENTRY_CANDIDATE : score >= 35 ? STATUS.WATCH : STATUS.BAN;
@@ -195,6 +245,8 @@ function scoreAsset(item, assetType, relatedEtfStrength = 0) {
 
   return {
     moneyFlowScore: score,
+    moneyFlowScoreBreakdown: breakdown,
+    moneyFlowScoreReasons: reasons,
     overheatingRisk,
     overheatingReason,
     reasonConfidence,
@@ -241,7 +293,10 @@ function enrichEtf(etf, marketData) {
   const categoryType = ETF_CATEGORY[etf.ticker] || "성장/테마 ETF";
   return {
     ...etf,
+    assetType: "ETF",
     categoryType,
+    etfCategory: categoryType,
+    etfRole: etfRole(etf.ticker, categoryType),
     market,
     chartPath: `charts/${etf.ticker}.png`,
     chartSummary: chartSummary(market),
@@ -258,12 +313,25 @@ function enrichStock(stock, etfs, marketData) {
   const relatedEtfStrength = relatedEtfs.length ? Math.max(...relatedEtfs.map((etf) => etf.moneyFlowScore || 0)) : 0;
   const scored = MODE === "REAL_TEST" ? scoreAsset(market, "STOCK", relatedEtfStrength) : scoreAsset(mockMarket(stock), "STOCK", relatedEtfStrength);
   const isHolding = Boolean(stock.entryPrice);
-  const status = isHolding && scored.status !== STATUS.BAN ? STATUS.HOLD : scored.status;
+  const relativeStrength = relativeStrengthVsEtf(market, relatedEtfs);
+  const stockVsEtfDecision = stockVsEtfDecisionFor(scored, relativeStrength, relatedEtfs);
+  const adjustedStatus =
+    stockVsEtfDecision === "DO_NOT_TRADE"
+      ? STATUS.BAN
+      : stockVsEtfDecision === "ETF_PREFERRED" && scored.status === STATUS.ENTRY_READY
+        ? STATUS.ENTRY_CANDIDATE
+        : scored.status;
+  const status = isHolding && adjustedStatus !== STATUS.BAN ? STATUS.HOLD : adjustedStatus;
   return {
     ...stock,
+    assetType: "STOCK",
     ...STOCK_META[stock.ticker],
     market,
     relatedEtfs,
+    relativeStrengthVsEtf: relativeStrength.summary,
+    whyStockOverEtf: whyStockOverEtf(stock.ticker, relativeStrength, stockVsEtfDecision),
+    whenEtfIsBetter: whenEtfIsBetter(stock.ticker, relativeStrength),
+    stockVsEtfDecision,
     chartPath: `charts/${stock.ticker}.png`,
     chartSummary: chartSummary(market),
     ...scored,
@@ -273,6 +341,80 @@ function enrichStock(stock, etfs, marketData) {
     invalidationCondition: invalidationCondition(market),
     holdingInfo: isHolding ? "보유 정보 미입력 - 기존 mock 진입가/수익률은 실전 판단에 사용하지 않음" : ""
   };
+}
+
+function etfRole(ticker, category) {
+  if (["QQQ", "SPY", "IWM"].includes(ticker)) return "시장 기준 확인용";
+  if (category.includes("방산")) return "방어 섹터 확인용";
+  if (category.includes("비트코인")) return "위험선호 지표";
+  if (category.includes("채권") || category.includes("금")) return "리스크 헤지 확인용";
+  return "테마 베타 매수";
+}
+
+function relativeStrengthVsEtf(stockMarket, relatedEtfs) {
+  if (!relatedEtfs.length) {
+    return {
+      decisionScore: 0,
+      avg5d: null,
+      avg20d: null,
+      avgRelativeVolume: null,
+      summary: "관련 ETF 데이터 부족"
+    };
+  }
+  if (!stockMarket || stockMarket.dataStatus !== "ok") {
+    return {
+      decisionScore: 0,
+      avg5d: null,
+      avg20d: null,
+      avgRelativeVolume: null,
+      summary: "개별 종목 가격/거래량 데이터 부족"
+    };
+  }
+  const okEtfs = relatedEtfs.filter((etf) => etf.market?.dataStatus === "ok");
+  if (!okEtfs.length) {
+    return {
+      decisionScore: 0,
+      avg5d: null,
+      avg20d: null,
+      avgRelativeVolume: null,
+      summary: "관련 ETF 가격/거래량 데이터 부족"
+    };
+  }
+  const avg5d = average(okEtfs.map((etf) => etf.market.return5dPct ?? 0));
+  const avg20d = average(okEtfs.map((etf) => etf.market.return20dPct ?? 0));
+  const avgRelativeVolume = average(okEtfs.map((etf) => etf.market.relativeVolume ?? 0));
+  const fiveDayGap = (stockMarket.return5dPct ?? 0) - avg5d;
+  const twentyDayGap = (stockMarket.return20dPct ?? 0) - avg20d;
+  const volumeGap = (stockMarket.relativeVolume ?? 0) - avgRelativeVolume;
+  const decisionScore = fiveDayGap + twentyDayGap * 0.6 + volumeGap * 4;
+  const direction = decisionScore >= 6 ? "관련 ETF보다 강함" : decisionScore <= -4 ? "관련 ETF보다 약함" : "관련 ETF와 비슷함";
+  return {
+    decisionScore,
+    avg5d,
+    avg20d,
+    avgRelativeVolume,
+    summary: `${direction} | 주식 5일 ${pct(stockMarket.return5dPct)} vs ETF 평균 ${pct(avg5d)}, 주식 20일 ${pct(stockMarket.return20dPct)} vs ETF 평균 ${pct(avg20d)}, 상대 거래량 ${num(stockMarket.relativeVolume, 2)}배 vs ETF 평균 ${num(avgRelativeVolume, 2)}배`
+  };
+}
+
+function stockVsEtfDecisionFor(scored, relativeStrength, relatedEtfs) {
+  if (!relatedEtfs.length || relativeStrength.summary.includes("데이터 부족")) return "WATCH_ONLY";
+  if (scored.moneyFlowScore < 35) return "DO_NOT_TRADE";
+  if (relativeStrength.decisionScore >= 6 && scored.moneyFlowScore >= 58) return "STOCK_PREFERRED";
+  if (relativeStrength.decisionScore <= -4) return "ETF_PREFERRED";
+  return "WATCH_ONLY";
+}
+
+function whyStockOverEtf(ticker, relativeStrength, decision) {
+  if (decision === "STOCK_PREFERRED") return `${ticker}가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 더 강해 개별 종목 알파 후보로 본다.`;
+  if (decision === "ETF_PREFERRED") return `${ticker}보다 관련 ETF 쪽 흐름이 더 선명해 오늘은 ETF 우선으로 본다.`;
+  if (decision === "DO_NOT_TRADE") return `${ticker}의 가격/거래량 흐름이 약해 개별 종목 우선 근거가 부족하다.`;
+  return `${relativeStrength.summary}. 개별 종목 우선으로 격상하려면 관련 ETF 대비 상대강도 유지가 더 필요하다.`;
+}
+
+function whenEtfIsBetter(ticker, relativeStrength) {
+  if (relativeStrength.summary.includes("데이터 부족")) return "관련 ETF 데이터가 부족하면 개별 종목보다 ETF 또는 관찰을 우선한다.";
+  return `${ticker}가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목 대신 관련 ETF를 우선한다.`;
 }
 
 function mockMarket(row) {
@@ -345,8 +487,8 @@ function groupThemes(stocks, etfs) {
 
 function chooseActionCandidates(stocks, etfs) {
   const pool = [
-    ...etfs.map((row) => ({ ...row, assetType: "ETF" })),
-    ...stocks.filter((row) => !row.holdingInfo).map((row) => ({ ...row, assetType: "개별 종목" }))
+    ...etfs,
+    ...stocks.filter((row) => !row.holdingInfo)
   ].filter((row) => [STATUS.ENTRY_READY, STATUS.ENTRY_CANDIDATE].includes(row.status) && row.reasonConfidence !== "LOW");
 
   return pool
@@ -365,14 +507,21 @@ function buildReport() {
   const stocks = [...watchlist, ...holdings];
   const validEtfs = etfs.filter((etf) => MODE !== "REAL_TEST" || etf.market.dataStatus === "ok");
   const etfTop5 = [...validEtfs].sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 5);
-  const entryCandidates = watchlist.filter((row) => [STATUS.ENTRY_CANDIDATE, STATUS.ENTRY_READY].includes(row.status)).sort((a, b) => b.moneyFlowScore - a.moneyFlowScore);
+  const stockTop5 = [...stocks].sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 5);
+  const etfActionCandidates = validEtfs.filter((row) => [STATUS.ENTRY_CANDIDATE, STATUS.ENTRY_READY].includes(row.status)).sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 5);
+  const stockActionCandidates = watchlist.filter((row) => [STATUS.ENTRY_CANDIDATE, STATUS.ENTRY_READY].includes(row.status)).sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 5);
+  const entryCandidates = stockActionCandidates;
   const cautionRows = stocks.filter((row) => [STATUS.EXIT, STATUS.BAN].includes(row.status));
-  const overheat = [...validEtfs, ...watchlist].filter((row) => ["높음", "중간", "낮음~중간"].includes(row.overheatingRisk)).sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 5);
+  const etfOverheat = validEtfs.filter((row) => ["높음", "중간", "낮음~중간"].includes(row.overheatingRisk)).sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 5);
+  const stockCautionRows = watchlist.filter((row) => [STATUS.WATCH, STATUS.BAN].includes(row.status) || row.stockVsEtfDecision !== "STOCK_PREFERRED").sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 5);
+  const etfBanRows = validEtfs.filter((row) => row.status === STATUS.BAN || row.moneyFlowScore < 50).sort((a, b) => a.moneyFlowScore - b.moneyFlowScore).slice(0, 5);
+  const overheat = etfOverheat;
   const actionCandidates = chooseActionCandidates(stocks, etfs);
+  const topExecutionCandidate = chooseTopExecutionCandidate(etfActionCandidates, stockActionCandidates);
   const chartTickers = unique([
     ...actionCandidates.map((row) => row.ticker),
     ...etfTop5.map((row) => row.ticker),
-    ...entryCandidates.slice(0, 3).map((row) => row.ticker)
+    ...stockTop5.slice(0, 5).map((row) => row.ticker)
   ]);
   const chartCount = generateCharts(chartTickers, marketData);
 
@@ -388,12 +537,35 @@ function buildReport() {
     stocks,
     themes: groupThemes(stocks, etfs),
     etfTop5,
+    stockTop5,
+    etfActionCandidates,
+    stockActionCandidates,
     entryCandidates,
     holdRows: holdings,
     cautionRows,
+    stockCautionRows,
+    etfBanRows,
+    etfOverheat,
     overheat,
     actionCandidates,
+    topExecutionCandidate,
     chartCount
+  };
+}
+
+function chooseTopExecutionCandidate(etfCandidates, stockCandidates) {
+  const bestEtf = etfCandidates[0];
+  const bestStock = stockCandidates.find((row) => row.stockVsEtfDecision === "STOCK_PREFERRED") || stockCandidates[0];
+  if (!bestEtf && !bestStock) return null;
+  if (bestEtf && (!bestStock || bestEtf.moneyFlowScore >= bestStock.moneyFlowScore)) {
+    return {
+      ...bestEtf,
+      explanation: `${bestEtf.ticker}는 ETF라 테마 단위 자금 흐름을 직접 먹는 후보이고, 현재 점수가 개별 종목 후보보다 우선한다.`
+    };
+  }
+  return {
+    ...bestStock,
+    explanation: `${bestStock.ticker}는 관련 ETF 대비 상대강도 확인이 필요한 개별 종목 후보라 조건 충족 시 ETF보다 알파를 기대할 수 있다.`
   };
 }
 
@@ -407,69 +579,132 @@ function marketLine(item) {
 }
 
 function renderMarkdown(report) {
-  return `# Daily Trading Thesis Report
+  const etfBest = report.etfActionCandidates[0];
+  const stockBest = report.stockActionCandidates[0];
+  return `# 오늘의 데일리 트레이딩 요약
 
 **${report.dataWarning}**
 
 **목적:** ${PURPOSE}
 
-생성 시각: ${report.generatedAt}
-
 > 핵심 질문: 현재 가격에서 살까, 누가 왜 더 비싸게 사줄 수 있는가?
 
-뉴스/옵션/ETF 구성종목 확산도/스프레드 데이터는 아직 미연결이다. 따라서 reasonConfidence는 가격/거래량/관련 ETF 강도 기준으로만 산정하며 HIGH를 사용하지 않는다.
-
-## 오늘의 결론
+## 0. 시장 상태
 
 - 데이터 모드: ${report.dataMode}
+- 생성 시각: ${report.generatedAt}
 - 시장 상태: ${report.marketLabel}
+- 오늘 돈의 방향: ${moneyDirection(report)}
 - 강한 테마 TOP 3: ${report.themes.slice(0, 3).map((row) => `${row.theme}(${row.avgScore.toFixed(0)})`).join(", ") || "데이터 없음"}
-- ETF 후보 TOP 5: ${report.etfTop5.map((row) => row.ticker).join(", ") || "데이터 없음"}
-- 개별 종목보다 ETF가 더 나은 테마: ${report.themes.filter((row) => row.theme.includes("ETF")).slice(0, 3).map((row) => row.theme).join(", ") || "데이터 없음"}
-- 과열 주의 후보: ${report.overheat.map((row) => `${row.ticker}(${row.overheatingRisk})`).join(", ") || "없음"}
-- 오늘 꼭 확인할 조건 3개: 상대 거래량 1.0배 유지 / 20일선 이탈 여부 / 추격 매수 금지 구간 확인
+- 오늘의 원칙: ETF는 테마 자금 흐름, 개별 종목은 ETF보다 강할 때만 알파 후보로 본다.
+- 데이터 한계:
+  - 가격/거래량은 실제 데이터
+  - 뉴스/옵션/ETF 구성종목 확산도/스프레드 데이터는 아직 미연결
+  - reasonConfidence는 HIGH를 사용하지 않음
 
-## 오늘 실제 행동 후보
+## 오늘의 분리 결론
 
-${report.actionCandidates.map(renderActionMarkdown).join("\n\n") || "적합한 행동 후보 없음"}
+- ETF 행동 후보: ${report.etfActionCandidates.map((row) => row.ticker).join(", ") || "없음"}
+- 개별 종목 행동 후보: ${report.stockActionCandidates.map((row) => row.ticker).join(", ") || "없음"}
+- ETF 우선 테마: ${report.etfTop5.slice(0, 3).map((row) => row.categoryType).filter((value, index, arr) => arr.indexOf(value) === index).join(", ") || "데이터 없음"}
+- 개별 종목 우선 테마: ${report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.primaryTheme).filter(Boolean).join(", ") || "관련 ETF 대비 추가 확인 필요"}
+- 오늘 최우선 실행 후보: ${report.topExecutionCandidate ? `${report.topExecutionCandidate.ticker} - ${report.topExecutionCandidate.explanation}` : "조건 충족 후보 없음"}
+- 하지 말아야 할 것: 추격 매수 금지 / ETF와 개별 종목 중복 베팅 금지 / 데이터 미연결 상태에서 과신 금지
 
-## 오늘의 시장 상태
+## moneyFlowScore 산정 방식
 
-**${report.marketLabel}**
+### score의 의미
+moneyFlowScore는 “현재 해당 ETF 또는 종목으로 돈이 몰리고 있는 정도”를 가격, 거래량, 추세, 신고가 근접도, ETF 대비 상대강도 등을 바탕으로 수치화한 점수다.
 
-REAL_TEST 가격/거래량은 yfinance에서 수집했다. 뉴스/옵션/ETF 구성종목 확산도/스프레드 데이터는 아직 미연결이다.
+이 점수는 장기 가치평가 점수가 아니다.
+이 점수는 “지금 시장 참여자들이 더 비싸게 사줄 가능성이 있는 트레이딩 후보인가?”를 판단하기 위한 단기/중기 모멘텀 점수다.
+
+### 기본 산정 요소
+- 20일 수익률: 최근 1개월 수준의 중기 추세를 반영한다.
+- 5일 수익률: 최근 1주일 수준의 단기 자금 유입을 반영한다.
+- 1일 수익률: 직전 거래일의 단기 추격 매수세를 반영한다.
+- 상대 거래량: 가격 상승과 함께 거래량이 늘면 실제 자금 유입 가능성을 높게 본다.
+- 52주 고점 대비 위치: 고점 근처 자산은 추세 추종 자금 유입 가능성이 있다.
+- 추세 상태: 5일선/20일선/50일선 위에 있는지 확인한다.
+- ETF 대비 상대강도: 개별 종목에만 적용하며, 관련 ETF보다 강할 때 개별 종목 우선 가능성이 올라간다.
+- 데이터 신뢰도 패널티: 뉴스/옵션/스프레드/ETF 구성종목 확산도 데이터가 미연결이면 HIGH confidence를 사용하지 않는다.
+
+### 점수 구간 해석
+- 80점 이상: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
+- 65점 이상 80점 미만: 관심 후보. 눌림 또는 돌파 확인 후 진입 검토.
+- 50점 이상 65점 미만: 관찰 후보. 흐름은 있으나 우선순위는 낮음.
+- 50점 미만: 매매 금지 또는 후순위 후보.
+
+### 주의 문구
+moneyFlowScore는 매수 추천 점수가 아니다.
+가격/거래량 기반의 자금 흐름 후보 점수이며, 진입 여부는 반드시 진입 조건과 무효화 조건을 함께 확인해야 한다.
 
 ## 오늘 돈이 몰리는 테마
 
 ${mdList(report.themes.slice(0, 6).map((row) => `**${row.theme}**: ${row.tickers.slice(0, 6).join(", ")} | 평균 moneyFlowScore ${row.avgScore.toFixed(0)}`))}
 
-## ETF 카드
+## 1. ETF 트레이딩 보고서
+
+### 1-1. ETF 결론
+- ETF 우선 후보: ${report.etfActionCandidates.filter((row) => row.status === STATUS.ENTRY_READY).map((row) => row.ticker).join(", ") || "없음"}
+- ETF 관찰 후보: ${report.etfs.filter((row) => row.status === STATUS.WATCH).slice(0, 5).map((row) => row.ticker).join(", ") || "없음"}
+- ETF 매매 금지: ${report.etfBanRows.map((row) => row.ticker).join(", ") || "없음"}
+- 오늘 ETF 최우선 1개: ${etfBest ? `${etfBest.ticker} - ${etfBest.entryCondition}` : "없음"}
+- ETF 섹션 해석: 이 섹션은 개별 종목 선택이 아니라 테마/섹터 단위의 자금 흐름을 ETF로 매매할지 판단하기 위한 영역이다.
+
+### 1-2. ETF 후보 TOP 5
 
 ${report.etfTop5.map(renderEtfMarkdown).join("\n\n") || "데이터 없음"}
 
-## ETF 과열 주의 후보
+### 1-3. ETF 과열/주의 후보
 
-${report.overheat.filter((row) => row.assetType !== "개별 종목").slice(0, 3).map((row) => `### [${row.ticker}] ${row.name}
-- 과열 리스크: ${row.overheatingRisk}
-- 이유: ${row.overheatingReason}
+${report.etfOverheat.slice(0, 5).map((row) => `#### [${row.ticker}] ${row.name}
 - moneyFlowScore: ${row.moneyFlowScore}
+- moneyFlowScore 산정 근거 요약: ${scoreOneLine(row)}
+- 과열 리스크: ${row.overheatingRisk}
+- 과열 근거: ${row.overheatingReason}
+- 대응: ${row.overheatingRisk === "높음" ? "추격 금지" : row.overheatingRisk === "중간" ? "눌림 대기" : "돌파 확인 후 진입"}
 `).join("\n") || "해당 없음"}
 
-## 진입 후보
+### 1-4. ETF 제외/매매 금지 후보
 
-${mdList(report.entryCandidates.map((row) => `**${row.ticker} ${row.name}** | 상태: ${row.status} | moneyFlowScore: ${row.moneyFlowScore} | 관련 ETF: ${row.relatedEtfs.map((etf) => etf.ticker).join(", ") || "없음"}`))}
+${report.etfBanRows.map((row) => `#### [${row.ticker}] ${row.name}
+- moneyFlowScore: ${row.moneyFlowScore}
+- moneyFlowScore 산정 근거 요약: ${scoreOneLine(row)}
+- 제외 사유: ${row.moneyFlowScore < 50 ? "테마 자금 흐름 약함" : "매매 조건 미충족"}
+- 재검토 조건: ${row.entryCondition}
+`).join("\n") || "해당 없음"}
 
-## 보유 유지 후보
+## 2. 개별 종목 트레이딩 보고서
 
-${mdList(report.holdRows.map((row) => `**${row.ticker} ${row.name}** | 상태: ${row.status} | ${row.holdingInfo || "보유 정보 미입력"}`))}
+### 2-1. 개별 종목 결론
+- 개별 종목 진입 후보: ${report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.ticker).join(", ") || "없음"}
+- 개별 종목 눌림 대기: ${report.stockActionCandidates.filter((row) => row.stockVsEtfDecision !== "STOCK_PREFERRED").map((row) => row.ticker).join(", ") || "없음"}
+- 개별 종목 보유 점검: ${report.holdRows.map((row) => row.ticker).join(", ") || "없음"}
+- 개별 종목 매매 금지: ${report.stockCautionRows.filter((row) => row.status === STATUS.BAN).map((row) => row.ticker).join(", ") || "없음"}
+- 오늘 개별 종목 최우선 1개: ${stockBest ? `${stockBest.ticker} - ${stockBest.relativeStrengthVsEtf}` : "없음"}
+- 개별 종목 섹션 해석: 이 섹션은 ETF로 확인된 테마 자금 흐름 안에서 ETF보다 더 나은 알파를 줄 수 있는 개별 종목만 선별하는 영역이다.
 
-## 청산/주의 후보
+### 2-2. 개별 종목 후보 TOP 5
 
-${mdList(report.cautionRows.map((row) => `**${row.ticker} ${row.name}** | 상태: ${row.status} | ${row.invalidationCondition}`))}
+${report.stockTop5.map(renderStockMarkdown).join("\n\n") || "데이터 없음"}
 
-## 종목별 상승 근거
+### 2-3. ETF 대비 개별 종목 판단 로직
 
-${report.stocks.map(renderStockMarkdown).join("\n\n")}
+- 관련 ETF의 5일/20일 수익률과 개별 종목의 5일/20일 수익률을 비교한다.
+- 관련 ETF의 상대 거래량과 개별 종목의 상대 거래량을 비교한다.
+- 개별 종목이 관련 ETF보다 강하면 “개별 종목 우선” 가능으로 본다.
+- 개별 종목이 관련 ETF와 비슷하거나 약하면 “ETF 우선 / 개별 종목 관찰”로 낮춘다.
+- 관련 ETF가 더 강하면 개별 종목 대신 ETF를 우선한다.
+
+### 2-4. 개별 종목 제외/주의 후보
+
+${report.stockCautionRows.map((row) => `#### [${row.ticker}] ${row.name}
+- moneyFlowScore: ${row.moneyFlowScore}
+- moneyFlowScore 산정 근거 요약: ${scoreOneLine(row)}
+- 제외/주의 사유: ${row.stockVsEtfDecision === "ETF_PREFERRED" ? "ETF 대비 약세" : row.status === STATUS.BAN ? "매매 조건 미충족" : "개별 종목 우선 근거 부족"}
+- 재검토 조건: ${row.entryCondition}
+`).join("\n") || "해당 없음"}
 
 ## 감시 ETF 목록
 
@@ -477,18 +712,18 @@ ${report.stocks.map(renderStockMarkdown).join("\n\n")}
 | --- | --- | ---: | --- | --- | --- |
 ${report.etfs.map((row) => `| ${row.ticker} | ${row.categoryType} | ${row.moneyFlowScore} | ${row.status} | ${row.reasonConfidence} | ${row.whyMoneyIsFlowing} |`).join("\n")}
 
-## 진입 조건
+## 3. 최종 실행 판단
 
-${mdList(report.actionCandidates.map((row) => `**${row.ticker}**: ${row.entryCondition}`))}
+### 3-1. 오늘 실제로 할 일
+1. ETF에서 할 일: ${etfBest ? `${etfBest.ticker} 포함 ETF 후보의 전일 고점 돌파와 5일선 유지를 확인한다.` : "ETF 후보는 관찰한다."}
+2. 개별 종목에서 할 일: ${stockBest ? `${stockBest.ticker} 등은 관련 ETF 대비 상대강도가 유지되는지 확인한 뒤 눌림 또는 돌파 조건에서만 검토한다.` : "개별 종목은 관련 ETF 대비 상대강도 확인 전까지 관찰한다."}
+3. 하지 말아야 할 일: ETF와 개별 종목을 같은 테마 안에서 중복 매수하지 않는다.
 
-## 무효화 조건
-
-${mdList(report.actionCandidates.map((row) => `**${row.ticker}**: ${row.invalidationCondition}`))}
-
-## 내일 확인할 것
-- 오늘 실제 행동 후보의 상대 거래량이 1.0배 이상 유지되는지 확인
-- ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인
-- 뉴스/옵션/ETF 구성종목 확산도 데이터가 연결되기 전까지 HIGH confidence를 사용하지 않기
+### 3-2. 내일 확인할 조건
+- ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인
+- 개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인
+- 시장 상태 확인 조건: QQQ/SPY의 5일/20일 추세와 위험선호 유지 여부 확인
+- 데이터 보강 필요 항목: 뉴스, 옵션, 스프레드, ETF 구성종목 확산도, 실제 보유 진입가
 `;
 }
 
@@ -506,13 +741,71 @@ function renderActionMarkdown(row) {
 - 차트: ![${row.ticker} chart](${row.chartPath})`;
 }
 
+function moneyDirection(report) {
+  const topEtf = report.etfTop5[0];
+  const topStock = report.stockTop5[0];
+  if (!topEtf && !topStock) return "데이터 없음";
+  if (topEtf && (!topStock || topEtf.moneyFlowScore >= topStock.moneyFlowScore)) {
+    return `${topEtf.categoryType} 쪽 ETF 자금 흐름이 가장 선명함`;
+  }
+  return `${topStock.primaryTheme || topStock.ticker} 개별 종목 흐름이 ETF 대비 강한지 확인 필요`;
+}
+
+function scoreInterpretation(score) {
+  if (score >= 80) return "강한 자금 유입 후보. 단, 과열 여부 확인 필수.";
+  if (score >= 65) return "관심 후보. 눌림 또는 돌파 확인 후 진입 검토.";
+  if (score >= 50) return "관찰 후보. 흐름은 있으나 우선순위는 낮음.";
+  return "매매 금지 또는 후순위 후보.";
+}
+
+function scoreOneLine(row) {
+  const breakdown = row.moneyFlowScoreBreakdown;
+  if (!breakdown) return "산정 근거 데이터 없음";
+  const positives = breakdown.reasons.filter((reason) => !reason.includes("위험") && !reason.includes("미연결")).slice(0, 3).join(", ") || "가점 제한적";
+  const cautions = breakdown.reasons.filter((reason) => reason.includes("위험") || reason.includes("미연결")).slice(0, 2).join(", ") || "큰 감점 제한적";
+  return `${positives}. 주의: ${cautions}.`;
+}
+
+function scoreBreakdownMarkdown(row) {
+  const b = row.moneyFlowScoreBreakdown;
+  if (!b) return "moneyFlowScore 산정 근거: 데이터 없음";
+  const relativeLine = row.assetType === "STOCK" ? `\n  - ETF 대비 상대강도 점수: ${signed(b.relativeStrengthScore ?? 0)}` : "";
+  return `moneyFlowScore 산정 근거:
+  - 총점: ${b.totalScore}
+  - 점수 해석: ${scoreInterpretation(b.totalScore)}
+  - 추세 점수: ${signed(b.trendScore)}
+  - 단기 모멘텀: ${signed(b.shortMomentumScore)}
+  - 중기 모멘텀: ${signed(b.mediumMomentumScore)}
+  - 거래량 점수: ${signed(b.volumeScore)}
+  - 신고가 근접 점수: ${signed(b.highProximityScore)}
+  - 이동평균 점수: ${signed(b.movingAverageScore)}${relativeLine}
+  - 리스크 패널티: ${b.riskPenalty ? `-${b.riskPenalty}` : "0"}
+  - 주요 근거: ${scoreOneLine(row)}`;
+}
+
+function signed(value) {
+  const number = Number(value) || 0;
+  return number > 0 ? `+${number}` : String(number);
+}
+
 function renderEtfMarkdown(row) {
   return `### [ETF ${row.ticker}] ${row.name}
-- 카테고리: ${row.categoryType}
+- 자산 유형: ETF
+- ETF 세부 카테고리: ${row.etfCategory}
+- ETF 역할: ${row.etfRole}
 - 상태: ${row.status}
 - moneyFlowScore: ${row.moneyFlowScore}
+- ${scoreBreakdownMarkdown(row)}
 - 과열 리스크: ${row.overheatingRisk}
 - reasonConfidence: ${row.reasonConfidence}
+- todayActionLabel: ${row.todayActionLabel}
+- 기준일: ${row.market?.dataDate || "데이터 없음"}
+- 종가: ${price(row.market?.lastClose)}
+- 1일 수익률: ${pct(row.market?.dailyChangePct)}
+- 5일 수익률: ${pct(row.market?.return5dPct)}
+- 20일 수익률: ${pct(row.market?.return20dPct)}
+- 상대 거래량: ${num(row.market?.relativeVolume, 2)}배
+- 52주 고점 대비 위치: ${pct(row.market?.drawdownFrom52wHighPct)}
 - whyMoneyIsFlowing: ${row.whyMoneyIsFlowing}
 - likelyNextBuyer: ${row.likelyNextBuyer}
 - whyThisCouldTradeHigher: ${row.whyThisCouldTradeHigher}
@@ -525,16 +818,29 @@ function renderEtfMarkdown(row) {
 
 function renderStockMarkdown(row) {
   return `### [${row.ticker}] ${row.name}
+- 자산 유형: STOCK
 - 상태: ${row.status}
 - primaryTheme: ${row.primaryTheme || "데이터 없음"}
 - primarySector: ${row.primarySector || "데이터 없음"}
-- 관련 ETF: ${row.relatedEtfs.map((etf) => etf.ticker).join(", ") || "없음"}
+- relatedEtfs: ${row.relatedEtfs.map((etf) => etf.ticker).join(", ") || "관련 ETF 데이터 부족"}
 - moneyFlowScore: ${row.moneyFlowScore}
+- ${scoreBreakdownMarkdown(row)}
 - 과열 리스크: ${row.overheatingRisk}
 - reasonConfidence: ${row.reasonConfidence}
+- todayActionLabel: ${row.todayActionLabel}
+- 기준일: ${row.market?.dataDate || "데이터 없음"}
+- 종가: ${price(row.market?.lastClose)}
+- 1일 수익률: ${pct(row.market?.dailyChangePct)}
+- 5일 수익률: ${pct(row.market?.return5dPct)}
+- 20일 수익률: ${pct(row.market?.return20dPct)}
+- 상대 거래량: ${num(row.market?.relativeVolume, 2)}배
+- 52주 고점 대비 위치: ${pct(row.market?.drawdownFrom52wHighPct)}
+- 관련 ETF 대비 상대강도: ${row.relativeStrengthVsEtf}
 - whyMoneyIsFlowing: ${row.whyMoneyIsFlowing}
 - likelyNextBuyer: ${row.likelyNextBuyer}
 - whyThisCouldTradeHigher: ${row.whyThisCouldTradeHigher}
+- 왜 ETF가 아니라 이 종목인가?: ${row.whyStockOverEtf}
+- ETF가 더 나은 경우: ${row.whenEtfIsBetter}
 - 진입 조건: ${row.entryCondition}
 - 무효화 조건: ${row.invalidationCondition}
 ${row.holdingInfo ? `- 보유 정보: ${row.holdingInfo}\n` : ""}- 차트 요약: ${row.chartSummary}
@@ -543,6 +849,8 @@ ${row.holdingInfo ? `- 보유 정보: ${row.holdingInfo}\n` : ""}- 차트 요약
 }
 
 function renderHtml(report) {
+  const etfBest = report.etfActionCandidates[0];
+  const stockBest = report.stockActionCandidates[0];
   return `<!doctype html>
 <html lang="ko">
 <head>
@@ -571,40 +879,92 @@ function renderHtml(report) {
   <main>
     <div class="banner" data-report-warning>${escapeHtml(report.dataWarning)}</div>
     <div class="hero">
-      <h1>Daily Trading Thesis Report</h1>
+      <h1>오늘의 데일리 트레이딩 요약</h1>
       <p class="purpose">${escapeHtml(PURPOSE)}</p>
       <p class="muted">생성 시각: ${escapeHtml(report.generatedAt)}</p>
       <p><strong>핵심 질문:</strong> 현재 가격에서 살까, 누가 왜 더 비싸게 사줄 수 있는가?</p>
       <p class="muted">뉴스/옵션/ETF 구성종목 확산도/스프레드 데이터는 아직 미연결이다. HIGH confidence는 사용하지 않는다.</p>
     </div>
-    ${renderConclusionHtml(report)}
-    <section><h2>오늘 실제 행동 후보</h2>${report.actionCandidates.map(renderActionHtml).join("") || "<p>적합한 행동 후보 없음</p>"}</section>
-    <section><h2>오늘의 시장 상태</h2><p><strong>${escapeHtml(report.marketLabel)}</strong></p><p>REAL_TEST 가격/거래량은 yfinance에서 수집했다. 뉴스/옵션/ETF 구성종목 확산도/스프레드 데이터는 아직 미연결이다.</p></section>
+    ${renderMarketStatusHtml(report)}
+    ${renderSplitConclusionHtml(report)}
+    ${renderScoreGuideHtml()}
     <section><h2>오늘 돈이 몰리는 테마</h2>${htmlList(report.themes.slice(0, 6).map((row) => `${escapeHtml(row.theme)}: ${escapeHtml(row.tickers.slice(0, 6).join(", "))} | 평균 moneyFlowScore ${row.avgScore.toFixed(0)}`))}</section>
-    <section><h2>ETF 카드</h2>${report.etfTop5.map(renderEtfHtml).join("") || "<p>데이터 없음</p>"}</section>
-    <section><h2>ETF 과열 주의 후보</h2>${htmlList(report.overheat.slice(0, 5).map((row) => `${escapeHtml(row.ticker)} | ${escapeHtml(row.overheatingRisk)} | ${escapeHtml(row.overheatingReason)}`))}</section>
-    <section><h2>진입 후보</h2>${htmlList(report.entryCandidates.map((row) => `${escapeHtml(row.ticker)} ${escapeHtml(row.name)} | ${escapeHtml(row.status)} | moneyFlowScore ${row.moneyFlowScore}`))}</section>
-    <section><h2>보유 유지 후보</h2>${htmlList(report.holdRows.map((row) => `${escapeHtml(row.ticker)} ${escapeHtml(row.name)} | ${escapeHtml(row.status)} | ${escapeHtml(row.holdingInfo || "보유 정보 미입력")}`))}</section>
-    <section><h2>청산/주의 후보</h2>${htmlList(report.cautionRows.map((row) => `${escapeHtml(row.ticker)} ${escapeHtml(row.name)} | ${escapeHtml(row.status)} | ${escapeHtml(row.invalidationCondition)}`))}</section>
-    <section><h2>종목별 상승 근거</h2>${report.stocks.map(renderStockHtml).join("")}</section>
+    <section><h2>1. ETF 트레이딩 보고서</h2>
+      <h3>1-1. ETF 결론</h3>
+      ${htmlList([
+        `ETF 우선 후보: ${escapeHtml(report.etfActionCandidates.filter((row) => row.status === STATUS.ENTRY_READY).map((row) => row.ticker).join(", ") || "없음")}`,
+        `ETF 관찰 후보: ${escapeHtml(report.etfs.filter((row) => row.status === STATUS.WATCH).slice(0, 5).map((row) => row.ticker).join(", ") || "없음")}`,
+        `ETF 매매 금지: ${escapeHtml(report.etfBanRows.map((row) => row.ticker).join(", ") || "없음")}`,
+        `오늘 ETF 최우선 1개: ${escapeHtml(etfBest ? `${etfBest.ticker} - ${etfBest.entryCondition}` : "없음")}`,
+        "ETF 섹션 해석: 이 섹션은 개별 종목 선택이 아니라 테마/섹터 단위의 자금 흐름을 ETF로 매매할지 판단하기 위한 영역이다."
+      ])}
+      <h3>1-2. ETF 후보 TOP 5</h3>${report.etfTop5.map(renderEtfHtml).join("") || "<p>데이터 없음</p>"}
+      <h3>1-3. ETF 과열/주의 후보</h3>${htmlList(report.etfOverheat.slice(0, 5).map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | ${escapeHtml(row.overheatingRisk)} | ${escapeHtml(row.overheatingReason)}`))}
+      <h3>1-4. ETF 제외/매매 금지 후보</h3>${htmlList(report.etfBanRows.map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | 재검토: ${escapeHtml(row.entryCondition)}`))}
+    </section>
+    <section><h2>2. 개별 종목 트레이딩 보고서</h2>
+      <h3>2-1. 개별 종목 결론</h3>
+      ${htmlList([
+        `개별 종목 진입 후보: ${escapeHtml(report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.ticker).join(", ") || "없음")}`,
+        `개별 종목 눌림 대기: ${escapeHtml(report.stockActionCandidates.filter((row) => row.stockVsEtfDecision !== "STOCK_PREFERRED").map((row) => row.ticker).join(", ") || "없음")}`,
+        `개별 종목 보유 점검: ${escapeHtml(report.holdRows.map((row) => row.ticker).join(", ") || "없음")}`,
+        `개별 종목 매매 금지: ${escapeHtml(report.stockCautionRows.filter((row) => row.status === STATUS.BAN).map((row) => row.ticker).join(", ") || "없음")}`,
+        `오늘 개별 종목 최우선 1개: ${escapeHtml(stockBest ? `${stockBest.ticker} - ${stockBest.relativeStrengthVsEtf}` : "없음")}`,
+        "개별 종목 섹션 해석: 이 섹션은 ETF로 확인된 테마 자금 흐름 안에서 ETF보다 더 나은 알파를 줄 수 있는 개별 종목만 선별하는 영역이다."
+      ])}
+      <h3>2-2. 개별 종목 후보 TOP 5</h3>${report.stockTop5.map(renderStockHtml).join("") || "<p>데이터 없음</p>"}
+      <h3>2-3. ETF 대비 개별 종목 판단 로직</h3>${htmlList(["관련 ETF의 5일/20일 수익률과 개별 종목의 5일/20일 수익률을 비교한다.", "관련 ETF의 상대 거래량과 개별 종목의 상대 거래량을 비교한다.", "개별 종목이 관련 ETF보다 강하면 개별 종목 우선 가능으로 본다.", "관련 ETF가 더 강하면 개별 종목 대신 ETF를 우선한다."])}
+      <h3>2-4. 개별 종목 제외/주의 후보</h3>${htmlList(report.stockCautionRows.map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | 재검토: ${escapeHtml(row.entryCondition)}`))}
+    </section>
     <section><h2>감시 ETF 목록</h2>${renderEtfTable(report.etfs)}</section>
-    <section><h2>진입 조건</h2>${htmlList(report.actionCandidates.map((row) => `${escapeHtml(row.ticker)}: ${escapeHtml(row.entryCondition)}`))}</section>
-    <section><h2>무효화 조건</h2>${htmlList(report.actionCandidates.map((row) => `${escapeHtml(row.ticker)}: ${escapeHtml(row.invalidationCondition)}`))}</section>
-    <section><h2>내일 확인할 것</h2>${htmlList(["오늘 실제 행동 후보의 상대 거래량이 1.0배 이상 유지되는지 확인", "ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인", "뉴스/옵션/ETF 구성종목 확산도 데이터가 연결되기 전까지 HIGH confidence를 사용하지 않기"])}</section>
+    <section><h2>3. 최종 실행 판단</h2>
+      <h3>3-1. 오늘 실제로 할 일</h3>
+      ${htmlList([
+        `ETF에서 할 일: ${escapeHtml(etfBest ? `${etfBest.ticker} 포함 ETF 후보의 전일 고점 돌파와 5일선 유지를 확인한다.` : "ETF 후보는 관찰한다.")}`,
+        `개별 종목에서 할 일: ${escapeHtml(stockBest ? `${stockBest.ticker} 등은 관련 ETF 대비 상대강도가 유지되는지 확인한 뒤 눌림 또는 돌파 조건에서만 검토한다.` : "개별 종목은 관련 ETF 대비 상대강도 확인 전까지 관찰한다.")}`,
+        "하지 말아야 할 일: ETF와 개별 종목을 같은 테마 안에서 중복 매수하지 않는다."
+      ])}
+      <h3>3-2. 내일 확인할 조건</h3>
+      ${htmlList(["ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인", "개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인", "시장 상태 확인 조건: QQQ/SPY의 5일/20일 추세와 위험선호 유지 여부 확인", "데이터 보강 필요 항목: 뉴스, 옵션, 스프레드, ETF 구성종목 확산도, 실제 보유 진입가"])}
+    </section>
   </main>
 </body>
 </html>`;
 }
 
-function renderConclusionHtml(report) {
-  return `<section><h2>오늘의 결론</h2><div class="grid">
+function renderMarketStatusHtml(report) {
+  return `<section><h2>0. 시장 상태</h2><div class="grid">
     ${tile("데이터 모드", report.dataMode)}
+    ${tile("생성 시각", report.generatedAt)}
     ${tile("시장 상태", report.marketLabel)}
+    ${tile("오늘 돈의 방향", moneyDirection(report))}
     ${tile("강한 테마 TOP 3", report.themes.slice(0, 3).map((row) => `${row.theme}(${row.avgScore.toFixed(0)})`).join(", ") || "데이터 없음")}
-    ${tile("ETF 후보 TOP 5", report.etfTop5.map((row) => row.ticker).join(", ") || "데이터 없음")}
-    ${tile("ETF가 나은 테마", report.themes.filter((row) => row.theme.includes("ETF")).slice(0, 3).map((row) => row.theme).join(", ") || "데이터 없음")}
-    ${tile("오늘 꼭 확인할 조건", "거래량 / 20일선 / 추격 금지")}
+    ${tile("오늘의 원칙", "ETF는 테마 흐름, 개별 종목은 ETF보다 강할 때만 알파 후보")}
+  </div>${htmlList(["가격/거래량은 실제 데이터", "뉴스/옵션/ETF 구성종목 확산도/스프레드 데이터는 아직 미연결", "reasonConfidence는 HIGH를 사용하지 않음"])}</section>`;
+}
+
+function renderSplitConclusionHtml(report) {
+  return `<section><h2>오늘의 분리 결론</h2><div class="grid">
+    ${tile("ETF 행동 후보", report.etfActionCandidates.map((row) => row.ticker).join(", ") || "없음")}
+    ${tile("개별 종목 행동 후보", report.stockActionCandidates.map((row) => row.ticker).join(", ") || "없음")}
+    ${tile("ETF 우선 테마", report.etfTop5.slice(0, 3).map((row) => row.categoryType).filter((value, index, arr) => arr.indexOf(value) === index).join(", ") || "데이터 없음")}
+    ${tile("개별 종목 우선 테마", report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.primaryTheme).filter(Boolean).join(", ") || "관련 ETF 대비 추가 확인 필요")}
+    ${tile("오늘 최우선 실행 후보", report.topExecutionCandidate ? `${report.topExecutionCandidate.ticker} - ${report.topExecutionCandidate.explanation}` : "조건 충족 후보 없음")}
+    ${tile("하지 말아야 할 것", "추격 매수 금지 / ETF와 개별 종목 중복 베팅 금지 / 데이터 미연결 과신 금지")}
   </div></section>`;
+}
+
+function renderScoreGuideHtml() {
+  return `<section><h2>moneyFlowScore 산정 방식</h2>
+    <h3>score의 의미</h3>
+    <p>moneyFlowScore는 현재 해당 ETF 또는 종목으로 돈이 몰리고 있는 정도를 가격, 거래량, 추세, 신고가 근접도, ETF 대비 상대강도 등을 바탕으로 수치화한 점수다.</p>
+    <p>이 점수는 장기 가치평가 점수가 아니다. 지금 시장 참여자들이 더 비싸게 사줄 가능성이 있는 트레이딩 후보인지 판단하기 위한 단기/중기 모멘텀 점수다.</p>
+    <h3>기본 산정 요소</h3>
+    ${htmlList(["20일 수익률: 최근 1개월 수준의 중기 추세", "5일 수익률: 최근 1주일 수준의 단기 자금 유입", "1일 수익률: 직전 거래일의 단기 추격 매수세", "상대 거래량: 가격 상승과 함께 거래량 증가 여부", "52주 고점 대비 위치: 추세 추종 자금 유입 가능성", "추세 상태: 5일선/20일선/50일선 위치", "ETF 대비 상대강도: 개별 종목에만 적용", "데이터 신뢰도 패널티: 미연결 데이터가 있으면 HIGH confidence 사용 금지"])}
+    <h3>점수 구간 해석</h3>
+    ${htmlList(["80점 이상: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.", "65점 이상 80점 미만: 관심 후보. 눌림 또는 돌파 확인 후 진입 검토.", "50점 이상 65점 미만: 관찰 후보. 흐름은 있으나 우선순위는 낮음.", "50점 미만: 매매 금지 또는 후순위 후보."])}
+    <p><strong>주의:</strong> moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 자금 흐름 후보 점수이며, 진입 여부는 반드시 진입 조건과 무효화 조건을 함께 확인해야 한다.</p>
+  </section>`;
 }
 
 function renderActionHtml(row) {
@@ -617,7 +977,8 @@ function renderActionHtml(row) {
 
 function renderEtfHtml(row) {
   return `<article data-etf-card="${escapeHtml(row.ticker)}"><h3>[ETF ${escapeHtml(row.ticker)}] ${escapeHtml(row.name)} ${badge(row.status)}</h3>
-    <div class="grid">${tile("카테고리", row.categoryType)}${tile("moneyFlowScore", row.moneyFlowScore)}${tile("과열 리스크", row.overheatingRisk)}${tile("reasonConfidence", row.reasonConfidence)}${tile("todayActionLabel", row.todayActionLabel)}${tile("데이터", row.market.dataStatus)}</div>
+    <div class="grid">${tile("자산 유형", "ETF")}${tile("ETF 세부 카테고리", row.etfCategory)}${tile("ETF 역할", row.etfRole)}${tile("moneyFlowScore", row.moneyFlowScore)}${tile("과열 리스크", row.overheatingRisk)}${tile("reasonConfidence", row.reasonConfidence)}${tile("todayActionLabel", row.todayActionLabel)}${tile("데이터", row.market.dataStatus)}</div>
+    ${scoreBreakdownHtml(row)}
     ${fieldList(row)}
     ${chartImage(row)}
     <p class="muted">${escapeHtml(marketLine(row.market))}</p>
@@ -626,8 +987,10 @@ function renderEtfHtml(row) {
 
 function renderStockHtml(row) {
   return `<article data-stock-card="${escapeHtml(row.ticker)}"><h3>[${escapeHtml(row.ticker)}] ${escapeHtml(row.name)} ${badge(row.status)}</h3>
-    <div class="grid">${tile("primaryTheme", row.primaryTheme || "데이터 없음")}${tile("관련 ETF", row.relatedEtfs.map((etf) => etf.ticker).join(", ") || "없음")}${tile("moneyFlowScore", row.moneyFlowScore)}${tile("reasonConfidence", row.reasonConfidence)}${tile("과열 리스크", row.overheatingRisk)}${tile("todayActionLabel", row.todayActionLabel)}</div>
+    <div class="grid">${tile("자산 유형", "STOCK")}${tile("primaryTheme", row.primaryTheme || "데이터 없음")}${tile("relatedEtfs", row.relatedEtfs.map((etf) => etf.ticker).join(", ") || "관련 ETF 데이터 부족")}${tile("moneyFlowScore", row.moneyFlowScore)}${tile("reasonConfidence", row.reasonConfidence)}${tile("todayActionLabel", row.todayActionLabel)}${tile("ETF 대비 상대강도", row.relativeStrengthVsEtf)}</div>
+    ${scoreBreakdownHtml(row)}
     ${fieldList(row)}
+    ${htmlList([`<strong>왜 ETF가 아니라 이 종목인가?</strong> ${escapeHtml(row.whyStockOverEtf)}`, `<strong>ETF가 더 나은 경우</strong> ${escapeHtml(row.whenEtfIsBetter)}`])}
     ${row.holdingInfo ? `<p class="muted">${escapeHtml(row.holdingInfo)}</p>` : ""}
     ${chartImage(row)}
     <p class="muted">${escapeHtml(marketLine(row.market))}</p>
@@ -636,6 +999,7 @@ function renderStockHtml(row) {
 
 function fieldList(row) {
   return htmlList([
+    `<strong>기준일:</strong> ${escapeHtml(row.market?.dataDate || "데이터 없음")} / <strong>종가:</strong> ${escapeHtml(price(row.market?.lastClose))} / <strong>1일:</strong> ${escapeHtml(pct(row.market?.dailyChangePct))} / <strong>5일:</strong> ${escapeHtml(pct(row.market?.return5dPct))} / <strong>20일:</strong> ${escapeHtml(pct(row.market?.return20dPct))} / <strong>상대 거래량:</strong> ${escapeHtml(num(row.market?.relativeVolume, 2))}배`,
     `<strong>whyMoneyIsFlowing:</strong> ${escapeHtml(row.whyMoneyIsFlowing)}`,
     `<strong>likelyNextBuyer:</strong> ${escapeHtml(row.likelyNextBuyer)}`,
     `<strong>whyThisCouldTradeHigher:</strong> ${escapeHtml(row.whyThisCouldTradeHigher)}`,
@@ -643,6 +1007,28 @@ function fieldList(row) {
     `<strong>무효화 조건:</strong> ${escapeHtml(row.invalidationCondition)}`,
     `<strong>차트 요약:</strong> ${escapeHtml(row.chartSummary)}`
   ]);
+}
+
+function scoreBreakdownHtml(row) {
+  const b = row.moneyFlowScoreBreakdown;
+  if (!b) return "<p>moneyFlowScore 산정 근거: 데이터 없음</p>";
+  const relative = row.assetType === "STOCK" ? `${tile("ETF 대비 상대강도 점수", signed(b.relativeStrengthScore ?? 0))}` : "";
+  return `<div>
+    <h4>moneyFlowScore 산정 근거</h4>
+    <div class="grid">
+      ${tile("총점", b.totalScore)}
+      ${tile("점수 해석", scoreInterpretation(b.totalScore))}
+      ${tile("추세 점수", signed(b.trendScore))}
+      ${tile("단기 모멘텀", signed(b.shortMomentumScore))}
+      ${tile("중기 모멘텀", signed(b.mediumMomentumScore))}
+      ${tile("거래량 점수", signed(b.volumeScore))}
+      ${tile("신고가 근접 점수", signed(b.highProximityScore))}
+      ${tile("이동평균 점수", signed(b.movingAverageScore))}
+      ${relative}
+      ${tile("리스크 패널티", b.riskPenalty ? `-${b.riskPenalty}` : "0")}
+    </div>
+    <p class="muted">${escapeHtml(scoreOneLine(row))}</p>
+  </div>`;
 }
 
 function renderEtfTable(etfs) {
