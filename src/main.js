@@ -658,6 +658,7 @@ async function buildReport() {
   const previousSnapshot = loadPreviousRecommendationSnapshot();
   const previousRecommendationReviews = buildPreviousRecommendationReviews(previousSnapshot, stocks, etfs);
   const stockScanSummary = buildStockScanSummary(stockUniverse, stocks, detailedScanTickers);
+  const stockUniverseScan = buildStockUniverseScanSummary(stockUniverse, stocks);
   const chartTickers = unique([
     ...actionCandidates.map((row) => row.ticker),
     ...etfTop5.map((row) => row.ticker),
@@ -677,6 +678,7 @@ async function buildReport() {
     marketLabel: marketStatus(etfs),
     stockUniverse,
     stockScanSummary,
+    stockUniverseScan,
     previousSnapshot,
     previousRecommendationReviews,
     etfs,
@@ -746,6 +748,65 @@ function buildStockScanSummary(stockUniverse, stocks, detailedScanTickers) {
   };
 }
 
+function buildStockUniverseScanSummary(stockUniverse, stocks) {
+  const results = stocks.map(stockScanResult).sort(compareStockScanResults);
+  const successCount = results.filter((row) => row.scanStatus === "OK").length;
+  const failedCount = results.filter((row) => row.scanStatus !== "OK").length;
+  return {
+    universeName: "NASDAQ_100",
+    asOfDate: stockUniverse.asOfDate,
+    totalCount: stockUniverse.members.length,
+    successCount,
+    failedCount,
+    scoreBands: {
+      strong: results.filter((row) => Number(row.moneyFlowScore) >= 80).length,
+      interest: results.filter((row) => Number(row.moneyFlowScore) >= 65 && Number(row.moneyFlowScore) < 80).length,
+      watch: results.filter((row) => Number(row.moneyFlowScore) >= 50 && Number(row.moneyFlowScore) < 65).length,
+      low: results.filter((row) => row.scanStatus !== "OK" || Number(row.moneyFlowScore) < 50).length
+    },
+    results
+  };
+}
+
+function stockScanResult(row) {
+  const ok = row.market?.dataStatus === "ok" && Number.isFinite(row.moneyFlowScore);
+  return {
+    ticker: row.ticker,
+    name: row.name || row.ticker,
+    assetType: "STOCK",
+    moneyFlowScore: ok ? row.moneyFlowScore : null,
+    todayActionLabel: row.todayActionLabel,
+    reasonConfidence: row.reasonConfidence,
+    oneDayReturn: row.market?.dailyChangePct ?? null,
+    fiveDayReturn: row.market?.return5dPct ?? null,
+    twentyDayReturn: row.market?.return20dPct ?? null,
+    relativeVolume: row.market?.relativeVolume ?? null,
+    relatedEtfs: row.relatedEtfs?.map((etf) => etf.ticker) || row.relatedEtfSymbols || ["QQQ 기본 매핑"],
+    scoreBandLabel: ok ? scoreBandLabel(row.moneyFlowScore) : "계산 실패",
+    scanStatus: ok ? "OK" : "FAILED",
+    failureReason: ok ? "" : row.market?.error || "price/volume data missing or score calculation failed"
+  };
+}
+
+function compareStockScanResults(a, b) {
+  const scoreA = Number.isFinite(a.moneyFlowScore) ? a.moneyFlowScore : -1;
+  const scoreB = Number.isFinite(b.moneyFlowScore) ? b.moneyFlowScore : -1;
+  if (scoreA !== scoreB) return scoreB - scoreA;
+  const r5a = Number.isFinite(a.fiveDayReturn) ? a.fiveDayReturn : -999;
+  const r5b = Number.isFinite(b.fiveDayReturn) ? b.fiveDayReturn : -999;
+  if (r5a !== r5b) return r5b - r5a;
+  const volA = Number.isFinite(a.relativeVolume) ? a.relativeVolume : -1;
+  const volB = Number.isFinite(b.relativeVolume) ? b.relativeVolume : -1;
+  return volB - volA;
+}
+
+function scoreBandLabel(score) {
+  if (score >= 80) return "강한 자금 유입 후보";
+  if (score >= 65) return "관심 후보";
+  if (score >= 50) return "관찰 후보";
+  return "후순위/매매 금지";
+}
+
 function loadPreviousRecommendationSnapshot() {
   const previousPath = path.join(DATA_DIR, "previous-report.json");
   const latestPath = path.join(DATA_DIR, "latest-report.json");
@@ -779,6 +840,7 @@ function createRecommendationSnapshot(report) {
   return {
     reportDate: report.reportDate,
     generatedAt: report.generatedAt,
+    stockUniverseScan: report.stockUniverseScan,
     etfActionCandidates: report.etfActionCandidates.map(snapshotItem),
     stockActionCandidates: report.stockActionCandidates.map(snapshotItem),
     stockEntryCandidates: report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map(snapshotItem),
@@ -1096,6 +1158,10 @@ ${report.stockCautionRows.map((row) => `#### [${row.ticker}] ${row.name}
 - 제외/주의 사유: ${row.stockVsEtfDecision === "ETF_PREFERRED" ? "ETF 대비 약세" : row.status === STATUS.BAN ? "매매 조건 미충족" : "개별 종목 우선 근거 부족"}
 - 재검토 조건: ${row.entryCondition}
 `).join("\n") || "해당 없음"}
+
+### Nasdaq-100 전체 moneyFlowScore 표
+
+${renderStockUniverseScoreMarkdown(report.stockUniverseScan)}
 
 ## 감시 ETF 목록
 
@@ -1425,6 +1491,50 @@ function renderPreviousReviewMarkdown(row) {
 - 다음 확인 조건: ${row.nextCondition || "데이터 없음"}`;
 }
 
+function renderStockUniverseScoreMarkdown(scan) {
+  if (!scan) return "Nasdaq-100 전체 스캔 데이터 없음";
+  const failures = scan.results.filter((row) => row.scanStatus !== "OK");
+  return `아래 표는 오늘 Nasdaq-100 전체 구성종목을 대상으로 동일한 moneyFlowScore 로직을 적용한 결과다. 추천 후보는 이 표의 상위권 중 진입 조건, 거래량, 관련 ETF 대비 상대강도, 리스크 패널티를 추가로 반영해 선별된다.
+
+moneyFlowScore는 매수 추천 점수가 아니라 가격/거래량 기반의 자금 흐름 후보 점수다. 점수가 높아도 진입 조건과 무효화 조건을 반드시 확인해야 한다.
+
+- 총 스캔 종목 수: ${scan.totalCount}
+- 점수 계산 성공: ${scan.successCount}
+- 점수 계산 실패: ${scan.failedCount}
+- moneyFlowScore 80점 이상: ${scan.scoreBands.strong}
+- moneyFlowScore 65~79점: ${scan.scoreBands.interest}
+- moneyFlowScore 50~64점: ${scan.scoreBands.watch}
+- moneyFlowScore 50점 미만: ${scan.scoreBands.low}
+
+상위 20개 요약:
+
+${stockScoreTableMarkdown(scan.results.slice(0, 20))}
+
+<details>
+<summary>Nasdaq-100 전체 moneyFlowScore 표 펼치기</summary>
+
+${stockScoreTableMarkdown(scan.results)}
+
+</details>
+
+#### 데이터 수집 실패 종목
+${failures.length ? failures.map((row) => `- ${row.ticker}: ${row.failureReason || "score calculation failed"}`).join("\n") : "데이터 수집 실패 종목 없음"}`;
+}
+
+function stockScoreTableMarkdown(rows) {
+  return `| 순위 | 티커 | 이름 | moneyFlowScore | 점수 구간 | 오늘 판단 | 신뢰도 | 1일 | 5일 | 20일 | 상대 거래량 | 관련 ETF |
+|---:|---|---|---:|---|---|---|---:|---:|---:|---:|---|
+${rows.map((row, index) => `| ${index + 1} | ${row.ticker} | ${escapePipes(row.name || row.ticker)} | ${row.moneyFlowScore ?? "N/A"} | ${row.scoreBandLabel || "-"} | ${row.todayActionLabel || "-"} | ${row.reasonConfidence || "-"} | ${pctOrDash(row.oneDayReturn)} | ${pctOrDash(row.fiveDayReturn)} | ${pctOrDash(row.twentyDayReturn)} | ${row.relativeVolume === null || row.relativeVolume === undefined ? "-" : num(row.relativeVolume, 2)} | ${(row.relatedEtfs || []).join(", ") || "-"} |`).join("\n")}`;
+}
+
+function escapePipes(value) {
+  return String(value || "").replace(/\|/g, "/");
+}
+
+function pctOrDash(value) {
+  return value === null || value === undefined || Number.isNaN(Number(value)) ? "-" : pct(value);
+}
+
 function renderHtml(report) {
   const etfBest = report.etfActionCandidates[0];
   const stockBest = report.stockActionCandidates[0];
@@ -1447,7 +1557,9 @@ function renderHtml(report) {
     .ready { background: #047857; } .candidate { background: #2563eb; } .watch, .hold { background: #4f46e5; } .profit { background: #0f766e; } .exit { background: #c2410c; } .ban { background: #991b1b; }
     .muted { color: #5d6670; font-size: 14px; } .purpose { font-weight: 800; }
     .chart { width: 100%; max-width: 520px; height: auto; border: 1px solid #e5e7eb; border-radius: 6px; background: #fff; }
+    .table-scroll { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; font-size: 14px; } th, td { border-top: 1px solid #d9dee3; padding: 8px; text-align: left; vertical-align: top; }
+    td.num, th.num { text-align: right; white-space: nowrap; } td.ticker { font-weight: 800; white-space: nowrap; }
     ul { padding-left: 20px; } li { margin: 4px 0; }
     @media (max-width: 740px) { main { width: min(100% - 16px, 1120px); } .grid { grid-template-columns: 1fr; } h1 { font-size: 22px; } section, article, .hero { padding: 12px; } table { font-size: 12px; } }
   </style>
@@ -1501,6 +1613,7 @@ function renderHtml(report) {
       ${report.previousRecommendationReviews.length ? report.previousRecommendationReviews.map(renderPreviousReviewHtml).join("") : "<p>전일 추천 종목 데이터 없음</p>"}
       <h3>2-4. ETF 대비 개별 종목 판단 로직</h3>${htmlList(["관련 ETF의 5일/20일 수익률과 개별 종목의 5일/20일 수익률을 비교한다.", "관련 ETF의 상대 거래량과 개별 종목의 상대 거래량을 비교한다.", "개별 종목이 관련 ETF보다 강하면 개별 종목 우선 가능으로 본다.", "관련 ETF가 더 강하면 개별 종목 대신 ETF를 우선한다."])}
       <h3>2-5. 개별 종목 제외/주의 후보</h3>${htmlList(report.stockCautionRows.map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | 재검토: ${escapeHtml(row.entryCondition)}`))}
+      <h3>Nasdaq-100 전체 moneyFlowScore 표</h3>${renderStockUniverseScoreHtml(report.stockUniverseScan)}
     </section>
     <section><h2>감시 ETF 목록</h2>${renderEtfTable(report.etfs)}</section>
     <section><h2>3. 최종 실행 판단</h2>
@@ -1608,6 +1721,34 @@ function renderPreviousReviewHtml(row) {
     </div>
     ${htmlList([`오늘 판단 근거: ${escapeHtml(row.todayReason)}`, `다음 확인 조건: ${escapeHtml(row.nextCondition || "데이터 없음")}`])}
   </article>`;
+}
+
+function renderStockUniverseScoreHtml(scan) {
+  if (!scan) return "<p>Nasdaq-100 전체 스캔 데이터 없음</p>";
+  const failures = scan.results.filter((row) => row.scanStatus !== "OK");
+  return `<p>아래 표는 오늘 Nasdaq-100 전체 구성종목을 대상으로 동일한 moneyFlowScore 로직을 적용한 결과다. 추천 후보는 이 표의 상위권 중 진입 조건, 거래량, 관련 ETF 대비 상대강도, 리스크 패널티를 추가로 반영해 선별된다.</p>
+    <p class="muted">moneyFlowScore는 매수 추천 점수가 아니라 가격/거래량 기반의 자금 흐름 후보 점수다. 점수가 높아도 진입 조건과 무효화 조건을 반드시 확인해야 한다.</p>
+    <div class="grid">
+      ${tile("총 스캔 종목 수", scan.totalCount)}
+      ${tile("점수 계산 성공", scan.successCount)}
+      ${tile("점수 계산 실패", scan.failedCount)}
+      ${tile("80점 이상", scan.scoreBands.strong)}
+      ${tile("65~79점", scan.scoreBands.interest)}
+      ${tile("50~64점", scan.scoreBands.watch)}
+      ${tile("50점 미만", scan.scoreBands.low)}
+    </div>
+    <h4>상위 20개 요약</h4>
+    <div class="table-scroll">${stockScoreTableHtml(scan.results.slice(0, 20))}</div>
+    <details>
+      <summary><strong>Nasdaq-100 전체 moneyFlowScore 표 펼치기</strong></summary>
+      <div class="table-scroll">${stockScoreTableHtml(scan.results)}</div>
+    </details>
+    <h4>데이터 수집 실패 종목</h4>
+    ${htmlList(failures.length ? failures.map((row) => `${escapeHtml(row.ticker)}: ${escapeHtml(row.failureReason || "score calculation failed")}`) : ["데이터 수집 실패 종목 없음"])}`;
+}
+
+function stockScoreTableHtml(rows) {
+  return `<table data-stock-universe-table><thead><tr><th class="num">순위</th><th>티커</th><th>이름</th><th class="num">moneyFlowScore</th><th>점수 구간</th><th>오늘 판단</th><th>신뢰도</th><th class="num">1일</th><th class="num">5일</th><th class="num">20일</th><th class="num">상대 거래량</th><th>관련 ETF</th></tr></thead><tbody>${rows.map((row, index) => `<tr><td class="num">${index + 1}</td><td class="ticker">${escapeHtml(row.ticker)}</td><td>${escapeHtml(row.name || row.ticker)}</td><td class="num">${row.moneyFlowScore ?? "N/A"}</td><td>${escapeHtml(row.scoreBandLabel || "-")}</td><td>${escapeHtml(row.todayActionLabel || "-")}</td><td>${escapeHtml(row.reasonConfidence || "-")}</td><td class="num">${escapeHtml(pctOrDash(row.oneDayReturn))}</td><td class="num">${escapeHtml(pctOrDash(row.fiveDayReturn))}</td><td class="num">${escapeHtml(pctOrDash(row.twentyDayReturn))}</td><td class="num">${row.relativeVolume === null || row.relativeVolume === undefined ? "-" : escapeHtml(num(row.relativeVolume, 2))}</td><td>${escapeHtml((row.relatedEtfs || []).join(", ") || "-")}</td></tr>`).join("")}</tbody></table>`;
 }
 
 function supplementalDetailsHtml(row) {

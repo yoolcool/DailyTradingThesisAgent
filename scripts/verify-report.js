@@ -119,6 +119,12 @@ function main() {
   assert(markdown.includes("상세 데이터 수집 대상: 가격/거래량 1차 스캔 상위 20개"), "Markdown missing staged detailed data collection note");
   assert(markdown.includes("전일 추천 종목 점검"), "Markdown missing previous recommendation review");
   assert(markdown.includes("실제 계좌 보유 종목이 아니라 전일 리포트"), "Previous review must distinguish account holdings from report tracking");
+  assert(markdown.includes("Nasdaq-100 전체 moneyFlowScore 표"), "Markdown missing full Nasdaq-100 score table section");
+  assert(markdown.includes("| 순위 | 티커 | 이름 | moneyFlowScore |"), "Markdown missing required stock score table columns");
+  assert(markdown.includes("Nasdaq-100 전체 moneyFlowScore 표 펼치기"), "Markdown missing collapsible full table summary");
+  assert(markdown.includes("데이터 수집 실패 종목"), "Markdown missing failed stock scan subsection");
+  assert(html.includes("data-stock-universe-table"), "HTML missing full stock universe table");
+  assert(html.includes("table-scroll"), "HTML table must be wrapped for horizontal scrolling");
 
   assert(fs.existsSync(chartsDir), "Missing reports/charts directory");
   const chartFiles = fs.readdirSync(chartsDir).filter((name) => name.endsWith(".png"));
@@ -129,6 +135,9 @@ function main() {
   }
   const marketData = readJson("market_data_real.json");
   assert((marketData.universe?.stockUniverseCount || 0) >= 90, "Market data missing expanded Nasdaq-100 universe count");
+  const latestSnapshot = readJson("latest-report.json");
+  assert(latestSnapshot.stockUniverseScan?.results?.length >= 90, "Snapshot missing stockUniverseScan results");
+  assert(latestSnapshot.stockUniverseScan.results[0].moneyFlowScore >= latestSnapshot.stockUniverseScan.results.at(-1).moneyFlowScore, "Snapshot stockUniverseScan results should be sorted by score");
 
   console.log("Verified provider-aware report sections, dynamic data status, scoring fields, ETF mapping, and charts");
   console.log(`Verified chart count: ${chartFiles.length}`);
