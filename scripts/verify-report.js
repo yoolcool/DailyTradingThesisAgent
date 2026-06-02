@@ -4,6 +4,7 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(ROOT, "data");
 const REPORTS_DIR = path.join(ROOT, "reports");
+const DOCS_DIR = path.join(ROOT, "docs");
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -29,6 +30,7 @@ function sumRiskPenalty(summary) {
 function main() {
   const markdown = readText(path.join(REPORTS_DIR, "latest.md"));
   const html = readText(path.join(REPORTS_DIR, "latest.html"));
+  const docsHtml = readText(path.join(DOCS_DIR, "index.html"));
   const chartsDir = path.join(REPORTS_DIR, "charts");
 
   assert(markdown.includes("REAL DATA TEST") || markdown.includes("MOCK DATA"), "Report missing data mode banner");
@@ -37,6 +39,7 @@ function main() {
   for (const pattern of ["\uFFFD", "?꾪", "?좏", "?댁", "?뺤", "?좊", "?덉", "?섎", "?곌"]) {
     assert(!markdown.includes(pattern), `Markdown contains broken Korean pattern: ${pattern}`);
     assert(!html.includes(pattern), `HTML contains broken Korean pattern: ${pattern}`);
+    assert(!docsHtml.includes(pattern), `Docs HTML contains broken Korean pattern: ${pattern}`);
   }
 
   const forbiddenTerms = [
@@ -66,10 +69,13 @@ function main() {
   }
 
   assert(!html.includes("<details open"), "HTML details should be collapsed by default");
+  assert(html.includes("<details"), "HTML should render detailed evidence in details/summary blocks");
   assert(html.includes('class="score-details"'), "Score details should be rendered as collapsed details");
   assert(html.includes("data-stock-universe-table"), "HTML missing Nasdaq-100 score table");
   assert(html.includes("table-scroll"), "HTML missing scroll wrapper for wide table");
   assert(markdown.includes("상세 근거"), "Markdown should move detailed evidence below candidate cards");
+  assert(!markdown.includes("- Technology:"), "Markdown should not expose repeated broad Technology theme");
+  assert(!html.includes(">Technology:<"), "HTML should not expose repeated broad Technology theme");
 
   assert(fs.existsSync(chartsDir), "Missing reports/charts directory");
   const chartFiles = fs.readdirSync(chartsDir).filter((name) => name.endsWith(".png"));
@@ -82,7 +88,8 @@ function main() {
     "src/data/liquidityProvider.js",
     "src/data/nasdaq100Universe.js",
     "config/nasdaq100Fallback.json",
-    "data/latest-report.json"
+    "data/latest-report.json",
+    "docs/index.html"
   ]) {
     assert(fs.existsSync(path.join(ROOT, file)), `Missing provider/env file: ${file}`);
   }
@@ -110,16 +117,23 @@ function main() {
     assert(item.moneyFlowScoreInitial !== undefined, `Snapshot missing initial score for ${item.ticker}`);
     assert(item.moneyFlowScoreFinal !== undefined, `Snapshot missing final score for ${item.ticker}`);
     assert(item.finalRawScore !== undefined, `Snapshot missing finalRawScore for ${item.ticker}`);
+    assert(item.reasonConfidence, `Snapshot missing reasonConfidence for ${item.ticker}`);
+    assert(item.reasonConfidenceExplanation, `Snapshot missing reasonConfidenceExplanation for ${item.ticker}`);
+    assert(item.tieBreakerReason, `Snapshot missing tieBreakerReason for ${item.ticker}`);
     assert(!JSON.stringify(item).includes("options"), `Snapshot scored item still includes options text for ${item.ticker}`);
     if (item.reasonConfidence === "HIGH") {
       assert(item.directCatalyst && item.directCatalyst.startsWith("직접 촉매:"), `HIGH confidence item missing direct catalyst: ${item.ticker}`);
+    } else {
+      assert(!item.directCatalyst || item.reasonConfidence !== "HIGH", `Non-HIGH item should not be promoted by catalyst alone: ${item.ticker}`);
     }
   }
 
   assert(markdown.includes("finalRawScore"), "Markdown TOP/action cards should show finalRawScore");
   assert(html.includes("finalRawScore"), "HTML TOP/action cards should show finalRawScore");
-  assert(markdown.includes("tie-breaker"), "Markdown TOP/action cards should show tie-breaker");
-  assert(html.includes("tie-breaker"), "HTML TOP/action cards should show tie-breaker");
+  assert(markdown.includes("tieBreakerReason"), "Markdown TOP/action cards should show tieBreakerReason");
+  assert(html.includes("tieBreakerReason"), "HTML TOP/action cards should show tieBreakerReason");
+  assert(markdown.includes("reasonConfidenceExplanation"), "Markdown should show reasonConfidenceExplanation");
+  assert(html.includes("reasonConfidenceExplanation"), "HTML should show reasonConfidenceExplanation");
 
   const candidatesWithRisk = [
     ...(latestSnapshot.stockActionCandidates || []),
@@ -129,7 +143,7 @@ function main() {
     assert(row.riskPenaltySummary.totalPenalty === sumRiskPenalty(row.riskPenaltySummary), `Risk penalty item sum mismatch for ${row.ticker}`);
   }
 
-  console.log("Verified concise report, UTF-8 output, HIGH catalyst rules, raw-score ranking, collapsed details, and charts");
+  console.log("Verified concise report, UTF-8 output, HIGH catalyst rules, raw-score ranking, collapsed details, themes, and charts");
   console.log(`Verified chart count: ${chartFiles.length}`);
 }
 
