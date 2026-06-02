@@ -5,7 +5,6 @@ const { calculateEtfBreadth, fetchEtfHoldings } = require("./data/etfHoldingsPro
 const { fetchLiquiditySpread } = require("./data/liquidityProvider");
 const { fetchNasdaq100Universe } = require("./data/nasdaq100Universe");
 const { fetchNewsForTicker } = require("./data/newsProvider");
-const { fetchOptionsFlow } = require("./data/optionsProvider");
 const { aggregateStatus, statusLabel } = require("./data/providerUtils");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -224,7 +223,6 @@ function scoreAsset(item, assetType, relatedEtfStrength = 0, supplemental = {}) 
       relativeStrengthScore: assetType === "STOCK" ? 0 : undefined,
       priceVolumeScore: 0,
       newsScore: 0,
-      optionsScore: 0,
       etfBreadthScore: assetType === "ETF" ? 0 : undefined,
       liquidityScore: 0,
       riskPenalty: 0,
@@ -264,7 +262,6 @@ function scoreAsset(item, assetType, relatedEtfStrength = 0, supplemental = {}) 
   const overheatingFlag = daily >= 4 && highProximity && relVol < 1.2;
   const blowoffFlag = daily >= 6 && highProximity && relVol >= 1.8;
   const newsScore = Number(supplemental.news?.newsScore || 0);
-  const optionsScore = Number(supplemental.options?.optionsScore || 0);
   const etfBreadthScore = assetType === "ETF" ? Number(supplemental.etfBreadth?.etfBreadthScore || 0) : undefined;
   const liquidityScore = Number(supplemental.liquidity?.liquidityScore || 0);
   const closes = (item.history || []).map((row) => row.close).filter((value) => Number.isFinite(value));
@@ -302,16 +299,12 @@ function scoreAsset(item, assetType, relatedEtfStrength = 0, supplemental = {}) 
   if ((supplemental.news?.newsScore || 0) < 0) {
     riskItems.push(riskItem("NEGATIVE_NEWS", "negative news", Math.abs(supplemental.news.newsScore), supplemental.news.headlineSummary || "News score is negative.", "Wait for news risk to clear."));
   }
-  if ((supplemental.options?.optionsScore || 0) < 0) {
-    riskItems.push(riskItem("OPTIONS_BEARISH", "bearish options signal", Math.abs(supplemental.options.optionsScore), "Options score is negative.", "Watch until options flow improves."));
-  }
   if ((supplemental.liquidity?.liquidityScore || 0) < 0) {
     const riskType = supplemental.liquidity?.liquiditySignal === "LOW_LIQUIDITY" ? "LOW_LIQUIDITY" : "WIDE_SPREAD";
     riskItems.push(riskItem(riskType, riskType === "LOW_LIQUIDITY" ? "low liquidity" : "wide spread", Math.abs(supplemental.liquidity.liquidityScore), `Liquidity signal: ${supplemental.liquidity?.liquiditySignal || "UNKNOWN"}.`, "Avoid market-order chasing."));
   }
   const watchItems = [];
   if (!isConnectedLike(supplemental.news?.status)) watchItems.push("news data not connected or unavailable");
-  if (!isConnectedLike(supplemental.options?.status)) watchItems.push("options data not connected or unavailable");
   if (assetType === "ETF" && !isConnectedLike(supplemental.etfBreadth?.status)) watchItems.push("ETF breadth data not connected");
   if (!isConnectedLike(supplemental.liquidity?.status)) watchItems.push("liquidity/spread data is fallback or unavailable");
   if (assetType === "STOCK" && relatedEtfStrength <= 0) watchItems.push("related ETF relative strength mapping needs confirmation");
@@ -327,15 +320,12 @@ function scoreAsset(item, assetType, relatedEtfStrength = 0, supplemental = {}) 
   if (aboveMa5 && aboveMa20) reasons.push("이동평균 위 추세 유지");
   if (assetType === "STOCK" && relatedEtfStrength > 0) reasons.push("관련 ETF 강세 테마 안의 개별 종목");
   if (newsScore > 0) reasons.push("뉴스 흐름이 가격/거래량 근거 보강");
-  if (optionsScore > 0) reasons.push("옵션 수급이 단기 매수세 보강");
   if (assetType === "ETF" && etfBreadthScore > 0) reasons.push("ETF 구성종목 확산도 양호");
   if (liquidityScore > 0) reasons.push("거래대금 기준 유동성 양호");
   if (newsScore < 0) reasons.push("부정 뉴스 또는 이벤트 리스크");
-  if (optionsScore < 0) reasons.push("옵션 수급 방어적");
   if (liquidityScore < 0) reasons.push("유동성/스프레드 주의");
   if (riskPenalty < 0) reasons.push("단기 과열/추격 위험 존재");
   if (!isConnectedLike(supplemental.news?.status)) reasons.push("뉴스 데이터 미연결 또는 수집 실패");
-  if (!isConnectedLike(supplemental.options?.status)) reasons.push("옵션 데이터 미연결 또는 수집 실패");
   if (assetType === "ETF" && !isConnectedLike(supplemental.etfBreadth?.status)) reasons.push("ETF 구성종목 확산도 데이터 미연결");
   if (!isConnectedLike(supplemental.liquidity?.status)) reasons.push("스프레드/유동성 데이터 미연결 또는 fallback 제한");
 
@@ -344,13 +334,13 @@ function scoreAsset(item, assetType, relatedEtfStrength = 0, supplemental = {}) 
   const initialDisplayScore = displayScore(initialRawScore);
   const etfBreadthComponent = assetType === "ETF" ? etfBreadthScore : 0;
   const relativeStrengthComponent = assetType === "STOCK" ? relativeStrengthScore : 0;
-  const finalRawScore = rounded(initialRawScore + newsScore + optionsScore + etfBreadthComponent + liquidityScore + relativeStrengthComponent + riskPenalty - dataConfidencePenalty);
+  const finalRawScore = rounded(initialRawScore + newsScore + etfBreadthComponent + liquidityScore + relativeStrengthComponent + riskPenalty - dataConfidencePenalty);
   const finalDisplayScore = displayScore(finalRawScore);
   const wasCapped = finalRawScore !== finalDisplayScore;
   const capReason = wasCapped
     ? `raw score ${finalRawScore} capped to displayed score ${finalDisplayScore}`
     : "cap not applied";
-  const formulaText = `${[initialRawScore, newsScore, optionsScore, etfBreadthComponent, liquidityScore, relativeStrengthComponent, riskPenalty, dataConfidencePenalty ? -dataConfidencePenalty : 0].map(signed).join(" + ").replace(/\+ -/g, "- ")} = ${finalRawScore}${wasCapped ? ` -> ${finalDisplayScore}` : ""}`;
+  const formulaText = `${[initialRawScore, newsScore, etfBreadthComponent, liquidityScore, relativeStrengthComponent, riskPenalty, dataConfidencePenalty ? -dataConfidencePenalty : 0].map(signed).join(" + ").replace(/\+ -/g, "- ")} = ${finalRawScore}${wasCapped ? ` -> ${finalDisplayScore}` : ""}`;
   const breakdown = {
     totalScore: finalDisplayScore,
     initialScore: initialDisplayScore,
@@ -366,7 +356,6 @@ function scoreAsset(item, assetType, relatedEtfStrength = 0, supplemental = {}) 
     movingAverageScore: rounded(movingAverageScore),
     priceVolumeScore: initialRawScore,
     newsScore,
-    optionsScore,
     etfBreadthScore: assetType === "ETF" ? etfBreadthScore : undefined,
     liquidityScore,
     relativeStrengthScore: assetType === "STOCK" ? rounded(relativeStrengthScore) : undefined,
@@ -421,7 +410,6 @@ function dataUsedFlags(supplemental, priceVolume) {
   return {
     priceVolume,
     news: isConnectedLike(supplemental.news?.status) && (supplemental.news?.itemCount || 0) > 0,
-    options: isConnectedLike(supplemental.options?.status) && Boolean(supplemental.options?.hasOptionsData),
     etfBreadth: isConnectedLike(supplemental.etfBreadth?.status) && Boolean(supplemental.etfBreadth?.sampledHoldingsCount),
     liquiditySpread: isConnectedLike(supplemental.liquidity?.status),
     relativeStrength: priceVolume
@@ -431,22 +419,20 @@ function dataUsedFlags(supplemental, priceVolume) {
 function computeReasonConfidence(assetType, item, score, weakVolume, supplemental, relatedEtfStrength) {
   if (!item || item.dataStatus !== "ok" || weakVolume || score < 35) return "LOW";
   const used = dataUsedFlags(supplemental, true);
-  const connectedCount = [used.news, used.options, used.etfBreadth, used.liquiditySpread].filter(Boolean).length;
-  const hasNewsOrOptions = used.news || used.options;
+  const connectedCount = [used.news, used.etfBreadth, used.liquiditySpread].filter(Boolean).length;
   const hasNegativeNews = (supplemental.news?.sentimentCounts?.negative || 0) > (supplemental.news?.sentimentCounts?.positive || 0);
   const badLiquidity = ["WIDE_SPREAD", "LOW_LIQUIDITY"].includes(supplemental.liquidity?.liquiditySignal);
   const etfOk = assetType !== "ETF" || used.etfBreadth;
   const stockOk = assetType !== "STOCK" || relatedEtfStrength > 0;
-  if (connectedCount >= 2 && hasNewsOrOptions && etfOk && stockOk && !hasNegativeNews && !badLiquidity) return "HIGH";
+  if (connectedCount >= 2 && etfOk && stockOk && !hasNegativeNews && !badLiquidity) return "HIGH";
   return "MEDIUM";
 }
 
 function supplementalReasonLine(assetType, supplemental) {
   const parts = [];
-  if ((supplemental.news?.newsScore || 0) > 0) parts.push(`?댁뒪: ${supplemental.news.headlineSummary}`);
-  if ((supplemental.options?.optionsScore || 0) > 0) parts.push("?듭뀡: 肄??섍툒 ?곗쐞 ?뺤씤");
-  if (assetType === "ETF" && (supplemental.etfBreadth?.etfBreadthScore || 0) > 0) parts.push(`ETF ?뺤궛?? ${supplemental.etfBreadth.breadthSignal}`);
-  if ((supplemental.liquidity?.liquidityScore || 0) > 0) parts.push(`?좊룞?? ${supplemental.liquidity.liquiditySignal}`);
+  if ((supplemental.news?.newsScore || 0) > 0) parts.push(`뉴스: ${supplemental.news.headlineSummary}`);
+  if (assetType === "ETF" && (supplemental.etfBreadth?.etfBreadthScore || 0) > 0) parts.push(`ETF 확산도: ${supplemental.etfBreadth.breadthSignal}`);
+  if ((supplemental.liquidity?.liquidityScore || 0) > 0) parts.push(`유동성: ${supplemental.liquidity.liquiditySignal}`);
   return parts.join(" / ");
 }
 
@@ -492,7 +478,6 @@ function enrichEtf(etf, marketData, supplementalData = {}) {
     etfCategory: categoryType,
     etfRole: etfRole(etf.ticker, categoryType),
     newsSummary: supplemental.news,
-    optionsSummary: supplemental.options,
     etfBreadthSummary: supplemental.etfBreadth,
     liquiditySummary: supplemental.liquidity,
     market,
@@ -530,7 +515,6 @@ function enrichStock(stock, etfs, marketData, supplementalData = {}) {
     market,
     relatedEtfs,
     newsSummary: supplemental.news,
-    optionsSummary: supplemental.options,
     liquiditySummary: supplemental.liquidity,
     relativeStrengthVsEtf: relativeStrength.summary,
     whyStockOverEtf: whyStockOverEtf(stock.ticker, relativeStrength, stockVsEtfDecision),
@@ -705,30 +689,32 @@ function invalidationCondition(item) {
 function marketStatus(etfs) {
   const qqq = etfs.find((etf) => etf.ticker === "QQQ")?.market;
   const spy = etfs.find((etf) => etf.ticker === "SPY")?.market;
-  if (qqq?.dataStatus !== "ok" || spy?.dataStatus !== "ok") return "以묐┰";
+  if (qqq?.dataStatus !== "ok" || spy?.dataStatus !== "ok") return "중립";
   const avg20 = ((qqq.return20dPct ?? 0) + (spy.return20dPct ?? 0)) / 2;
   const avg5 = ((qqq.return5dPct ?? 0) + (spy.return5dPct ?? 0)) / 2;
-  if (avg20 > 2 && avg5 > 0) return "?꾪뿕?좏샇";
-  if (avg20 < -2 && avg5 < 0) return "?꾪뿕?뚰뵾";
-  return "以묐┰";
+  if (avg20 > 2 && avg5 > 0) return "위험선호";
+  if (avg20 < -2 && avg5 < 0) return "위험회피";
+  return "중립";
 }
 
 function groupThemes(stocks, etfs) {
   const rows = new Map();
   for (const stock of stocks) {
     const theme = stock.primaryTheme || stock.theme || "기타";
-    const row = rows.get(theme) || { theme, tickers: [], score: 0, count: 0 };
+    const row = rows.get(theme) || { theme, tickers: [], score: 0, count: 0, members: [] };
     row.tickers.push(stock.ticker);
     row.score += stock.moneyFlowScore || 0;
     row.count += 1;
+    row.members.push(stock);
     rows.set(theme, row);
   }
   for (const etf of etfs) {
     const theme = etf.categoryType || etf.category || "ETF";
-    const row = rows.get(theme) || { theme, tickers: [], score: 0, count: 0 };
+    const row = rows.get(theme) || { theme, tickers: [], score: 0, count: 0, members: [] };
     row.tickers.push(etf.ticker);
     row.score += etf.moneyFlowScore || 0;
     row.count += 1;
+    row.members.push(etf);
     rows.set(theme, row);
   }
   return [...rows.values()].map((row) => ({ ...row, avgScore: row.score / row.count })).sort((a, b) => b.avgScore - a.avgScore);
@@ -836,7 +822,6 @@ function createBaseSupplementalData(rawStocks, rawEtfs, marketData) {
     connectionStatus: {
       priceVolume: marketData?.items && Object.values(marketData.items).some((item) => item.dataStatus === "ok") ? "CONNECTED" : "FAILED",
       news: "DISABLED",
-      options: "DISABLED",
       etfBreadth: "DISABLED",
       liquiditySpread: aggregateStatus(tickers.map((ticker) => byTicker[ticker]?.liquidity?.status)),
       lastUpdated: new Date().toISOString(),
@@ -1048,12 +1033,8 @@ async function collectSupplementalData(rawWatchlist, rawHoldings, rawEtfs, marke
   const tickers = unique([...stockTickers, ...etfTickers]);
   const byTicker = Object.fromEntries(tickers.map((ticker) => [ticker, {}]));
 
-  const [newsRows, optionRows] = await Promise.all([
-    Promise.all(tickers.map((ticker) => fetchNewsForTicker(ticker))),
-    Promise.all(tickers.map((ticker) => fetchOptionsFlow(ticker)))
-  ]);
+  const newsRows = await Promise.all(tickers.map((ticker) => fetchNewsForTicker(ticker)));
   for (const row of newsRows) byTicker[row.ticker].news = row;
-  for (const row of optionRows) byTicker[row.ticker].options = row;
   for (const ticker of tickers) {
     byTicker[ticker].liquidity = fetchLiquiditySpread(ticker, marketItem(marketData, ticker));
   }
@@ -1065,7 +1046,6 @@ async function collectSupplementalData(rawWatchlist, rawHoldings, rawEtfs, marke
   const connectionStatus = {
     priceVolume: marketData?.items && Object.values(marketData.items).some((item) => item.dataStatus === "ok") ? "CONNECTED" : "FAILED",
     news: aggregateStatus(newsRows.map((row) => row.status)),
-    options: aggregateStatus(optionRows.map((row) => row.status)),
     etfBreadth: aggregateStatus(etfTickers.map((ticker) => byTicker[ticker]?.etfBreadth?.status)),
     liquiditySpread: aggregateStatus(tickers.map((ticker) => byTicker[ticker]?.liquidity?.status)),
     lastUpdated: new Date().toISOString(),
@@ -1078,11 +1058,9 @@ function supplementalNotes(byTicker) {
   const notes = [];
   const rows = Object.values(byTicker);
   const failedNews = rows.filter((row) => row.news?.status === "FAILED").length;
-  const failedOptions = rows.filter((row) => row.options?.status === "FAILED").length;
   const fallbackLiquidity = rows.filter((row) => row.liquidity?.status === "PARTIAL").length;
   const fallbackBreadth = rows.filter((row) => row.etfBreadth?.status === "PARTIAL").length;
   if (failedNews) notes.push(`뉴스 수집 실패 티커 ${failedNews}개`);
-  if (failedOptions) notes.push(`옵션 수집 실패 티커 ${failedOptions}개`);
   if (fallbackBreadth) notes.push(`ETF 구성종목 확산도 fallback sample ${fallbackBreadth}개 사용`);
   if (fallbackLiquidity) notes.push(`스프레드/유동성 bid/ask 대신 거래대금 fallback ${fallbackLiquidity}개 사용`);
   return notes;
@@ -1090,17 +1068,16 @@ function supplementalNotes(byTicker) {
 
 function dynamicDataWarning(status) {
   if (!status) return REAL_WARNING;
-  const optional = [
+  const providerStatuses = [
     ["뉴스", status.news],
-    ["옵션", status.options],
     ["ETF 구성종목 확산도", status.etfBreadth],
     ["스프레드/유동성", status.liquiditySpread]
   ];
-  const connected = optional.filter(([, value]) => value === "CONNECTED").map(([label]) => label);
-  const partial = optional.filter(([, value]) => value === "PARTIAL").map(([label]) => label);
-  const failed = optional.filter(([, value]) => value === "FAILED").map(([label]) => label);
-  const disabled = optional.filter(([, value]) => value === "DISABLED").map(([label]) => label);
-  if (connected.length === optional.length) return "REAL DATA TEST - 가격/거래량, 뉴스, 옵션, ETF 확산도, 스프레드 데이터 반영";
+  const connected = providerStatuses.filter(([, value]) => value === "CONNECTED").map(([label]) => label);
+  const partial = providerStatuses.filter(([, value]) => value === "PARTIAL").map(([label]) => label);
+  const failed = providerStatuses.filter(([, value]) => value === "FAILED").map(([label]) => label);
+  const disabled = providerStatuses.filter(([, value]) => value === "DISABLED").map(([label]) => label);
+  if (connected.length === providerStatuses.length) return "REAL DATA TEST - 가격/거래량은 실제 데이터, 뉴스/ETF 확산도/유동성 데이터 반영";
   const parts = ["가격/거래량은 실제 데이터"];
   if (connected.length) parts.push(`${connected.join("/")} 연결`);
   if (partial.length) parts.push(`${partial.join("/")} 일부 연결`);
@@ -1150,16 +1127,14 @@ function renderMarkdown(report) {
 - 데이터 모드: ${report.dataMode}
 - 가격/거래량: ${statusLabel(report.dataConnectionStatus.priceVolume)}
 - 뉴스: ${statusLabel(report.dataConnectionStatus.news)}
-- 옵션: ${statusLabel(report.dataConnectionStatus.options)}
 - ETF 구성종목 확산도: ${statusLabel(report.dataConnectionStatus.etfBreadth)}
 - 스프레드/유동성: ${statusLabel(report.dataConnectionStatus.liquiditySpread)}
 - 생성 시각: ${report.generatedAt}
 - 시장 상태: ${report.marketLabel}
 - 오늘 돈의 방향: ${moneyDirection(report)}
 - 강한 테마 TOP 3: ${report.themes.slice(0, 3).map((row) => `${row.theme}(${row.avgScore.toFixed(0)})`).join(", ") || "데이터 없음"}
-- 오늘의 원칙: ETF는 테마 자금 흐름을 보고, 개별 종목은 관련 ETF보다 강할 때만 돌파 후보로 본다.
 - 데이터 한계:
-  - API 또는 provider 상태에 따라 뉴스/옵션/ETF 확산도/스프레드 반영 범위가 달라질 수 있다.
+  - API 또는 provider 상태에 따라 뉴스/ETF 확산도/스프레드 반영 범위가 달라질 수 있다.
   - 수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한한다.
   - reasonConfidence HIGH는 추가 데이터가 충분히 연결된 후보에만 사용한다.
 
@@ -1167,55 +1142,10 @@ function renderMarkdown(report) {
 
 - ETF 행동 후보: ${report.etfActionCandidates.map((row) => row.ticker).join(", ") || "없음"}
 - 개별 종목 행동 후보: ${report.stockActionCandidates.map((row) => row.ticker).join(", ") || "없음"}
-- Nasdaq-100 신규 스캔 결과:
-  - 총 스캔: ${report.stockScanSummary.total}
-  - 최종 후보: ${report.stockActionCandidates.length}
-  - 제외: ${report.stockScanSummary.failed + report.stockScanSummary.ban}
-- 전일 추천 종목 점검:
-  - 점검 대상: ${report.previousRecommendationReviews.length}
-  - 유지: ${report.previousRecommendationReviews.filter((row) => row.todayStatus === "유지").length}
-  - 하향: ${report.previousRecommendationReviews.filter((row) => row.todayStatus === "매매 금지로 하향" || row.todayStatus === "눌림 대기").length}
-  - 무효화: ${report.previousRecommendationReviews.filter((row) => row.todayStatus === "무효화").length}
-- ETF 우선 테마: ${report.etfTop5.slice(0, 3).map((row) => row.categoryType).filter((value, index, arr) => arr.indexOf(value) === index).join(", ") || "데이터 없음"}
-- 개별 종목 우선 테마: ${report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.primaryTheme).filter(Boolean).join(", ") || "관련 ETF 대비 추가 확인 필요"}
-- 오늘 최우선 실행 후보: ${report.topExecutionCandidate ? `${report.topExecutionCandidate.ticker} - ${report.topExecutionCandidate.explanation}` : "조건 충족 후보 없음"}
-- 하지 말아야 할 것: 추격 매수 금지 / ETF와 개별 종목 중복 베팅 금지 / 오늘 신규 후보와 전일 추천 점검 종목을 같은 의미로 섞어 해석하지 않기
-
-## moneyFlowScore 산정 방식
-
-moneyFlowScore는 해당 ETF 또는 종목으로 돈이 몰리는 정도를 가격, 거래량, 추세, 신고가 근접도, 관련 ETF 대비 상대강도 등을 바탕으로 수치화한 점수다.
-
-이 점수는 장기 가치평가 점수가 아니다. 지금 시장 참여자들이 더 비싸게 사줄 가능성이 있는 트레이딩 후보를 찾기 위한 단기/중기 모멘텀 점수다.
-
-### 기본 산정 요소
-- 20일 수익률: 최근 1개월 수준의 중기 추세를 반영한다.
-- 5일 수익률: 최근 1주일 수준의 단기 자금 유입을 반영한다.
-- 1일 수익률: 직전 거래일의 단기 추격 매수세를 반영한다.
-- 상대 거래량: 가격 상승과 함께 거래량이 늘면 실제 자금 유입 가능성을 높게 본다.
-- 52주 고점 대비 위치: 고점 근처 자산은 추세 추종 자금 유입 가능성이 있다.
-- 추세 상태: 5일선/20일선/50일선 위에 있는지 확인한다.
-- ETF 대비 상대강도: 개별 종목에만 적용하며, 관련 ETF보다 강할 때 개별 종목 우선 가능성이 올라간다.
-- 데이터 신뢰도: 뉴스/옵션/스프레드/ETF 구성종목 확산도 데이터가 미연결이면 HIGH confidence를 사용하지 않는다.
-
-### 점수 구간 해석
-- 80점 이상: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
-- 65점 이상 80점 미만: 관심 후보. 눌림 또는 돌파 확인 후 진입 검토.
-- 50점 이상 65점 미만: 관찰 후보. 자금 흐름은 있으나 우선순위는 낮음.
-- 50점 미만: 매매 금지 또는 우선순위 낮은 후보.
-
-### 주의 문구
-moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 자금 흐름 후보 점수이며, 진입 여부는 반드시 진입 조건과 무효화 조건을 함께 확인해야 한다.
-
-### moneyFlowScore(1차/최종) 계산 구조
-- moneyFlowScore(1차) = 추세 + 단기 모멘텀 + 중기 모멘텀 + 거래량 + 신고가 근접 + 이동평균
-- moneyFlowScore(최종 원점수) = moneyFlowScore(1차) + 뉴스 + 옵션 + ETF 확산도 + 유동성 + 관련 ETF 대비 상대강도 + 리스크 패널티
-- moneyFlowScore(최종 표시 점수) = min(100, max(0, 최종 원점수))
-- 리스크 패널티는 -6, -4처럼 음수로 저장하고 계산식에 그대로 더한다.
-- 최종 표시 점수가 100점으로 같아도 정렬에는 최종 원점수를 tie-breaker로 사용한다.
 
 ## 오늘 돈이 몰리는 테마
 
-${mdList(report.themes.slice(0, 6).map((row) => `**${row.theme}**: ${row.tickers.slice(0, 6).join(", ")} | 평균 moneyFlowScore ${row.avgScore.toFixed(0)}`))}
+${report.themes.slice(0, 6).map(renderThemeMarkdown).join("\n\n") || "데이터 없음"}
 
 ## 1. ETF 트레이딩 보고서
 ### 1-1. ETF 결론
@@ -1227,7 +1157,7 @@ ${mdList(report.themes.slice(0, 6).map((row) => `**${row.theme}**: ${row.tickers
 
 ### 1-2. ETF 후보 TOP 5
 
-선정 기준: ETF 후보는 가격/거래량 1차 점수에 뉴스, 옵션, ETF 구성종목 확산도, 유동성, 리스크 패널티를 반영한 moneyFlowScore(최종) 기준으로 정렬한다. 최종 표시 점수가 같으면 최종 원점수를 tie-breaker로 사용한다.
+선정 기준: ETF 후보는 가격/거래량 1차 점수에 뉴스, ETF 구성종목 확산도, 유동성, 리스크 패널티를 반영한 moneyFlowScore(최종) 기준으로 정렬한다. 최종 표시 점수가 같으면 최종 원점수를 tie-breaker로 사용한다.
 
 ${report.etfTop5.map(renderEtfMarkdown).join("\n\n") || "데이터 없음"}
 
@@ -1274,7 +1204,7 @@ ${report.etfBanRows.map((row) => `#### [${row.ticker}] ${row.name}
 선정 기준:
 1. Nasdaq-100 전체를 moneyFlowScore(1차)로 먼저 스캔
 2. moneyFlowScore(1차) 상위 ${report.stockScanSummary.detailedCount}개를 상세 분석
-3. 뉴스/옵션/유동성/관련 ETF 대비 상대강도/리스크 패널티를 반영
+3. 뉴스/유동성/관련 ETF 대비 상대강도/리스크 패널티를 반영
 4. moneyFlowScore(최종), 최종 원점수, 리스크 패널티, 5일 수익률, 상대 거래량 순으로 재정렬
 
 ${report.stockTop5.map(renderStockMarkdown).join("\n\n") || "데이터 없음"}
@@ -1322,11 +1252,13 @@ ${report.etfs.map((row) => `| ${row.ticker} | ${row.categoryType} | ${row.moneyF
 - ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인
 - 개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인
 - 시장 상태 확인 조건: QQQ/SPY의 5일/20일 추세와 위험선호 유지 여부 확인
-- 데이터 보강 필요 항목: 뉴스, 옵션, 스프레드, ETF 구성종목 확산도, 실제 보유 진입가
+- 데이터 보강 필요 항목: 뉴스, 스프레드, ETF 구성종목 확산도, 실제 보유 진입가
 
 ## 데이터 수집 상태
 
 ${renderDataCollectionMarkdown(report)}
+
+${renderScoreGuideMarkdown()}
 `;
 }
 
@@ -1344,6 +1276,28 @@ function renderActionMarkdown(row) {
 - 차트: ![${row.ticker} chart](${row.chartPath})`;
 }
 
+function renderScoreGuideMarkdown() {
+  return `## 참고: moneyFlowScore 산정 방식
+
+moneyFlowScore는 매수 추천 점수가 아니라 현재 ETF 또는 종목으로 돈이 몰리는 정도를 추적하는 트레이딩 후보 점수다.
+
+### 기본 산정 요소
+- 20일 수익률: 최근 1개월 수준의 중기 추세를 반영한다.
+- 5일 수익률: 최근 1주일 수준의 단기 자금 유입을 반영한다.
+- 1일 수익률: 직전 거래일의 단기 추격 매수세를 반영한다.
+- 상대 거래량: 가격 상승과 함께 거래량이 늘면 실제 자금 유입 가능성을 높게 본다.
+- 52주 고점 대비 위치: 고점 근처 자산은 추세 추종 자금 유입 가능성이 있다.
+- ETF 대비 상대강도: 개별 종목에만 적용하며, 관련 ETF보다 강할 때 개별 종목 우선 가능성이 올라간다.
+
+### 계산 구조
+- moneyFlowScore(1차) = 추세 + 단기 모멘텀 + 중기 모멘텀 + 거래량 + 신고가 근접 + 이동평균
+- moneyFlowScore(최종 원점수) = moneyFlowScore(1차) + 뉴스 + ETF 확산도 + 유동성 + 관련 ETF 대비 상대강도 + 리스크 패널티
+- moneyFlowScore(최종 표시 점수) = min(100, max(0, 최종 원점수))
+- 리스크 패널티는 음수로 저장하고 계산식에 그대로 더한다.
+
+주의: 점수가 높아도 진입 조건, 무효화 조건, 리스크 패널티 근거를 함께 확인해야 한다.`;
+}
+
 function moneyDirection(report) {
   const topEtf = report.etfTop5[0];
   const topStock = report.stockTop5[0];
@@ -1359,6 +1313,49 @@ function scoreInterpretation(score) {
   if (score >= 65) return "관심 후보. 눌림 또는 돌파 확인 후 진입 검토.";
   if (score >= 50) return "관찰 후보. 흐름은 있으나 우선순위는 낮음.";
   return "매매 금지 또는 우선순위 낮은 후보.";
+}
+
+function renderThemeMarkdown(row, index) {
+  return `### ${index + 1}. ${row.theme}
+- 관련 티커: ${row.tickers.slice(0, 8).join(", ")}
+- 평균 moneyFlowScore: ${row.avgScore.toFixed(0)}
+- 돈이 몰린다고 보는 이유:
+${themeReasonBullets(row).map((reason) => `  - ${reason}`).join("\n")}
+- 해석: ${themeInterpretation(row)}`;
+}
+
+function renderThemeHtml(row, index) {
+  return `<article>
+    <h3>${index + 1}. ${escapeHtml(row.theme)}</h3>
+    <div class="grid">
+      ${tile("관련 티커", row.tickers.slice(0, 8).join(", "))}
+      ${tile("평균 moneyFlowScore", row.avgScore.toFixed(0))}
+    </div>
+    <h4>돈이 몰린다고 보는 이유</h4>
+    ${htmlList(themeReasonBullets(row).map(escapeHtml))}
+    <p class="muted">${escapeHtml(themeInterpretation(row))}</p>
+  </article>`;
+}
+
+function themeReasonBullets(row) {
+  const members = row.members || [];
+  const avg5 = average(members.map((item) => item.market?.return5dPct).filter((value) => Number.isFinite(value)));
+  const avg20 = average(members.map((item) => item.market?.return20dPct).filter((value) => Number.isFinite(value)));
+  const avgRelVol = average(members.map((item) => item.market?.relativeVolume).filter((value) => Number.isFinite(value)));
+  const above20 = members.filter((item) => item.market?.lastClose && item.market?.history?.length && item.market.lastClose >= average(item.market.history.map((bar) => bar.close).filter(Number.isFinite).slice(-20))).length;
+  const highScoreCount = members.filter((item) => item.moneyFlowScore >= 65).length;
+  const reasons = [];
+  if (Number.isFinite(avg5) || Number.isFinite(avg20)) reasons.push(`평균 5일 수익률 ${pct(avg5)}, 평균 20일 수익률 ${pct(avg20)}로 추세가 확인된다.`);
+  if (Number.isFinite(avgRelVol)) reasons.push(`평균 상대 거래량 ${num(avgRelVol, 2)}배로 거래 참여가 확인된다.`);
+  if (members.length) reasons.push(`${members.length}개 후보 중 ${highScoreCount}개가 관심권 이상 moneyFlowScore를 기록했다.`);
+  if (above20) reasons.push(`${above20}개 후보가 20일선 위에서 움직여 추세 유지 근거가 있다.`);
+  return reasons.slice(0, 4).length ? reasons.slice(0, 4) : ["데이터가 부족해 가격/거래량 중심으로만 판단한다.", "테마 내 후보 수와 상대강도 변화를 추가 확인한다."];
+}
+
+function themeInterpretation(row) {
+  if (row.avgScore >= 75) return "단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.";
+  if (row.avgScore >= 60) return "추세는 확인되지만 선별 진입이 필요한 중간 강도의 테마로 본다.";
+  return "관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.";
 }
 
 function scoreOneLine(row) {
@@ -1391,7 +1388,6 @@ function scoreBreakdownMarkdown(row) {
     - 이동평균: ${signed(b.movingAverageScore)}
   - 추가 데이터 가감점:
     - 뉴스: ${signed(b.newsScore)}
-    - 옵션: ${signed(b.optionsScore)}
     - 유동성: ${signed(b.liquidityScore)}${relativeLine}${breadthLine}
   - 리스크 패널티: ${signed(b.riskPenalty)}
   - 주요 근거: ${scoreOneLine(row)}
@@ -1422,7 +1418,6 @@ function dataUsageMarkdown(row) {
   const used = row.moneyFlowScoreBreakdown?.dataUsed || {};
   return `  - 가격/거래량: ${used.priceVolume ? "사용" : "미사용"}
   - 뉴스: ${used.news ? "사용" : statusLabel(row.newsSummary?.status)}
-  - 옵션: ${used.options ? "사용" : statusLabel(row.optionsSummary?.status)}
   - ETF 확산도: ${row.assetType === "ETF" ? (used.etfBreadth ? "사용" : statusLabel(row.etfBreadthSummary?.status)) : "관련 ETF에서 확인"}
   - 유동성/스프레드: ${used.liquiditySpread ? "사용" : statusLabel(row.liquiditySummary?.status)}
   - 관련 ETF 상대강도: ${used.relativeStrength ? "사용" : "미사용"}`;
@@ -1436,23 +1431,6 @@ function newsMarkdown(summary) {
   - 핵심 뉴스 요약: ${summary.headlineSummary || "의미 있는 신규 뉴스 없음"}
   - 점수 반영: ${signed(summary.newsScore || 0)}
   - 주의: ${(summary.notes || []).join("; ") || "특이사항 없음"}`;
-}
-
-function optionsMarkdown(summary) {
-  if (!summary) return "  - 옵션 데이터 상태: 데이터 없음";
-  const iv = summary.impliedVolatilityAvg ? `${(summary.impliedVolatilityAvg * 100).toFixed(1)}%` : "데이터 없음";
-  const interpretation = summary.bullishOptionsSignal
-    ? "콜옵션 우위로 단기 기대 매수세 가능성"
-    : summary.bearishOptionsSignal
-      ? "풋옵션 우위로 방어 수급 또는 하방 리스크 주의"
-      : "뚜렷한 옵션 방향성 없음";
-  return `  - 옵션 데이터 상태: ${statusLabel(summary.status)}
-  - Put/Call 거래량 비율: ${summary.putCallVolumeRatio ?? "데이터 없음"}
-  - 콜 거래량: ${summary.callVolume ?? "데이터 없음"}
-  - 풋 거래량: ${summary.putVolume ?? "데이터 없음"}
-  - IV 상태: ${iv}
-  - 해석: ${interpretation}
-  - 점수 반영: ${signed(summary.optionsScore || 0)}`;
 }
 
 function etfBreadthMarkdown(summary) {
@@ -1490,7 +1468,6 @@ function confidenceReason(row) {
   const usedLabels = [
     used.priceVolume ? "가격/거래량" : null,
     used.news ? "뉴스" : null,
-    used.options ? "옵션" : null,
     used.etfBreadth ? "ETF 확산도" : null,
     used.liquiditySpread ? "유동성" : null,
     used.relativeStrength ? "관련 ETF 상대강도" : null
@@ -1503,7 +1480,6 @@ function confidenceReason(row) {
 function renderDataCollectionMarkdown(report) {
   const rows = Object.values(report.supplementalData?.byTicker || {});
   const newsCount = rows.reduce((sum, row) => sum + (row.news?.itemCount || 0), 0);
-  const optionsCount = rows.filter((row) => row.options?.hasOptionsData).length;
   const breadthCount = rows.filter((row) => row.etfBreadth?.sampledHoldingsCount > 0).length;
   const quoteCount = rows.filter((row) => row.liquidity?.hasQuoteData).length;
   const liquidityFallback = rows.filter((row) => row.liquidity?.status === "PARTIAL").length;
@@ -1517,12 +1493,6 @@ function renderDataCollectionMarkdown(report) {
   - 소스: Yahoo Finance RSS fallback
   - 수집 뉴스 수: ${newsCount}
   - 실패/제한 사유: ${providerNotes(rows, "news")}
-
-- 옵션:
-  - 상태: ${statusLabel(report.dataConnectionStatus.options)}
-  - 소스: Yahoo Finance options endpoint
-  - 수집 가능 티커 수: ${optionsCount}
-  - 실패/제한 사유: ${providerNotes(rows, "options")}
 
 - ETF 구성종목 확산도:
   - 상태: ${statusLabel(report.dataConnectionStatus.etfBreadth)}
@@ -1590,8 +1560,6 @@ function renderEtfMarkdown(row) {
 ${dataUsageMarkdown(row)}
 - 뉴스 확인:
 ${newsMarkdown(row.newsSummary)}
-- 옵션 수급:
-${optionsMarkdown(row.optionsSummary)}
 - ETF 구성종목 확산도:
 ${etfBreadthMarkdown(row.etfBreadthSummary)}
 - 유동성/스프레드:
@@ -1633,8 +1601,6 @@ function renderStockMarkdown(row) {
 ${dataUsageMarkdown(row)}
 - 뉴스 확인:
 ${newsMarkdown(row.newsSummary)}
-- 옵션 수급:
-${optionsMarkdown(row.optionsSummary)}
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 유동성/스프레드:
 ${liquidityMarkdown(row.liquiditySummary)}
@@ -1665,7 +1631,7 @@ function renderPreviousReviewMarkdown(row) {
 function renderStockUniverseScoreMarkdown(scan) {
   if (!scan) return "Nasdaq-100 전체 스캔 데이터 없음";
   const failures = scan.results.filter((row) => row.scanStatus !== "OK");
-  return `이 표는 Nasdaq-100 전체 구성종목을 가격/거래량/추세 중심으로 빠르게 스캔한 moneyFlowScore(1차) 결과다. 뉴스, 옵션, 유동성, 관련 ETF 대비 상대강도, 리스크 패널티를 모두 반영한 최종 추천 점수는 Top5 카드의 moneyFlowScore(최종)에서 확인한다.
+  return `이 표는 Nasdaq-100 전체 구성종목을 가격/거래량/추세 중심으로 빠르게 스캔한 moneyFlowScore(1차) 결과다. 뉴스, 유동성, 관련 ETF 대비 상대강도, 리스크 패널티를 반영한 최종 추천 점수는 Top5 카드의 moneyFlowScore(최종)에서 확인한다.
 
 주의: Top5 카드의 moneyFlowScore(최종)는 1차 점수에 상세 데이터 가감점과 리스크 패널티를 더한 값이다. 따라서 아래 전체 표의 1차 순위와 Top5 최종 순위는 다를 수 있다.
 
@@ -1743,12 +1709,11 @@ function renderHtml(report) {
       <p class="purpose">${escapeHtml(PURPOSE)}</p>
       <p class="muted">생성 시각: ${escapeHtml(report.generatedAt)}</p>
       <p><strong>핵심 질문:</strong> 현재 가격에서 누가 사고 있고, 누가 앞으로 더 비싸게 사줄 수 있는가?</p>
-      <p class="muted">뉴스/옵션/ETF 구성종목 확산도/스프레드 데이터가 미연결이면 HIGH confidence를 사용하지 않는다.</p>
+      <p class="muted">보조 데이터는 연결 상태에 따라 점수 반영 범위가 달라진다.</p>
     </div>
     ${renderMarketStatusHtml(report)}
     ${renderSplitConclusionHtml(report)}
-    ${renderScoreGuideHtml()}
-    <section><h2>오늘 돈이 몰리는 테마</h2>${htmlList(report.themes.slice(0, 6).map((row) => `${escapeHtml(row.theme)}: ${escapeHtml(row.tickers.slice(0, 6).join(", "))} | 평균 moneyFlowScore ${row.avgScore.toFixed(0)}`))}</section>
+    <section><h2>오늘 돈이 몰리는 테마</h2>${report.themes.slice(0, 6).map(renderThemeHtml).join("") || "<p>데이터 없음</p>"}</section>
     <section><h2>1. ETF 트레이딩 보고서</h2>
       <h3>1-1. ETF 결론</h3>
       ${htmlList([
@@ -1795,9 +1760,10 @@ function renderHtml(report) {
         "하지 말아야 할 일: ETF와 개별 종목을 같은 테마 안에서 중복 매수하지 않는다."
       ])}
       <h3>3-2. 내일 확인할 조건</h3>
-      ${htmlList(["ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인", "개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인", "시장 상태 확인 조건: QQQ/SPY의 5일/20일 추세와 위험선호 유지 여부 확인", "데이터 보강 필요 항목: 뉴스, 옵션, 스프레드, ETF 구성종목 확산도, 실제 보유 진입가"])}
+      ${htmlList(["ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인", "개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인", "시장 상태 확인 조건: QQQ/SPY의 5일/20일 추세와 위험선호 유지 여부 확인", "데이터 보강 필요 항목: 뉴스, 스프레드, ETF 구성종목 확산도, 실제 보유 진입가"])}
     </section>
     <section><h2>데이터 수집 상태</h2>${renderDataCollectionHtml(report)}</section>
+    ${renderScoreGuideHtml()}
   </main>
 </body>
 </html>`;
@@ -1808,38 +1774,30 @@ function renderMarketStatusHtml(report) {
     ${tile("데이터 모드", report.dataMode)}
     ${tile("가격/거래량", statusLabel(report.dataConnectionStatus.priceVolume))}
     ${tile("뉴스", statusLabel(report.dataConnectionStatus.news))}
-    ${tile("옵션", statusLabel(report.dataConnectionStatus.options))}
     ${tile("ETF 구성종목 확산도", statusLabel(report.dataConnectionStatus.etfBreadth))}
     ${tile("스프레드/유동성", statusLabel(report.dataConnectionStatus.liquiditySpread))}
     ${tile("생성 시각", report.generatedAt)}
     ${tile("시장 상태", report.marketLabel)}
     ${tile("오늘 돈의 방향", moneyDirection(report))}
     ${tile("강한 테마 TOP 3", report.themes.slice(0, 3).map((row) => `${row.theme}(${row.avgScore.toFixed(0)})`).join(", ") || "데이터 없음")}
-    ${tile("오늘의 원칙", "ETF는 테마 자금 흐름, 개별 종목은 ETF보다 강할 때만 우선")}
-  </div>${htmlList(["API 또는 provider 상태에 따라 보조 데이터 반영 범위가 달라진다.", "수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한한다.", "reasonConfidence HIGH는 보조 데이터가 충분히 연결된 후보에만 사용한다."])}</section>`;
+  </div>${htmlList(["API 또는 provider 상태에 따라 보조 데이터 반영 범위가 달라진다.", "수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한한다."])}</section>`;
 }
 
 function renderSplitConclusionHtml(report) {
   return `<section><h2>오늘의 분리 결론</h2><div class="grid">
     ${tile("ETF 행동 후보", report.etfActionCandidates.map((row) => row.ticker).join(", ") || "없음")}
     ${tile("개별 종목 행동 후보", report.stockActionCandidates.map((row) => row.ticker).join(", ") || "없음")}
-    ${tile("Nasdaq-100 신규 스캔 결과", `${report.stockScanSummary.total}개 중 ${report.stockActionCandidates.length}개 후보, 제외 ${report.stockScanSummary.failed + report.stockScanSummary.ban}개`)}
-    ${tile("전일 추천 종목 점검", `${report.previousRecommendationReviews.length}개 대상 / 유지 ${report.previousRecommendationReviews.filter((row) => row.todayStatus === "유지").length} / 무효화 ${report.previousRecommendationReviews.filter((row) => row.todayStatus === "무효화").length}`)}
-    ${tile("ETF 우선 테마", report.etfTop5.slice(0, 3).map((row) => row.categoryType).filter((value, index, arr) => arr.indexOf(value) === index).join(", ") || "데이터 없음")}
-    ${tile("개별 종목 우선 테마", report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map((row) => row.primaryTheme).filter(Boolean).join(", ") || "관련 ETF 대비 추가 확인 필요")}
-    ${tile("오늘 최우선 실행 후보", report.topExecutionCandidate ? `${report.topExecutionCandidate.ticker} - ${report.topExecutionCandidate.explanation}` : "조건 충족 후보 없음")}
-    ${tile("하지 말아야 할 것", "추격 매수 금지 / 신규 후보와 전일 추천 점검을 같은 의미로 섞지 않기")}
   </div></section>`;
 }
 
 function renderScoreGuideHtml() {
-  return `<section><h2>moneyFlowScore 산정 방식</h2>
+  return `<section><h2>참고: moneyFlowScore 산정 방식</h2>
     <h3>score의 의미</h3>
     <p>moneyFlowScore는 매수 추천 점수가 아니라 현재 ETF 또는 종목으로 돈이 몰리는 정도를 추적하는 트레이딩 후보 점수다.</p>
     <h3>계산 구조</h3>
     ${htmlList([
       "moneyFlowScore(1차) = 추세 + 단기 모멘텀 + 중기 모멘텀 + 거래량 + 신고가 근접 + 이동평균",
-      "moneyFlowScore(최종 원점수) = moneyFlowScore(1차) + 뉴스 + 옵션 + ETF 확산도 + 유동성 + 관련 ETF 대비 상대강도 + 리스크 패널티",
+      "moneyFlowScore(최종 원점수) = moneyFlowScore(1차) + 뉴스 + ETF 확산도 + 유동성 + 관련 ETF 대비 상대강도 + 리스크 패널티",
       "moneyFlowScore(최종 표시 점수) = min(100, max(0, 최종 원점수))",
       "리스크 패널티는 음수로 저장하고 계산식에 그대로 더한다.",
       "최종 표시 점수가 같으면 최종 원점수를 tie-breaker로 사용한다."
@@ -1902,7 +1860,7 @@ function renderPreviousReviewHtml(row) {
 function renderStockUniverseScoreHtml(scan) {
   if (!scan) return "<p>Nasdaq-100 전체 스캔 데이터 없음</p>";
   const failures = scan.results.filter((row) => row.scanStatus !== "OK");
-  return `<p>이 표는 Nasdaq-100 전체 구성종목을 가격/거래량/추세 중심으로 빠르게 스캔한 moneyFlowScore(1차) 결과다. 뉴스, 옵션, 유동성, 관련 ETF 대비 상대강도, 리스크 패널티를 모두 반영한 최종 추천 점수는 Top5 카드의 moneyFlowScore(최종)에서 확인한다.</p>
+  return `<p>이 표는 Nasdaq-100 전체 구성종목을 가격/거래량/추세 중심으로 빠르게 스캔한 moneyFlowScore(1차) 결과다. 뉴스, 유동성, 관련 ETF 대비 상대강도, 리스크 패널티를 반영한 최종 추천 점수는 Top5 카드의 moneyFlowScore(최종)에서 확인한다.</p>
     <p class="muted">Top5 카드의 moneyFlowScore(최종)는 1차 점수에 상세 데이터 가감점과 리스크 패널티를 더한 값이다. 따라서 아래 전체 표의 1차 순위와 Top5 최종 순위는 다를 수 있다.</p>
     <div class="grid">
       ${tile("총 스캔 종목 수", scan.totalCount)}
@@ -1932,7 +1890,6 @@ function supplementalDetailsHtml(row) {
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4>${htmlList(dataUsageHtmlItems(row))}
     <h4>뉴스 확인</h4>${htmlList(newsHtmlItems(row.newsSummary))}
-    <h4>옵션 수급</h4>${htmlList(optionsHtmlItems(row.optionsSummary))}
     <h4>ETF 구성종목 확산도</h4>${row.assetType === "ETF" ? htmlList(etfBreadthHtmlItems(row.etfBreadthSummary)) : htmlList(["관련 ETF에서 확인"])}
     <h4>유동성/스프레드</h4>${htmlList(liquidityHtmlItems(row.liquiditySummary))}
     <h4>reasonConfidence 근거</h4><p class="muted">${escapeHtml(confidenceReason(row))}</p>
@@ -1945,10 +1902,6 @@ function dataUsageHtmlItems(row) {
 
 function newsHtmlItems(summary) {
   return newsMarkdown(summary).split("\n").map((line) => escapeHtml(line.replace(/^\s*-\s*/, "")));
-}
-
-function optionsHtmlItems(summary) {
-  return optionsMarkdown(summary).split("\n").map((line) => escapeHtml(line.replace(/^\s*-\s*/, "")));
 }
 
 function etfBreadthHtmlItems(summary) {
@@ -1976,7 +1929,7 @@ function scoreBreakdownHtml(row) {
   if (!b) return "<p>moneyFlowScore 산정 근거: 데이터 없음</p>";
   const relative = row.assetType === "STOCK" ? `${tile("ETF 대비 상대강도", signed(b.relativeStrengthScore ?? 0))}` : "";
   const breadth = row.assetType === "ETF" ? `${tile("ETF 확산도", signed(b.etfBreadthScore ?? 0))}` : "";
-  return `<details open>
+  return `<details class="score-details">
     <summary><strong>moneyFlowScore(최종) 산정 근거 보기</strong></summary>
     <div class="grid">
       ${tile("moneyFlowScore(1차)", b.initialDisplayScore)}
@@ -1991,7 +1944,6 @@ function scoreBreakdownHtml(row) {
       ${tile("신고가 근접", signed(b.highProximityScore))}
       ${tile("이동평균", signed(b.movingAverageScore))}
       ${tile("뉴스", signed(b.newsScore))}
-      ${tile("옵션", signed(b.optionsScore))}
       ${breadth}
       ${tile("유동성", signed(b.liquidityScore))}
       ${relative}

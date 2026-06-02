@@ -35,30 +35,36 @@ function main() {
   assert(html.includes("REAL DATA TEST") || html.includes("MOCK DATA"), "HTML missing data mode banner");
   assert(!markdown.includes("\uFFFD") && !html.includes("\uFFFD"), "Report contains replacement characters");
 
-  for (const snippet of [
-    "moneyFlowScore(1차)",
-    "moneyFlowScore(최종)",
-    "최종 원점수:",
-    "최종 표시 점수:",
-    "cap 적용:",
-    "계산식:",
-    "리스크 패널티 산정 근거",
-    "Nasdaq-100 전체 moneyFlowScore(1차) 표",
-    "| 순위 | 티커 | 이름 | moneyFlowScore(1차) | 최종 표시 점수 | 최종 원점수 |",
-    "Nasdaq-100 전체 moneyFlowScore(1차) 표 펼치기"
-  ]) {
-    assert(markdown.includes(snippet), `Markdown missing required snippet: ${snippet}`);
+  const forbiddenTerms = [
+    "\uC635\uC158",
+    ["options", "Score"].join(""),
+    ["options", " data"].join(""),
+    ["option", " chain"].join(""),
+    ["Put", "/Call"].join("")
+  ];
+  for (const forbidden of forbiddenTerms) {
+    assert(!markdown.includes(forbidden), `Markdown still includes forbidden options text: ${forbidden}`);
+    assert(!html.includes(forbidden), `HTML still includes forbidden options text: ${forbidden}`);
   }
 
   for (const snippet of [
-    "moneyFlowScore(최종) 산정 근거 보기",
-    "리스크 패널티 산정 근거 보기",
-    "data-stock-universe-table",
-    "table-scroll",
-    "<details"
+    "오늘의 분리 결론",
+    "ETF 행동 후보",
+    "개별 종목 행동 후보",
+    "오늘 돈이 몰리는 테마",
+    "돈이 몰린다고 보는 이유",
+    "Nasdaq-100 전체 moneyFlowScore(1차) 표",
+    "데이터 수집 상태",
+    "참고: moneyFlowScore 산정 방식"
   ]) {
+    assert(markdown.includes(snippet), `Markdown missing required snippet: ${snippet}`);
     assert(html.includes(snippet), `HTML missing required snippet: ${snippet}`);
   }
+
+  assert(!html.includes("<details open"), "HTML details should be collapsed by default");
+  assert(html.includes('class="score-details"'), "Score details should be rendered as collapsed details");
+  assert(html.includes("data-stock-universe-table"), "HTML missing Nasdaq-100 score table");
+  assert(html.includes("table-scroll"), "HTML missing scroll wrapper for wide table");
 
   assert(fs.existsSync(chartsDir), "Missing reports/charts directory");
   const chartFiles = fs.readdirSync(chartsDir).filter((name) => name.endsWith(".png"));
@@ -67,7 +73,6 @@ function main() {
 
   for (const file of [
     "src/data/newsProvider.js",
-    "src/data/optionsProvider.js",
     "src/data/etfHoldingsProvider.js",
     "src/data/liquidityProvider.js",
     "src/data/nasdaq100Universe.js",
@@ -96,23 +101,18 @@ function main() {
   for (const item of scoredItems) {
     assert(item.moneyFlowScoreInitial !== undefined, `Snapshot missing initial score for ${item.ticker}`);
     assert(item.moneyFlowScoreFinal !== undefined, `Snapshot missing final score for ${item.ticker}`);
-  }
-
-  const reportData = readJson("latest-report.json");
-  for (const row of scanResults.slice(0, 20)) {
-    assert(row.moneyFlowScoreInitial !== undefined, `Scan result missing initial score for ${row.ticker}`);
-    assert(row.moneyFlowScoreFinal !== undefined, `Scan result missing final score for ${row.ticker}`);
+    assert(!JSON.stringify(item).includes("options"), `Snapshot scored item still includes options text for ${item.ticker}`);
   }
 
   const candidatesWithRisk = [
-    ...(reportData.stockActionCandidates || []),
-    ...(reportData.etfActionCandidates || [])
+    ...(latestSnapshot.stockActionCandidates || []),
+    ...(latestSnapshot.etfActionCandidates || [])
   ].filter((row) => row.riskPenaltySummary);
   for (const row of candidatesWithRisk) {
     assert(row.riskPenaltySummary.totalPenalty === sumRiskPenalty(row.riskPenaltySummary), `Risk penalty item sum mismatch for ${row.ticker}`);
   }
 
-  console.log("Verified moneyFlowScore initial/final labels, Nasdaq-100 table, snapshots, and charts");
+  console.log("Verified simplified report, option-free output, collapsed details, Nasdaq-100 table, snapshots, and charts");
   console.log(`Verified chart count: ${chartFiles.length}`);
 }
 

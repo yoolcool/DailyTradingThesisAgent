@@ -43,7 +43,7 @@ function extractGeneratedAt(html) {
 
 function detectDataMode(html) {
   if (html.includes("REAL DATA TEST")) {
-    return "REAL_TEST - 가격/거래량은 실제 데이터, 뉴스/옵션/ETF 구성종목 확산도 등은 아직 미연결";
+    return "REAL_TEST - 가격/거래량은 실제 데이터, 보조 데이터는 연결 상태에 따라 반영";
   }
   if (html.includes("MOCK DATA")) {
     return "MOCK DATA - 실전 매매 판단 사용 금지";
@@ -56,12 +56,12 @@ function injectPagesLinks(html) {
   const dataMode = detectDataMode(html);
   const links = `
     <section class="pages-links" data-pages-links>
-      <h2>웹 리포트 링크</h2>
+      <h2>리포트 링크</h2>
       <p><strong>데이터 모드:</strong> ${dataMode}</p>
       <p><strong>생성 시각:</strong> ${generatedAt}</p>
       <p>
         <a href="latest.md">Markdown 원문 보기</a>
-        <span aria-hidden="true"> · </span>
+        <span aria-hidden="true"> - </span>
         <a href="latest.png">스크린샷 보기</a>
       </p>
     </section>`;

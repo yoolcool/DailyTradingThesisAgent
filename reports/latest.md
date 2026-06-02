@@ -1,6 +1,6 @@
 # 오늘의 데일리 트레이딩 요약
 
-**REAL DATA TEST - 가격/거래량은 실제 데이터, 뉴스 연결, ETF 구성종목 확산도/스프레드/유동성 일부 연결, 옵션 수집 실패로 점수 반영 제한**
+**REAL DATA TEST - 가격/거래량은 실제 데이터, 뉴스 연결, ETF 구성종목 확산도/스프레드/유동성 일부 연결**
 
 **목적:** 이 리포트는 최근 오른 자산을 나열하는 것이 아니라, 돈이 몰리는 근거와 다음 매수 주체가 확인할 트레이딩 후보를 찾기 위한 보고서다.
 
@@ -11,16 +11,14 @@
 - 데이터 모드: REAL_TEST
 - 가격/거래량: 연결됨
 - 뉴스: 연결됨
-- 옵션: 실패
 - ETF 구성종목 확산도: 일부 연결
 - 스프레드/유동성: 일부 연결
-- 생성 시각: 2026년 6월 2일 화요일 오후 4:25
-- 시장 상태: ?꾪뿕?좏샇
+- 생성 시각: 2026년 6월 2일 화요일 오후 4:58
+- 시장 상태: 위험선호
 - 오늘 돈의 방향: Technology 개별 종목 흐름이 ETF 대비 강한지 확인 필요
-- 강한 테마 TOP 3: 반도체 기술 ETF(79), Technology(59), 시장 기준 ETF(43)
-- 오늘의 원칙: ETF는 테마 자금 흐름을 보고, 개별 종목은 관련 ETF보다 강할 때만 돌파 후보로 본다.
+- 강한 테마 TOP 3: 반도체 기술 ETF(79), Technology(59), 시장 기준 ETF(46)
 - 데이터 한계:
-  - API 또는 provider 상태에 따라 뉴스/옵션/ETF 확산도/스프레드 반영 범위가 달라질 수 있다.
+  - API 또는 provider 상태에 따라 뉴스/ETF 확산도/스프레드 반영 범위가 달라질 수 있다.
   - 수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한한다.
   - reasonConfidence HIGH는 추가 데이터가 충분히 연결된 후보에만 사용한다.
 
@@ -28,60 +26,68 @@
 
 - ETF 행동 후보: IGV, CIBR, AIQ, HACK, IPO
 - 개별 종목 행동 후보: PANW, ARM, DDOG, CRWD, TEAM
-- Nasdaq-100 신규 스캔 결과:
-  - 총 스캔: 101
-  - 최종 후보: 5
-  - 제외: 60
-- 전일 추천 종목 점검:
-  - 점검 대상: 5
-  - 유지: 5
-  - 하향: 0
-  - 무효화: 0
-- ETF 우선 테마: 성장/테마 ETF
-- 개별 종목 우선 테마: Technology, Technology, Technology, Technology, Technology
-- 오늘 최우선 실행 후보: PANW - PANW는 관련 ETF 대비 상대강도를 확인해야 하지만, 개별 종목 후보 조건 충족 시 ETF보다 탄력적인 돌파를 기대할 수 있다.
-- 하지 말아야 할 것: 추격 매수 금지 / ETF와 개별 종목 중복 베팅 금지 / 오늘 신규 후보와 전일 추천 점검 종목을 같은 의미로 섞어 해석하지 않기
-
-## moneyFlowScore 산정 방식
-
-moneyFlowScore는 해당 ETF 또는 종목으로 돈이 몰리는 정도를 가격, 거래량, 추세, 신고가 근접도, 관련 ETF 대비 상대강도 등을 바탕으로 수치화한 점수다.
-
-이 점수는 장기 가치평가 점수가 아니다. 지금 시장 참여자들이 더 비싸게 사줄 가능성이 있는 트레이딩 후보를 찾기 위한 단기/중기 모멘텀 점수다.
-
-### 기본 산정 요소
-- 20일 수익률: 최근 1개월 수준의 중기 추세를 반영한다.
-- 5일 수익률: 최근 1주일 수준의 단기 자금 유입을 반영한다.
-- 1일 수익률: 직전 거래일의 단기 추격 매수세를 반영한다.
-- 상대 거래량: 가격 상승과 함께 거래량이 늘면 실제 자금 유입 가능성을 높게 본다.
-- 52주 고점 대비 위치: 고점 근처 자산은 추세 추종 자금 유입 가능성이 있다.
-- 추세 상태: 5일선/20일선/50일선 위에 있는지 확인한다.
-- ETF 대비 상대강도: 개별 종목에만 적용하며, 관련 ETF보다 강할 때 개별 종목 우선 가능성이 올라간다.
-- 데이터 신뢰도: 뉴스/옵션/스프레드/ETF 구성종목 확산도 데이터가 미연결이면 HIGH confidence를 사용하지 않는다.
-
-### 점수 구간 해석
-- 80점 이상: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
-- 65점 이상 80점 미만: 관심 후보. 눌림 또는 돌파 확인 후 진입 검토.
-- 50점 이상 65점 미만: 관찰 후보. 자금 흐름은 있으나 우선순위는 낮음.
-- 50점 미만: 매매 금지 또는 우선순위 낮은 후보.
-
-### 주의 문구
-moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 자금 흐름 후보 점수이며, 진입 여부는 반드시 진입 조건과 무효화 조건을 함께 확인해야 한다.
-
-### moneyFlowScore(1차/최종) 계산 구조
-- moneyFlowScore(1차) = 추세 + 단기 모멘텀 + 중기 모멘텀 + 거래량 + 신고가 근접 + 이동평균
-- moneyFlowScore(최종 원점수) = moneyFlowScore(1차) + 뉴스 + 옵션 + ETF 확산도 + 유동성 + 관련 ETF 대비 상대강도 + 리스크 패널티
-- moneyFlowScore(최종 표시 점수) = min(100, max(0, 최종 원점수))
-- 리스크 패널티는 -6, -4처럼 음수로 저장하고 계산식에 그대로 더한다.
-- 최종 표시 점수가 100점으로 같아도 정렬에는 최종 원점수를 tie-breaker로 사용한다.
 
 ## 오늘 돈이 몰리는 테마
 
-- **반도체 기술 ETF**: DRAM, SMH, SOXX, SOXQ | 평균 moneyFlowScore 79
-- **Technology**: NVDA, AAPL, MSFT, AVGO, MU, AMD | 평균 moneyFlowScore 59
-- **시장 기준 ETF**: QQQ, SPY, IWM | 평균 moneyFlowScore 43
-- **성장/테마 ETF**: IGV, AIQ, BOTZ, ROBO, CIBR, HACK | 평균 moneyFlowScore 41
-- **Industrials**: HON, ADP, CSX, CTAS, PCAR, FAST | 평균 moneyFlowScore 40
-- **방산 ETF**: ITA, XAR, SHLD, PPA | 평균 moneyFlowScore 39
+### 1. 반도체 기술 ETF
+- 관련 티커: DRAM, SMH, SOXX, SOXQ
+- 평균 moneyFlowScore: 79
+- 돈이 몰린다고 보는 이유:
+  - 평균 5일 수익률 +11.72%, 평균 20일 수익률 +33.18%로 추세가 확인된다.
+  - 평균 상대 거래량 0.90배로 거래 참여가 확인된다.
+  - 4개 후보 중 4개가 관심권 이상 moneyFlowScore를 기록했다.
+  - 4개 후보가 20일선 위에서 움직여 추세 유지 근거가 있다.
+- 해석: 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
+
+### 2. Technology
+- 관련 티커: NVDA, AAPL, MSFT, AVGO, MU, AMD, ASML, INTC
+- 평균 moneyFlowScore: 59
+- 돈이 몰린다고 보는 이유:
+  - 평균 5일 수익률 +8.68%, 평균 20일 수익률 +23.12%로 추세가 확인된다.
+  - 평균 상대 거래량 1.15배로 거래 참여가 확인된다.
+  - 40개 후보 중 18개가 관심권 이상 moneyFlowScore를 기록했다.
+  - 32개 후보가 20일선 위에서 움직여 추세 유지 근거가 있다.
+- 해석: 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
+
+### 3. 시장 기준 ETF
+- 관련 티커: QQQ, SPY, IWM
+- 평균 moneyFlowScore: 46
+- 돈이 몰린다고 보는 이유:
+  - 평균 5일 수익률 +2.20%, 평균 20일 수익률 +6.30%로 추세가 확인된다.
+  - 평균 상대 거래량 0.90배로 거래 참여가 확인된다.
+  - 3개 후보 중 0개가 관심권 이상 moneyFlowScore를 기록했다.
+  - 3개 후보가 20일선 위에서 움직여 추세 유지 근거가 있다.
+- 해석: 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
+
+### 4. 성장/테마 ETF
+- 관련 티커: IGV, AIQ, BOTZ, ROBO, CIBR, HACK, IHAK, PAVE
+- 평균 moneyFlowScore: 41
+- 돈이 몰린다고 보는 이유:
+  - 평균 5일 수익률 +3.95%, 평균 20일 수익률 +7.22%로 추세가 확인된다.
+  - 평균 상대 거래량 1.22배로 거래 참여가 확인된다.
+  - 22개 후보 중 6개가 관심권 이상 moneyFlowScore를 기록했다.
+  - 12개 후보가 20일선 위에서 움직여 추세 유지 근거가 있다.
+- 해석: 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
+
+### 5. Industrials
+- 관련 티커: HON, ADP, CSX, CTAS, PCAR, FAST, FER, ODFL
+- 평균 moneyFlowScore: 40
+- 돈이 몰린다고 보는 이유:
+  - 평균 5일 수익률 +4.42%, 평균 20일 수익률 +3.91%로 추세가 확인된다.
+  - 평균 상대 거래량 1.11배로 거래 참여가 확인된다.
+  - 13개 후보 중 4개가 관심권 이상 moneyFlowScore를 기록했다.
+  - 9개 후보가 20일선 위에서 움직여 추세 유지 근거가 있다.
+- 해석: 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
+
+### 6. 방산 ETF
+- 관련 티커: ITA, XAR, SHLD, PPA
+- 평균 moneyFlowScore: 39
+- 돈이 몰린다고 보는 이유:
+  - 평균 5일 수익률 +1.99%, 평균 20일 수익률 +4.24%로 추세가 확인된다.
+  - 평균 상대 거래량 1.31배로 거래 참여가 확인된다.
+  - 4개 후보 중 0개가 관심권 이상 moneyFlowScore를 기록했다.
+  - 4개 후보가 20일선 위에서 움직여 추세 유지 근거가 있다.
+- 해석: 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
 
 ## 1. ETF 트레이딩 보고서
 ### 1-1. ETF 결론
@@ -93,7 +99,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 
 ### 1-2. ETF 후보 TOP 5
 
-선정 기준: ETF 후보는 가격/거래량 1차 점수에 뉴스, 옵션, ETF 구성종목 확산도, 유동성, 리스크 패널티를 반영한 moneyFlowScore(최종) 기준으로 정렬한다. 최종 표시 점수가 같으면 최종 원점수를 tie-breaker로 사용한다.
+선정 기준: ETF 후보는 가격/거래량 1차 점수에 뉴스, ETF 구성종목 확산도, 유동성, 리스크 패널티를 반영한 moneyFlowScore(최종) 기준으로 정렬한다. 최종 표시 점수가 같으면 최종 원점수를 tie-breaker로 사용한다.
 
 ### [ETF IGV] iShares Expanded Tech-Software Sector ETF
 - 자산 유형: ETF
@@ -106,7 +112,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 최종 원점수: 125
   - 최종 표시 점수: 100
   - cap 적용: raw score 125 capped to displayed score 100
-  - 계산식: +102 + +10 + 0 + +8 + +5 + 0 + 0 + 0 = 125 -> 100
+  - 계산식: +102 + +10 + +8 + +5 + 0 + 0 + 0 = 125 -> 100
   - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
   - 가격/거래량 1차 점수: +102
     - 추세: +29
@@ -117,16 +123,15 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
     - 이동평균: +14
   - 추가 데이터 가감점:
     - 뉴스: +10
-    - 옵션: 0
     - 유동성: +5
   - ETF 확산도: +8
   - 리스크 패널티: 0
-  - 주요 근거: 1차 100, 최종 원점수 125, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 옵션 데이터 미연결 또는 수집 실패.
+  - 주요 근거: 1차 100, 최종 원점수 125, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: 0
     - 리스크 등급: LOW
     - 감점된 리스크: 없음
-    - 관찰 리스크: options data not connected or unavailable
+    - 관찰 리스크: 주요 관찰 리스크 없음
     - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
 - 과열 리스크: 낮음
 - reasonConfidence: HIGH
@@ -138,13 +143,12 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 20일 수익률: +24.32%
 - 상대 거래량: 1.83배
 - 52주 고점 대비 위치: -8.72%
-- whyMoneyIsFlowing: 20일 +24.32%, 5일 +14.56%, 상대 거래량 1.83배로 가격과 거래량이 함께 개선. ?댁뒪: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / ETF ?뺤궛?? BROAD_ADVANCE / ?좊룞?? LIQUID
+- whyMoneyIsFlowing: 20일 +24.32%, 5일 +14.56%, 상대 거래량 1.83배로 가격과 거래량이 함께 개선. 뉴스: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
 - 데이터 사용 현황:
   - 가격/거래량: 사용
   - 뉴스: 사용
-  - 옵션: 실패
   - ETF 확산도: 사용
   - 유동성/스프레드: 사용
   - 관련 ETF 상대강도: 사용
@@ -154,14 +158,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 핵심 뉴스 요약: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks
   - 점수 반영: +10
   - 주의: 특이사항 없음
-- 옵션 수급:
-  - 옵션 데이터 상태: 실패
-  - Put/Call 거래량 비율: 데이터 없음
-  - 콜 거래량: 데이터 없음
-  - 풋 거래량: 데이터 없음
-  - IV 상태: 데이터 없음
-  - 해석: 뚜렷한 옵션 방향성 없음
-  - 점수 반영: 0
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 3/3
@@ -196,7 +192,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 최종 원점수: 123
   - 최종 표시 점수: 100
   - cap 적용: raw score 123 capped to displayed score 100
-  - 계산식: +102 + +10 + 0 + +8 + +3 + 0 + 0 + 0 = 123 -> 100
+  - 계산식: +102 + +10 + +8 + +3 + 0 + 0 + 0 = 123 -> 100
   - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
   - 가격/거래량 1차 점수: +102
     - 추세: +30
@@ -207,16 +203,15 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
     - 이동평균: +14
   - 추가 데이터 가감점:
     - 뉴스: +10
-    - 옵션: 0
     - 유동성: +3
   - ETF 확산도: +8
   - 리스크 패널티: 0
-  - 주요 근거: 1차 100, 최종 원점수 123, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 옵션 데이터 미연결 또는 수집 실패.
+  - 주요 근거: 1차 100, 최종 원점수 123, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: 0
     - 리스크 등급: LOW
     - 감점된 리스크: 없음
-    - 관찰 리스크: options data not connected or unavailable
+    - 관찰 리스크: 주요 관찰 리스크 없음
     - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
 - 과열 리스크: 낮음~중간
 - reasonConfidence: HIGH
@@ -228,13 +223,12 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 20일 수익률: +36.93%
 - 상대 거래량: 1.46배
 - 52주 고점 대비 위치: -0.17%
-- whyMoneyIsFlowing: 20일 +36.93%, 5일 +11.71%, 상대 거래량 1.46배로 가격과 거래량이 함께 개선. ?댁뒪: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout / ETF ?뺤궛?? BROAD_ADVANCE / ?좊룞?? ACCEPTABLE
+- whyMoneyIsFlowing: 20일 +36.93%, 5일 +11.71%, 상대 거래량 1.46배로 가격과 거래량이 함께 개선. 뉴스: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout / ETF 확산도: BROAD_ADVANCE / 유동성: ACCEPTABLE
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 데이터 사용 현황:
   - 가격/거래량: 사용
   - 뉴스: 사용
-  - 옵션: 실패
   - ETF 확산도: 사용
   - 유동성/스프레드: 사용
   - 관련 ETF 상대강도: 사용
@@ -244,14 +238,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 핵심 뉴스 요약: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout
   - 점수 반영: +10
   - 주의: 특이사항 없음
-- 옵션 수급:
-  - 옵션 데이터 상태: 실패
-  - Put/Call 거래량 비율: 데이터 없음
-  - 콜 거래량: 데이터 없음
-  - 풋 거래량: 데이터 없음
-  - IV 상태: 데이터 없음
-  - 해석: 뚜렷한 옵션 방향성 없음
-  - 점수 반영: 0
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 2/2
@@ -286,7 +272,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 최종 원점수: 118
   - 최종 표시 점수: 100
   - cap 적용: raw score 118 capped to displayed score 100
-  - 계산식: +97 + +10 + 0 + +8 + +3 + 0 + 0 + 0 = 118 -> 100
+  - 계산식: +97 + +10 + +8 + +3 + 0 + 0 + 0 = 118 -> 100
   - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
   - 가격/거래량 1차 점수: +97
     - 추세: +27
@@ -297,16 +283,15 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
     - 이동평균: +14
   - 추가 데이터 가감점:
     - 뉴스: +10
-    - 옵션: 0
     - 유동성: +3
   - ETF 확산도: +8
   - 리스크 패널티: 0
-  - 주요 근거: 1차 97, 최종 원점수 118, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 옵션 데이터 미연결 또는 수집 실패.
+  - 주요 근거: 1차 97, 최종 원점수 118, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: 0
     - 리스크 등급: LOW
     - 감점된 리스크: 없음
-    - 관찰 리스크: options data not connected or unavailable
+    - 관찰 리스크: 주요 관찰 리스크 없음
     - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
 - 과열 리스크: 낮음~중간
 - reasonConfidence: HIGH
@@ -318,13 +303,12 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 20일 수익률: +22.21%
 - 상대 거래량: 1.59배
 - 52주 고점 대비 위치: -0.56%
-- whyMoneyIsFlowing: 20일 +22.21%, 5일 +10.56%, 상대 거래량 1.59배로 가격과 거래량이 함께 개선. ?댁뒪: OpenAI Reportedly Set to File for IPO as Early as Friday / ETF ?뺤궛?? BROAD_ADVANCE / ?좊룞?? ACCEPTABLE
+- whyMoneyIsFlowing: 20일 +22.21%, 5일 +10.56%, 상대 거래량 1.59배로 가격과 거래량이 함께 개선. 뉴스: OpenAI Reportedly Set to File for IPO as Early as Friday / ETF 확산도: BROAD_ADVANCE / 유동성: ACCEPTABLE
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 데이터 사용 현황:
   - 가격/거래량: 사용
   - 뉴스: 사용
-  - 옵션: 실패
   - ETF 확산도: 사용
   - 유동성/스프레드: 사용
   - 관련 ETF 상대강도: 사용
@@ -334,14 +318,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 핵심 뉴스 요약: OpenAI Reportedly Set to File for IPO as Early as Friday
   - 점수 반영: +10
   - 주의: 특이사항 없음
-- 옵션 수급:
-  - 옵션 데이터 상태: 실패
-  - Put/Call 거래량 비율: 데이터 없음
-  - 콜 거래량: 데이터 없음
-  - 풋 거래량: 데이터 없음
-  - IV 상태: 데이터 없음
-  - 해석: 뚜렷한 옵션 방향성 없음
-  - 점수 반영: 0
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 4/4
@@ -376,7 +352,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 최종 원점수: 112
   - 최종 표시 점수: 100
   - cap 적용: raw score 112 capped to displayed score 100
-  - 계산식: +104 + +10 + 0 + +8 - 5 + 0 - 5 + 0 = 112 -> 100
+  - 계산식: +104 + +10 + +8 - 5 + 0 - 5 + 0 = 112 -> 100
   - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
   - 가격/거래량 1차 점수: +104
     - 추세: +29
@@ -387,17 +363,16 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
     - 이동평균: +14
   - 추가 데이터 가감점:
     - 뉴스: +10
-    - 옵션: 0
     - 유동성: -5
   - ETF 확산도: +8
   - 리스크 패널티: -5
-  - 주요 근거: 1차 100, 최종 원점수 112, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+  - 주요 근거: 1차 100, 최종 원점수 112, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: -5
     - 리스크 등급: LOW
     - 감점된 리스크:
       - low liquidity: -5 | 근거: Liquidity signal: LOW_LIQUIDITY. | 대응: Avoid market-order chasing.
-    - 관찰 리스크: options data not connected or unavailable
+    - 관찰 리스크: 주요 관찰 리스크 없음
     - 한 줄 해석: 1개 감점 리스크로 총 -5점 반영.
 - 과열 리스크: 낮음~중간
 - reasonConfidence: MEDIUM
@@ -409,13 +384,12 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 20일 수익률: +29.98%
 - 상대 거래량: 1.57배
 - 52주 고점 대비 위치: -0.38%
-- whyMoneyIsFlowing: 20일 +29.98%, 5일 +10.70%, 상대 거래량 1.57배로 가격과 거래량이 함께 개선. ?댁뒪: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout / ETF ?뺤궛?? BROAD_ADVANCE
+- whyMoneyIsFlowing: 20일 +29.98%, 5일 +10.70%, 상대 거래량 1.57배로 가격과 거래량이 함께 개선. 뉴스: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout / ETF 확산도: BROAD_ADVANCE
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 데이터 사용 현황:
   - 가격/거래량: 사용
   - 뉴스: 사용
-  - 옵션: 실패
   - ETF 확산도: 사용
   - 유동성/스프레드: 사용
   - 관련 ETF 상대강도: 사용
@@ -425,14 +399,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 핵심 뉴스 요약: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout
   - 점수 반영: +10
   - 주의: 특이사항 없음
-- 옵션 수급:
-  - 옵션 데이터 상태: 실패
-  - Put/Call 거래량 비율: 데이터 없음
-  - 콜 거래량: 데이터 없음
-  - 풋 거래량: 데이터 없음
-  - IV 상태: 데이터 없음
-  - 해석: 뚜렷한 옵션 방향성 없음
-  - 점수 반영: 0
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 2/2
@@ -467,7 +433,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 최종 원점수: 103
   - 최종 표시 점수: 100
   - cap 적용: raw score 103 capped to displayed score 100
-  - 계산식: +102 + +10 + 0 + 0 + +5 + 0 - 14 + 0 = 103 -> 100
+  - 계산식: +102 + +10 + 0 + +5 + 0 - 14 + 0 = 103 -> 100
   - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
   - 가격/거래량 1차 점수: +102
     - 추세: +30
@@ -478,11 +444,10 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
     - 이동평균: +14
   - 추가 데이터 가감점:
     - 뉴스: +10
-    - 옵션: 0
     - 유동성: +5
   - ETF 확산도: 0
   - 리스크 패널티: -14
-  - 주요 근거: 1차 100, 최종 원점수 103, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+  - 주요 근거: 1차 100, 최종 원점수 103, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, ETF 구성종목 확산도 데이터 미연결.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: -14
     - 리스크 등급: MEDIUM
@@ -490,7 +455,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
       - short-term overheat: -6 | 근거: 5d return +28.74% is extended. | 대응: Prefer pullback or prior high reclaim over chasing.
       - extreme 1d move: -4 | 근거: 1d return +7.59% is unusually strong. | 대응: Confirm next-session volume retention.
       - near 52w high chase: -4 | 근거: Price is close to the 52-week high with fast short-term momentum. | 대응: Downgrade if breakout fails.
-    - 관찰 리스크: options data not connected or unavailable; ETF breadth data not connected
+    - 관찰 리스크: ETF breadth data not connected
     - 한 줄 해석: 3개 감점 리스크로 총 -14점 반영.
 - 과열 리스크: 중간
 - reasonConfidence: MEDIUM
@@ -502,13 +467,12 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 20일 수익률: +68.28%
 - 상대 거래량: 1.06배
 - 52주 고점 대비 위치: -1.11%
-- whyMoneyIsFlowing: 20일 +68.28%, 5일 +28.74%, 상대 거래량 1.06배로 가격과 거래량이 함께 개선. ?댁뒪: Daily ETF Flows: DRAM Back In The Top 10 / ?좊룞?? LIQUID
+- whyMoneyIsFlowing: 20일 +68.28%, 5일 +28.74%, 상대 거래량 1.06배로 가격과 거래량이 함께 개선. 뉴스: Daily ETF Flows: DRAM Back In The Top 10 / 유동성: LIQUID
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 데이터 사용 현황:
   - 가격/거래량: 사용
   - 뉴스: 사용
-  - 옵션: 실패
   - ETF 확산도: 미연결
   - 유동성/스프레드: 사용
   - 관련 ETF 상대강도: 사용
@@ -518,14 +482,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 핵심 뉴스 요약: Daily ETF Flows: DRAM Back In The Top 10
   - 점수 반영: +10
   - 주의: 특이사항 없음
-- 옵션 수급:
-  - 옵션 데이터 상태: 실패
-  - Put/Call 거래량 비율: 데이터 없음
-  - 콜 거래량: 데이터 없음
-  - 풋 거래량: 데이터 없음
-  - IV 상태: 데이터 없음
-  - 해석: 뚜렷한 옵션 방향성 없음
-  - 점수 반영: 0
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 미연결
   - 샘플 수: 0/0
@@ -553,35 +509,35 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 
 #### [DRAM] Roundhill Memory ETF
 - moneyFlowScore(최종): 100
-- moneyFlowScore 산정 근거 요약: 1차 100, 최종 원점수 103, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 100, 최종 원점수 103, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, ETF 구성종목 확산도 데이터 미연결.
 - 과열 리스크: 중간
 - 과열 근거: 반도체 기술 ETF 기준 단기 급등과 고점 근접 조합 확인
 - 대응: 눌림 대기
 
 #### [AIQ] Global X Artificial Intelligence & Technology ETF
 - moneyFlowScore(최종): 100
-- moneyFlowScore 산정 근거 요약: 1차 97, 최종 원점수 118, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 97, 최종 원점수 118, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
 - 과열 리스크: 낮음~중간
 - 과열 근거: 성장/테마 ETF 기준 단기 급등과 고점 근접 조합 확인
 - 대응: 돌파 확인 후 진입
 
 #### [CIBR] First Trust NASDAQ Cybersecurity ETF
 - moneyFlowScore(최종): 100
-- moneyFlowScore 산정 근거 요약: 1차 100, 최종 원점수 123, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 100, 최종 원점수 123, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
 - 과열 리스크: 낮음~중간
 - 과열 근거: 성장/테마 ETF 기준 단기 급등과 고점 근접 조합 확인
 - 대응: 돌파 확인 후 진입
 
 #### [HACK] Amplify Cybersecurity ETF
 - moneyFlowScore(최종): 100
-- moneyFlowScore 산정 근거 요약: 1차 100, 최종 원점수 112, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 100, 최종 원점수 112, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
 - 과열 리스크: 낮음~중간
 - 과열 근거: 성장/테마 ETF 기준 단기 급등과 고점 근접 조합 확인
 - 대응: 돌파 확인 후 진입
 
 #### [IHAK] iShares Cybersecurity and Tech ETF
 - moneyFlowScore(최종): 89
-- moneyFlowScore 산정 근거 요약: 1차 93, 최종 원점수 89, 표시 89. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 93, 최종 원점수 89, 표시 89. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, ETF 구성종목 확산도 데이터 미연결.
 - 과열 리스크: 중간
 - 과열 근거: 성장/테마 ETF 기준 단기 급등과 고점 근접 조합 확인
 - 대응: 눌림 대기
@@ -591,31 +547,31 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 
 #### [PAVE] Global X U.S. Infrastructure Development ETF
 - moneyFlowScore(최종): 0
-- moneyFlowScore 산정 근거 요약: 1차 3, 최종 원점수 -3, 표시 0. 52주 고점 근처, 뉴스 흐름이 가격/거래량 근거 보강, 유동성/스프레드 주의. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 3, 최종 원점수 -3, 표시 0. 52주 고점 근처, 뉴스 흐름이 가격/거래량 근거 보강, 유동성/스프레드 주의. 주의: 단기 과열/추격 위험 존재, ETF 구성종목 확산도 데이터 미연결.
 - 제외 사유: 테마 자금 흐름 약함
 - 해제 조건: 상대 거래량 1.0배 회복 후 관찰
 
 #### [IFRA] iShares U.S. Infrastructure ETF
 - moneyFlowScore(최종): 0
-- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -29, 표시 0. 유동성/스프레드 주의. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -29, 표시 0. 유동성/스프레드 주의. 주의: 단기 과열/추격 위험 존재, ETF 구성종목 확산도 데이터 미연결.
 - 제외 사유: 테마 자금 흐름 약함
 - 해제 조건: 상대 거래량 1.0배 회복 후 관찰
 
 #### [XLU] Utilities Select Sector SPDR Fund
 - moneyFlowScore(최종): 0
-- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 0, 표시 0. 상대 거래량 증가, 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 기준 유동성 양호. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 0, 표시 0. 상대 거래량 증가, 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 기준 유동성 양호. 주의: 단기 과열/추격 위험 존재, ETF 구성종목 확산도 데이터 미연결.
 - 제외 사유: 테마 자금 흐름 약함
 - 해제 조건: 20일선 위 눌림 후 재상승 확인
 
 #### [URA] Global X Uranium ETF
 - moneyFlowScore(최종): 0
-- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -12, 표시 0. 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 기준 유동성 양호. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -12, 표시 0. 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 기준 유동성 양호. 주의: 단기 과열/추격 위험 존재, ETF 구성종목 확산도 데이터 미연결.
 - 제외 사유: 테마 자금 흐름 약함
 - 해제 조건: 상대 거래량 1.0배 회복 후 관찰
 
 #### [NLR] VanEck Uranium and Nuclear ETF
 - moneyFlowScore(최종): 0
-- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -29, 표시 0. 뉴스 흐름이 가격/거래량 근거 보강, 유동성/스프레드 주의. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -29, 표시 0. 뉴스 흐름이 가격/거래량 근거 보강, 유동성/스프레드 주의. 주의: 단기 과열/추격 위험 존재, ETF 구성종목 확산도 데이터 미연결.
 - 제외 사유: 테마 자금 흐름 약함
 - 해제 조건: 상대 거래량 1.0배 회복 후 관찰
 
@@ -644,7 +600,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 선정 기준:
 1. Nasdaq-100 전체를 moneyFlowScore(1차)로 먼저 스캔
 2. moneyFlowScore(1차) 상위 20개를 상세 분석
-3. 뉴스/옵션/유동성/관련 ETF 대비 상대강도/리스크 패널티를 반영
+3. 뉴스/유동성/관련 ETF 대비 상대강도/리스크 패널티를 반영
 4. moneyFlowScore(최종), 최종 원점수, 리스크 패널티, 5일 수익률, 상대 거래량 순으로 재정렬
 
 ### [PANW] Palo Alto Networks Inc.
@@ -659,7 +615,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 최종 원점수: 123
   - 최종 표시 점수: 100
   - cap 적용: raw score 123 capped to displayed score 100
-  - 계산식: +104 + +10 + 0 + 0 + +5 + +8 - 4 + 0 = 123 -> 100
+  - 계산식: +104 + +10 + 0 + +5 + +8 - 4 + 0 = 123 -> 100
   - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
   - 가격/거래량 1차 점수: +104
     - 추세: +24
@@ -670,17 +626,16 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
     - 이동평균: +14
   - 추가 데이터 가감점:
     - 뉴스: +10
-    - 옵션: 0
     - 유동성: +5
   - ETF 대비 상대강도: +8
   - 리스크 패널티: -4
-  - 주요 근거: 1차 100, 최종 원점수 123, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+  - 주요 근거: 1차 100, 최종 원점수 123, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: -4
     - 리스크 등급: LOW
     - 감점된 리스크:
       - extreme 1d move: -4 | 근거: 1d return +6.67% is unusually strong. | 대응: Confirm next-session volume retention.
-    - 관찰 리스크: options data not connected or unavailable
+    - 관찰 리스크: 주요 관찰 리스크 없음
     - 한 줄 해석: 1개 감점 리스크로 총 -4점 반영.
 - 과열 리스크: 낮음~중간
 - reasonConfidence: HIGH
@@ -693,7 +648,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 상대 거래량: 1.54배
 - 52주 고점 대비 위치: -0.82%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +15.31% vs ETF 평균 +11.47%, 주식 20일 +65.94% vs ETF 평균 +29.72%, 상대 거래량 1.54배 vs ETF 평균 1.49배
-- whyMoneyIsFlowing: 20일 +65.94%, 5일 +15.31%, 상대 거래량 1.54배로 가격과 거래량이 함께 개선. ?댁뒪: Palo Alto Reports Earnings as It Prepares for AI Security / ?좊룞?? LIQUID
+- whyMoneyIsFlowing: 20일 +65.94%, 5일 +15.31%, 상대 거래량 1.54배로 가격과 거래량이 함께 개선. 뉴스: Palo Alto Reports Earnings as It Prepares for AI Security / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: PANW가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
@@ -701,7 +656,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 데이터 사용 현황:
   - 가격/거래량: 사용
   - 뉴스: 사용
-  - 옵션: 실패
   - ETF 확산도: 관련 ETF에서 확인
   - 유동성/스프레드: 사용
   - 관련 ETF 상대강도: 사용
@@ -711,14 +665,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 핵심 뉴스 요약: Palo Alto Reports Earnings as It Prepares for AI Security
   - 점수 반영: +10
   - 주의: 특이사항 없음
-- 옵션 수급:
-  - 옵션 데이터 상태: 실패
-  - Put/Call 거래량 비율: 데이터 없음
-  - 콜 거래량: 데이터 없음
-  - 풋 거래량: 데이터 없음
-  - IV 상태: 데이터 없음
-  - 해석: 뚜렷한 옵션 방향성 없음
-  - 점수 반영: 0
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 유동성/스프레드:
   - 데이터 상태: 일부 연결
@@ -746,7 +692,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 최종 원점수: 123
   - 최종 표시 점수: 100
   - cap 적용: raw score 123 capped to displayed score 100
-  - 계산식: +110 + +10 + 0 + 0 + +5 + +8 - 10 + 0 = 123 -> 100
+  - 계산식: +110 + +10 + 0 + +5 + +8 - 10 + 0 = 123 -> 100
   - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
   - 가격/거래량 1차 점수: +110
     - 추세: +30
@@ -757,18 +703,17 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
     - 이동평균: +14
   - 추가 데이터 가감점:
     - 뉴스: +10
-    - 옵션: 0
     - 유동성: +5
   - ETF 대비 상대강도: +8
   - 리스크 패널티: -10
-  - 주요 근거: 1차 100, 최종 원점수 123, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+  - 주요 근거: 1차 100, 최종 원점수 123, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: -10
     - 리스크 등급: MEDIUM
     - 감점된 리스크:
       - short-term overheat: -6 | 근거: 5d return +33.39% is extended. | 대응: Prefer pullback or prior high reclaim over chasing.
       - extreme 1d move: -4 | 근거: 1d return +15.73% is unusually strong. | 대응: Confirm next-session volume retention.
-    - 관찰 리스크: options data not connected or unavailable
+    - 관찰 리스크: 주요 관찰 리스크 없음
     - 한 줄 해석: 2개 감점 리스크로 총 -10점 반영.
 - 과열 리스크: 낮음~중간
 - reasonConfidence: HIGH
@@ -781,7 +726,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 상대 거래량: 1.58배
 - 52주 고점 대비 위치: -3.04%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +33.39% vs ETF 평균 +7.17%, 주식 20일 +93.60% vs ETF 평균 +21.66%, 상대 거래량 1.58배 vs ETF 평균 1.03배
-- whyMoneyIsFlowing: 20일 +93.60%, 5일 +33.39%, 상대 거래량 1.58배로 가격과 거래량이 함께 개선. ?댁뒪: Arm’s Role Widens In AI PCs And Data Centers With Nvidia / ?좊룞?? LIQUID
+- whyMoneyIsFlowing: 20일 +93.60%, 5일 +33.39%, 상대 거래량 1.58배로 가격과 거래량이 함께 개선. 뉴스: Arm’s Role Widens In AI PCs And Data Centers With Nvidia / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: ARM가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
@@ -789,7 +734,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 데이터 사용 현황:
   - 가격/거래량: 사용
   - 뉴스: 사용
-  - 옵션: 실패
   - ETF 확산도: 관련 ETF에서 확인
   - 유동성/스프레드: 사용
   - 관련 ETF 상대강도: 사용
@@ -799,14 +743,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 핵심 뉴스 요약: Arm’s Role Widens In AI PCs And Data Centers With Nvidia
   - 점수 반영: +10
   - 주의: 특이사항 없음
-- 옵션 수급:
-  - 옵션 데이터 상태: 실패
-  - Put/Call 거래량 비율: 데이터 없음
-  - 콜 거래량: 데이터 없음
-  - 풋 거래량: 데이터 없음
-  - IV 상태: 데이터 없음
-  - 해석: 뚜렷한 옵션 방향성 없음
-  - 점수 반영: 0
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 유동성/스프레드:
   - 데이터 상태: 일부 연결
@@ -834,7 +770,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 최종 원점수: 123
   - 최종 표시 점수: 100
   - cap 적용: raw score 123 capped to displayed score 100
-  - 계산식: +110 + +10 + 0 + 0 + +5 + +8 - 10 + 0 = 123 -> 100
+  - 계산식: +110 + +10 + 0 + +5 + +8 - 10 + 0 = 123 -> 100
   - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
   - 가격/거래량 1차 점수: +110
     - 추세: +30
@@ -845,18 +781,17 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
     - 이동평균: +14
   - 추가 데이터 가감점:
     - 뉴스: +10
-    - 옵션: 0
     - 유동성: +5
   - ETF 대비 상대강도: +8
   - 리스크 패널티: -10
-  - 주요 근거: 1차 100, 최종 원점수 123, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+  - 주요 근거: 1차 100, 최종 원점수 123, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: -10
     - 리스크 등급: MEDIUM
     - 감점된 리스크:
       - short-term overheat: -6 | 근거: 5d return +24.82% is extended. | 대응: Prefer pullback or prior high reclaim over chasing.
       - extreme 1d move: -4 | 근거: 1d return +12.19% is unusually strong. | 대응: Confirm next-session volume retention.
-    - 관찰 리스크: options data not connected or unavailable
+    - 관찰 리스크: 주요 관찰 리스크 없음
     - 한 줄 해석: 2개 감점 리스크로 총 -10점 반영.
 - 과열 리스크: 낮음~중간
 - reasonConfidence: HIGH
@@ -869,7 +804,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 상대 거래량: 1.51배
 - 52주 고점 대비 위치: -0.44%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +24.82% vs ETF 평균 +9.54%, 주식 20일 +97.46% vs ETF 평균 +18.90%, 상대 거래량 1.51배 vs ETF 평균 1.43배
-- whyMoneyIsFlowing: 20일 +97.46%, 5일 +24.82%, 상대 거래량 1.51배로 가격과 거래량이 함께 개선. ?댁뒪: Stocks Rally on Easing Geopolitical Tensions and AI Enthusiasm / ?좊룞?? LIQUID
+- whyMoneyIsFlowing: 20일 +97.46%, 5일 +24.82%, 상대 거래량 1.51배로 가격과 거래량이 함께 개선. 뉴스: Stocks Rally on Easing Geopolitical Tensions and AI Enthusiasm / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: DDOG가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
@@ -877,7 +812,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 데이터 사용 현황:
   - 가격/거래량: 사용
   - 뉴스: 사용
-  - 옵션: 실패
   - ETF 확산도: 관련 ETF에서 확인
   - 유동성/스프레드: 사용
   - 관련 ETF 상대강도: 사용
@@ -887,14 +821,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 핵심 뉴스 요약: Stocks Rally on Easing Geopolitical Tensions and AI Enthusiasm
   - 점수 반영: +10
   - 주의: 특이사항 없음
-- 옵션 수급:
-  - 옵션 데이터 상태: 실패
-  - Put/Call 거래량 비율: 데이터 없음
-  - 콜 거래량: 데이터 없음
-  - 풋 거래량: 데이터 없음
-  - IV 상태: 데이터 없음
-  - 해석: 뚜렷한 옵션 방향성 없음
-  - 점수 반영: 0
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 유동성/스프레드:
   - 데이터 상태: 일부 연결
@@ -922,7 +848,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 최종 원점수: 119
   - 최종 표시 점수: 100
   - cap 적용: raw score 119 capped to displayed score 100
-  - 계산식: +100 + +10 + 0 + 0 + +5 + +8 - 4 + 0 = 119 -> 100
+  - 계산식: +100 + +10 + 0 + +5 + +8 - 4 + 0 = 119 -> 100
   - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
   - 가격/거래량 1차 점수: +100
     - 추세: +24
@@ -933,17 +859,16 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
     - 이동평균: +14
   - 추가 데이터 가감점:
     - 뉴스: +10
-    - 옵션: 0
     - 유동성: +5
   - ETF 대비 상대강도: +8
   - 리스크 패널티: -4
-  - 주요 근거: 1차 100, 최종 원점수 119, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+  - 주요 근거: 1차 100, 최종 원점수 119, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: -4
     - 리스크 등급: LOW
     - 감점된 리스크:
       - extreme 1d move: -4 | 근거: 1d return +7.00% is unusually strong. | 대응: Confirm next-session volume retention.
-    - 관찰 리스크: options data not connected or unavailable
+    - 관찰 리스크: 주요 관찰 리스크 없음
     - 한 줄 해석: 1개 감점 리스크로 총 -4점 반영.
 - 과열 리스크: 낮음~중간
 - reasonConfidence: HIGH
@@ -956,7 +881,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 상대 거래량: 1.35배
 - 52주 고점 대비 위치: -0.44%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +17.89% vs ETF 평균 +11.47%, 주식 20일 +71.66% vs ETF 평균 +29.72%, 상대 거래량 1.35배 vs ETF 평균 1.49배
-- whyMoneyIsFlowing: 20일 +71.66%, 5일 +17.89%, 상대 거래량 1.35배로 가격과 거래량이 함께 개선. ?댁뒪: CrowdStrike Earnings: What To Look For From CRWD / ?좊룞?? LIQUID
+- whyMoneyIsFlowing: 20일 +71.66%, 5일 +17.89%, 상대 거래량 1.35배로 가격과 거래량이 함께 개선. 뉴스: CrowdStrike Earnings: What To Look For From CRWD / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: CRWD가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
@@ -964,7 +889,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 데이터 사용 현황:
   - 가격/거래량: 사용
   - 뉴스: 사용
-  - 옵션: 실패
   - ETF 확산도: 관련 ETF에서 확인
   - 유동성/스프레드: 사용
   - 관련 ETF 상대강도: 사용
@@ -974,14 +898,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 핵심 뉴스 요약: CrowdStrike Earnings: What To Look For From CRWD
   - 점수 반영: +10
   - 주의: 특이사항 없음
-- 옵션 수급:
-  - 옵션 데이터 상태: 실패
-  - Put/Call 거래량 비율: 데이터 없음
-  - 콜 거래량: 데이터 없음
-  - 풋 거래량: 데이터 없음
-  - IV 상태: 데이터 없음
-  - 해석: 뚜렷한 옵션 방향성 없음
-  - 점수 반영: 0
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 유동성/스프레드:
   - 데이터 상태: 일부 연결
@@ -1009,7 +925,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 최종 원점수: 112
   - 최종 표시 점수: 100
   - cap 적용: raw score 112 capped to displayed score 100
-  - 계산식: +99 + +8 + 0 + 0 + +5 + +8 - 8 + 0 = 112 -> 100
+  - 계산식: +99 + +8 + 0 + +5 + +8 - 8 + 0 = 112 -> 100
   - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
   - 가격/거래량 1차 점수: +99
     - 추세: +30
@@ -1020,18 +936,17 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
     - 이동평균: +14
   - 추가 데이터 가감점:
     - 뉴스: +8
-    - 옵션: 0
     - 유동성: +5
   - ETF 대비 상대강도: +8
   - 리스크 패널티: -8
-  - 주요 근거: 1차 99, 최종 원점수 112, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+  - 주요 근거: 1차 99, 최종 원점수 112, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: -8
     - 리스크 등급: MEDIUM
     - 감점된 리스크:
       - extreme 1d move: -4 | 근거: 1d return +7.04% is unusually strong. | 대응: Confirm next-session volume retention.
       - near 52w high chase: -4 | 근거: Price is close to the 52-week high with fast short-term momentum. | 대응: Downgrade if breakout fails.
-    - 관찰 리스크: options data not connected or unavailable
+    - 관찰 리스크: 주요 관찰 리스크 없음
     - 한 줄 해석: 2개 감점 리스크로 총 -8점 반영.
 - 과열 리스크: 중간
 - reasonConfidence: HIGH
@@ -1044,7 +959,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 상대 거래량: 1.14배
 - 52주 고점 대비 위치: -2.54%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +11.77% vs ETF 평균 +7.17%, 주식 20일 +33.03% vs ETF 평균 +21.66%, 상대 거래량 1.14배 vs ETF 평균 1.03배
-- whyMoneyIsFlowing: 20일 +33.03%, 5일 +11.77%, 상대 거래량 1.14배로 가격과 거래량이 함께 개선. ?댁뒪: Marvell Announces Availability of Industry’s First 102.4 Tbps Switch Purpose-Built for AI and Cloud Data Center Infrastructure / ?좊룞?? LIQUID
+- whyMoneyIsFlowing: 20일 +33.03%, 5일 +11.77%, 상대 거래량 1.14배로 가격과 거래량이 함께 개선. 뉴스: Marvell Announces Availability of Industry’s First 102.4 Tbps Switch Purpose-Built for AI and Cloud Data Center Infrastructure / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: MRVL가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
@@ -1052,7 +967,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - 데이터 사용 현황:
   - 가격/거래량: 사용
   - 뉴스: 사용
-  - 옵션: 실패
   - ETF 확산도: 관련 ETF에서 확인
   - 유동성/스프레드: 사용
   - 관련 ETF 상대강도: 사용
@@ -1062,14 +976,6 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 핵심 뉴스 요약: Marvell Announces Availability of Industry’s First 102.4 Tbps Switch Purpose-Built for AI and Cloud Data Center Infrastructure
   - 점수 반영: +8
   - 주의: 특이사항 없음
-- 옵션 수급:
-  - 옵션 데이터 상태: 실패
-  - Put/Call 거래량 비율: 데이터 없음
-  - 콜 거래량: 데이터 없음
-  - 풋 거래량: 데이터 없음
-  - IV 상태: 데이터 없음
-  - 해석: 뚜렷한 옵션 방향성 없음
-  - 점수 반영: 0
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 유동성/스프레드:
   - 데이터 상태: 일부 연결
@@ -1171,37 +1077,37 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 
 #### [AVGO] Broadcom Inc.
 - moneyFlowScore(최종): 100
-- moneyFlowScore 산정 근거 요약: 1차 80, 최종 원점수 103, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 80, 최종 원점수 103, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
 - 제외/주의 사유: 개별 종목 우선 근거 부족
 - 해제 조건: 전일 고점 돌파와 5일선 유지 확인
 
 #### [MRVL] Marvell Technology Inc.
 - moneyFlowScore(최종): 100
-- moneyFlowScore 산정 근거 요약: 1차 99, 최종 원점수 112, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 99, 최종 원점수 112, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
 - 제외/주의 사유: 개별 종목 우선 근거 부족
 - 해제 조건: 전일 고점 돌파와 5일선 유지 확인
 
 #### [ADBE] Adobe Inc.
 - moneyFlowScore(최종): 100
-- moneyFlowScore 산정 근거 요약: 1차 77, 최종 원점수 100, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 77, 최종 원점수 100, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
 - 제외/주의 사유: 개별 종목 우선 근거 부족
 - 해제 조건: 20일선 위 눌림 후 재상승 확인
 
 #### [CDNS] Cadence Design Systems Inc.
 - moneyFlowScore(최종): 100
-- moneyFlowScore 산정 근거 요약: 1차 100, 최종 원점수 114, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 100, 최종 원점수 114, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
 - 제외/주의 사유: 개별 종목 우선 근거 부족
 - 해제 조건: 전일 고점 돌파와 5일선 유지 확인
 
 #### [FTNT] Fortinet Inc.
 - moneyFlowScore(최종): 100
-- moneyFlowScore 산정 근거 요약: 1차 90, 최종 원점수 105, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재, 옵션 데이터 미연결 또는 수집 실패.
+- moneyFlowScore 산정 근거 요약: 1차 90, 최종 원점수 105, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
 - 제외/주의 사유: 개별 종목 우선 근거 부족
 - 해제 조건: 전일 고점 돌파와 5일선 유지 확인
 
 
 ### Nasdaq-100 전체 moneyFlowScore(1차) 표
-이 표는 Nasdaq-100 전체 구성종목을 가격/거래량/추세 중심으로 빠르게 스캔한 moneyFlowScore(1차) 결과다. 뉴스, 옵션, 유동성, 관련 ETF 대비 상대강도, 리스크 패널티를 모두 반영한 최종 추천 점수는 Top5 카드의 moneyFlowScore(최종)에서 확인한다.
+이 표는 Nasdaq-100 전체 구성종목을 가격/거래량/추세 중심으로 빠르게 스캔한 moneyFlowScore(1차) 결과다. 뉴스, 유동성, 관련 ETF 대비 상대강도, 리스크 패널티를 반영한 최종 추천 점수는 Top5 카드의 moneyFlowScore(최종)에서 확인한다.
 
 주의: Top5 카드의 moneyFlowScore(최종)는 1차 점수에 상세 데이터 가감점과 리스크 패널티를 더한 값이다. 따라서 아래 전체 표의 1차 순위와 Top5 최종 순위는 다를 수 있다.
 
@@ -1354,43 +1260,43 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 
 | 티커 | 카테고리 | moneyFlowScore | 상태 | reasonConfidence | 주요 이유 |
 | --- | --- | ---: | --- | --- | --- |
-| DRAM | 반도체 기술 ETF | 100 | 관찰 | MEDIUM | 20일 +68.28%, 5일 +28.74%, 상대 거래량 1.06배로 가격과 거래량이 함께 개선. ?댁뒪: Daily ETF Flows: DRAM Back In The Top 10 / ?좊룞?? LIQUID |
-| SMH | 반도체 기술 ETF | 70 | 진입 후보 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.84배라 신규 자금 유입 강도는 약함. ?댁뒪: Top ETF Stories of May 2026: Iran Deal Hopes, AI Rally / ETF ?뺤궛?? BROAD_ADVANCE / ?좊룞?? LIQUID |
-| SOXX | 반도체 기술 ETF | 74 | 진입 가능 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.82배라 신규 자금 유입 강도는 약함. ?댁뒪: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / ETF ?뺤궛?? BROAD_ADVANCE / ?좊룞?? LIQUID |
-| SOXQ | 반도체 기술 ETF | 72 | 진입 가능 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.89배라 신규 자금 유입 강도는 약함. ?댁뒪: Your Portfolio Isn’t Invested in the Right Kind of AI Unless You Hold This ETF / ETF ?뺤궛?? BROAD_ADVANCE / ?좊룞?? ACCEPTABLE |
-| IGV | 성장/테마 ETF | 100 | 진입 가능 | HIGH | 20일 +24.32%, 5일 +14.56%, 상대 거래량 1.83배로 가격과 거래량이 함께 개선. ?댁뒪: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / ETF ?뺤궛?? BROAD_ADVANCE / ?좊룞?? LIQUID |
-| AIQ | 성장/테마 ETF | 100 | 진입 가능 | HIGH | 20일 +22.21%, 5일 +10.56%, 상대 거래량 1.59배로 가격과 거래량이 함께 개선. ?댁뒪: OpenAI Reportedly Set to File for IPO as Early as Friday / ETF ?뺤궛?? BROAD_ADVANCE / ?좊룞?? ACCEPTABLE |
-| BOTZ | 성장/테마 ETF | 44 | 관찰 | MEDIUM | 20일 +5.18%, 5일 +0.77%, 상대 거래량 1.14배로 가격과 거래량이 함께 개선. ?댁뒪: Three Humanoid Robotics ETFs Built for the Tesla Optimus and Figure AI Era Most Investors Have Never Heard Of |
-| ROBO | 성장/테마 ETF | 58 | 진입 후보 | MEDIUM | 20일 +9.31%, 5일 +2.60%, 상대 거래량 1.03배로 가격과 거래량이 함께 개선. ?댁뒪: Three Humanoid Robotics ETFs Built for the Tesla Optimus and Figure AI Era Most Investors Have Never Heard Of |
-| CIBR | 성장/테마 ETF | 100 | 진입 가능 | HIGH | 20일 +36.93%, 5일 +11.71%, 상대 거래량 1.46배로 가격과 거래량이 함께 개선. ?댁뒪: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout / ETF ?뺤궛?? BROAD_ADVANCE / ?좊룞?? ACCEPTABLE |
-| HACK | 성장/테마 ETF | 100 | 진입 가능 | MEDIUM | 20일 +29.98%, 5일 +10.70%, 상대 거래량 1.57배로 가격과 거래량이 함께 개선. ?댁뒪: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout / ETF ?뺤궛?? BROAD_ADVANCE |
-| IHAK | 성장/테마 ETF | 89 | 관찰 | MEDIUM | 20일 +27.66%, 5일 +8.91%, 상대 거래량 1.11배로 가격과 거래량이 함께 개선. ?댁뒪: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout |
-| ITA | 방산 ETF | 47 | 관찰 | MEDIUM | 20일 +6.31%, 5일 +2.01%, 상대 거래량 1.15배로 가격과 거래량이 함께 개선. ?댁뒪: Ondas Holdings Adds High-Margin AI Software to Its Autonomous Defense Portfolio. Here’s What That Means for ONDS Stock. / ?좊룞?? ACCEPTABLE |
-| XAR | 방산 ETF | 60 | 진입 후보 | MEDIUM | 20일 +9.19%, 5일 +3.25%, 상대 거래량 1.71배로 가격과 거래량이 함께 개선. ?댁뒪: This 1 ETF Can Deliver Massive Gains After This Fragile Ceasefire / ?좊룞?? ACCEPTABLE |
-| SHLD | 방산 ETF | 17 | 매매 금지 | LOW | 20일 -3.39%, 5일 +0.72%, 상대 거래량 1.03배로 가격과 거래량이 함께 개선. ?댁뒪: GLOBAL X ANNOUNCES CHANGES TO RISK RATINGS FOR CERTAIN ETFs / ?좊룞?? ACCEPTABLE |
+| DRAM | 반도체 기술 ETF | 100 | 관찰 | MEDIUM | 20일 +68.28%, 5일 +28.74%, 상대 거래량 1.06배로 가격과 거래량이 함께 개선. 뉴스: Daily ETF Flows: DRAM Back In The Top 10 / 유동성: LIQUID |
+| SMH | 반도체 기술 ETF | 70 | 진입 후보 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.84배라 신규 자금 유입 강도는 약함. 뉴스: Top ETF Stories of May 2026: Iran Deal Hopes, AI Rally / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
+| SOXX | 반도체 기술 ETF | 74 | 진입 가능 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.82배라 신규 자금 유입 강도는 약함. 뉴스: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
+| SOXQ | 반도체 기술 ETF | 72 | 진입 가능 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.89배라 신규 자금 유입 강도는 약함. 뉴스: Your Portfolio Isn’t Invested in the Right Kind of AI Unless You Hold This ETF / ETF 확산도: BROAD_ADVANCE / 유동성: ACCEPTABLE |
+| IGV | 성장/테마 ETF | 100 | 진입 가능 | HIGH | 20일 +24.32%, 5일 +14.56%, 상대 거래량 1.83배로 가격과 거래량이 함께 개선. 뉴스: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
+| AIQ | 성장/테마 ETF | 100 | 진입 가능 | HIGH | 20일 +22.21%, 5일 +10.56%, 상대 거래량 1.59배로 가격과 거래량이 함께 개선. 뉴스: OpenAI Reportedly Set to File for IPO as Early as Friday / ETF 확산도: BROAD_ADVANCE / 유동성: ACCEPTABLE |
+| BOTZ | 성장/테마 ETF | 44 | 관찰 | MEDIUM | 20일 +5.18%, 5일 +0.77%, 상대 거래량 1.14배로 가격과 거래량이 함께 개선. 뉴스: Three Humanoid Robotics ETFs Built for the Tesla Optimus and Figure AI Era Most Investors Have Never Heard Of |
+| ROBO | 성장/테마 ETF | 58 | 진입 후보 | MEDIUM | 20일 +9.31%, 5일 +2.60%, 상대 거래량 1.03배로 가격과 거래량이 함께 개선. 뉴스: Three Humanoid Robotics ETFs Built for the Tesla Optimus and Figure AI Era Most Investors Have Never Heard Of |
+| CIBR | 성장/테마 ETF | 100 | 진입 가능 | HIGH | 20일 +36.93%, 5일 +11.71%, 상대 거래량 1.46배로 가격과 거래량이 함께 개선. 뉴스: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout / ETF 확산도: BROAD_ADVANCE / 유동성: ACCEPTABLE |
+| HACK | 성장/테마 ETF | 100 | 진입 가능 | MEDIUM | 20일 +29.98%, 5일 +10.70%, 상대 거래량 1.57배로 가격과 거래량이 함께 개선. 뉴스: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout / ETF 확산도: BROAD_ADVANCE |
+| IHAK | 성장/테마 ETF | 89 | 관찰 | MEDIUM | 20일 +27.66%, 5일 +8.91%, 상대 거래량 1.11배로 가격과 거래량이 함께 개선. 뉴스: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout |
+| ITA | 방산 ETF | 47 | 관찰 | MEDIUM | 20일 +6.31%, 5일 +2.01%, 상대 거래량 1.15배로 가격과 거래량이 함께 개선. 뉴스: Ondas Holdings Adds High-Margin AI Software to Its Autonomous Defense Portfolio. Here’s What That Means for ONDS Stock. / 유동성: ACCEPTABLE |
+| XAR | 방산 ETF | 60 | 진입 후보 | MEDIUM | 20일 +9.19%, 5일 +3.25%, 상대 거래량 1.71배로 가격과 거래량이 함께 개선. 뉴스: This 1 ETF Can Deliver Massive Gains After This Fragile Ceasefire / 유동성: ACCEPTABLE |
+| SHLD | 방산 ETF | 17 | 매매 금지 | LOW | 20일 -3.39%, 5일 +0.72%, 상대 거래량 1.03배로 가격과 거래량이 함께 개선. 뉴스: GLOBAL X ANNOUNCES CHANGES TO RISK RATINGS FOR CERTAIN ETFs / 유동성: ACCEPTABLE |
 | PPA | 방산 ETF | 32 | 매매 금지 | LOW | 20일 +4.84%, 5일 +1.97%, 상대 거래량 1.35배로 가격과 거래량이 함께 개선 |
-| PAVE | 성장/테마 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.71배라 신규 자금 유입 강도는 약함. ?댁뒪: Thematic ETFs 101: How to Invest in AI, Clean Energy Other Megatrends |
-| GRID | 성장/테마 ETF | 9 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.91배라 신규 자금 유입 강도는 약함. ?댁뒪: Peter Thiel Bets $140M on Ocean-Powered Energy for AI / ?좊룞?? ACCEPTABLE |
+| PAVE | 성장/테마 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.71배라 신규 자금 유입 강도는 약함. 뉴스: Thematic ETFs 101: How to Invest in AI, Clean Energy Other Megatrends |
+| GRID | 성장/테마 ETF | 9 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.91배라 신규 자금 유입 강도는 약함. 뉴스: Peter Thiel Bets $140M on Ocean-Powered Energy for AI / 유동성: ACCEPTABLE |
 | IFRA | 성장/테마 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.84배라 신규 자금 유입 강도는 약함 |
-| XLU | 성장/테마 ETF | 0 | 매매 금지 | LOW | 20일 -7.41%, 5일 -4.96%, 상대 거래량 1.45배로 가격과 거래량이 함께 개선. ?댁뒪: XLU Investors: Watch PJM’s March 2027 Data Center Framework Decision / ?좊룞?? LIQUID |
-| URA | 성장/테마 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.82배라 신규 자금 유입 강도는 약함. ?댁뒪: Nuclear Power Is the Only Real Answer to AI Electricity Demand and These 3 ETFs Own the Trade / ?좊룞?? ACCEPTABLE |
-| NLR | 성장/테마 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.77배라 신규 자금 유입 강도는 약함. ?댁뒪: Nuclear ETFs to Gain as the Globe Rides the Atomic Wave |
-| LIT | 성장/테마 ETF | 7 | 매매 금지 | LOW | 20일 -2.96%, 5일 +0.95%, 상대 거래량 2.08배로 가격과 거래량이 함께 개선. ?댁뒪: 3 Market Themes Driving Stocks Right Now: AI, Alt Energy and Commodities |
-| COPX | 성장/테마 ETF | 53 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. ?댁뒪: This Copper ETF Returned 156% in a Year and Pays 9.7% While You Wait for the 4x Case to Play Out. / ?좊룞?? ACCEPTABLE |
-| XME | 성장/테마 ETF | 47 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.92배라 신규 자금 유입 강도는 약함. ?댁뒪: 3 Market Themes Driving Stocks Right Now: AI, Alt Energy and Commodities / ?좊룞?? ACCEPTABLE |
-| XLE | 성장/테마 ETF | 14 | 매매 금지 | LOW | 20일 -2.63%, 5일 -3.68%, 상대 거래량 1.40배로 가격과 거래량이 함께 개선. ?댁뒪: Sector Update: Energy Stocks Gain Monday Afternoon / ?좊룞?? LIQUID |
-| OIH | 성장/테마 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. ?댁뒪: Oil &amp; Gas Following the AI Capex Boom as Crude Hovers at $100 / ?좊룞?? ACCEPTABLE |
-| ARKK | 성장/테마 ETF | 26 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.94배라 신규 자금 유입 강도는 약함. ?댁뒪: Cathie Wood Just Loaded Up on This Sizzling Artificial Intelligence (AI) Semiconductor IPO Stock / ?좊룞?? ACCEPTABLE |
-| IPO | 성장/테마 ETF | 89 | 진입 가능 | MEDIUM | 20일 +17.01%, 5일 +9.54%, 상대 거래량 2.36배로 가격과 거래량이 함께 개선. ?댁뒪: Bill Ackman’s Pershing Square to Raise $5 Billion from IPO |
-| KWEB | 성장/테마 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.64배라 신규 자금 유입 강도는 약함. ?좊룞?? ACCEPTABLE |
-| MAGS | 성장/테마 ETF | 58 | 진입 후보 | MEDIUM | 20일 +4.47%, 5일 +0.72%, 상대 거래량 1.61배로 가격과 거래량이 함께 개선. ?댁뒪: Magnificent Seven Post Best Earnings In Nearly 5 Years. Sign Of A Bubble? / ?좊룞?? ACCEPTABLE |
-| QQQ | 시장 기준 ETF | 57 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.86배라 신규 자금 유입 강도는 약함. ?댁뒪: Dow, S&amp;P 500, Nasdaq Futures Slip After Record Rally As US-Iran War Confusion Eclipses AI Gains: TSLA, BB, META, HPE, NVDA Stocks In Focus / ETF ?뺤궛?? BROAD_ADVANCE / ?좊룞?? LIQUID |
-| SPY | 시장 기준 ETF | 42 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.92배라 신규 자금 유입 강도는 약함. ?댁뒪: Dow, S&amp;P 500, Nasdaq Futures Slip After Record Rally As US-Iran War Confusion Eclipses AI Gains: TSLA, BB, META, HPE, NVDA Stocks In Focus / ETF ?뺤궛?? NARROW_LEADERSHIP / ?좊룞?? LIQUID |
-| IWM | 시장 기준 ETF | 29 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.92배라 신규 자금 유입 강도는 약함. ?댁뒪: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / ?좊룞?? LIQUID |
-| TLT | 채권 ETF | 10 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.94배라 신규 자금 유입 강도는 약함. ?좊룞?? LIQUID |
-| GLD | 금 ETF | 5 | 매매 금지 | LOW | 20일 -2.82%, 5일 -0.62%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. ?댁뒪: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / ?좊룞?? LIQUID |
-| IBIT | 비트코인 ETF | 0 | 매매 금지 | LOW | 20일 -8.95%, 5일 -5.75%, 상대 거래량 1.38배로 가격과 거래량이 함께 개선. ?좊룞?? LIQUID |
-| BLOK | 비트코인 ETF | 69 | 진입 후보 | MEDIUM | 20일 +14.36%, 5일 +7.53%, 상대 거래량 1.38배로 가격과 거래량이 함께 개선. ?댁뒪: Despite Bitcoin Falling 7%, Amplify Blockchain Technology’s ETF has Soared 32% | BLOK |
+| XLU | 성장/테마 ETF | 0 | 매매 금지 | LOW | 20일 -7.41%, 5일 -4.96%, 상대 거래량 1.45배로 가격과 거래량이 함께 개선. 뉴스: XLU Investors: Watch PJM’s March 2027 Data Center Framework Decision / 유동성: LIQUID |
+| URA | 성장/테마 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.82배라 신규 자금 유입 강도는 약함. 뉴스: Nuclear Power Is the Only Real Answer to AI Electricity Demand and These 3 ETFs Own the Trade / 유동성: ACCEPTABLE |
+| NLR | 성장/테마 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.77배라 신규 자금 유입 강도는 약함. 뉴스: Nuclear ETFs to Gain as the Globe Rides the Atomic Wave |
+| LIT | 성장/테마 ETF | 7 | 매매 금지 | LOW | 20일 -2.96%, 5일 +0.95%, 상대 거래량 2.08배로 가격과 거래량이 함께 개선. 뉴스: 3 Market Themes Driving Stocks Right Now: AI, Alt Energy and Commodities |
+| COPX | 성장/테마 ETF | 53 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. 뉴스: This Copper ETF Returned 156% in a Year and Pays 9.7% While You Wait for the 4x Case to Play Out. / 유동성: ACCEPTABLE |
+| XME | 성장/테마 ETF | 47 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.92배라 신규 자금 유입 강도는 약함. 뉴스: 3 Market Themes Driving Stocks Right Now: AI, Alt Energy and Commodities / 유동성: ACCEPTABLE |
+| XLE | 성장/테마 ETF | 18 | 매매 금지 | LOW | 20일 -2.63%, 5일 -3.68%, 상대 거래량 1.40배로 가격과 거래량이 함께 개선. 뉴스: Sector Update: Energy Stocks Gain Monday Afternoon / 유동성: LIQUID |
+| OIH | 성장/테마 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. 뉴스: Oil &amp; Gas Following the AI Capex Boom as Crude Hovers at $100 / 유동성: ACCEPTABLE |
+| ARKK | 성장/테마 ETF | 26 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.94배라 신규 자금 유입 강도는 약함. 뉴스: Cathie Wood Just Loaded Up on This Sizzling Artificial Intelligence (AI) Semiconductor IPO Stock / 유동성: ACCEPTABLE |
+| IPO | 성장/테마 ETF | 89 | 진입 가능 | MEDIUM | 20일 +17.01%, 5일 +9.54%, 상대 거래량 2.36배로 가격과 거래량이 함께 개선. 뉴스: Bill Ackman’s Pershing Square to Raise $5 Billion from IPO |
+| KWEB | 성장/테마 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.64배라 신규 자금 유입 강도는 약함. 유동성: ACCEPTABLE |
+| MAGS | 성장/테마 ETF | 58 | 진입 후보 | MEDIUM | 20일 +4.47%, 5일 +0.72%, 상대 거래량 1.61배로 가격과 거래량이 함께 개선. 뉴스: Magnificent Seven Post Best Earnings In Nearly 5 Years. Sign Of A Bubble? / 유동성: ACCEPTABLE |
+| QQQ | 시장 기준 ETF | 59 | 진입 후보 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.86배라 신규 자금 유입 강도는 약함. 뉴스: SpaceX, OpenAI And Anthropic IPOs Won't 'Suck The Oxygen' Out Of Markets, Yardeni Says — But SPY, QQQ Funds May Scramble For SPCX Shares / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
+| SPY | 시장 기준 ETF | 50 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.92배라 신규 자금 유입 강도는 약함. 뉴스: SpaceX, OpenAI And Anthropic IPOs Won't 'Suck The Oxygen' Out Of Markets, Yardeni Says — But SPY, QQQ Funds May Scramble For SPCX Shares / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
+| IWM | 시장 기준 ETF | 29 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.92배라 신규 자금 유입 강도는 약함. 뉴스: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / 유동성: LIQUID |
+| TLT | 채권 ETF | 10 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.94배라 신규 자금 유입 강도는 약함. 유동성: LIQUID |
+| GLD | 금 ETF | 5 | 매매 금지 | LOW | 20일 -2.82%, 5일 -0.62%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. 뉴스: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Monday as AI Optimism Overshadows Middle East Risks / 유동성: LIQUID |
+| IBIT | 비트코인 ETF | 0 | 매매 금지 | LOW | 20일 -8.95%, 5일 -5.75%, 상대 거래량 1.38배로 가격과 거래량이 함께 개선. 유동성: LIQUID |
+| BLOK | 비트코인 ETF | 69 | 진입 후보 | MEDIUM | 20일 +14.36%, 5일 +7.53%, 상대 거래량 1.38배로 가격과 거래량이 함께 개선. 뉴스: Despite Bitcoin Falling 7%, Amplify Blockchain Technology’s ETF has Soared 32% | BLOK |
 
 ## 3. 최종 실행 판단
 
@@ -1403,7 +1309,7 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
 - ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인
 - 개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인
 - 시장 상태 확인 조건: QQQ/SPY의 5일/20일 추세와 위험선호 유지 여부 확인
-- 데이터 보강 필요 항목: 뉴스, 옵션, 스프레드, ETF 구성종목 확산도, 실제 보유 진입가
+- 데이터 보강 필요 항목: 뉴스, 스프레드, ETF 구성종목 확산도, 실제 보유 진입가
 
 ## 데이터 수집 상태
 
@@ -1418,16 +1324,10 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 수집 뉴스 수: 445
   - 실패/제한 사유: 특이사항 없음
 
-- 옵션:
-  - 상태: 실패
-  - 소스: Yahoo Finance options endpoint
-  - 수집 가능 티커 수: 0
-  - 실패/제한 사유: HTTP 401 from https://query2.finance.yahoo.com/v7/finance/options/NVDA; HTTP 401 from https://query2.finance.yahoo.com/v7/finance/options/MSFT; HTTP 401 from https://query2.finance.yahoo.com/v7/finance/options/AVGO
-
 - ETF 구성종목 확산도:
   - 상태: 일부 연결
   - 소스: config/etfHoldingsFallback.json 샘플
-  - 수집 가능 ETF 수: 11
+  - 수집 가능 ETF 수: 9
   - fallback 사용 여부: 사용
 
 - Nasdaq-100 구성종목:
@@ -1448,6 +1348,25 @@ moneyFlowScore는 매수 추천 점수가 아니다. 가격/거래량 기반의 
   - 거래대금 fallback 사용 여부: 사용
 
 - 전체 비고:
-- 옵션 수집 실패 티커 57개
 - ETF 구성종목 확산도 fallback sample 13개 사용
 - 스프레드/유동성 bid/ask 대신 거래대금 fallback 57개 사용
+
+## 참고: moneyFlowScore 산정 방식
+
+moneyFlowScore는 매수 추천 점수가 아니라 현재 ETF 또는 종목으로 돈이 몰리는 정도를 추적하는 트레이딩 후보 점수다.
+
+### 기본 산정 요소
+- 20일 수익률: 최근 1개월 수준의 중기 추세를 반영한다.
+- 5일 수익률: 최근 1주일 수준의 단기 자금 유입을 반영한다.
+- 1일 수익률: 직전 거래일의 단기 추격 매수세를 반영한다.
+- 상대 거래량: 가격 상승과 함께 거래량이 늘면 실제 자금 유입 가능성을 높게 본다.
+- 52주 고점 대비 위치: 고점 근처 자산은 추세 추종 자금 유입 가능성이 있다.
+- ETF 대비 상대강도: 개별 종목에만 적용하며, 관련 ETF보다 강할 때 개별 종목 우선 가능성이 올라간다.
+
+### 계산 구조
+- moneyFlowScore(1차) = 추세 + 단기 모멘텀 + 중기 모멘텀 + 거래량 + 신고가 근접 + 이동평균
+- moneyFlowScore(최종 원점수) = moneyFlowScore(1차) + 뉴스 + ETF 확산도 + 유동성 + 관련 ETF 대비 상대강도 + 리스크 패널티
+- moneyFlowScore(최종 표시 점수) = min(100, max(0, 최종 원점수))
+- 리스크 패널티는 음수로 저장하고 계산식에 그대로 더한다.
+
+주의: 점수가 높아도 진입 조건, 무효화 조건, 리스크 패널티 근거를 함께 확인해야 한다.
