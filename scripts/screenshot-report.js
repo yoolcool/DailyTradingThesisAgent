@@ -27,18 +27,12 @@ async function main() {
 
   const executablePath = findExecutable();
   if (!executablePath) {
-    throw new Error(
-      "Could not find Chrome or Edge for Playwright. Set PLAYWRIGHT_CHROMIUM_EXECUTABLE to a Chromium-based browser path."
-    );
+    throw new Error("Could not find Chrome or Edge for Playwright. Set PLAYWRIGHT_CHROMIUM_EXECUTABLE.");
   }
 
   let browser;
   try {
-    browser = await chromium.launch({
-      executablePath,
-      headless: true
-    });
-
+    browser = await chromium.launch({ executablePath, headless: true });
     const page = await browser.newPage({ viewport: { width: 390, height: 1200 } });
     await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "load" });
 
@@ -52,58 +46,40 @@ async function main() {
         stockCards: document.querySelectorAll("[data-stock-card]").length,
         etfCards: document.querySelectorAll("[data-etf-card]").length,
         chartImages: document.querySelectorAll("img.chart").length,
+        detailsCount: document.querySelectorAll("details").length,
+        hasValidWarning: warning.includes("MOCK DATA") || warning.includes("REAL DATA TEST"),
         hasConclusion: body.includes("오늘의 분리 결론"),
         hasScoreGuide: body.includes("moneyFlowScore 산정 방식"),
-        hasFinalAction: body.includes("ETF에서 할 일") && body.includes("개별 종목에서 할 일") && body.includes("하지 말아야 할 일"),
-        hasCoreQuestion: body.includes("현재 가격에서 살까"),
-        hasValidWarning: warning.includes("MOCK DATA") || warning.includes("REAL DATA TEST")
+        hasInitialFinalLabels: body.includes("moneyFlowScore(1차)") && body.includes("moneyFlowScore(최종)"),
+        hasRiskDetails: body.includes("리스크 패널티 산정 근거"),
+        hasStockUniverseTable: Boolean(document.querySelector("[data-stock-universe-table]")),
+        hasTableScroll: Boolean(document.querySelector(".table-scroll"))
       };
     });
 
-    if (checks.title !== "Daily Trading Thesis Report") {
-      throw new Error(`Unexpected page title: ${checks.title}`);
-    }
-    if (checks.h1 !== "오늘의 데일리 트레이딩 요약") {
-      throw new Error(`Unexpected h1: ${checks.h1}`);
-    }
-    if (!checks.hasValidWarning) {
-      throw new Error("Rendered page is missing a recognized data mode warning banner.");
-    }
-    if (!checks.hasConclusion) {
-      throw new Error("Rendered page is missing split conclusion section.");
-    }
-    if (!checks.hasScoreGuide) {
-      throw new Error("Rendered page is missing moneyFlowScore guide section.");
-    }
-    if (!checks.hasFinalAction) {
-      throw new Error("Rendered page is missing final separated action section.");
-    }
-    if (!checks.hasCoreQuestion) {
-      throw new Error("Rendered page is missing the core buyer question.");
-    }
-    if (checks.stockCards < 1) {
-      throw new Error("Rendered page has no stock cards.");
-    }
-    if (checks.etfCards !== 5) {
-      throw new Error(`Rendered page should have exactly 5 detailed ETF cards, found ${checks.etfCards}.`);
-    }
-    if (checks.chartImages < 1) {
-      throw new Error("Rendered page has no chart images.");
-    }
+    if (checks.title !== "Daily Trading Thesis Report") throw new Error(`Unexpected page title: ${checks.title}`);
+    if (!checks.h1) throw new Error("Rendered page is missing h1.");
+    if (!checks.hasValidWarning) throw new Error("Rendered page is missing a recognized data mode warning banner.");
+    if (!checks.hasConclusion) throw new Error("Rendered page is missing split conclusion section.");
+    if (!checks.hasScoreGuide) throw new Error("Rendered page is missing moneyFlowScore guide section.");
+    if (!checks.hasInitialFinalLabels) throw new Error("Rendered page is missing initial/final moneyFlowScore labels.");
+    if (!checks.hasRiskDetails) throw new Error("Rendered page is missing risk penalty details.");
+    if (!checks.hasStockUniverseTable) throw new Error("Rendered page is missing Nasdaq-100 table.");
+    if (!checks.hasTableScroll) throw new Error("Rendered page is missing horizontal table scroll wrapper.");
+    if (checks.detailsCount < 1) throw new Error("Rendered page is missing mobile-friendly details blocks.");
+    if (checks.stockCards < 1) throw new Error("Rendered page has no stock cards.");
+    if (checks.etfCards !== 5) throw new Error(`Rendered page should have exactly 5 detailed ETF cards, found ${checks.etfCards}.`);
+    if (checks.chartImages < 1) throw new Error("Rendered page has no chart images.");
 
     await page.screenshot({ path: pngPath, fullPage: true });
   } catch (error) {
     throw new Error(`Playwright screenshot verification failed: ${error.message}`);
   } finally {
-    if (browser) {
-      await browser.close();
-    }
+    if (browser) await browser.close();
   }
 
   const size = fs.statSync(pngPath).size;
-  if (size < 10_000) {
-    throw new Error(`Screenshot was generated but looks too small: ${size} bytes`);
-  }
+  if (size < 10_000) throw new Error(`Screenshot was generated but looks too small: ${size} bytes`);
 
   console.log(`Generated ${pngPath}`);
   console.log("Playwright screenshot verification passed");
