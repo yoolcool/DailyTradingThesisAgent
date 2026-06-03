@@ -73,6 +73,7 @@ def summarize_history(ticker, asset_type, history):
               continue
           chart_history.append({
               "date": idx.date().isoformat(),
+              "high": safe_float(row.get("High")),
               "close": safe_float(close_value),
           })
 

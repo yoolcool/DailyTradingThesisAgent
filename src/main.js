@@ -12,6 +12,7 @@ const DATA_DIR = path.join(ROOT, "data");
 const REPORTS_DIR = path.join(ROOT, "reports");
 const CHARTS_DIR = path.join(REPORTS_DIR, "charts");
 const DAILY_REPORTS_DIR = path.join(DATA_DIR, "dailyReports");
+const RECOMMENDATION_HISTORY_FILE = "recommendation-history.json";
 
 const MODE = process.env.REPORT_MODE === "REAL_TEST" || process.argv.includes("--real-test") ? "REAL_TEST" : "MOCK";
 const REAL_WARNING = "REAL DATA TEST - 가격/거래량은 실제 데이터이며 보조 데이터 연결 상태를 함께 표시";
@@ -213,6 +214,10 @@ function escapeHtml(value) {
 function pct(value) {
   if (value === null || value === undefined || Number.isNaN(Number(value))) return "데이터 없음";
   return `${Number(value) > 0 ? "+" : ""}${Number(value).toFixed(2)}%`;
+}
+
+function signedPct(value) {
+  return pct(value);
 }
 
 function num(value, digits = 0) {
@@ -1117,10 +1122,15 @@ async function buildReport() {
     ...previousRecommendationReviews.map((row) => row.ticker)
   ]);
   const chartCount = generateCharts(chartTickers, marketData);
+  const generatedAtDate = new Date();
+  const generatedAtETParts = easternTimeParts(generatedAtDate);
 
   const report = {
-    generatedAt: new Intl.DateTimeFormat("ko-KR", { timeZone: "Asia/Seoul", dateStyle: "full", timeStyle: "short" }).format(new Date()),
-    reportDate: new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul" }).format(new Date()),
+    generatedAt: new Intl.DateTimeFormat("ko-KR", { timeZone: "Asia/Seoul", dateStyle: "full", timeStyle: "short" }).format(generatedAtDate),
+    generatedAtISO: generatedAtDate.toISOString(),
+    generatedAtET: formatEasternTimestamp(generatedAtETParts),
+    generatedAtETParts,
+    reportDate: new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul" }).format(generatedAtDate),
     dataMode: MODE,
     dataWarning: MODE === "REAL_TEST" ? dynamicDataWarning(supplementalData.connectionStatus) : MOCK_WARNING,
     dataConnectionStatus: supplementalData.connectionStatus,
@@ -1154,6 +1164,7 @@ async function buildReport() {
     topExecutionCandidate,
     chartCount
   };
+  report.recommendationTracking = updateRecommendationTrackingHistory(report);
   saveDailyRecommendationSnapshot(report);
   return report;
 }
@@ -1340,6 +1351,324 @@ function snapshotItem(row) {
   };
 }
 
+function updateRecommendationTrackingHistory(report) {
+  const stored = readJson(RECOMMENDATION_HISTORY_FILE, { version: 1, items: [] }) || { version: 1, items: [] };
+  const items = Array.isArray(stored.items) ? stored.items : [];
+  const byKey = new Map(items.map((item) => [trackingKey(item), item]));
+  for (const entry of buildTrackingSeedEntries(report)) {
+    const key = trackingKey(entry);
+    if (byKey.has(key)) {
+      const existing = byKey.get(key);
+      byKey.set(key, { ...entry, ...existing, reportGeneratedAtET: entry.reportGeneratedAtET });
+    } else {
+      byKey.set(key, entry);
+    }
+  }
+  const updatedItems = [...byKey.values()]
+    .map((item) => updateTrackingEntry(item, report.marketData))
+    .sort((a, b) => `${b.reportDate}-${b.assetType}-${b.rank}`.localeCompare(`${a.reportDate}-${a.assetType}-${a.rank}`));
+  const history = {
+    version: 1,
+    updatedAt: new Date().toISOString(),
+    description: "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
+    items: updatedItems
+  };
+  fs.writeFileSync(path.join(DATA_DIR, RECOMMENDATION_HISTORY_FILE), JSON.stringify(history, null, 2), "utf8");
+  return buildRecommendationTrackingView(updatedItems);
+}
+
+function buildTrackingSeedEntries(report) {
+  return [
+    ...report.stockActionCandidates.slice(0, 3).map((row, index) => createTrackingSeed(row, "STOCK", index + 1, report)),
+    ...report.etfActionCandidates.slice(0, 3).map((row, index) => createTrackingSeed(row, "ETF", index + 1, report))
+  ];
+}
+
+function createTrackingSeed(row, assetType, rank, report) {
+  const recommendationPrice = row.market?.lastClose ?? null;
+  const base = {
+    reportDate: report.reportDate,
+    reportGeneratedAt: report.generatedAtISO,
+    reportGeneratedAtET: report.generatedAtET,
+    ticker: row.ticker,
+    assetType,
+    rank,
+    recommendationPrice,
+    recommendationClosePrice: row.market?.lastClose ?? null,
+    narrative: row.linkedNarrative || row.primaryTheme || row.categoryType || "미분류",
+    moneyFlowScore: row.moneyFlowScoreFinal ?? row.moneyFlowScore ?? null,
+    finalRawScore: row.moneyFlowScoreBreakdown?.finalRawScore ?? null,
+    confidence: row.reasonConfidence || null,
+    actionLabel: row.todayActionLabel || null
+  };
+  if (assetType === "STOCK") {
+    return {
+      ...base,
+      trackingSessionDate: stockTrackingSessionDate(report.generatedAtETParts.date, marketCalendarDates(report.marketData), report.generatedAtETParts),
+      trackingStatus: "pending",
+      intradayHighAfterRecommendation: null,
+      trackingClose: null,
+      highReturnPct: null,
+      closeReturnPct: null,
+      resultLabel: "추적 대기",
+      resultComment: "아직 추적 거래일 데이터가 완성되지 않음"
+    };
+  }
+  return {
+    ...base,
+    trackingStartDate: report.reportDate,
+    trackingEndDate: addWeekdays(report.reportDate, 5),
+    trackingStatus: "pending",
+    weeklyHigh: null,
+    latestClose: null,
+    weeklyHighReturnPct: null,
+    latestCloseReturnPct: null,
+    resultLabel: "진행 중",
+    resultComment: "아직 1주 추적 기간이 끝나지 않음"
+  };
+}
+
+function trackingKey(item) {
+  return `${item.reportDate}|${item.assetType}|${item.ticker}`;
+}
+
+function updateTrackingEntry(item, marketData) {
+  if (item.assetType === "ETF") return updateEtfTrackingEntry(item, marketData);
+  return updateStockTrackingEntry(item, marketData);
+}
+
+function updateStockTrackingEntry(item, marketData) {
+  const market = marketItem(marketData, item.ticker);
+  const bar = findHistoryBar(market, item.trackingSessionDate);
+  const base = Number(item.recommendationPrice ?? item.recommendationClosePrice);
+  if (!market || market.dataStatus !== "ok") {
+    return { ...item, trackingStatus: "error", resultLabel: "추적 대기", resultComment: "가격 데이터 수집 실패" };
+  }
+  if (!bar) {
+    return { ...item, trackingStatus: "pending", resultLabel: "추적 대기", resultComment: "아직 추적 거래일 데이터가 완성되지 않음" };
+  }
+  const high = Number(bar.high);
+  const close = Number(bar.close);
+  if (!Number.isFinite(base) || base <= 0 || !Number.isFinite(close)) {
+    return { ...item, trackingStatus: "error", trackingClose: Number.isFinite(close) ? close : null, resultLabel: "추적 대기", resultComment: "추천 기준가 또는 종가 데이터가 부족함" };
+  }
+  if (!Number.isFinite(high)) {
+    return {
+      ...item,
+      trackingStatus: "market_closed",
+      trackingClose: close,
+      closeReturnPct: roundPct(returnPct(close, base)),
+      resultLabel: "추적 대기",
+      resultComment: "일봉 high 데이터가 없어 장중 최고가 판정을 대기함"
+    };
+  }
+  const highReturnPct = roundPct(returnPct(high, base));
+  const closeReturnPct = roundPct(returnPct(close, base));
+  const result = judgeStockResult(highReturnPct, closeReturnPct);
+  return {
+    ...item,
+    trackingStatus: "complete",
+    intradayHighAfterRecommendation: high,
+    trackingClose: close,
+    highReturnPct,
+    closeReturnPct,
+    resultLabel: result.label,
+    resultComment: `${result.comment} (일봉 기준)`
+  };
+}
+
+function updateEtfTrackingEntry(item, marketData) {
+  const market = marketItem(marketData, item.ticker);
+  const base = Number(item.recommendationPrice ?? item.recommendationClosePrice);
+  if (!market || market.dataStatus !== "ok") {
+    return { ...item, trackingStatus: "error", resultLabel: "진행 중", resultComment: "가격 데이터 수집 실패" };
+  }
+  const bars = (market.history || []).filter((bar) => bar.date > item.reportDate && bar.date <= item.trackingEndDate);
+  const latestBar = latestHistoryBar(market);
+  const highs = bars.map((bar) => Number(bar.high)).filter(Number.isFinite);
+  const closes = bars.map((bar) => Number(bar.close)).filter(Number.isFinite);
+  if (!Number.isFinite(base) || base <= 0 || !latestBar) {
+    return { ...item, trackingStatus: "error", resultLabel: "진행 중", resultComment: "추천 기준가 또는 ETF 가격 데이터가 부족함" };
+  }
+  const weeklyHigh = highs.length ? Math.max(...highs) : (closes.length ? Math.max(...closes) : null);
+  const latestClose = Number(latestBar.close);
+  const trackingStatus = tradingDaysBetween(item.reportDate, latestBar.date, marketCalendarDates(marketData)) >= 5 ? "complete" : "in_progress";
+  const weeklyHighReturnPct = Number.isFinite(weeklyHigh) ? roundPct(returnPct(weeklyHigh, base)) : null;
+  const latestCloseReturnPct = Number.isFinite(latestClose) ? roundPct(returnPct(latestClose, base)) : null;
+  const result = judgeEtfResult(trackingStatus, weeklyHighReturnPct, latestCloseReturnPct);
+  return {
+    ...item,
+    trackingStatus,
+    weeklyHigh,
+    latestClose: Number.isFinite(latestClose) ? latestClose : null,
+    weeklyHighReturnPct,
+    latestCloseReturnPct,
+    resultLabel: result.label,
+    resultComment: highs.length ? result.comment : `${result.comment} (일봉 high 미확보 시 close 기준 보조)`
+  };
+}
+
+function judgeStockResult(highReturnPct, closeReturnPct) {
+  if (!Number.isFinite(highReturnPct) || !Number.isFinite(closeReturnPct)) return { label: "추적 대기", comment: "아직 추적 거래일 데이터가 완성되지 않음" };
+  if (highReturnPct >= 3 && closeReturnPct >= 1) return { label: "성공", comment: "장중 기회와 종가 유지가 모두 확인됨" };
+  if (highReturnPct >= 3 && closeReturnPct < 1) return { label: "단타 유효", comment: "장중 기회는 있었지만 종가 유지력은 약함" };
+  if (highReturnPct >= 1 && highReturnPct < 3) return { label: "제한적 유효", comment: "제한적인 장중 기회만 발생" };
+  if (highReturnPct < 1 && closeReturnPct < 0) return { label: "실패", comment: "추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함" };
+  return { label: "추적 대기", comment: "아직 추적 거래일 데이터가 완성되지 않음" };
+}
+
+function judgeEtfResult(status, weeklyHighReturnPct, latestCloseReturnPct) {
+  if (status === "in_progress") return { label: "진행 중", comment: "아직 1주 추적 기간이 끝나지 않음" };
+  if (Number.isFinite(weeklyHighReturnPct) && Number.isFinite(latestCloseReturnPct)) {
+    if (weeklyHighReturnPct >= 2 && latestCloseReturnPct >= 1) return { label: "성공", comment: "추천 이후 테마 추세가 유지됨" };
+    if (weeklyHighReturnPct >= 2 && latestCloseReturnPct < 0.5) return { label: "단기 고점 후 반납", comment: "1주 내 상승 기회는 있었지만 현재가는 반납" };
+    if (latestCloseReturnPct < -1.5) return { label: "실패", comment: "추천 이후 ETF 흐름이 약화됨" };
+  }
+  return { label: "진행 중", comment: "아직 1주 추적 기간이 끝나지 않음" };
+}
+
+function buildRecommendationTrackingView(items) {
+  const recentDates = unique(items.map((item) => item.reportDate).sort().reverse()).slice(0, 5);
+  const recentItems = items.filter((item) => recentDates.includes(item.reportDate));
+  return {
+    stockSummary: summarizeStockTracking(recentItems.filter((item) => item.assetType === "STOCK")),
+    etfSummary: summarizeEtfTracking(recentItems.filter((item) => item.assetType === "ETF")),
+    items: items.slice(0, 60),
+    recentDates
+  };
+}
+
+function summarizeStockTracking(items) {
+  const highRows = items.filter((item) => Number.isFinite(item.highReturnPct));
+  const closeRows = items.filter((item) => Number.isFinite(item.closeReturnPct));
+  return {
+    title: "개별주 Top 3 추천 성과 요약",
+    sampleSize: items.length,
+    highSuccessRate: rate(highRows.filter((item) => item.highReturnPct >= 3).length, highRows.length),
+    closeSuccessRate: rate(closeRows.filter((item) => item.closeReturnPct >= 1).length, closeRows.length),
+    averageHighReturnPct: averageOrNull(highRows.map((item) => item.highReturnPct)),
+    averageCloseReturnPct: averageOrNull(closeRows.map((item) => item.closeReturnPct))
+  };
+}
+
+function summarizeEtfTracking(items) {
+  const highRows = items.filter((item) => Number.isFinite(item.weeklyHighReturnPct));
+  const closeRows = items.filter((item) => Number.isFinite(item.latestCloseReturnPct));
+  return {
+    title: "ETF 추천 성과 요약",
+    sampleSize: items.length,
+    weeklyHighSuccessRate: rate(highRows.filter((item) => item.weeklyHighReturnPct >= 2).length, highRows.length),
+    latestCloseSuccessRate: rate(closeRows.filter((item) => item.latestCloseReturnPct >= 1).length, closeRows.length),
+    averageWeeklyHighReturnPct: averageOrNull(highRows.map((item) => item.weeklyHighReturnPct)),
+    averageLatestCloseReturnPct: averageOrNull(closeRows.map((item) => item.latestCloseReturnPct))
+  };
+}
+
+function rate(success, total) {
+  if (!total) return null;
+  return roundPct((success / total) * 100);
+}
+
+function roundPct(value) {
+  return Number.isFinite(value) ? Number(value.toFixed(2)) : null;
+}
+
+function returnPct(value, base) {
+  return ((Number(value) - Number(base)) / Number(base)) * 100;
+}
+
+function averageOrNull(values) {
+  const valid = values.filter(Number.isFinite);
+  return valid.length ? roundPct(average(valid)) : null;
+}
+
+function findHistoryBar(market, date) {
+  return (market.history || []).find((bar) => bar.date === date);
+}
+
+function latestHistoryBar(market) {
+  return (market.history || []).filter((bar) => Number.isFinite(Number(bar.close))).at(-1);
+}
+
+function marketCalendarDates(marketData) {
+  const dates = new Set();
+  for (const item of Object.values(marketData?.items || {})) {
+    for (const bar of item.history || []) if (bar.date) dates.add(bar.date);
+  }
+  return [...dates].sort();
+}
+
+function stockTrackingSessionDate(date, calendarDates, etParts) {
+  const minutes = etParts.hour * 60 + etParts.minute;
+  const marketOpen = 9 * 60 + 30;
+  const marketClose = 16 * 60;
+  if (minutes < marketClose && isWeekday(date)) return date;
+  return nextTradingDate(date, calendarDates);
+}
+
+function nextTradingDate(date, calendarDates) {
+  const futureKnown = calendarDates.find((candidate) => candidate > date);
+  if (futureKnown) return futureKnown;
+  let next = addDays(date, 1);
+  while (!isWeekday(next)) next = addDays(next, 1);
+  return next;
+}
+
+function addWeekdays(date, count) {
+  let current = date;
+  let remaining = count;
+  while (remaining > 0) {
+    current = addDays(current, 1);
+    if (isWeekday(current)) remaining -= 1;
+  }
+  return current;
+}
+
+function tradingDaysBetween(startDate, endDate, calendarDates) {
+  return calendarDates.filter((date) => date > startDate && date <= endDate).length;
+}
+
+function addDays(date, days) {
+  const value = new Date(`${date}T00:00:00Z`);
+  value.setUTCDate(value.getUTCDate() + days);
+  return value.toISOString().slice(0, 10);
+}
+
+function isWeekday(date) {
+  const day = new Date(`${date}T00:00:00Z`).getUTCDay();
+  return day >= 1 && day <= 5;
+}
+
+function easternTimeParts(now = new Date()) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false
+  }).formatToParts(now);
+  const get = (type) => Number(parts.find((part) => part.type === type)?.value || 0);
+  const year = get("year");
+  const month = get("month");
+  const day = get("day");
+  return {
+    year,
+    month,
+    day,
+    hour: get("hour"),
+    minute: get("minute"),
+    second: get("second"),
+    date: `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`
+  };
+}
+
+function formatEasternTimestamp(parts) {
+  return `${parts.date} ${String(parts.hour).padStart(2, "0")}:${String(parts.minute).padStart(2, "0")}:${String(parts.second).padStart(2, "0")} ET`;
+}
+
 function buildPreviousRecommendationReviews(previousSnapshot, stocks, etfs) {
   if (!previousSnapshot) return [];
   const items = [
@@ -1496,6 +1825,8 @@ ${renderMobileSummaryMarkdown(report)}
   - reasonConfidence HIGH는 직접 촉매, 가격/거래량, 확산도/유동성 근거가 함께 있을 때만 사용한다.
 
 ${renderNarrativesMarkdown(report)}
+
+${renderRecommendationTrackingMarkdown(report)}
 
 ## 오늘 실제 행동 후보
 
@@ -1682,6 +2013,47 @@ ${top.map((row, index) => `#### ${index + 1}. ${row.name}
 | 서사명 | 상태 | narrativeScore | reasonConfidence | 대표 ETF | 대표 종목 | 오늘 행동 |
 | --- | --- | ---: | --- | --- | --- | --- |
 ${report.narratives.map((row) => `| ${row.name} | ${row.status} | ${row.narrativeScore} | ${row.reasonConfidence} | ${row.representativeEtfs.join(", ") || "-"} | ${row.representativeStocks.join(", ") || "-"} | ${row.todayAction} |`).join("\n")}`;
+}
+
+function renderRecommendationTrackingMarkdown(report) {
+  const tracking = report.recommendationTracking || { stockSummary: {}, etfSummary: {}, items: [] };
+  return `## 최근 추천 결과 트래킹
+
+개별주는 데이트레이딩 관점으로 추천 이후 첫 정규장의 장중 최고가와 종가를 추적한다. ETF는 테마/스윙 관점으로 추천 이후 1주일 동안의 최고가와 현재 종가를 추적한다.
+
+### 개별주 Top 3 추천 성과 요약
+- 최근 5개 리포트 표본: ${tracking.stockSummary.sampleSize ?? 0}개
+- 장중 최고가 기준 성공률: ${summaryPct(tracking.stockSummary.highSuccessRate)}
+- 종가 기준 성공률: ${summaryPct(tracking.stockSummary.closeSuccessRate)}
+- 평균 장중 최고 수익률: ${summaryPct(tracking.stockSummary.averageHighReturnPct)}
+- 평균 종가 수익률: ${summaryPct(tracking.stockSummary.averageCloseReturnPct)}
+
+### ETF 추천 성과 요약
+- 최근 5개 리포트 표본: ${tracking.etfSummary.sampleSize ?? 0}개
+- 1주 최고가 기준 성공률: ${summaryPct(tracking.etfSummary.weeklyHighSuccessRate)}
+- 현재 종가 기준 성공률: ${summaryPct(tracking.etfSummary.latestCloseSuccessRate)}
+- 평균 1주 최고 수익률: ${summaryPct(tracking.etfSummary.averageWeeklyHighReturnPct)}
+- 평균 현재 수익률: ${summaryPct(tracking.etfSummary.averageLatestCloseReturnPct)}
+
+<details>
+<summary>최근 추천 결과 상세 테이블 펼치기</summary>
+
+| 추천일 | 유형 | 순위 | 티커 | 기준가 | 추적 기간 | 상태 | High 수익률 | Close 수익률 | 결과 | 코멘트 |
+| --- | --- | ---: | --- | ---: | --- | --- | ---: | ---: | --- | --- |
+${tracking.items.map(renderTrackingMarkdownRow).join("\n") || "| - | - | - | 데이터 없음 | - | - | - | - | - | - | - |"}
+
+</details>`;
+}
+
+function renderTrackingMarkdownRow(row) {
+  const period = row.assetType === "ETF" ? `${row.trackingStartDate}~${row.trackingEndDate}` : row.trackingSessionDate;
+  const highReturn = row.assetType === "ETF" ? row.weeklyHighReturnPct : row.highReturnPct;
+  const closeReturn = row.assetType === "ETF" ? row.latestCloseReturnPct : row.closeReturnPct;
+  return `| ${row.reportDate} | ${row.assetType} | ${row.rank} | ${row.ticker} | ${price(row.recommendationPrice)} | ${period || "-"} | ${row.trackingStatus} | ${summaryPct(highReturn)} | ${summaryPct(closeReturn)} | ${row.resultLabel || "-"} | ${row.resultComment || "-"} |`;
+}
+
+function summaryPct(value) {
+  return Number.isFinite(value) ? signedPct(value) : "데이터 없음";
 }
 
 function renderMobileSummaryMarkdown(report) {
@@ -2216,6 +2588,14 @@ function renderHtml(report) {
     .narrative-card p { margin: 0; font-size: 13px; line-height: 1.4; }
     .narrative-card .metric-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .narrative-table { margin-top: 12px; }
+    .tracking-summary-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 10px 0 12px; }
+    .tracking-summary-card { border: 1px solid #d9dee3; border-radius: 8px; padding: 10px; background: #fff; }
+    .tracking-summary-card h3 { margin: 0 0 8px; font-size: 16px; line-height: 1.3; }
+    .tracking-table-scroll { overflow-x: auto; }
+    .result-success { background: #047857; }
+    .result-neutral { background: #64748b; }
+    .result-watch { background: #7c3aed; }
+    .result-fail { background: #b91c1c; }
     .mobile-card-list, .mobile-action-summary, .mobile-only { display: none; }
     .summary-card { display: flex; flex-direction: column; gap: 8px; margin: 8px 0; }
     .summary-card h3 { margin: 0; font-size: 16px; line-height: 1.35; }
@@ -2237,7 +2617,7 @@ function renderHtml(report) {
     @media (max-width: 767px) {
       html, body { max-width: 100%; overflow-x: hidden; }
       main { width: min(100% - 16px, 1120px); }
-      .grid, .action-grid, .metric-grid, .market-grid, .insight-grid, .narrative-grid { grid-template-columns: 1fr; }
+      .grid, .action-grid, .metric-grid, .market-grid, .insight-grid, .narrative-grid, .tracking-summary-grid { grid-template-columns: 1fr; }
       h1 { font-size: 22px; }
       section, article, .hero { padding: 12px; }
       .desktop-table, .desktop-action-full { display: none !important; }
@@ -2250,6 +2630,7 @@ function renderHtml(report) {
       .metric-chip strong { white-space: normal; overflow-wrap: anywhere; }
       .tile, .field-line, p, li, summary, td, th { word-break: keep-all; overflow-wrap: anywhere; }
       .table-scroll { overflow-x: visible; }
+      .tracking-table-scroll { overflow-x: auto; }
       .narrative-section-table-title { display: none; }
     }
   </style>
@@ -2266,6 +2647,7 @@ function renderHtml(report) {
     </div>
     ${renderMarketStatusHtml(report)}
     ${renderNarrativesHtml(report)}
+    ${renderRecommendationTrackingHtml(report)}
     ${renderActionCandidatesHtml(report)}
     ${renderSplitConclusionHtml(report)}
     ${renderMobileNarrativeSummarySectionHtml(report.narratives)}
@@ -2352,6 +2734,64 @@ function renderNarrativesHtml(report) {
     <h3 class="narrative-table narrative-section-table-title">전체 narrative 요약</h3>
     <div class="table-scroll desktop-table">${renderNarrativeTableHtml(report.narratives)}</div>
   </section>`;
+}
+
+function renderRecommendationTrackingHtml(report) {
+  const tracking = report.recommendationTracking || { stockSummary: {}, etfSummary: {}, items: [] };
+  return `<section data-recommendation-tracking>
+    <h2>최근 추천 결과 트래킹</h2>
+    <p class="muted">개별주는 데이트레이딩 관점으로 추천 이후 첫 정규장의 장중 최고가와 종가를 추적한다. ETF는 테마/스윙 관점으로 추천 이후 1주일 동안의 최고가와 현재 종가를 추적한다.</p>
+    <div class="tracking-summary-grid">
+      ${renderTrackingSummaryCardHtml(tracking.stockSummary, [
+        ["장중 최고가 기준 성공률", tracking.stockSummary.highSuccessRate],
+        ["종가 기준 성공률", tracking.stockSummary.closeSuccessRate],
+        ["평균 장중 최고 수익률", tracking.stockSummary.averageHighReturnPct],
+        ["평균 종가 수익률", tracking.stockSummary.averageCloseReturnPct]
+      ])}
+      ${renderTrackingSummaryCardHtml(tracking.etfSummary, [
+        ["1주 최고가 기준 성공률", tracking.etfSummary.weeklyHighSuccessRate],
+        ["현재 종가 기준 성공률", tracking.etfSummary.latestCloseSuccessRate],
+        ["평균 1주 최고 수익률", tracking.etfSummary.averageWeeklyHighReturnPct],
+        ["평균 현재 수익률", tracking.etfSummary.averageLatestCloseReturnPct]
+      ])}
+    </div>
+    <details>
+      <summary><strong>최근 추천 결과 상세 테이블 펼치기</strong></summary>
+      <div class="tracking-table-scroll">${renderTrackingTableHtml(tracking.items)}</div>
+    </details>
+  </section>`;
+}
+
+function renderTrackingSummaryCardHtml(summary, metrics) {
+  return `<article class="tracking-summary-card">
+    <h3>${escapeHtml(summary.title || "성과 요약")}</h3>
+    <p class="muted">최근 5개 리포트 표본: ${escapeHtml(summary.sampleSize ?? 0)}개</p>
+    <div class="metric-grid">${metrics.map(([label, value]) => metricChip(label, summaryPct(value))).join("")}</div>
+  </article>`;
+}
+
+function renderTrackingTableHtml(items) {
+  if (!items?.length) return "<p>추천 결과 트래킹 데이터 없음</p>";
+  return `<table data-recommendation-tracking-table><thead><tr><th>추천일</th><th>유형</th><th class="num">순위</th><th>티커</th><th class="num">기준가</th><th>추적 기간</th><th>상태</th><th class="num">High 수익률</th><th class="num">Close 수익률</th><th>결과</th><th>코멘트</th></tr></thead><tbody>${items.map((row) => {
+    const period = row.assetType === "ETF" ? `${row.trackingStartDate}~${row.trackingEndDate}` : row.trackingSessionDate;
+    const highReturn = row.assetType === "ETF" ? row.weeklyHighReturnPct : row.highReturnPct;
+    const closeReturn = row.assetType === "ETF" ? row.latestCloseReturnPct : row.closeReturnPct;
+    return `<tr><td>${escapeHtml(row.reportDate)}</td><td>${escapeHtml(row.assetType)}</td><td class="num">${escapeHtml(row.rank)}</td><td class="ticker">${escapeHtml(row.ticker)}</td><td class="num">${escapeHtml(price(row.recommendationPrice))}</td><td>${escapeHtml(period || "-")}</td><td>${escapeHtml(row.trackingStatus || "-")}</td><td class="num">${escapeHtml(summaryPct(highReturn))}</td><td class="num">${escapeHtml(summaryPct(closeReturn))}</td><td>${resultBadge(row.resultLabel)}</td><td>${escapeHtml(row.resultComment || "-")}</td></tr>`;
+  }).join("")}</tbody></table>`;
+}
+
+function resultBadge(label) {
+  const value = label || "추적 대기";
+  const className = value === "성공"
+    ? "result-success"
+    : ["단타 유효", "단기 고점 후 반납"].includes(value)
+      ? "result-neutral"
+      : ["제한적 유효", "진행 중", "추적 대기"].includes(value)
+        ? "result-watch"
+        : value === "실패"
+          ? "result-fail"
+          : "watch";
+  return `<span class="badge ${className}">${escapeHtml(value)}</span>`;
 }
 
 function renderNarrativeCardHtml(row, index) {
