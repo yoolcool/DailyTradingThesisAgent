@@ -71,6 +71,11 @@ function main() {
   assert(!html.includes("<details open"), "HTML details should be collapsed by default");
   assert(html.includes("<details"), "HTML should render detailed evidence in details/summary blocks");
   assert(html.includes('class="score-details"'), "Score details should be rendered as collapsed details");
+  assert(markdown.includes("오늘 시장을 지배하는 서사"), "Markdown missing market narrative section");
+  assert(html.includes("오늘 시장을 지배하는 서사"), "HTML missing market narrative section");
+  assert(html.includes("data-narrative-section"), "HTML missing narrative section marker");
+  assert(html.includes("data-narrative-table"), "HTML missing narrative summary table");
+  assert(markdown.includes("시장 지배 서사") || markdown.includes("오늘 시장을 지배하는 서사"), "Mobile summary/narrative wording missing from markdown");
   assert(html.includes("data-stock-universe-table"), "HTML missing Nasdaq-100 score table");
   assert(html.includes("table-scroll"), "HTML missing scroll wrapper for wide table");
   assert(markdown.includes("상세 근거"), "Markdown should move detailed evidence below candidate cards");
@@ -98,6 +103,21 @@ function main() {
   assert((marketData.universe?.stockUniverseCount || 0) >= 90, "Market data missing expanded Nasdaq-100 universe count");
 
   const latestSnapshot = readJson("latest-report.json");
+  const narratives = latestSnapshot.narratives || [];
+  const topNarratives = latestSnapshot.topNarratives || [];
+  assert(narratives.length >= 1, "Snapshot missing narratives");
+  assert(topNarratives.length <= 3, "Narrative TOP 3 should have at most 3 items");
+  assert(topNarratives.length > 0, "Snapshot missing topNarratives");
+  for (const narrative of topNarratives) {
+    assert(narrative.narrativeScore !== undefined, `Narrative missing narrativeScore: ${narrative.name}`);
+    assert(narrative.status, `Narrative missing status: ${narrative.name}`);
+    assert(narrative.reasonConfidence, `Narrative missing reasonConfidence: ${narrative.name}`);
+    assert((narrative.supportEtfs || []).length > 0, `Narrative missing support ETFs: ${narrative.name}`);
+    assert((narrative.supportStocks || []).length > 0, `Narrative missing support stocks: ${narrative.name}`);
+    if ((narrative.directNewsCount || 0) < 1) {
+      assert(narrative.reasonConfidence !== "HIGH", `Narrative with weak direct news should not be HIGH: ${narrative.name}`);
+    }
+  }
   const scanResults = latestSnapshot.stockUniverseScan?.results || [];
   assert(scanResults.length >= 90, "Snapshot missing stockUniverseScan results");
   assert(scanResults[0].moneyFlowScoreInitial >= scanResults.at(-1).moneyFlowScoreInitial, "Snapshot stockUniverseScan results should be sorted by initial score");
@@ -120,6 +140,9 @@ function main() {
     assert(item.reasonConfidence, `Snapshot missing reasonConfidence for ${item.ticker}`);
     assert(item.reasonConfidenceExplanation, `Snapshot missing reasonConfidenceExplanation for ${item.ticker}`);
     assert(item.tieBreakerReason, `Snapshot missing tieBreakerReason for ${item.ticker}`);
+    assert(item.linkedNarrative, `Snapshot scored item missing linkedNarrative for ${item.ticker}`);
+    assert(item.narrativeStatus, `Snapshot scored item missing narrativeStatus for ${item.ticker}`);
+    assert(item.narrativeScore !== undefined, `Snapshot scored item missing narrativeScore for ${item.ticker}`);
     assert(!JSON.stringify(item).includes("options"), `Snapshot scored item still includes options text for ${item.ticker}`);
     if (item.reasonConfidence === "HIGH") {
       assert(item.directCatalyst && item.directCatalyst.startsWith("직접 촉매:"), `HIGH confidence item missing direct catalyst: ${item.ticker}`);

@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-03",
-  "generatedAt": "2026년 6월 3일 수요일 오후 4:03",
+  "generatedAt": "2026년 6월 3일 수요일 오후 4:20",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -2233,6 +2233,365 @@
       }
     ]
   },
+  "narratives": [
+    {
+      "name": "AI 소프트웨어/사이버보안 확산",
+      "status": "부상",
+      "narrativeScore": 97,
+      "rawScore": 97,
+      "reasonConfidence": "MEDIUM",
+      "supportEtfs": [
+        "AIQ",
+        "CIBR",
+        "HACK",
+        "IGV",
+        "IHAK"
+      ],
+      "supportStocks": [
+        "PANW",
+        "CRWD",
+        "DDOG",
+        "MSFT",
+        "TEAM"
+      ],
+      "representativeEtfs": [
+        "AIQ",
+        "CIBR",
+        "HACK"
+      ],
+      "representativeStocks": [
+        "PANW",
+        "CRWD",
+        "DDOG",
+        "MSFT"
+      ],
+      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 AIQ, CIBR, HACK와 PANW, CRWD, DDOG, MSFT의 5일(+10.18%)·20일(+30.56%) 흐름을 함께 본다. 평균 상대 거래량은 1.26배이고, ETF 확산도도 이를 보조한다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "섹터 베타를 사는 ETF 자금, AI/보안 실적 기대를 사는 스윙 트레이더, 신고가 추종 자금",
+      "bestTradingVehicle": "ETF 우선: IGV, CIBR, AIQ / 개별 종목 우선: PANW, CRWD, DDOG",
+      "breakCondition": "IGV/CIBR 20일선 이탈, 관련 개별 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
+      "todayAction": "추격보다 눌림 후 재상승 확인",
+      "summaryReason": "AIQ, CIBR, PANW, CRWD 중심으로 5일 +10.18%, 20일 +30.56% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 5,
+      "etfBreadthScore": 6,
+      "relativeVolumeAvg": 1
+    },
+    {
+      "name": "AI 인프라 재가속",
+      "status": "지배",
+      "narrativeScore": 90,
+      "rawScore": 90,
+      "reasonConfidence": "HIGH",
+      "supportEtfs": [
+        "DRAM",
+        "SOXQ",
+        "SOXX",
+        "SMH",
+        "PAVE"
+      ],
+      "supportStocks": [
+        "AVGO",
+        "ARM",
+        "MU",
+        "NVDA",
+        "AMD"
+      ],
+      "representativeEtfs": [
+        "DRAM",
+        "SOXQ",
+        "SOXX"
+      ],
+      "representativeStocks": [
+        "AVGO",
+        "ARM",
+        "MU",
+        "NVDA"
+      ],
+      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 DRAM, SOXQ, SOXX와 AVGO, ARM, MU, NVDA의 5일(+9.04%)·20일(+38.03%) 흐름을 함께 본다. 평균 상대 거래량은 1.02배이고, ETF 확산도도 이를 보조한다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "AI 인프라 CAPEX를 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, DRAM / 개별 종목 우선: NVDA, AVGO, MU",
+      "breakCondition": "SMH/SOXX 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
+      "todayAction": "추격보다 5일선 지지 후 재상승 확인",
+      "summaryReason": "DRAM, SOXQ, AVGO, ARM 중심으로 5일 +9.04%, 20일 +38.03% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 3,
+      "etfBreadthScore": 4,
+      "relativeVolumeAvg": 1
+    },
+    {
+      "name": "위험선호 성장주 재진입",
+      "status": "관찰",
+      "narrativeScore": 63,
+      "rawScore": 63,
+      "reasonConfidence": "MEDIUM",
+      "supportEtfs": [
+        "IPO",
+        "QQQ",
+        "ARKK"
+      ],
+      "supportStocks": [
+        "ARM",
+        "TSLA"
+      ],
+      "representativeEtfs": [
+        "IPO",
+        "QQQ",
+        "ARKK"
+      ],
+      "representativeStocks": [
+        "ARM",
+        "TSLA"
+      ],
+      "whyMoneyIsFlowing": "위험선호 성장주 재진입 관련 IPO, QQQ, ARKK와 ARM, TSLA의 5일(+5.07%)·20일(+20.29%) 흐름을 함께 본다. 평균 상대 거래량은 0.98배이고, ETF 확산도도 이를 보조한다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "위험선호 회복을 사는 성장주 ETF 자금과 고베타 단기 모멘텀 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ, IPO, ARKK / 개별 종목 우선: ARM, TSLA",
+      "breakCondition": "QQQ/IWM 동반 약화, 고베타 성장주 상대 거래량 둔화",
+      "todayAction": "지수 위험선호가 유지될 때만 선별 진입",
+      "summaryReason": "IPO, QQQ, ARM, TSLA 중심으로 5일 +5.07%, 20일 +20.29% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 1,
+      "etfBreadthScore": 2,
+      "relativeVolumeAvg": 1
+    },
+    {
+      "name": "전력망/원전/인프라 병목",
+      "status": "약화",
+      "narrativeScore": 24,
+      "rawScore": 24,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "PAVE",
+        "COPX",
+        "URA",
+        "GRID"
+      ],
+      "supportStocks": [
+        "CEG"
+      ],
+      "representativeEtfs": [
+        "PAVE",
+        "COPX",
+        "URA"
+      ],
+      "representativeStocks": [
+        "CEG"
+      ],
+      "whyMoneyIsFlowing": "전력망/원전/인프라 병목 관련 PAVE, COPX, URA와 CEG의 5일(+0.27%)·20일(-0.07%) 흐름을 함께 본다. 평균 상대 거래량은 1.22배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "AI 전력 수요와 인프라 병목을 사는 장기 테마 자금",
+      "bestTradingVehicle": "ETF 우선: GRID, PAVE, URA / 개별 종목 우선: CEG",
+      "breakCondition": "GRID/PAVE 20일선 이탈, 전력/원전 관련 종목 확산도 둔화",
+      "todayAction": "ETF 확산도와 거래량이 같이 살아날 때만 진입",
+      "summaryReason": "PAVE, COPX, CEG 중심으로 5일 +0.27%, 20일 -0.07% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1
+    },
+    {
+      "name": "방산/안보 프리미엄",
+      "status": "약화",
+      "narrativeScore": 18,
+      "rawScore": 18,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "ITA",
+        "XAR",
+        "SHLD"
+      ],
+      "supportStocks": [
+        "PLTR"
+      ],
+      "representativeEtfs": [
+        "ITA",
+        "XAR",
+        "SHLD"
+      ],
+      "representativeStocks": [
+        "PLTR"
+      ],
+      "whyMoneyIsFlowing": "방산/안보 프리미엄 관련 ITA, XAR, SHLD와 PLTR의 5일(+1.87%)·20일(+4.13%) 흐름을 함께 본다. 평균 상대 거래량은 1.14배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "지정학 리스크와 안보 예산 기대를 사는 테마 ETF 자금",
+      "bestTradingVehicle": "ETF 우선: XAR, SHLD, ITA / 개별 종목 우선: PLTR",
+      "breakCondition": "방산 ETF 20일선 이탈 또는 안보 이벤트 프리미엄 둔화",
+      "todayAction": "뉴스 촉매가 직접 확인될 때만 추세 추종",
+      "summaryReason": "ITA, XAR, PLTR 중심으로 5일 +1.87%, 20일 +4.13% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1
+    },
+    {
+      "name": "매크로 방어/헤지",
+      "status": "약화",
+      "narrativeScore": 6,
+      "rawScore": 6,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "TLT",
+        "GLD",
+        "XLE"
+      ],
+      "supportStocks": [],
+      "representativeEtfs": [
+        "TLT",
+        "GLD",
+        "XLE"
+      ],
+      "representativeStocks": [],
+      "whyMoneyIsFlowing": "매크로 방어/헤지 관련 TLT, GLD, XLE와 관련 종목의 5일(-0.63%)·20일(-1.30%) 흐름을 함께 본다. 평균 상대 거래량은 0.68배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "금리/에너지/방어 헤지를 찾는 매크로 자금",
+      "bestTradingVehicle": "ETF 우선: GLD, TLT, XLE / 개별 종목 우선: 데이터 없음",
+      "breakCondition": "방어 ETF 상대강도 둔화와 위험선호 성장주 재강세",
+      "todayAction": "위험회피가 확인될 때만 헤지성 접근",
+      "summaryReason": "TLT, GLD 중심으로 5일 -0.63%, 20일 -1.30% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1
+    },
+    {
+      "name": "비트코인/디지털 자산 위험선호",
+      "status": "소멸",
+      "narrativeScore": 0,
+      "rawScore": -2,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "BLOK",
+        "IBIT"
+      ],
+      "supportStocks": [
+        "MSTR"
+      ],
+      "representativeEtfs": [
+        "BLOK",
+        "IBIT"
+      ],
+      "representativeStocks": [
+        "MSTR"
+      ],
+      "whyMoneyIsFlowing": "비트코인/디지털 자산 위험선호 관련 BLOK, IBIT와 MSTR의 5일(-7.36%)·20일(-10.51%) 흐름을 함께 본다. 평균 상대 거래량은 1.50배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "비트코인 현물 ETF와 디지털 자산 베타를 사는 위험선호 자금",
+      "bestTradingVehicle": "ETF 우선: IBIT, BLOK / 개별 종목 우선: MSTR",
+      "breakCondition": "IBIT/BLOK 20일선 이탈 또는 채굴주 상대강도 급락",
+      "todayAction": "비트코인 베타가 살아날 때만 단기 매매",
+      "summaryReason": "BLOK, IBIT, MSTR 중심으로 5일 -7.36%, 20일 -10.51% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 2
+    }
+  ],
+  "topNarratives": [
+    {
+      "name": "AI 소프트웨어/사이버보안 확산",
+      "status": "부상",
+      "narrativeScore": 97,
+      "rawScore": 97,
+      "reasonConfidence": "MEDIUM",
+      "supportEtfs": [
+        "AIQ",
+        "CIBR",
+        "HACK",
+        "IGV",
+        "IHAK"
+      ],
+      "supportStocks": [
+        "PANW",
+        "CRWD",
+        "DDOG",
+        "MSFT",
+        "TEAM"
+      ],
+      "representativeEtfs": [
+        "AIQ",
+        "CIBR",
+        "HACK"
+      ],
+      "representativeStocks": [
+        "PANW",
+        "CRWD",
+        "DDOG",
+        "MSFT"
+      ],
+      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 AIQ, CIBR, HACK와 PANW, CRWD, DDOG, MSFT의 5일(+10.18%)·20일(+30.56%) 흐름을 함께 본다. 평균 상대 거래량은 1.26배이고, ETF 확산도도 이를 보조한다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "섹터 베타를 사는 ETF 자금, AI/보안 실적 기대를 사는 스윙 트레이더, 신고가 추종 자금",
+      "bestTradingVehicle": "ETF 우선: IGV, CIBR, AIQ / 개별 종목 우선: PANW, CRWD, DDOG",
+      "breakCondition": "IGV/CIBR 20일선 이탈, 관련 개별 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
+      "todayAction": "추격보다 눌림 후 재상승 확인",
+      "summaryReason": "AIQ, CIBR, PANW, CRWD 중심으로 5일 +10.18%, 20일 +30.56% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 5,
+      "etfBreadthScore": 6,
+      "relativeVolumeAvg": 1
+    },
+    {
+      "name": "AI 인프라 재가속",
+      "status": "지배",
+      "narrativeScore": 90,
+      "rawScore": 90,
+      "reasonConfidence": "HIGH",
+      "supportEtfs": [
+        "DRAM",
+        "SOXQ",
+        "SOXX",
+        "SMH",
+        "PAVE"
+      ],
+      "supportStocks": [
+        "AVGO",
+        "ARM",
+        "MU",
+        "NVDA",
+        "AMD"
+      ],
+      "representativeEtfs": [
+        "DRAM",
+        "SOXQ",
+        "SOXX"
+      ],
+      "representativeStocks": [
+        "AVGO",
+        "ARM",
+        "MU",
+        "NVDA"
+      ],
+      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 DRAM, SOXQ, SOXX와 AVGO, ARM, MU, NVDA의 5일(+9.04%)·20일(+38.03%) 흐름을 함께 본다. 평균 상대 거래량은 1.02배이고, ETF 확산도도 이를 보조한다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "AI 인프라 CAPEX를 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, DRAM / 개별 종목 우선: NVDA, AVGO, MU",
+      "breakCondition": "SMH/SOXX 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
+      "todayAction": "추격보다 5일선 지지 후 재상승 확인",
+      "summaryReason": "DRAM, SOXQ, AVGO, ARM 중심으로 5일 +9.04%, 20일 +38.03% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 3,
+      "etfBreadthScore": 4,
+      "relativeVolumeAvg": 1
+    },
+    {
+      "name": "위험선호 성장주 재진입",
+      "status": "관찰",
+      "narrativeScore": 63,
+      "rawScore": 63,
+      "reasonConfidence": "MEDIUM",
+      "supportEtfs": [
+        "IPO",
+        "QQQ",
+        "ARKK"
+      ],
+      "supportStocks": [
+        "ARM",
+        "TSLA"
+      ],
+      "representativeEtfs": [
+        "IPO",
+        "QQQ",
+        "ARKK"
+      ],
+      "representativeStocks": [
+        "ARM",
+        "TSLA"
+      ],
+      "whyMoneyIsFlowing": "위험선호 성장주 재진입 관련 IPO, QQQ, ARKK와 ARM, TSLA의 5일(+5.07%)·20일(+20.29%) 흐름을 함께 본다. 평균 상대 거래량은 0.98배이고, ETF 확산도도 이를 보조한다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "위험선호 회복을 사는 성장주 ETF 자금과 고베타 단기 모멘텀 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ, IPO, ARKK / 개별 종목 우선: ARM, TSLA",
+      "breakCondition": "QQQ/IWM 동반 약화, 고베타 성장주 상대 거래량 둔화",
+      "todayAction": "지수 위험선호가 유지될 때만 선별 진입",
+      "summaryReason": "IPO, QQQ, ARM, TSLA 중심으로 5일 +5.07%, 20일 +20.29% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 1,
+      "etfBreadthScore": 2,
+      "relativeVolumeAvg": 1
+    }
+  ],
   "etfActionCandidates": [
     {
       "ticker": "CIBR",
@@ -2261,6 +2620,9 @@
       "tieBreakerReason": "최종 원점수 116, 리스크 패널티 0, 5일 수익률 +11.65%, 상대 거래량 1.25배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [],
       "closePriceAtRecommendation": 94.32,
       "recommendationDate": "2026-06-02"
@@ -2292,6 +2654,9 @@
       "tieBreakerReason": "최종 원점수 107, 리스크 패널티 0, 5일 수익률 +7.58%, 상대 거래량 1.24배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [],
       "closePriceAtRecommendation": 70.14,
       "recommendationDate": "2026-06-02"
@@ -2325,6 +2690,9 @@
       "tieBreakerReason": "최종 원점수 106, 리스크 패널티 0, 5일 수익률 +14.97%, 상대 거래량 1.07배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 90,
       "relatedEtfs": [],
       "closePriceAtRecommendation": 69.57,
       "recommendationDate": "2026-06-02"
@@ -2364,6 +2732,9 @@
       "tieBreakerReason": "최종 원점수 101, 리스크 패널티 -5, 5일 수익률 +10.43%, 상대 거래량 1.40배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [],
       "closePriceAtRecommendation": 105.37,
       "recommendationDate": "2026-06-02"
@@ -2395,6 +2766,9 @@
       "tieBreakerReason": "최종 원점수 96, 리스크 패널티 0, 5일 수익률 +11.36%, 상대 거래량 1.11배 순으로 정렬",
       "entryCondition": "20일선 위 눌림 후 재상승 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [],
       "closePriceAtRecommendation": 104.73,
       "recommendationDate": "2026-06-02"
@@ -2428,6 +2802,9 @@
       "tieBreakerReason": "최종 원점수 124, 리스크 패널티 0, 5일 수익률 +15.75%, 상대 거래량 2.09배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [
         "HACK",
         "CIBR",
@@ -2486,6 +2863,9 @@
       "tieBreakerReason": "최종 원점수 115, 리스크 패널티 -16, 5일 수익률 +39.63%, 상대 거래량 3.22배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 90,
       "relatedEtfs": [
         "SMH",
         "SOXX",
@@ -2522,6 +2902,9 @@
       "tieBreakerReason": "최종 원점수 109, 리스크 패널티 0, 5일 수익률 +14.50%, 상대 거래량 1.19배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [
         "HACK",
         "CIBR",
@@ -2558,6 +2941,9 @@
       "tieBreakerReason": "최종 원점수 108, 리스크 패널티 0, 5일 수익률 +11.12%, 상대 거래량 1.05배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [
         "HACK",
         "CIBR",
@@ -2602,6 +2988,9 @@
       "tieBreakerReason": "최종 원점수 105, 리스크 패널티 -6, 5일 수익률 +20.34%, 상대 거래량 1.20배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [
         "IGV",
         "AIQ",
@@ -2639,6 +3028,9 @@
       "tieBreakerReason": "최종 원점수 124, 리스크 패널티 0, 5일 수익률 +15.75%, 상대 거래량 2.09배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [
         "HACK",
         "CIBR",
@@ -2697,6 +3089,9 @@
       "tieBreakerReason": "최종 원점수 115, 리스크 패널티 -16, 5일 수익률 +39.63%, 상대 거래량 3.22배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 90,
       "relatedEtfs": [
         "SMH",
         "SOXX",
@@ -2733,6 +3128,9 @@
       "tieBreakerReason": "최종 원점수 109, 리스크 패널티 0, 5일 수익률 +14.50%, 상대 거래량 1.19배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [
         "HACK",
         "CIBR",
@@ -2771,6 +3169,9 @@
       "tieBreakerReason": "최종 원점수 124, 리스크 패널티 0, 5일 수익률 +15.75%, 상대 거래량 2.09배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [
         "HACK",
         "CIBR",
@@ -2829,6 +3230,9 @@
       "tieBreakerReason": "최종 원점수 115, 리스크 패널티 -16, 5일 수익률 +39.63%, 상대 거래량 3.22배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 90,
       "relatedEtfs": [
         "SMH",
         "SOXX",
@@ -2865,6 +3269,9 @@
       "tieBreakerReason": "최종 원점수 109, 리스크 패널티 0, 5일 수익률 +14.50%, 상대 거래량 1.19배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [
         "HACK",
         "CIBR",
@@ -2901,6 +3308,9 @@
       "tieBreakerReason": "최종 원점수 108, 리스크 패널티 0, 5일 수익률 +11.12%, 상대 거래량 1.05배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [
         "HACK",
         "CIBR",
@@ -2945,6 +3355,9 @@
       "tieBreakerReason": "최종 원점수 105, 리스크 패널티 -6, 5일 수익률 +20.34%, 상대 거래량 1.20배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [
         "IGV",
         "AIQ",
@@ -2991,6 +3404,9 @@
       "tieBreakerReason": "최종 원점수 86, 리스크 패널티 -4, 5일 수익률 +1.68%, 상대 거래량 1.04배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 90,
       "relatedEtfs": [
         "SMH",
         "SOXX",
@@ -3042,6 +3458,9 @@
       "tieBreakerReason": "최종 원점수 79, 리스크 패널티 -8, 5일 수익률 +8.17%, 상대 거래량 0.90배 순으로 정렬",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",
+      "linkedNarrative": "위험선호 성장주 재진입",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 63,
       "relatedEtfs": [
         "QQQ"
       ],
@@ -3076,6 +3495,9 @@
     "tieBreakerReason": "최종 원점수 124, 리스크 패널티 0, 5일 수익률 +15.75%, 상대 거래량 2.09배 순으로 정렬",
     "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
     "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+    "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+    "narrativeStatus": "부상",
+    "narrativeScore": 97,
     "relatedEtfs": [
       "HACK",
       "CIBR",

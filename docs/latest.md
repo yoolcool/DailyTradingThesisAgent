@@ -6,6 +6,40 @@
 
 > 핵심 질문: 현재 가격에서 누가 사고 있고, 누가 앞으로 더 비싸게 사줄 수 있는가?
 
+## 모바일 요약
+
+[오늘의 데일리 트레이딩 요약]
+
+생성 성공 / 데이터 모드: REAL_TEST
+
+시장:
+- 위험선호
+
+시장 지배 서사:
+1. AI 소프트웨어/사이버보안 확산 - 부상 - AIQ, CIBR, PANW, CRWD 중심으로 5일 +10.18%, 20일 +30.56% 흐름이 형성됨. 직접 촉매 일부 확인.
+2. AI 인프라 재가속 - 지배 - DRAM, SOXQ, AVGO, ARM 중심으로 5일 +9.04%, 20일 +38.03% 흐름이 형성됨. 직접 촉매 일부 확인.
+3. 위험선호 성장주 재진입 - 관찰 - IPO, QQQ, ARM, TSLA 중심으로 5일 +5.07%, 20일 +20.29% 흐름이 형성됨. 직접 촉매 일부 확인.
+
+오늘 결론:
+- 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
+- 행동 후보는 linkedNarrative와 함께 확인한다.
+- 추격보다 진입 조건 확인 후 접근한다.
+
+오늘 실제 행동 후보:
+1. PANW(STOCK) - AI 소프트웨어/사이버보안 확산 - 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
+2. MRVL(STOCK) - AI 인프라 재가속 - 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
+3. CRWD(STOCK) - AI 소프트웨어/사이버보안 확산 - 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
+
+ETF 후보 TOP 5:
+1. CIBR - AI 소프트웨어/사이버보안 확산 - ETF 우선
+2. AIQ - AI 소프트웨어/사이버보안 확산 - ETF 우선
+3. DRAM - AI 인프라 재가속 - ETF 우선
+4. HACK - AI 소프트웨어/사이버보안 확산 - ETF 우선
+5. SOXQ - AI 인프라 재가속 - 돌파 확인 후 관찰
+
+웹 리포트:
+https://yoolcool.github.io/DailyTradingThesisAgent/
+
 ## 0. 시장 상태
 
 - 데이터 모드: REAL_TEST
@@ -13,7 +47,7 @@
 - 뉴스: 연결됨
 - ETF 구성종목 확산도: 일부 연결
 - 스프레드/유동성: 일부 연결
-- 생성 시각: 2026년 6월 3일 수요일 오후 4:03
+- 생성 시각: 2026년 6월 3일 수요일 오후 4:20
 - 시장 상태: 위험선호
 - 오늘 돈의 방향: 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 강한 테마 TOP 3: 메모리/HBM ETF(100), AI 소프트웨어 ETF(100), 클라우드/엔터프라이즈 소프트웨어 ETF(96)
@@ -22,10 +56,122 @@
   - 수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한한다.
   - reasonConfidence HIGH는 직접 촉매, 가격/거래량, 확산도/유동성 근거가 함께 있을 때만 사용한다.
 
+## 오늘 시장을 지배하는 서사
+
+### 오늘 시장을 지배하는 서사 TOP 3
+
+#### 1. AI 소프트웨어/사이버보안 확산
+- 상태: 부상
+- narrativeScore: 97
+- reasonConfidence: MEDIUM
+- 근거 ETF: AIQ, CIBR, HACK, IGV, IHAK
+- 근거 개별 종목: PANW, CRWD, DDOG, MSFT, TEAM
+- 돈이 몰리는 이유: AI 소프트웨어/사이버보안 확산 관련 AIQ, CIBR, HACK와 PANW, CRWD, DDOG, MSFT의 5일(+10.18%)·20일(+30.56%) 흐름을 함께 본다. 평균 상대 거래량은 1.26배이고, ETF 확산도도 이를 보조한다. 직접 뉴스/이벤트가 일부 확인된다.
+- 다음 매수 주체: 섹터 베타를 사는 ETF 자금, AI/보안 실적 기대를 사는 스윙 트레이더, 신고가 추종 자금
+- 가장 좋은 트레이딩 수단: ETF 우선: IGV, CIBR, AIQ / 개별 종목 우선: PANW, CRWD, DDOG
+- 서사가 깨지는 조건: IGV/CIBR 20일선 이탈, 관련 개별 종목 절반 이상 5일선 이탈, 상대 거래량 둔화
+- 오늘 행동: 추격보다 눌림 후 재상승 확인
+
+<details>
+<summary>상세 narrativeScore 근거 보기</summary>
+
+- rawScore: 97
+- ETF 평균 moneyFlowScore: 96
+- 개별 종목 평균 moneyFlowScore: 60
+- ETF 후보 비율: 100%
+- 개별 종목 후보 비율: 43%
+- 5일 평균 수익률: +10.00%
+- 20일 평균 수익률: +31.00%
+- 평균 상대 거래량: 1.00배
+- 52주 고점 근접 후보 비율: 58%
+- 뉴스 직접성 점수: 7
+- ETF 확산도 점수: 6
+- 유동성 점수: 1
+- 과열 리스크 차감: 0
+
+</details>
+
+#### 2. AI 인프라 재가속
+- 상태: 지배
+- narrativeScore: 90
+- reasonConfidence: HIGH
+- 근거 ETF: DRAM, SOXQ, SOXX, SMH, PAVE
+- 근거 개별 종목: AVGO, ARM, MU, NVDA, AMD
+- 돈이 몰리는 이유: AI 인프라 재가속 관련 DRAM, SOXQ, SOXX와 AVGO, ARM, MU, NVDA의 5일(+9.04%)·20일(+38.03%) 흐름을 함께 본다. 평균 상대 거래량은 1.02배이고, ETF 확산도도 이를 보조한다. 직접 뉴스/이벤트가 일부 확인된다.
+- 다음 매수 주체: AI 인프라 CAPEX를 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금
+- 가장 좋은 트레이딩 수단: ETF 우선: SMH, SOXX, DRAM / 개별 종목 우선: NVDA, AVGO, MU
+- 서사가 깨지는 조건: SMH/SOXX 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈
+- 오늘 행동: 추격보다 5일선 지지 후 재상승 확인
+
+<details>
+<summary>상세 narrativeScore 근거 보기</summary>
+
+- rawScore: 90
+- ETF 평균 moneyFlowScore: 76
+- 개별 종목 평균 moneyFlowScore: 82
+- ETF 후보 비율: 33%
+- 개별 종목 후보 비율: 60%
+- 5일 평균 수익률: +9.00%
+- 20일 평균 수익률: +38.00%
+- 평균 상대 거래량: 1.00배
+- 52주 고점 근접 후보 비율: 82%
+- 뉴스 직접성 점수: 8
+- ETF 확산도 점수: 4
+- 유동성 점수: 4
+- 과열 리스크 차감: -1
+
+</details>
+
+#### 3. 위험선호 성장주 재진입
+- 상태: 관찰
+- narrativeScore: 63
+- reasonConfidence: MEDIUM
+- 근거 ETF: IPO, QQQ, ARKK
+- 근거 개별 종목: ARM, TSLA
+- 돈이 몰리는 이유: 위험선호 성장주 재진입 관련 IPO, QQQ, ARKK와 ARM, TSLA의 5일(+5.07%)·20일(+20.29%) 흐름을 함께 본다. 평균 상대 거래량은 0.98배이고, ETF 확산도도 이를 보조한다. 직접 뉴스/이벤트가 일부 확인된다.
+- 다음 매수 주체: 위험선호 회복을 사는 성장주 ETF 자금과 고베타 단기 모멘텀 자금
+- 가장 좋은 트레이딩 수단: ETF 우선: QQQ, IPO, ARKK / 개별 종목 우선: ARM, TSLA
+- 서사가 깨지는 조건: QQQ/IWM 동반 약화, 고베타 성장주 상대 거래량 둔화
+- 오늘 행동: 지수 위험선호가 유지될 때만 선별 진입
+
+<details>
+<summary>상세 narrativeScore 근거 보기</summary>
+
+- rawScore: 63
+- ETF 평균 moneyFlowScore: 45
+- 개별 종목 평균 moneyFlowScore: 50
+- ETF 후보 비율: 20%
+- 개별 종목 후보 비율: 50%
+- 5일 평균 수익률: +5.00%
+- 20일 평균 수익률: +20.00%
+- 평균 상대 거래량: 1.00배
+- 52주 고점 근접 후보 비율: 57%
+- 뉴스 직접성 점수: 8
+- ETF 확산도 점수: 2
+- 유동성 점수: 2
+- 과열 리스크 차감: 0
+
+</details>
+
+### 전체 narrative 요약
+
+| 서사명 | 상태 | narrativeScore | reasonConfidence | 대표 ETF | 대표 종목 | 오늘 행동 |
+| --- | --- | ---: | --- | --- | --- | --- |
+| AI 소프트웨어/사이버보안 확산 | 부상 | 97 | MEDIUM | AIQ, CIBR, HACK | PANW, CRWD, DDOG, MSFT | 추격보다 눌림 후 재상승 확인 |
+| AI 인프라 재가속 | 지배 | 90 | HIGH | DRAM, SOXQ, SOXX | AVGO, ARM, MU, NVDA | 추격보다 5일선 지지 후 재상승 확인 |
+| 위험선호 성장주 재진입 | 관찰 | 63 | MEDIUM | IPO, QQQ, ARKK | ARM, TSLA | 지수 위험선호가 유지될 때만 선별 진입 |
+| 전력망/원전/인프라 병목 | 약화 | 24 | LOW | PAVE, COPX, URA | CEG | ETF 확산도와 거래량이 같이 살아날 때만 진입 |
+| 방산/안보 프리미엄 | 약화 | 18 | LOW | ITA, XAR, SHLD | PLTR | 뉴스 촉매가 직접 확인될 때만 추세 추종 |
+| 매크로 방어/헤지 | 약화 | 6 | LOW | TLT, GLD, XLE | - | 위험회피가 확인될 때만 헤지성 접근 |
+| 비트코인/디지털 자산 위험선호 | 소멸 | 0 | LOW | BLOK, IBIT | MSTR | 비트코인 베타가 살아날 때만 단기 매매 |
+
 ## 오늘 실제 행동 후보
 
 ### 1. [PANW] Palo Alto Networks Inc.
 - 자산 유형: STOCK
+- linkedNarrative: AI 소프트웨어/사이버보안 확산
+- narrativeStatus: 부상
+- narrativeScore: 97
 - moneyFlowScore: 100
 - finalRawScore: 124
 - reasonConfidence: HIGH
@@ -41,6 +187,9 @@
 
 ### 2. [MRVL] Marvell Technology Inc.
 - 자산 유형: STOCK
+- linkedNarrative: AI 인프라 재가속
+- narrativeStatus: 지배
+- narrativeScore: 90
 - moneyFlowScore: 100
 - finalRawScore: 115
 - reasonConfidence: HIGH
@@ -56,6 +205,9 @@
 
 ### 3. [CRWD] CrowdStrike Holdings Inc.
 - 자산 유형: STOCK
+- linkedNarrative: AI 소프트웨어/사이버보안 확산
+- narrativeStatus: 부상
+- narrativeScore: 97
 - moneyFlowScore: 100
 - finalRawScore: 109
 - reasonConfidence: HIGH
@@ -95,6 +247,9 @@
 - ETF 세부 카테고리: 사이버보안 ETF
 - ETF 역할: 테마 베타 매수
 - 상태: 진입 가능
+- linkedNarrative: AI 소프트웨어/사이버보안 확산
+- narrativeStatus: 부상
+- narrativeScore: 97
 - moneyFlowScore: 100
 - finalRawScore: 116
 - tieBreakerReason: 최종 원점수 116, 리스크 패널티 0, 5일 수익률 +11.65%, 상대 거래량 1.25배 순으로 정렬
@@ -186,6 +341,9 @@
 - ETF 세부 카테고리: AI 소프트웨어 ETF
 - ETF 역할: 테마 베타 매수
 - 상태: 진입 가능
+- linkedNarrative: AI 소프트웨어/사이버보안 확산
+- narrativeStatus: 부상
+- narrativeScore: 97
 - moneyFlowScore: 100
 - finalRawScore: 107
 - tieBreakerReason: 최종 원점수 107, 리스크 패널티 0, 5일 수익률 +7.58%, 상대 거래량 1.24배 순으로 정렬
@@ -277,6 +435,9 @@
 - ETF 세부 카테고리: 메모리/HBM ETF
 - ETF 역할: 테마 베타 매수
 - 상태: 진입 가능
+- linkedNarrative: AI 인프라 재가속
+- narrativeStatus: 지배
+- narrativeScore: 90
 - moneyFlowScore: 100
 - finalRawScore: 106
 - tieBreakerReason: 최종 원점수 106, 리스크 패널티 0, 5일 수익률 +14.97%, 상대 거래량 1.07배 순으로 정렬
@@ -368,6 +529,9 @@
 - ETF 세부 카테고리: 사이버보안 ETF
 - ETF 역할: 테마 베타 매수
 - 상태: 진입 가능
+- linkedNarrative: AI 소프트웨어/사이버보안 확산
+- narrativeStatus: 부상
+- narrativeScore: 97
 - moneyFlowScore: 100
 - finalRawScore: 101
 - tieBreakerReason: 최종 원점수 101, 리스크 패널티 -5, 5일 수익률 +10.43%, 상대 거래량 1.40배 순으로 정렬
@@ -460,6 +624,9 @@
 - ETF 세부 카테고리: AI 반도체 ETF
 - ETF 역할: 테마 베타 매수
 - 상태: 관찰
+- linkedNarrative: AI 인프라 재가속
+- narrativeStatus: 지배
+- narrativeScore: 90
 - moneyFlowScore: 100
 - finalRawScore: 100
 - tieBreakerReason: 최종 원점수 100, 리스크 패널티 -4, 5일 수익률 +6.63%, 상대 거래량 1.08배 순으로 정렬
@@ -651,6 +818,9 @@
 - primaryTheme: 사이버보안
 - primarySector: Technology
 - relatedEtfs: HACK, CIBR, IHAK, IGV
+- linkedNarrative: AI 소프트웨어/사이버보안 확산
+- narrativeStatus: 부상
+- narrativeScore: 97
 - moneyFlowScore: 100
 - finalRawScore: 124
 - tieBreakerReason: 최종 원점수 124, 리스크 패널티 0, 5일 수익률 +15.75%, 상대 거래량 2.09배 순으로 정렬
@@ -738,6 +908,9 @@
 - primaryTheme: AI 반도체
 - primarySector: Technology
 - relatedEtfs: SMH, SOXX, SOXQ, AIQ
+- linkedNarrative: AI 인프라 재가속
+- narrativeStatus: 지배
+- narrativeScore: 90
 - moneyFlowScore: 100
 - finalRawScore: 115
 - tieBreakerReason: 최종 원점수 115, 리스크 패널티 -16, 5일 수익률 +39.63%, 상대 거래량 3.22배 순으로 정렬
@@ -828,6 +1001,9 @@
 - primaryTheme: 사이버보안
 - primarySector: Technology
 - relatedEtfs: HACK, CIBR, IHAK, IGV
+- linkedNarrative: AI 소프트웨어/사이버보안 확산
+- narrativeStatus: 부상
+- narrativeScore: 97
 - moneyFlowScore: 100
 - finalRawScore: 109
 - tieBreakerReason: 최종 원점수 109, 리스크 패널티 0, 5일 수익률 +14.50%, 상대 거래량 1.19배 순으로 정렬
@@ -915,6 +1091,9 @@
 - primaryTheme: 사이버보안
 - primarySector: Technology
 - relatedEtfs: HACK, CIBR, IHAK, IGV
+- linkedNarrative: AI 소프트웨어/사이버보안 확산
+- narrativeStatus: 부상
+- narrativeScore: 97
 - moneyFlowScore: 100
 - finalRawScore: 108
 - tieBreakerReason: 최종 원점수 108, 리스크 패널티 0, 5일 수익률 +11.12%, 상대 거래량 1.05배 순으로 정렬
@@ -1002,6 +1181,9 @@
 - primaryTheme: 클라우드/엔터프라이즈 소프트웨어
 - primarySector: Technology
 - relatedEtfs: IGV, AIQ, QQQ
+- linkedNarrative: AI 소프트웨어/사이버보안 확산
+- narrativeStatus: 부상
+- narrativeScore: 97
 - moneyFlowScore: 100
 - finalRawScore: 105
 - tieBreakerReason: 최종 원점수 105, 리스크 패널티 -6, 5일 수익률 +20.34%, 상대 거래량 1.20배 순으로 정렬
@@ -1372,7 +1554,7 @@
 | GRID | 전력망 인프라 ETF | 36 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: Peter Thiel Bets $140M on Ocean-Powered Energy for AI / 유동성: ACCEPTABLE |
 | IFRA | 인프라 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.78배라 신규 자금 유입 강도는 약함 |
 | XLU | 전력/유틸리티 ETF | 12 | 매매 금지 | LOW | 20일 -5.33%, 5일 -3.15%, 상대 거래량 1.24배로 가격과 거래량이 함께 개선. 뉴스: XLU Investors: Watch PJM’s March 2027 Data Center Framework Decision / 유동성: LIQUID |
-| URA | 원전/우라늄 ETF | 58 | 진입 후보 | MEDIUM | 20일 -2.46%, 5일 +5.03%, 상대 거래량 1.70배로 가격과 거래량이 함께 개선. 뉴스: Nuclear Power Is the Only Real Answer to AI Electricity Demand and These 3 ETFs Own the Trade / 유동성: ACCEPTABLE |
+| URA | 원전/우라늄 ETF | 58 | 진입 후보 | MEDIUM | 20일 -2.46%, 5일 +5.03%, 상대 거래량 1.70배로 가격과 거래량이 함께 개선. 뉴스: Load Up on Nuclear Before the Data Center Energy Race Accelerates: These 3 ETFs Cover Reactors, Uranium, and Smart Grid / 유동성: ACCEPTABLE |
 | NLR | 원전/우라늄 ETF | 34 | 매매 금지 | LOW | 20일 -3.69%, 5일 +2.64%, 상대 거래량 1.26배로 가격과 거래량이 함께 개선. 뉴스: VanEck Launches Data Center Supply Chain ETF (RACK) to Capture AI Infrastructure Buildout |
 | LIT | 배터리/리튬 ETF | 6 | 매매 금지 | LOW | 20일 -0.83%, 5일 +0.06%, 상대 거래량 1.30배로 가격과 거래량이 함께 개선. 뉴스: 3 Market Themes Driving Stocks Right Now: AI, Alt Energy and Commodities |
 | COPX | 구리/금속 ETF | 63 | 진입 후보 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. 뉴스: Copper vs. Gold &amp; Silver: Which Metal Wins the AI Boom? ETFs at Play / 유동성: ACCEPTABLE |

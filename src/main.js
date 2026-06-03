@@ -105,6 +105,87 @@ const ETF_CATEGORY = {
   BLOK: "비트코인 ETF"
 };
 
+const NARRATIVE_DEFINITIONS = [
+  {
+    name: "AI 인프라 재가속",
+    etfs: ["SMH", "SOXX", "SOXQ", "DRAM", "GRID", "PAVE"],
+    stocks: ["NVDA", "TSM", "AMD", "AVGO", "MU", "ARM", "VRT", "ETN", "PWR"],
+    nextBuyer: "AI 인프라 CAPEX를 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
+    preferredEtfs: ["SMH", "SOXX", "DRAM"],
+    preferredStocks: ["NVDA", "AVGO", "MU", "ARM"],
+    breakCondition: "SMH/SOXX 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
+    todayAction: "추격보다 5일선 지지 후 재상승 확인"
+  },
+  {
+    name: "AI 소프트웨어/사이버보안 확산",
+    etfs: ["IGV", "AIQ", "CIBR", "HACK", "IHAK"],
+    stocks: ["PLTR", "PANW", "CRWD", "DDOG", "TEAM", "MSFT", "NOW", "ZS"],
+    nextBuyer: "섹터 베타를 사는 ETF 자금, AI/보안 실적 기대를 사는 스윙 트레이더, 신고가 추종 자금",
+    preferredEtfs: ["IGV", "CIBR", "AIQ"],
+    preferredStocks: ["PANW", "CRWD", "DDOG", "TEAM"],
+    breakCondition: "IGV/CIBR 20일선 이탈, 관련 개별 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
+    todayAction: "추격보다 눌림 후 재상승 확인"
+  },
+  {
+    name: "위험선호 성장주 재진입",
+    etfs: ["QQQ", "IPO", "ARKK", "IWM", "MAGS"],
+    stocks: ["ARM", "COIN", "TSLA", "ROKU", "PATH"],
+    nextBuyer: "위험선호 회복을 사는 성장주 ETF 자금과 고베타 단기 모멘텀 자금",
+    preferredEtfs: ["QQQ", "IPO", "ARKK"],
+    preferredStocks: ["ARM", "COIN", "TSLA"],
+    breakCondition: "QQQ/IWM 동반 약화, 고베타 성장주 상대 거래량 둔화",
+    todayAction: "지수 위험선호가 유지될 때만 선별 진입"
+  },
+  {
+    name: "방산/안보 프리미엄",
+    etfs: ["XAR", "SHLD", "ITA", "PPA"],
+    stocks: ["AVAV", "KTOS", "RTX", "LMT", "NOC", "PLTR"],
+    nextBuyer: "지정학 리스크와 안보 예산 기대를 사는 테마 ETF 자금",
+    preferredEtfs: ["XAR", "SHLD", "ITA"],
+    preferredStocks: ["AVAV", "KTOS", "PLTR"],
+    breakCondition: "방산 ETF 20일선 이탈 또는 안보 이벤트 프리미엄 둔화",
+    todayAction: "뉴스 촉매가 직접 확인될 때만 추세 추종"
+  },
+  {
+    name: "전력망/원전/인프라 병목",
+    etfs: ["GRID", "PAVE", "IFRA", "XLU", "URA", "NLR", "COPX"],
+    stocks: ["VRT", "ETN", "PWR", "GEV", "CEG", "CCJ", "FCX"],
+    nextBuyer: "AI 전력 수요와 인프라 병목을 사는 장기 테마 자금",
+    preferredEtfs: ["GRID", "PAVE", "URA"],
+    preferredStocks: ["VRT", "ETN", "PWR", "CEG"],
+    breakCondition: "GRID/PAVE 20일선 이탈, 전력/원전 관련 종목 확산도 둔화",
+    todayAction: "ETF 확산도와 거래량이 같이 살아날 때만 진입"
+  },
+  {
+    name: "비트코인/디지털 자산 위험선호",
+    etfs: ["IBIT", "BLOK"],
+    stocks: ["MSTR", "COIN", "IREN", "CIFR", "RIOT", "MARA"],
+    nextBuyer: "비트코인 현물 ETF와 디지털 자산 베타를 사는 위험선호 자금",
+    preferredEtfs: ["IBIT", "BLOK"],
+    preferredStocks: ["MSTR", "COIN", "IREN"],
+    breakCondition: "IBIT/BLOK 20일선 이탈 또는 채굴주 상대강도 급락",
+    todayAction: "비트코인 베타가 살아날 때만 단기 매매"
+  },
+  {
+    name: "매크로 방어/헤지",
+    etfs: ["GLD", "TLT", "XLE", "OIH"],
+    stocks: ["XOM", "CVX"],
+    nextBuyer: "금리/에너지/방어 헤지를 찾는 매크로 자금",
+    preferredEtfs: ["GLD", "TLT", "XLE"],
+    preferredStocks: ["XOM", "CVX"],
+    breakCondition: "방어 ETF 상대강도 둔화와 위험선호 성장주 재강세",
+    todayAction: "위험회피가 확인될 때만 헤지성 접근"
+  }
+];
+
+const NARRATIVE_STATUS = {
+  DOMINANT: "지배",
+  EMERGING: "부상",
+  WATCH: "관찰",
+  WEAKENING: "약화",
+  DEAD: "소멸"
+};
+
 function readJson(fileName, fallback = null) {
   const filePath = path.join(DATA_DIR, fileName);
   if (!fs.existsSync(filePath)) return fallback;
@@ -813,6 +894,174 @@ function groupThemes(stocks, etfs) {
     .sort((a, b) => b.avgScore - a.avgScore);
 }
 
+function buildNarratives(stocks, etfs) {
+  return NARRATIVE_DEFINITIONS.map((definition) => buildNarrative(definition, stocks, etfs))
+    .sort((a, b) => b.narrativeScore - a.narrativeScore || b.rawScore - a.rawScore);
+}
+
+function buildNarrative(definition, stocks, etfs) {
+  const narrativeEtfs = definition.etfs.map((ticker) => etfs.find((row) => row.ticker === ticker)).filter(Boolean);
+  const narrativeStocks = definition.stocks.map((ticker) => stocks.find((row) => row.ticker === ticker)).filter(Boolean);
+  const tradableEtfs = narrativeEtfs.filter(isTradableCandidate);
+  const tradableStocks = narrativeStocks.filter(isTradableCandidate);
+  const allRows = [...narrativeEtfs, ...narrativeStocks];
+  const etfAvgScore = averageNonEmpty(narrativeEtfs.map((row) => row.moneyFlowScoreFinal ?? row.moneyFlowScore));
+  const stockAvgScore = averageNonEmpty(narrativeStocks.map((row) => row.moneyFlowScoreFinal ?? row.moneyFlowScore));
+  const etfCandidateRatio = ratio(tradableEtfs.length, narrativeEtfs.length);
+  const stockCandidateRatio = ratio(tradableStocks.length, narrativeStocks.length);
+  const momentum5 = averageNonEmpty(allRows.map((row) => row.market?.return5dPct));
+  const momentum20 = averageNonEmpty(allRows.map((row) => row.market?.return20dPct));
+  const relativeVolumeAvg = averageNonEmpty(allRows.map((row) => row.market?.relativeVolume));
+  const highProximityRatio = ratio(allRows.filter((row) => Number(row.market?.drawdownFrom52wHighPct) >= -5).length, allRows.length);
+  const newsDirectScore = averageNonEmpty(allRows.map((row) => row.reasonConfidence === "HIGH" ? 10 : row.moneyFlowScoreBreakdown?.newsScore || 0));
+  const directNewsCount = allRows.filter((row) => row.reasonConfidence === "HIGH" && row.directCatalyst).length;
+  const etfBreadthScore = averageNonEmpty(narrativeEtfs.map((row) => row.moneyFlowScoreBreakdown?.etfBreadthScore));
+  const liquidityScore = averageNonEmpty(allRows.map((row) => row.moneyFlowScoreBreakdown?.liquidityScore));
+  const overheatPenalty = averageNonEmpty(allRows.map((row) => row.overheatingRisk === "높음" ? -8 : row.overheatingRisk === "중간" ? -4 : 0));
+  const bothSidesStrong = etfAvgScore >= 65 && stockAvgScore >= 65;
+  const rawScore = rounded(
+    etfAvgScore * 0.2 +
+    stockAvgScore * 0.2 +
+    etfCandidateRatio * 12 +
+    stockCandidateRatio * 12 +
+    clamp(momentum5, -10, 15) * 0.9 +
+    clamp(momentum20, -15, 25) * 0.7 +
+    clamp(relativeVolumeAvg - 1, -1, 2.5) * 10 +
+    highProximityRatio * 8 +
+    clamp(newsDirectScore, -8, 12) +
+    clamp(etfBreadthScore, -5, 10) +
+    clamp(liquidityScore, -5, 5) +
+    overheatPenalty
+  );
+  const narrativeScore = clamp(rounded(rawScore), 0, 100);
+  const status = narrativeStatus(narrativeScore, bothSidesStrong, etfCandidateRatio, stockCandidateRatio, relativeVolumeAvg, momentum20);
+  const reasonConfidence = narrativeReasonConfidence(narrativeScore, bothSidesStrong, etfBreadthScore, relativeVolumeAvg, directNewsCount);
+  const supportEtfs = pickSupportRows(narrativeEtfs, definition.preferredEtfs);
+  const supportStocks = pickSupportRows(narrativeStocks, definition.preferredStocks);
+  return {
+    name: definition.name,
+    status,
+    narrativeScore,
+    rawScore,
+    reasonConfidence,
+    supportEtfs: supportEtfs.map((row) => row.ticker),
+    supportStocks: supportStocks.map((row) => row.ticker),
+    representativeEtfs: supportEtfs.slice(0, 3).map((row) => row.ticker),
+    representativeStocks: supportStocks.slice(0, 4).map((row) => row.ticker),
+    etfAvgScore: rounded(etfAvgScore),
+    stockAvgScore: rounded(stockAvgScore),
+    etfCandidateRatio: rounded(etfCandidateRatio * 100),
+    stockCandidateRatio: rounded(stockCandidateRatio * 100),
+    momentum5: rounded(momentum5),
+    momentum20: rounded(momentum20),
+    relativeVolumeAvg: rounded(relativeVolumeAvg),
+    highProximityRatio: rounded(highProximityRatio * 100),
+    newsDirectScore: rounded(newsDirectScore),
+    directNewsCount,
+    etfBreadthScore: rounded(etfBreadthScore),
+    liquidityScore: rounded(liquidityScore),
+    overheatPenalty: rounded(overheatPenalty),
+    whyMoneyIsFlowing: narrativeMoneyReason(definition.name, supportEtfs, supportStocks, momentum5, momentum20, relativeVolumeAvg, etfBreadthScore, directNewsCount),
+    likelyNextBuyer: definition.nextBuyer,
+    bestTradingVehicle: `ETF 우선: ${pickSymbols(definition.preferredEtfs, supportEtfs).join(", ") || "데이터 없음"} / 개별 종목 우선: ${pickSymbols(definition.preferredStocks, supportStocks).join(", ") || "데이터 없음"}`,
+    breakCondition: definition.breakCondition,
+    todayAction: definition.todayAction,
+    summaryReason: narrativeOneLine(definition.name, status, supportEtfs, supportStocks, momentum5, momentum20, directNewsCount)
+  };
+}
+
+function applyNarrativeLinks(rows, narratives) {
+  for (const row of rows) {
+    const narrative = bestNarrativeForRow(row, narratives);
+    if (!narrative) continue;
+    row.linkedNarrative = narrative.name;
+    row.narrativeStatus = narrative.status;
+    row.narrativeScore = narrative.narrativeScore;
+  }
+}
+
+function bestNarrativeForRow(row, narratives) {
+  const ticker = row.ticker;
+  const relatedEtfSymbols = (row.relatedEtfs || []).map((etf) => etf.ticker);
+  return narratives.find((narrative) => narrative.supportEtfs.includes(ticker) || narrative.supportStocks.includes(ticker))
+    || narratives.find((narrative) => {
+      const definition = NARRATIVE_DEFINITIONS.find((row) => row.name === narrative.name);
+      return definition?.etfs.includes(ticker) || definition?.stocks.includes(ticker);
+    })
+    || bestNarrativeByRelatedEtfs(relatedEtfSymbols, narratives);
+}
+
+function bestNarrativeByRelatedEtfs(relatedEtfSymbols, narratives) {
+  if (!relatedEtfSymbols.length) return null;
+  return narratives
+    .map((narrative) => {
+      const definition = NARRATIVE_DEFINITIONS.find((row) => row.name === narrative.name);
+      const overlap = relatedEtfSymbols.filter((symbol) => definition?.etfs.includes(symbol)).length;
+      return { narrative, overlap };
+    })
+    .filter((row) => row.overlap > 0)
+    .sort((a, b) => b.overlap - a.overlap || b.narrative.narrativeScore - a.narrative.narrativeScore)[0]?.narrative || null;
+}
+
+function isTradableCandidate(row) {
+  return row && [STATUS.ENTRY_READY, STATUS.ENTRY_CANDIDATE].includes(row.status) && row.reasonConfidence !== "LOW";
+}
+
+function averageNonEmpty(values) {
+  const nums = values.map(Number).filter(Number.isFinite);
+  if (!nums.length) return 0;
+  return nums.reduce((sum, value) => sum + value, 0) / nums.length;
+}
+
+function ratio(count, total) {
+  return total ? count / total : 0;
+}
+
+function narrativeStatus(score, bothSidesStrong, etfCandidateRatio, stockCandidateRatio, relativeVolumeAvg, momentum20) {
+  if (score >= 80 && bothSidesStrong) return NARRATIVE_STATUS.DOMINANT;
+  if (score >= 65 && (etfCandidateRatio >= 0.25 || stockCandidateRatio >= 0.25)) return NARRATIVE_STATUS.EMERGING;
+  if (score >= 50) return relativeVolumeAvg < 0.9 || momentum20 < 0 ? NARRATIVE_STATUS.WEAKENING : NARRATIVE_STATUS.WATCH;
+  if (momentum20 < -3) return NARRATIVE_STATUS.DEAD;
+  return NARRATIVE_STATUS.WEAKENING;
+}
+
+function narrativeReasonConfidence(score, bothSidesStrong, etfBreadthScore, relativeVolumeAvg, directNewsCount) {
+  if (score >= 75 && bothSidesStrong && etfBreadthScore > 0 && relativeVolumeAvg >= 1 && directNewsCount >= 2) return "HIGH";
+  if (score >= 60 && (etfBreadthScore > 0 || relativeVolumeAvg >= 1)) return "MEDIUM";
+  return "LOW";
+}
+
+function pickSupportRows(rows, preferredSymbols) {
+  const preferred = new Set(preferredSymbols);
+  return [...rows]
+    .sort((a, b) => {
+      const scoreDiff = (b.moneyFlowScoreFinal ?? b.moneyFlowScore ?? 0) - (a.moneyFlowScoreFinal ?? a.moneyFlowScore ?? 0);
+      if (scoreDiff) return scoreDiff;
+      return (preferred.has(b.ticker) ? 1 : 0) - (preferred.has(a.ticker) ? 1 : 0);
+    })
+    .filter((row) => (row.moneyFlowScoreFinal ?? row.moneyFlowScore ?? 0) >= 50 || preferred.has(row.ticker))
+    .slice(0, 5);
+}
+
+function pickSymbols(preferredSymbols, supportRows) {
+  const support = new Set(supportRows.map((row) => row.ticker));
+  return preferredSymbols.filter((ticker) => support.has(ticker)).slice(0, 3);
+}
+
+function narrativeMoneyReason(name, supportEtfs, supportStocks, momentum5, momentum20, relativeVolumeAvg, etfBreadthScore, directNewsCount) {
+  const etfText = supportEtfs.slice(0, 3).map((row) => row.ticker).join(", ") || "관련 ETF";
+  const stockText = supportStocks.slice(0, 4).map((row) => row.ticker).join(", ") || "관련 종목";
+  const breadthText = etfBreadthScore > 0 ? "ETF 확산도도 이를 보조한다" : "ETF 확산도는 추가 확인이 필요하다";
+  const newsText = directNewsCount > 0 ? "직접 뉴스/이벤트가 일부 확인된다" : "뉴스 직접성은 아직 제한적이다";
+  return `${name} 관련 ${etfText}와 ${stockText}의 5일(${pct(momentum5)})·20일(${pct(momentum20)}) 흐름을 함께 본다. 평균 상대 거래량은 ${num(relativeVolumeAvg, 2)}배이고, ${breadthText}. ${newsText}.`;
+}
+
+function narrativeOneLine(name, status, supportEtfs, supportStocks, momentum5, momentum20, directNewsCount) {
+  const leaders = [...supportEtfs.slice(0, 2), ...supportStocks.slice(0, 2)].map((row) => row.ticker).join(", ") || "관련 후보";
+  const news = directNewsCount > 0 ? "직접 촉매 일부 확인" : "뉴스 직접성 제한";
+  return `${leaders} 중심으로 5일 ${pct(momentum5)}, 20일 ${pct(momentum20)} 흐름이 형성됨. ${news}.`;
+}
+
 function chooseActionCandidates(stocks, etfs) {
   const pool = [
     ...etfs,
@@ -843,6 +1092,8 @@ async function buildReport() {
   const holdings = [];
   const stocks = watchlist;
   const validEtfs = etfs.filter((etf) => MODE !== "REAL_TEST" || etf.market.dataStatus === "ok");
+  const narratives = buildNarratives(stocks, validEtfs);
+  applyNarrativeLinks([...stocks, ...etfs], narratives);
   const etfTop5 = [...validEtfs].sort(compareFinalScore).slice(0, 5);
   const stockTop5 = [...stocks].sort(compareFinalScore).slice(0, 5);
   const etfActionCandidates = validEtfs.filter((row) => [STATUS.ENTRY_CANDIDATE, STATUS.ENTRY_READY].includes(row.status)).sort(compareFinalScore).slice(0, 5);
@@ -885,6 +1136,8 @@ async function buildReport() {
     watchlist,
     holdings,
     stocks,
+    narratives,
+    topNarratives: narratives.slice(0, 3),
     themes: groupThemes(stocks, etfs),
     etfTop5,
     stockTop5,
@@ -1043,6 +1296,8 @@ function createRecommendationSnapshot(report) {
     reportDate: report.reportDate,
     generatedAt: report.generatedAt,
     stockUniverseScan: report.stockUniverseScan,
+    narratives: report.narratives.map(snapshotNarrative),
+    topNarratives: report.topNarratives.map(snapshotNarrative),
     etfActionCandidates: report.etfActionCandidates.map(snapshotItem),
     stockActionCandidates: report.stockActionCandidates.map(snapshotItem),
     actionCandidates: report.actionCandidates.map(snapshotItem),
@@ -1076,6 +1331,9 @@ function snapshotItem(row) {
     tieBreakerReason: row.tieBreakerReason,
     entryCondition: row.entryCondition,
     invalidationCondition: row.invalidationCondition,
+    linkedNarrative: row.linkedNarrative || "미분류",
+    narrativeStatus: row.narrativeStatus || "관찰",
+    narrativeScore: row.narrativeScore ?? 0,
     relatedEtfs: row.relatedEtfs?.map((etf) => etf.ticker) || [],
     closePriceAtRecommendation: row.market?.lastClose ?? null,
     recommendationDate: row.market?.dataDate || new Date().toISOString().slice(0, 10)
@@ -1219,6 +1477,8 @@ function renderMarkdown(report) {
 
 > 핵심 질문: 현재 가격에서 누가 사고 있고, 누가 앞으로 더 비싸게 사줄 수 있는가?
 
+${renderMobileSummaryMarkdown(report)}
+
 ## 0. 시장 상태
 
 - 데이터 모드: ${report.dataMode}
@@ -1234,6 +1494,8 @@ function renderMarkdown(report) {
   - API 또는 provider 상태에 따라 뉴스/ETF 확산도/스프레드 반영 범위가 달라질 수 있다.
   - 수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한한다.
   - reasonConfidence HIGH는 직접 촉매, 가격/거래량, 확산도/유동성 근거가 함께 있을 때만 사용한다.
+
+${renderNarrativesMarkdown(report)}
 
 ## 오늘 실제 행동 후보
 
@@ -1361,6 +1623,9 @@ ${renderScoreGuideMarkdown()}
 function renderActionMarkdown(row) {
   return `### ${row.rank}. [${row.ticker}] ${row.name || row.ticker}
 - 자산 유형: ${row.assetType}
+- linkedNarrative: ${row.linkedNarrative || "미분류"}
+- narrativeStatus: ${row.narrativeStatus || "관찰"}
+- narrativeScore: ${row.narrativeScore ?? 0}
 - moneyFlowScore: ${row.moneyFlowScoreFinal ?? row.moneyFlowScore}
 - finalRawScore: ${finalRawScore(row)}
 - reasonConfidence: ${row.reasonConfidence}
@@ -1373,6 +1638,78 @@ ${row.reasonConfidence === "HIGH" ? `- ${row.directCatalyst}` : ""}
 - 무효화 조건: ${row.invalidationCondition}
 - todayActionLabel: ${row.todayActionLabel}
 - 차트: ${chartMarkdown(row)}`;
+}
+
+function renderNarrativesMarkdown(report) {
+  const top = report.topNarratives || [];
+  return `## 오늘 시장을 지배하는 서사
+
+### 오늘 시장을 지배하는 서사 TOP 3
+
+${top.map((row, index) => `#### ${index + 1}. ${row.name}
+- 상태: ${row.status}
+- narrativeScore: ${row.narrativeScore}
+- reasonConfidence: ${row.reasonConfidence}
+- 근거 ETF: ${row.supportEtfs.join(", ") || "데이터 없음"}
+- 근거 개별 종목: ${row.supportStocks.join(", ") || "데이터 없음"}
+- 돈이 몰리는 이유: ${row.whyMoneyIsFlowing}
+- 다음 매수 주체: ${row.likelyNextBuyer}
+- 가장 좋은 트레이딩 수단: ${row.bestTradingVehicle}
+- 서사가 깨지는 조건: ${row.breakCondition}
+- 오늘 행동: ${row.todayAction}
+
+<details>
+<summary>상세 narrativeScore 근거 보기</summary>
+
+- rawScore: ${row.rawScore}
+- ETF 평균 moneyFlowScore: ${row.etfAvgScore}
+- 개별 종목 평균 moneyFlowScore: ${row.stockAvgScore}
+- ETF 후보 비율: ${row.etfCandidateRatio}%
+- 개별 종목 후보 비율: ${row.stockCandidateRatio}%
+- 5일 평균 수익률: ${pct(row.momentum5)}
+- 20일 평균 수익률: ${pct(row.momentum20)}
+- 평균 상대 거래량: ${num(row.relativeVolumeAvg, 2)}배
+- 52주 고점 근접 후보 비율: ${row.highProximityRatio}%
+- 뉴스 직접성 점수: ${row.newsDirectScore}
+- ETF 확산도 점수: ${row.etfBreadthScore}
+- 유동성 점수: ${row.liquidityScore}
+- 과열 리스크 차감: ${row.overheatPenalty}
+
+</details>`).join("\n\n") || "지배 서사 데이터 없음"}
+
+### 전체 narrative 요약
+
+| 서사명 | 상태 | narrativeScore | reasonConfidence | 대표 ETF | 대표 종목 | 오늘 행동 |
+| --- | --- | ---: | --- | --- | --- | --- |
+${report.narratives.map((row) => `| ${row.name} | ${row.status} | ${row.narrativeScore} | ${row.reasonConfidence} | ${row.representativeEtfs.join(", ") || "-"} | ${row.representativeStocks.join(", ") || "-"} | ${row.todayAction} |`).join("\n")}`;
+}
+
+function renderMobileSummaryMarkdown(report) {
+  return `## 모바일 요약
+
+[오늘의 데일리 트레이딩 요약]
+
+생성 성공 / 데이터 모드: ${report.dataMode}
+
+시장:
+- ${report.marketLabel}
+
+시장 지배 서사:
+${report.topNarratives.map((row, index) => `${index + 1}. ${row.name} - ${row.status} - ${row.summaryReason}`).join("\n") || "1. 데이터 없음 - 관찰 - 지배 서사 데이터 부족"}
+
+오늘 결론:
+- ${moneyDirection(report)}
+- 행동 후보는 linkedNarrative와 함께 확인한다.
+- 추격보다 진입 조건 확인 후 접근한다.
+
+오늘 실제 행동 후보:
+${report.actionCandidates.slice(0, 3).map((row, index) => `${index + 1}. ${row.ticker}(${row.assetType}) - ${row.linkedNarrative || "미분류"} - ${row.whyThisCouldTradeHigher}`).join("\n") || "1. 행동 후보 없음 - 미분류 - 조건 충족 후보 없음"}
+
+ETF 후보 TOP 5:
+${report.etfTop5.map((row, index) => `${index + 1}. ${row.ticker} - ${row.linkedNarrative || "미분류"} - ${row.todayActionLabel}`).join("\n") || "데이터 없음"}
+
+웹 리포트:
+https://yoolcool.github.io/DailyTradingThesisAgent/`;
 }
 
 function renderScoreGuideMarkdown() {
@@ -1469,6 +1806,29 @@ function addDecisionExplanations(row) {
     ...row,
     reasonConfidenceExplanation: reasonConfidenceExplanation(row),
     tieBreakerReason: tieBreakerLine(row)
+  };
+}
+
+function snapshotNarrative(row) {
+  return {
+    name: row.name,
+    status: row.status,
+    narrativeScore: row.narrativeScore,
+    rawScore: row.rawScore,
+    reasonConfidence: row.reasonConfidence,
+    supportEtfs: row.supportEtfs,
+    supportStocks: row.supportStocks,
+    representativeEtfs: row.representativeEtfs,
+    representativeStocks: row.representativeStocks,
+    whyMoneyIsFlowing: row.whyMoneyIsFlowing,
+    likelyNextBuyer: row.likelyNextBuyer,
+    bestTradingVehicle: row.bestTradingVehicle,
+    breakCondition: row.breakCondition,
+    todayAction: row.todayAction,
+    summaryReason: row.summaryReason,
+    directNewsCount: row.directNewsCount,
+    etfBreadthScore: row.etfBreadthScore,
+    relativeVolumeAvg: row.relativeVolumeAvg
   };
 }
 
@@ -1657,6 +2017,9 @@ function renderEtfMarkdown(row) {
 - ETF 세부 카테고리: ${row.etfCategory}
 - ETF 역할: ${row.etfRole}
 - 상태: ${row.status}
+- linkedNarrative: ${row.linkedNarrative || "미분류"}
+- narrativeStatus: ${row.narrativeStatus || "관찰"}
+- narrativeScore: ${row.narrativeScore ?? 0}
 - moneyFlowScore: ${row.moneyFlowScoreFinal ?? row.moneyFlowScore}
 - finalRawScore: ${finalRawScore(row)}
 - tieBreakerReason: ${row.tieBreakerReason}
@@ -1706,6 +2069,9 @@ function renderStockMarkdown(row) {
 - primaryTheme: ${row.primaryTheme || "데이터 없음"}
 - primarySector: ${row.primarySector || "데이터 없음"}
 - relatedEtfs: ${row.relatedEtfs.map((etf) => etf.ticker).join(", ") || "관련 ETF 데이터 부족"}
+- linkedNarrative: ${row.linkedNarrative || "미분류"}
+- narrativeStatus: ${row.narrativeStatus || "관찰"}
+- narrativeScore: ${row.narrativeScore ?? 0}
 - moneyFlowScore: ${row.moneyFlowScoreFinal ?? row.moneyFlowScore}
 - finalRawScore: ${finalRawScore(row)}
 - tieBreakerReason: ${row.tieBreakerReason}
@@ -1844,6 +2210,12 @@ function renderHtml(report) {
     .insight p { margin: 0; font-size: 12.5px; line-height: 1.32; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .compact-card details { margin-top: 2px; border-top: 1px solid #edf0f2; padding-top: 7px; }
     .compact-card summary { cursor: pointer; color: #172026; font-size: 13px; }
+    .narrative-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; align-items: stretch; }
+    .narrative-card { display: flex; flex-direction: column; gap: 8px; margin: 0; }
+    .narrative-card h3 { margin: 0; font-size: 16px; line-height: 1.25; }
+    .narrative-card p { margin: 0; font-size: 13px; line-height: 1.4; }
+    .narrative-card .metric-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .narrative-table { margin-top: 12px; }
     .badge { display: inline-flex; border-radius: 999px; color: #fff; padding: 4px 8px; font-size: 12px; font-weight: 800; }
     .ready { background: #047857; } .candidate { background: #2563eb; } .watch, .hold { background: #4f46e5; } .profit { background: #0f766e; } .exit { background: #c2410c; } .ban { background: #991b1b; }
     .muted { color: #5d6670; font-size: 14px; } .purpose { font-weight: 800; }
@@ -1854,7 +2226,7 @@ function renderHtml(report) {
     td.num, th.num { text-align: right; white-space: nowrap; } td.ticker { font-weight: 800; white-space: nowrap; }
     ul { padding-left: 20px; } li { margin: 4px 0; }
     @media (max-width: 1199px) and (min-width: 741px) { .action-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 740px) { main { width: min(100% - 16px, 1120px); } .grid, .action-grid, .metric-grid, .market-grid, .insight-grid { grid-template-columns: 1fr; } h1 { font-size: 22px; } section, article, .hero { padding: 12px; } table { font-size: 12px; } .compact-card .chart { height: auto; } .insight p { display: block; overflow: visible; } .card-head { grid-template-columns: 1fr; min-height: 0; } }
+    @media (max-width: 740px) { main { width: min(100% - 16px, 1120px); } .grid, .action-grid, .metric-grid, .market-grid, .insight-grid, .narrative-grid { grid-template-columns: 1fr; } h1 { font-size: 22px; } section, article, .hero { padding: 12px; } table { font-size: 12px; } .compact-card .chart { height: auto; } .insight p { display: block; overflow: visible; } .card-head { grid-template-columns: 1fr; min-height: 0; } }
   </style>
 </head>
 <body>
@@ -1868,6 +2240,7 @@ function renderHtml(report) {
       <p class="muted">보조 데이터는 연결 상태에 따라 점수 반영 범위가 달라진다.</p>
     </div>
     ${renderMarketStatusHtml(report)}
+    ${renderNarrativesHtml(report)}
     ${renderActionCandidatesHtml(report)}
     ${renderSplitConclusionHtml(report)}
     <section><h2>오늘 돈이 몰리는 테마</h2>${report.themes.slice(0, 6).map(renderThemeHtml).join("") || "<p>데이터 없음</p>"}</section>
@@ -1938,6 +2311,50 @@ function renderMarketStatusHtml(report) {
     ${tile("오늘 돈의 방향", moneyDirection(report))}
     ${tile("강한 테마 TOP 3", report.themes.slice(0, 3).map((row) => `${row.theme}(${row.avgScore.toFixed(0)})`).join(", ") || "데이터 없음")}
   </div>${htmlList(["API 또는 provider 상태에 따라 보조 데이터 반영 범위가 달라진다.", "수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한한다."])}</section>`;
+}
+
+function renderNarrativesHtml(report) {
+  return `<section data-narrative-section><h2>오늘 시장을 지배하는 서사</h2>
+    <h3>오늘 시장을 지배하는 서사 TOP 3</h3>
+    <div class="narrative-grid">${report.topNarratives.map(renderNarrativeCardHtml).join("") || "<p>지배 서사 데이터 없음</p>"}</div>
+    <h3 class="narrative-table">전체 narrative 요약</h3>
+    <div class="table-scroll">${renderNarrativeTableHtml(report.narratives)}</div>
+  </section>`;
+}
+
+function renderNarrativeCardHtml(row, index) {
+  return `<article class="narrative-card" data-narrative-card="${escapeHtml(row.name)}">
+    <h3>${index + 1}. ${escapeHtml(row.name)}</h3>
+    <div class="metric-grid">
+      ${metricChip("Status", row.status)}
+      ${metricChip("narrativeScore", row.narrativeScore)}
+      ${metricChip("Confidence", row.reasonConfidence)}
+    </div>
+    <p><strong>근거 ETF:</strong> ${escapeHtml(row.supportEtfs.join(", ") || "데이터 없음")}</p>
+    <p><strong>근거 개별 종목:</strong> ${escapeHtml(row.supportStocks.join(", ") || "데이터 없음")}</p>
+    <p><strong>돈이 몰리는 이유:</strong> ${escapeHtml(row.whyMoneyIsFlowing)}</p>
+    <p><strong>오늘 행동:</strong> ${escapeHtml(row.todayAction)}</p>
+    <details>
+      <summary><strong>서사 상세 근거 보기</strong></summary>
+      ${htmlList([
+        `<strong>다음 매수 주체</strong> ${escapeHtml(row.likelyNextBuyer)}`,
+        `<strong>가장 좋은 트레이딩 수단</strong> ${escapeHtml(row.bestTradingVehicle)}`,
+        `<strong>서사가 깨지는 조건</strong> ${escapeHtml(row.breakCondition)}`,
+        `<strong>rawScore</strong> ${escapeHtml(row.rawScore)}`,
+        `<strong>ETF 평균 moneyFlowScore</strong> ${escapeHtml(row.etfAvgScore)}`,
+        `<strong>개별 종목 평균 moneyFlowScore</strong> ${escapeHtml(row.stockAvgScore)}`,
+        `<strong>평균 상대 거래량</strong> ${escapeHtml(num(row.relativeVolumeAvg, 2))}배`,
+        `<strong>뉴스 직접성 점수</strong> ${escapeHtml(row.newsDirectScore)}`,
+        `<strong>ETF 확산도 점수</strong> ${escapeHtml(row.etfBreadthScore)}`,
+        `<strong>유동성 점수</strong> ${escapeHtml(row.liquidityScore)}`,
+        `<strong>과열 리스크 차감</strong> ${escapeHtml(row.overheatPenalty)}`
+      ])}
+    </details>
+  </article>`;
+}
+
+function renderNarrativeTableHtml(narratives) {
+  return `<table data-narrative-table><thead><tr><th>서사명</th><th>상태</th><th class="num">narrativeScore</th><th>reasonConfidence</th><th>대표 ETF</th><th>대표 종목</th><th>오늘 행동</th></tr></thead><tbody>${narratives.map((row) => `<tr><td>${escapeHtml(row.name)}</td><td>${escapeHtml(row.status)}</td><td class="num">${row.narrativeScore}</td><td>${escapeHtml(row.reasonConfidence)}</td><td>${escapeHtml(row.representativeEtfs.join(", ") || "-")}</td><td>${escapeHtml(row.representativeStocks.join(", ") || "-")}</td><td>${escapeHtml(row.todayAction)}</td></tr>`).join("")}</tbody></table>`;
 }
 
 function renderSplitConclusionHtml(report) {
@@ -2112,6 +2529,9 @@ function metricChip(label, value) {
 function coreMetricGrid(row, assetType, extraMetrics = []) {
   const metrics = [
     ["Asset", assetType],
+    ["Narrative", row.linkedNarrative || "미분류"],
+    ["Narrative Status", row.narrativeStatus || "관찰"],
+    ["Narrative Score", row.narrativeScore ?? 0],
     ["moneyFlowScore", row.moneyFlowScoreFinal ?? row.moneyFlowScore],
     ["finalRawScore", finalRawScore(row)],
     ["Confidence", row.reasonConfidence],
