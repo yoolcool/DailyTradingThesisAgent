@@ -943,10 +943,24 @@ function buildNarrative(definition, stocks, etfs) {
   const reasonConfidence = narrativeReasonConfidence(narrativeScore, bothSidesStrong, etfBreadthScore, relativeVolumeAvg, directNewsCount);
   const supportEtfs = pickSupportRows(narrativeEtfs, definition.preferredEtfs);
   const supportStocks = pickSupportRows(narrativeStocks, definition.preferredStocks);
+  const trend = buildTrendStrengthEngine(definition, narrativeEtfs, narrativeStocks, etfs, supportEtfs, supportStocks);
   return {
     name: definition.name,
     status,
     narrativeScore,
+    trendStrengthIndex: trend.trendStrengthIndex,
+    trendStateLabel: trend.trendStateLabel,
+    themeBreadthLabel: trend.themeBreadthLabel,
+    etfSyncLabel: trend.etfSyncLabel,
+    volumeStrengthLabel: trend.volumeStrengthLabel,
+    exhaustionRisk: trend.exhaustionRisk,
+    exhaustionRiskLabel: trend.exhaustionRiskLabel,
+    entryQualityScore: trend.entryQualityScore,
+    entryQualityLabel: trend.entryQualityLabel,
+    trendOneLineJudgment: trend.oneLineJudgment,
+    trendTodayApproach: trend.todayApproach,
+    trendComponents: trend.components,
+    trendDetailReasons: trend.detailReasons,
     rawScore,
     reasonConfidence,
     supportEtfs: supportEtfs.map((row) => row.ticker),
@@ -982,6 +996,15 @@ function applyNarrativeLinks(rows, narratives) {
     row.linkedNarrative = narrative.name;
     row.narrativeStatus = narrative.status;
     row.narrativeScore = narrative.narrativeScore;
+    row.trendStrengthIndex = narrative.trendStrengthIndex;
+    row.trendStateLabel = narrative.trendStateLabel;
+    row.themeBreadthLabel = narrative.themeBreadthLabel;
+    row.etfSyncLabel = narrative.etfSyncLabel;
+    row.exhaustionRisk = narrative.exhaustionRisk;
+    row.exhaustionRiskLabel = narrative.exhaustionRiskLabel;
+    row.entryQualityScore = itemEntryQualityScore(row, narrative);
+    row.entryQualityLabel = entryQualityLabel(row.entryQualityScore);
+    row.trendDecisionLine = itemTrendDecisionLine(row, narrative);
   }
 }
 
@@ -1036,6 +1059,277 @@ function narrativeReasonConfidence(score, bothSidesStrong, etfBreadthScore, rela
   return "LOW";
 }
 
+function buildTrendStrengthEngine(definition, narrativeEtfs, narrativeStocks, allEtfs, supportEtfs, supportStocks) {
+  const allRows = [...narrativeEtfs, ...narrativeStocks].filter((row) => row?.market?.dataStatus === "ok");
+  const marketScore = marketRegimeScore(allEtfs);
+  const concentration = concentrationPenalty(allRows);
+  const components = {
+    priceMomentum: trendPriceMomentumScore(allRows),
+    volumeStrength: trendVolumeScore(allRows),
+    themeBreadth: trendBreadthScore(allRows, concentration),
+    etfSync: trendEtfSyncScore(narrativeEtfs, allEtfs),
+    catalystFreshness: trendCatalystScore(allRows, narrativeEtfs, narrativeStocks),
+    marketRegime: marketScore
+  };
+  const trendStrengthIndex = rounded(clamp(
+    components.priceMomentum +
+    components.volumeStrength +
+    components.themeBreadth +
+    components.etfSync +
+    components.catalystFreshness +
+    components.marketRegime,
+    0,
+    100
+  ));
+  const exhaustionRisk = trendExhaustionRisk(allRows, narrativeEtfs, narrativeStocks, concentration);
+  const entryQualityScore = rounded(clamp(
+    trendStrengthIndex * 0.42 +
+    averageNonEmpty(allRows.map((row) => row.moneyFlowScoreFinal ?? row.moneyFlowScore)) * 0.28 +
+    components.catalystFreshness * 1.3 +
+    components.marketRegime * 1.1 -
+    exhaustionRisk * 0.45 -
+    averageNonEmpty(allRows.map((row) => liquidityRiskScore(row))) * 0.18,
+    0,
+    100
+  ));
+  const labels = {
+    themeBreadthLabel: strengthLabel(components.themeBreadth, 20),
+    etfSyncLabel: strengthLabel(components.etfSync, 15),
+    volumeStrengthLabel: strengthLabel(components.volumeStrength, 20),
+    exhaustionRiskLabel: riskLabel(exhaustionRisk),
+    entryQualityLabel: entryQualityLabel(entryQualityScore)
+  };
+  const trendStateLabel = trendStateLabelFor(trendStrengthIndex, exhaustionRisk, components.themeBreadth, components.etfSync, components.volumeStrength);
+  const oneLineJudgment = trendOneLineJudgment(definition.name, trendStrengthIndex, exhaustionRisk, components, labels);
+  const todayApproach = trendTodayApproach(definition, trendStateLabel, labels, supportEtfs, supportStocks);
+  return {
+    trendStrengthIndex,
+    trendStateLabel,
+    exhaustionRisk,
+    entryQualityScore,
+    ...labels,
+    components,
+    oneLineJudgment,
+    todayApproach,
+    detailReasons: trendDetailReasons(components, exhaustionRisk, concentration, marketScore, allRows, narrativeEtfs)
+  };
+}
+
+function trendPriceMomentumScore(rows) {
+  if (!rows.length) return 0;
+  const avg5 = averageNonEmpty(rows.map((row) => row.market?.return5dPct));
+  const avg20 = averageNonEmpty(rows.map((row) => row.market?.return20dPct));
+  const avg1 = averageNonEmpty(rows.map((row) => row.market?.dailyChangePct));
+  const highProximity = ratio(rows.filter((row) => Number(row.market?.drawdownFrom52wHighPct) >= -5).length, rows.length);
+  const aboveMaRatio = ratio(rows.filter((row) => isAboveMovingAverages(row.market)).length, rows.length);
+  const acceleration = avg5 - avg20 / 4;
+  return rounded(clamp(avg5 * 1.25, -5, 8) + clamp(avg20 * 0.45, -4, 8) + clamp(acceleration * 1.2, -3, 5) + highProximity * 4 + aboveMaRatio * 4);
+}
+
+function trendVolumeScore(rows) {
+  if (!rows.length) return 0;
+  const avgRvol = averageNonEmpty(rows.map((row) => row.market?.relativeVolume));
+  const rvolRatio = ratio(rows.filter((row) => Number(row.market?.relativeVolume) >= 1.2).length, rows.length);
+  const dollarVolumeStrength = ratio(rows.filter((row) => Number(row.market?.lastClose) * Number(row.market?.volume) >= 500000000).length, rows.length);
+  const upVolumeProxy = ratio(rows.filter((row) => Number(row.market?.dailyChangePct) > 0 && Number(row.market?.relativeVolume) >= 1).length, rows.length);
+  return rounded(clamp((avgRvol - 0.8) * 8, 0, 8) + rvolRatio * 5 + dollarVolumeStrength * 3 + upVolumeProxy * 4);
+}
+
+function trendBreadthScore(rows, concentration) {
+  if (!rows.length) return 0;
+  const up5Ratio = ratio(rows.filter((row) => Number(row.market?.return5dPct) > 0).length, rows.length);
+  const above20Ratio = ratio(rows.filter((row) => isAboveMa(row.market, 20)).length, rows.length);
+  const rvolRatio = ratio(rows.filter((row) => Number(row.market?.relativeVolume) >= 1.2).length, rows.length);
+  const highBreakoutProxy = ratio(rows.filter((row) => Number(row.market?.drawdownFrom52wHighPct) >= -2 && Number(row.market?.dailyChangePct) > 0).length, rows.length);
+  return rounded(clamp(up5Ratio * 6 + above20Ratio * 6 + rvolRatio * 4 + highBreakoutProxy * 4 - concentration, 0, 20));
+}
+
+function trendEtfSyncScore(narrativeEtfs, allEtfs) {
+  const okEtfs = narrativeEtfs.filter((row) => row?.market?.dataStatus === "ok");
+  if (!okEtfs.length) return 0;
+  const qqq = allEtfs.find((row) => row.ticker === "QQQ")?.market;
+  const spy = allEtfs.find((row) => row.ticker === "SPY")?.market;
+  const benchmark5 = averageNonEmpty([qqq?.return5dPct, spy?.return5dPct]);
+  const benchmark20 = averageNonEmpty([qqq?.return20dPct, spy?.return20dPct]);
+  const avg5 = averageNonEmpty(okEtfs.map((row) => row.market?.return5dPct));
+  const avg20 = averageNonEmpty(okEtfs.map((row) => row.market?.return20dPct));
+  const avgRvol = averageNonEmpty(okEtfs.map((row) => row.market?.relativeVolume));
+  const sameDirection = ratio(okEtfs.filter((row) => Number(row.market?.return5dPct) > 0 && Number(row.market?.return20dPct) > 0).length, okEtfs.length);
+  const relative = (avg5 - benchmark5) + (avg20 - benchmark20) * 0.4;
+  return rounded(clamp(avg5 * 0.8 + avg20 * 0.3, -3, 5) + clamp((avgRvol - 0.9) * 3, 0, 3) + sameDirection * 4 + clamp(relative, -3, 3) + 3);
+}
+
+function trendCatalystScore(rows, narrativeEtfs, narrativeStocks) {
+  if (!rows.length) return 0;
+  const highCount = rows.filter((row) => row.reasonConfidence === "HIGH" && row.directCatalyst).length;
+  const mediumCount = rows.filter((row) => row.reasonConfidence === "MEDIUM").length;
+  const etfCatalyst = narrativeEtfs.some((row) => row.reasonConfidence === "HIGH") ? 2 : 0;
+  const stockOnlyPenalty = highCount > 0 && !etfCatalyst && narrativeStocks.length <= 2 ? -2 : 0;
+  return rounded(clamp(highCount * 2.5 + mediumCount * 0.8 + etfCatalyst + stockOnlyPenalty, 0, 10));
+}
+
+function marketRegimeScore(etfs) {
+  const qqq = etfs.find((row) => row.ticker === "QQQ")?.market;
+  const spy = etfs.find((row) => row.ticker === "SPY")?.market;
+  const iwm = etfs.find((row) => row.ticker === "IWM")?.market;
+  const growth = averageNonEmpty([qqq?.return5dPct, qqq?.return20dPct, iwm?.return5dPct]);
+  const broad = averageNonEmpty([spy?.return5dPct, spy?.return20dPct]);
+  const rvol = averageNonEmpty([qqq?.relativeVolume, spy?.relativeVolume, iwm?.relativeVolume]);
+  return rounded(clamp(growth * 0.55 + broad * 0.35 + clamp((rvol - 0.8) * 2, 0, 2) + 4, 0, 10));
+}
+
+function trendExhaustionRisk(rows, narrativeEtfs, narrativeStocks, concentration) {
+  if (!rows.length) return 0;
+  const avg5 = averageNonEmpty(rows.map((row) => row.market?.return5dPct));
+  const avg20 = averageNonEmpty(rows.map((row) => row.market?.return20dPct));
+  const highProximity = ratio(rows.filter((row) => Number(row.market?.drawdownFrom52wHighPct) >= -2).length, rows.length);
+  const blowoff = ratio(rows.filter((row) => row.overheatingRisk === "높음").length, rows.length);
+  const mediumHot = ratio(rows.filter((row) => row.overheatingRisk === "중간" || row.overheatingRisk === "낮음~중간").length, rows.length);
+  const weakCloseProxy = ratio(rows.filter((row) => Number(row.market?.dailyChangePct) < 0 && Number(row.market?.relativeVolume) >= 1.5).length, rows.length);
+  const etfWeak = narrativeEtfs.length && averageNonEmpty(narrativeEtfs.map((row) => row.market?.return5dPct)) <= 0;
+  const stockStrong = narrativeStocks.length && averageNonEmpty(narrativeStocks.map((row) => row.market?.return5dPct)) >= 3;
+  const etfDivergence = etfWeak && stockStrong ? 12 : 0;
+  return rounded(clamp(
+    clamp(avg5 - 4, 0, 12) * 2.2 +
+    clamp(avg20 - 12, 0, 18) * 1.4 +
+    highProximity * 18 +
+    blowoff * 20 +
+    mediumHot * 8 +
+    weakCloseProxy * 12 +
+    concentration * 3 +
+    etfDivergence,
+    0,
+    100
+  ));
+}
+
+function concentrationPenalty(rows) {
+  const scores = rows.map((row) => Number(row.moneyFlowScoreFinal ?? row.moneyFlowScore)).filter(Number.isFinite);
+  if (scores.length <= 2) return 4;
+  const sorted = [...scores].sort((a, b) => b - a);
+  const total = scores.reduce((sum, value) => sum + Math.max(value, 0), 0);
+  if (!total) return 0;
+  const topShare = (sorted[0] + sorted[1]) / total;
+  return topShare > 0.7 ? 6 : topShare > 0.55 ? 3 : 0;
+}
+
+function itemEntryQualityScore(row, narrative) {
+  const moneyFlow = Number(row.moneyFlowScoreFinal ?? row.moneyFlowScore ?? 0);
+  const exhaustion = Number(narrative.exhaustionRisk ?? 0);
+  const liquidityRisk = liquidityRiskScore(row);
+  const gapRisk = Math.max(0, Number(row.market?.dailyChangePct || 0) - 3) * 4;
+  const spreadRisk = row.liquiditySummary?.liquidityStatus === "LOW" || row.liquiditySummary?.status === "FAILED" ? 8 : 0;
+  const invalidationBonus = row.invalidationCondition && row.invalidationCondition !== "데이터 없음" ? 4 : 0;
+  return rounded(clamp(
+    Number(narrative.trendStrengthIndex || 0) * 0.36 +
+    moneyFlow * 0.34 +
+    Number(narrative.components?.marketRegime || 0) * 1.2 +
+    Number(narrative.components?.catalystFreshness || 0) * 1.2 +
+    invalidationBonus -
+    exhaustion * 0.32 -
+    liquidityRisk * 0.25 -
+    gapRisk -
+    spreadRisk,
+    0,
+    100
+  ));
+}
+
+function liquidityRiskScore(row) {
+  const liquidityScore = Number(row.moneyFlowScoreBreakdown?.liquidityScore ?? row.liquiditySummary?.liquidityScore ?? 0);
+  const dollarVolume = Number(row.market?.lastClose) * Number(row.market?.volume);
+  const lowDollarVolume = Number.isFinite(dollarVolume) && dollarVolume < 100000000 ? 10 : 0;
+  return clamp(10 - liquidityScore + lowDollarVolume, 0, 20);
+}
+
+function isAboveMovingAverages(market) {
+  return isAboveMa(market, 5) && isAboveMa(market, 20);
+}
+
+function isAboveMa(market, period) {
+  const closes = (market?.history || []).map((bar) => Number(bar.close)).filter(Number.isFinite);
+  if (closes.length < period) return false;
+  return Number(market?.lastClose ?? closes.at(-1)) >= average(closes.slice(-period));
+}
+
+function strengthLabel(score, maxScore) {
+  const ratioValue = maxScore ? score / maxScore : 0;
+  if (ratioValue >= 0.75) return "강함";
+  if (ratioValue >= 0.5) return "보통";
+  if (ratioValue >= 0.3) return "약함";
+  return "부족";
+}
+
+function riskLabel(score) {
+  if (score >= 70) return "높음";
+  if (score >= 45) return "주의";
+  if (score >= 25) return "보통";
+  return "낮음";
+}
+
+function entryQualityLabel(score) {
+  if (score >= 75) return "좋음";
+  if (score >= 55) return "보통";
+  if (score >= 40) return "관찰";
+  return "낮음";
+}
+
+function trendStateLabelFor(tsi, exhaustion, breadth, etfSync, volume) {
+  if (tsi < 35) return "잠복";
+  if (tsi >= 75 && exhaustion >= 65) return "과열";
+  if (tsi >= 70 && breadth >= 11 && etfSync >= 8 && volume >= 10) return "확인";
+  if (tsi >= 65) return exhaustion >= 45 ? "과열" : "부상";
+  if (tsi >= 50 && volume >= 7) return "부상";
+  if (tsi >= 45 && (breadth < 7 || volume < 6)) return "약화";
+  return "잠복";
+}
+
+function trendOneLineJudgment(name, tsi, exhaustion, components, labels) {
+  if (tsi >= 70 && exhaustion >= 65) return `${name}는 돈이 강하게 몰리지만 단기 급등과 쏠림이 커서 강하지만 추격 위험 구간이다.`;
+  if (tsi >= 65 && labels.themeBreadthLabel === "강함" && labels.etfSyncLabel === "강함") return `${name}는 가격, 거래량, ETF, 확산도가 함께 확인되어 테마 단위 자금 유입이 선명하다.`;
+  if (components.marketRegime <= 3) return `${name}는 Trend Strength는 높아도 시장 위험선호가 약해 시장 환경 비우호 구간이다.`;
+  if (tsi >= 70 && labels.entryQualityLabel !== "좋음") return `${name}는 돈이 강하게 몰리지만 오늘 진입 품질은 아직 제한적이라 추격보다 조건 확인이 필요하다.`;
+  if (tsi >= 50 && labels.entryQualityLabel !== "낮음") return `${name}는 Trend Strength는 중간이지만 진입 품질이 살아나는 초기 진입 후보 성격이다.`;
+  if (labels.themeBreadthLabel === "부족") return `${name}는 테마 확산도가 낮아 아직 개별 종목 이벤트성 흐름에 가깝다.`;
+  if (labels.etfSyncLabel === "부족") return `${name}는 ETF 동조성이 약해 테마 자금 확인이 부족하다.`;
+  return `${name}는 관찰 가능한 흐름은 있으나 가격, 거래량, 확산도 중 일부 확인이 더 필요하다.`;
+}
+
+function trendTodayApproach(definition, state, labels, supportEtfs, supportStocks) {
+  const etfText = supportEtfs.slice(0, 3).map((row) => row.ticker).join("/") || definition.preferredEtfs.slice(0, 2).join("/");
+  const stockText = supportStocks.slice(0, 3).map((row) => row.ticker).join("/") || definition.preferredStocks.slice(0, 2).join("/");
+  if (state === "과열") return `${etfText}가 5일선 위에서 눌림 후 재상승하고 ${stockText}의 종가 유지가 확인될 때만 진입 품질이 좋아진다.`;
+  if (state === "확인") return `${etfText} 동반 강세가 유지되는 동안 돌파 추격보다 전일 고점 재돌파 또는 5일선 눌림 회복을 기다린다.`;
+  if (state === "부상") return `${etfText} 거래량 증가와 ${stockText} 확산을 확인하며 작은 사이즈의 초기 진입 후보로만 본다.`;
+  if (state === "약화") return `상승률이 남아 있어도 ${etfText}와 구성 종목 확산도가 회복될 때까지 신규 진입은 낮춘다.`;
+  return `${etfText}와 ${stockText}의 거래량 확산이 확인되기 전까지 관찰한다.`;
+}
+
+function trendDetailReasons(components, exhaustionRisk, concentration, marketScore, rows, narrativeEtfs) {
+  return {
+    priceMomentum: `가격 모멘텀 ${components.priceMomentum}/25. 평균 5D ${pct(averageNonEmpty(rows.map((row) => row.market?.return5dPct)))}, 20D ${pct(averageNonEmpty(rows.map((row) => row.market?.return20dPct)))}.`,
+    volumeStrength: `거래량 강도 ${components.volumeStrength}/20. 평균 RVOL ${num(averageNonEmpty(rows.map((row) => row.market?.relativeVolume)), 2)}배.`,
+    etfSync: `ETF 동조성 ${components.etfSync}/15. 관련 ETF ${narrativeEtfs.map((row) => row.ticker).join(", ") || "데이터 없음"} 흐름을 기준으로 판단.`,
+    themeBreadth: `테마 확산도 ${components.themeBreadth}/20. 상위 1~2개 쏠림 감점 ${concentration}점 반영.`,
+    catalystFreshness: `뉴스/촉매 신선도 ${components.catalystFreshness}/10. HIGH 직접 촉매 ${rows.filter((row) => row.reasonConfidence === "HIGH" && row.directCatalyst).length}개.`,
+    exhaustionRisk: `과열 리스크 ${exhaustionRisk}/100. 단기 급등, 고점 근접, ETF-개별주 괴리, 쏠림을 함께 반영.`,
+    marketRegime: `시장 환경 ${marketScore}/10. QQQ/SPY/IWM 가격 흐름 기반 위험선호 점수.`
+  };
+}
+
+function itemTrendDecisionLine(row, narrative) {
+  const trend = Number(narrative.trendStrengthIndex || 0);
+  const exhaustion = Number(narrative.exhaustionRisk || 0);
+  const entry = Number(row.entryQualityScore ?? narrative.entryQualityScore ?? 0);
+  if (trend >= 70 && exhaustion >= 65) return "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.";
+  if (trend >= 65 && entry >= 65) return "강한 테마 자금과 종목별 진입 품질이 함께 확인되어 조건 충족 시 우선 관찰한다.";
+  if (trend >= 45 && entry >= 60) return "Trend Strength는 중간이지만 Entry Quality가 좋아 초기 진입 후보로 본다.";
+  if (narrative.themeBreadthLabel === "부족") return "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.";
+  if (narrative.etfSyncLabel === "부족") return "ETF 동조성이 약해 테마 자금 확인이 부족하다.";
+  if (Number(narrative.components?.marketRegime || 0) <= 3) return "시장 위험선호가 약해 시장 환경 비우호 구간이다.";
+  return "강한 흐름과 매수 가능성을 분리해 보고, 진입 조건 확인 전까지 추격은 피한다.";
+}
+
 function pickSupportRows(rows, preferredSymbols) {
   const preferred = new Set(preferredSymbols);
   return [...rows]
@@ -1074,9 +1368,41 @@ function chooseActionCandidates(stocks, etfs) {
   ].filter((row) => [STATUS.ENTRY_READY, STATUS.ENTRY_CANDIDATE].includes(row.status) && row.reasonConfidence !== "LOW");
 
   return pool
-    .sort(compareFinalScore)
+    .sort(compareActionCandidateScore)
     .slice(0, 3)
     .map((row, index) => ({ ...row, rank: index + 1 }));
+}
+
+function compareActionCandidateScore(a, b) {
+  const scoreA = actionCandidateScore(a);
+  const scoreB = actionCandidateScore(b);
+  if (scoreA !== scoreB) return scoreB - scoreA;
+  return compareFinalScore(a, b);
+}
+
+function actionCandidateScore(row) {
+  const moneyFlow = Number(row.moneyFlowScoreFinal ?? row.moneyFlowScore ?? 0);
+  const trend = Number(row.trendStrengthIndex ?? row.narrativeScore ?? 0);
+  const entryQuality = Number(row.entryQualityScore ?? 0);
+  const exhaustion = Number(row.exhaustionRisk ?? 0);
+  const liquidityRisk = liquidityRiskScore(row);
+  const spreadRisk = row.liquiditySummary?.status === "FAILED" ? 8 : 0;
+  const invalidationBonus = row.invalidationCondition && row.invalidationCondition !== "데이터 없음" ? 4 : 0;
+  const assetBias = row.assetType === "ETF"
+    ? Number(row.moneyFlowScoreBreakdown?.etfBreadthScore || 0) * 0.8
+    : row.stockVsEtfDecision === "STOCK_PREFERRED" ? 5 : row.stockVsEtfDecision === "ETF_PREFERRED" ? -6 : 0;
+  return rounded(clamp(
+    trend * 0.28 +
+    moneyFlow * 0.32 +
+    entryQuality * 0.32 +
+    invalidationBonus +
+    assetBias -
+    exhaustion * 0.22 -
+    liquidityRisk * 0.15 -
+    spreadRisk,
+    0,
+    100
+  ));
 }
 
 async function buildReport() {
@@ -1099,10 +1425,10 @@ async function buildReport() {
   const validEtfs = etfs.filter((etf) => MODE !== "REAL_TEST" || etf.market.dataStatus === "ok");
   const narratives = buildNarratives(stocks, validEtfs);
   applyNarrativeLinks([...stocks, ...etfs], narratives);
-  const etfTop5 = [...validEtfs].sort(compareFinalScore).slice(0, 5);
-  const stockTop5 = [...stocks].sort(compareFinalScore).slice(0, 5);
-  const etfActionCandidates = validEtfs.filter((row) => [STATUS.ENTRY_CANDIDATE, STATUS.ENTRY_READY].includes(row.status)).sort(compareFinalScore).slice(0, 5);
-  const stockActionCandidates = watchlist.filter((row) => [STATUS.ENTRY_CANDIDATE, STATUS.ENTRY_READY].includes(row.status)).sort(compareFinalScore).slice(0, 5);
+  const etfTop5 = [...validEtfs].sort(compareActionCandidateScore).slice(0, 5);
+  const stockTop5 = [...stocks].sort(compareActionCandidateScore).slice(0, 5);
+  const etfActionCandidates = validEtfs.filter((row) => [STATUS.ENTRY_CANDIDATE, STATUS.ENTRY_READY].includes(row.status)).sort(compareActionCandidateScore).slice(0, 5);
+  const stockActionCandidates = watchlist.filter((row) => [STATUS.ENTRY_CANDIDATE, STATUS.ENTRY_READY].includes(row.status)).sort(compareActionCandidateScore).slice(0, 5);
   const entryCandidates = stockActionCandidates;
   const cautionRows = stocks.filter((row) => [STATUS.EXIT, STATUS.BAN].includes(row.status));
   const etfOverheat = validEtfs.filter((row) => ["높음", "중간", "낮음~중간"].includes(row.overheatingRisk)).sort((a, b) => b.moneyFlowScore - a.moneyFlowScore).slice(0, 5);
@@ -1826,6 +2152,8 @@ ${renderMobileSummaryMarkdown(report)}
 
 ${renderNarrativesMarkdown(report)}
 
+${renderTrendStrengthMarkdown(report)}
+
 ${renderRecommendationTrackingMarkdown(report)}
 
 ## 오늘 실제 행동 후보
@@ -1957,6 +2285,10 @@ function renderActionMarkdown(row) {
 - linkedNarrative: ${row.linkedNarrative || "미분류"}
 - narrativeStatus: ${row.narrativeStatus || "관찰"}
 - narrativeScore: ${row.narrativeScore ?? 0}
+- Trend Strength Index: ${row.trendStrengthIndex ?? "데이터 없음"}
+- Exhaustion Risk: ${row.exhaustionRisk ?? "데이터 없음"} (${row.exhaustionRiskLabel || "데이터 없음"})
+- Entry Quality Score: ${row.entryQualityScore ?? "데이터 없음"} (${row.entryQualityLabel || "데이터 없음"})
+- 트렌드 판단: ${row.trendDecisionLine || "데이터 없음"}
 - moneyFlowScore: ${row.moneyFlowScoreFinal ?? row.moneyFlowScore}
 - finalRawScore: ${finalRawScore(row)}
 - reasonConfidence: ${row.reasonConfidence}
@@ -2045,6 +2377,39 @@ ${tracking.items.map(renderTrackingMarkdownRow).join("\n") || "| - | - | - | 데
 </details>`;
 }
 
+function renderTrendStrengthMarkdown(report) {
+  const trends = report.topNarratives || [];
+  return `## 트렌드 강도 판단
+
+${trends.map(renderTrendStrengthCardMarkdown).join("\n\n") || "트렌드 강도 데이터 없음"}`;
+}
+
+function renderTrendStrengthCardMarkdown(row, index) {
+  return `### ${index + 1}. ${row.name}
+- Trend Strength Index: ${row.trendStrengthIndex}
+- 트렌드 상태 라벨: ${row.trendStateLabel}
+- 테마 확산도: ${row.themeBreadthLabel}
+- ETF 동조성: ${row.etfSyncLabel}
+- 거래량 강도: ${row.volumeStrengthLabel}
+- 과열 위험: ${row.exhaustionRiskLabel} (${row.exhaustionRisk})
+- 오늘 진입 품질: ${row.entryQualityLabel} (${row.entryQualityScore})
+- 한 줄 판단: ${row.trendOneLineJudgment}
+- 오늘 접근법: ${row.trendTodayApproach}
+
+<details>
+<summary>트렌드 강도 상세 근거 보기</summary>
+
+- 가격 모멘텀: ${row.trendDetailReasons?.priceMomentum || "데이터 없음"}
+- 거래량 강도: ${row.trendDetailReasons?.volumeStrength || "데이터 없음"}
+- ETF 동조성: ${row.trendDetailReasons?.etfSync || "데이터 없음"}
+- 테마 확산도: ${row.trendDetailReasons?.themeBreadth || "데이터 없음"}
+- 뉴스 촉매: ${row.trendDetailReasons?.catalystFreshness || "데이터 없음"}
+- 과열 리스크: ${row.trendDetailReasons?.exhaustionRisk || "데이터 없음"}
+- 시장 환경: ${row.trendDetailReasons?.marketRegime || "데이터 없음"}
+
+</details>`;
+}
+
 function renderTrackingMarkdownRow(row) {
   const period = row.assetType === "ETF" ? `${row.trackingStartDate}~${row.trackingEndDate}` : row.trackingSessionDate;
   const highReturn = row.assetType === "ETF" ? row.weeklyHighReturnPct : row.highReturnPct;
@@ -2069,6 +2434,9 @@ function renderMobileSummaryMarkdown(report) {
 시장 지배 서사:
 ${report.topNarratives.map((row, index) => `${index + 1}. ${row.name} - ${row.status} - ${row.summaryReason}`).join("\n") || "1. 데이터 없음 - 관찰 - 지배 서사 데이터 부족"}
 
+트렌드 강도:
+${report.topNarratives.map((row, index) => `${index + 1}. ${row.name} - TSI ${row.trendStrengthIndex} - ${row.trendStateLabel} - 진입품질 ${row.entryQualityLabel}`).join("\n") || "1. 데이터 없음 - TSI 없음 - 관찰"}
+
 오늘 결론:
 - ${moneyDirection(report)}
 - 행동 후보는 linkedNarrative와 함께 확인한다.
@@ -2085,9 +2453,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/`;
 }
 
 function renderScoreGuideMarkdown() {
-  return `## 참고: moneyFlowScore 산정 방식
+  return `## 참고: moneyFlowScore 산정 방식과 트렌드 강도
 
 moneyFlowScore는 매수 추천 점수가 아니라 현재 ETF 또는 종목으로 돈이 몰리는 정도를 추적하는 트레이딩 후보 점수다.
+Trend Strength Index는 테마 전체의 돈 몰림 강도이고, Entry Quality Score는 오늘 실제 진입 품질이다.
+강한 트렌드와 매수 가능성은 분리해서 판단한다.
 
 ### 기본 산정 요소
 - 20일 수익률: 최근 1개월 수준의 중기 추세를 반영한다.
@@ -2592,6 +2962,10 @@ function renderHtml(report) {
     .tracking-summary-card { border: 1px solid #d9dee3; border-radius: 8px; padding: 10px; background: #fff; }
     .tracking-summary-card h3 { margin: 0 0 8px; font-size: 16px; line-height: 1.3; }
     .tracking-table-scroll { overflow-x: auto; }
+    .trend-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; align-items: stretch; }
+    .trend-card { display: flex; flex-direction: column; gap: 8px; margin: 0; }
+    .trend-card h3 { margin: 0; font-size: 16px; line-height: 1.25; }
+    .trend-card p { margin: 0; font-size: 13px; line-height: 1.4; }
     .result-success { background: #047857; }
     .result-neutral { background: #64748b; }
     .result-watch { background: #7c3aed; }
@@ -2617,7 +2991,7 @@ function renderHtml(report) {
     @media (max-width: 767px) {
       html, body { max-width: 100%; overflow-x: hidden; }
       main { width: min(100% - 16px, 1120px); }
-      .grid, .action-grid, .metric-grid, .market-grid, .insight-grid, .narrative-grid, .tracking-summary-grid { grid-template-columns: 1fr; }
+      .grid, .action-grid, .metric-grid, .market-grid, .insight-grid, .narrative-grid, .tracking-summary-grid, .trend-grid { grid-template-columns: 1fr; }
       h1 { font-size: 22px; }
       section, article, .hero { padding: 12px; }
       .desktop-table, .desktop-action-full { display: none !important; }
@@ -2647,6 +3021,7 @@ function renderHtml(report) {
     </div>
     ${renderMarketStatusHtml(report)}
     ${renderNarrativesHtml(report)}
+    ${renderTrendStrengthHtml(report)}
     ${renderRecommendationTrackingHtml(report)}
     ${renderActionCandidatesHtml(report)}
     ${renderSplitConclusionHtml(report)}
@@ -2734,6 +3109,42 @@ function renderNarrativesHtml(report) {
     <h3 class="narrative-table narrative-section-table-title">전체 narrative 요약</h3>
     <div class="table-scroll desktop-table">${renderNarrativeTableHtml(report.narratives)}</div>
   </section>`;
+}
+
+function renderTrendStrengthHtml(report) {
+  return `<section data-trend-strength-section>
+    <h2>트렌드 강도 판단</h2>
+    <div class="trend-grid">${(report.topNarratives || []).map(renderTrendStrengthCardHtml).join("") || "<p>트렌드 강도 데이터 없음</p>"}</div>
+  </section>`;
+}
+
+function renderTrendStrengthCardHtml(row, index) {
+  return `<article class="trend-card" data-trend-card="${escapeHtml(row.name)}">
+    <h3>${index + 1}. ${escapeHtml(row.name)}</h3>
+    <div class="metric-grid">
+      ${metricChip("Trend Strength", row.trendStrengthIndex)}
+      ${metricChip("상태", row.trendStateLabel)}
+      ${metricChip("확산도", row.themeBreadthLabel)}
+      ${metricChip("ETF 동조성", row.etfSyncLabel)}
+      ${metricChip("거래량", row.volumeStrengthLabel)}
+      ${metricChip("과열 위험", `${row.exhaustionRiskLabel} ${row.exhaustionRisk}`)}
+      ${metricChip("진입 품질", `${row.entryQualityLabel} ${row.entryQualityScore}`)}
+    </div>
+    <p><strong>판단:</strong> ${escapeHtml(row.trendOneLineJudgment || "데이터 없음")}</p>
+    <p><strong>오늘 접근법:</strong> ${escapeHtml(row.trendTodayApproach || "데이터 없음")}</p>
+    <details>
+      <summary><strong>트렌드 강도 상세 근거 보기</strong></summary>
+      ${htmlList([
+        `<strong>가격 모멘텀</strong> ${escapeHtml(row.trendDetailReasons?.priceMomentum || "데이터 없음")}`,
+        `<strong>거래량 강도</strong> ${escapeHtml(row.trendDetailReasons?.volumeStrength || "데이터 없음")}`,
+        `<strong>ETF 동조성</strong> ${escapeHtml(row.trendDetailReasons?.etfSync || "데이터 없음")}`,
+        `<strong>테마 확산도</strong> ${escapeHtml(row.trendDetailReasons?.themeBreadth || "데이터 없음")}`,
+        `<strong>뉴스 촉매</strong> ${escapeHtml(row.trendDetailReasons?.catalystFreshness || "데이터 없음")}`,
+        `<strong>과열 리스크</strong> ${escapeHtml(row.trendDetailReasons?.exhaustionRisk || "데이터 없음")}`,
+        `<strong>시장 환경</strong> ${escapeHtml(row.trendDetailReasons?.marketRegime || "데이터 없음")}`
+      ])}
+    </details>
+  </article>`;
 }
 
 function renderRecommendationTrackingHtml(report) {
@@ -2865,9 +3276,10 @@ function renderActionCandidatesHtml(report) {
 }
 
 function renderScoreGuideHtml() {
-  return `<section><h2>참고: moneyFlowScore 산정 방식</h2>
+  return `<section><h2>참고: moneyFlowScore 산정 방식과 트렌드 강도</h2>
     <h3>score의 의미</h3>
     <p>moneyFlowScore는 매수 추천 점수가 아니라 현재 ETF 또는 종목으로 돈이 몰리는 정도를 추적하는 트레이딩 후보 점수다.</p>
+    <p>Trend Strength Index는 테마 전체의 돈 몰림 강도이고, Entry Quality Score는 오늘 실제 진입 품질이다. 강한 트렌드와 매수 가능성은 분리해서 판단한다.</p>
     <h3>계산 구조</h3>
     ${htmlList([
       "moneyFlowScore(1차) = 추세 + 단기 모멘텀 + 중기 모멘텀 + 거래량 + 신고가 근접 + 이동평균",
@@ -3085,6 +3497,9 @@ function coreMetricGrid(row, assetType, extraMetrics = []) {
     ["Narrative", row.linkedNarrative || "미분류"],
     ["Narrative Status", row.narrativeStatus || "관찰"],
     ["Narrative Score", row.narrativeScore ?? 0],
+    ["Trend Strength", row.trendStrengthIndex ?? "데이터 없음"],
+    ["Exhaustion", row.exhaustionRisk === undefined ? "데이터 없음" : `${row.exhaustionRiskLabel || ""} ${row.exhaustionRisk}`],
+    ["Entry Quality", row.entryQualityScore === undefined ? "데이터 없음" : `${row.entryQualityLabel || ""} ${row.entryQualityScore}`],
     ["moneyFlowScore", row.moneyFlowScoreFinal ?? row.moneyFlowScore],
     ["finalRawScore", finalRawScore(row)],
     ["Confidence", row.reasonConfidence],
@@ -3115,6 +3530,7 @@ function marketMetricGrid(row) {
 
 function insightGrid(row, extraItems = []) {
   const items = [
+    ["트렌드 판단", row.trendDecisionLine],
     ["왜 돈이 몰리는가", row.whyMoneyIsFlowing],
     ["다음 매수 주체", row.likelyNextBuyer],
     ["직접 촉매", row.directCatalyst || "직접 촉매 없음"],

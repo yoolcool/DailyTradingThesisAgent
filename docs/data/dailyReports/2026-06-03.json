@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-03",
-  "generatedAt": "2026년 6월 3일 수요일 오후 10:12",
+  "generatedAt": "2026년 6월 3일 수요일 오후 11:12",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -69,9 +69,9 @@
         "moneyFlowScore": 96,
         "moneyFlowScoreInitial": 96,
         "moneyFlowScoreFinal": 100,
-        "finalRawScore": 119,
+        "finalRawScore": 113,
         "todayActionLabel": "개별 종목 우선",
-        "reasonConfidence": "HIGH",
+        "reasonConfidence": "MEDIUM",
         "oneDayReturn": 4.7,
         "fiveDayReturn": 14.11,
         "twentyDayReturn": 15.62,
@@ -166,7 +166,7 @@
         "moneyFlowScoreFinal": 100,
         "finalRawScore": 107,
         "todayActionLabel": "개별 종목 우선",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": -1.69,
         "fiveDayReturn": 14.5,
         "twentyDayReturn": 63.87,
@@ -2271,15 +2271,15 @@
       "breakCondition": "IGV/CIBR 20일선 이탈, 관련 개별 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
       "todayAction": "추격보다 눌림 후 재상승 확인",
       "summaryReason": "AIQ, CIBR, PANW, CRWD 중심으로 5일 +10.18%, 20일 +30.56% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 4,
+      "directNewsCount": 5,
       "etfBreadthScore": 6,
       "relativeVolumeAvg": 1
     },
     {
       "name": "AI 인프라 재가속",
       "status": "지배",
-      "narrativeScore": 90,
-      "rawScore": 90,
+      "narrativeScore": 89,
+      "rawScore": 89,
       "reasonConfidence": "HIGH",
       "supportEtfs": [
         "DRAM",
@@ -2312,7 +2312,7 @@
       "breakCondition": "SMH/SOXX 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
       "todayAction": "추격보다 5일선 지지 후 재상승 확인",
       "summaryReason": "DRAM, SOXQ, AVGO, ARM 중심으로 5일 +9.04%, 20일 +38.03% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 3,
+      "directNewsCount": 2,
       "etfBreadthScore": 4,
       "relativeVolumeAvg": 1
     },
@@ -2418,8 +2418,8 @@
     {
       "name": "매크로 방어/헤지",
       "status": "약화",
-      "narrativeScore": 6,
-      "rawScore": 6,
+      "narrativeScore": 5,
+      "rawScore": 5,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "TLT",
@@ -2512,15 +2512,15 @@
       "breakCondition": "IGV/CIBR 20일선 이탈, 관련 개별 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
       "todayAction": "추격보다 눌림 후 재상승 확인",
       "summaryReason": "AIQ, CIBR, PANW, CRWD 중심으로 5일 +10.18%, 20일 +30.56% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 4,
+      "directNewsCount": 5,
       "etfBreadthScore": 6,
       "relativeVolumeAvg": 1
     },
     {
       "name": "AI 인프라 재가속",
       "status": "지배",
-      "narrativeScore": 90,
-      "rawScore": 90,
+      "narrativeScore": 89,
+      "rawScore": 89,
       "reasonConfidence": "HIGH",
       "supportEtfs": [
         "DRAM",
@@ -2553,7 +2553,7 @@
       "breakCondition": "SMH/SOXX 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
       "todayAction": "추격보다 5일선 지지 후 재상승 확인",
       "summaryReason": "DRAM, SOXQ, AVGO, ARM 중심으로 5일 +9.04%, 20일 +38.03% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 3,
+      "directNewsCount": 2,
       "etfBreadthScore": 4,
       "relativeVolumeAvg": 1
     },
@@ -2662,39 +2662,37 @@
       "recommendationDate": "2026-06-02"
     },
     {
-      "ticker": "DRAM",
+      "ticker": "IGV",
       "assetType": "ETF",
-      "name": "Roundhill Memory ETF",
+      "name": "iShares Expanded Tech-Software Sector ETF",
       "actionLabel": "ETF 우선",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 91,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 106,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 106 capped to displayed score 100",
-      "formulaText": "+91 + +10 + 0 + +5 + 0 + 0 + 0 = 106 -> 100",
+      "moneyFlowScore": 96,
+      "moneyFlowScoreInitial": 73,
+      "moneyFlowScoreFinal": 96,
+      "finalRawScore": 96,
+      "finalDisplayScore": 96,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+73 + +10 + +8 + +5 + 0 + 0 + 0 = 96",
       "riskPenalty": 0,
       "riskPenaltySummary": {
         "totalPenalty": 0,
         "riskLevel": "LOW",
         "items": [],
-        "watchItems": [
-          "ETF breadth data not connected"
-        ],
+        "watchItems": [],
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
-      "reasonConfidence": "MEDIUM",
-      "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-      "directCatalyst": "직접 촉매: Why 1 Little-Known ETF Is Riding the AI Chip Shortage",
-      "tieBreakerReason": "최종 원점수 106, 리스크 패널티 0, 5일 수익률 +14.97%, 상대 거래량 1.07배 순으로 정렬",
-      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Software Rallies 40% From April Lows as CrowdStrike Earnings Loom 가격/거래량, ETF 확산도, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Software Rallies 40% From April Lows as CrowdStrike Earnings Loom",
+      "tieBreakerReason": "최종 원점수 96, 리스크 패널티 0, 5일 수익률 +11.36%, 상대 거래량 1.11배 순으로 정렬",
+      "entryCondition": "20일선 위 눌림 후 재상승 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "linkedNarrative": "AI 인프라 재가속",
-      "narrativeStatus": "지배",
-      "narrativeScore": 90,
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
       "relatedEtfs": [],
-      "closePriceAtRecommendation": 69.57,
+      "closePriceAtRecommendation": 104.73,
       "recommendationDate": "2026-06-02"
     },
     {
@@ -2740,37 +2738,39 @@
       "recommendationDate": "2026-06-02"
     },
     {
-      "ticker": "IGV",
+      "ticker": "DRAM",
       "assetType": "ETF",
-      "name": "iShares Expanded Tech-Software Sector ETF",
+      "name": "Roundhill Memory ETF",
       "actionLabel": "ETF 우선",
-      "moneyFlowScore": 96,
-      "moneyFlowScoreInitial": 73,
-      "moneyFlowScoreFinal": 96,
-      "finalRawScore": 96,
-      "finalDisplayScore": 96,
-      "wasCapped": false,
-      "capReason": "cap not applied",
-      "formulaText": "+73 + +10 + +8 + +5 + 0 + 0 + 0 = 96",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 91,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 106,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 106 capped to displayed score 100",
+      "formulaText": "+91 + +10 + 0 + +5 + 0 + 0 + 0 = 106 -> 100",
       "riskPenalty": 0,
       "riskPenaltySummary": {
         "totalPenalty": 0,
         "riskLevel": "LOW",
         "items": [],
-        "watchItems": [],
+        "watchItems": [
+          "ETF breadth data not connected"
+        ],
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Software Rallies 40% From April Lows as CrowdStrike Earnings Loom 가격/거래량, ETF 확산도, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Software Rallies 40% From April Lows as CrowdStrike Earnings Loom",
-      "tieBreakerReason": "최종 원점수 96, 리스크 패널티 0, 5일 수익률 +11.36%, 상대 거래량 1.11배 순으로 정렬",
-      "entryCondition": "20일선 위 눌림 후 재상승 확인",
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "직접 촉매: Why 1 Little-Known ETF Is Riding the AI Chip Shortage",
+      "tieBreakerReason": "최종 원점수 106, 리스크 패널티 0, 5일 수익률 +14.97%, 상대 거래량 1.07배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
-      "narrativeStatus": "부상",
-      "narrativeScore": 97,
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 89,
       "relatedEtfs": [],
-      "closePriceAtRecommendation": 104.73,
+      "closePriceAtRecommendation": 69.57,
       "recommendationDate": "2026-06-02"
     }
   ],
@@ -2797,8 +2797,8 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Palo Alto Says AI Cyber Threat Is Redefining the Industry After Q3 Beat 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Palo Alto Says AI Cyber Threat Is Redefining the Industry After Q3 Beat",
+      "reasonConfidenceExplanation": "직접 촉매: Palo Alto Reverses Down On Fiscal Q3 Earnings Amid Acquisitions 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Palo Alto Reverses Down On Fiscal Q3 Earnings Amid Acquisitions",
       "tieBreakerReason": "최종 원점수 124, 리스크 패널티 0, 5일 수익률 +15.75%, 상대 거래량 2.09배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -2812,67 +2812,6 @@
         "IGV"
       ],
       "closePriceAtRecommendation": 297.18,
-      "recommendationDate": "2026-06-02"
-    },
-    {
-      "ticker": "MRVL",
-      "assetType": "STOCK",
-      "name": "Marvell Technology Inc.",
-      "actionLabel": "개별 종목 우선",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 100,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 117,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 117 capped to displayed score 100",
-      "formulaText": "+110 + +10 + 0 + +5 + +8 - 16 + 0 = 117 -> 100",
-      "riskPenalty": -16,
-      "riskPenaltySummary": {
-        "totalPenalty": -16,
-        "riskLevel": "HIGH",
-        "items": [
-          {
-            "riskType": "SHORT_TERM_OVERHEAT",
-            "label": "short-term overheat",
-            "penalty": -6,
-            "evidence": "5d return +39.63% is extended.",
-            "action": "Prefer pullback or prior high reclaim over chasing."
-          },
-          {
-            "riskType": "EXTREME_1D_MOVE",
-            "label": "extreme 1d move",
-            "penalty": -4,
-            "evidence": "1d return +32.52% is unusually strong.",
-            "action": "Confirm next-session volume retention."
-          },
-          {
-            "riskType": "NEAR_52W_HIGH_CHASE",
-            "label": "near 52w high chase",
-            "penalty": -6,
-            "evidence": "Price is close to the 52-week high with fast short-term momentum.",
-            "action": "Downgrade if breakout fails."
-          }
-        ],
-        "watchItems": [],
-        "summary": "3개 감점 리스크로 총 -16점 반영."
-      },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Marvell Stock Surges Again. Watch for This Next Big Catalyst. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Marvell Stock Surges Again. Watch for This Next Big Catalyst.",
-      "tieBreakerReason": "최종 원점수 117, 리스크 패널티 -16, 5일 수익률 +39.63%, 상대 거래량 3.22배 순으로 정렬",
-      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "linkedNarrative": "AI 인프라 재가속",
-      "narrativeStatus": "지배",
-      "narrativeScore": 90,
-      "relatedEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ",
-        "AIQ"
-      ],
-      "closePriceAtRecommendation": 290.79,
       "recommendationDate": "2026-06-02"
     },
     {
@@ -2935,9 +2874,9 @@
         "watchItems": [],
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
-      "reasonConfidence": "MEDIUM",
-      "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-      "directCatalyst": "",
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: CrowdStrike Appoints Bartley Richardson as Chief AI and Autonomous Systems Officer 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: CrowdStrike Appoints Bartley Richardson as Chief AI and Autonomous Systems Officer",
       "tieBreakerReason": "최종 원점수 107, 리스크 패널티 0, 5일 수익률 +14.50%, 상대 거래량 1.19배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -2998,9 +2937,124 @@
       ],
       "closePriceAtRecommendation": 269.13,
       "recommendationDate": "2026-06-02"
+    },
+    {
+      "ticker": "ARM",
+      "assetType": "STOCK",
+      "name": "Arm Holdings plc",
+      "actionLabel": "개별 종목 우선",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 86,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 103,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 103 capped to displayed score 100",
+      "formulaText": "+86 + +10 + 0 + +5 + +8 - 6 + 0 = 103 -> 100",
+      "riskPenalty": -6,
+      "riskPenaltySummary": {
+        "totalPenalty": -6,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "SHORT_TERM_OVERHEAT",
+            "label": "short-term overheat",
+            "penalty": -6,
+            "evidence": "5d return +25.37% is extended.",
+            "action": "Prefer pullback or prior high reclaim over chasing."
+          }
+        ],
+        "watchItems": [],
+        "summary": "1개 감점 리스크로 총 -6점 반영."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: FTC Probe Puts Arm Licensing Model And AI Growth Story Under Review 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: FTC Probe Puts Arm Licensing Model And AI Growth Story Under Review",
+      "tieBreakerReason": "최종 원점수 103, 리스크 패널티 -6, 5일 수익률 +25.37%, 상대 거래량 1.14배 순으로 정렬",
+      "entryCondition": "20일선 위 눌림 후 재상승 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 89,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 402.71,
+      "recommendationDate": "2026-06-02"
     }
   ],
   "actionCandidates": [
+    {
+      "ticker": "CIBR",
+      "assetType": "ETF",
+      "name": "First Trust NASDAQ Cybersecurity ETF",
+      "actionLabel": "ETF 우선",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 95,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 116,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 116 capped to displayed score 100",
+      "formulaText": "+95 + +10 + +8 + +3 + 0 + 0 + 0 = 116 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout 가격/거래량, ETF 확산도, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout",
+      "tieBreakerReason": "최종 원점수 116, 리스크 패널티 0, 5일 수익률 +11.65%, 상대 거래량 1.25배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 94.32,
+      "recommendationDate": "2026-06-02"
+    },
+    {
+      "ticker": "AIQ",
+      "assetType": "ETF",
+      "name": "Global X Artificial Intelligence & Technology ETF",
+      "actionLabel": "ETF 우선",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 86,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 107,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 107 capped to displayed score 100",
+      "formulaText": "+86 + +10 + +8 + +3 + 0 + 0 + 0 = 107 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: ETFs in Focus as Anthropic Eyes a Blockbuster IPO 가격/거래량, ETF 확산도, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: ETFs in Focus as Anthropic Eyes a Blockbuster IPO",
+      "tieBreakerReason": "최종 원점수 107, 리스크 패널티 0, 5일 수익률 +7.58%, 상대 거래량 1.24배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 97,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 70.14,
+      "recommendationDate": "2026-06-02"
+    },
     {
       "ticker": "PANW",
       "assetType": "STOCK",
@@ -3023,8 +3077,8 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Palo Alto Says AI Cyber Threat Is Redefining the Industry After Q3 Beat 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Palo Alto Says AI Cyber Threat Is Redefining the Industry After Q3 Beat",
+      "reasonConfidenceExplanation": "직접 촉매: Palo Alto Reverses Down On Fiscal Q3 Earnings Amid Acquisitions 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Palo Alto Reverses Down On Fiscal Q3 Earnings Amid Acquisitions",
       "tieBreakerReason": "최종 원점수 124, 리스크 패널티 0, 5일 수익률 +15.75%, 상대 거래량 2.09배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -3038,106 +3092,6 @@
         "IGV"
       ],
       "closePriceAtRecommendation": 297.18,
-      "recommendationDate": "2026-06-02"
-    },
-    {
-      "ticker": "MRVL",
-      "assetType": "STOCK",
-      "name": "Marvell Technology Inc.",
-      "actionLabel": "개별 종목 우선",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 100,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 117,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 117 capped to displayed score 100",
-      "formulaText": "+110 + +10 + 0 + +5 + +8 - 16 + 0 = 117 -> 100",
-      "riskPenalty": -16,
-      "riskPenaltySummary": {
-        "totalPenalty": -16,
-        "riskLevel": "HIGH",
-        "items": [
-          {
-            "riskType": "SHORT_TERM_OVERHEAT",
-            "label": "short-term overheat",
-            "penalty": -6,
-            "evidence": "5d return +39.63% is extended.",
-            "action": "Prefer pullback or prior high reclaim over chasing."
-          },
-          {
-            "riskType": "EXTREME_1D_MOVE",
-            "label": "extreme 1d move",
-            "penalty": -4,
-            "evidence": "1d return +32.52% is unusually strong.",
-            "action": "Confirm next-session volume retention."
-          },
-          {
-            "riskType": "NEAR_52W_HIGH_CHASE",
-            "label": "near 52w high chase",
-            "penalty": -6,
-            "evidence": "Price is close to the 52-week high with fast short-term momentum.",
-            "action": "Downgrade if breakout fails."
-          }
-        ],
-        "watchItems": [],
-        "summary": "3개 감점 리스크로 총 -16점 반영."
-      },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Marvell Stock Surges Again. Watch for This Next Big Catalyst. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Marvell Stock Surges Again. Watch for This Next Big Catalyst.",
-      "tieBreakerReason": "최종 원점수 117, 리스크 패널티 -16, 5일 수익률 +39.63%, 상대 거래량 3.22배 순으로 정렬",
-      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "linkedNarrative": "AI 인프라 재가속",
-      "narrativeStatus": "지배",
-      "narrativeScore": 90,
-      "relatedEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ",
-        "AIQ"
-      ],
-      "closePriceAtRecommendation": 290.79,
-      "recommendationDate": "2026-06-02"
-    },
-    {
-      "ticker": "FTNT",
-      "assetType": "STOCK",
-      "name": "Fortinet Inc.",
-      "actionLabel": "개별 종목 우선",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 85,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 108,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 108 capped to displayed score 100",
-      "formulaText": "+85 + +10 + 0 + +5 + +8 + 0 + 0 = 108 -> 100",
-      "riskPenalty": 0,
-      "riskPenaltySummary": {
-        "totalPenalty": 0,
-        "riskLevel": "LOW",
-        "items": [],
-        "watchItems": [],
-        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-      },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Fortinet vs. CrowdStrike: What Comparing Revenue Trends Tells Investors 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Fortinet vs. CrowdStrike: What Comparing Revenue Trends Tells Investors",
-      "tieBreakerReason": "최종 원점수 108, 리스크 패널티 0, 5일 수익률 +11.12%, 상대 거래량 1.05배 순으로 정렬",
-      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
-      "narrativeStatus": "부상",
-      "narrativeScore": 97,
-      "relatedEtfs": [
-        "HACK",
-        "CIBR",
-        "IHAK",
-        "IGV"
-      ],
-      "closePriceAtRecommendation": 148.86,
       "recommendationDate": "2026-06-02"
     }
   ],
@@ -3164,8 +3118,8 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Palo Alto Says AI Cyber Threat Is Redefining the Industry After Q3 Beat 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Palo Alto Says AI Cyber Threat Is Redefining the Industry After Q3 Beat",
+      "reasonConfidenceExplanation": "직접 촉매: Palo Alto Reverses Down On Fiscal Q3 Earnings Amid Acquisitions 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Palo Alto Reverses Down On Fiscal Q3 Earnings Amid Acquisitions",
       "tieBreakerReason": "최종 원점수 124, 리스크 패널티 0, 5일 수익률 +15.75%, 상대 거래량 2.09배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -3179,67 +3133,6 @@
         "IGV"
       ],
       "closePriceAtRecommendation": 297.18,
-      "recommendationDate": "2026-06-02"
-    },
-    {
-      "ticker": "MRVL",
-      "assetType": "STOCK",
-      "name": "Marvell Technology Inc.",
-      "actionLabel": "개별 종목 우선",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 100,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 117,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 117 capped to displayed score 100",
-      "formulaText": "+110 + +10 + 0 + +5 + +8 - 16 + 0 = 117 -> 100",
-      "riskPenalty": -16,
-      "riskPenaltySummary": {
-        "totalPenalty": -16,
-        "riskLevel": "HIGH",
-        "items": [
-          {
-            "riskType": "SHORT_TERM_OVERHEAT",
-            "label": "short-term overheat",
-            "penalty": -6,
-            "evidence": "5d return +39.63% is extended.",
-            "action": "Prefer pullback or prior high reclaim over chasing."
-          },
-          {
-            "riskType": "EXTREME_1D_MOVE",
-            "label": "extreme 1d move",
-            "penalty": -4,
-            "evidence": "1d return +32.52% is unusually strong.",
-            "action": "Confirm next-session volume retention."
-          },
-          {
-            "riskType": "NEAR_52W_HIGH_CHASE",
-            "label": "near 52w high chase",
-            "penalty": -6,
-            "evidence": "Price is close to the 52-week high with fast short-term momentum.",
-            "action": "Downgrade if breakout fails."
-          }
-        ],
-        "watchItems": [],
-        "summary": "3개 감점 리스크로 총 -16점 반영."
-      },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Marvell Stock Surges Again. Watch for This Next Big Catalyst. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Marvell Stock Surges Again. Watch for This Next Big Catalyst.",
-      "tieBreakerReason": "최종 원점수 117, 리스크 패널티 -16, 5일 수익률 +39.63%, 상대 거래량 3.22배 순으로 정렬",
-      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "linkedNarrative": "AI 인프라 재가속",
-      "narrativeStatus": "지배",
-      "narrativeScore": 90,
-      "relatedEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ",
-        "AIQ"
-      ],
-      "closePriceAtRecommendation": 290.79,
       "recommendationDate": "2026-06-02"
     },
     {
@@ -3302,9 +3195,9 @@
         "watchItems": [],
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
-      "reasonConfidence": "MEDIUM",
-      "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-      "directCatalyst": "",
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: CrowdStrike Appoints Bartley Richardson as Chief AI and Autonomous Systems Officer 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: CrowdStrike Appoints Bartley Richardson as Chief AI and Autonomous Systems Officer",
       "tieBreakerReason": "최종 원점수 107, 리스크 패널티 0, 5일 수익률 +14.50%, 상대 거래량 1.19배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -3364,6 +3257,53 @@
         "QQQ"
       ],
       "closePriceAtRecommendation": 269.13,
+      "recommendationDate": "2026-06-02"
+    },
+    {
+      "ticker": "ARM",
+      "assetType": "STOCK",
+      "name": "Arm Holdings plc",
+      "actionLabel": "개별 종목 우선",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 86,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 103,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 103 capped to displayed score 100",
+      "formulaText": "+86 + +10 + 0 + +5 + +8 - 6 + 0 = 103 -> 100",
+      "riskPenalty": -6,
+      "riskPenaltySummary": {
+        "totalPenalty": -6,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "SHORT_TERM_OVERHEAT",
+            "label": "short-term overheat",
+            "penalty": -6,
+            "evidence": "5d return +25.37% is extended.",
+            "action": "Prefer pullback or prior high reclaim over chasing."
+          }
+        ],
+        "watchItems": [],
+        "summary": "1개 감점 리스크로 총 -6점 반영."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: FTC Probe Puts Arm Licensing Model And AI Growth Story Under Review 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: FTC Probe Puts Arm Licensing Model And AI Growth Story Under Review",
+      "tieBreakerReason": "최종 원점수 103, 리스크 패널티 -6, 5일 수익률 +25.37%, 상대 거래량 1.14배 순으로 정렬",
+      "entryCondition": "20일선 위 눌림 후 재상승 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 89,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 402.71,
       "recommendationDate": "2026-06-02"
     }
   ],
@@ -3406,7 +3346,7 @@
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
       "linkedNarrative": "AI 인프라 재가속",
       "narrativeStatus": "지배",
-      "narrativeScore": 90,
+      "narrativeScore": 89,
       "relatedEtfs": [
         "SMH",
         "SOXX",
@@ -3490,8 +3430,8 @@
       "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
     },
     "reasonConfidence": "HIGH",
-    "reasonConfidenceExplanation": "직접 촉매: Palo Alto Says AI Cyber Threat Is Redefining the Industry After Q3 Beat 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-    "directCatalyst": "직접 촉매: Palo Alto Says AI Cyber Threat Is Redefining the Industry After Q3 Beat",
+    "reasonConfidenceExplanation": "직접 촉매: Palo Alto Reverses Down On Fiscal Q3 Earnings Amid Acquisitions 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+    "directCatalyst": "직접 촉매: Palo Alto Reverses Down On Fiscal Q3 Earnings Amid Acquisitions",
     "tieBreakerReason": "최종 원점수 124, 리스크 패널티 0, 5일 수익률 +15.75%, 상대 거래량 2.09배 순으로 정렬",
     "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
     "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
