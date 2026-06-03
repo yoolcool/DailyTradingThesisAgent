@@ -28,7 +28,7 @@
 오늘 실제 행동 후보:
 1. PANW(STOCK) - AI 소프트웨어/사이버보안 확산 - 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 2. MRVL(STOCK) - AI 인프라 재가속 - 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
-3. CRWD(STOCK) - AI 소프트웨어/사이버보안 확산 - 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
+3. FTNT(STOCK) - AI 소프트웨어/사이버보안 확산 - 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 
 ETF 후보 TOP 5:
 1. CIBR - AI 소프트웨어/사이버보안 확산 - ETF 우선
@@ -47,7 +47,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스: 연결됨
 - ETF 구성종목 확산도: 일부 연결
 - 스프레드/유동성: 일부 연결
-- 생성 시각: 2026년 6월 3일 수요일 오후 6:23
+- 생성 시각: 2026년 6월 3일 수요일 오후 10:12
 - 시장 상태: 위험선호
 - 오늘 돈의 방향: 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 강한 테마 TOP 3: 메모리/HBM ETF(100), AI 소프트웨어 ETF(100), 클라우드/엔터프라이즈 소프트웨어 ETF(96)
@@ -165,6 +165,38 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 매크로 방어/헤지 | 약화 | 6 | LOW | TLT, GLD, XLE | - | 위험회피가 확인될 때만 헤지성 접근 |
 | 비트코인/디지털 자산 위험선호 | 소멸 | 0 | LOW | BLOK, IBIT | MSTR | 비트코인 베타가 살아날 때만 단기 매매 |
 
+## 최근 추천 결과 트래킹
+
+개별주는 데이트레이딩 관점으로 추천 이후 첫 정규장의 장중 최고가와 종가를 추적한다. ETF는 테마/스윙 관점으로 추천 이후 1주일 동안의 최고가와 현재 종가를 추적한다.
+
+### 개별주 Top 3 추천 성과 요약
+- 최근 5개 리포트 표본: 3개
+- 장중 최고가 기준 성공률: 데이터 없음
+- 종가 기준 성공률: 데이터 없음
+- 평균 장중 최고 수익률: 데이터 없음
+- 평균 종가 수익률: 데이터 없음
+
+### ETF 추천 성과 요약
+- 최근 5개 리포트 표본: 3개
+- 1주 최고가 기준 성공률: 데이터 없음
+- 현재 종가 기준 성공률: 0.00%
+- 평균 1주 최고 수익률: 데이터 없음
+- 평균 현재 수익률: 0.00%
+
+<details>
+<summary>최근 추천 결과 상세 테이블 펼치기</summary>
+
+| 추천일 | 유형 | 순위 | 티커 | 기준가 | 추적 기간 | 상태 | High 수익률 | Close 수익률 | 결과 | 코멘트 |
+| --- | --- | ---: | --- | ---: | --- | --- | ---: | ---: | --- | --- |
+| 2026-06-03 | STOCK | 3 | FTNT | $148.86 | 2026-06-03 | pending | 데이터 없음 | 데이터 없음 | 추적 대기 | 아직 추적 거래일 데이터가 완성되지 않음 |
+| 2026-06-03 | STOCK | 2 | MRVL | $290.79 | 2026-06-03 | pending | 데이터 없음 | 데이터 없음 | 추적 대기 | 아직 추적 거래일 데이터가 완성되지 않음 |
+| 2026-06-03 | STOCK | 1 | PANW | $297.18 | 2026-06-03 | pending | 데이터 없음 | 데이터 없음 | 추적 대기 | 아직 추적 거래일 데이터가 완성되지 않음 |
+| 2026-06-03 | ETF | 3 | DRAM | $69.57 | 2026-06-03~2026-06-10 | in_progress | 데이터 없음 | 0.00% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 (일봉 high 미확보 시 close 기준 보조) |
+| 2026-06-03 | ETF | 2 | AIQ | $70.14 | 2026-06-03~2026-06-10 | in_progress | 데이터 없음 | 0.00% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 (일봉 high 미확보 시 close 기준 보조) |
+| 2026-06-03 | ETF | 1 | CIBR | $94.32 | 2026-06-03~2026-06-10 | in_progress | 데이터 없음 | 0.00% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 (일봉 high 미확보 시 close 기준 보조) |
+
+</details>
+
 ## 오늘 실제 행동 후보
 
 ### 1. [PANW] Palo Alto Networks Inc.
@@ -175,10 +207,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - moneyFlowScore: 100
 - finalRawScore: 124
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Palo Alto Networks Inc (PANW) Q3 2026 Earnings Call Highlights: Record Growth in Next ... 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- reasonConfidenceExplanation: 직접 촉매: Palo Alto Says AI Cyber Threat Is Redefining the Industry After Q3 Beat 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
 - tieBreakerReason: 최종 원점수 124, 리스크 패널티 0, 5일 수익률 +15.75%, 상대 거래량 2.09배 순으로 정렬
-- 직접 촉매: Palo Alto Networks Inc (PANW) Q3 2026 Earnings Call Highlights: Record Growth in Next ...
-- 왜 돈이 몰리는가: 20일 +61.02%, 5일 +15.75%, 상대 거래량 2.09배로 가격과 거래량이 함께 개선. 뉴스: Palo Alto Networks Inc (PANW) Q3 2026 Earnings Call Highlights: Record Growth in Next ... / 유동성: LIQUID
+- 직접 촉매: Palo Alto Says AI Cyber Threat Is Redefining the Industry After Q3 Beat
+- 왜 돈이 몰리는가: 20일 +61.02%, 5일 +15.75%, 상대 거래량 2.09배로 가격과 거래량이 함께 개선. 뉴스: Stock Market Today: Dow Falls Amid Latest Trump Comments On Iran Nukes; AI Stock Marvell Soars (Live Coverage) / 유동성: LIQUID
 - 누가 더 비싸게 사줄 수 있는지: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
@@ -191,35 +223,35 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - narrativeStatus: 지배
 - narrativeScore: 90
 - moneyFlowScore: 100
-- finalRawScore: 115
+- finalRawScore: 117
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Gary Black Says Broadcom, Marvell Are 'Big Winners' As Focus Shifts To Custom AI Chips As Nvidia CEO Jensen Huang Touts 'Next Trillion-Dollar Company' 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- tieBreakerReason: 최종 원점수 115, 리스크 패널티 -16, 5일 수익률 +39.63%, 상대 거래량 3.22배 순으로 정렬
-- 직접 촉매: Gary Black Says Broadcom, Marvell Are 'Big Winners' As Focus Shifts To Custom AI Chips As Nvidia CEO Jensen Huang Touts 'Next Trillion-Dollar Company'
-- 왜 돈이 몰리는가: 20일 +77.68%, 5일 +39.63%, 상대 거래량 3.22배로 가격과 거래량이 함께 개선. 뉴스: Gary Black Says Broadcom, Marvell Are 'Big Winners' As Focus Shifts To Custom AI Chips As Nvidia CEO Jensen Huang Touts 'Next Trillion-Dollar Company' / 유동성: LIQUID
+- reasonConfidenceExplanation: 직접 촉매: Marvell Stock Surges Again. Watch for This Next Big Catalyst. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- tieBreakerReason: 최종 원점수 117, 리스크 패널티 -16, 5일 수익률 +39.63%, 상대 거래량 3.22배 순으로 정렬
+- 직접 촉매: Marvell Stock Surges Again. Watch for This Next Big Catalyst.
+- 왜 돈이 몰리는가: 20일 +77.68%, 5일 +39.63%, 상대 거래량 3.22배로 가격과 거래량이 함께 개선. 뉴스: Stock Market Today: Dow Falls Amid Latest Trump Comments On Iran Nukes; AI Stock Marvell Soars (Live Coverage) / 유동성: LIQUID
 - 누가 더 비싸게 사줄 수 있는지: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - todayActionLabel: 개별 종목 우선
 - 차트: ![MRVL chart](charts/MRVL.png)
 
-### 3. [CRWD] CrowdStrike Holdings Inc.
+### 3. [FTNT] Fortinet Inc.
 - 자산 유형: STOCK
 - linkedNarrative: AI 소프트웨어/사이버보안 확산
 - narrativeStatus: 부상
 - narrativeScore: 97
 - moneyFlowScore: 100
-- finalRawScore: 109
+- finalRawScore: 108
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Software Rallies 40% From April Lows as CrowdStrike Earnings Loom 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- tieBreakerReason: 최종 원점수 109, 리스크 패널티 0, 5일 수익률 +14.50%, 상대 거래량 1.19배 순으로 정렬
-- 직접 촉매: Software Rallies 40% From April Lows as CrowdStrike Earnings Loom
-- 왜 돈이 몰리는가: 20일 +63.87%, 5일 +14.50%, 상대 거래량 1.19배로 가격과 거래량이 함께 개선. 뉴스: Palo Alto Networks (PANW) Beats Q3 Earnings and Revenue Estimates / 유동성: LIQUID
+- reasonConfidenceExplanation: 직접 촉매: Fortinet vs. CrowdStrike: What Comparing Revenue Trends Tells Investors 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- tieBreakerReason: 최종 원점수 108, 리스크 패널티 0, 5일 수익률 +11.12%, 상대 거래량 1.05배 순으로 정렬
+- 직접 촉매: Fortinet vs. CrowdStrike: What Comparing Revenue Trends Tells Investors
+- 왜 돈이 몰리는가: 20일 +66.81%, 5일 +11.12%, 상대 거래량 1.05배로 가격과 거래량이 함께 개선. 뉴스: Stocks Push Higher on US Labor Market Strength and AI Spending / 유동성: LIQUID
 - 누가 더 비싸게 사줄 수 있는지: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - todayActionLabel: 개별 종목 우선
-- 차트: ![CRWD chart](charts/CRWD.png)
+- 차트: ![FTNT chart](charts/FTNT.png)
 
 ## 오늘 돈이 몰리는 테마
 
@@ -453,7 +485,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +63.81%
 - 상대 거래량: 1.07배
 - 52주 고점 대비 위치: -0.83%
-- whyMoneyIsFlowing: 20일 +63.81%, 5일 +14.97%, 상대 거래량 1.07배로 가격과 거래량이 함께 개선. 뉴스: Daily ETF Flows: DRAM Back In The Top 10 / 유동성: LIQUID
+- whyMoneyIsFlowing: 20일 +63.81%, 5일 +14.97%, 상대 거래량 1.07배로 가격과 거래량이 함께 개선. 뉴스: Why 1 Little-Known ETF Is Riding the AI Chip Shortage / 유동성: LIQUID
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
@@ -499,7 +531,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스 확인:
   - 최근 뉴스 상태: 연결됨
   - 긍정/중립/부정: 3/5/0
-  - 핵심 뉴스 요약: Daily ETF Flows: DRAM Back In The Top 10
+  - 핵심 뉴스 요약: Why 1 Little-Known ETF Is Riding the AI Chip Shortage
   - 점수 반영: +10
   - 주의: 특이사항 없음
 - ETF 구성종목 확산도:
@@ -798,7 +830,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 오늘 눌림 대기: 3
 - 오늘 관찰: 21
 - 오늘 매매 금지: 61
-- 개별 종목 진입 후보: PANW, MRVL, CRWD, FTNT, DDOG
+- 개별 종목 진입 후보: PANW, MRVL, FTNT, CRWD, DDOG
 - 개별 종목 눌림 대기: 없음
 - 개별 종목 매매 금지: 없음
 - 오늘 개별 종목 최우선 1개: PANW - 관련 ETF보다 강함 | 주식 5일 +15.75% vs ETF 평균 +9.98%, 주식 20일 +61.02% vs ETF 평균 +26.53%, 상대 거래량 2.09배 vs ETF 평균 1.30배
@@ -826,8 +858,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - tieBreakerReason: 최종 원점수 124, 리스크 패널티 0, 5일 수익률 +15.75%, 상대 거래량 2.09배 순으로 정렬
 - 과열 리스크: 낮음
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Palo Alto Networks Inc (PANW) Q3 2026 Earnings Call Highlights: Record Growth in Next ... 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Palo Alto Networks Inc (PANW) Q3 2026 Earnings Call Highlights: Record Growth in Next ...
+- reasonConfidenceExplanation: 직접 촉매: Palo Alto Says AI Cyber Threat Is Redefining the Industry After Q3 Beat 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- 직접 촉매: Palo Alto Says AI Cyber Threat Is Redefining the Industry After Q3 Beat
 - todayActionLabel: 개별 종목 우선
 - 기준일: 2026-06-02
 - 종가: $297.18
@@ -837,7 +869,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 2.09배
 - 52주 고점 대비 위치: -1.90%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +15.75% vs ETF 평균 +9.98%, 주식 20일 +61.02% vs ETF 평균 +26.53%, 상대 거래량 2.09배 vs ETF 평균 1.30배
-- whyMoneyIsFlowing: 20일 +61.02%, 5일 +15.75%, 상대 거래량 2.09배로 가격과 거래량이 함께 개선. 뉴스: Palo Alto Networks Inc (PANW) Q3 2026 Earnings Call Highlights: Record Growth in Next ... / 유동성: LIQUID
+- whyMoneyIsFlowing: 20일 +61.02%, 5일 +15.75%, 상대 거래량 2.09배로 가격과 거래량이 함께 개선. 뉴스: Stock Market Today: Dow Falls Amid Latest Trump Comments On Iran Nukes; AI Stock Marvell Soars (Live Coverage) / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: PANW가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
@@ -884,8 +916,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 연결됨
-  - 긍정/중립/부정: 7/1/0
-  - 핵심 뉴스 요약: Palo Alto Networks Inc (PANW) Q3 2026 Earnings Call Highlights: Record Growth in Next ...
+  - 긍정/중립/부정: 4/4/0
+  - 핵심 뉴스 요약: Stock Market Today: Dow Falls Amid Latest Trump Comments On Iran Nukes; AI Stock Marvell Soars (Live Coverage)
   - 점수 반영: +10
   - 주의: 특이사항 없음
 - ETF 구성종목 확산도: 관련 ETF에서 확인
@@ -912,12 +944,12 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - narrativeStatus: 지배
 - narrativeScore: 90
 - moneyFlowScore: 100
-- finalRawScore: 115
-- tieBreakerReason: 최종 원점수 115, 리스크 패널티 -16, 5일 수익률 +39.63%, 상대 거래량 3.22배 순으로 정렬
+- finalRawScore: 117
+- tieBreakerReason: 최종 원점수 117, 리스크 패널티 -16, 5일 수익률 +39.63%, 상대 거래량 3.22배 순으로 정렬
 - 과열 리스크: 높음
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Gary Black Says Broadcom, Marvell Are 'Big Winners' As Focus Shifts To Custom AI Chips As Nvidia CEO Jensen Huang Touts 'Next Trillion-Dollar Company' 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Gary Black Says Broadcom, Marvell Are 'Big Winners' As Focus Shifts To Custom AI Chips As Nvidia CEO Jensen Huang Touts 'Next Trillion-Dollar Company'
+- reasonConfidenceExplanation: 직접 촉매: Marvell Stock Surges Again. Watch for This Next Big Catalyst. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- 직접 촉매: Marvell Stock Surges Again. Watch for This Next Big Catalyst.
 - todayActionLabel: 개별 종목 우선
 - 기준일: 2026-06-02
 - 종가: $290.79
@@ -927,7 +959,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 3.22배
 - 52주 고점 대비 위치: -0.18%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +39.63% vs ETF 평균 +6.33%, 주식 20일 +77.68% vs ETF 평균 +27.20%, 상대 거래량 3.22배 vs ETF 평균 0.99배
-- whyMoneyIsFlowing: 20일 +77.68%, 5일 +39.63%, 상대 거래량 3.22배로 가격과 거래량이 함께 개선. 뉴스: Gary Black Says Broadcom, Marvell Are 'Big Winners' As Focus Shifts To Custom AI Chips As Nvidia CEO Jensen Huang Touts 'Next Trillion-Dollar Company' / 유동성: LIQUID
+- whyMoneyIsFlowing: 20일 +77.68%, 5일 +39.63%, 상대 거래량 3.22배로 가격과 거래량이 함께 개선. 뉴스: Stock Market Today: Dow Falls Amid Latest Trump Comments On Iran Nukes; AI Stock Marvell Soars (Live Coverage) / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: MRVL가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
@@ -942,10 +974,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 - moneyFlowScore(최종) 산정 근거:
   - moneyFlowScore(1차): 100
-  - 최종 원점수: 115
+  - 최종 원점수: 117
   - 최종 표시 점수: 100
-  - cap 적용: raw score 115 capped to displayed score 100
-  - 계산식: +110 + +8 + 0 + +5 + +8 - 16 + 0 = 115 -> 100
+  - cap 적용: raw score 117 capped to displayed score 100
+  - 계산식: +110 + +10 + 0 + +5 + +8 - 16 + 0 = 117 -> 100
   - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
   - 가격/거래량 1차 점수: +110
     - 추세: +30
@@ -955,11 +987,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
     - 신고가 근접: +12
     - 이동평균: +14
   - 추가 데이터 가감점:
-    - 뉴스: +8
+    - 뉴스: +10
     - 유동성: +5
   - ETF 대비 상대강도: +8
   - 리스크 패널티: -16
-  - 주요 근거: 1차 100, 최종 원점수 115, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
+  - 주요 근거: 1차 100, 최종 원점수 117, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: -16
     - 리스크 등급: HIGH
@@ -977,9 +1009,9 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 연결됨
-  - 긍정/중립/부정: 2/6/0
-  - 핵심 뉴스 요약: Gary Black Says Broadcom, Marvell Are 'Big Winners' As Focus Shifts To Custom AI Chips As Nvidia CEO Jensen Huang Touts 'Next Trillion-Dollar Company'
-  - 점수 반영: +8
+  - 긍정/중립/부정: 3/5/0
+  - 핵심 뉴스 요약: Stock Market Today: Dow Falls Amid Latest Trump Comments On Iran Nukes; AI Stock Marvell Soars (Live Coverage)
+  - 점수 반영: +10
   - 주의: 특이사항 없음
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 유동성/스프레드:
@@ -992,96 +1024,6 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidence 근거: 가격/거래량, 뉴스, 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-06-02 | 종가 $290.79 | 1일 +32.52% | 5일 +39.63% | 20일 +77.68% | 상대 거래량 3.22배 | 52주 고점 대비 -0.18% | 데이터 소스: yfinance
-
-</details>
-
-### [CRWD] CrowdStrike Holdings Inc.
-- 자산 유형: STOCK
-- 상태: 진입 가능
-- primaryTheme: 사이버보안
-- primarySector: Technology
-- relatedEtfs: HACK, CIBR, IHAK, IGV
-- linkedNarrative: AI 소프트웨어/사이버보안 확산
-- narrativeStatus: 부상
-- narrativeScore: 97
-- moneyFlowScore: 100
-- finalRawScore: 109
-- tieBreakerReason: 최종 원점수 109, 리스크 패널티 0, 5일 수익률 +14.50%, 상대 거래량 1.19배 순으로 정렬
-- 과열 리스크: 낮음
-- reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Software Rallies 40% From April Lows as CrowdStrike Earnings Loom 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Software Rallies 40% From April Lows as CrowdStrike Earnings Loom
-- todayActionLabel: 개별 종목 우선
-- 기준일: 2026-06-02
-- 종가: $768.95
-- 1일 수익률: -1.69%
-- 5일 수익률: +14.50%
-- 20일 수익률: +63.87%
-- 상대 거래량: 1.19배
-- 52주 고점 대비 위치: -2.13%
-- 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +14.50% vs ETF 평균 +9.98%, 주식 20일 +63.87% vs ETF 평균 +26.53%, 상대 거래량 1.19배 vs ETF 평균 1.30배
-- whyMoneyIsFlowing: 20일 +63.87%, 5일 +14.50%, 상대 거래량 1.19배로 가격과 거래량이 함께 개선. 뉴스: Palo Alto Networks (PANW) Beats Q3 Earnings and Revenue Estimates / 유동성: LIQUID
-- likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
-- whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
-- 왜 ETF가 아니라 이 종목인가: CRWD가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
-- ETF가 더 나은 경우: CRWD가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
-- 진입 조건: 전일 고점 돌파와 5일선 유지 확인
-- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-- 차트: ![CRWD chart](charts/CRWD.png)
-
-#### 상세 근거
-<details>
-<summary>CRWD 상세 근거 펼치기</summary>
-
-- moneyFlowScore(최종) 산정 근거:
-  - moneyFlowScore(1차): 86
-  - 최종 원점수: 109
-  - 최종 표시 점수: 100
-  - cap 적용: raw score 109 capped to displayed score 100
-  - 계산식: +86 + +10 + 0 + +5 + +8 + 0 + 0 = 109 -> 100
-  - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
-  - 가격/거래량 1차 점수: +86
-    - 추세: +24
-    - 단기 모멘텀: +10
-    - 중기 모멘텀: +16
-    - 거래량: +10
-    - 신고가 근접: +12
-    - 이동평균: +14
-  - 추가 데이터 가감점:
-    - 뉴스: +10
-    - 유동성: +5
-  - ETF 대비 상대강도: +8
-  - 리스크 패널티: 0
-  - 주요 근거: 1차 86, 최종 원점수 109, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 52주 고점 근처. 주의: 큰 감점 제한적.
-  - 리스크 패널티 산정 근거:
-    - 총 리스크 패널티: 0
-    - 리스크 등급: LOW
-    - 감점된 리스크: 없음
-    - 관찰 리스크: 주요 관찰 리스크 없음
-    - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
-- 데이터 사용 현황:
-  - 가격/거래량: 사용
-  - 뉴스: 사용
-  - ETF 확산도: 관련 ETF에서 확인
-  - 유동성/스프레드: 사용
-  - 관련 ETF 상대강도: 사용
-- 뉴스 확인:
-  - 최근 뉴스 상태: 연결됨
-  - 긍정/중립/부정: 5/3/0
-  - 핵심 뉴스 요약: Palo Alto Networks (PANW) Beats Q3 Earnings and Revenue Estimates
-  - 점수 반영: +10
-  - 주의: 특이사항 없음
-- ETF 구성종목 확산도: 관련 ETF에서 확인
-- 유동성/스프레드:
-  - 데이터 상태: 일부 연결
-  - 스프레드: bid/ask 데이터 없음
-  - 거래대금: $3,188,143,595
-  - 평균 거래대금: $2,677,583,864
-  - 유동성 판단: LIQUID
-  - 매매 영향: 거래대금 기준 실제 매매 가능성에 큰 문제 없음
-- reasonConfidence 근거: 가격/거래량, 뉴스, 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
-- 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
-- 기준일 2026-06-02 | 종가 $768.95 | 1일 -1.69% | 5일 +14.50% | 20일 +63.87% | 상대 거래량 1.19배 | 52주 고점 대비 -2.13% | 데이터 소스: yfinance
 
 </details>
 
@@ -1175,6 +1117,96 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 </details>
 
+### [CRWD] CrowdStrike Holdings Inc.
+- 자산 유형: STOCK
+- 상태: 진입 가능
+- primaryTheme: 사이버보안
+- primarySector: Technology
+- relatedEtfs: HACK, CIBR, IHAK, IGV
+- linkedNarrative: AI 소프트웨어/사이버보안 확산
+- narrativeStatus: 부상
+- narrativeScore: 97
+- moneyFlowScore: 100
+- finalRawScore: 107
+- tieBreakerReason: 최종 원점수 107, 리스크 패널티 0, 5일 수익률 +14.50%, 상대 거래량 1.19배 순으로 정렬
+- 과열 리스크: 낮음
+- reasonConfidence: MEDIUM
+- reasonConfidenceExplanation: 직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
+
+- todayActionLabel: 개별 종목 우선
+- 기준일: 2026-06-02
+- 종가: $768.95
+- 1일 수익률: -1.69%
+- 5일 수익률: +14.50%
+- 20일 수익률: +63.87%
+- 상대 거래량: 1.19배
+- 52주 고점 대비 위치: -2.13%
+- 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +14.50% vs ETF 평균 +9.98%, 주식 20일 +63.87% vs ETF 평균 +26.53%, 상대 거래량 1.19배 vs ETF 평균 1.30배
+- whyMoneyIsFlowing: 20일 +63.87%, 5일 +14.50%, 상대 거래량 1.19배로 가격과 거래량이 함께 개선. 뉴스: Palo Alto Earnings Just Proved AI Skeptics Wrong About Cybersecurity / 유동성: LIQUID
+- likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
+- whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
+- 왜 ETF가 아니라 이 종목인가: CRWD가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
+- ETF가 더 나은 경우: CRWD가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
+- 진입 조건: 전일 고점 돌파와 5일선 유지 확인
+- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+- 차트: ![CRWD chart](charts/CRWD.png)
+
+#### 상세 근거
+<details>
+<summary>CRWD 상세 근거 펼치기</summary>
+
+- moneyFlowScore(최종) 산정 근거:
+  - moneyFlowScore(1차): 86
+  - 최종 원점수: 107
+  - 최종 표시 점수: 100
+  - cap 적용: raw score 107 capped to displayed score 100
+  - 계산식: +86 + +8 + 0 + +5 + +8 + 0 + 0 = 107 -> 100
+  - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
+  - 가격/거래량 1차 점수: +86
+    - 추세: +24
+    - 단기 모멘텀: +10
+    - 중기 모멘텀: +16
+    - 거래량: +10
+    - 신고가 근접: +12
+    - 이동평균: +14
+  - 추가 데이터 가감점:
+    - 뉴스: +8
+    - 유동성: +5
+  - ETF 대비 상대강도: +8
+  - 리스크 패널티: 0
+  - 주요 근거: 1차 86, 최종 원점수 107, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 52주 고점 근처. 주의: 큰 감점 제한적.
+  - 리스크 패널티 산정 근거:
+    - 총 리스크 패널티: 0
+    - 리스크 등급: LOW
+    - 감점된 리스크: 없음
+    - 관찰 리스크: 주요 관찰 리스크 없음
+    - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
+- 데이터 사용 현황:
+  - 가격/거래량: 사용
+  - 뉴스: 사용
+  - ETF 확산도: 관련 ETF에서 확인
+  - 유동성/스프레드: 사용
+  - 관련 ETF 상대강도: 사용
+- 뉴스 확인:
+  - 최근 뉴스 상태: 연결됨
+  - 긍정/중립/부정: 2/6/0
+  - 핵심 뉴스 요약: Palo Alto Earnings Just Proved AI Skeptics Wrong About Cybersecurity
+  - 점수 반영: +8
+  - 주의: 특이사항 없음
+- ETF 구성종목 확산도: 관련 ETF에서 확인
+- 유동성/스프레드:
+  - 데이터 상태: 일부 연결
+  - 스프레드: bid/ask 데이터 없음
+  - 거래대금: $3,188,143,595
+  - 평균 거래대금: $2,677,583,864
+  - 유동성 판단: LIQUID
+  - 매매 영향: 거래대금 기준 실제 매매 가능성에 큰 문제 없음
+- reasonConfidence 근거: 가격/거래량, 뉴스, 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
+- 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
+- 기준일 2026-06-02 | 종가 $768.95 | 1일 -1.69% | 5일 +14.50% | 20일 +63.87% | 상대 거래량 1.19배 | 52주 고점 대비 -2.13% | 데이터 소스: yfinance
+
+</details>
+
 ### [DDOG] Datadog Inc.
 - 자산 유형: STOCK
 - 상태: 진입 가능
@@ -1200,7 +1232,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 1.20배
 - 52주 고점 대비 위치: -3.44%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +20.34% vs ETF 평균 +7.04%, 주식 20일 +83.47% vs ETF 평균 +17.38%, 상대 거래량 1.20배 vs ETF 평균 1.04배
-- whyMoneyIsFlowing: 20일 +83.47%, 5일 +20.34%, 상대 거래량 1.20배로 가격과 거래량이 함께 개선. 뉴스: Stocks Push Higher on US Labor Market Strength and AI Spending / 유동성: LIQUID
+- whyMoneyIsFlowing: 20일 +83.47%, 5일 +20.34%, 상대 거래량 1.20배로 가격과 거래량이 함께 개선. 뉴스: Stock Indexes Post New Record Highs Amid AI Enthusiasm / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: DDOG가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
@@ -1249,7 +1281,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스 확인:
   - 최근 뉴스 상태: 연결됨
   - 긍정/중립/부정: 4/4/0
-  - 핵심 뉴스 요약: Stocks Push Higher on US Labor Market Strength and AI Spending
+  - 핵심 뉴스 요약: Stock Indexes Post New Record Highs Amid AI Enthusiasm
   - 점수 반영: +10
   - 주의: 특이사항 없음
 - ETF 구성종목 확산도: 관련 ETF에서 확인
@@ -1298,20 +1330,6 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 오늘 판단 근거: MRVL는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +39.63% vs ETF 평균 +6.33%, 주식 20일 +77.68% vs ETF 평균 +27.20%, 상대 거래량 3.22배 vs ETF 평균 0.99배
 - 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 
-#### [CRWD] CrowdStrike Holdings Inc.
-- 전일 추천일: 2026-06-02
-- 전일 actionLabel: 개별 종목 우선
-- 전일 moneyFlowScore: 100
-- 전일 종가 또는 추천 기준가: $768.95
-- 오늘 종가: $768.95
-- 추천 이후 수익률: 0.00%
-- 진입 조건 충족 여부: 충족 또는 유지
-- 무효화 조건 발생 여부: 미발생
-- 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 유지
-- 오늘 판단 근거: CRWD는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +14.50% vs ETF 평균 +9.98%, 주식 20일 +63.87% vs ETF 평균 +26.53%, 상대 거래량 1.19배 vs ETF 평균 1.30배
-- 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-
 #### [FTNT] Fortinet Inc.
 - 전일 추천일: 2026-06-02
 - 전일 actionLabel: 개별 종목 우선
@@ -1324,6 +1342,20 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 관련 ETF 대비 상대강도 유지 여부: 유지
 - 오늘 상태: 유지
 - 오늘 판단 근거: FTNT는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +11.12% vs ETF 평균 +9.98%, 주식 20일 +66.81% vs ETF 평균 +26.53%, 상대 거래량 1.05배 vs ETF 평균 1.30배
+- 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+
+#### [CRWD] CrowdStrike Holdings Inc.
+- 전일 추천일: 2026-06-02
+- 전일 actionLabel: 개별 종목 우선
+- 전일 moneyFlowScore: 100
+- 전일 종가 또는 추천 기준가: $768.95
+- 오늘 종가: $768.95
+- 추천 이후 수익률: 0.00%
+- 진입 조건 충족 여부: 충족 또는 유지
+- 무효화 조건 발생 여부: 미발생
+- 관련 ETF 대비 상대강도 유지 여부: 유지
+- 오늘 상태: 유지
+- 오늘 판단 근거: CRWD는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +14.50% vs ETF 평균 +9.98%, 주식 20일 +63.87% vs ETF 평균 +26.53%, 상대 거래량 1.19배 vs ETF 평균 1.30배
 - 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 
 #### [DDOG] Datadog Inc.
@@ -1398,17 +1430,17 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 순위 | 티커 | 이름 | moneyFlowScore(1차) | 최종 표시 점수 | 최종 원점수 | 점수 구간 | 오늘 판단 | 신뢰도 | 1일 | 5일 | 20일 | 상대 거래량 | 관련 ETF |
 |---:|---|---|---:|---:|---:|---|---|---|---:|---:|---:|---:|---|
-| 1 | MRVL | Marvell Technology Inc. | 100 | 100 | 115 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +32.52% | +39.63% | +77.68% | 3.22 | SMH, SOXX, SOXQ, AIQ |
+| 1 | MRVL | Marvell Technology Inc. | 100 | 100 | 117 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +32.52% | +39.63% | +77.68% | 3.22 | SMH, SOXX, SOXQ, AIQ |
 | 2 | PANW | Palo Alto Networks Inc. | 100 | 100 | 124 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | -1.10% | +15.75% | +61.02% | 2.09 | HACK, CIBR, IHAK, IGV |
 | 3 | AVGO | Broadcom Inc. | 96 | 100 | 119 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +4.70% | +14.11% | +15.62% | 1.74 | SMH, SOXX, SOXQ, AIQ |
 | 4 | AMAT | Applied Materials Inc. | 95 | 100 | 114 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +6.96% | +7.73% | +25.21% | 1.29 | SMH, SOXX, SOXQ, AIQ |
 | 5 | DDOG | Datadog Inc. | 88 | 100 | 105 | 강한 자금 유입 후보 | 개별 종목 우선 | MEDIUM | -3.01% | +20.34% | +83.47% | 1.20 | IGV, AIQ, QQQ |
 | 6 | ARM | Arm Holdings plc | 86 | 100 | 103 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | -1.50% | +25.37% | +98.13% | 1.14 | SMH, SOXX, SOXQ, AIQ |
-| 7 | CRWD | CrowdStrike Holdings Inc. | 86 | 100 | 109 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | -1.69% | +14.50% | +63.87% | 1.19 | HACK, CIBR, IHAK, IGV |
+| 7 | CRWD | CrowdStrike Holdings Inc. | 86 | 100 | 107 | 강한 자금 유입 후보 | 개별 종목 우선 | MEDIUM | -1.69% | +14.50% | +63.87% | 1.19 | HACK, CIBR, IHAK, IGV |
 | 8 | FTNT | Fortinet Inc. | 85 | 100 | 108 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +1.17% | +11.12% | +66.81% | 1.05 | HACK, CIBR, IHAK, IGV |
 | 9 | CDNS | Cadence Design Systems Inc. | 84 | 100 | 107 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +0.54% | +9.07% | +19.14% | 1.39 | IGV, AIQ, QQQ |
 | 10 | ODFL | Old Dominion Freight Line Inc. | 74 | 86 | 86 | 관심 후보 | 개별 종목 우선 | HIGH | +0.24% | +5.76% | +19.20% | 1.03 | QQQ |
-| 11 | MU | Micron Technology Inc. | 73 | 84 | 84 | 관심 후보 | 개별 종목 우선 | LOW | +2.76% | +18.78% | +84.60% | 0.84 | DRAM, SMH, SOXX, SOXQ |
+| 11 | MU | Micron Technology Inc. | 73 | 86 | 86 | 관심 후보 | 개별 종목 우선 | LOW | +2.76% | +18.78% | +84.60% | 0.84 | DRAM, SMH, SOXX, SOXQ |
 | 12 | CSCO | Cisco Systems Inc. | 67 | 79 | 79 | 관심 후보 | 돌파 확인 후 관찰 | LOW | +5.50% | +8.17% | +38.18% | 0.90 | QQQ |
 | 13 | KLAC | KLA Corporation | 67 | 86 | 86 | 관심 후보 | 돌파 확인 후 관찰 | HIGH | +5.42% | +1.68% | +19.37% | 1.04 | SMH, SOXX, SOXQ, AIQ |
 | 14 | STX | Seagate Technology Holdings plc | 63 | 79 | 79 | 관찰 후보 | 개별 종목 우선 | LOW | +0.58% | +9.56% | +25.47% | 0.66 | QQQ |
@@ -1424,17 +1456,17 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 순위 | 티커 | 이름 | moneyFlowScore(1차) | 최종 표시 점수 | 최종 원점수 | 점수 구간 | 오늘 판단 | 신뢰도 | 1일 | 5일 | 20일 | 상대 거래량 | 관련 ETF |
 |---:|---|---|---:|---:|---:|---|---|---|---:|---:|---:|---:|---|
-| 1 | MRVL | Marvell Technology Inc. | 100 | 100 | 115 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +32.52% | +39.63% | +77.68% | 3.22 | SMH, SOXX, SOXQ, AIQ |
+| 1 | MRVL | Marvell Technology Inc. | 100 | 100 | 117 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +32.52% | +39.63% | +77.68% | 3.22 | SMH, SOXX, SOXQ, AIQ |
 | 2 | PANW | Palo Alto Networks Inc. | 100 | 100 | 124 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | -1.10% | +15.75% | +61.02% | 2.09 | HACK, CIBR, IHAK, IGV |
 | 3 | AVGO | Broadcom Inc. | 96 | 100 | 119 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +4.70% | +14.11% | +15.62% | 1.74 | SMH, SOXX, SOXQ, AIQ |
 | 4 | AMAT | Applied Materials Inc. | 95 | 100 | 114 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +6.96% | +7.73% | +25.21% | 1.29 | SMH, SOXX, SOXQ, AIQ |
 | 5 | DDOG | Datadog Inc. | 88 | 100 | 105 | 강한 자금 유입 후보 | 개별 종목 우선 | MEDIUM | -3.01% | +20.34% | +83.47% | 1.20 | IGV, AIQ, QQQ |
 | 6 | ARM | Arm Holdings plc | 86 | 100 | 103 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | -1.50% | +25.37% | +98.13% | 1.14 | SMH, SOXX, SOXQ, AIQ |
-| 7 | CRWD | CrowdStrike Holdings Inc. | 86 | 100 | 109 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | -1.69% | +14.50% | +63.87% | 1.19 | HACK, CIBR, IHAK, IGV |
+| 7 | CRWD | CrowdStrike Holdings Inc. | 86 | 100 | 107 | 강한 자금 유입 후보 | 개별 종목 우선 | MEDIUM | -1.69% | +14.50% | +63.87% | 1.19 | HACK, CIBR, IHAK, IGV |
 | 8 | FTNT | Fortinet Inc. | 85 | 100 | 108 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +1.17% | +11.12% | +66.81% | 1.05 | HACK, CIBR, IHAK, IGV |
 | 9 | CDNS | Cadence Design Systems Inc. | 84 | 100 | 107 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +0.54% | +9.07% | +19.14% | 1.39 | IGV, AIQ, QQQ |
 | 10 | ODFL | Old Dominion Freight Line Inc. | 74 | 86 | 86 | 관심 후보 | 개별 종목 우선 | HIGH | +0.24% | +5.76% | +19.20% | 1.03 | QQQ |
-| 11 | MU | Micron Technology Inc. | 73 | 84 | 84 | 관심 후보 | 개별 종목 우선 | LOW | +2.76% | +18.78% | +84.60% | 0.84 | DRAM, SMH, SOXX, SOXQ |
+| 11 | MU | Micron Technology Inc. | 73 | 86 | 86 | 관심 후보 | 개별 종목 우선 | LOW | +2.76% | +18.78% | +84.60% | 0.84 | DRAM, SMH, SOXX, SOXQ |
 | 12 | CSCO | Cisco Systems Inc. | 67 | 79 | 79 | 관심 후보 | 돌파 확인 후 관찰 | LOW | +5.50% | +8.17% | +38.18% | 0.90 | QQQ |
 | 13 | KLAC | KLA Corporation | 67 | 86 | 86 | 관심 후보 | 돌파 확인 후 관찰 | HIGH | +5.42% | +1.68% | +19.37% | 1.04 | SMH, SOXX, SOXQ, AIQ |
 | 14 | STX | Seagate Technology Holdings plc | 63 | 79 | 79 | 관찰 후보 | 개별 종목 우선 | LOW | +0.58% | +9.56% | +25.47% | 0.66 | QQQ |
@@ -1535,7 +1567,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 티커 | 카테고리 | moneyFlowScore | 상태 | reasonConfidence | 주요 이유 |
 | --- | --- | ---: | --- | --- | --- |
-| DRAM | 메모리/HBM ETF | 100 | 진입 가능 | MEDIUM | 20일 +63.81%, 5일 +14.97%, 상대 거래량 1.07배로 가격과 거래량이 함께 개선. 뉴스: Daily ETF Flows: DRAM Back In The Top 10 / 유동성: LIQUID |
+| DRAM | 메모리/HBM ETF | 100 | 진입 가능 | MEDIUM | 20일 +63.81%, 5일 +14.97%, 상대 거래량 1.07배로 가격과 거래량이 함께 개선. 뉴스: Why 1 Little-Known ETF Is Riding the AI Chip Shortage / 유동성: LIQUID |
 | SMH | AI 반도체 ETF | 78 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.78배라 신규 자금 유입 강도는 약함. 뉴스: Beyond the AI Boom: 3 Forgotten Sectors to Buy Amid Historic Market Disconnect / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
 | SOXX | AI 반도체 ETF | 79 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.85배라 신규 자금 유입 강도는 약함. 뉴스: NVDA Stock Alert: What to Know as Nvidia Debuts New Chips for PCs / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
 | SOXQ | AI 반도체 ETF | 100 | 관찰 | HIGH | 20일 +30.27%, 5일 +6.63%, 상대 거래량 1.08배로 가격과 거래량이 함께 개선. 뉴스: Your Portfolio Isn’t Invested in the Right Kind of AI Unless You Hold This ETF / ETF 확산도: BROAD_ADVANCE / 유동성: ACCEPTABLE |
@@ -1565,8 +1597,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | IPO | IPO/신규상장 ETF | 78 | 진입 가능 | MEDIUM | 20일 +14.68%, 5일 +7.01%, 상대 거래량 1.65배로 가격과 거래량이 함께 개선. 뉴스: Bill Ackman’s Pershing Square to Raise $5 Billion from IPO |
 | KWEB | 중국 인터넷 ETF | 35 | 관찰 | MEDIUM | 20일 -0.91%, 5일 +3.93%, 상대 거래량 1.05배로 가격과 거래량이 함께 개선. 유동성: LIQUID |
 | MAGS | 메가캡 플랫폼 ETF | 28 | 매매 금지 | LOW | 20일 +3.29%, 5일 -0.66%, 상대 거래량 1.06배로 가격과 거래량이 함께 개선. 뉴스: Magnificent Seven Post Best Earnings In Nearly 5 Years. Sign Of A Bubble? / 유동성: ACCEPTABLE |
-| QQQ | 시장 기준 ETF | 57 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: Dot-Com Bubble Deja Vu? 'Big Short' Michael Burry's Chart Shows AI Chip Rally Is Within 7% Of 2000 Peak / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
-| SPY | 시장 기준 ETF | 50 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: How to Hedge Against a Market Drop—and Get Paid for the Privilege / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
+| QQQ | 시장 기준 ETF | 57 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: Stock Market Today: Dow Falls Amid Latest Trump Comments On Iran Nukes; AI Stock Marvell Soars (Live Coverage) / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
+| SPY | 시장 기준 ETF | 50 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: Stock Market Today: Dow Falls Amid Latest Trump Comments On Iran Nukes; AI Stock Marvell Soars (Live Coverage) / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
 | IWM | 시장 기준 ETF | 38 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: Exchange-Traded Funds, Equity Futures Lower Pre-Bell Tuesday as Traders Assess AI Momentum / 유동성: LIQUID |
 | TLT | 채권 ETF | 15 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.74배라 신규 자금 유입 강도는 약함. 유동성: LIQUID |
 | GLD | 금 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.65배라 신규 자금 유입 강도는 약함. 뉴스: Exchange-Traded Funds, Equity Futures Lower Pre-Bell Tuesday as Traders Assess AI Momentum / 유동성: LIQUID |

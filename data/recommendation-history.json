@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-03T13:05:52.566Z",
+  "updatedAt": "2026-06-03T13:12:52.147Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
     {
       "reportDate": "2026-06-03",
       "reportGeneratedAt": "2026-06-03T13:04:40.716Z",
-      "reportGeneratedAtET": "2026-06-03 09:05:52 ET",
+      "reportGeneratedAtET": "2026-06-03 09:12:52 ET",
       "ticker": "FTNT",
       "assetType": "STOCK",
       "rank": 3,
@@ -29,7 +29,7 @@
     {
       "reportDate": "2026-06-03",
       "reportGeneratedAt": "2026-06-03T13:04:40.716Z",
-      "reportGeneratedAtET": "2026-06-03 09:05:52 ET",
+      "reportGeneratedAtET": "2026-06-03 09:12:52 ET",
       "ticker": "MRVL",
       "assetType": "STOCK",
       "rank": 2,
@@ -52,7 +52,7 @@
     {
       "reportDate": "2026-06-03",
       "reportGeneratedAt": "2026-06-03T13:04:40.716Z",
-      "reportGeneratedAtET": "2026-06-03 09:05:52 ET",
+      "reportGeneratedAtET": "2026-06-03 09:12:52 ET",
       "ticker": "PANW",
       "assetType": "STOCK",
       "rank": 1,
@@ -75,7 +75,7 @@
     {
       "reportDate": "2026-06-03",
       "reportGeneratedAt": "2026-06-03T13:04:40.716Z",
-      "reportGeneratedAtET": "2026-06-03 09:05:52 ET",
+      "reportGeneratedAtET": "2026-06-03 09:12:52 ET",
       "ticker": "DRAM",
       "assetType": "ETF",
       "rank": 3,
@@ -99,7 +99,7 @@
     {
       "reportDate": "2026-06-03",
       "reportGeneratedAt": "2026-06-03T13:04:40.716Z",
-      "reportGeneratedAtET": "2026-06-03 09:05:52 ET",
+      "reportGeneratedAtET": "2026-06-03 09:12:52 ET",
       "ticker": "AIQ",
       "assetType": "ETF",
       "rank": 2,
@@ -123,7 +123,7 @@
     {
       "reportDate": "2026-06-03",
       "reportGeneratedAt": "2026-06-03T13:04:40.716Z",
-      "reportGeneratedAtET": "2026-06-03 09:05:52 ET",
+      "reportGeneratedAtET": "2026-06-03 09:12:52 ET",
       "ticker": "CIBR",
       "assetType": "ETF",
       "rank": 1,
