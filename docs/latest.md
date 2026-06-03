@@ -47,7 +47,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스: 연결됨
 - ETF 구성종목 확산도: 일부 연결
 - 스프레드/유동성: 일부 연결
-- 생성 시각: 2026년 6월 3일 수요일 오후 4:20
+- 생성 시각: 2026년 6월 3일 수요일 오후 6:23
 - 시장 상태: 위험선호
 - 오늘 돈의 방향: 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 강한 테마 TOP 3: 메모리/HBM ETF(100), AI 소프트웨어 ETF(100), 클라우드/엔터프라이즈 소프트웨어 ETF(96)
@@ -884,7 +884,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 연결됨
-  - 긍정/중립/부정: 8/0/0
+  - 긍정/중립/부정: 7/1/0
   - 핵심 뉴스 요약: Palo Alto Networks Inc (PANW) Q3 2026 Earnings Call Highlights: Record Growth in Next ...
   - 점수 반영: +10
   - 주의: 특이사항 없음
@@ -1067,7 +1067,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 연결됨
-  - 긍정/중립/부정: 6/2/0
+  - 긍정/중립/부정: 5/3/0
   - 핵심 뉴스 요약: Palo Alto Networks (PANW) Beats Q3 Earnings and Revenue Estimates
   - 점수 반영: +10
   - 주의: 특이사항 없음
@@ -1200,7 +1200,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 1.20배
 - 52주 고점 대비 위치: -3.44%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +20.34% vs ETF 평균 +7.04%, 주식 20일 +83.47% vs ETF 평균 +17.38%, 상대 거래량 1.20배 vs ETF 평균 1.04배
-- whyMoneyIsFlowing: 20일 +83.47%, 5일 +20.34%, 상대 거래량 1.20배로 가격과 거래량이 함께 개선. 뉴스: Stock Indexes Post New Record Highs Amid AI Enthusiasm / 유동성: LIQUID
+- whyMoneyIsFlowing: 20일 +83.47%, 5일 +20.34%, 상대 거래량 1.20배로 가격과 거래량이 함께 개선. 뉴스: Stocks Push Higher on US Labor Market Strength and AI Spending / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: DDOG가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
@@ -1249,7 +1249,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스 확인:
   - 최근 뉴스 상태: 연결됨
   - 긍정/중립/부정: 4/4/0
-  - 핵심 뉴스 요약: Stock Indexes Post New Record Highs Amid AI Enthusiasm
+  - 핵심 뉴스 요약: Stocks Push Higher on US Labor Market Strength and AI Spending
   - 점수 반영: +10
   - 주의: 특이사항 없음
 - ETF 구성종목 확산도: 관련 ETF에서 확인
@@ -1408,7 +1408,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 8 | FTNT | Fortinet Inc. | 85 | 100 | 108 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +1.17% | +11.12% | +66.81% | 1.05 | HACK, CIBR, IHAK, IGV |
 | 9 | CDNS | Cadence Design Systems Inc. | 84 | 100 | 107 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +0.54% | +9.07% | +19.14% | 1.39 | IGV, AIQ, QQQ |
 | 10 | ODFL | Old Dominion Freight Line Inc. | 74 | 86 | 86 | 관심 후보 | 개별 종목 우선 | HIGH | +0.24% | +5.76% | +19.20% | 1.03 | QQQ |
-| 11 | MU | Micron Technology Inc. | 73 | 86 | 86 | 관심 후보 | 개별 종목 우선 | LOW | +2.76% | +18.78% | +84.60% | 0.84 | DRAM, SMH, SOXX, SOXQ |
+| 11 | MU | Micron Technology Inc. | 73 | 84 | 84 | 관심 후보 | 개별 종목 우선 | LOW | +2.76% | +18.78% | +84.60% | 0.84 | DRAM, SMH, SOXX, SOXQ |
 | 12 | CSCO | Cisco Systems Inc. | 67 | 79 | 79 | 관심 후보 | 돌파 확인 후 관찰 | LOW | +5.50% | +8.17% | +38.18% | 0.90 | QQQ |
 | 13 | KLAC | KLA Corporation | 67 | 86 | 86 | 관심 후보 | 돌파 확인 후 관찰 | HIGH | +5.42% | +1.68% | +19.37% | 1.04 | SMH, SOXX, SOXQ, AIQ |
 | 14 | STX | Seagate Technology Holdings plc | 63 | 79 | 79 | 관찰 후보 | 개별 종목 우선 | LOW | +0.58% | +9.56% | +25.47% | 0.66 | QQQ |
@@ -1434,7 +1434,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 8 | FTNT | Fortinet Inc. | 85 | 100 | 108 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +1.17% | +11.12% | +66.81% | 1.05 | HACK, CIBR, IHAK, IGV |
 | 9 | CDNS | Cadence Design Systems Inc. | 84 | 100 | 107 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +0.54% | +9.07% | +19.14% | 1.39 | IGV, AIQ, QQQ |
 | 10 | ODFL | Old Dominion Freight Line Inc. | 74 | 86 | 86 | 관심 후보 | 개별 종목 우선 | HIGH | +0.24% | +5.76% | +19.20% | 1.03 | QQQ |
-| 11 | MU | Micron Technology Inc. | 73 | 86 | 86 | 관심 후보 | 개별 종목 우선 | LOW | +2.76% | +18.78% | +84.60% | 0.84 | DRAM, SMH, SOXX, SOXQ |
+| 11 | MU | Micron Technology Inc. | 73 | 84 | 84 | 관심 후보 | 개별 종목 우선 | LOW | +2.76% | +18.78% | +84.60% | 0.84 | DRAM, SMH, SOXX, SOXQ |
 | 12 | CSCO | Cisco Systems Inc. | 67 | 79 | 79 | 관심 후보 | 돌파 확인 후 관찰 | LOW | +5.50% | +8.17% | +38.18% | 0.90 | QQQ |
 | 13 | KLAC | KLA Corporation | 67 | 86 | 86 | 관심 후보 | 돌파 확인 후 관찰 | HIGH | +5.42% | +1.68% | +19.37% | 1.04 | SMH, SOXX, SOXQ, AIQ |
 | 14 | STX | Seagate Technology Holdings plc | 63 | 79 | 79 | 관찰 후보 | 개별 종목 우선 | LOW | +0.58% | +9.56% | +25.47% | 0.66 | QQQ |
@@ -1565,8 +1565,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | IPO | IPO/신규상장 ETF | 78 | 진입 가능 | MEDIUM | 20일 +14.68%, 5일 +7.01%, 상대 거래량 1.65배로 가격과 거래량이 함께 개선. 뉴스: Bill Ackman’s Pershing Square to Raise $5 Billion from IPO |
 | KWEB | 중국 인터넷 ETF | 35 | 관찰 | MEDIUM | 20일 -0.91%, 5일 +3.93%, 상대 거래량 1.05배로 가격과 거래량이 함께 개선. 유동성: LIQUID |
 | MAGS | 메가캡 플랫폼 ETF | 28 | 매매 금지 | LOW | 20일 +3.29%, 5일 -0.66%, 상대 거래량 1.06배로 가격과 거래량이 함께 개선. 뉴스: Magnificent Seven Post Best Earnings In Nearly 5 Years. Sign Of A Bubble? / 유동성: ACCEPTABLE |
-| QQQ | 시장 기준 ETF | 57 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: S&amp;P 500, Nasdaq, Dow Rise To Record Highs As Strong Tech Gains Outpower US-Iran War Uncertainty — MSFT, UBER, MRVL, HPE, MSTR Stocks In Focus / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
-| SPY | 시장 기준 ETF | 50 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: S&amp;P 500, Nasdaq, Dow Futures Ease After Another Record Close As AI Momentum Cushions Iran's Expanding Strikes: MRVL, AVGO, MSFT, PANW In Focus / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
+| QQQ | 시장 기준 ETF | 57 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: Dot-Com Bubble Deja Vu? 'Big Short' Michael Burry's Chart Shows AI Chip Rally Is Within 7% Of 2000 Peak / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
+| SPY | 시장 기준 ETF | 50 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: How to Hedge Against a Market Drop—and Get Paid for the Privilege / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
 | IWM | 시장 기준 ETF | 38 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: Exchange-Traded Funds, Equity Futures Lower Pre-Bell Tuesday as Traders Assess AI Momentum / 유동성: LIQUID |
 | TLT | 채권 ETF | 15 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.74배라 신규 자금 유입 강도는 약함. 유동성: LIQUID |
 | GLD | 금 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.65배라 신규 자금 유입 강도는 약함. 뉴스: Exchange-Traded Funds, Equity Futures Lower Pre-Bell Tuesday as Traders Assess AI Momentum / 유동성: LIQUID |

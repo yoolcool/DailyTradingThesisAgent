@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-03",
-  "generatedAt": "2026년 6월 3일 수요일 오후 4:20",
+  "generatedAt": "2026년 6월 3일 수요일 오후 6:23",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -255,8 +255,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 73,
         "moneyFlowScoreInitial": 73,
-        "moneyFlowScoreFinal": 86,
-        "finalRawScore": 86,
+        "moneyFlowScoreFinal": 84,
+        "finalRawScore": 84,
         "todayActionLabel": "개별 종목 우선",
         "reasonConfidence": "LOW",
         "oneDayReturn": 2.76,
@@ -3454,7 +3454,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Cisco Systems (CSCO) Is Up 8.2% After Record AI-Focused Quarter And New Cloud Control Platform – Has The Bull Case Changed?",
+      "directCatalyst": "직접 촉매: HSBC Upgrades Cisco Systems (CSCO) on Surging AI Infrastructure Demand",
       "tieBreakerReason": "최종 원점수 79, 리스크 패널티 -8, 5일 수익률 +8.17%, 상대 거래량 0.90배 순으로 정렬",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",

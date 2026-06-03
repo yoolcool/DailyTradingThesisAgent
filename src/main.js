@@ -2216,6 +2216,14 @@ function renderHtml(report) {
     .narrative-card p { margin: 0; font-size: 13px; line-height: 1.4; }
     .narrative-card .metric-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .narrative-table { margin-top: 12px; }
+    .mobile-card-list, .mobile-action-summary, .mobile-only { display: none; }
+    .summary-card { display: flex; flex-direction: column; gap: 8px; margin: 8px 0; }
+    .summary-card h3 { margin: 0; font-size: 16px; line-height: 1.35; }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+    .chip { display: inline-flex; align-items: center; max-width: 100%; border: 1px solid #d9dee3; border-radius: 999px; padding: 4px 8px; background: #fbfcfd; font-size: 12px; font-weight: 800; line-height: 1.2; }
+    .field-line { margin: 0; font-size: 13px; line-height: 1.45; overflow-wrap: anywhere; }
+    .ticker-list { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+    .ticker-list span { border: 1px solid #e5e7eb; border-radius: 999px; padding: 2px 6px; background: #fff; font-size: 12px; font-weight: 800; }
     .badge { display: inline-flex; border-radius: 999px; color: #fff; padding: 4px 8px; font-size: 12px; font-weight: 800; }
     .ready { background: #047857; } .candidate { background: #2563eb; } .watch, .hold { background: #4f46e5; } .profit { background: #0f766e; } .exit { background: #c2410c; } .ban { background: #991b1b; }
     .muted { color: #5d6670; font-size: 14px; } .purpose { font-weight: 800; }
@@ -2225,8 +2233,25 @@ function renderHtml(report) {
     table { width: 100%; border-collapse: collapse; font-size: 14px; } th, td { border-top: 1px solid #d9dee3; padding: 8px; text-align: left; vertical-align: top; }
     td.num, th.num { text-align: right; white-space: nowrap; } td.ticker { font-weight: 800; white-space: nowrap; }
     ul { padding-left: 20px; } li { margin: 4px 0; }
-    @media (max-width: 1199px) and (min-width: 741px) { .action-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-    @media (max-width: 740px) { main { width: min(100% - 16px, 1120px); } .grid, .action-grid, .metric-grid, .market-grid, .insight-grid, .narrative-grid { grid-template-columns: 1fr; } h1 { font-size: 22px; } section, article, .hero { padding: 12px; } table { font-size: 12px; } .compact-card .chart { height: auto; } .insight p { display: block; overflow: visible; } .card-head { grid-template-columns: 1fr; min-height: 0; } }
+    @media (max-width: 1199px) and (min-width: 768px) { .action-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 767px) {
+      html, body { max-width: 100%; overflow-x: hidden; }
+      main { width: min(100% - 16px, 1120px); }
+      .grid, .action-grid, .metric-grid, .market-grid, .insight-grid, .narrative-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 22px; }
+      section, article, .hero { padding: 12px; }
+      .desktop-table, .desktop-action-full { display: none !important; }
+      .mobile-card-list, .mobile-action-summary, .mobile-only { display: block; }
+      .summary-card, .compact-card { width: 100%; box-sizing: border-box; }
+      .compact-card .chart { height: auto; max-height: 190px; object-fit: contain; }
+      .mobile-action-summary .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .insight p { display: block; overflow: visible; }
+      .card-head { grid-template-columns: 1fr; min-height: 0; }
+      .metric-chip strong { white-space: normal; overflow-wrap: anywhere; }
+      .tile, .field-line, p, li, summary, td, th { word-break: keep-all; overflow-wrap: anywhere; }
+      .table-scroll { overflow-x: visible; }
+      .narrative-section-table-title { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -2243,6 +2268,7 @@ function renderHtml(report) {
     ${renderNarrativesHtml(report)}
     ${renderActionCandidatesHtml(report)}
     ${renderSplitConclusionHtml(report)}
+    ${renderMobileNarrativeSummarySectionHtml(report.narratives)}
     <section><h2>오늘 돈이 몰리는 테마</h2>${report.themes.slice(0, 6).map(renderThemeHtml).join("") || "<p>데이터 없음</p>"}</section>
     <section><h2>1. ETF 트레이딩 보고서</h2>
       <h3>1-1. ETF 결론</h3>
@@ -2292,7 +2318,13 @@ function renderHtml(report) {
       <h3>3-2. 내일 확인할 조건</h3>
       ${htmlList(["ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인", "개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인", "시장 상태 확인 조건: QQQ/SPY의 5일/20일 추세와 위험선호 유지 여부 확인", "데이터 보강 필요 항목: 뉴스, 스프레드, ETF 구성종목 확산도, 실제 보유 진입가"])}
     </section>
-    <section><h2>데이터 수집 상태</h2>${renderDataCollectionHtml(report)}</section>
+    <section><h2>데이터 수집 상태</h2>
+      <div class="desktop-table">${renderDataCollectionHtml(report)}</div>
+      <details class="mobile-card-list">
+        <summary><strong>데이터 사용 현황과 보조 데이터 보기</strong></summary>
+        ${renderDataCollectionHtml(report)}
+      </details>
+    </section>
     ${renderScoreGuideHtml()}
   </main>
 </body>
@@ -2317,8 +2349,8 @@ function renderNarrativesHtml(report) {
   return `<section data-narrative-section><h2>오늘 시장을 지배하는 서사</h2>
     <h3>오늘 시장을 지배하는 서사 TOP 3</h3>
     <div class="narrative-grid">${report.topNarratives.map(renderNarrativeCardHtml).join("") || "<p>지배 서사 데이터 없음</p>"}</div>
-    <h3 class="narrative-table">전체 narrative 요약</h3>
-    <div class="table-scroll">${renderNarrativeTableHtml(report.narratives)}</div>
+    <h3 class="narrative-table narrative-section-table-title">전체 narrative 요약</h3>
+    <div class="table-scroll desktop-table">${renderNarrativeTableHtml(report.narratives)}</div>
   </section>`;
 }
 
@@ -2357,6 +2389,27 @@ function renderNarrativeTableHtml(narratives) {
   return `<table data-narrative-table><thead><tr><th>서사명</th><th>상태</th><th class="num">narrativeScore</th><th>reasonConfidence</th><th>대표 ETF</th><th>대표 종목</th><th>오늘 행동</th></tr></thead><tbody>${narratives.map((row) => `<tr><td>${escapeHtml(row.name)}</td><td>${escapeHtml(row.status)}</td><td class="num">${row.narrativeScore}</td><td>${escapeHtml(row.reasonConfidence)}</td><td>${escapeHtml(row.representativeEtfs.join(", ") || "-")}</td><td>${escapeHtml(row.representativeStocks.join(", ") || "-")}</td><td>${escapeHtml(row.todayAction)}</td></tr>`).join("")}</tbody></table>`;
 }
 
+function renderNarrativeSummaryCardsHtml(narratives) {
+  return `<div class="mobile-card-list" data-mobile-narrative-cards>${narratives.map((row) => `<article class="summary-card" data-mobile-narrative-card="${escapeHtml(row.name)}">
+    <h3>${escapeHtml(row.name)}</h3>
+    <div class="chip-row">
+      ${chip(row.status)}
+      ${chip(`${row.narrativeScore}점`)}
+      ${chip(row.reasonConfidence)}
+    </div>
+    ${fieldLine("대표 ETF", tickerList(row.representativeEtfs))}
+    ${fieldLine("대표 종목", tickerList(row.representativeStocks))}
+    ${fieldLine("오늘 행동", escapeHtml(row.todayAction))}
+  </article>`).join("")}</div>`;
+}
+
+function renderMobileNarrativeSummarySectionHtml(narratives) {
+  return `<section class="mobile-only" data-mobile-narrative-summary-section>
+    <h2>전체 narrative 요약</h2>
+    ${renderNarrativeSummaryCardsHtml(narratives)}
+  </section>`;
+}
+
 function renderSplitConclusionHtml(report) {
   return `<section><h2>오늘의 분리 결론</h2><div class="grid">
     ${tile("ETF 행동 후보", report.etfActionCandidates.map((row) => row.ticker).join(", ") || "없음")}
@@ -2392,13 +2445,39 @@ function renderScoreGuideHtml() {
 function renderActionHtml(row) {
   return `<article class="compact-card" data-action-card="${escapeHtml(row.ticker)}">
     ${cardHeader(`${row.rank}. [${row.ticker}] ${row.name || row.ticker}`, row.status, row.todayActionLabel)}
-    ${chartImage(row)}
-    ${coreMetricGrid(row, row.assetType)}
-    ${marketMetricGrid(row)}
-    ${insightGrid(row)}
-    ${scoreBreakdownHtml(row)}
-    ${supplementalDetailsHtml(row)}
+    <div class="mobile-action-summary">
+      ${chartImage(row)}
+      ${mobileActionSummaryHtml(row)}
+    </div>
+    <div class="desktop-action-full">
+      ${chartImage(row)}
+      ${coreMetricGrid(row, row.assetType)}
+      ${marketMetricGrid(row)}
+      ${insightGrid(row)}
+      ${scoreBreakdownHtml(row)}
+      ${supplementalDetailsHtml(row)}
+    </div>
+    <details class="mobile-card-list">
+      <summary><strong>후보 상세 근거 보기</strong></summary>
+      ${coreMetricGrid(row, row.assetType)}
+      ${marketMetricGrid(row)}
+      ${insightGrid(row)}
+      ${scoreBreakdownHtml(row)}
+      ${supplementalDetailsHtml(row)}
+    </details>
   </article>`;
+}
+
+function mobileActionSummaryHtml(row) {
+  return `<div class="metric-grid">
+      ${metricChip("Status", row.status)}
+      ${metricChip("Narrative", row.linkedNarrative || "미분류")}
+      ${metricChip("moneyFlowScore", row.moneyFlowScoreFinal ?? row.moneyFlowScore)}
+      ${metricChip("finalRawScore", finalRawScore(row))}
+    </div>
+    ${fieldLine("왜 돈이 몰리는가", escapeHtml(row.whyMoneyIsFlowing || "데이터 없음"))}
+    ${fieldLine("진입 조건", escapeHtml(row.entryCondition || "데이터 없음"))}
+    ${fieldLine("무효화 조건", escapeHtml(row.invalidationCondition || "데이터 없음"))}`;
 }
 
 function renderEtfHtml(row) {
@@ -2471,10 +2550,15 @@ function renderStockUniverseScoreHtml(scan) {
       ${tile("moneyFlowScore(1차) 50점 미만", scan.scoreBands.low)}
     </div>
     <h4>상위 20개 요약</h4>
-    <div class="table-scroll">${stockScoreTableHtml(scan.results.slice(0, 20))}</div>
-    <details>
+    <div class="table-scroll desktop-table">${stockScoreTableHtml(scan.results.slice(0, 20))}</div>
+    ${stockScoreCardsHtml(scan.results.slice(0, 20))}
+    <details class="desktop-table">
       <summary><strong>Nasdaq-100 전체 moneyFlowScore(1차) 표 펼치기</strong></summary>
       <div class="table-scroll">${stockScoreTableHtml(scan.results)}</div>
+    </details>
+    <details class="mobile-card-list">
+      <summary><strong>Nasdaq-100 전체 moneyFlowScore(1차) 목록 펼치기</strong></summary>
+      ${stockScoreCardsHtml(scan.results)}
     </details>
     <h4>데이터 수집 실패 종목</h4>
     ${htmlList(failures.length ? failures.map((row) => `${escapeHtml(row.ticker)}: ${escapeHtml(row.failureReason || "score calculation failed")}`) : ["데이터 수집 실패 종목 없음"])}`;
@@ -2482,6 +2566,21 @@ function renderStockUniverseScoreHtml(scan) {
 
 function stockScoreTableHtml(rows) {
   return `<table data-stock-universe-table><thead><tr><th class="num">순위</th><th>티커</th><th>이름</th><th class="num">moneyFlowScore(1차)</th><th class="num">최종 표시 점수</th><th class="num">최종 원점수</th><th>점수 구간</th><th>오늘 판단</th><th>신뢰도</th><th class="num">1일</th><th class="num">5일</th><th class="num">20일</th><th class="num">상대 거래량</th><th>관련 ETF</th></tr></thead><tbody>${rows.map((row, index) => `<tr><td class="num">${index + 1}</td><td class="ticker">${escapeHtml(row.ticker)}</td><td>${escapeHtml(row.name || row.ticker)}</td><td class="num">${row.moneyFlowScoreInitial ?? row.moneyFlowScore ?? "N/A"}</td><td class="num">${row.moneyFlowScoreFinal ?? "-"}</td><td class="num">${row.finalRawScore ?? "-"}</td><td>${escapeHtml(row.scoreBandLabel || "-")}</td><td>${escapeHtml(row.todayActionLabel || "-")}</td><td>${escapeHtml(row.reasonConfidence || "-")}</td><td class="num">${escapeHtml(pctOrDash(row.oneDayReturn))}</td><td class="num">${escapeHtml(pctOrDash(row.fiveDayReturn))}</td><td class="num">${escapeHtml(pctOrDash(row.twentyDayReturn))}</td><td class="num">${row.relativeVolume === null || row.relativeVolume === undefined ? "-" : escapeHtml(num(row.relativeVolume, 2))}</td><td>${escapeHtml((row.relatedEtfs || []).join(", ") || "-")}</td></tr>`).join("")}</tbody></table>`;
+}
+
+function stockScoreCardsHtml(rows) {
+  return `<div class="mobile-card-list" data-mobile-stock-score-cards>${rows.map((row, index) => `<article class="summary-card" data-mobile-stock-score-card="${escapeHtml(row.ticker)}">
+    <h3>${index + 1}. ${escapeHtml(row.ticker)} ${escapeHtml(row.name || "")}</h3>
+    <div class="chip-row">
+      ${chip(`1차 ${row.moneyFlowScoreInitial ?? row.moneyFlowScore ?? "N/A"}`)}
+      ${chip(`최종 ${row.moneyFlowScoreFinal ?? "-"}`)}
+      ${chip(`원점수 ${finalRawScore(row)}`)}
+      ${chip(row.reasonConfidence || "-")}
+    </div>
+    ${fieldLine("오늘 판단", escapeHtml(row.todayActionLabel || "-"))}
+    ${fieldLine("수익률", escapeHtml(`1일 ${pctOrDash(row.oneDayReturn)} / 5일 ${pctOrDash(row.fiveDayReturn)} / 20일 ${pctOrDash(row.twentyDayReturn)}`))}
+    ${fieldLine("관련 ETF", tickerList(row.relatedEtfs || []))}
+  </article>`).join("")}</div>`;
 }
 
 function supplementalDetailsHtml(row) {
@@ -2524,6 +2623,20 @@ function cardHeader(title, status, subtitle) {
 function metricChip(label, value) {
   const display = value === null || value === undefined || value === "" ? "데이터 없음" : value;
   return `<div class="metric-chip"><strong>${escapeHtml(display)}</strong><span>${escapeHtml(label)}</span></div>`;
+}
+
+function chip(value) {
+  return `<span class="chip">${escapeHtml(value === null || value === undefined || value === "" ? "데이터 없음" : value)}</span>`;
+}
+
+function fieldLine(label, valueHtml) {
+  return `<p class="field-line"><strong>${escapeHtml(label)}:</strong> ${valueHtml || "-"}</p>`;
+}
+
+function tickerList(values) {
+  const items = (values || []).filter(Boolean);
+  if (!items.length) return "-";
+  return `<span class="ticker-list">${items.map((value) => `<span>${escapeHtml(value)}</span>`).join("")}</span>`;
 }
 
 function coreMetricGrid(row, assetType, extraMetrics = []) {
@@ -2645,7 +2758,17 @@ function riskPenaltyHtml(summary) {
 }
 
 function renderEtfTable(etfs) {
-  return `<table><thead><tr><th>티커</th><th>카테고리</th><th>moneyFlowScore</th><th>finalRawScore</th><th>상태</th><th>reasonConfidence</th><th>주요 이유</th></tr></thead><tbody>${etfs.map((row) => `<tr><td>${escapeHtml(row.ticker)}</td><td>${escapeHtml(row.categoryType)}</td><td>${row.moneyFlowScore}</td><td>${escapeHtml(finalRawScore(row))}</td><td>${badge(row.status)}</td><td>${escapeHtml(row.reasonConfidence)}</td><td>${escapeHtml(row.whyMoneyIsFlowing)}</td></tr>`).join("")}</tbody></table>`;
+  return `<div class="desktop-table"><table><thead><tr><th>티커</th><th>카테고리</th><th>moneyFlowScore</th><th>finalRawScore</th><th>상태</th><th>reasonConfidence</th><th>주요 이유</th></tr></thead><tbody>${etfs.map((row) => `<tr><td>${escapeHtml(row.ticker)}</td><td>${escapeHtml(row.categoryType)}</td><td>${row.moneyFlowScore}</td><td>${escapeHtml(finalRawScore(row))}</td><td>${badge(row.status)}</td><td>${escapeHtml(row.reasonConfidence)}</td><td>${escapeHtml(row.whyMoneyIsFlowing)}</td></tr>`).join("")}</tbody></table></div>
+  <div class="mobile-card-list" data-mobile-etf-summary-cards>${etfs.map((row) => `<article class="summary-card" data-mobile-etf-summary-card="${escapeHtml(row.ticker)}">
+    <h3>${escapeHtml(row.ticker)} ${escapeHtml(row.categoryType)}</h3>
+    <div class="chip-row">
+      ${chip(row.status)}
+      ${chip(`moneyFlow ${row.moneyFlowScore}`)}
+      ${chip(`원점수 ${finalRawScore(row)}`)}
+      ${chip(row.reasonConfidence)}
+    </div>
+    ${fieldLine("주요 이유", escapeHtml(row.whyMoneyIsFlowing))}
+  </article>`).join("")}</div>`;
 }
 
 function tile(label, value) {
