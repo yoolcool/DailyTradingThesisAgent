@@ -1829,15 +1829,32 @@ function renderHtml(report) {
     .action-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; align-items: start; }
     .tile { border: 1px solid #d9dee3; border-radius: 8px; padding: 9px; background: #fbfcfd; }
     .tile strong { display: block; color: #5d6670; font-size: 12px; margin-bottom: 4px; }
+    .compact-card { display: flex; flex-direction: column; gap: 7px; padding: 11px; }
+    .card-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: start; min-height: 40px; }
+    .card-head h3 { margin: 0; font-size: 16px; line-height: 1.25; }
+    .card-subtitle { color: #5d6670; font-size: 12px; font-weight: 700; margin-top: 2px; }
+    .metric-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+    .market-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+    .metric-chip { min-width: 0; border: 1px solid #d9dee3; border-radius: 6px; padding: 5px 6px; background: #fbfcfd; }
+    .metric-chip strong { display: block; color: #172026; font-size: 15px; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .metric-chip span { display: block; color: #5d6670; font-size: 10px; font-weight: 800; line-height: 1.2; margin-top: 2px; text-transform: uppercase; }
+    .insight-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+    .insight { min-width: 0; border-top: 1px solid #edf0f2; padding-top: 6px; }
+    .insight strong { display: block; color: #4b5563; font-size: 11px; margin-bottom: 3px; }
+    .insight p { margin: 0; font-size: 12.5px; line-height: 1.32; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .compact-card details { margin-top: 2px; border-top: 1px solid #edf0f2; padding-top: 7px; }
+    .compact-card summary { cursor: pointer; color: #172026; font-size: 13px; }
     .badge { display: inline-flex; border-radius: 999px; color: #fff; padding: 4px 8px; font-size: 12px; font-weight: 800; }
     .ready { background: #047857; } .candidate { background: #2563eb; } .watch, .hold { background: #4f46e5; } .profit { background: #0f766e; } .exit { background: #c2410c; } .ban { background: #991b1b; }
     .muted { color: #5d6670; font-size: 14px; } .purpose { font-weight: 800; }
     .chart { width: 100%; max-width: 520px; height: auto; border: 1px solid #e5e7eb; border-radius: 6px; background: #fff; }
+    .compact-card .chart { max-width: none; height: 120px; object-fit: contain; }
     .table-scroll { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; font-size: 14px; } th, td { border-top: 1px solid #d9dee3; padding: 8px; text-align: left; vertical-align: top; }
     td.num, th.num { text-align: right; white-space: nowrap; } td.ticker { font-weight: 800; white-space: nowrap; }
     ul { padding-left: 20px; } li { margin: 4px 0; }
-    @media (max-width: 740px) { main { width: min(100% - 16px, 1120px); } .grid, .action-grid { grid-template-columns: 1fr; } h1 { font-size: 22px; } section, article, .hero { padding: 12px; } table { font-size: 12px; } }
+    @media (max-width: 1199px) and (min-width: 741px) { .action-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 740px) { main { width: min(100% - 16px, 1120px); } .grid, .action-grid, .metric-grid, .market-grid, .insight-grid { grid-template-columns: 1fr; } h1 { font-size: 22px; } section, article, .hero { padding: 12px; } table { font-size: 12px; } .compact-card .chart { height: auto; } .insight p { display: block; overflow: visible; } .card-head { grid-template-columns: 1fr; min-height: 0; } }
   </style>
 </head>
 <body>
@@ -1956,28 +1973,28 @@ function renderScoreGuideHtml() {
 }
 
 function renderActionHtml(row) {
-  return `<article data-action-card="${escapeHtml(row.ticker)}"><h3>${row.rank}. [${escapeHtml(row.ticker)}] ${escapeHtml(row.name || row.ticker)} ${badge(row.status)}</h3>
+  return `<article class="compact-card" data-action-card="${escapeHtml(row.ticker)}">
+    ${cardHeader(`${row.rank}. [${row.ticker}] ${row.name || row.ticker}`, row.status, row.todayActionLabel)}
     ${chartImage(row)}
-    <div class="grid">
-      ${tile("자산 유형", row.assetType)}
-      ${tile("moneyFlowScore", row.moneyFlowScoreFinal ?? row.moneyFlowScore)}
-      ${tile("finalRawScore", finalRawScore(row))}
-      ${tile("reasonConfidence", row.reasonConfidence)}
-      ${tile("reasonConfidenceExplanation", row.reasonConfidenceExplanation)}
-      ${tile("tieBreakerReason", row.tieBreakerReason)}
-      ${tile("todayActionLabel", row.todayActionLabel)}
-    </div>
-    ${row.reasonConfidence === "HIGH" ? `<p><strong>${escapeHtml(row.directCatalyst)}</strong></p>` : ""}
-    ${fieldList(row)}
+    ${coreMetricGrid(row, row.assetType)}
+    ${marketMetricGrid(row)}
+    ${insightGrid(row)}
+    ${scoreBreakdownHtml(row)}
+    ${supplementalDetailsHtml(row)}
   </article>`;
 }
 
 function renderEtfHtml(row) {
-  return `<article data-etf-card="${escapeHtml(row.ticker)}"><h3>[ETF ${escapeHtml(row.ticker)}] ${escapeHtml(row.name)} ${badge(row.status)}</h3>
+  return `<article class="compact-card" data-etf-card="${escapeHtml(row.ticker)}">
+    ${cardHeader(`[ETF ${row.ticker}] ${row.name}`, row.status, row.etfRole)}
     ${chartImage(row)}
-    <div class="grid">${tile("자산 유형", "ETF")}${tile("ETF 세부 카테고리", row.etfCategory)}${tile("ETF 역할", row.etfRole)}${tile("moneyFlowScore", row.moneyFlowScoreFinal ?? row.moneyFlowScore)}${tile("finalRawScore", finalRawScore(row))}${tile("tieBreakerReason", row.tieBreakerReason)}${tile("과열 리스크", row.overheatingRisk)}${tile("reasonConfidence", row.reasonConfidence)}${tile("reasonConfidenceExplanation", row.reasonConfidenceExplanation)}${tile("todayActionLabel", row.todayActionLabel)}${tile("데이터", row.market.dataStatus)}</div>
-    ${row.reasonConfidence === "HIGH" ? `<p><strong>${escapeHtml(row.directCatalyst)}</strong></p>` : ""}
-    ${fieldList(row)}
+    ${coreMetricGrid(row, "ETF", [
+      ["ETF Category", row.etfCategory],
+      ["ETF Role", row.etfRole],
+      ["Data", row.market.dataStatus]
+    ])}
+    ${marketMetricGrid(row)}
+    ${insightGrid(row)}
     ${scoreBreakdownHtml(row)}
     ${supplementalDetailsHtml(row)}
     <p class="muted">${escapeHtml(marketLine(row.market))}</p>
@@ -1985,14 +2002,21 @@ function renderEtfHtml(row) {
 }
 
 function renderStockHtml(row) {
-  return `<article data-stock-card="${escapeHtml(row.ticker)}"><h3>[${escapeHtml(row.ticker)}] ${escapeHtml(row.name)} ${badge(row.status)}</h3>
+  return `<article class="compact-card" data-stock-card="${escapeHtml(row.ticker)}">
+    ${cardHeader(`[${row.ticker}] ${row.name}`, row.status, row.primaryTheme || row.todayActionLabel)}
     ${chartImage(row)}
-    <div class="grid">${tile("자산 유형", "STOCK")}${tile("primaryTheme", row.primaryTheme || "데이터 없음")}${tile("relatedEtfs", row.relatedEtfs.map((etf) => etf.ticker).join(", ") || "관련 ETF 데이터 부족")}${tile("moneyFlowScore", row.moneyFlowScoreFinal ?? row.moneyFlowScore)}${tile("finalRawScore", finalRawScore(row))}${tile("tieBreakerReason", row.tieBreakerReason)}${tile("reasonConfidence", row.reasonConfidence)}${tile("reasonConfidenceExplanation", row.reasonConfidenceExplanation)}${tile("todayActionLabel", row.todayActionLabel)}${tile("ETF 대비 상대강도", row.relativeStrengthVsEtf)}</div>
-    ${row.reasonConfidence === "HIGH" ? `<p><strong>${escapeHtml(row.directCatalyst)}</strong></p>` : ""}
-    ${fieldList(row)}
+    ${coreMetricGrid(row, "STOCK", [
+      ["Theme", row.primaryTheme || "데이터 없음"],
+      ["Related ETF", row.relatedEtfs.map((etf) => etf.ticker).join(", ") || "관련 ETF 부족"],
+      ["Vs ETF", row.relativeStrengthVsEtf]
+    ])}
+    ${marketMetricGrid(row)}
+    ${insightGrid(row, [
+      ["왜 ETF가 아니라 이 종목인가", row.whyStockOverEtf],
+      ["ETF가 더 나은 경우", row.whenEtfIsBetter]
+    ])}
     ${scoreBreakdownHtml(row)}
     ${supplementalDetailsHtml(row)}
-    ${htmlList([`<strong>왜 ETF가 아니라 이 종목인가</strong> ${escapeHtml(row.whyStockOverEtf)}`, `<strong>ETF가 더 나은 경우</strong> ${escapeHtml(row.whenEtfIsBetter)}`])}
     ${row.holdingInfo ? `<p class="muted">${escapeHtml(row.holdingInfo)}</p>` : ""}
     <p class="muted">${escapeHtml(marketLine(row.market))}</p>
   </article>`;
@@ -2068,6 +2092,75 @@ function etfBreadthHtmlItems(summary) {
 
 function liquidityHtmlItems(summary) {
   return liquidityMarkdown(summary).split("\n").map((line) => escapeHtml(line.replace(/^\s*-\s*/, "")));
+}
+
+function cardHeader(title, status, subtitle) {
+  return `<div class="card-head">
+    <div>
+      <h3>${escapeHtml(title)}</h3>
+      ${subtitle ? `<div class="card-subtitle">${escapeHtml(subtitle)}</div>` : ""}
+    </div>
+    ${badge(status)}
+  </div>`;
+}
+
+function metricChip(label, value) {
+  const display = value === null || value === undefined || value === "" ? "데이터 없음" : value;
+  return `<div class="metric-chip"><strong>${escapeHtml(display)}</strong><span>${escapeHtml(label)}</span></div>`;
+}
+
+function coreMetricGrid(row, assetType, extraMetrics = []) {
+  const metrics = [
+    ["Asset", assetType],
+    ["moneyFlowScore", row.moneyFlowScoreFinal ?? row.moneyFlowScore],
+    ["finalRawScore", finalRawScore(row)],
+    ["Confidence", row.reasonConfidence],
+    ["Action", row.todayActionLabel],
+    ...extraMetrics
+  ];
+  return `<div class="metric-grid">${metrics.map(([label, value]) => metricChip(label, value)).join("")}</div>`;
+}
+
+function marketMetricGrid(row) {
+  const market = row.market || {};
+  const liquidity = row.liquiditySummary?.liquidityLabel || row.liquiditySummary?.status || row.liquiditySummary?.liquidityStatus || "확인";
+  const breadth = row.assetType === "ETF"
+    ? row.etfBreadthSummary?.breadthLabel || row.etfBreadthSummary?.status || row.etfBreadthSummary?.breadthStatus || "확인"
+    : (row.relatedEtfs || []).map((etf) => etf.ticker).join(", ") || "관련 ETF 부족";
+  const metrics = [
+    ["1D", pct(market.dailyChangePct)],
+    ["5D", pct(market.return5dPct)],
+    ["20D", pct(market.return20dPct)],
+    ["RVOL", `${num(market.relativeVolume, 2)}x`],
+    ["52W Gap", pct(market.drawdownFrom52wHighPct)],
+    ["Liquidity", liquidity],
+    ["ETF Breadth", breadth],
+    ["Overheat", row.overheatingRisk || "데이터 없음"]
+  ];
+  return `<div class="market-grid">${metrics.map(([label, value]) => metricChip(label, value)).join("")}</div>`;
+}
+
+function insightGrid(row, extraItems = []) {
+  const items = [
+    ["왜 돈이 몰리는가", row.whyMoneyIsFlowing],
+    ["다음 매수 주체", row.likelyNextBuyer],
+    ["직접 촉매", row.directCatalyst || "직접 촉매 없음"],
+    ["더 비싸게 갈 수 있는 이유", row.whyThisCouldTradeHigher],
+    ["진입 조건", row.entryCondition],
+    ["무효화 조건", row.invalidationCondition],
+    ["tieBreakerReason", row.tieBreakerReason],
+    ["reasonConfidenceExplanation", row.reasonConfidenceExplanation],
+    ...extraItems
+  ];
+  return `<div class="insight-grid">${items.map(([label, value]) => insightItem(label, value)).join("")}</div>
+    <details>
+      <summary><strong>핵심 판단 문장 전체 보기</strong></summary>
+      ${htmlList(items.map(([label, value]) => `<strong>${escapeHtml(label)}</strong> ${escapeHtml(value || "데이터 없음")}`))}
+    </details>`;
+}
+
+function insightItem(label, value) {
+  return `<div class="insight"><strong>${escapeHtml(label)}</strong><p>${escapeHtml(value || "데이터 없음")}</p></div>`;
 }
 
 function fieldList(row) {
