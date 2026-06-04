@@ -383,10 +383,15 @@ function scoreAsset(item, assetType, relatedEtfStrength = 0, supplemental = {}, 
   }
   if (newsSummary) {
     newsSummary.priceReaction = daily < 0 ? "부정" : daily > 0 ? "긍정" : "중립";
+    newsSummary.priceReactionAfterNews = daily < 0 ? "negative" : daily > 0 ? "positive" : "neutral";
     newsSummary.priceReactionNote = daily < 0 && rawNewsScore > newsScore
       ? "뉴스 이후 가격 반응 부정 -> 긍정 점수 제한"
       : "뉴스 이후 가격 반응과 점수 제한 특이사항 없음";
     newsSummary.newsFreshnessStatus = newsFreshnessLabel(newsSummary.lastPublishedAt);
+    for (const item of newsSummary.items || []) {
+      item.priceReactionAfterNews = newsSummary.priceReactionAfterNews;
+      if ((item.direction === "positive" && daily < 0) || (item.direction === "negative" && daily > 0)) item.confidence = "LOW";
+    }
   }
   const etfBreadthScore = assetType === "ETF" ? Number(supplemental.etfBreadth?.etfBreadthScore || 0) : undefined;
   const liquidityScore = Number(supplemental.liquidity?.liquidityScore || 0);
@@ -591,6 +596,10 @@ function reasonConfidenceExplanation(row) {
 
 function directCatalystLine(assetType, ticker, newsSummary, name = "") {
   if (!newsSummary || !isConnectedLike(newsSummary.status) || !newsSummary.itemCount) return "";
+  if (newsSummary.directCatalyst) {
+    const item = newsSummary.directCatalyst;
+    return `직접 촉매: ${item.source} / ${item.eventType} / ${item.freshnessBucket} - ${item.title}`;
+  }
   const directKeywords = [
     "earnings", "guidance", "upgrade", "contract", "partnership", "policy", "regulation",
     "deal", "acquisition", "merger", "ipo", "approval", "order", "revenue", "profit",
@@ -613,12 +622,16 @@ function directCatalystLine(assetType, ticker, newsSummary, name = "") {
     return hasKeyword && (namesTicker || namesCompany || !isGeneral);
   });
   if (!direct) return "";
-  return `직접 촉매: ${direct.title}`;
+  return `직접 촉매: ${direct.source || "뉴스"} / ${direct.eventType || "general_market"} / ${direct.freshnessBucket || newsFreshnessBucket(direct.publishedAt)} - ${direct.title}`;
 }
 
 function supplementalReasonLine(assetType, supplemental) {
   const parts = [];
-  if ((supplemental.news?.newsScore || 0) > 0) parts.push(`뉴스: ${supplemental.news.headlineSummary}`);
+  if ((supplemental.news?.newsScore || 0) > 0) {
+    const item = supplemental.news.directCatalyst || supplemental.news.items?.[0];
+    const sourceLine = item ? `${item.source} ${item.eventType}/${item.freshnessBucket}` : supplemental.news.headlineSummary;
+    parts.push(`뉴스: ${sourceLine}`);
+  }
   if (assetType === "ETF" && (supplemental.etfBreadth?.etfBreadthScore || 0) > 0) parts.push(`ETF 확산도: ${supplemental.etfBreadth.breadthSignal}`);
   if ((supplemental.liquidity?.liquidityScore || 0) > 0) parts.push(`유동성: ${supplemental.liquidity.liquiditySignal}`);
   return parts.join(" / ");
@@ -2235,6 +2248,7 @@ async function collectSupplementalData(rawWatchlist, rawHoldings, rawEtfs, marke
   const connectionStatus = {
     priceVolume: marketData?.items && Object.values(marketData.items).some((item) => item.dataStatus === "ok") ? "CONNECTED" : "FAILED",
     news: aggregateStatus(newsRows.map((row) => row.status)),
+    newsSources: aggregateNewsSourceStatuses(newsRows),
     etfBreadth: aggregateStatus(etfTickers.map((ticker) => byTicker[ticker]?.etfBreadth?.status)),
     liquidity: aggregateStatus(tickers.map((ticker) => byTicker[ticker]?.liquidity?.status)),
     lastUpdated: new Date().toISOString(),
@@ -2253,6 +2267,21 @@ function supplementalNotes(byTicker) {
   if (fallbackBreadth) notes.push(`ETF 구성종목 확산도 fallback sample ${fallbackBreadth}개 사용`);
   if (fallbackLiquidity) notes.push(`거래대금 기반 유동성 fallback ${fallbackLiquidity}개 사용`);
   return notes;
+}
+
+function aggregateNewsSourceStatuses(newsRows) {
+  const bySource = new Map();
+  for (const row of newsRows) {
+    for (const sourceRow of row.sourceStatuses || []) {
+      const current = bySource.get(sourceRow.source) || [];
+      current.push(sourceRow.status);
+      bySource.set(sourceRow.source, current);
+    }
+  }
+  return [...bySource.entries()].map(([source, statuses]) => ({
+    source,
+    status: aggregateStatus(statuses)
+  }));
 }
 
 function buildDataReliability(marketData, supplementalData, generatedAtDate) {
@@ -2291,6 +2320,20 @@ function buildDataReliability(marketData, supplementalData, generatedAtDate) {
   const grade = [analysisReliability, executionReliability, etfBreadthReliability].includes("LOW") ? "LOW" : analysisReliability === "HIGH" && executionReliability === "HIGH" ? "HIGH" : "MEDIUM";
   const latestNewsPublishedAt = newsPublishedTimes.at(-1) || null;
   const newsFreshnessStatus = newsFreshnessLabel(latestNewsPublishedAt);
+  const newsSourceRows = supplementalData?.connectionStatus?.newsSources || [];
+  const newsSourceLabel = newsSourceRows.length
+    ? newsSourceRows.map((row) => `${row.source} ${row.status}`).join(", ")
+    : "데이터 없음";
+  const configuredNewsSources = newsSourceRows.map((row) => row.source);
+  const connectedNewsSources = newsSourceRows.filter((row) => row.status === "CONNECTED" || row.status === "PARTIAL").map((row) => row.source);
+  const officialNewsConnected = newsSourceRows.some((row) => ["SEC EDGAR RSS", "Federal Reserve RSS"].includes(row.source) && (row.status === "CONNECTED" || row.status === "PARTIAL"));
+  const newsReliability = supplementalData?.connectionStatus?.news === "CONNECTED" && officialNewsConnected
+    ? "HIGH"
+    : connectedNewsSources.length >= 2
+      ? "MEDIUM"
+      : supplementalData?.connectionStatus?.news === "CONNECTED"
+        ? "MEDIUM"
+        : "LOW";
   const reliabilityNotes = [
     maxBreadthSample < 5 ? "테마 확산 판단 제한" : null,
     lowLiquidityCount > 0 ? "거래대금 유동성 낮음 또는 확인 불가" : null,
@@ -2306,6 +2349,9 @@ function buildDataReliability(marketData, supplementalData, generatedAtDate) {
     newsLastUpdatedAt: newsFetchedTimes.at(-1) || supplementalData?.connectionStatus?.lastUpdated || null,
     latestNewsPublishedAt,
     newsFreshnessStatus,
+    newsSources: configuredNewsSources.length ? configuredNewsSources.join(", ") : newsRows.map((row) => row.source).filter(Boolean).slice(0, 5).join(", "),
+    newsSourceStatus: newsSourceLabel,
+    newsReliability,
     etfBreadthStatus: supplementalData?.connectionStatus?.etfBreadth || "FAILED",
     etfBreadthSampleCount: Number.isFinite(minBreadthSample) ? `${minBreadthSample}~${maxBreadthSample}` : String(maxBreadthSample || 0),
     etfBreadthReliability,
@@ -2316,7 +2362,9 @@ function buildDataReliability(marketData, supplementalData, generatedAtDate) {
     reliabilityNotes,
     providers: unique([
       marketData?.dataSource || "yfinance",
-      ...newsRows.map((row) => row.source).filter(Boolean),
+      ...configuredNewsSources,
+      ...connectedNewsSources,
+      ...newsRows.flatMap((row) => splitProviderNames(row.source)),
       ...breadthRows.map((row) => row.source).filter(Boolean),
       ...liquidityRows.map((row) => row.source).filter(Boolean)
     ]).join(", "),
@@ -2326,6 +2374,10 @@ function buildDataReliability(marketData, supplementalData, generatedAtDate) {
   };
 }
 
+function splitProviderNames(value) {
+  return String(value || "").split(",").map((item) => item.trim()).filter(Boolean);
+}
+
 function newsFreshnessLabel(value) {
   const timestamp = Date.parse(value);
   if (!Number.isFinite(timestamp)) return "UNKNOWN";
@@ -2333,6 +2385,16 @@ function newsFreshnessLabel(value) {
   if (ageHours <= 24) return "FRESH";
   if (ageHours <= 72) return "STALE";
   return "UNKNOWN";
+}
+
+function newsFreshnessBucket(value) {
+  const timestamp = Date.parse(value);
+  if (!Number.isFinite(timestamp)) return "stale";
+  const ageHours = (Date.now() - timestamp) / 36e5;
+  if (ageHours <= 6) return "under_6h";
+  if (ageHours <= 24) return "under_24h";
+  if (ageHours <= 72) return "under_72h";
+  return "stale";
 }
 
 function buildActionGateSummary(rows) {
@@ -2631,6 +2693,9 @@ function renderDataReliabilityMarkdown(report) {
 - 뉴스 수집 시각: ${formatTimestampKst(r.newsFetchedAt || r.newsLastUpdatedAt)}
 - 가장 최근 뉴스 발행 시각: ${formatTimestampKst(r.latestNewsPublishedAt)}
 - 뉴스 신선도 상태: ${r.newsFreshnessStatus || "UNKNOWN"}
+- 뉴스 소스: ${r.newsSources || "데이터 없음"}
+- 뉴스 소스 상태: ${r.newsSourceStatus || "데이터 없음"}
+- 뉴스 신뢰도: ${r.newsReliability || "LOW"}
 - 추천 적용 거래일: ${r.recommendationSession || "데이터 없음"}
 - 가격/거래량 데이터 상태: ${statusLabel(r.priceVolumeStatus)}
 - 뉴스 데이터 상태: ${statusLabel(r.newsStatus)}
@@ -3071,10 +3136,16 @@ function dataUsageMarkdown(row) {
 function newsMarkdown(summary) {
   if (!summary) return "  - 최근 뉴스 상태: 데이터 없음";
   const counts = summary.sentimentCounts || {};
+  const catalyst = summary.directCatalyst;
+  const support = (summary.items || []).find((item) => item !== catalyst && item.directness !== "indirect");
   return `  - 최근 뉴스 상태: ${statusLabel(summary.status)}
+  - 뉴스 소스: ${summary.source || "데이터 없음"}
+  - 소스별 상태: ${(summary.sourceStatuses || []).map((row) => `${row.source} ${row.status}`).join("; ") || "데이터 없음"}
   - 긍정/중립/부정: ${counts.positive || 0}/${counts.neutral || 0}/${counts.negative || 0}
   - 직접성/방향성/신선도: ${summary.directnessScore ?? 0}/${summary.directionScore ?? 0}/${summary.freshnessScore ?? 0}
   - 강한 촉매 수: ${summary.strongCatalystCount ?? 0}
+  - 직접 촉매: ${catalyst ? `${catalyst.source} / ${catalyst.eventType} / ${catalyst.freshnessBucket} / ${catalyst.direction} - ${catalyst.title}` : "없음"}
+  - 보조 뉴스: ${support ? `${support.source} ${support.directness} / ${support.eventType} / ${support.freshnessBucket}` : "없음"}
   - 뉴스 수집 시각: ${formatTimestampKst(summary.fetchedAt)}
   - 가장 최근 뉴스 발행 시각: ${formatTimestampKst(summary.lastPublishedAt)}
   - 뉴스 신선도 상태: ${summary.newsFreshnessStatus || newsFreshnessLabel(summary.lastPublishedAt)}
@@ -3144,7 +3215,8 @@ function renderDataCollectionMarkdown(report) {
 
 - 뉴스:
   - 상태: ${statusLabel(report.dataConnectionStatus.news)}
-  - 소스: Yahoo Finance RSS fallback
+  - 소스: ${(report.dataConnectionStatus.newsSources || []).map((row) => row.source).join(", ") || "Yahoo Finance RSS"}
+  - 소스별 상태: ${(report.dataConnectionStatus.newsSources || []).map((row) => `${row.source} ${row.status}`).join("; ") || "데이터 없음"}
   - 수집 뉴스 수: ${newsCount}
   - 실패/제한 사유: ${providerNotes(rows, "news")}
 
@@ -3659,6 +3731,9 @@ function renderDataReliabilityHtml(report) {
       ${tile("뉴스 수집 시각", formatTimestampKst(r.newsFetchedAt || r.newsLastUpdatedAt))}
       ${tile("최근 뉴스 발행", formatTimestampKst(r.latestNewsPublishedAt))}
       ${tile("뉴스 신선도", r.newsFreshnessStatus || "UNKNOWN")}
+      ${tile("뉴스 소스", r.newsSources || "데이터 없음")}
+      ${tile("뉴스 소스 상태", r.newsSourceStatus || "데이터 없음")}
+      ${tile("뉴스 신뢰도", r.newsReliability || "LOW")}
       ${tile("추천 적용 거래일", r.recommendationSession || "데이터 없음")}
       ${tile("가격/거래량", statusLabel(r.priceVolumeStatus))}
       ${tile("뉴스", statusLabel(r.newsStatus))}

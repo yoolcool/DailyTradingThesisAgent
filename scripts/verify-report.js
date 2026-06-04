@@ -48,9 +48,21 @@ function main() {
   assert(markdown.includes("뉴스 수집 시각"), "Markdown missing news fetched timestamp");
   assert(markdown.includes("가장 최근 뉴스 발행 시각"), "Markdown missing latest news published timestamp");
   assert(markdown.includes("뉴스 신선도 상태"), "Markdown missing news freshness status");
+  assert(markdown.includes("MarketWatch RSS"), "Markdown missing MarketWatch news source");
+  assert(markdown.includes("CNBC Markets RSS"), "Markdown missing CNBC news source");
+  assert(markdown.includes("SEC EDGAR RSS"), "Markdown missing SEC EDGAR news source");
+  assert(markdown.includes("Federal Reserve RSS"), "Markdown missing Federal Reserve news source");
+  assert(markdown.includes("Finnhub API"), "Markdown missing Finnhub API news source status");
+  assert(markdown.includes("general_market") || markdown.includes("earnings") || markdown.includes("guidance") || markdown.includes("macro"), "Markdown missing normalized news event type");
   assert(html.includes("뉴스 수집 시각"), "HTML missing news fetched timestamp");
   assert(html.includes("최근 뉴스 발행"), "HTML missing latest news published timestamp");
   assert(html.includes("뉴스 신선도"), "HTML missing news freshness status");
+  assert(html.includes("MarketWatch RSS"), "HTML missing MarketWatch news source");
+  assert(html.includes("CNBC Markets RSS"), "HTML missing CNBC news source");
+  assert(html.includes("SEC EDGAR RSS"), "HTML missing SEC EDGAR news source");
+  assert(html.includes("Federal Reserve RSS"), "HTML missing Federal Reserve news source");
+  assert(html.includes("Finnhub API"), "HTML missing Finnhub API news source status");
+  assert(html.includes("general_market") || html.includes("earnings") || html.includes("guidance") || html.includes("macro"), "HTML missing normalized news event type");
   assert(markdown.includes("이 리포트는 투자판단 보조용이며"), "Markdown missing practical-use warning");
   assert(html.includes("이 리포트는 투자판단 보조용이며"), "HTML missing practical-use warning");
   for (const removedSpreadTerm of ["스프레드", "bid/ask", "liquiditySpread", "spreadStatus"]) {
@@ -171,6 +183,9 @@ function main() {
   assert(latestSnapshot.dataReliability?.executionReliability, "Snapshot missing execution reliability");
   assert(latestSnapshot.dataReliability?.priceAsOfLabel, "Snapshot missing price as-of label");
   assert(latestSnapshot.dataReliability?.recommendationSession, "Snapshot missing recommendation session");
+  assert(latestSnapshot.dataReliability?.newsSources, "Snapshot missing news source list");
+  assert(latestSnapshot.dataReliability?.newsSourceStatus, "Snapshot missing news source status");
+  assert(latestSnapshot.dataReliability?.newsReliability, "Snapshot missing news reliability");
   assert(latestSnapshot.todayDecision?.label, "Snapshot missing today decision label");
   assert(latestSnapshot.actionGateSummary?.items?.length, "Snapshot missing action gate summary");
   if ((latestSnapshot.actionCandidates || []).length === 0) {
