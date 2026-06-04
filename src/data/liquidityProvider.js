@@ -1,13 +1,11 @@
-function fetchLiquiditySpread(ticker, marketItem) {
+function fetchLiquidityProfile(ticker, marketItem) {
   if (!marketItem || marketItem.dataStatus !== "ok") {
     return {
       ticker,
       status: "FAILED",
       source: "price-volume fallback",
-      hasQuoteData: false,
       liquiditySignal: "UNKNOWN",
       dollarVolumeLiquidity: "UNKNOWN",
-      spreadStatus: "UNKNOWN",
       orderImpact: "추격 금지",
       liquidityScore: 0,
       notes: ["price/volume data unavailable for liquidity fallback"]
@@ -27,32 +25,26 @@ function fetchLiquiditySpread(ticker, marketItem) {
   const normalizedLiquidityScore = liquiditySignal === "LIQUID" ? 5 : liquiditySignal === "ACCEPTABLE" ? 2 : liquiditySignal === "LOW" ? -5 : 0;
   const orderImpact =
     liquiditySignal === "LIQUID"
-      ? "지정가 권장"
+      ? "시장가 가능"
       : liquiditySignal === "ACCEPTABLE"
-        ? "시장가 금지"
+        ? "지정가 권장"
         : liquiditySignal === "LOW"
           ? "추격 금지"
-          : "시장가 금지";
+          : "지정가 권장";
   return {
     ticker,
     status: "PARTIAL",
     source: "price-volume dollar-volume fallback",
-    hasQuoteData: false,
-    bid: null,
-    ask: null,
-    mid: null,
-    spreadPct: null,
     dollarVolume,
     avgDollarVolume20D,
     liquiditySignal,
     dollarVolumeLiquidity: liquiditySignal,
-    spreadStatus: "UNKNOWN",
     orderImpact,
     liquidityScore: normalizedLiquidityScore,
-    notes: ["bid/ask quote unavailable; liquidity estimated from close * volume; spread is UNKNOWN"]
+    notes: ["liquidity estimated from close * volume"]
   };
 }
 
 module.exports = {
-  fetchLiquiditySpread
+  fetchLiquidityProfile
 };

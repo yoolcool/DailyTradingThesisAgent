@@ -53,6 +53,10 @@ function main() {
   assert(html.includes("뉴스 신선도"), "HTML missing news freshness status");
   assert(markdown.includes("이 리포트는 투자판단 보조용이며"), "Markdown missing practical-use warning");
   assert(html.includes("이 리포트는 투자판단 보조용이며"), "HTML missing practical-use warning");
+  for (const removedSpreadTerm of ["스프레드", "bid/ask", "liquiditySpread", "spreadStatus"]) {
+    assert(!markdown.includes(removedSpreadTerm), `Markdown still includes removed spread criterion: ${removedSpreadTerm}`);
+    assert(!html.includes(removedSpreadTerm), `HTML still includes removed spread criterion: ${removedSpreadTerm}`);
+  }
   assert(/RVOL\s+\d+\.\d{2}x/.test(html), "HTML should show RVOL with two decimals");
 
   for (const pattern of ["\uFFFD", "?꾪", "?좏", "?댁", "?뺤", "?좊", "?덉", "?섎", "?곌"]) {
