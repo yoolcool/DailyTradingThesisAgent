@@ -52,7 +52,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스: 연결됨
 - ETF 구성종목 확산도: 일부 연결
 - 스프레드/유동성: 일부 연결
-- 생성 시각: 2026년 6월 4일 목요일 오전 11:45
+- 생성 시각: 2026년 6월 4일 목요일 오후 12:08
 - 시장 상태: 위험선호
 - 오늘 돈의 방향: 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 강한 테마 TOP 3: AI 소프트웨어 ETF(97), 반도체 장비/공급망(87), AI 반도체 ETF(86)
@@ -1363,75 +1363,75 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 이 섹션은 실제 계좌 보유 종목이 아니라 전일 리포트에서 제시된 개별 종목 후보의 사후 점검이다.
 실제 보유 수량/평단이 입력되지 않았으므로 계좌 수익률이 아니라 추천 기준일 이후 가격 변화를 추적한다.
 
-#### [PANW] Palo Alto Networks Inc.
-- 전일 추천일: 2026-06-02
+#### [CRWD] CrowdStrike Holdings Inc.
+- 전일 추천일: 2026-06-03
 - 전일 actionLabel: 개별 종목 우선
 - 전일 moneyFlowScore: 100
-- 전일 종가 또는 추천 기준가: $297.18
-- 오늘 종가: $280.43
-- 추천 이후 수익률: -5.64%
+- 전일 종가 또는 추천 기준가: $747.61
+- 오늘 종가: $747.61
+- 추천 이후 수익률: 0.00%
 - 진입 조건 충족 여부: 충족 또는 유지
 - 무효화 조건 발생 여부: 미발생
 - 관련 ETF 대비 상대강도 유지 여부: 유지
 - 오늘 상태: 유지
-- 오늘 판단 근거: PANW는 전일 추천 이후 -5.64% 변화. 관련 ETF보다 강함 | 주식 5일 +12.86% vs ETF 평균 +9.59%, 주식 20일 +52.42% vs ETF 평균 +21.11%, 상대 거래량 1.43배 vs ETF 평균 0.93배
+- 오늘 판단 근거: CRWD는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +15.84% vs ETF 평균 +9.59%, 주식 20일 +56.89% vs ETF 평균 +21.11%, 상대 거래량 1.35배 vs ETF 평균 0.93배
 - 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 
 #### [FTNT] Fortinet Inc.
-- 전일 추천일: 2026-06-02
+- 전일 추천일: 2026-06-03
 - 전일 actionLabel: 개별 종목 우선
 - 전일 moneyFlowScore: 100
-- 전일 종가 또는 추천 기준가: $148.86
+- 전일 종가 또는 추천 기준가: $146.48
 - 오늘 종가: $146.48
-- 추천 이후 수익률: -1.60%
+- 추천 이후 수익률: 0.00%
 - 진입 조건 충족 여부: 충족 또는 유지
 - 무효화 조건 발생 여부: 미발생
 - 관련 ETF 대비 상대강도 유지 여부: 유지
 - 오늘 상태: 유지
-- 오늘 판단 근거: FTNT는 전일 추천 이후 -1.60% 변화. 관련 ETF보다 강함 | 주식 5일 +14.50% vs ETF 평균 +9.59%, 주식 20일 +62.90% vs ETF 평균 +21.11%, 상대 거래량 1.07배 vs ETF 평균 0.93배
+- 오늘 판단 근거: FTNT는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +14.50% vs ETF 평균 +9.59%, 주식 20일 +62.90% vs ETF 평균 +21.11%, 상대 거래량 1.07배 vs ETF 평균 0.93배
 - 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 
-#### [CRWD] CrowdStrike Holdings Inc.
-- 전일 추천일: 2026-06-02
+#### [PANW] Palo Alto Networks Inc.
+- 전일 추천일: 2026-06-03
 - 전일 actionLabel: 개별 종목 우선
-- 전일 moneyFlowScore: 100
-- 전일 종가 또는 추천 기준가: $768.95
-- 오늘 종가: $747.61
-- 추천 이후 수익률: -2.78%
+- 전일 moneyFlowScore: 97
+- 전일 종가 또는 추천 기준가: $280.43
+- 오늘 종가: $280.43
+- 추천 이후 수익률: 0.00%
 - 진입 조건 충족 여부: 충족 또는 유지
 - 무효화 조건 발생 여부: 미발생
 - 관련 ETF 대비 상대강도 유지 여부: 유지
 - 오늘 상태: 유지
-- 오늘 판단 근거: CRWD는 전일 추천 이후 -2.78% 변화. 관련 ETF보다 강함 | 주식 5일 +15.84% vs ETF 평균 +9.59%, 주식 20일 +56.89% vs ETF 평균 +21.11%, 상대 거래량 1.35배 vs ETF 평균 0.93배
+- 오늘 판단 근거: PANW는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +12.86% vs ETF 평균 +9.59%, 주식 20일 +52.42% vs ETF 평균 +21.11%, 상대 거래량 1.43배 vs ETF 평균 0.93배
 - 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 
 #### [DDOG] Datadog Inc.
-- 전일 추천일: 2026-06-02
+- 전일 추천일: 2026-06-03
 - 전일 actionLabel: 개별 종목 우선
-- 전일 moneyFlowScore: 100
-- 전일 종가 또는 추천 기준가: $269.13
+- 전일 moneyFlowScore: 93
+- 전일 종가 또는 추천 기준가: $250.33
 - 오늘 종가: $250.33
-- 추천 이후 수익률: -6.99%
+- 추천 이후 수익률: 0.00%
 - 진입 조건 충족 여부: 충족 또는 유지
 - 무효화 조건 발생 여부: 미발생
 - 관련 ETF 대비 상대강도 유지 여부: 유지
 - 오늘 상태: 유지
-- 오늘 판단 근거: DDOG는 전일 추천 이후 -6.99% 변화. 관련 ETF보다 강함 | 주식 5일 +12.86% vs ETF 평균 +5.31%, 주식 20일 +71.78% vs ETF 평균 +13.69%, 상대 거래량 1.08배 vs ETF 평균 1.18배
+- 오늘 판단 근거: DDOG는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +12.86% vs ETF 평균 +5.31%, 주식 20일 +71.78% vs ETF 평균 +13.69%, 상대 거래량 1.08배 vs ETF 평균 1.18배
 - 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 
-#### [ARM] Arm Holdings plc
-- 전일 추천일: 2026-06-02
+#### [CDNS] Cadence Design Systems Inc.
+- 전일 추천일: 2026-06-03
 - 전일 actionLabel: 개별 종목 우선
 - 전일 moneyFlowScore: 100
-- 전일 종가 또는 추천 기준가: $402.71
-- 오늘 종가: $411.83
-- 추천 이후 수익률: +2.26%
+- 전일 종가 또는 추천 기준가: $408
+- 오늘 종가: $408
+- 추천 이후 수익률: 0.00%
 - 진입 조건 충족 여부: 충족 또는 유지
 - 무효화 조건 발생 여부: 미발생
 - 관련 ETF 대비 상대강도 유지 여부: 유지
 - 오늘 상태: 유지
-- 오늘 판단 근거: ARM는 전일 추천 이후 +2.26% 변화. 관련 ETF보다 강함 | 주식 5일 +36.05% vs ETF 평균 +8.03%, 주식 20일 +97.20% vs ETF 평균 +23.69%, 상대 거래량 0.84배 vs ETF 평균 1.19배
-- 다음 확인 조건: 거래량 회복 실패
+- 오늘 판단 근거: CDNS는 전일 추천 이후 0.00% 변화. 관련 ETF와 비슷함 | 주식 5일 +9.08% vs ETF 평균 +5.31%, 주식 20일 +15.37% vs ETF 평균 +13.69%, 상대 거래량 1.23배 vs ETF 평균 1.18배
+- 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 
 ### 2-4. ETF 대비 개별 종목 판단 로직
 
@@ -1505,7 +1505,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 12 | MU | Micron Technology Inc. | 72 | 85 | 85 | 관심 후보 | 개별 종목 우선 | LOW | +1.45% | +16.28% | +68.63% | 0.71 | DRAM, SMH, SOXX, SOXQ |
 | 13 | DDOG | Datadog Inc. | 70 | 93 | 93 | 관심 후보 | 개별 종목 우선 | MEDIUM | -6.99% | +12.86% | +71.78% | 1.08 | IGV, AIQ, QQQ |
 | 14 | FANG | Diamondback Energy Inc. | 70 | 85 | 85 | 관심 후보 | 개별 종목 우선 | HIGH | +4.05% | +9.20% | +2.14% | 1.40 | QQQ |
-| 15 | AMD | Advanced Micro Devices Inc. | 68 | 83 | 83 | 관심 후보 | 돌파 확인 후 관찰 | LOW | +4.02% | +9.48% | +52.71% | 0.77 | SMH, SOXX, SOXQ, AIQ |
+| 15 | AMD | Advanced Micro Devices Inc. | 68 | 81 | 81 | 관심 후보 | 돌파 확인 후 관찰 | LOW | +4.02% | +9.48% | +52.71% | 0.77 | SMH, SOXX, SOXQ, AIQ |
 | 16 | ADI | Analog Devices Inc. | 64 | 87 | 87 | 관찰 후보 | 눌림 매수 대기 | MEDIUM | +3.42% | +4.99% | +8.13% | 1.15 | SMH, SOXX, SOXQ, AIQ |
 | 17 | KLAC | KLA Corporation | 63 | 80 | 80 | 관찰 후보 | 개별 종목 우선 | LOW | +3.91% | +8.58% | +22.63% | 0.99 | SMH, SOXX, SOXQ, AIQ |
 | 18 | QCOM | QUALCOMM Incorporated | 63 | 80 | 80 | 관찰 후보 | 개별 종목 우선 | LOW | +3.81% | +7.12% | +34.02% | 0.68 | SMH, SOXX, SOXQ, AIQ |
@@ -1531,7 +1531,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 12 | MU | Micron Technology Inc. | 72 | 85 | 85 | 관심 후보 | 개별 종목 우선 | LOW | +1.45% | +16.28% | +68.63% | 0.71 | DRAM, SMH, SOXX, SOXQ |
 | 13 | DDOG | Datadog Inc. | 70 | 93 | 93 | 관심 후보 | 개별 종목 우선 | MEDIUM | -6.99% | +12.86% | +71.78% | 1.08 | IGV, AIQ, QQQ |
 | 14 | FANG | Diamondback Energy Inc. | 70 | 85 | 85 | 관심 후보 | 개별 종목 우선 | HIGH | +4.05% | +9.20% | +2.14% | 1.40 | QQQ |
-| 15 | AMD | Advanced Micro Devices Inc. | 68 | 83 | 83 | 관심 후보 | 돌파 확인 후 관찰 | LOW | +4.02% | +9.48% | +52.71% | 0.77 | SMH, SOXX, SOXQ, AIQ |
+| 15 | AMD | Advanced Micro Devices Inc. | 68 | 81 | 81 | 관심 후보 | 돌파 확인 후 관찰 | LOW | +4.02% | +9.48% | +52.71% | 0.77 | SMH, SOXX, SOXQ, AIQ |
 | 16 | ADI | Analog Devices Inc. | 64 | 87 | 87 | 관찰 후보 | 눌림 매수 대기 | MEDIUM | +3.42% | +4.99% | +8.13% | 1.15 | SMH, SOXX, SOXQ, AIQ |
 | 17 | KLAC | KLA Corporation | 63 | 80 | 80 | 관찰 후보 | 개별 종목 우선 | LOW | +3.91% | +8.58% | +22.63% | 0.99 | SMH, SOXX, SOXQ, AIQ |
 | 18 | QCOM | QUALCOMM Incorporated | 63 | 80 | 80 | 관찰 후보 | 개별 종목 우선 | LOW | +3.81% | +7.12% | +34.02% | 0.68 | SMH, SOXX, SOXQ, AIQ |
@@ -1659,7 +1659,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | KWEB | 중국 인터넷 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.79배라 신규 자금 유입 강도는 약함. 유동성: ACCEPTABLE |
 | MAGS | 메가캡 플랫폼 ETF | 31 | 매매 금지 | LOW | 20일 +1.95%, 5일 -2.72%, 상대 거래량 3.79배로 가격과 거래량이 함께 개선. 뉴스: Magnificent Seven Post Best Earnings In Nearly 5 Years. Sign Of A Bubble? / 유동성: ACCEPTABLE |
 | QQQ | 시장 기준 ETF | 48 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.97배라 신규 자금 유입 강도는 약함. 뉴스: Dot-Com Bubble Deja Vu? 'Big Short' Michael Burry's Chart Shows AI Chip Rally Is Within 7% Of 2000 Peak / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
-| SPY | 시장 기준 ETF | 32 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.94배라 신규 자금 유입 강도는 약함. ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
+| SPY | 시장 기준 ETF | 36 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.94배라 신규 자금 유입 강도는 약함. 뉴스: S&amp;P 500, Nasdaq Futures Slip Amid Renewed US-Iran Tensions, Chipmaker Losses: AVGO, KEEL, CRWD, MSTR Stocks In Focus / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
 | IWM | 시장 기준 ETF | 44 | 관찰 | MEDIUM | 20일 +1.81%, 5일 -0.93%, 상대 거래량 1.12배로 가격과 거래량이 함께 개선. 뉴스: Exchange-Traded Funds, Equity Futures Lower Pre-Bell Tuesday as Traders Assess AI Momentum / 유동성: LIQUID |
 | TLT | 채권 ETF | 8 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.55배라 신규 자금 유입 강도는 약함. 유동성: LIQUID |
 | GLD | 금 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.80배라 신규 자금 유입 강도는 약함. 뉴스: Exchange-Traded Funds, Equity Futures Lower Pre-Bell Tuesday as Traders Assess AI Momentum / 유동성: LIQUID |

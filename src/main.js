@@ -2981,8 +2981,41 @@ function renderHtml(report) {
     .badge { display: inline-flex; border-radius: 999px; color: #fff; padding: 4px 8px; font-size: 12px; font-weight: 800; }
     .ready { background: #047857; } .candidate { background: #2563eb; } .watch, .hold { background: #4f46e5; } .profit { background: #0f766e; } .exit { background: #c2410c; } .ban { background: #991b1b; }
     .muted { color: #5d6670; font-size: 14px; } .purpose { font-weight: 800; }
-    .chart { width: 100%; max-width: 520px; height: auto; border: 1px solid #e5e7eb; border-radius: 6px; background: #fff; }
-    .compact-card .chart { max-width: none; height: 120px; object-fit: contain; }
+    .trading-chart { width: 100%; border: 1px solid #d9dee3; border-radius: 8px; background: #fff; overflow: hidden; }
+    .chart-toolbar { display: flex; justify-content: space-between; gap: 8px; align-items: center; padding: 8px 10px; border-bottom: 1px solid #edf0f2; }
+    .chart-title { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .chart-title strong { font-size: 14px; line-height: 1.1; }
+    .chart-title span { color: #5d6670; font-size: 11px; font-weight: 800; }
+    .range-toggle { display: inline-flex; border: 1px solid #d9dee3; border-radius: 6px; overflow: hidden; flex: 0 0 auto; }
+    .range-toggle button { appearance: none; border: 0; border-left: 1px solid #d9dee3; background: #fbfcfd; color: #374151; min-width: 38px; min-height: 30px; padding: 5px 8px; font-size: 12px; font-weight: 800; cursor: pointer; }
+    .range-toggle button:first-child { border-left: 0; }
+    .range-toggle button.active { background: #172026; color: #fff; }
+    .chart-stage { position: relative; height: 420px; }
+    .candlestick-chart { display: none; width: 100%; height: 420px; }
+    .candlestick-chart.active { display: block; }
+    .chart-bg { fill: #fff; }
+    .chart-grid { stroke: #edf0f2; stroke-width: 1; }
+    .axis-line { stroke: #9aa4af; stroke-width: 1; }
+    .axis-label, .panel-label { fill: #5d6670; font-size: 11px; font-weight: 700; }
+    .date-label { text-anchor: middle; }
+    .candle-up .wick, .candle-up .body { stroke: #059669; fill: #059669; }
+    .candle-down .wick, .candle-down .body { stroke: #dc2626; fill: #dc2626; }
+    .volume-bar { opacity: 0.26; }
+    .ma-line { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; }
+    .ma5 { stroke: #2563eb; }
+    .ma20 { stroke: #ea580c; }
+    .ref-line line { stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+    .ref-label { font-size: 10px; font-weight: 800; }
+    .recommendation-marker line { stroke: #7c3aed; stroke-width: 1.2; }
+    .recommendation-marker circle { fill: #7c3aed; stroke: #fff; stroke-width: 1.5; }
+    .recommendation-marker text { fill: #7c3aed; font-size: 10px; font-weight: 800; }
+    .chart-hit { fill: transparent; pointer-events: all; }
+    .chart-tooltip { position: absolute; z-index: 3; display: none; max-width: min(280px, calc(100% - 20px)); pointer-events: none; border: 1px solid #172026; border-radius: 6px; background: rgba(255,255,255,0.96); box-shadow: 0 8px 18px rgba(15,23,42,0.14); padding: 7px 8px; color: #172026; font-size: 12px; font-weight: 800; line-height: 1.35; }
+    .chart-legend { display: flex; flex-wrap: wrap; gap: 6px 10px; padding: 7px 10px 9px; border-top: 1px solid #edf0f2; color: #5d6670; font-size: 11px; font-weight: 800; }
+    .chart-legend span { display: inline-flex; align-items: center; gap: 4px; }
+    .chart-legend i { display: inline-block; width: 14px; height: 3px; border-radius: 999px; }
+    .legend-up { background: #059669; } .legend-down { background: #dc2626; } .legend-ma5 { background: #2563eb; } .legend-ma20 { background: #ea580c; } .legend-entry { background: #0f766e; } .legend-invalid { background: #b91c1c; }
+    .chart-fallback { display: none; }
     .table-scroll { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; font-size: 14px; } th, td { border-top: 1px solid #d9dee3; padding: 8px; text-align: left; vertical-align: top; }
     td.num, th.num { text-align: right; white-space: nowrap; } td.ticker { font-weight: 800; white-space: nowrap; }
@@ -2997,7 +3030,11 @@ function renderHtml(report) {
       .desktop-table, .desktop-action-full { display: none !important; }
       .mobile-card-list, .mobile-action-summary, .mobile-only { display: block; }
       .summary-card, .compact-card { width: 100%; box-sizing: border-box; }
-      .compact-card .chart { height: auto; max-height: 190px; object-fit: contain; }
+      .chart-toolbar { align-items: flex-start; }
+      .chart-stage { height: 260px; }
+      .candlestick-chart { height: 260px; }
+      .axis-label, .panel-label, .ref-label, .recommendation-marker text { font-size: 9px; }
+      .chart-legend { gap: 5px 8px; font-size: 10px; }
       .mobile-action-summary .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .insight p { display: block; overflow: visible; }
       .card-head { grid-template-columns: 1fr; min-height: 0; }
@@ -3084,6 +3121,33 @@ function renderHtml(report) {
     </section>
     ${renderScoreGuideHtml()}
   </main>
+  <script>
+    document.querySelectorAll("[data-trading-chart]").forEach(function(chart) {
+      var tooltip = chart.querySelector("[data-chart-tooltip]");
+      chart.querySelectorAll("[data-chart-range]").forEach(function(button) {
+        button.addEventListener("click", function() {
+          var range = button.getAttribute("data-chart-range");
+          chart.querySelectorAll("[data-chart-range]").forEach(function(item) { item.classList.toggle("active", item === button); });
+          chart.querySelectorAll("[data-range-panel]").forEach(function(panel) { panel.classList.toggle("active", panel.getAttribute("data-range-panel") === range); });
+        });
+      });
+      chart.querySelectorAll("[data-chart-hit]").forEach(function(hit) {
+        hit.addEventListener("pointermove", function(event) {
+          if (!tooltip) return;
+          tooltip.textContent = hit.getAttribute("data-tooltip") || "";
+          tooltip.style.display = "block";
+          var stage = chart.querySelector(".chart-stage").getBoundingClientRect();
+          var x = Math.min(stage.width - 12, Math.max(8, event.clientX - stage.left + 12));
+          var y = Math.min(stage.height - 42, Math.max(8, event.clientY - stage.top - 10));
+          tooltip.style.left = x + "px";
+          tooltip.style.top = y + "px";
+        });
+        hit.addEventListener("pointerleave", function() {
+          if (tooltip) tooltip.style.display = "none";
+        });
+      });
+    });
+  </script>
 </body>
 </html>`;
 }
@@ -3637,7 +3701,7 @@ function badge(value) {
 
 function chartImage(row) {
   if (!row.market?.history?.length) return `<p class="muted">차트 미표시: ${escapeHtml(chartMissingReason(row))}</p>`;
-  return `<img class="chart" src="${escapeHtml(row.chartPath)}" alt="${escapeHtml(row.ticker)} price chart">`;
+  return renderTradingChart(row);
 }
 
 function generateCharts(tickers, marketData) {
@@ -3647,15 +3711,186 @@ function generateCharts(tickers, marketData) {
     const item = marketItem(marketData, ticker);
     if (!item.history || item.history.length < 5) continue;
     const filePath = path.join(CHARTS_DIR, `${ticker}.png`);
-    writeChartPng(filePath, ticker, item.history.slice(-30).map((row) => row.close));
+    writeChartPng(filePath, ticker, item.history.slice(-66));
     count += 1;
   }
   return count;
 }
 
-function writeChartPng(filePath, ticker, closes) {
-  const width = 640;
-  const height = 300;
+function chartBars(history, count) {
+  return (history || [])
+    .filter((bar) => ["open", "high", "low", "close"].every((key) => Number.isFinite(Number(bar[key]))))
+    .slice(-count)
+    .map((bar) => ({
+      date: bar.date,
+      open: Number(bar.open),
+      high: Number(bar.high),
+      low: Number(bar.low),
+      close: Number(bar.close),
+      volume: Number.isFinite(Number(bar.volume)) ? Number(bar.volume) : 0
+    }));
+}
+
+function chartReferenceLevels(row, bars) {
+  const closes = bars.map((bar) => bar.close);
+  const ma20 = movingAverage(closes, 20);
+  const latest = bars.at(-1);
+  const previous = bars.at(-2);
+  const recommendationPrice = Number(row.closePriceAtRecommendation ?? row.recommendationPrice ?? row.market?.lastClose);
+  const invalidationPrice = ma20.at(-1);
+  return [
+    latest ? { key: "current", label: "현재가", value: latest.close, color: "#172026", dash: "" } : null,
+    Number.isFinite(recommendationPrice) ? { key: "recommendation", label: "추천가", value: recommendationPrice, color: "#2563eb", dash: "4 4" } : null,
+    previous ? { key: "previous-high", label: "전일 고점", value: previous.high, color: "#0f766e", dash: "6 4" } : null,
+    Number.isFinite(invalidationPrice) ? { key: "invalidation", label: "무효화", value: invalidationPrice, color: "#b91c1c", dash: "3 5" } : null
+  ].filter(Boolean);
+}
+
+function renderTradingChart(row) {
+  const ranges = [
+    { key: "1M", label: "1M", count: 22 },
+    { key: "3M", label: "3M", count: 66 },
+    { key: "6M", label: "6M", count: 132 }
+  ];
+  const panels = ranges
+    .map((range) => renderChartSvg(row, range, range.key === "3M"))
+    .filter(Boolean)
+    .join("");
+  if (!panels) return `<p class="muted">차트 미표시: ${escapeHtml(chartMissingReason(row))}</p>`;
+  return `<div class="trading-chart" data-trading-chart="${escapeHtml(row.ticker)}">
+    <div class="chart-toolbar">
+      <div class="chart-title"><strong>${escapeHtml(row.ticker)}</strong><span>일봉 OHLCV · MA5/MA20</span></div>
+      <div class="range-toggle" role="group" aria-label="${escapeHtml(row.ticker)} chart range">
+        ${ranges.map((range) => `<button type="button" data-chart-range="${range.key}"${range.key === "3M" ? " class=\"active\"" : ""}>${range.label}</button>`).join("")}
+      </div>
+    </div>
+    <div class="chart-stage">
+      ${panels}
+      <div class="chart-tooltip" data-chart-tooltip></div>
+    </div>
+    <div class="chart-legend">
+      <span><i class="legend-up"></i>상승</span>
+      <span><i class="legend-down"></i>하락</span>
+      <span><i class="legend-ma5"></i>MA5</span>
+      <span><i class="legend-ma20"></i>MA20</span>
+      <span><i class="legend-entry"></i>전일 고점/추천가</span>
+      <span><i class="legend-invalid"></i>무효화</span>
+    </div>
+    <img class="chart chart-fallback" src="${escapeHtml(row.chartPath)}" alt="${escapeHtml(row.ticker)} candlestick chart">
+  </div>`;
+}
+
+function renderChartSvg(row, range, active) {
+  const bars = chartBars(row.market?.history, range.count);
+  if (bars.length < 5) return "";
+  const width = 760;
+  const height = 420;
+  const priceTop = 24;
+  const priceHeight = 286;
+  const volumeTop = 322;
+  const volumeHeight = 74;
+  const margin = { left: 18, right: 64 };
+  const closes = bars.map((bar) => bar.close);
+  const ma5 = movingAverage(closes, 5);
+  const ma20 = movingAverage(closes, 20);
+  const refs = chartReferenceLevels(row, bars);
+  const priceValues = [
+    ...bars.flatMap((bar) => [bar.open, bar.high, bar.low, bar.close]),
+    ...ma5.filter(Number.isFinite),
+    ...ma20.filter(Number.isFinite),
+    ...refs.map((ref) => ref.value).filter(Number.isFinite)
+  ];
+  const min = Math.min(...priceValues);
+  const max = Math.max(...priceValues);
+  const pad = Math.max((max - min) * 0.08, max * 0.005, 0.5);
+  const priceMin = min - pad;
+  const priceMax = max + pad;
+  const priceSpan = priceMax - priceMin || 1;
+  const maxVolume = Math.max(...bars.map((bar) => bar.volume), 1);
+  const plotWidth = width - margin.left - margin.right;
+  const step = plotWidth / bars.length;
+  const candleWidth = clamp(step * 0.58, 3, 10);
+  const xCenter = (index) => margin.left + step * index + step / 2;
+  const yPrice = (value) => priceTop + ((priceMax - value) / priceSpan) * priceHeight;
+  const yVolume = (value) => volumeTop + volumeHeight - (value / maxVolume) * volumeHeight;
+  const grid = [0, 0.25, 0.5, 0.75, 1].map((ratio) => {
+    const y = priceTop + ratio * priceHeight;
+    const value = priceMax - ratio * priceSpan;
+    return `<line x1="${margin.left}" y1="${num(y, 1)}" x2="${width - margin.right}" y2="${num(y, 1)}" class="chart-grid"></line><text x="${width - margin.right + 8}" y="${num(y + 4, 1)}" class="axis-label">${escapeHtml(price(value))}</text>`;
+  }).join("");
+  const dateTicks = chartDateTicks(bars).map(({ index, label }) => `<text x="${num(xCenter(index), 1)}" y="${height - 6}" class="axis-label date-label">${escapeHtml(label)}</text>`).join("");
+  const candles = bars.map((bar, index) => {
+    const x = xCenter(index);
+    const up = bar.close >= bar.open;
+    const bodyTop = yPrice(Math.max(bar.open, bar.close));
+    const bodyHeight = Math.max(1, Math.abs(yPrice(bar.open) - yPrice(bar.close)));
+    const volumeY = yVolume(bar.volume);
+    const tooltip = `${bar.date} | O ${price(bar.open)} H ${price(bar.high)} L ${price(bar.low)} C ${price(bar.close)} | Vol ${formatVolume(bar.volume)}`;
+    return `<g class="${up ? "candle-up" : "candle-down"}">
+      <line x1="${num(x, 1)}" y1="${num(yPrice(bar.high), 1)}" x2="${num(x, 1)}" y2="${num(yPrice(bar.low), 1)}" class="wick"></line>
+      <rect x="${num(x - candleWidth / 2, 1)}" y="${num(bodyTop, 1)}" width="${num(candleWidth, 1)}" height="${num(bodyHeight, 1)}" class="body"></rect>
+      <rect x="${num(x - candleWidth / 2, 1)}" y="${num(volumeY, 1)}" width="${num(candleWidth, 1)}" height="${num(volumeTop + volumeHeight - volumeY, 1)}" class="volume-bar"></rect>
+      <rect x="${num(x - step / 2, 1)}" y="${priceTop}" width="${num(step, 1)}" height="${volumeTop + volumeHeight - priceTop}" class="chart-hit" data-chart-hit data-tooltip="${escapeHtml(tooltip)}"><title>${escapeHtml(tooltip)}</title></rect>
+    </g>`;
+  }).join("");
+  const ma5Path = seriesPath(ma5, xCenter, yPrice);
+  const ma20Path = seriesPath(ma20, xCenter, yPrice);
+  const refsSvg = refs.map((ref) => {
+    const y = yPrice(ref.value);
+    return `<g class="ref-line ref-${escapeHtml(ref.key)}">
+      <line x1="${margin.left}" y1="${num(y, 1)}" x2="${width - margin.right}" y2="${num(y, 1)}" stroke="${ref.color}" stroke-dasharray="${ref.dash}"></line>
+      <text x="${width - margin.right + 8}" y="${num(y - 5, 1)}" fill="${ref.color}" class="ref-label">${escapeHtml(ref.label)}</text>
+    </g>`;
+  }).join("");
+  const markerDate = row.recommendationDate || row.market?.dataDate;
+  const markerIndex = Math.max(0, bars.findIndex((bar) => bar.date === markerDate));
+  const marker = markerIndex >= 0
+    ? `<g class="recommendation-marker"><line x1="${num(xCenter(markerIndex), 1)}" y1="${priceTop}" x2="${num(xCenter(markerIndex), 1)}" y2="${volumeTop + volumeHeight}" stroke-dasharray="3 5"></line><circle cx="${num(xCenter(markerIndex), 1)}" cy="${num(yPrice(bars[markerIndex].close), 1)}" r="5"></circle><text x="${num(xCenter(markerIndex) + 7, 1)}" y="${num(yPrice(bars[markerIndex].close) - 7, 1)}">추천일</text></g>`
+    : "";
+  return `<svg class="candlestick-chart${active ? " active" : ""}" data-range-panel="${range.key}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(row.ticker)} ${range.label} candlestick chart">
+    <rect x="0" y="0" width="${width}" height="${height}" class="chart-bg"></rect>
+    ${grid}
+    <line x1="${margin.left}" y1="${priceTop + priceHeight}" x2="${width - margin.right}" y2="${priceTop + priceHeight}" class="axis-line"></line>
+    <line x1="${margin.left}" y1="${volumeTop + volumeHeight}" x2="${width - margin.right}" y2="${volumeTop + volumeHeight}" class="axis-line"></line>
+    <text x="${margin.left}" y="${volumeTop - 8}" class="panel-label">Volume</text>
+    ${refsSvg}
+    ${candles}
+    ${ma5Path ? `<path d="${ma5Path}" class="ma-line ma5"></path>` : ""}
+    ${ma20Path ? `<path d="${ma20Path}" class="ma-line ma20"></path>` : ""}
+    ${marker}
+    ${dateTicks}
+  </svg>`;
+}
+
+function chartDateTicks(bars) {
+  const maxTicks = bars.length > 90 ? 6 : bars.length > 40 ? 5 : 4;
+  const used = new Set();
+  return Array.from({ length: maxTicks }, (_, i) => Math.round((i / Math.max(1, maxTicks - 1)) * (bars.length - 1)))
+    .filter((index) => !used.has(index) && used.add(index))
+    .map((index) => ({ index, label: bars[index].date.slice(5) }));
+}
+
+function seriesPath(values, x, y) {
+  return values.reduce((path, value, index) => {
+    if (!Number.isFinite(value)) return path;
+    const command = path ? "L" : "M";
+    return `${path}${command}${num(x(index), 1)} ${num(y(value), 1)} `;
+  }, "").trim();
+}
+
+function formatVolume(value) {
+  const number = Number(value);
+  if (!Number.isFinite(number)) return "데이터 없음";
+  if (number >= 1000000000) return `${num(number / 1000000000, 2)}B`;
+  if (number >= 1000000) return `${num(number / 1000000, 1)}M`;
+  if (number >= 1000) return `${num(number / 1000, 0)}K`;
+  return num(number, 0);
+}
+
+function writeChartPng(filePath, ticker, history) {
+  const bars = chartBars(history, 66);
+  const width = 760;
+  const height = 420;
   const pixels = Buffer.alloc(width * height * 4, 255);
   const setPixel = (x, y, color) => {
     if (x < 0 || x >= width || y < 0 || y >= height) return;
@@ -3672,23 +3907,52 @@ function writeChartPng(filePath, ticker, closes) {
       setPixel(x0 + (x1 - x0) * t, y0 + (y1 - y0) * t, color);
     }
   };
-  const margin = { left: 36, right: 18, top: 28, bottom: 28 };
-  const min = Math.min(...closes);
-  const max = Math.max(...closes);
-  const span = max === min ? 1 : max - min;
-  const x = (i) => margin.left + (i / Math.max(1, closes.length - 1)) * (width - margin.left - margin.right);
-  const y = (value) => height - margin.bottom - ((value - min) / span) * (height - margin.top - margin.bottom);
-  for (let gx = margin.left; gx < width - margin.right; gx += 80) line(gx, margin.top, gx, height - margin.bottom, [230, 235, 240, 255]);
-  for (let gy = margin.top; gy < height - margin.bottom; gy += 48) line(margin.left, gy, width - margin.right, gy, [230, 235, 240, 255]);
-  line(margin.left, height - margin.bottom, width - margin.right, height - margin.bottom, [120, 130, 140, 255]);
-  line(margin.left, margin.top, margin.left, height - margin.bottom, [120, 130, 140, 255]);
-  drawSeries(closes, x, y, line, [37, 99, 235, 255]);
-  drawSeries(movingAverage(closes, 5), x, y, line, [5, 150, 105, 255]);
+  const rect = (x, y, w, h, color) => {
+    for (let py = Math.max(0, Math.round(y)); py <= Math.min(height - 1, Math.round(y + h)); py += 1) {
+      for (let px = Math.max(0, Math.round(x)); px <= Math.min(width - 1, Math.round(x + w)); px += 1) setPixel(px, py, color);
+    }
+  };
+  if (bars.length < 5) {
+    fs.writeFileSync(filePath, encodePng(width, height, pixels));
+    return;
+  }
+  const margin = { left: 28, right: 66, top: 24 };
+  const priceHeight = 286;
+  const volumeTop = 322;
+  const volumeHeight = 74;
+  const prices = bars.flatMap((bar) => [bar.open, bar.high, bar.low, bar.close]);
+  const min = Math.min(...prices);
+  const max = Math.max(...prices);
+  const pad = Math.max((max - min) * 0.08, max * 0.005, 0.5);
+  const priceMin = min - pad;
+  const priceMax = max + pad;
+  const span = priceMax - priceMin || 1;
+  const plotWidth = width - margin.left - margin.right;
+  const step = plotWidth / bars.length;
+  const candleWidth = clamp(step * 0.58, 3, 10);
+  const maxVolume = Math.max(...bars.map((bar) => bar.volume), 1);
+  const x = (i) => margin.left + step * i + step / 2;
+  const y = (value) => margin.top + ((priceMax - value) / span) * priceHeight;
+  const yVolume = (value) => volumeTop + volumeHeight - (value / maxVolume) * volumeHeight;
+  for (let gx = margin.left; gx < width - margin.right; gx += 90) line(gx, margin.top, gx, volumeTop + volumeHeight, [235, 239, 242, 255]);
+  for (let gy = margin.top; gy <= margin.top + priceHeight; gy += 58) line(margin.left, gy, width - margin.right, gy, [235, 239, 242, 255]);
+  line(margin.left, margin.top + priceHeight, width - margin.right, margin.top + priceHeight, [120, 130, 140, 255]);
+  line(margin.left, volumeTop + volumeHeight, width - margin.right, volumeTop + volumeHeight, [120, 130, 140, 255]);
+  bars.forEach((bar, index) => {
+    const up = bar.close >= bar.open;
+    const color = up ? [5, 150, 105, 255] : [220, 38, 38, 255];
+    const cx = x(index);
+    line(cx, y(bar.high), cx, y(bar.low), color);
+    rect(cx - candleWidth / 2, Math.min(y(bar.open), y(bar.close)), candleWidth, Math.max(1, Math.abs(y(bar.open) - y(bar.close))), color);
+    rect(cx - candleWidth / 2, yVolume(bar.volume), candleWidth, volumeTop + volumeHeight - yVolume(bar.volume), [color[0], color[1], color[2], 110]);
+  });
+  const closes = bars.map((bar) => bar.close);
+  drawSeries(movingAverage(closes, 5), x, y, line, [37, 99, 235, 255]);
   drawSeries(movingAverage(closes, 20), x, y, line, [234, 88, 12, 255]);
-  const lx = x(closes.length - 1);
-  const ly = y(closes.at(-1));
-  for (let dx = -3; dx <= 3; dx += 1) {
-    for (let dy = -3; dy <= 3; dy += 1) setPixel(lx + dx, ly + dy, [220, 38, 38, 255]);
+  const latest = bars.at(-1);
+  if (latest) {
+    const ly = y(latest.close);
+    line(margin.left, ly, width - margin.right, ly, [23, 32, 38, 255]);
   }
   fs.writeFileSync(filePath, encodePng(width, height, pixels));
 }

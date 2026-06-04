@@ -85,7 +85,11 @@ function main() {
   assert(fs.existsSync(chartsDir), "Missing reports/charts directory");
   const chartFiles = fs.readdirSync(chartsDir).filter((name) => name.endsWith(".png"));
   assert(chartFiles.length > 0, "No chart images were generated");
-  assert(html.includes('<img class="chart"'), "HTML card charts are not linked");
+  assert(html.includes('class="chart chart-fallback"'), "HTML chart fallback images are not linked");
+  assert(html.includes('data-trading-chart'), "HTML missing interactive trading chart container");
+  assert(html.includes('class="candlestick-chart'), "HTML missing candlestick SVG chart");
+  assert(html.includes('data-chart-hit'), "HTML missing OHLCV tooltip hit areas");
+  assert(html.includes('data-chart-range="1M"') && html.includes('data-chart-range="3M"') && html.includes('data-chart-range="6M"'), "HTML missing chart range controls");
 
   for (const file of [
     "src/data/newsProvider.js",

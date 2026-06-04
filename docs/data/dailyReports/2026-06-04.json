@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-04",
-  "generatedAt": "2026년 6월 4일 목요일 오전 11:45",
+  "generatedAt": "2026년 6월 4일 목요일 오후 12:08",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -345,8 +345,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 68,
         "moneyFlowScoreInitial": 68,
-        "moneyFlowScoreFinal": 83,
-        "finalRawScore": 83,
+        "moneyFlowScoreFinal": 81,
+        "finalRawScore": 81,
         "todayActionLabel": "돌파 확인 후 관찰",
         "reasonConfidence": "LOW",
         "oneDayReturn": 4.02,

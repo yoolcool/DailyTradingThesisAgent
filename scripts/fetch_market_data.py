@@ -67,14 +67,17 @@ def summarize_history(ticker, asset_type, history):
       high_52w = float(history["High"].max()) if "High" in history else None
       data_date = history.index[-1].date().isoformat()
       chart_history = []
-      for idx, row in history.tail(60).iterrows():
+      for idx, row in history.tail(132).iterrows():
           close_value = row.get("Close")
           if close_value is None or pd.isna(close_value):
               continue
           chart_history.append({
               "date": idx.date().isoformat(),
+              "open": safe_float(row.get("Open")),
               "high": safe_float(row.get("High")),
+              "low": safe_float(row.get("Low")),
               "close": safe_float(close_value),
+              "volume": int(row.get("Volume")) if row.get("Volume") is not None and not pd.isna(row.get("Volume")) else None,
           })
 
       relative_volume = None

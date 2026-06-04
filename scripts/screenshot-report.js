@@ -46,6 +46,9 @@ async function main() {
         stockCards: document.querySelectorAll("[data-stock-card]").length,
         etfCards: document.querySelectorAll("[data-etf-card]").length,
         chartImages: document.querySelectorAll("img.chart").length,
+        tradingCharts: document.querySelectorAll("[data-trading-chart]").length,
+        activeCandles: document.querySelectorAll(".candlestick-chart.active").length,
+        tooltipHits: document.querySelectorAll("[data-chart-hit]").length,
         detailsCount: document.querySelectorAll("details").length,
         hasValidWarning: warning.includes("MOCK DATA") || warning.includes("REAL DATA TEST"),
         hasConclusion: body.includes("오늘의 분리 결론"),
@@ -70,6 +73,9 @@ async function main() {
     if (checks.stockCards < 1) throw new Error("Rendered page has no stock cards.");
     if (checks.etfCards !== 5) throw new Error(`Rendered page should have exactly 5 detailed ETF cards, found ${checks.etfCards}.`);
     if (checks.chartImages < 1) throw new Error("Rendered page has no chart images.");
+    if (checks.tradingCharts < 1) throw new Error("Rendered page has no interactive trading charts.");
+    if (checks.activeCandles < 1) throw new Error("Rendered page has no active candlestick charts.");
+    if (checks.tooltipHits < 1) throw new Error("Rendered page has no OHLCV tooltip hit areas.");
 
     await page.screenshot({ path: pngPath, fullPage: true });
   } catch (error) {
