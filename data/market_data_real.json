@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T13:12:49Z",
+  "generatedAt": "2026-06-04T02:45:17Z",
   "dataSource": "yfinance",
   "universe": {
     "stockUniverse": "NASDAQ_100",
@@ -10,24 +10,19 @@
     "NVDA": {
       "ticker": "NVDA",
       "assetType": "STOCK",
-      "lastClose": 222.82,
-      "dailyChangePct": -0.69,
-      "return5dPct": 3.7,
-      "return20dPct": 12.26,
-      "volume": 192211900,
-      "avgVolume20d": 173794410,
-      "relativeVolume": 1.11,
+      "lastClose": 214.75,
+      "dailyChangePct": -3.62,
+      "return5dPct": 1.01,
+      "return20dPct": 9.29,
+      "volume": 150147825,
+      "avgVolume20d": 175689021,
+      "relativeVolume": 0.85,
       "high52w": 236.54,
-      "drawdownFrom52wHighPct": -5.8,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -9.21,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 182.91,
-          "close": 182.65
-        },
         {
           "date": "2026-03-10",
           "high": 186.44,
@@ -322,30 +317,30 @@
           "date": "2026-06-02",
           "high": 232.28,
           "close": 222.82
+        },
+        {
+          "date": "2026-06-03",
+          "high": 222.82,
+          "close": 214.75
         }
       ]
     },
     "GOOGL": {
       "ticker": "GOOGL",
       "assetType": "STOCK",
-      "lastClose": 361.85,
-      "dailyChangePct": -3.86,
-      "return5dPct": -6.95,
-      "return20dPct": -5.58,
-      "volume": 50181400,
-      "avgVolume20d": 28466415,
+      "lastClose": 358.99,
+      "dailyChangePct": -0.79,
+      "return5dPct": -7.67,
+      "return20dPct": -7.58,
+      "volume": 52636770,
+      "avgVolume20d": 29915868,
       "relativeVolume": 1.76,
       "high52w": 408.61,
-      "drawdownFrom52wHighPct": -11.44,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -12.14,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 306.8,
-          "close": 306.36
-        },
         {
           "date": "2026-03-10",
           "high": 309.51,
@@ -640,30 +635,30 @@
           "date": "2026-06-02",
           "high": 373.54,
           "close": 361.85
+        },
+        {
+          "date": "2026-06-03",
+          "high": 366.45,
+          "close": 358.99
         }
       ]
     },
     "GOOG": {
       "ticker": "GOOG",
       "assetType": "STOCK",
-      "lastClose": 358.39,
-      "dailyChangePct": -3.81,
-      "return5dPct": -6.87,
-      "return20dPct": -5.6,
-      "volume": 34518300,
-      "avgVolume20d": 19748050,
-      "relativeVolume": 1.75,
+      "lastClose": 355.68,
+      "dailyChangePct": -0.76,
+      "return5dPct": -7.57,
+      "return20dPct": -7.44,
+      "volume": 41053259,
+      "avgVolume20d": 21035602,
+      "relativeVolume": 1.95,
       "high52w": 404.47,
-      "drawdownFrom52wHighPct": -11.39,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -12.06,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 306.5,
-          "close": 306.01
-        },
         {
           "date": "2026-03-10",
           "high": 309.15,
@@ -958,30 +953,30 @@
           "date": "2026-06-02",
           "high": 369.79,
           "close": 358.39
+        },
+        {
+          "date": "2026-06-03",
+          "high": 362.5,
+          "close": 355.68
         }
       ]
     },
     "AAPL": {
       "ticker": "AAPL",
       "assetType": "STOCK",
-      "lastClose": 315.2,
-      "dailyChangePct": 2.9,
-      "return5dPct": 2.23,
-      "return20dPct": 13.86,
-      "volume": 44416900,
-      "avgVolume20d": 47398470,
-      "relativeVolume": 0.94,
-      "high52w": 315.45,
-      "drawdownFrom52wHighPct": -0.08,
-      "dataDate": "2026-06-02",
+      "lastClose": 310.26,
+      "dailyChangePct": -1.57,
+      "return5dPct": -0.19,
+      "return20dPct": 9.18,
+      "volume": 50459550,
+      "avgVolume20d": 47461752,
+      "relativeVolume": 1.06,
+      "high52w": 316.94,
+      "drawdownFrom52wHighPct": -2.11,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 261.15,
-          "close": 259.88
-        },
         {
           "date": "2026-03-10",
           "high": 262.48,
@@ -1276,30 +1271,30 @@
           "date": "2026-06-02",
           "high": 315.45,
           "close": 315.2
+        },
+        {
+          "date": "2026-06-03",
+          "high": 316.94,
+          "close": 310.26
         }
       ]
     },
     "MSFT": {
       "ticker": "MSFT",
       "assetType": "STOCK",
-      "lastClose": 441.31,
-      "dailyChangePct": -4.17,
-      "return5dPct": 6.08,
-      "return20dPct": 6.69,
-      "volume": 36794900,
-      "avgVolume20d": 36496985,
-      "relativeVolume": 1.01,
+      "lastClose": 427.34,
+      "dailyChangePct": -3.17,
+      "return5dPct": 3.55,
+      "return20dPct": 3.88,
+      "volume": 35953959,
+      "avgVolume20d": 37021732,
+      "relativeVolume": 0.97,
       "high52w": 555.45,
-      "drawdownFrom52wHighPct": -20.55,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -23.06,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 410.21,
-          "close": 409.41
-        },
         {
           "date": "2026-03-10",
           "high": 410.2,
@@ -1594,30 +1589,30 @@
           "date": "2026-06-02",
           "high": 453.5,
           "close": 441.31
+        },
+        {
+          "date": "2026-06-03",
+          "high": 440.39,
+          "close": 427.34
         }
       ]
     },
     "AMZN": {
       "ticker": "AMZN",
       "assetType": "STOCK",
-      "lastClose": 256.52,
-      "dailyChangePct": -1.81,
-      "return5dPct": -3.31,
-      "return20dPct": -5.71,
-      "volume": 41683600,
-      "avgVolume20d": 39283425,
-      "relativeVolume": 1.06,
+      "lastClose": 250.02,
+      "dailyChangePct": -2.53,
+      "return5dPct": -8.03,
+      "return20dPct": -8.6,
+      "volume": 50988687,
+      "avgVolume20d": 39743804,
+      "relativeVolume": 1.28,
       "high52w": 278.56,
-      "drawdownFrom52wHighPct": -7.91,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -10.25,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 213.82,
-          "close": 213.49
-        },
         {
           "date": "2026-03-10",
           "high": 215.65,
@@ -1912,30 +1907,30 @@
           "date": "2026-06-02",
           "high": 261.2,
           "close": 256.52
+        },
+        {
+          "date": "2026-06-03",
+          "high": 257.09,
+          "close": 250.02
         }
       ]
     },
     "AVGO": {
       "ticker": "AVGO",
       "assetType": "STOCK",
-      "lastClose": 481.57,
-      "dailyChangePct": 4.7,
-      "return5dPct": 14.11,
-      "return20dPct": 15.62,
-      "volume": 37626800,
-      "avgVolume20d": 21627380,
-      "relativeVolume": 1.74,
-      "high52w": 488.82,
-      "drawdownFrom52wHighPct": -1.48,
-      "dataDate": "2026-06-02",
+      "lastClose": 479.23,
+      "dailyChangePct": -0.49,
+      "return5dPct": 13.6,
+      "return20dPct": 12.14,
+      "volume": 36128462,
+      "avgVolume20d": 22409038,
+      "relativeVolume": 1.61,
+      "high52w": 495.0,
+      "drawdownFrom52wHighPct": -3.19,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 348.49,
-          "close": 345.75
-        },
         {
           "date": "2026-03-10",
           "high": 353.14,
@@ -2230,30 +2225,30 @@
           "date": "2026-06-02",
           "high": 488.82,
           "close": 481.57
+        },
+        {
+          "date": "2026-06-03",
+          "high": 495.0,
+          "close": 479.23
         }
       ]
     },
     "TSLA": {
       "ticker": "TSLA",
       "assetType": "STOCK",
-      "lastClose": 423.74,
-      "dailyChangePct": 1.89,
-      "return5dPct": -2.27,
-      "return20dPct": 7.96,
-      "volume": 37460000,
-      "avgVolume20d": 50995705,
-      "relativeVolume": 0.73,
+      "lastClose": 423.7,
+      "dailyChangePct": -0.01,
+      "return5dPct": -3.78,
+      "return20dPct": 8.82,
+      "volume": 43747438,
+      "avgVolume20d": 50800846,
+      "relativeVolume": 0.86,
       "high52w": 498.83,
-      "drawdownFrom52wHighPct": -15.05,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -15.06,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 401.59,
-          "close": 398.68
-        },
         {
           "date": "2026-03-10",
           "high": 406.59,
@@ -2548,30 +2543,30 @@
           "date": "2026-06-02",
           "high": 424.42,
           "close": 423.74
+        },
+        {
+          "date": "2026-06-03",
+          "high": 433.6,
+          "close": 423.7
         }
       ]
     },
     "META": {
       "ticker": "META",
       "assetType": "STOCK",
-      "lastClose": 597.63,
-      "dailyChangePct": -0.47,
-      "return5dPct": -2.4,
-      "return20dPct": -2.09,
-      "volume": 18156800,
-      "avgVolume20d": 15503530,
-      "relativeVolume": 1.17,
+      "lastClose": 622.98,
+      "dailyChangePct": 4.24,
+      "return5dPct": -1.93,
+      "return20dPct": 2.98,
+      "volume": 20346772,
+      "avgVolume20d": 15667063,
+      "relativeVolume": 1.3,
       "high52w": 796.25,
-      "drawdownFrom52wHighPct": -24.94,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -21.76,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 647.75,
-          "close": 647.39
-        },
         {
           "date": "2026-03-10",
           "high": 660.3,
@@ -2866,30 +2861,30 @@
           "date": "2026-06-02",
           "high": 608.88,
           "close": 597.63
+        },
+        {
+          "date": "2026-06-03",
+          "high": 624.1,
+          "close": 622.98
         }
       ]
     },
     "MU": {
       "ticker": "MU",
       "assetType": "STOCK",
-      "lastClose": 1064.1,
-      "dailyChangePct": 2.76,
-      "return5dPct": 18.78,
-      "return20dPct": 84.6,
-      "volume": 47088600,
-      "avgVolume20d": 56236095,
-      "relativeVolume": 0.84,
-      "high52w": 1076.5601,
-      "drawdownFrom52wHighPct": -1.16,
-      "dataDate": "2026-06-02",
+      "lastClose": 1079.5699,
+      "dailyChangePct": 1.45,
+      "return5dPct": 16.28,
+      "return20dPct": 68.63,
+      "volume": 39267880,
+      "avgVolume20d": 55009404,
+      "relativeVolume": 0.71,
+      "high52w": 1089.29,
+      "drawdownFrom52wHighPct": -0.89,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 390.0,
-          "close": 389.32
-        },
         {
           "date": "2026-03-10",
           "high": 415.31,
@@ -3184,30 +3179,30 @@
           "date": "2026-06-02",
           "high": 1076.5601,
           "close": 1064.1
+        },
+        {
+          "date": "2026-06-03",
+          "high": 1089.29,
+          "close": 1079.5699
         }
       ]
     },
     "WMT": {
       "ticker": "WMT",
       "assetType": "STOCK",
-      "lastClose": 113.06,
-      "dailyChangePct": -1.34,
-      "return5dPct": -4.65,
-      "return20dPct": -13.25,
-      "volume": 27327400,
-      "avgVolume20d": 23059405,
-      "relativeVolume": 1.19,
+      "lastClose": 116.89,
+      "dailyChangePct": 3.39,
+      "return5dPct": -1.39,
+      "return20dPct": -10.63,
+      "volume": 29821282,
+      "avgVolume20d": 24020554,
+      "relativeVolume": 1.24,
       "high52w": 135.16,
-      "drawdownFrom52wHighPct": -16.35,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -13.52,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 124.51,
-          "close": 124.34
-        },
         {
           "date": "2026-03-10",
           "high": 126.1,
@@ -3502,30 +3497,30 @@
           "date": "2026-06-02",
           "high": 114.57,
           "close": 113.06
+        },
+        {
+          "date": "2026-06-03",
+          "high": 117.29,
+          "close": 116.89
         }
       ]
     },
     "AMD": {
       "ticker": "AMD",
       "assetType": "STOCK",
-      "lastClose": 521.54,
-      "dailyChangePct": 2.24,
-      "return5dPct": 3.5,
-      "return20dPct": 52.7,
-      "volume": 24180500,
-      "avgVolume20d": 38850670,
-      "relativeVolume": 0.62,
-      "high52w": 527.2,
-      "drawdownFrom52wHighPct": -1.07,
-      "dataDate": "2026-06-02",
+      "lastClose": 542.52,
+      "dailyChangePct": 4.02,
+      "return5dPct": 9.48,
+      "return20dPct": 52.71,
+      "volume": 28701602,
+      "avgVolume20d": 37079630,
+      "relativeVolume": 0.77,
+      "high52w": 546.44,
+      "drawdownFrom52wHighPct": -0.72,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 202.97,
-          "close": 202.68
-        },
         {
           "date": "2026-03-10",
           "high": 206.59,
@@ -3820,30 +3815,30 @@
           "date": "2026-06-02",
           "high": 522.49,
           "close": 521.54
+        },
+        {
+          "date": "2026-06-03",
+          "high": 546.44,
+          "close": 542.52
         }
       ]
     },
     "ASML": {
       "ticker": "ASML",
       "assetType": "STOCK",
-      "lastClose": 1705.37,
-      "dailyChangePct": 4.72,
-      "return5dPct": 4.49,
-      "return20dPct": 23.02,
-      "volume": 1480800,
-      "avgVolume20d": 1616040,
-      "relativeVolume": 0.92,
-      "high52w": 1708.3199,
-      "drawdownFrom52wHighPct": -0.17,
-      "dataDate": "2026-06-02",
+      "lastClose": 1726.36,
+      "dailyChangePct": 1.23,
+      "return5dPct": 8.04,
+      "return20dPct": 19.64,
+      "volume": 1812048,
+      "avgVolume20d": 1625732,
+      "relativeVolume": 1.11,
+      "high52w": 1743.27,
+      "drawdownFrom52wHighPct": -0.97,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 1359.0,
-          "close": 1357.42
-        },
         {
           "date": "2026-03-10",
           "high": 1407.54,
@@ -4138,30 +4133,30 @@
           "date": "2026-06-02",
           "high": 1708.3199,
           "close": 1705.37
+        },
+        {
+          "date": "2026-06-03",
+          "high": 1743.27,
+          "close": 1726.36
         }
       ]
     },
     "INTC": {
       "ticker": "INTC",
       "assetType": "STOCK",
-      "lastClose": 107.93,
-      "dailyChangePct": -1.28,
-      "return5dPct": -12.62,
-      "return20dPct": 12.69,
-      "volume": 105508800,
-      "avgVolume20d": 140206735,
-      "relativeVolume": 0.75,
+      "lastClose": 112.71,
+      "dailyChangePct": 4.43,
+      "return5dPct": -7.44,
+      "return20dPct": 4.22,
+      "volume": 116558375,
+      "avgVolume20d": 136151923,
+      "relativeVolume": 0.86,
       "high52w": 132.75,
-      "drawdownFrom52wHighPct": -18.7,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -15.1,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 45.76,
-          "close": 45.58
-        },
         {
           "date": "2026-03-10",
           "high": 47.88,
@@ -4456,30 +4451,30 @@
           "date": "2026-06-02",
           "high": 109.0,
           "close": 107.93
+        },
+        {
+          "date": "2026-06-03",
+          "high": 118.29,
+          "close": 112.71
         }
       ]
     },
     "CSCO": {
       "ticker": "CSCO",
       "assetType": "STOCK",
-      "lastClose": 128.0,
-      "dailyChangePct": 5.5,
-      "return5dPct": 8.17,
-      "return20dPct": 38.18,
-      "volume": 26353200,
-      "avgVolume20d": 29368945,
-      "relativeVolume": 0.9,
-      "high52w": 128.22,
-      "drawdownFrom52wHighPct": -0.17,
-      "dataDate": "2026-06-02",
+      "lastClose": 126.5,
+      "dailyChangePct": -1.17,
+      "return5dPct": 5.71,
+      "return20dPct": 34.15,
+      "volume": 29265646,
+      "avgVolume20d": 30164332,
+      "relativeVolume": 0.97,
+      "high52w": 129.4155,
+      "drawdownFrom52wHighPct": -2.25,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 77.56,
-          "close": 76.21
-        },
         {
           "date": "2026-03-10",
           "high": 79.01,
@@ -4774,30 +4769,30 @@
           "date": "2026-06-02",
           "high": 128.22,
           "close": 128.0
+        },
+        {
+          "date": "2026-06-03",
+          "high": 129.4155,
+          "close": 126.5
         }
       ]
     },
     "COST": {
       "ticker": "COST",
       "assetType": "STOCK",
-      "lastClose": 954.27,
-      "dailyChangePct": 0.86,
-      "return5dPct": -4.85,
-      "return20dPct": -5.78,
-      "volume": 2214600,
-      "avgVolume20d": 2444365,
-      "relativeVolume": 0.91,
+      "lastClose": 961.83,
+      "dailyChangePct": 0.79,
+      "return5dPct": -4.17,
+      "return20dPct": -5.37,
+      "volume": 1944764,
+      "avgVolume20d": 2468968,
+      "relativeVolume": 0.79,
       "high52w": 1096.5,
-      "drawdownFrom52wHighPct": -12.97,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -12.28,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 1007.41,
-          "close": 1005.3
-        },
         {
           "date": "2026-03-10",
           "high": 1010.1,
@@ -5092,30 +5087,30 @@
           "date": "2026-06-02",
           "high": 955.39,
           "close": 954.27
+        },
+        {
+          "date": "2026-06-03",
+          "high": 969.18,
+          "close": 961.83
         }
       ]
     },
     "LRCX": {
       "ticker": "LRCX",
       "assetType": "STOCK",
-      "lastClose": 334.41,
-      "dailyChangePct": 5.45,
-      "return5dPct": 3.64,
-      "return20dPct": 29.33,
-      "volume": 8609500,
-      "avgVolume20d": 9276455,
+      "lastClose": 343.71,
+      "dailyChangePct": 2.78,
+      "return5dPct": 7.77,
+      "return20dPct": 24.62,
+      "volume": 8478289,
+      "avgVolume20d": 9107314,
       "relativeVolume": 0.93,
-      "high52w": 335.55,
-      "drawdownFrom52wHighPct": -0.34,
-      "dataDate": "2026-06-02",
+      "high52w": 346.18,
+      "drawdownFrom52wHighPct": -0.71,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 211.5,
-          "close": 211.15
-        },
         {
           "date": "2026-03-10",
           "high": 220.82,
@@ -5410,30 +5405,30 @@
           "date": "2026-06-02",
           "high": 335.55,
           "close": 334.41
+        },
+        {
+          "date": "2026-06-03",
+          "high": 346.18,
+          "close": 343.71
         }
       ]
     },
     "ARM": {
       "ticker": "ARM",
       "assetType": "STOCK",
-      "lastClose": 402.71,
-      "dailyChangePct": -1.5,
-      "return5dPct": 25.37,
-      "return20dPct": 98.13,
-      "volume": 15345000,
-      "avgVolume20d": 13452300,
-      "relativeVolume": 1.14,
+      "lastClose": 411.83,
+      "dailyChangePct": 2.26,
+      "return5dPct": 36.05,
+      "return20dPct": 97.2,
+      "volume": 11507157,
+      "avgVolume20d": 13634632,
+      "relativeVolume": 0.84,
       "high52w": 427.99,
-      "drawdownFrom52wHighPct": -5.91,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -3.78,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 118.14,
-          "close": 117.63
-        },
         {
           "date": "2026-03-10",
           "high": 123.605,
@@ -5728,30 +5723,30 @@
           "date": "2026-06-02",
           "high": 427.99,
           "close": 402.71
+        },
+        {
+          "date": "2026-06-03",
+          "high": 417.5,
+          "close": 411.83
         }
       ]
     },
     "PLTR": {
       "ticker": "PLTR",
       "assetType": "STOCK",
-      "lastClose": 152.17,
-      "dailyChangePct": -5.28,
-      "return5dPct": 11.4,
-      "return20dPct": 4.2,
-      "volume": 42732600,
-      "avgVolume20d": 44891555,
-      "relativeVolume": 0.95,
+      "lastClose": 142.2,
+      "dailyChangePct": -6.55,
+      "return5dPct": 7.31,
+      "return20dPct": 4.63,
+      "volume": 40559578,
+      "avgVolume20d": 42453703,
+      "relativeVolume": 0.96,
       "high52w": 207.52,
-      "drawdownFrom52wHighPct": -26.67,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -31.48,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 158.44,
-          "close": 156.43
-        },
         {
           "date": "2026-03-10",
           "high": 156.657,
@@ -6046,30 +6041,30 @@
           "date": "2026-06-02",
           "high": 159.55,
           "close": 152.17
+        },
+        {
+          "date": "2026-06-03",
+          "high": 151.68,
+          "close": 142.2
         }
       ]
     },
     "NFLX": {
       "ticker": "NFLX",
       "assetType": "STOCK",
-      "lastClose": 83.33,
-      "dailyChangePct": -2.94,
-      "return5dPct": -4.96,
-      "return20dPct": -8.45,
-      "volume": 42824100,
-      "avgVolume20d": 34222020,
-      "relativeVolume": 1.25,
+      "lastClose": 81.52,
+      "dailyChangePct": -2.17,
+      "return5dPct": -6.67,
+      "return20dPct": -7.25,
+      "volume": 35883664,
+      "avgVolume20d": 33424293,
+      "relativeVolume": 1.07,
       "high52w": 134.115,
-      "drawdownFrom52wHighPct": -37.87,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -39.22,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 98.94,
-          "close": 98.32
-        },
         {
           "date": "2026-03-10",
           "high": 98.49,
@@ -6364,30 +6359,30 @@
           "date": "2026-06-02",
           "high": 85.98,
           "close": 83.33
+        },
+        {
+          "date": "2026-06-03",
+          "high": 83.3,
+          "close": 81.52
         }
       ]
     },
     "AMAT": {
       "ticker": "AMAT",
       "assetType": "STOCK",
-      "lastClose": 490.05,
-      "dailyChangePct": 6.96,
-      "return5dPct": 7.73,
-      "return20dPct": 25.21,
-      "volume": 10431700,
-      "avgVolume20d": 8058055,
-      "relativeVolume": 1.29,
-      "high52w": 491.51,
-      "drawdownFrom52wHighPct": -0.3,
-      "dataDate": "2026-06-02",
+      "lastClose": 500.77,
+      "dailyChangePct": 2.19,
+      "return5dPct": 11.72,
+      "return20dPct": 21.9,
+      "volume": 8232105,
+      "avgVolume20d": 8154055,
+      "relativeVolume": 1.01,
+      "high52w": 508.2599,
+      "drawdownFrom52wHighPct": -1.47,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 339.16,
-          "close": 338.94
-        },
         {
           "date": "2026-03-10",
           "high": 355.28,
@@ -6682,30 +6677,30 @@
           "date": "2026-06-02",
           "high": 491.51,
           "close": 490.05
+        },
+        {
+          "date": "2026-06-03",
+          "high": 508.2599,
+          "close": 500.77
         }
       ]
     },
     "TXN": {
       "ticker": "TXN",
       "assetType": "STOCK",
-      "lastClose": 308.12,
-      "dailyChangePct": 5.09,
-      "return5dPct": -5.16,
-      "return20dPct": 9.69,
-      "volume": 11126400,
-      "avgVolume20d": 8101755,
-      "relativeVolume": 1.37,
+      "lastClose": 308.59,
+      "dailyChangePct": 0.15,
+      "return5dPct": -2.79,
+      "return20dPct": 9.82,
+      "volume": 6681268,
+      "avgVolume20d": 8071578,
+      "relativeVolume": 0.83,
       "high52w": 331.51,
-      "drawdownFrom52wHighPct": -7.06,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -6.91,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 197.16,
-          "close": 196.2
-        },
         {
           "date": "2026-03-10",
           "high": 200.18,
@@ -7000,30 +6995,30 @@
           "date": "2026-06-02",
           "high": 308.4,
           "close": 308.12
+        },
+        {
+          "date": "2026-06-03",
+          "high": 312.76,
+          "close": 308.59
         }
       ]
     },
     "QCOM": {
       "ticker": "QCOM",
       "assetType": "STOCK",
-      "lastClose": 240.84,
-      "dailyChangePct": 5.17,
-      "return5dPct": -3.21,
-      "return20dPct": 43.03,
-      "volume": 18449200,
-      "avgVolume20d": 28927675,
-      "relativeVolume": 0.64,
+      "lastClose": 250.01,
+      "dailyChangePct": 3.81,
+      "return5dPct": 7.12,
+      "return20dPct": 34.02,
+      "volume": 19283012,
+      "avgVolume20d": 28181045,
+      "relativeVolume": 0.68,
       "high52w": 259.92,
-      "drawdownFrom52wHighPct": -7.34,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -3.81,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 138.58,
-          "close": 138.11
-        },
         {
           "date": "2026-03-10",
           "high": 136.75,
@@ -7318,30 +7313,30 @@
           "date": "2026-06-02",
           "high": 245.19,
           "close": 240.84
+        },
+        {
+          "date": "2026-06-03",
+          "high": 255.09,
+          "close": 250.01
         }
       ]
     },
     "KLAC": {
       "ticker": "KLAC",
       "assetType": "STOCK",
-      "lastClose": 2045.2,
-      "dailyChangePct": 5.42,
-      "return5dPct": 1.68,
-      "return20dPct": 19.37,
-      "volume": 1060400,
-      "avgVolume20d": 1023615,
-      "relativeVolume": 1.04,
-      "high52w": 2060.0801,
-      "drawdownFrom52wHighPct": -0.72,
-      "dataDate": "2026-06-02",
+      "lastClose": 2125.1101,
+      "dailyChangePct": 3.91,
+      "return5dPct": 8.58,
+      "return20dPct": 22.63,
+      "volume": 1001212,
+      "avgVolume20d": 1014005,
+      "relativeVolume": 0.99,
+      "high52w": 2145.4651,
+      "drawdownFrom52wHighPct": -0.95,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 1435.22,
-          "close": 1429.1
-        },
         {
           "date": "2026-03-10",
           "high": 1487.1,
@@ -7636,30 +7631,30 @@
           "date": "2026-06-02",
           "high": 2047.5,
           "close": 2045.2
+        },
+        {
+          "date": "2026-06-03",
+          "high": 2145.4651,
+          "close": 2125.1101
         }
       ]
     },
     "LIN": {
       "ticker": "LIN",
       "assetType": "STOCK",
-      "lastClose": 495.91,
-      "dailyChangePct": -0.3,
-      "return5dPct": -3.7,
-      "return20dPct": 0.48,
-      "volume": 3006900,
-      "avgVolume20d": 2130110,
-      "relativeVolume": 1.41,
+      "lastClose": 507.57,
+      "dailyChangePct": 2.35,
+      "return5dPct": -0.06,
+      "return20dPct": 1.46,
+      "volume": 2257059,
+      "avgVolume20d": 2148022,
+      "relativeVolume": 1.05,
       "high52w": 521.28,
-      "drawdownFrom52wHighPct": -4.87,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -2.63,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 486.54,
-          "close": 483.62
-        },
         {
           "date": "2026-03-10",
           "high": 483.04,
@@ -7954,30 +7949,30 @@
           "date": "2026-06-02",
           "high": 499.79,
           "close": 495.91
+        },
+        {
+          "date": "2026-06-03",
+          "high": 512.21,
+          "close": 507.57
         }
       ]
     },
     "PANW": {
       "ticker": "PANW",
       "assetType": "STOCK",
-      "lastClose": 297.18,
-      "dailyChangePct": -1.1,
-      "return5dPct": 15.75,
-      "return20dPct": 61.02,
-      "volume": 20190600,
-      "avgVolume20d": 9667130,
-      "relativeVolume": 2.09,
+      "lastClose": 280.43,
+      "dailyChangePct": -5.64,
+      "return5dPct": 12.86,
+      "return20dPct": 52.42,
+      "volume": 14527883,
+      "avgVolume20d": 10165644,
+      "relativeVolume": 1.43,
       "high52w": 302.95,
-      "drawdownFrom52wHighPct": -1.9,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -7.43,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 167.76,
-          "close": 165.1
-        },
         {
           "date": "2026-03-10",
           "high": 167.0,
@@ -8272,30 +8267,30 @@
           "date": "2026-06-02",
           "high": 299.33,
           "close": 297.18
+        },
+        {
+          "date": "2026-06-03",
+          "high": 288.0,
+          "close": 280.43
         }
       ]
     },
     "APP": {
       "ticker": "APP",
       "assetType": "STOCK",
-      "lastClose": 605.63,
-      "dailyChangePct": -1.31,
-      "return5dPct": 17.77,
-      "return20dPct": 27.5,
-      "volume": 2712900,
-      "avgVolume20d": 5480945,
-      "relativeVolume": 0.49,
+      "lastClose": 570.83,
+      "dailyChangePct": -5.75,
+      "return5dPct": 0.53,
+      "return20dPct": 19.39,
+      "volume": 3394670,
+      "avgVolume20d": 5487928,
+      "relativeVolume": 0.62,
       "high52w": 745.61,
-      "drawdownFrom52wHighPct": -18.77,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -23.44,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 520.36,
-          "close": 517.23
-        },
         {
           "date": "2026-03-10",
           "high": 517.0,
@@ -8590,30 +8585,30 @@
           "date": "2026-06-02",
           "high": 617.0,
           "close": 605.63
+        },
+        {
+          "date": "2026-06-03",
+          "high": 599.6418,
+          "close": 570.83
         }
       ]
     },
     "TMUS": {
       "ticker": "TMUS",
       "assetType": "STOCK",
-      "lastClose": 188.83,
-      "dailyChangePct": 1.12,
-      "return5dPct": -1.19,
-      "return20dPct": -2.88,
-      "volume": 4599100,
-      "avgVolume20d": 4570290,
-      "relativeVolume": 1.01,
+      "lastClose": 181.45,
+      "dailyChangePct": -3.91,
+      "return5dPct": -4.91,
+      "return20dPct": -6.62,
+      "volume": 6677490,
+      "avgVolume20d": 4634214,
+      "relativeVolume": 1.44,
       "high52w": 261.56,
-      "drawdownFrom52wHighPct": -27.81,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -30.63,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 220.17,
-          "close": 217.5
-        },
         {
           "date": "2026-03-10",
           "high": 219.16,
@@ -8908,30 +8903,30 @@
           "date": "2026-06-02",
           "high": 189.07,
           "close": 188.83
+        },
+        {
+          "date": "2026-06-03",
+          "high": 187.5,
+          "close": 181.45
         }
       ]
     },
     "ADI": {
       "ticker": "ADI",
       "assetType": "STOCK",
-      "lastClose": 423.2,
-      "dailyChangePct": 5.09,
-      "return5dPct": 0.78,
-      "return20dPct": 6.59,
-      "volume": 4951300,
-      "avgVolume20d": 4816995,
-      "relativeVolume": 1.03,
-      "high52w": 435.72,
-      "drawdownFrom52wHighPct": -2.87,
-      "dataDate": "2026-06-02",
+      "lastClose": 437.67,
+      "dailyChangePct": 3.42,
+      "return5dPct": 4.99,
+      "return20dPct": 8.13,
+      "volume": 5666146,
+      "avgVolume20d": 4933287,
+      "relativeVolume": 1.15,
+      "high52w": 439.51,
+      "drawdownFrom52wHighPct": -0.42,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 319.9,
-          "close": 319.71
-        },
         {
           "date": "2026-03-10",
           "high": 323.94,
@@ -9226,30 +9221,30 @@
           "date": "2026-06-02",
           "high": 423.97,
           "close": 423.2
+        },
+        {
+          "date": "2026-06-03",
+          "high": 439.51,
+          "close": 437.67
         }
       ]
     },
     "STX": {
       "ticker": "STX",
       "assetType": "STOCK",
-      "lastClose": 926.61,
-      "dailyChangePct": 0.58,
-      "return5dPct": 9.56,
-      "return20dPct": 25.47,
-      "volume": 2556200,
-      "avgVolume20d": 3846685,
-      "relativeVolume": 0.66,
-      "high52w": 953.72,
-      "drawdownFrom52wHighPct": -2.84,
-      "dataDate": "2026-06-02",
+      "lastClose": 940.69,
+      "dailyChangePct": 1.52,
+      "return5dPct": 8.04,
+      "return20dPct": 22.01,
+      "volume": 2883334,
+      "avgVolume20d": 3665011,
+      "relativeVolume": 0.79,
+      "high52w": 966.8,
+      "drawdownFrom52wHighPct": -2.7,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 374.66,
-          "close": 374.33
-        },
         {
           "date": "2026-03-10",
           "high": 398.29,
@@ -9544,30 +9539,30 @@
           "date": "2026-06-02",
           "high": 953.72,
           "close": 926.61
+        },
+        {
+          "date": "2026-06-03",
+          "high": 966.8,
+          "close": 940.69
         }
       ]
     },
     "PEP": {
       "ticker": "PEP",
       "assetType": "STOCK",
-      "lastClose": 142.0,
-      "dailyChangePct": 0.34,
-      "return5dPct": -2.53,
-      "return20dPct": -8.14,
-      "volume": 7860300,
-      "avgVolume20d": 7265815,
-      "relativeVolume": 1.08,
+      "lastClose": 142.54,
+      "dailyChangePct": 0.38,
+      "return5dPct": -3.52,
+      "return20dPct": -8.06,
+      "volume": 5729566,
+      "avgVolume20d": 7242508,
+      "relativeVolume": 0.79,
       "high52w": 171.48,
-      "drawdownFrom52wHighPct": -17.19,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -16.88,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 162.43,
-          "close": 161.53
-        },
         {
           "date": "2026-03-10",
           "high": 162.86,
@@ -9862,30 +9857,30 @@
           "date": "2026-06-02",
           "high": 142.89,
           "close": 142.0
+        },
+        {
+          "date": "2026-06-03",
+          "high": 143.68,
+          "close": 142.54
         }
       ]
     },
     "CRWD": {
       "ticker": "CRWD",
       "assetType": "STOCK",
-      "lastClose": 768.95,
-      "dailyChangePct": -1.69,
-      "return5dPct": 14.5,
-      "return20dPct": 63.87,
-      "volume": 4146100,
-      "avgVolume20d": 3482130,
-      "relativeVolume": 1.19,
+      "lastClose": 747.61,
+      "dailyChangePct": -2.78,
+      "return5dPct": 15.84,
+      "return20dPct": 56.89,
+      "volume": 4865502,
+      "avgVolume20d": 3616115,
+      "relativeVolume": 1.35,
       "high52w": 785.66,
-      "drawdownFrom52wHighPct": -2.13,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -4.84,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 438.28,
-          "close": 434.13
-        },
         {
           "date": "2026-03-10",
           "high": 447.95,
@@ -10180,30 +10175,30 @@
           "date": "2026-06-02",
           "high": 778.82,
           "close": 768.95
+        },
+        {
+          "date": "2026-06-03",
+          "high": 766.9999,
+          "close": 747.61
         }
       ]
     },
     "WDC": {
       "ticker": "WDC",
       "assetType": "STOCK",
-      "lastClose": 563.1,
-      "dailyChangePct": 3.09,
-      "return5dPct": 7.33,
-      "return20dPct": 27.29,
-      "volume": 5015300,
-      "avgVolume20d": 6927380,
-      "relativeVolume": 0.72,
-      "high52w": 571.18,
-      "drawdownFrom52wHighPct": -1.41,
-      "dataDate": "2026-06-02",
+      "lastClose": 594.11,
+      "dailyChangePct": 5.51,
+      "return5dPct": 11.97,
+      "return20dPct": 27.69,
+      "volume": 7226527,
+      "avgVolume20d": 6799671,
+      "relativeVolume": 1.06,
+      "high52w": 602.5399,
+      "drawdownFrom52wHighPct": -1.4,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 262.16,
-          "close": 262.06
-        },
         {
           "date": "2026-03-10",
           "high": 280.75,
@@ -10498,30 +10493,30 @@
           "date": "2026-06-02",
           "high": 571.18,
           "close": 563.1
+        },
+        {
+          "date": "2026-06-03",
+          "high": 602.5399,
+          "close": 594.11
         }
       ]
     },
     "AMGN": {
       "ticker": "AMGN",
       "assetType": "STOCK",
-      "lastClose": 328.26,
-      "dailyChangePct": -0.26,
-      "return5dPct": -2.29,
-      "return20dPct": 1.36,
-      "volume": 1557700,
-      "avgVolume20d": 2496985,
-      "relativeVolume": 0.62,
+      "lastClose": 338.22,
+      "dailyChangePct": 3.03,
+      "return5dPct": 0.64,
+      "return20dPct": 2.62,
+      "volume": 2279106,
+      "avgVolume20d": 2444925,
+      "relativeVolume": 0.93,
       "high52w": 391.29,
-      "drawdownFrom52wHighPct": -16.11,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -13.56,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 378.82,
-          "close": 376.97
-        },
         {
           "date": "2026-03-10",
           "high": 379.26,
@@ -10816,30 +10811,30 @@
           "date": "2026-06-02",
           "high": 329.46,
           "close": 328.26
+        },
+        {
+          "date": "2026-06-03",
+          "high": 338.7,
+          "close": 338.22
         }
       ]
     },
     "MRVL": {
       "ticker": "MRVL",
       "assetType": "STOCK",
-      "lastClose": 290.79,
-      "dailyChangePct": 32.52,
-      "return5dPct": 39.63,
-      "return20dPct": 77.68,
-      "volume": 107571500,
-      "avgVolume20d": 33392155,
-      "relativeVolume": 3.22,
-      "high52w": 291.3,
-      "drawdownFrom52wHighPct": -0.18,
-      "dataDate": "2026-06-02",
+      "lastClose": 301.65,
+      "dailyChangePct": 3.73,
+      "return5dPct": 51.81,
+      "return20dPct": 78.76,
+      "volume": 108602556,
+      "avgVolume20d": 37961797,
+      "relativeVolume": 2.86,
+      "high52w": 324.15,
+      "drawdownFrom52wHighPct": -6.94,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 92.93,
-          "close": 92.65
-        },
         {
           "date": "2026-03-10",
           "high": 95.05,
@@ -11134,30 +11129,30 @@
           "date": "2026-06-02",
           "high": 291.3,
           "close": 290.79
+        },
+        {
+          "date": "2026-06-03",
+          "high": 324.15,
+          "close": 301.65
         }
       ]
     },
     "GILD": {
       "ticker": "GILD",
       "assetType": "STOCK",
-      "lastClose": 127.57,
-      "dailyChangePct": -2.69,
-      "return5dPct": -4.61,
-      "return20dPct": -3.86,
-      "volume": 8079400,
-      "avgVolume20d": 6823545,
-      "relativeVolume": 1.18,
+      "lastClose": 128.99,
+      "dailyChangePct": 1.11,
+      "return5dPct": -3.52,
+      "return20dPct": -3.36,
+      "volume": 6206384,
+      "avgVolume20d": 6826404,
+      "relativeVolume": 0.91,
       "high52w": 157.29,
-      "drawdownFrom52wHighPct": -18.9,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -17.99,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 146.92,
-          "close": 146.63
-        },
         {
           "date": "2026-03-10",
           "high": 149.38,
@@ -11452,30 +11447,30 @@
           "date": "2026-06-02",
           "high": 130.6,
           "close": 127.57
+        },
+        {
+          "date": "2026-06-03",
+          "high": 129.86,
+          "close": 128.99
         }
       ]
     },
     "SHOP": {
       "ticker": "SHOP",
       "assetType": "STOCK",
-      "lastClose": 117.01,
-      "dailyChangePct": -5.73,
-      "return5dPct": 11.54,
-      "return20dPct": -8.26,
-      "volume": 9278900,
-      "avgVolume20d": 14915110,
-      "relativeVolume": 0.62,
+      "lastClose": 112.94,
+      "dailyChangePct": -3.48,
+      "return5dPct": 5.95,
+      "return20dPct": 4.93,
+      "volume": 7417908,
+      "avgVolume20d": 13299115,
+      "relativeVolume": 0.56,
       "high52w": 182.19,
-      "drawdownFrom52wHighPct": -35.78,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -38.01,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 134.79,
-          "close": 133.5
-        },
         {
           "date": "2026-03-10",
           "high": 134.35,
@@ -11770,30 +11765,30 @@
           "date": "2026-06-02",
           "high": 121.53,
           "close": 117.01
+        },
+        {
+          "date": "2026-06-03",
+          "high": 115.26,
+          "close": 112.94
         }
       ]
     },
     "HON": {
       "ticker": "HON",
       "assetType": "STOCK",
-      "lastClose": 235.23,
-      "dailyChangePct": -0.55,
-      "return5dPct": 1.51,
-      "return20dPct": 12.23,
-      "volume": 4678200,
-      "avgVolume20d": 4448460,
-      "relativeVolume": 1.05,
+      "lastClose": 223.26,
+      "dailyChangePct": -5.09,
+      "return5dPct": -3.58,
+      "return20dPct": 6.79,
+      "volume": 6129946,
+      "avgVolume20d": 4622577,
+      "relativeVolume": 1.33,
       "high52w": 248.18,
-      "drawdownFrom52wHighPct": -5.22,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -10.04,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 238.39,
-          "close": 237.59
-        },
         {
           "date": "2026-03-10",
           "high": 245.26,
@@ -12088,30 +12083,30 @@
           "date": "2026-06-02",
           "high": 239.01,
           "close": 235.23
+        },
+        {
+          "date": "2026-06-03",
+          "high": 237.49,
+          "close": 223.26
         }
       ]
     },
     "ISRG": {
       "ticker": "ISRG",
       "assetType": "STOCK",
-      "lastClose": 402.3,
-      "dailyChangePct": -2.42,
-      "return5dPct": -7.86,
-      "return20dPct": -11.06,
-      "volume": 3984300,
-      "avgVolume20d": 2501795,
-      "relativeVolume": 1.59,
+      "lastClose": 407.29,
+      "dailyChangePct": 1.24,
+      "return5dPct": -2.69,
+      "return20dPct": -9.77,
+      "volume": 2631489,
+      "avgVolume20d": 2485834,
+      "relativeVolume": 1.06,
       "high52w": 603.88,
-      "drawdownFrom52wHighPct": -33.38,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -32.55,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 493.89,
-          "close": 493.56
-        },
         {
           "date": "2026-03-10",
           "high": 496.0,
@@ -12406,30 +12401,30 @@
           "date": "2026-06-02",
           "high": 414.0,
           "close": 402.3
+        },
+        {
+          "date": "2026-06-03",
+          "high": 407.85,
+          "close": 407.29
         }
       ]
     },
     "BKNG": {
       "ticker": "BKNG",
       "assetType": "STOCK",
-      "lastClose": 167.21,
-      "dailyChangePct": -1.21,
-      "return5dPct": 2.39,
-      "return20dPct": 0.98,
-      "volume": 7009800,
-      "avgVolume20d": 7741915,
-      "relativeVolume": 0.91,
+      "lastClose": 164.78,
+      "dailyChangePct": -1.45,
+      "return5dPct": -2.13,
+      "return20dPct": -1.7,
+      "volume": 6662277,
+      "avgVolume20d": 7675018,
+      "relativeVolume": 0.87,
       "high52w": 233.5764,
-      "drawdownFrom52wHighPct": -28.41,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -29.45,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 179.5568,
-          "close": 177.6276
-        },
         {
           "date": "2026-03-10",
           "high": 177.276,
@@ -12724,30 +12719,30 @@
           "date": "2026-06-02",
           "high": 168.23,
           "close": 167.21
+        },
+        {
+          "date": "2026-06-03",
+          "high": 168.42,
+          "close": 164.78
         }
       ]
     },
     "PDD": {
       "ticker": "PDD",
       "assetType": "STOCK",
-      "lastClose": 88.18,
-      "dailyChangePct": 1.08,
-      "return5dPct": -8.75,
-      "return20dPct": -9.83,
-      "volume": 8896100,
-      "avgVolume20d": 11870230,
-      "relativeVolume": 0.75,
+      "lastClose": 85.4,
+      "dailyChangePct": -3.15,
+      "return5dPct": -1.4,
+      "return20dPct": -11.73,
+      "volume": 10704848,
+      "avgVolume20d": 12175982,
+      "relativeVolume": 0.88,
       "high52w": 139.41,
-      "drawdownFrom52wHighPct": -36.75,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -38.74,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 103.01,
-          "close": 102.64
-        },
         {
           "date": "2026-03-10",
           "high": 106.57,
@@ -13042,30 +13037,30 @@
           "date": "2026-06-02",
           "high": 90.09,
           "close": 88.18
+        },
+        {
+          "date": "2026-06-03",
+          "high": 87.4,
+          "close": 85.4
         }
       ]
     },
     "VRTX": {
       "ticker": "VRTX",
       "assetType": "STOCK",
-      "lastClose": 425.09,
-      "dailyChangePct": -3.04,
-      "return5dPct": -2.49,
-      "return20dPct": -1.11,
-      "volume": 1146500,
-      "avgVolume20d": 1327410,
-      "relativeVolume": 0.86,
+      "lastClose": 428.34,
+      "dailyChangePct": 0.76,
+      "return5dPct": -2.03,
+      "return20dPct": 0.94,
+      "volume": 1324326,
+      "avgVolume20d": 1298361,
+      "relativeVolume": 1.02,
       "high52w": 507.92,
-      "drawdownFrom52wHighPct": -16.31,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -15.67,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 461.26,
-          "close": 460.87
-        },
         {
           "date": "2026-03-10",
           "high": 507.92,
@@ -13360,30 +13355,30 @@
           "date": "2026-06-02",
           "high": 434.0,
           "close": 425.09
+        },
+        {
+          "date": "2026-06-03",
+          "high": 429.01,
+          "close": 428.34
         }
       ]
     },
     "SBUX": {
       "ticker": "SBUX",
       "assetType": "STOCK",
-      "lastClose": 95.51,
-      "dailyChangePct": -1.04,
-      "return5dPct": -5.83,
-      "return20dPct": -9.01,
-      "volume": 9540500,
-      "avgVolume20d": 7643835,
-      "relativeVolume": 1.25,
+      "lastClose": 95.89,
+      "dailyChangePct": 0.4,
+      "return5dPct": -6.08,
+      "return20dPct": -8.62,
+      "volume": 8524490,
+      "avgVolume20d": 7747439,
+      "relativeVolume": 1.1,
       "high52w": 108.88,
-      "drawdownFrom52wHighPct": -12.28,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -11.93,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 100.38,
-          "close": 99.77
-        },
         {
           "date": "2026-03-10",
           "high": 101.14,
@@ -13678,30 +13673,30 @@
           "date": "2026-06-02",
           "high": 97.9,
           "close": 95.51
+        },
+        {
+          "date": "2026-06-03",
+          "high": 98.1999,
+          "close": 95.89
         }
       ]
     },
     "ADBE": {
       "ticker": "ADBE",
       "assetType": "STOCK",
-      "lastClose": 262.11,
-      "dailyChangePct": -4.35,
-      "return5dPct": 8.99,
-      "return20dPct": 3.21,
-      "volume": 5810900,
-      "avgVolume20d": 4879820,
-      "relativeVolume": 1.19,
+      "lastClose": 256.24,
+      "dailyChangePct": -2.24,
+      "return5dPct": 7.56,
+      "return20dPct": 0.24,
+      "volume": 4851106,
+      "avgVolume20d": 4925295,
+      "relativeVolume": 0.98,
       "high52w": 421.48,
-      "drawdownFrom52wHighPct": -37.81,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -39.2,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 285.2,
-          "close": 282.44
-        },
         {
           "date": "2026-03-10",
           "high": 282.4,
@@ -13996,30 +13991,30 @@
           "date": "2026-06-02",
           "high": 272.03,
           "close": 262.11
+        },
+        {
+          "date": "2026-06-03",
+          "high": 260.0,
+          "close": 256.24
         }
       ]
     },
     "CEG": {
       "ticker": "CEG",
       "assetType": "STOCK",
-      "lastClose": 272.65,
-      "dailyChangePct": 2.62,
-      "return5dPct": -9.59,
-      "return20dPct": -15.08,
-      "volume": 7763000,
-      "avgVolume20d": 4124685,
-      "relativeVolume": 1.88,
+      "lastClose": 267.24,
+      "dailyChangePct": -1.98,
+      "return5dPct": -7.43,
+      "return20dPct": -16.6,
+      "volume": 4298133,
+      "avgVolume20d": 4245401,
+      "relativeVolume": 1.01,
       "high52w": 412.7,
-      "drawdownFrom52wHighPct": -33.94,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -35.25,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 323.95,
-          "close": 322.99
-        },
         {
           "date": "2026-03-10",
           "high": 326.06,
@@ -14314,30 +14309,30 @@
           "date": "2026-06-02",
           "high": 275.0,
           "close": 272.65
+        },
+        {
+          "date": "2026-06-03",
+          "high": 274.5,
+          "close": 267.24
         }
       ]
     },
     "CDNS": {
       "ticker": "CDNS",
       "assetType": "STOCK",
-      "lastClose": 416.39,
-      "dailyChangePct": 0.54,
-      "return5dPct": 9.07,
-      "return20dPct": 19.14,
-      "volume": 3166500,
-      "avgVolume20d": 2273610,
-      "relativeVolume": 1.39,
+      "lastClose": 408.0,
+      "dailyChangePct": -2.01,
+      "return5dPct": 9.08,
+      "return20dPct": 15.37,
+      "volume": 2842220,
+      "avgVolume20d": 2317516,
+      "relativeVolume": 1.23,
       "high52w": 416.69,
-      "drawdownFrom52wHighPct": -0.07,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -2.09,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 300.27,
-          "close": 298.05
-        },
         {
           "date": "2026-03-10",
           "high": 299.06,
@@ -14632,30 +14627,30 @@
           "date": "2026-06-02",
           "high": 416.69,
           "close": 416.39
+        },
+        {
+          "date": "2026-06-03",
+          "high": 411.04,
+          "close": 408.0
         }
       ]
     },
     "FTNT": {
       "ticker": "FTNT",
       "assetType": "STOCK",
-      "lastClose": 148.86,
-      "dailyChangePct": 1.17,
-      "return5dPct": 11.12,
-      "return20dPct": 66.81,
-      "volume": 7270200,
-      "avgVolume20d": 6941700,
-      "relativeVolume": 1.05,
+      "lastClose": 146.48,
+      "dailyChangePct": -1.6,
+      "return5dPct": 14.5,
+      "return20dPct": 62.9,
+      "volume": 7650752,
+      "avgVolume20d": 7126242,
+      "relativeVolume": 1.07,
       "high52w": 149.03,
-      "drawdownFrom52wHighPct": -0.11,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -1.71,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 84.6,
-          "close": 83.81
-        },
         {
           "date": "2026-03-10",
           "high": 85.05,
@@ -14950,30 +14945,30 @@
           "date": "2026-06-02",
           "high": 149.03,
           "close": 148.86
+        },
+        {
+          "date": "2026-06-03",
+          "high": 148.415,
+          "close": 146.48
         }
       ]
     },
     "MAR": {
       "ticker": "MAR",
       "assetType": "STOCK",
-      "lastClose": 373.76,
-      "dailyChangePct": -0.85,
-      "return5dPct": -0.01,
-      "return20dPct": 7.64,
-      "volume": 1186300,
-      "avgVolume20d": 1447020,
-      "relativeVolume": 0.82,
+      "lastClose": 376.75,
+      "dailyChangePct": 0.8,
+      "return5dPct": -2.36,
+      "return20dPct": 6.27,
+      "volume": 976187,
+      "avgVolume20d": 1401909,
+      "relativeVolume": 0.7,
       "high52w": 388.37,
-      "drawdownFrom52wHighPct": -3.76,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -2.99,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 329.33,
-          "close": 328.86
-        },
         {
           "date": "2026-03-10",
           "high": 331.71,
@@ -15268,30 +15263,30 @@
           "date": "2026-06-02",
           "high": 377.66,
           "close": 373.76
+        },
+        {
+          "date": "2026-06-03",
+          "high": 377.13,
+          "close": 376.75
         }
       ]
     },
     "SNPS": {
       "ticker": "SNPS",
       "assetType": "STOCK",
-      "lastClose": 508.35,
-      "dailyChangePct": 3.26,
-      "return5dPct": -4.9,
-      "return20dPct": 2.18,
-      "volume": 2345600,
-      "avgVolume20d": 1979685,
-      "relativeVolume": 1.18,
+      "lastClose": 498.02,
+      "dailyChangePct": -2.03,
+      "return5dPct": -5.3,
+      "return20dPct": -0.89,
+      "volume": 1483647,
+      "avgVolume20d": 1959782,
+      "relativeVolume": 0.76,
       "high52w": 651.73,
-      "drawdownFrom52wHighPct": -22.0,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -23.58,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 440.91,
-          "close": 437.22
-        },
         {
           "date": "2026-03-10",
           "high": 439.01,
@@ -15586,30 +15581,30 @@
           "date": "2026-06-02",
           "high": 508.72,
           "close": 508.35
+        },
+        {
+          "date": "2026-06-03",
+          "high": 504.1218,
+          "close": 498.02
         }
       ]
     },
     "INTU": {
       "ticker": "INTU",
       "assetType": "STOCK",
-      "lastClose": 322.14,
-      "dailyChangePct": -8.94,
-      "return5dPct": 5.85,
-      "return20dPct": -20.85,
-      "volume": 7360700,
-      "avgVolume20d": 5912110,
-      "relativeVolume": 1.25,
+      "lastClose": 311.44,
+      "dailyChangePct": -3.32,
+      "return5dPct": 1.21,
+      "return20dPct": -21.81,
+      "volume": 5644937,
+      "avgVolume20d": 6091541,
+      "relativeVolume": 0.93,
       "high52w": 813.7,
-      "drawdownFrom52wHighPct": -60.41,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -61.73,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 481.0,
-          "close": 473.67
-        },
         {
           "date": "2026-03-10",
           "high": 475.0,
@@ -15904,30 +15899,30 @@
           "date": "2026-06-02",
           "high": 332.43,
           "close": 322.14
+        },
+        {
+          "date": "2026-06-03",
+          "high": 319.52,
+          "close": 311.44
         }
       ]
     },
     "CMCSA": {
       "ticker": "CMCSA",
       "assetType": "STOCK",
-      "lastClose": 24.85,
-      "dailyChangePct": -0.8,
-      "return5dPct": -1.19,
-      "return20dPct": -8.2,
-      "volume": 21984500,
-      "avgVolume20d": 31334905,
-      "relativeVolume": 0.7,
+      "lastClose": 23.52,
+      "dailyChangePct": -5.35,
+      "return5dPct": -6.74,
+      "return20dPct": -11.11,
+      "volume": 43150334,
+      "avgVolume20d": 31923956,
+      "relativeVolume": 1.35,
       "high52w": 34.358,
-      "drawdownFrom52wHighPct": -27.67,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -31.54,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 31.76,
-          "close": 31.04
-        },
         {
           "date": "2026-03-10",
           "high": 31.18,
@@ -16222,30 +16217,30 @@
           "date": "2026-06-02",
           "high": 25.13,
           "close": 24.85
+        },
+        {
+          "date": "2026-06-03",
+          "high": 24.74,
+          "close": 23.52
         }
       ]
     },
     "ADP": {
       "ticker": "ADP",
       "assetType": "STOCK",
-      "lastClose": 231.18,
-      "dailyChangePct": -1.1,
-      "return5dPct": 5.88,
-      "return20dPct": 9.4,
-      "volume": 3549600,
-      "avgVolume20d": 2860830,
-      "relativeVolume": 1.24,
+      "lastClose": 227.75,
+      "dailyChangePct": -1.48,
+      "return5dPct": 4.64,
+      "return20dPct": 8.14,
+      "volume": 2563924,
+      "avgVolume20d": 2883376,
+      "relativeVolume": 0.89,
       "high52w": 329.93,
-      "drawdownFrom52wHighPct": -29.93,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -30.97,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 225.49,
-          "close": 223.04
-        },
         {
           "date": "2026-03-10",
           "high": 222.41,
@@ -16540,30 +16535,30 @@
           "date": "2026-06-02",
           "high": 231.89,
           "close": 231.18
+        },
+        {
+          "date": "2026-06-03",
+          "high": 229.925,
+          "close": 227.75
         }
       ]
     },
     "DDOG": {
       "ticker": "DDOG",
       "assetType": "STOCK",
-      "lastClose": 269.13,
-      "dailyChangePct": -3.01,
-      "return5dPct": 20.34,
-      "return20dPct": 83.47,
-      "volume": 8999700,
-      "avgVolume20d": 7501745,
-      "relativeVolume": 1.2,
+      "lastClose": 250.33,
+      "dailyChangePct": -6.99,
+      "return5dPct": 12.86,
+      "return20dPct": 71.78,
+      "volume": 8238490,
+      "avgVolume20d": 7642679,
+      "relativeVolume": 1.08,
       "high52w": 278.705,
-      "drawdownFrom52wHighPct": -3.44,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -10.18,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 128.69,
-          "close": 128.56
-        },
         {
           "date": "2026-03-10",
           "high": 129.4,
@@ -16858,30 +16853,30 @@
           "date": "2026-06-02",
           "high": 274.98,
           "close": 269.13
+        },
+        {
+          "date": "2026-06-03",
+          "high": 262.2,
+          "close": 250.33
         }
       ]
     },
     "MNST": {
       "ticker": "MNST",
       "assetType": "STOCK",
-      "lastClose": 88.24,
-      "dailyChangePct": -0.97,
-      "return5dPct": 0.94,
-      "return20dPct": 17.34,
-      "volume": 7386000,
-      "avgVolume20d": 5996780,
-      "relativeVolume": 1.23,
+      "lastClose": 89.04,
+      "dailyChangePct": 0.91,
+      "return5dPct": -0.22,
+      "return20dPct": 17.47,
+      "volume": 4310287,
+      "avgVolume20d": 6021334,
+      "relativeVolume": 0.72,
       "high52w": 89.86,
-      "drawdownFrom52wHighPct": -1.8,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -0.91,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 75.74,
-          "close": 75.73
-        },
         {
           "date": "2026-03-10",
           "high": 77.63,
@@ -17176,30 +17171,30 @@
           "date": "2026-06-02",
           "high": 89.27,
           "close": 88.24
+        },
+        {
+          "date": "2026-06-03",
+          "high": 89.7,
+          "close": 89.04
         }
       ]
     },
     "MELI": {
       "ticker": "MELI",
       "assetType": "STOCK",
-      "lastClose": 1672.83,
-      "dailyChangePct": -3.36,
-      "return5dPct": 1.5,
-      "return20dPct": -7.76,
-      "volume": 505000,
-      "avgVolume20d": 779945,
-      "relativeVolume": 0.65,
+      "lastClose": 1638.54,
+      "dailyChangePct": -2.05,
+      "return5dPct": -3.4,
+      "return20dPct": -9.84,
+      "volume": 527602,
+      "avgVolume20d": 789885,
+      "relativeVolume": 0.67,
       "high52w": 2645.22,
-      "drawdownFrom52wHighPct": -36.76,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -38.06,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 1769.52,
-          "close": 1769.52
-        },
         {
           "date": "2026-03-10",
           "high": 1773.5,
@@ -17494,30 +17489,30 @@
           "date": "2026-06-02",
           "high": 1733.22,
           "close": 1672.83
+        },
+        {
+          "date": "2026-06-03",
+          "high": 1670.0,
+          "close": 1638.54
         }
       ]
     },
     "CSX": {
       "ticker": "CSX",
       "assetType": "STOCK",
-      "lastClose": 46.14,
-      "dailyChangePct": 0.61,
-      "return5dPct": -1.01,
-      "return20dPct": 3.18,
-      "volume": 10656000,
-      "avgVolume20d": 13073660,
-      "relativeVolume": 0.82,
+      "lastClose": 46.44,
+      "dailyChangePct": 0.65,
+      "return5dPct": -1.48,
+      "return20dPct": 3.13,
+      "volume": 11362437,
+      "avgVolume20d": 13161921,
+      "relativeVolume": 0.86,
       "high52w": 47.18,
-      "drawdownFrom52wHighPct": -2.2,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -1.57,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 40.84,
-          "close": 40.6
-        },
         {
           "date": "2026-03-10",
           "high": 41.46,
@@ -17812,30 +17807,30 @@
           "date": "2026-06-02",
           "high": 46.25,
           "close": 46.14
+        },
+        {
+          "date": "2026-06-03",
+          "high": 46.855,
+          "close": 46.44
         }
       ]
     },
     "NXPI": {
       "ticker": "NXPI",
       "assetType": "STOCK",
-      "lastClose": 323.62,
-      "dailyChangePct": 3.93,
-      "return5dPct": -2.72,
-      "return20dPct": 11.3,
-      "volume": 3865400,
-      "avgVolume20d": 3924560,
-      "relativeVolume": 0.98,
+      "lastClose": 321.88,
+      "dailyChangePct": -0.54,
+      "return5dPct": -2.24,
+      "return20dPct": 10.1,
+      "volume": 2820092,
+      "avgVolume20d": 3849214,
+      "relativeVolume": 0.73,
       "high52w": 339.95,
-      "drawdownFrom52wHighPct": -4.8,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -5.32,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 206.25,
-          "close": 205.25
-        },
         {
           "date": "2026-03-10",
           "high": 208.36,
@@ -18130,30 +18125,30 @@
           "date": "2026-06-02",
           "high": 325.59,
           "close": 323.62
+        },
+        {
+          "date": "2026-06-03",
+          "high": 327.48,
+          "close": 321.88
         }
       ]
     },
     "ABNB": {
       "ticker": "ABNB",
       "assetType": "STOCK",
-      "lastClose": 134.35,
-      "dailyChangePct": -2.55,
-      "return5dPct": 1.26,
-      "return20dPct": -3.25,
-      "volume": 3496600,
-      "avgVolume20d": 4242495,
-      "relativeVolume": 0.82,
+      "lastClose": 133.59,
+      "dailyChangePct": -0.57,
+      "return5dPct": 1.13,
+      "return20dPct": -4.39,
+      "volume": 3588435,
+      "avgVolume20d": 4266156,
+      "relativeVolume": 0.84,
       "high52w": 147.25,
-      "drawdownFrom52wHighPct": -8.76,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -9.28,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 134.3,
-          "close": 134.03
-        },
         {
           "date": "2026-03-10",
           "high": 134.58,
@@ -18448,30 +18443,30 @@
           "date": "2026-06-02",
           "high": 136.6,
           "close": 134.35
+        },
+        {
+          "date": "2026-06-03",
+          "high": 134.8,
+          "close": 133.59
         }
       ]
     },
     "MDLZ": {
       "ticker": "MDLZ",
       "assetType": "STOCK",
-      "lastClose": 61.07,
-      "dailyChangePct": 0.03,
-      "return5dPct": -0.28,
-      "return20dPct": -0.51,
-      "volume": 7233000,
-      "avgVolume20d": 7259335,
-      "relativeVolume": 1.0,
+      "lastClose": 61.31,
+      "dailyChangePct": 0.39,
+      "return5dPct": -1.51,
+      "return20dPct": -0.08,
+      "volume": 6359122,
+      "avgVolume20d": 7160096,
+      "relativeVolume": 0.89,
       "high52w": 71.15,
-      "drawdownFrom52wHighPct": -14.17,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -13.83,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 58.65,
-          "close": 58.17
-        },
         {
           "date": "2026-03-10",
           "high": 58.31,
@@ -18766,30 +18761,30 @@
           "date": "2026-06-02",
           "high": 61.75,
           "close": 61.07
+        },
+        {
+          "date": "2026-06-03",
+          "high": 62.26,
+          "close": 61.31
         }
       ]
     },
     "MPWR": {
       "ticker": "MPWR",
       "assetType": "STOCK",
-      "lastClose": 1624.99,
-      "dailyChangePct": 5.36,
-      "return5dPct": -2.28,
-      "return20dPct": 3.29,
-      "volume": 692900,
-      "avgVolume20d": 676195,
-      "relativeVolume": 1.02,
+      "lastClose": 1689.89,
+      "dailyChangePct": 3.99,
+      "return5dPct": 4.3,
+      "return20dPct": 6.41,
+      "volume": 423394,
+      "avgVolume20d": 663254,
+      "relativeVolume": 0.64,
       "high52w": 1714.09,
-      "drawdownFrom52wHighPct": -5.2,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -1.41,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 1066.02,
-          "close": 1062.0
-        },
         {
           "date": "2026-03-10",
           "high": 1091.38,
@@ -19084,30 +19079,30 @@
           "date": "2026-06-02",
           "high": 1627.85,
           "close": 1624.99
+        },
+        {
+          "date": "2026-06-03",
+          "high": 1697.35,
+          "close": 1689.89
         }
       ]
     },
     "ROST": {
       "ticker": "ROST",
       "assetType": "STOCK",
-      "lastClose": 223.82,
-      "dailyChangePct": -0.11,
-      "return5dPct": -4.63,
-      "return20dPct": -0.97,
-      "volume": 2539600,
-      "avgVolume20d": 3602150,
-      "relativeVolume": 0.71,
+      "lastClose": 232.62,
+      "dailyChangePct": 3.93,
+      "return5dPct": -0.36,
+      "return20dPct": 2.29,
+      "volume": 2666513,
+      "avgVolume20d": 3651650,
+      "relativeVolume": 0.73,
       "high52w": 237.41,
-      "drawdownFrom52wHighPct": -5.72,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -2.02,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 212.28,
-          "close": 212.15
-        },
         {
           "date": "2026-03-10",
           "high": 216.59,
@@ -19402,30 +19397,30 @@
           "date": "2026-06-02",
           "high": 224.71,
           "close": 223.82
+        },
+        {
+          "date": "2026-06-03",
+          "high": 233.035,
+          "close": 232.62
         }
       ]
     },
     "ORLY": {
       "ticker": "ORLY",
       "assetType": "STOCK",
-      "lastClose": 86.23,
-      "dailyChangePct": -0.47,
-      "return5dPct": -4.05,
-      "return20dPct": -8.25,
-      "volume": 6849000,
-      "avgVolume20d": 6322375,
-      "relativeVolume": 1.08,
+      "lastClose": 87.38,
+      "dailyChangePct": 1.33,
+      "return5dPct": -1.84,
+      "return20dPct": -8.02,
+      "volume": 7270526,
+      "avgVolume20d": 6468501,
+      "relativeVolume": 1.12,
       "high52w": 108.72,
-      "drawdownFrom52wHighPct": -20.69,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -19.63,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 95.47,
-          "close": 94.61
-        },
         {
           "date": "2026-03-10",
           "high": 95.61,
@@ -19720,30 +19715,30 @@
           "date": "2026-06-02",
           "high": 86.64,
           "close": 86.23
+        },
+        {
+          "date": "2026-06-03",
+          "high": 87.94,
+          "close": 87.38
         }
       ]
     },
     "DASH": {
       "ticker": "DASH",
       "assetType": "STOCK",
-      "lastClose": 156.95,
-      "dailyChangePct": -4.75,
-      "return5dPct": 1.92,
-      "return20dPct": -9.05,
-      "volume": 3806800,
-      "avgVolume20d": 5588425,
-      "relativeVolume": 0.68,
+      "lastClose": 154.58,
+      "dailyChangePct": -1.51,
+      "return5dPct": -1.9,
+      "return20dPct": -6.96,
+      "volume": 3964610,
+      "avgVolume20d": 5497165,
+      "relativeVolume": 0.72,
       "high52w": 285.5,
-      "drawdownFrom52wHighPct": -45.03,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -45.86,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 177.1,
-          "close": 176.59
-        },
         {
           "date": "2026-03-10",
           "high": 175.04,
@@ -20038,30 +20033,30 @@
           "date": "2026-06-02",
           "high": 162.18,
           "close": 156.95
+        },
+        {
+          "date": "2026-06-03",
+          "high": 156.2239,
+          "close": 154.58
         }
       ]
     },
     "AEP": {
       "ticker": "AEP",
       "assetType": "STOCK",
-      "lastClose": 127.11,
-      "dailyChangePct": 2.68,
-      "return5dPct": -2.9,
-      "return20dPct": -5.61,
-      "volume": 4356500,
-      "avgVolume20d": 5127250,
-      "relativeVolume": 0.85,
+      "lastClose": 126.31,
+      "dailyChangePct": -0.63,
+      "return5dPct": -2.52,
+      "return20dPct": -7.83,
+      "volume": 4943466,
+      "avgVolume20d": 5170733,
+      "relativeVolume": 0.96,
       "high52w": 139.44,
-      "drawdownFrom52wHighPct": -8.84,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -9.42,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 132.35,
-          "close": 131.86
-        },
         {
           "date": "2026-03-10",
           "high": 133.28,
@@ -20356,30 +20351,30 @@
           "date": "2026-06-02",
           "high": 127.15,
           "close": 127.11
+        },
+        {
+          "date": "2026-06-03",
+          "high": 129.59,
+          "close": 126.31
         }
       ]
     },
     "CTAS": {
       "ticker": "CTAS",
       "assetType": "STOCK",
-      "lastClose": 173.31,
-      "dailyChangePct": 0.24,
-      "return5dPct": 1.3,
-      "return20dPct": 3.85,
-      "volume": 2774900,
-      "avgVolume20d": 2152765,
-      "relativeVolume": 1.29,
+      "lastClose": 174.72,
+      "dailyChangePct": 0.81,
+      "return5dPct": 2.86,
+      "return20dPct": 3.23,
+      "volume": 1926924,
+      "avgVolume20d": 2167166,
+      "relativeVolume": 0.89,
       "high52w": 229.24,
-      "drawdownFrom52wHighPct": -24.4,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -23.78,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 203.44,
-          "close": 200.77
-        },
         {
           "date": "2026-03-10",
           "high": 199.97,
@@ -20674,30 +20669,30 @@
           "date": "2026-06-02",
           "high": 173.61,
           "close": 173.31
+        },
+        {
+          "date": "2026-06-03",
+          "high": 174.81,
+          "close": 174.72
         }
       ]
     },
     "WBD": {
       "ticker": "WBD",
       "assetType": "STOCK",
-      "lastClose": 27.18,
-      "dailyChangePct": -0.26,
-      "return5dPct": 0.67,
-      "return20dPct": 0.82,
-      "volume": 19085200,
-      "avgVolume20d": 18477685,
-      "relativeVolume": 1.03,
+      "lastClose": 27.0,
+      "dailyChangePct": -0.66,
+      "return5dPct": -0.52,
+      "return20dPct": -0.81,
+      "volume": 16151436,
+      "avgVolume20d": 18440971,
+      "relativeVolume": 0.88,
       "high52w": 30.0,
-      "drawdownFrom52wHighPct": -9.4,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -10.0,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 27.94,
-          "close": 27.75
-        },
         {
           "date": "2026-03-10",
           "high": 27.95,
@@ -20992,30 +20987,30 @@
           "date": "2026-06-02",
           "high": 27.36,
           "close": 27.18
+        },
+        {
+          "date": "2026-06-03",
+          "high": 27.215,
+          "close": 27.0
         }
       ]
     },
     "BKR": {
       "ticker": "BKR",
       "assetType": "STOCK",
-      "lastClose": 64.54,
-      "dailyChangePct": 2.49,
-      "return5dPct": -3.28,
-      "return20dPct": -6.48,
-      "volume": 5427400,
-      "avgVolume20d": 8018745,
-      "relativeVolume": 0.68,
+      "lastClose": 64.27,
+      "dailyChangePct": -0.42,
+      "return5dPct": 1.69,
+      "return20dPct": -5.18,
+      "volume": 6185134,
+      "avgVolume20d": 8036646,
+      "relativeVolume": 0.77,
       "high52w": 70.41,
-      "drawdownFrom52wHighPct": -8.34,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -8.72,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 60.15,
-          "close": 60.1
-        },
         {
           "date": "2026-03-10",
           "high": 60.8,
@@ -21310,30 +21305,30 @@
           "date": "2026-06-02",
           "high": 64.6,
           "close": 64.54
+        },
+        {
+          "date": "2026-06-03",
+          "high": 64.925,
+          "close": 64.27
         }
       ]
     },
     "REGN": {
       "ticker": "REGN",
       "assetType": "STOCK",
-      "lastClose": 602.92,
-      "dailyChangePct": 0.38,
-      "return5dPct": -5.0,
-      "return20dPct": -14.99,
-      "volume": 1066700,
-      "avgVolume20d": 1166235,
-      "relativeVolume": 0.91,
+      "lastClose": 618.95,
+      "dailyChangePct": 2.66,
+      "return5dPct": -1.4,
+      "return20dPct": -11.86,
+      "volume": 951536,
+      "avgVolume20d": 1181676,
+      "relativeVolume": 0.81,
       "high52w": 821.11,
-      "drawdownFrom52wHighPct": -26.57,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -24.62,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 783.7,
-          "close": 781.6
-        },
         {
           "date": "2026-03-10",
           "high": 788.69,
@@ -21628,30 +21623,30 @@
           "date": "2026-06-02",
           "high": 604.63,
           "close": 602.92
+        },
+        {
+          "date": "2026-06-03",
+          "high": 623.9,
+          "close": 618.95
         }
       ]
     },
     "PCAR": {
       "ticker": "PCAR",
       "assetType": "STOCK",
-      "lastClose": 112.89,
-      "dailyChangePct": 3.12,
-      "return5dPct": 0.79,
-      "return20dPct": -1.29,
-      "volume": 2594500,
-      "avgVolume20d": 2643925,
-      "relativeVolume": 0.98,
+      "lastClose": 114.38,
+      "dailyChangePct": 1.32,
+      "return5dPct": 1.89,
+      "return20dPct": 0.85,
+      "volume": 2999208,
+      "avgVolume20d": 2662280,
+      "relativeVolume": 1.13,
       "high52w": 131.88,
-      "drawdownFrom52wHighPct": -14.4,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -13.27,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 121.17,
-          "close": 120.67
-        },
         {
           "date": "2026-03-10",
           "high": 121.2,
@@ -21946,30 +21941,30 @@
           "date": "2026-06-02",
           "high": 114.05,
           "close": 112.89
+        },
+        {
+          "date": "2026-06-03",
+          "high": 115.7975,
+          "close": 114.38
         }
       ]
     },
     "MSTR": {
       "ticker": "MSTR",
       "assetType": "STOCK",
-      "lastClose": 136.08,
-      "dailyChangePct": -9.15,
-      "return5dPct": -14.91,
-      "return20dPct": -25.96,
-      "volume": 30891700,
-      "avgVolume20d": 15543425,
-      "relativeVolume": 1.99,
+      "lastClose": 126.545,
+      "dailyChangePct": -7.01,
+      "return5dPct": -17.93,
+      "return20dPct": -32.29,
+      "volume": 20073860,
+      "avgVolume20d": 15783433,
+      "relativeVolume": 1.27,
       "high52w": 457.22,
-      "drawdownFrom52wHighPct": -70.24,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -72.32,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 140.19,
-          "close": 138.95
-        },
         {
           "date": "2026-03-10",
           "high": 142.46,
@@ -22264,30 +22259,30 @@
           "date": "2026-06-02",
           "high": 142.8,
           "close": 136.08
+        },
+        {
+          "date": "2026-06-03",
+          "high": 138.18,
+          "close": 126.545
         }
       ]
     },
     "FANG": {
       "ticker": "FANG",
       "assetType": "STOCK",
-      "lastClose": 202.4,
-      "dailyChangePct": 1.69,
-      "return5dPct": 3.73,
-      "return20dPct": -5.28,
-      "volume": 1817900,
-      "avgVolume20d": 2252090,
-      "relativeVolume": 0.81,
+      "lastClose": 210.59,
+      "dailyChangePct": 4.05,
+      "return5dPct": 9.2,
+      "return20dPct": 2.14,
+      "volume": 3015505,
+      "avgVolume20d": 2157125,
+      "relativeVolume": 1.4,
       "high52w": 214.51,
-      "drawdownFrom52wHighPct": -5.65,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -1.83,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 186.66,
-          "close": 182.86
-        },
         {
           "date": "2026-03-10",
           "high": 182.76,
@@ -22582,30 +22577,30 @@
           "date": "2026-06-02",
           "high": 203.62,
           "close": 202.4
+        },
+        {
+          "date": "2026-06-03",
+          "high": 211.69,
+          "close": 210.59
         }
       ]
     },
     "MCHP": {
       "ticker": "MCHP",
       "assetType": "STOCK",
-      "lastClose": 96.96,
-      "dailyChangePct": 5.94,
-      "return5dPct": -1.11,
-      "return20dPct": 1.74,
-      "volume": 13407400,
-      "avgVolume20d": 11836300,
-      "relativeVolume": 1.13,
+      "lastClose": 96.55,
+      "dailyChangePct": -0.42,
+      "return5dPct": -0.31,
+      "return20dPct": -1.96,
+      "volume": 10234581,
+      "avgVolume20d": 11797794,
+      "relativeVolume": 0.87,
       "high52w": 105.91,
-      "drawdownFrom52wHighPct": -8.45,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -8.84,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 65.55,
-          "close": 65.0
-        },
         {
           "date": "2026-03-10",
           "high": 67.1,
@@ -22900,30 +22895,30 @@
           "date": "2026-06-02",
           "high": 99.3,
           "close": 96.96
+        },
+        {
+          "date": "2026-06-03",
+          "high": 97.39,
+          "close": 96.55
         }
       ]
     },
     "FAST": {
       "ticker": "FAST",
       "assetType": "STOCK",
-      "lastClose": 44.73,
-      "dailyChangePct": 1.68,
-      "return5dPct": 0.63,
-      "return20dPct": -0.33,
-      "volume": 4476200,
-      "avgVolume20d": 6747140,
-      "relativeVolume": 0.66,
+      "lastClose": 46.46,
+      "dailyChangePct": 3.87,
+      "return5dPct": 3.66,
+      "return20dPct": 4.8,
+      "volume": 8074648,
+      "avgVolume20d": 6830377,
+      "relativeVolume": 1.18,
       "high52w": 50.63,
-      "drawdownFrom52wHighPct": -11.65,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -8.24,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 47.05,
-          "close": 46.8
-        },
         {
           "date": "2026-03-10",
           "high": 46.87,
@@ -23218,30 +23213,30 @@
           "date": "2026-06-02",
           "high": 44.77,
           "close": 44.73
+        },
+        {
+          "date": "2026-06-03",
+          "high": 46.64,
+          "close": 46.46
         }
       ]
     },
     "EA": {
       "ticker": "EA",
       "assetType": "STOCK",
-      "lastClose": 202.01,
-      "dailyChangePct": 0.0,
-      "return5dPct": 0.44,
-      "return20dPct": 0.09,
-      "volume": 1712800,
-      "avgVolume20d": 2043980,
-      "relativeVolume": 0.84,
+      "lastClose": 202.63,
+      "dailyChangePct": 0.31,
+      "return5dPct": 0.97,
+      "return20dPct": 0.53,
+      "volume": 1572320,
+      "avgVolume20d": 2052576,
+      "relativeVolume": 0.77,
       "high52w": 204.89,
-      "drawdownFrom52wHighPct": -1.41,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -1.1,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 199.96,
-          "close": 199.27
-        },
         {
           "date": "2026-03-10",
           "high": 200.56,
@@ -23536,30 +23531,30 @@
           "date": "2026-06-02",
           "high": 202.5,
           "close": 202.01
+        },
+        {
+          "date": "2026-06-03",
+          "high": 202.89,
+          "close": 202.63
         }
       ]
     },
     "XEL": {
       "ticker": "XEL",
       "assetType": "STOCK",
-      "lastClose": 77.87,
-      "dailyChangePct": 1.91,
-      "return5dPct": -3.6,
-      "return20dPct": -4.07,
-      "volume": 6009400,
-      "avgVolume20d": 5740630,
-      "relativeVolume": 1.05,
+      "lastClose": 77.39,
+      "dailyChangePct": -0.62,
+      "return5dPct": -4.46,
+      "return20dPct": -4.98,
+      "volume": 7381621,
+      "avgVolume20d": 5861796,
+      "relativeVolume": 1.26,
       "high52w": 84.23,
-      "drawdownFrom52wHighPct": -7.55,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -8.12,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 82.68,
-          "close": 82.1
-        },
         {
           "date": "2026-03-10",
           "high": 82.53,
@@ -23854,30 +23849,30 @@
           "date": "2026-06-02",
           "high": 78.08,
           "close": 77.87
+        },
+        {
+          "date": "2026-06-03",
+          "high": 79.135,
+          "close": 77.39
         }
       ]
     },
     "FER": {
       "ticker": "FER",
       "assetType": "STOCK",
-      "lastClose": 66.34,
-      "dailyChangePct": -0.38,
-      "return5dPct": -4.41,
-      "return20dPct": -2.23,
-      "volume": 904800,
-      "avgVolume20d": 1440780,
-      "relativeVolume": 0.63,
+      "lastClose": 66.39,
+      "dailyChangePct": 0.08,
+      "return5dPct": -4.5,
+      "return20dPct": -4.61,
+      "volume": 1712211,
+      "avgVolume20d": 1467660,
+      "relativeVolume": 1.17,
       "high52w": 74.79,
-      "drawdownFrom52wHighPct": -11.3,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -11.23,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 66.06,
-          "close": 65.93
-        },
         {
           "date": "2026-03-10",
           "high": 67.15,
@@ -24172,30 +24167,30 @@
           "date": "2026-06-02",
           "high": 66.89,
           "close": 66.34
+        },
+        {
+          "date": "2026-06-03",
+          "high": 66.525,
+          "close": 66.39
         }
       ]
     },
     "ADSK": {
       "ticker": "ADSK",
       "assetType": "STOCK",
-      "lastClose": 236.66,
-      "dailyChangePct": -4.63,
-      "return5dPct": -0.66,
-      "return20dPct": -4.4,
-      "volume": 2352800,
-      "avgVolume20d": 2395375,
+      "lastClose": 229.6,
+      "dailyChangePct": -2.98,
+      "return5dPct": -3.12,
+      "return20dPct": -7.95,
+      "volume": 2348338,
+      "avgVolume20d": 2402521,
       "relativeVolume": 0.98,
       "high52w": 329.09,
-      "drawdownFrom52wHighPct": -28.09,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -30.23,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 262.52,
-          "close": 260.75
-        },
         {
           "date": "2026-03-10",
           "high": 261.78,
@@ -24490,30 +24485,30 @@
           "date": "2026-06-02",
           "high": 243.16,
           "close": 236.66
+        },
+        {
+          "date": "2026-06-03",
+          "high": 235.2493,
+          "close": 229.6
         }
       ]
     },
     "ODFL": {
       "ticker": "ODFL",
       "assetType": "STOCK",
-      "lastClose": 229.08,
-      "dailyChangePct": 0.24,
-      "return5dPct": 5.76,
-      "return20dPct": 19.2,
-      "volume": 1850700,
-      "avgVolume20d": 1793790,
-      "relativeVolume": 1.03,
-      "high52w": 233.79,
-      "drawdownFrom52wHighPct": -2.01,
-      "dataDate": "2026-06-02",
+      "lastClose": 236.06,
+      "dailyChangePct": 3.05,
+      "return5dPct": 7.57,
+      "return20dPct": 20.39,
+      "volume": 2231993,
+      "avgVolume20d": 1806464,
+      "relativeVolume": 1.24,
+      "high52w": 236.82,
+      "drawdownFrom52wHighPct": -0.32,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 197.69,
-          "close": 197.22
-        },
         {
           "date": "2026-03-10",
           "high": 198.92,
@@ -24808,30 +24803,30 @@
           "date": "2026-06-02",
           "high": 229.7,
           "close": 229.08
+        },
+        {
+          "date": "2026-06-03",
+          "high": 236.82,
+          "close": 236.06
         }
       ]
     },
     "EXC": {
       "ticker": "EXC",
       "assetType": "STOCK",
-      "lastClose": 45.0,
-      "dailyChangePct": 0.65,
-      "return5dPct": -2.24,
-      "return20dPct": -3.45,
-      "volume": 6409200,
-      "avgVolume20d": 8354220,
-      "relativeVolume": 0.77,
+      "lastClose": 45.08,
+      "dailyChangePct": 0.18,
+      "return5dPct": -2.4,
+      "return20dPct": -2.38,
+      "volume": 11370219,
+      "avgVolume20d": 8421645,
+      "relativeVolume": 1.35,
       "high52w": 50.65,
-      "drawdownFrom52wHighPct": -11.15,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -11.0,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 49.34,
-          "close": 49.14
-        },
         {
           "date": "2026-03-10",
           "high": 49.24,
@@ -25126,30 +25121,30 @@
           "date": "2026-06-02",
           "high": 45.31,
           "close": 45.0
+        },
+        {
+          "date": "2026-06-03",
+          "high": 46.13,
+          "close": 45.08
         }
       ]
     },
     "IDXX": {
       "ticker": "IDXX",
       "assetType": "STOCK",
-      "lastClose": 550.82,
-      "dailyChangePct": -2.82,
-      "return5dPct": -1.15,
-      "return20dPct": -2.18,
-      "volume": 669100,
-      "avgVolume20d": 667170,
-      "relativeVolume": 1.0,
+      "lastClose": 560.73,
+      "dailyChangePct": 1.8,
+      "return5dPct": 1.77,
+      "return20dPct": -0.4,
+      "volume": 882409,
+      "avgVolume20d": 674570,
+      "relativeVolume": 1.31,
       "high52w": 769.98,
-      "drawdownFrom52wHighPct": -28.46,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -27.18,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 611.62,
-          "close": 610.45
-        },
         {
           "date": "2026-03-10",
           "high": 610.43,
@@ -25444,30 +25439,30 @@
           "date": "2026-06-02",
           "high": 560.16,
           "close": 550.82
+        },
+        {
+          "date": "2026-06-03",
+          "high": 561.65,
+          "close": 560.73
         }
       ]
     },
     "TTWO": {
       "ticker": "TTWO",
       "assetType": "STOCK",
-      "lastClose": 222.38,
-      "dailyChangePct": -2.03,
-      "return5dPct": 0.77,
-      "return20dPct": -1.24,
-      "volume": 2681800,
-      "avgVolume20d": 2796260,
-      "relativeVolume": 0.96,
+      "lastClose": 215.8,
+      "dailyChangePct": -2.96,
+      "return5dPct": -1.22,
+      "return20dPct": -3.28,
+      "volume": 2163947,
+      "avgVolume20d": 2838997,
+      "relativeVolume": 0.76,
       "high52w": 264.79,
-      "drawdownFrom52wHighPct": -16.02,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -18.5,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 214.84,
-          "close": 214.63
-        },
         {
           "date": "2026-03-10",
           "high": 216.0,
@@ -25762,30 +25757,30 @@
           "date": "2026-06-02",
           "high": 224.0,
           "close": 222.38
+        },
+        {
+          "date": "2026-06-03",
+          "high": 220.7944,
+          "close": 215.8
         }
       ]
     },
     "KDP": {
       "ticker": "KDP",
       "assetType": "STOCK",
-      "lastClose": 30.36,
-      "dailyChangePct": 0.53,
-      "return5dPct": 2.74,
-      "return20dPct": 5.16,
-      "volume": 10205400,
-      "avgVolume20d": 10304210,
-      "relativeVolume": 0.99,
+      "lastClose": 30.55,
+      "dailyChangePct": 0.63,
+      "return5dPct": 1.5,
+      "return20dPct": 5.64,
+      "volume": 12162276,
+      "avgVolume20d": 10471453,
+      "relativeVolume": 1.16,
       "high52w": 35.94,
-      "drawdownFrom52wHighPct": -15.53,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -15.0,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 28.24,
-          "close": 28.19
-        },
         {
           "date": "2026-03-10",
           "high": 28.33,
@@ -26080,30 +26075,30 @@
           "date": "2026-06-02",
           "high": 30.52,
           "close": 30.36
+        },
+        {
+          "date": "2026-06-03",
+          "high": 31.04,
+          "close": 30.55
         }
       ]
     },
     "CCEP": {
       "ticker": "CCEP",
       "assetType": "STOCK",
-      "lastClose": 91.0,
-      "dailyChangePct": 1.46,
-      "return5dPct": -2.58,
-      "return20dPct": -1.4,
-      "volume": 1432400,
-      "avgVolume20d": 1791850,
-      "relativeVolume": 0.8,
+      "lastClose": 92.41,
+      "dailyChangePct": 1.55,
+      "return5dPct": -2.42,
+      "return20dPct": -1.21,
+      "volume": 2305024,
+      "avgVolume20d": 1849461,
+      "relativeVolume": 1.25,
       "high52w": 110.9,
-      "drawdownFrom52wHighPct": -17.94,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -16.67,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 101.96,
-          "close": 101.6
-        },
         {
           "date": "2026-03-10",
           "high": 103.06,
@@ -26398,30 +26393,30 @@
           "date": "2026-06-02",
           "high": 91.57,
           "close": 91.0
+        },
+        {
+          "date": "2026-06-03",
+          "high": 92.865,
+          "close": 92.41
         }
       ]
     },
     "ALNY": {
       "ticker": "ALNY",
       "assetType": "STOCK",
-      "lastClose": 286.12,
-      "dailyChangePct": -3.22,
-      "return5dPct": -3.17,
-      "return20dPct": -3.96,
-      "volume": 1042500,
-      "avgVolume20d": 980800,
-      "relativeVolume": 1.06,
+      "lastClose": 292.58,
+      "dailyChangePct": 2.26,
+      "return5dPct": -1.03,
+      "return20dPct": -2.83,
+      "volume": 986965,
+      "avgVolume20d": 988953,
+      "relativeVolume": 1.0,
       "high52w": 495.55,
-      "drawdownFrom52wHighPct": -42.26,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -40.96,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 323.68,
-          "close": 323.59
-        },
         {
           "date": "2026-03-10",
           "high": 326.18,
@@ -26716,30 +26711,30 @@
           "date": "2026-06-02",
           "high": 295.6,
           "close": 286.12
+        },
+        {
+          "date": "2026-06-03",
+          "high": 293.16,
+          "close": 292.58
         }
       ]
     },
     "PYPL": {
       "ticker": "PYPL",
       "assetType": "STOCK",
-      "lastClose": 44.53,
-      "dailyChangePct": -1.46,
-      "return5dPct": 0.84,
-      "return20dPct": -11.63,
-      "volume": 11418000,
-      "avgVolume20d": 16021605,
-      "relativeVolume": 0.71,
+      "lastClose": 42.61,
+      "dailyChangePct": -4.31,
+      "return5dPct": -2.63,
+      "return20dPct": -8.35,
+      "volume": 19172430,
+      "avgVolume20d": 15026426,
+      "relativeVolume": 1.28,
       "high52w": 79.5,
-      "drawdownFrom52wHighPct": -43.99,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -46.4,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 46.526,
-          "close": 46.16
-        },
         {
           "date": "2026-03-10",
           "high": 45.82,
@@ -27034,30 +27029,30 @@
           "date": "2026-06-02",
           "high": 45.14,
           "close": 44.53
+        },
+        {
+          "date": "2026-06-03",
+          "high": 44.5,
+          "close": 42.61
         }
       ]
     },
     "TRI": {
       "ticker": "TRI",
       "assetType": "STOCK",
-      "lastClose": 86.33,
-      "dailyChangePct": -8.12,
-      "return5dPct": 3.12,
-      "return20dPct": -9.84,
-      "volume": 1796500,
-      "avgVolume20d": 2288295,
-      "relativeVolume": 0.79,
+      "lastClose": 83.43,
+      "dailyChangePct": -3.36,
+      "return5dPct": 1.53,
+      "return20dPct": -12.6,
+      "volume": 1114694,
+      "avgVolume20d": 2164394,
+      "relativeVolume": 0.52,
       "high52w": 218.42,
-      "drawdownFrom52wHighPct": -60.48,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -61.8,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 113.35,
-          "close": 111.52
-        },
         {
           "date": "2026-03-10",
           "high": 111.52,
@@ -27352,30 +27347,30 @@
           "date": "2026-06-02",
           "high": 93.2,
           "close": 86.33
+        },
+        {
+          "date": "2026-06-03",
+          "high": 85.45,
+          "close": 83.43
         }
       ]
     },
     "AXON": {
       "ticker": "AXON",
       "assetType": "STOCK",
-      "lastClose": 490.12,
-      "dailyChangePct": 2.78,
-      "return5dPct": 27.2,
-      "return20dPct": 24.47,
-      "volume": 1281600,
-      "avgVolume20d": 1370705,
+      "lastClose": 481.48,
+      "dailyChangePct": -1.76,
+      "return5dPct": 23.04,
+      "return20dPct": 26.51,
+      "volume": 1268318,
+      "avgVolume20d": 1357130,
       "relativeVolume": 0.93,
       "high52w": 885.92,
-      "drawdownFrom52wHighPct": -44.68,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -45.65,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 577.53,
-          "close": 559.06
-        },
         {
           "date": "2026-03-10",
           "high": 559.34,
@@ -27670,30 +27665,30 @@
           "date": "2026-06-02",
           "high": 493.75,
           "close": 490.12
+        },
+        {
+          "date": "2026-06-03",
+          "high": 485.36,
+          "close": 481.48
         }
       ]
     },
     "WDAY": {
       "ticker": "WDAY",
       "assetType": "STOCK",
-      "lastClose": 148.88,
-      "dailyChangePct": -5.31,
-      "return5dPct": 20.05,
-      "return20dPct": 16.41,
-      "volume": 5397300,
-      "avgVolume20d": 5710455,
-      "relativeVolume": 0.95,
+      "lastClose": 146.9,
+      "dailyChangePct": -1.33,
+      "return5dPct": 17.99,
+      "return20dPct": 13.98,
+      "volume": 4430475,
+      "avgVolume20d": 5739213,
+      "relativeVolume": 0.77,
       "high52w": 257.09,
-      "drawdownFrom52wHighPct": -42.09,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -42.86,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 153.9,
-          "close": 148.14
-        },
         {
           "date": "2026-03-10",
           "high": 147.65,
@@ -27988,30 +27983,30 @@
           "date": "2026-06-02",
           "high": 152.01,
           "close": 148.88
+        },
+        {
+          "date": "2026-06-03",
+          "high": 147.56,
+          "close": 146.9
         }
       ]
     },
     "PAYX": {
       "ticker": "PAYX",
       "assetType": "STOCK",
-      "lastClose": 100.79,
-      "dailyChangePct": -1.61,
-      "return5dPct": 6.32,
-      "return20dPct": 8.99,
-      "volume": 2512600,
-      "avgVolume20d": 3269945,
-      "relativeVolume": 0.77,
+      "lastClose": 98.45,
+      "dailyChangePct": -2.32,
+      "return5dPct": 4.26,
+      "return20dPct": 6.03,
+      "volume": 2207557,
+      "avgVolume20d": 3239542,
+      "relativeVolume": 0.68,
       "high52w": 161.24,
-      "drawdownFrom52wHighPct": -37.49,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -38.94,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 99.79,
-          "close": 98.3
-        },
         {
           "date": "2026-03-10",
           "high": 98.17,
@@ -28306,30 +28301,30 @@
           "date": "2026-06-02",
           "high": 101.22,
           "close": 100.79
+        },
+        {
+          "date": "2026-06-03",
+          "high": 100.18,
+          "close": 98.45
         }
       ]
     },
     "ROP": {
       "ticker": "ROP",
       "assetType": "STOCK",
-      "lastClose": 336.5,
-      "dailyChangePct": -2.25,
-      "return5dPct": 5.06,
-      "return20dPct": -5.27,
-      "volume": 1000500,
-      "avgVolume20d": 1135910,
-      "relativeVolume": 0.88,
+      "lastClose": 331.7,
+      "dailyChangePct": -1.43,
+      "return5dPct": 4.76,
+      "return20dPct": -6.97,
+      "volume": 753818,
+      "avgVolume20d": 1133210,
+      "relativeVolume": 0.67,
       "high52w": 576.49,
-      "drawdownFrom52wHighPct": -41.63,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -42.46,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 365.77,
-          "close": 363.06
-        },
         {
           "date": "2026-03-10",
           "high": 364.39,
@@ -28624,30 +28619,30 @@
           "date": "2026-06-02",
           "high": 340.66,
           "close": 336.5
+        },
+        {
+          "date": "2026-06-03",
+          "high": 335.16,
+          "close": 331.7
         }
       ]
     },
     "CPRT": {
       "ticker": "CPRT",
       "assetType": "STOCK",
-      "lastClose": 30.86,
-      "dailyChangePct": -4.52,
-      "return5dPct": -7.16,
-      "return20dPct": -7.3,
-      "volume": 10900900,
-      "avgVolume20d": 9896940,
-      "relativeVolume": 1.1,
-      "high52w": 51.15,
-      "drawdownFrom52wHighPct": -39.67,
-      "dataDate": "2026-06-02",
+      "lastClose": 30.35,
+      "dailyChangePct": -1.65,
+      "return5dPct": -7.61,
+      "return20dPct": -8.45,
+      "volume": 9395118,
+      "avgVolume20d": 10135815,
+      "relativeVolume": 0.93,
+      "high52w": 51.01,
+      "drawdownFrom52wHighPct": -40.5,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 37.74,
-          "close": 37.57
-        },
         {
           "date": "2026-03-10",
           "high": 37.48,
@@ -28942,30 +28937,30 @@
           "date": "2026-06-02",
           "high": 32.0,
           "close": 30.86
+        },
+        {
+          "date": "2026-06-03",
+          "high": 30.775,
+          "close": 30.35
         }
       ]
     },
     "KHC": {
       "ticker": "KHC",
       "assetType": "STOCK",
-      "lastClose": 23.33,
-      "dailyChangePct": -1.27,
-      "return5dPct": -2.18,
-      "return20dPct": 4.06,
-      "volume": 13817900,
-      "avgVolume20d": 15164605,
-      "relativeVolume": 0.91,
+      "lastClose": 22.76,
+      "dailyChangePct": -2.44,
+      "return5dPct": -6.64,
+      "return20dPct": 0.98,
+      "volume": 17946798,
+      "avgVolume20d": 15286594,
+      "relativeVolume": 1.17,
       "high52w": 29.19,
-      "drawdownFrom52wHighPct": -20.08,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -22.03,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 24.68,
-          "close": 24.44
-        },
         {
           "date": "2026-03-10",
           "high": 24.415,
@@ -29260,30 +29255,30 @@
           "date": "2026-06-02",
           "high": 23.74,
           "close": 23.33
+        },
+        {
+          "date": "2026-06-03",
+          "high": 23.39,
+          "close": 22.76
         }
       ]
     },
     "DXCM": {
       "ticker": "DXCM",
       "assetType": "STOCK",
-      "lastClose": 73.45,
-      "dailyChangePct": -1.9,
-      "return5dPct": 2.0,
+      "lastClose": 72.77,
+      "dailyChangePct": -0.93,
+      "return5dPct": 3.57,
       "return20dPct": 22.34,
-      "volume": 3750800,
-      "avgVolume20d": 7120010,
-      "relativeVolume": 0.53,
+      "volume": 4004984,
+      "avgVolume20d": 7043884,
+      "relativeVolume": 0.57,
       "high52w": 89.98,
-      "drawdownFrom52wHighPct": -18.37,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -19.13,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 68.94,
-          "close": 68.74
-        },
         {
           "date": "2026-03-10",
           "high": 68.75,
@@ -29578,30 +29573,30 @@
           "date": "2026-06-02",
           "high": 74.36,
           "close": 73.45
+        },
+        {
+          "date": "2026-06-03",
+          "high": 73.25,
+          "close": 72.77
         }
       ]
     },
     "GEHC": {
       "ticker": "GEHC",
       "assetType": "STOCK",
-      "lastClose": 61.99,
-      "dailyChangePct": -1.12,
-      "return5dPct": -3.41,
+      "lastClose": 62.03,
+      "dailyChangePct": 0.06,
+      "return5dPct": -2.9,
       "return20dPct": 1.62,
-      "volume": 3232900,
-      "avgVolume20d": 5302215,
-      "relativeVolume": 0.61,
+      "volume": 4289125,
+      "avgVolume20d": 5148116,
+      "relativeVolume": 0.83,
       "high52w": 89.77,
-      "drawdownFrom52wHighPct": -30.95,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -30.9,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 75.98,
-          "close": 75.63
-        },
         {
           "date": "2026-03-10",
           "high": 75.5,
@@ -29896,30 +29891,30 @@
           "date": "2026-06-02",
           "high": 62.598,
           "close": 61.99
+        },
+        {
+          "date": "2026-06-03",
+          "high": 62.11,
+          "close": 62.03
         }
       ]
     },
     "TEAM": {
       "ticker": "TEAM",
       "assetType": "STOCK",
-      "lastClose": 109.1,
-      "dailyChangePct": -5.91,
-      "return5dPct": 28.47,
-      "return20dPct": 17.11,
-      "volume": 7031000,
-      "avgVolume20d": 7403385,
-      "relativeVolume": 0.95,
+      "lastClose": 101.53,
+      "dailyChangePct": -6.94,
+      "return5dPct": 13.99,
+      "return20dPct": 9.94,
+      "volume": 4994294,
+      "avgVolume20d": 7272979,
+      "relativeVolume": 0.69,
       "high52w": 222.59,
-      "drawdownFrom52wHighPct": -50.99,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -54.39,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 83.91,
-          "close": 82.04
-        },
         {
           "date": "2026-03-10",
           "high": 82.0,
@@ -30214,30 +30209,30 @@
           "date": "2026-06-02",
           "high": 109.615,
           "close": 109.1
+        },
+        {
+          "date": "2026-06-03",
+          "high": 106.13,
+          "close": 101.53
         }
       ]
     },
     "CTSH": {
       "ticker": "CTSH",
       "assetType": "STOCK",
-      "lastClose": 55.14,
-      "dailyChangePct": -3.53,
-      "return5dPct": 6.43,
-      "return20dPct": 6.32,
-      "volume": 9204200,
-      "avgVolume20d": 9021415,
-      "relativeVolume": 1.02,
+      "lastClose": 53.51,
+      "dailyChangePct": -2.96,
+      "return5dPct": 0.66,
+      "return20dPct": 3.16,
+      "volume": 6887156,
+      "avgVolume20d": 9050597,
+      "relativeVolume": 0.76,
       "high52w": 87.03,
-      "drawdownFrom52wHighPct": -36.64,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -38.52,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 66.05,
-          "close": 64.65
-        },
         {
           "date": "2026-03-10",
           "high": 64.55,
@@ -30532,30 +30527,30 @@
           "date": "2026-06-02",
           "high": 55.9,
           "close": 55.14
+        },
+        {
+          "date": "2026-06-03",
+          "high": 55.0,
+          "close": 53.51
         }
       ]
     },
     "INSM": {
       "ticker": "INSM",
       "assetType": "STOCK",
-      "lastClose": 103.73,
-      "dailyChangePct": -2.17,
-      "return5dPct": -4.72,
-      "return20dPct": -25.91,
-      "volume": 2406200,
-      "avgVolume20d": 4484420,
-      "relativeVolume": 0.54,
+      "lastClose": 103.86,
+      "dailyChangePct": 0.13,
+      "return5dPct": -2.39,
+      "return20dPct": -25.52,
+      "volume": 2615707,
+      "avgVolume20d": 4553290,
+      "relativeVolume": 0.57,
       "high52w": 212.75,
-      "drawdownFrom52wHighPct": -51.24,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -51.18,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 143.74,
-          "close": 143.13
-        },
         {
           "date": "2026-03-10",
           "high": 145.64,
@@ -30850,30 +30845,30 @@
           "date": "2026-06-02",
           "high": 104.45,
           "close": 103.73
+        },
+        {
+          "date": "2026-06-03",
+          "high": 105.2037,
+          "close": 103.86
         }
       ]
     },
     "VRSK": {
       "ticker": "VRSK",
       "assetType": "STOCK",
-      "lastClose": 179.1,
-      "dailyChangePct": -2.65,
-      "return5dPct": 4.38,
-      "return20dPct": 0.24,
-      "volume": 2301600,
-      "avgVolume20d": 1915270,
-      "relativeVolume": 1.2,
+      "lastClose": 178.33,
+      "dailyChangePct": -0.43,
+      "return5dPct": 3.98,
+      "return20dPct": -1.17,
+      "volume": 1617362,
+      "avgVolume20d": 1888868,
+      "relativeVolume": 0.86,
       "high52w": 322.92,
-      "drawdownFrom52wHighPct": -44.54,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -44.78,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 214.6,
-          "close": 210.28
-        },
         {
           "date": "2026-03-10",
           "high": 212.04,
@@ -31168,30 +31163,30 @@
           "date": "2026-06-02",
           "high": 182.2,
           "close": 179.1
+        },
+        {
+          "date": "2026-06-03",
+          "high": 178.695,
+          "close": 178.33
         }
       ]
     },
     "ZS": {
       "ticker": "ZS",
       "assetType": "STOCK",
-      "lastClose": 144.15,
-      "dailyChangePct": -7.42,
-      "return5dPct": -21.91,
-      "return20dPct": 1.37,
-      "volume": 8526700,
-      "avgVolume20d": 6876150,
-      "relativeVolume": 1.24,
+      "lastClose": 134.37,
+      "dailyChangePct": -6.78,
+      "return5dPct": 6.3,
+      "return20dPct": -4.94,
+      "volume": 7606496,
+      "avgVolume20d": 7156574,
+      "relativeVolume": 1.06,
       "high52w": 336.99,
-      "drawdownFrom52wHighPct": -57.22,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -60.13,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 166.3,
-          "close": 162.62
-        },
         {
           "date": "2026-03-10",
           "high": 164.11,
@@ -31486,30 +31481,30 @@
           "date": "2026-06-02",
           "high": 151.04,
           "close": 144.15
+        },
+        {
+          "date": "2026-06-03",
+          "high": 142.47,
+          "close": 134.37
         }
       ]
     },
     "CHTR": {
       "ticker": "CHTR",
       "assetType": "STOCK",
-      "lastClose": 140.27,
-      "dailyChangePct": -1.63,
-      "return5dPct": -2.59,
-      "return20dPct": -15.16,
-      "volume": 2543200,
-      "avgVolume20d": 3085975,
-      "relativeVolume": 0.82,
+      "lastClose": 129.01,
+      "dailyChangePct": -8.03,
+      "return5dPct": -12.35,
+      "return20dPct": -18.47,
+      "volume": 4346195,
+      "avgVolume20d": 3157134,
+      "relativeVolume": 1.38,
       "high52w": 422.29,
-      "drawdownFrom52wHighPct": -66.78,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -69.45,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 229.72,
-          "close": 222.81
-        },
         {
           "date": "2026-03-10",
           "high": 222.78,
@@ -31804,30 +31799,30 @@
           "date": "2026-06-02",
           "high": 142.77,
           "close": 140.27
+        },
+        {
+          "date": "2026-06-03",
+          "high": 139.72,
+          "close": 129.01
         }
       ]
     },
     "CSGP": {
       "ticker": "CSGP",
       "assetType": "STOCK",
-      "lastClose": 33.66,
-      "dailyChangePct": -0.59,
-      "return5dPct": 3.51,
-      "return20dPct": -4.86,
-      "volume": 9186100,
-      "avgVolume20d": 8553435,
+      "lastClose": 33.4,
+      "dailyChangePct": -0.77,
+      "return5dPct": 3.34,
+      "return20dPct": -4.3,
+      "volume": 9311854,
+      "avgVolume20d": 8739787,
       "relativeVolume": 1.07,
       "high52w": 97.43,
-      "drawdownFrom52wHighPct": -65.45,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -65.72,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 48.93,
-          "close": 48.42
-        },
         {
           "date": "2026-03-10",
           "high": 48.32,
@@ -32122,30 +32117,30 @@
           "date": "2026-06-02",
           "high": 33.76,
           "close": 33.66
+        },
+        {
+          "date": "2026-06-03",
+          "high": 33.52,
+          "close": 33.4
         }
       ]
     },
     "TSM": {
       "ticker": "TSM",
       "assetType": "STOCK",
-      "lastClose": 446.69,
-      "dailyChangePct": 2.54,
-      "return5dPct": 8.34,
-      "return20dPct": 11.22,
-      "volume": 10092000,
-      "avgVolume20d": 13311375,
-      "relativeVolume": 0.76,
-      "high52w": 449.39,
-      "drawdownFrom52wHighPct": -0.6,
-      "dataDate": "2026-06-02",
+      "lastClose": 436.69,
+      "dailyChangePct": -2.24,
+      "return5dPct": 3.3,
+      "return20dPct": 10.72,
+      "volume": 9113591,
+      "avgVolume20d": 13040899,
+      "relativeVolume": 0.7,
+      "high52w": 450.1636,
+      "drawdownFrom52wHighPct": -2.99,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 349.4,
-          "close": 348.7
-        },
         {
           "date": "2026-03-10",
           "high": 353.5,
@@ -32440,22 +32435,27 @@
           "date": "2026-06-02",
           "high": 448.38,
           "close": 446.69
+        },
+        {
+          "date": "2026-06-03",
+          "high": 450.1636,
+          "close": 436.69
         }
       ]
     },
     "DRAM": {
       "ticker": "DRAM",
       "assetType": "ETF",
-      "lastClose": 69.57,
-      "dailyChangePct": 2.31,
-      "return5dPct": 14.97,
-      "return20dPct": 63.81,
-      "volume": 42274400,
-      "avgVolume20d": 39505160,
-      "relativeVolume": 1.07,
+      "lastClose": 69.71,
+      "dailyChangePct": 0.2,
+      "return5dPct": 14.79,
+      "return20dPct": 50.59,
+      "volume": 26392142,
+      "avgVolume20d": 39043802,
+      "relativeVolume": 0.68,
       "high52w": 70.15,
-      "drawdownFrom52wHighPct": -0.83,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -0.63,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
@@ -32668,30 +32668,30 @@
           "date": "2026-06-02",
           "high": 70.15,
           "close": 69.57
+        },
+        {
+          "date": "2026-06-03",
+          "high": 70.02,
+          "close": 69.71
         }
       ]
     },
     "SMH": {
       "ticker": "SMH",
       "assetType": "ETF",
-      "lastClose": 632.21,
-      "dailyChangePct": 4.01,
-      "return5dPct": 4.99,
-      "return20dPct": 24.75,
-      "volume": 8044400,
-      "avgVolume20d": 10343970,
-      "relativeVolume": 0.78,
-      "high52w": 632.57,
-      "drawdownFrom52wHighPct": -0.06,
-      "dataDate": "2026-06-02",
+      "lastClose": 637.9,
+      "dailyChangePct": 0.9,
+      "return5dPct": 7.12,
+      "return20dPct": 22.04,
+      "volume": 9795387,
+      "avgVolume20d": 10404464,
+      "relativeVolume": 0.94,
+      "high52w": 642.77,
+      "drawdownFrom52wHighPct": -0.76,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 395.36,
-          "close": 394.37
-        },
         {
           "date": "2026-03-10",
           "high": 403.88,
@@ -32986,30 +32986,30 @@
           "date": "2026-06-02",
           "high": 632.57,
           "close": 632.21
+        },
+        {
+          "date": "2026-06-03",
+          "high": 642.77,
+          "close": 637.9
         }
       ]
     },
     "SOXX": {
       "ticker": "SOXX",
       "assetType": "ETF",
-      "lastClose": 605.02,
-      "dailyChangePct": 5.79,
-      "return5dPct": 6.13,
-      "return20dPct": 30.94,
-      "volume": 7424500,
-      "avgVolume20d": 8684250,
-      "relativeVolume": 0.85,
-      "high52w": 605.44,
-      "drawdownFrom52wHighPct": -0.07,
-      "dataDate": "2026-06-02",
+      "lastClose": 615.68,
+      "dailyChangePct": 1.76,
+      "return5dPct": 9.17,
+      "return20dPct": 27.54,
+      "volume": 8324592,
+      "avgVolume20d": 8742874,
+      "relativeVolume": 0.95,
+      "high52w": 618.84,
+      "drawdownFrom52wHighPct": -0.51,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 337.17,
-          "close": 336.37
-        },
         {
           "date": "2026-03-10",
           "high": 345.56,
@@ -33304,30 +33304,30 @@
           "date": "2026-06-02",
           "high": 605.44,
           "close": 605.02
+        },
+        {
+          "date": "2026-06-03",
+          "high": 618.84,
+          "close": 615.68
         }
       ]
     },
     "SOXQ": {
       "ticker": "SOXQ",
       "assetType": "ETF",
-      "lastClose": 108.05,
-      "dailyChangePct": 5.9,
-      "return5dPct": 6.63,
-      "return20dPct": 30.27,
-      "volume": 2352800,
-      "avgVolume20d": 2185270,
-      "relativeVolume": 1.08,
-      "high52w": 108.11,
-      "drawdownFrom52wHighPct": -0.06,
-      "dataDate": "2026-06-02",
+      "lastClose": 109.58,
+      "dailyChangePct": 1.42,
+      "return5dPct": 9.57,
+      "return20dPct": 26.81,
+      "volume": 3159201,
+      "avgVolume20d": 2289705,
+      "relativeVolume": 1.38,
+      "high52w": 110.54,
+      "drawdownFrom52wHighPct": -0.87,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 61.67,
-          "close": 61.51
-        },
         {
           "date": "2026-03-10",
           "high": 63.145,
@@ -33622,30 +33622,30 @@
           "date": "2026-06-02",
           "high": 108.11,
           "close": 108.05
+        },
+        {
+          "date": "2026-06-03",
+          "high": 110.54,
+          "close": 109.58
         }
       ]
     },
     "IGV": {
       "ticker": "IGV",
       "assetType": "ETF",
-      "lastClose": 104.73,
-      "dailyChangePct": -2.76,
-      "return5dPct": 11.36,
-      "return20dPct": 18.42,
-      "volume": 24500300,
-      "avgVolume20d": 22128835,
-      "relativeVolume": 1.11,
+      "lastClose": 100.2,
+      "dailyChangePct": -4.33,
+      "return5dPct": 7.68,
+      "return20dPct": 13.52,
+      "volume": 23969147,
+      "avgVolume20d": 22414132,
+      "relativeVolume": 1.07,
       "high52w": 117.99,
-      "drawdownFrom52wHighPct": -11.24,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -15.08,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 88.13,
-          "close": 87.71
-        },
         {
           "date": "2026-03-10",
           "high": 88.0,
@@ -33940,30 +33940,30 @@
           "date": "2026-06-02",
           "high": 105.77,
           "close": 104.73
+        },
+        {
+          "date": "2026-06-03",
+          "high": 103.5,
+          "close": 100.2
         }
       ]
     },
     "AIQ": {
       "ticker": "AIQ",
       "assetType": "ETF",
-      "lastClose": 70.14,
-      "dailyChangePct": 1.01,
-      "return5dPct": 7.58,
-      "return20dPct": 22.82,
-      "volume": 2821300,
-      "avgVolume20d": 2282810,
-      "relativeVolume": 1.24,
-      "high52w": 70.18,
-      "drawdownFrom52wHighPct": -0.06,
-      "dataDate": "2026-06-02",
+      "lastClose": 69.16,
+      "dailyChangePct": -1.4,
+      "return5dPct": 6.24,
+      "return20dPct": 18.36,
+      "volume": 3534651,
+      "avgVolume20d": 2372697,
+      "relativeVolume": 1.49,
+      "high52w": 70.26,
+      "drawdownFrom52wHighPct": -1.57,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 50.0,
-          "close": 49.83
-        },
         {
           "date": "2026-03-10",
           "high": 50.455,
@@ -34258,30 +34258,30 @@
           "date": "2026-06-02",
           "high": 70.18,
           "close": 70.14
+        },
+        {
+          "date": "2026-06-03",
+          "high": 70.26,
+          "close": 69.16
         }
       ]
     },
     "BOTZ": {
       "ticker": "BOTZ",
       "assetType": "ETF",
-      "lastClose": 40.64,
-      "dailyChangePct": 0.1,
-      "return5dPct": -0.64,
-      "return20dPct": 5.89,
-      "volume": 785000,
-      "avgVolume20d": 1065490,
-      "relativeVolume": 0.74,
+      "lastClose": 40.27,
+      "dailyChangePct": -0.91,
+      "return5dPct": 0.5,
+      "return20dPct": 3.92,
+      "volume": 680533,
+      "avgVolume20d": 1067636,
+      "relativeVolume": 0.64,
       "high52w": 41.71,
-      "drawdownFrom52wHighPct": -2.57,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -3.45,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 36.19,
-          "close": 36.09
-        },
         {
           "date": "2026-03-10",
           "high": 37.0,
@@ -34576,30 +34576,30 @@
           "date": "2026-06-02",
           "high": 40.825,
           "close": 40.64
+        },
+        {
+          "date": "2026-06-03",
+          "high": 40.69,
+          "close": 40.27
         }
       ]
     },
     "ROBO": {
       "ticker": "ROBO",
       "assetType": "ETF",
-      "lastClose": 90.34,
-      "dailyChangePct": 0.86,
-      "return5dPct": 0.39,
-      "return20dPct": 11.42,
-      "volume": 297600,
-      "avgVolume20d": 283965,
-      "relativeVolume": 1.05,
-      "high52w": 90.36,
-      "drawdownFrom52wHighPct": -0.02,
-      "dataDate": "2026-06-02",
+      "lastClose": 89.64,
+      "dailyChangePct": -0.77,
+      "return5dPct": 1.11,
+      "return20dPct": 8.84,
+      "volume": 224479,
+      "avgVolume20d": 288298,
+      "relativeVolume": 0.78,
+      "high52w": 90.51,
+      "drawdownFrom52wHighPct": -0.96,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 72.629,
-          "close": 72.47
-        },
         {
           "date": "2026-03-10",
           "high": 73.82,
@@ -34894,30 +34894,30 @@
           "date": "2026-06-02",
           "high": 90.36,
           "close": 90.34
+        },
+        {
+          "date": "2026-06-03",
+          "high": 90.51,
+          "close": 89.64
         }
       ]
     },
     "CIBR": {
       "ticker": "CIBR",
       "assetType": "ETF",
-      "lastClose": 94.32,
-      "dailyChangePct": 0.18,
-      "return5dPct": 11.65,
-      "return20dPct": 35.23,
-      "volume": 2207200,
-      "avgVolume20d": 1765760,
-      "relativeVolume": 1.25,
+      "lastClose": 91.67,
+      "dailyChangePct": -2.81,
+      "return5dPct": 11.74,
+      "return20dPct": 29.35,
+      "volume": 1510262,
+      "avgVolume20d": 1805763,
+      "relativeVolume": 0.84,
       "high52w": 94.395,
-      "drawdownFrom52wHighPct": -0.08,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -2.89,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 66.51,
-          "close": 66.28
-        },
         {
           "date": "2026-03-10",
           "high": 66.58,
@@ -35212,30 +35212,30 @@
           "date": "2026-06-02",
           "high": 94.395,
           "close": 94.32
+        },
+        {
+          "date": "2026-06-03",
+          "high": 93.26,
+          "close": 91.67
         }
       ]
     },
     "HACK": {
       "ticker": "HACK",
       "assetType": "ETF",
-      "lastClose": 105.37,
-      "dailyChangePct": 0.35,
-      "return5dPct": 10.43,
-      "return20dPct": 28.39,
-      "volume": 205400,
-      "avgVolume20d": 146845,
-      "relativeVolume": 1.4,
+      "lastClose": 102.21,
+      "dailyChangePct": -3.0,
+      "return5dPct": 11.35,
+      "return20dPct": 22.01,
+      "volume": 158030,
+      "avgVolume20d": 150316,
+      "relativeVolume": 1.05,
       "high52w": 105.56,
-      "drawdownFrom52wHighPct": -0.18,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -3.17,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 78.37,
-          "close": 78.23
-        },
         {
           "date": "2026-03-10",
           "high": 78.5,
@@ -35530,30 +35530,30 @@
           "date": "2026-06-02",
           "high": 105.56,
           "close": 105.37
+        },
+        {
+          "date": "2026-06-03",
+          "high": 104.58,
+          "close": 102.21
         }
       ]
     },
     "IHAK": {
       "ticker": "IHAK",
       "assetType": "ETF",
-      "lastClose": 60.73,
-      "dailyChangePct": -0.48,
-      "return5dPct": 6.49,
-      "return20dPct": 24.09,
-      "volume": 222800,
-      "avgVolume20d": 155000,
-      "relativeVolume": 1.44,
+      "lastClose": 59.3,
+      "dailyChangePct": -2.35,
+      "return5dPct": 7.58,
+      "return20dPct": 19.56,
+      "volume": 117813,
+      "avgVolume20d": 152575,
+      "relativeVolume": 0.77,
       "high52w": 61.26,
-      "drawdownFrom52wHighPct": -0.87,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -3.2,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 45.479,
-          "close": 45.35
-        },
         {
           "date": "2026-03-10",
           "high": 45.49,
@@ -35848,30 +35848,30 @@
           "date": "2026-06-02",
           "high": 60.81,
           "close": 60.73
+        },
+        {
+          "date": "2026-06-03",
+          "high": 60.0,
+          "close": 59.3
         }
       ]
     },
     "ITA": {
       "ticker": "ITA",
       "assetType": "ETF",
-      "lastClose": 228.33,
-      "dailyChangePct": -0.69,
-      "return5dPct": -0.51,
-      "return20dPct": 6.53,
-      "volume": 974400,
-      "avgVolume20d": 853530,
-      "relativeVolume": 1.14,
+      "lastClose": 224.89,
+      "dailyChangePct": -1.51,
+      "return5dPct": -2.43,
+      "return20dPct": 4.42,
+      "volume": 915674,
+      "avgVolume20d": 858613,
+      "relativeVolume": 1.07,
       "high52w": 250.65,
-      "drawdownFrom52wHighPct": -8.9,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -10.28,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 242.36,
-          "close": 241.99
-        },
         {
           "date": "2026-03-10",
           "high": 242.87,
@@ -36166,30 +36166,30 @@
           "date": "2026-06-02",
           "high": 230.93,
           "close": 228.33
+        },
+        {
+          "date": "2026-06-03",
+          "high": 227.85,
+          "close": 224.89
         }
       ]
     },
     "XAR": {
       "ticker": "XAR",
       "assetType": "ETF",
-      "lastClose": 279.28,
-      "dailyChangePct": -0.26,
-      "return5dPct": 0.98,
-      "return20dPct": 9.63,
-      "volume": 248400,
-      "avgVolume20d": 226875,
-      "relativeVolume": 1.09,
+      "lastClose": 273.46,
+      "dailyChangePct": -2.08,
+      "return5dPct": -1.95,
+      "return20dPct": 7.15,
+      "volume": 251256,
+      "avgVolume20d": 229077,
+      "relativeVolume": 1.1,
       "high52w": 295.39,
-      "drawdownFrom52wHighPct": -5.45,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -7.42,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 282.39,
-          "close": 282.14
-        },
         {
           "date": "2026-03-10",
           "high": 282.75,
@@ -36484,30 +36484,30 @@
           "date": "2026-06-02",
           "high": 281.61,
           "close": 279.28
+        },
+        {
+          "date": "2026-06-03",
+          "high": 276.39,
+          "close": 273.46
         }
       ]
     },
     "SHLD": {
       "ticker": "SHLD",
       "assetType": "ETF",
-      "lastClose": 64.86,
-      "dailyChangePct": -1.16,
-      "return5dPct": -1.92,
-      "return20dPct": -4.73,
-      "volume": 2896400,
-      "avgVolume20d": 2235340,
-      "relativeVolume": 1.3,
+      "lastClose": 63.31,
+      "dailyChangePct": -2.39,
+      "return5dPct": -3.39,
+      "return20dPct": -6.25,
+      "volume": 1342661,
+      "avgVolume20d": 2219233,
+      "relativeVolume": 0.61,
       "high52w": 78.493,
-      "drawdownFrom52wHighPct": -17.37,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -19.34,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 78.448,
-          "close": 78.02
-        },
         {
           "date": "2026-03-10",
           "high": 77.73,
@@ -36802,30 +36802,30 @@
           "date": "2026-06-02",
           "high": 65.08,
           "close": 64.86
+        },
+        {
+          "date": "2026-06-03",
+          "high": 64.18,
+          "close": 63.31
         }
       ]
     },
     "PPA": {
       "ticker": "PPA",
       "assetType": "ETF",
-      "lastClose": 172.97,
-      "dailyChangePct": -0.36,
-      "return5dPct": -0.61,
-      "return20dPct": 5.02,
-      "volume": 282700,
-      "avgVolume20d": 236075,
-      "relativeVolume": 1.2,
+      "lastClose": 169.96,
+      "dailyChangePct": -1.74,
+      "return5dPct": -2.57,
+      "return20dPct": 3.62,
+      "volume": 193902,
+      "avgVolume20d": 229520,
+      "relativeVolume": 0.84,
       "high52w": 186.3,
-      "drawdownFrom52wHighPct": -7.16,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -8.77,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 181.34,
-          "close": 181.05
-        },
         {
           "date": "2026-03-10",
           "high": 181.08,
@@ -37120,30 +37120,30 @@
           "date": "2026-06-02",
           "high": 174.15,
           "close": 172.97
+        },
+        {
+          "date": "2026-06-03",
+          "high": 172.595,
+          "close": 169.96
         }
       ]
     },
     "PAVE": {
       "ticker": "PAVE",
       "assetType": "ETF",
-      "lastClose": 56.89,
-      "dailyChangePct": 1.63,
-      "return5dPct": 1.03,
-      "return20dPct": 1.25,
-      "volume": 2124600,
-      "avgVolume20d": 1623470,
-      "relativeVolume": 1.31,
+      "lastClose": 57.29,
+      "dailyChangePct": 0.7,
+      "return5dPct": 1.0,
+      "return20dPct": -0.14,
+      "volume": 1616313,
+      "avgVolume20d": 1545505,
+      "relativeVolume": 1.05,
       "high52w": 58.55,
-      "drawdownFrom52wHighPct": -2.84,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -2.15,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 52.35,
-          "close": 52.2
-        },
         {
           "date": "2026-03-10",
           "high": 52.9,
@@ -37438,30 +37438,30 @@
           "date": "2026-06-02",
           "high": 57.03,
           "close": 56.89
+        },
+        {
+          "date": "2026-06-03",
+          "high": 57.69,
+          "close": 57.29
         }
       ]
     },
     "GRID": {
       "ticker": "GRID",
       "assetType": "ETF",
-      "lastClose": 197.48,
-      "dailyChangePct": 2.13,
-      "return5dPct": 0.23,
-      "return20dPct": 4.02,
-      "volume": 649200,
-      "avgVolume20d": 906955,
-      "relativeVolume": 0.72,
+      "lastClose": 197.14,
+      "dailyChangePct": -0.17,
+      "return5dPct": 1.51,
+      "return20dPct": 1.89,
+      "volume": 643126,
+      "avgVolume20d": 910956,
+      "relativeVolume": 0.71,
       "high52w": 199.99,
-      "drawdownFrom52wHighPct": -1.26,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -1.43,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 168.37,
-          "close": 167.66
-        },
         {
           "date": "2026-03-10",
           "high": 171.81,
@@ -37756,30 +37756,30 @@
           "date": "2026-06-02",
           "high": 197.6,
           "close": 197.48
+        },
+        {
+          "date": "2026-06-03",
+          "high": 198.775,
+          "close": 197.14
         }
       ]
     },
     "IFRA": {
       "ticker": "IFRA",
       "assetType": "ETF",
-      "lastClose": 61.08,
-      "dailyChangePct": 1.8,
-      "return5dPct": -1.07,
-      "return20dPct": -1.48,
-      "volume": 205000,
-      "avgVolume20d": 264125,
-      "relativeVolume": 0.78,
+      "lastClose": 61.2,
+      "dailyChangePct": 0.2,
+      "return5dPct": -1.1,
+      "return20dPct": -2.66,
+      "volume": 196272,
+      "avgVolume20d": 260453,
+      "relativeVolume": 0.75,
       "high52w": 63.24,
-      "drawdownFrom52wHighPct": -3.42,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -3.23,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 58.735,
-          "close": 58.585
-        },
         {
           "date": "2026-03-10",
           "high": 58.83,
@@ -38074,30 +38074,30 @@
           "date": "2026-06-02",
           "high": 61.11,
           "close": 61.08
+        },
+        {
+          "date": "2026-06-03",
+          "high": 61.8396,
+          "close": 61.2
         }
       ]
     },
     "XLU": {
       "ticker": "XLU",
       "assetType": "ETF",
-      "lastClose": 43.9,
-      "dailyChangePct": 1.86,
-      "return5dPct": -3.15,
-      "return20dPct": -5.33,
-      "volume": 27360800,
-      "avgVolume20d": 22050105,
-      "relativeVolume": 1.24,
+      "lastClose": 43.71,
+      "dailyChangePct": -0.43,
+      "return5dPct": -3.17,
+      "return20dPct": -5.74,
+      "volume": 20933912,
+      "avgVolume20d": 22222095,
+      "relativeVolume": 0.94,
       "high52w": 47.8,
-      "drawdownFrom52wHighPct": -8.16,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -8.56,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 46.95,
-          "close": 46.85
-        },
         {
           "date": "2026-03-10",
           "high": 47.04,
@@ -38392,30 +38392,30 @@
           "date": "2026-06-02",
           "high": 43.96,
           "close": 43.9
+        },
+        {
+          "date": "2026-06-03",
+          "high": 44.48,
+          "close": 43.71
         }
       ]
     },
     "URA": {
       "ticker": "URA",
       "assetType": "ETF",
-      "lastClose": 53.42,
-      "dailyChangePct": 5.7,
-      "return5dPct": 5.03,
-      "return20dPct": -2.46,
-      "volume": 7155100,
-      "avgVolume20d": 4220745,
-      "relativeVolume": 1.7,
+      "lastClose": 50.39,
+      "dailyChangePct": -5.67,
+      "return5dPct": 0.46,
+      "return20dPct": -7.03,
+      "volume": 4999336,
+      "avgVolume20d": 4316681,
+      "relativeVolume": 1.16,
       "high52w": 62.28,
-      "drawdownFrom52wHighPct": -14.23,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -19.09,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 51.11,
-          "close": 51.07
-        },
         {
           "date": "2026-03-10",
           "high": 53.7,
@@ -38710,30 +38710,30 @@
           "date": "2026-06-02",
           "high": 53.51,
           "close": 53.42
+        },
+        {
+          "date": "2026-06-03",
+          "high": 52.68,
+          "close": 50.39
         }
       ]
     },
     "NLR": {
       "ticker": "NLR",
       "assetType": "ETF",
-      "lastClose": 138.17,
-      "dailyChangePct": 4.79,
-      "return5dPct": 2.64,
-      "return20dPct": -3.69,
-      "volume": 690000,
-      "avgVolume20d": 549050,
-      "relativeVolume": 1.26,
+      "lastClose": 131.83,
+      "dailyChangePct": -4.59,
+      "return5dPct": -0.52,
+      "return20dPct": -6.75,
+      "volume": 534730,
+      "avgVolume20d": 548861,
+      "relativeVolume": 0.97,
       "high52w": 168.12,
-      "drawdownFrom52wHighPct": -17.81,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -21.59,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 140.33,
-          "close": 140.28
-        },
         {
           "date": "2026-03-10",
           "high": 146.32,
@@ -39028,30 +39028,30 @@
           "date": "2026-06-02",
           "high": 138.24,
           "close": 138.17
+        },
+        {
+          "date": "2026-06-03",
+          "high": 137.15,
+          "close": 131.83
         }
       ]
     },
     "LIT": {
       "ticker": "LIT",
       "assetType": "ETF",
-      "lastClose": 86.4,
-      "dailyChangePct": 0.36,
-      "return5dPct": 0.06,
-      "return20dPct": -0.83,
-      "volume": 720200,
-      "avgVolume20d": 553875,
-      "relativeVolume": 1.3,
+      "lastClose": 84.86,
+      "dailyChangePct": -1.78,
+      "return5dPct": -0.78,
+      "return20dPct": -4.06,
+      "volume": 293194,
+      "avgVolume20d": 553764,
+      "relativeVolume": 0.53,
       "high52w": 91.98,
-      "drawdownFrom52wHighPct": -6.07,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -7.74,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 71.58,
-          "close": 71.43
-        },
         {
           "date": "2026-03-10",
           "high": 73.34,
@@ -39346,30 +39346,30 @@
           "date": "2026-06-02",
           "high": 86.58,
           "close": 86.4
+        },
+        {
+          "date": "2026-06-03",
+          "high": 85.98,
+          "close": 84.86
         }
       ]
     },
     "COPX": {
       "ticker": "COPX",
       "assetType": "ETF",
-      "lastClose": 93.66,
-      "dailyChangePct": 4.0,
-      "return5dPct": 7.03,
-      "return20dPct": 22.19,
-      "volume": 4040400,
-      "avgVolume20d": 4579400,
-      "relativeVolume": 0.88,
+      "lastClose": 90.25,
+      "dailyChangePct": -3.64,
+      "return5dPct": 4.83,
+      "return20dPct": 15.39,
+      "volume": 4294219,
+      "avgVolume20d": 4678355,
+      "relativeVolume": 0.92,
       "high52w": 99.99,
-      "drawdownFrom52wHighPct": -6.33,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -9.74,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 82.25,
-          "close": 82.24
-        },
         {
           "date": "2026-03-10",
           "high": 84.86,
@@ -39664,30 +39664,30 @@
           "date": "2026-06-02",
           "high": 93.89,
           "close": 93.66
+        },
+        {
+          "date": "2026-06-03",
+          "high": 92.0,
+          "close": 90.25
         }
       ]
     },
     "XME": {
       "ticker": "XME",
       "assetType": "ETF",
-      "lastClose": 132.83,
-      "dailyChangePct": 4.21,
-      "return5dPct": 8.3,
-      "return20dPct": 13.57,
-      "volume": 2553700,
-      "avgVolume20d": 2313300,
-      "relativeVolume": 1.1,
+      "lastClose": 128.53,
+      "dailyChangePct": -3.24,
+      "return5dPct": 4.57,
+      "return20dPct": 8.12,
+      "volume": 2432584,
+      "avgVolume20d": 2377404,
+      "relativeVolume": 1.02,
       "high52w": 135.68,
-      "drawdownFrom52wHighPct": -2.1,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -5.27,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 112.85,
-          "close": 112.05
-        },
         {
           "date": "2026-03-10",
           "high": 116.41,
@@ -39982,30 +39982,30 @@
           "date": "2026-06-02",
           "high": 132.94,
           "close": 132.83
+        },
+        {
+          "date": "2026-06-03",
+          "high": 131.46,
+          "close": 128.53
         }
       ]
     },
     "XLE": {
       "ticker": "XLE",
       "assetType": "ETF",
-      "lastClose": 57.96,
-      "dailyChangePct": 1.15,
-      "return5dPct": 0.19,
-      "return20dPct": -2.41,
-      "volume": 23814700,
-      "avgVolume20d": 39271085,
-      "relativeVolume": 0.61,
+      "lastClose": 58.71,
+      "dailyChangePct": 1.29,
+      "return5dPct": 3.02,
+      "return20dPct": -1.24,
+      "volume": 46099823,
+      "avgVolume20d": 40225401,
+      "relativeVolume": 1.15,
       "high52w": 63.46,
-      "drawdownFrom52wHighPct": -8.67,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -7.49,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 57.15,
-          "close": 56.32
-        },
         {
           "date": "2026-03-10",
           "high": 56.46,
@@ -40300,30 +40300,30 @@
           "date": "2026-06-02",
           "high": 58.17,
           "close": 57.96
+        },
+        {
+          "date": "2026-06-03",
+          "high": 59.375,
+          "close": 58.71
         }
       ]
     },
     "OIH": {
       "ticker": "OIH",
       "assetType": "ETF",
-      "lastClose": 430.45,
-      "dailyChangePct": 2.34,
-      "return5dPct": -2.87,
-      "return20dPct": -2.94,
-      "volume": 250300,
-      "avgVolume20d": 345985,
-      "relativeVolume": 0.72,
+      "lastClose": 431.22,
+      "dailyChangePct": 0.18,
+      "return5dPct": 1.34,
+      "return20dPct": -2.15,
+      "volume": 310113,
+      "avgVolume20d": 345595,
+      "relativeVolume": 0.9,
       "high52w": 459.28,
-      "drawdownFrom52wHighPct": -6.28,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -6.11,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 379.59,
-          "close": 379.12
-        },
         {
           "date": "2026-03-10",
           "high": 386.66,
@@ -40618,30 +40618,30 @@
           "date": "2026-06-02",
           "high": 432.3,
           "close": 430.45
+        },
+        {
+          "date": "2026-06-03",
+          "high": 436.22,
+          "close": 431.22
         }
       ]
     },
     "ARKK": {
       "ticker": "ARKK",
       "assetType": "ETF",
-      "lastClose": 79.91,
-      "dailyChangePct": -1.66,
-      "return5dPct": 3.47,
-      "return20dPct": 2.15,
-      "volume": 5813500,
-      "avgVolume20d": 7436165,
-      "relativeVolume": 0.78,
+      "lastClose": 78.16,
+      "dailyChangePct": -2.19,
+      "return5dPct": 0.27,
+      "return20dPct": 2.06,
+      "volume": 5145145,
+      "avgVolume20d": 7328402,
+      "relativeVolume": 0.7,
       "high52w": 92.65,
-      "drawdownFrom52wHighPct": -13.75,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -15.64,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 74.55,
-          "close": 74.29
-        },
         {
           "date": "2026-03-10",
           "high": 74.47,
@@ -40936,30 +40936,30 @@
           "date": "2026-06-02",
           "high": 80.655,
           "close": 79.91
+        },
+        {
+          "date": "2026-06-03",
+          "high": 79.33,
+          "close": 78.16
         }
       ]
     },
     "IPO": {
       "ticker": "IPO",
       "assetType": "ETF",
-      "lastClose": 57.57,
-      "dailyChangePct": -0.95,
-      "return5dPct": 7.01,
-      "return20dPct": 14.68,
-      "volume": 58600,
-      "avgVolume20d": 35560,
-      "relativeVolume": 1.65,
+      "lastClose": 56.85,
+      "dailyChangePct": -1.25,
+      "return5dPct": 5.61,
+      "return20dPct": 11.01,
+      "volume": 36479,
+      "avgVolume20d": 36663,
+      "relativeVolume": 0.99,
       "high52w": 58.74,
-      "drawdownFrom52wHighPct": -1.99,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -3.22,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 43.38,
-          "close": 43.38
-        },
         {
           "date": "2026-03-10",
           "high": 43.86,
@@ -41254,30 +41254,30 @@
           "date": "2026-06-02",
           "high": 58.15,
           "close": 57.57
+        },
+        {
+          "date": "2026-06-03",
+          "high": 56.9906,
+          "close": 56.85
         }
       ]
     },
     "KWEB": {
       "ticker": "KWEB",
       "assetType": "ETF",
-      "lastClose": 28.33,
-      "dailyChangePct": 3.55,
-      "return5dPct": 3.93,
-      "return20dPct": -0.91,
-      "volume": 36673300,
-      "avgVolume20d": 34998010,
-      "relativeVolume": 1.05,
+      "lastClose": 27.22,
+      "dailyChangePct": -3.92,
+      "return5dPct": 0.67,
+      "return20dPct": -4.59,
+      "volume": 28244939,
+      "avgVolume20d": 35691606,
+      "relativeVolume": 0.79,
       "high52w": 43.365,
-      "drawdownFrom52wHighPct": -34.67,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -37.23,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 30.58,
-          "close": 30.54
-        },
         {
           "date": "2026-03-10",
           "high": 31.48,
@@ -41572,30 +41572,30 @@
           "date": "2026-06-02",
           "high": 28.615,
           "close": 28.33
+        },
+        {
+          "date": "2026-06-03",
+          "high": 27.67,
+          "close": 27.22
         }
       ]
     },
     "MAGS": {
       "ticker": "MAGS",
       "assetType": "ETF",
-      "lastClose": 69.17,
-      "dailyChangePct": -0.99,
-      "return5dPct": -0.66,
-      "return20dPct": 3.29,
-      "volume": 2913600,
-      "avgVolume20d": 2738110,
-      "relativeVolume": 1.06,
+      "lastClose": 68.42,
+      "dailyChangePct": -1.08,
+      "return5dPct": -2.72,
+      "return20dPct": 1.95,
+      "volume": 12208632,
+      "avgVolume20d": 3217276,
+      "relativeVolume": 3.79,
       "high52w": 71.16,
-      "drawdownFrom52wHighPct": -2.8,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -3.85,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 61.825,
-          "close": 61.72
-        },
         {
           "date": "2026-03-10",
           "high": 62.335,
@@ -41890,30 +41890,30 @@
           "date": "2026-06-02",
           "high": 69.92,
           "close": 69.17
+        },
+        {
+          "date": "2026-06-03",
+          "high": 69.29,
+          "close": 68.42
         }
       ]
     },
     "QQQ": {
       "ticker": "QQQ",
       "assetType": "ETF",
-      "lastClose": 746.16,
-      "dailyChangePct": 0.46,
-      "return5dPct": 2.17,
-      "return20dPct": 10.89,
-      "volume": 29688500,
-      "avgVolume20d": 38867165,
-      "relativeVolume": 0.76,
-      "high52w": 746.44,
-      "drawdownFrom52wHighPct": -0.04,
-      "dataDate": "2026-06-02",
+      "lastClose": 744.21,
+      "dailyChangePct": -0.26,
+      "return5dPct": 2.02,
+      "return20dPct": 9.18,
+      "volume": 37748173,
+      "avgVolume20d": 38919353,
+      "relativeVolume": 0.97,
+      "high52w": 748.63,
+      "drawdownFrom52wHighPct": -0.59,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 609.27,
-          "close": 607.76
-        },
         {
           "date": "2026-03-10",
           "high": 613.29,
@@ -42208,30 +42208,30 @@
           "date": "2026-06-02",
           "high": 746.44,
           "close": 746.16
+        },
+        {
+          "date": "2026-06-03",
+          "high": 748.63,
+          "close": 744.21
         }
       ]
     },
     "SPY": {
       "ticker": "SPY",
       "assetType": "ETF",
-      "lastClose": 759.57,
-      "dailyChangePct": 0.14,
-      "return5dPct": 1.2,
-      "return20dPct": 5.79,
-      "volume": 31410700,
-      "avgVolume20d": 46258875,
-      "relativeVolume": 0.68,
+      "lastClose": 754.24,
+      "dailyChangePct": -0.7,
+      "return5dPct": 0.5,
+      "return20dPct": 4.21,
+      "volume": 43721234,
+      "avgVolume20d": 46606836,
+      "relativeVolume": 0.94,
       "high52w": 760.4,
-      "drawdownFrom52wHighPct": -0.11,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -0.81,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 679.92,
-          "close": 678.27
-        },
         {
           "date": "2026-03-10",
           "high": 683.36,
@@ -42526,30 +42526,30 @@
           "date": "2026-06-02",
           "high": 760.4,
           "close": 759.57
+        },
+        {
+          "date": "2026-06-03",
+          "high": 758.8,
+          "close": 754.24
         }
       ]
     },
     "IWM": {
       "ticker": "IWM",
       "assetType": "ETF",
-      "lastClose": 291.66,
-      "dailyChangePct": 0.93,
-      "return5dPct": 0.4,
-      "return20dPct": 4.96,
-      "volume": 18249600,
-      "avgVolume20d": 25326485,
-      "relativeVolume": 0.72,
+      "lastClose": 287.67,
+      "dailyChangePct": -1.37,
+      "return5dPct": -0.93,
+      "return20dPct": 1.81,
+      "volume": 28654690,
+      "avgVolume20d": 25522519,
+      "relativeVolume": 1.12,
       "high52w": 292.74,
-      "drawdownFrom52wHighPct": -0.37,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -1.73,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 254.65,
-          "close": 253.62
-        },
         {
           "date": "2026-03-10",
           "high": 257.65,
@@ -42844,30 +42844,30 @@
           "date": "2026-06-02",
           "high": 291.87,
           "close": 291.66
+        },
+        {
+          "date": "2026-06-03",
+          "high": 290.01,
+          "close": 287.67
         }
       ]
     },
     "TLT": {
       "ticker": "TLT",
       "assetType": "ETF",
-      "lastClose": 85.65,
-      "dailyChangePct": 0.21,
-      "return5dPct": 0.65,
-      "return20dPct": 0.81,
-      "volume": 20279200,
-      "avgVolume20d": 27530475,
-      "relativeVolume": 0.74,
+      "lastClose": 85.31,
+      "dailyChangePct": -0.4,
+      "return5dPct": 0.01,
+      "return20dPct": -0.14,
+      "volume": 15125413,
+      "avgVolume20d": 27377410,
+      "relativeVolume": 0.55,
       "high52w": 92.19,
-      "drawdownFrom52wHighPct": -7.09,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -7.46,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 89.32,
-          "close": 89.23
-        },
         {
           "date": "2026-03-10",
           "high": 88.95,
@@ -43162,30 +43162,30 @@
           "date": "2026-06-02",
           "high": 85.82,
           "close": 85.65
+        },
+        {
+          "date": "2026-06-03",
+          "high": 85.43,
+          "close": 85.31
         }
       ]
     },
     "GLD": {
       "ticker": "GLD",
       "assetType": "ETF",
-      "lastClose": 411.95,
-      "dailyChangePct": 0.17,
-      "return5dPct": -0.5,
-      "return20dPct": -0.67,
-      "volume": 3789100,
-      "avgVolume20d": 5855235,
-      "relativeVolume": 0.65,
+      "lastClose": 407.87,
+      "dailyChangePct": -0.99,
+      "return5dPct": -0.15,
+      "return20dPct": -2.49,
+      "volume": 4706205,
+      "avgVolume20d": 5878290,
+      "relativeVolume": 0.8,
       "high52w": 509.7,
-      "drawdownFrom52wHighPct": -19.18,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -19.98,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 472.68,
-          "close": 472.53
-        },
         {
           "date": "2026-03-10",
           "high": 481.31,
@@ -43480,30 +43480,30 @@
           "date": "2026-06-02",
           "high": 414.4,
           "close": 411.95
+        },
+        {
+          "date": "2026-06-03",
+          "high": 409.38,
+          "close": 407.87
         }
       ]
     },
     "IBIT": {
       "ticker": "IBIT",
       "assetType": "ETF",
-      "lastClose": 38.05,
-      "dailyChangePct": -6.03,
-      "return5dPct": -11.49,
-      "return20dPct": -16.19,
-      "volume": 75553400,
-      "avgVolume20d": 40146035,
-      "relativeVolume": 1.88,
+      "lastClose": 37.0,
+      "dailyChangePct": -2.76,
+      "return5dPct": -12.84,
+      "return20dPct": -20.05,
+      "volume": 51600922,
+      "avgVolume20d": 40589361,
+      "relativeVolume": 1.27,
       "high52w": 71.82,
-      "drawdownFrom52wHighPct": -47.02,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -48.48,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 39.445,
-          "close": 39.13
-        },
         {
           "date": "2026-03-10",
           "high": 40.725,
@@ -43798,30 +43798,30 @@
           "date": "2026-06-02",
           "high": 39.09,
           "close": 38.05
+        },
+        {
+          "date": "2026-06-03",
+          "high": 38.01,
+          "close": 37.0
         }
       ]
     },
     "BLOK": {
       "ticker": "BLOK",
       "assetType": "ETF",
-      "lastClose": 67.89,
-      "dailyChangePct": -1.22,
-      "return5dPct": 4.32,
-      "return20dPct": 10.62,
-      "volume": 216800,
-      "avgVolume20d": 338665,
-      "relativeVolume": 0.64,
+      "lastClose": 66.11,
+      "dailyChangePct": -2.62,
+      "return5dPct": -0.29,
+      "return20dPct": 5.17,
+      "volume": 692802,
+      "avgVolume20d": 358465,
+      "relativeVolume": 1.93,
       "high52w": 75.89,
-      "drawdownFrom52wHighPct": -10.54,
-      "dataDate": "2026-06-02",
+      "drawdownFrom52wHighPct": -12.89,
+      "dataDate": "2026-06-03",
       "dataSource": "yfinance",
       "dataStatus": "ok",
       "history": [
-        {
-          "date": "2026-03-09",
-          "high": 53.39,
-          "close": 53.15
-        },
         {
           "date": "2026-03-10",
           "high": 54.25,
@@ -44116,6 +44116,11 @@
           "date": "2026-06-02",
           "high": 69.17,
           "close": 67.89
+        },
+        {
+          "date": "2026-06-03",
+          "high": 67.96,
+          "close": 66.11
         }
       ]
     }
