@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-04",
-  "generatedAt": "2026년 6월 4일 목요일 오후 1:11",
+  "generatedAt": "2026년 6월 4일 목요일 오후 1:30",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -90,7 +90,7 @@
         "moneyFlowScore": 88,
         "moneyFlowScoreInitial": 88,
         "moneyFlowScoreFinal": 100,
-        "finalRawScore": 110,
+        "finalRawScore": 109,
         "todayActionLabel": "제외",
         "reasonConfidence": "MEDIUM",
         "oneDayReturn": 3.91,
@@ -2808,22 +2808,362 @@
       "recommendationDate": "2026-06-03"
     }
   ],
+  "etfWatchCandidates": [
+    {
+      "ticker": "DRAM",
+      "assetType": "ETF",
+      "name": "Roundhill Memory ETF",
+      "actionLabel": "거래량 확인 전 관찰",
+      "moneyFlowScore": 79,
+      "moneyFlowScoreInitial": 70,
+      "moneyFlowScoreFinal": 79,
+      "finalRawScore": 79,
+      "finalDisplayScore": 79,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+70 + +8 + 0 + +5 + 0 - 4 + 0 = 79",
+      "riskPenalty": -4,
+      "riskPenaltySummary": {
+        "totalPenalty": -4,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "VOLUME_DIVERGENCE",
+            "label": "volume divergence",
+            "penalty": -4,
+            "evidence": "5d price strength is not confirmed by relative volume 0.70x.",
+            "action": "Require relative volume recovery above 1.0x."
+          }
+        ],
+        "watchItems": [
+          "ETF breadth data not connected"
+        ],
+        "summary": "1개 감점 리스크로 총 -4점 반영."
+      },
+      "reasonConfidence": "LOW",
+      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+      "directCatalyst": "직접 촉매: Why 1 Little-Known ETF Is Riding the AI Chip Shortage",
+      "tieBreakerReason": "최종 원점수 79, 리스크 패널티 -4, 5일 수익률 +14.79%, 상대 거래량 0.70배 순으로 정렬",
+      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+      "invalidationCondition": "거래량 회복 실패",
+      "actionGate": {
+        "label": "거래량 확인 전 관찰",
+        "status": "관찰",
+        "reasons": [
+          "Entry Quality 38 < 45",
+          "RVOL 0.70x < 1.00x"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / Entry Quality 38 < 45 / RVOL 0.70x < 1.00x"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 75,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 69.71,
+      "recommendationDate": "2026-06-03"
+    },
+    {
+      "ticker": "SMH",
+      "assetType": "ETF",
+      "name": "VanEck Semiconductor ETF",
+      "actionLabel": "거래량 확인 전 관찰",
+      "moneyFlowScore": 66,
+      "moneyFlowScoreInitial": 56,
+      "moneyFlowScoreFinal": 66,
+      "finalRawScore": 66,
+      "finalDisplayScore": 66,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+56 + +9 + 0 + +5 + 0 - 4 + 0 = 66",
+      "riskPenalty": -4,
+      "riskPenaltySummary": {
+        "totalPenalty": -4,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "VOLUME_DIVERGENCE",
+            "label": "volume divergence",
+            "penalty": -4,
+            "evidence": "5d price strength is not confirmed by relative volume 0.97x.",
+            "action": "Require relative volume recovery above 1.0x."
+          }
+        ],
+        "watchItems": [],
+        "summary": "1개 감점 리스크로 총 -4점 반영."
+      },
+      "reasonConfidence": "LOW",
+      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+      "directCatalyst": "직접 촉매: Here's Why the VanEck Semiconductor ETF Soared in May And Is a Great Way to Play AI Spending",
+      "tieBreakerReason": "최종 원점수 66, 리스크 패널티 -4, 5일 수익률 +7.12%, 상대 거래량 0.97배 순으로 정렬",
+      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+      "invalidationCondition": "거래량 회복 실패",
+      "actionGate": {
+        "label": "거래량 확인 전 관찰",
+        "status": "관찰",
+        "reasons": [
+          "Entry Quality 33 < 45",
+          "RVOL 0.97x < 1.00x"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / Entry Quality 33 < 45 / RVOL 0.97x < 1.00x"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 75,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 637.9,
+      "recommendationDate": "2026-06-03"
+    },
+    {
+      "ticker": "SOXX",
+      "assetType": "ETF",
+      "name": "iShares Semiconductor ETF",
+      "actionLabel": "거래량 확인 전 관찰",
+      "moneyFlowScore": 75,
+      "moneyFlowScoreInitial": 64,
+      "moneyFlowScoreFinal": 75,
+      "finalRawScore": 75,
+      "finalDisplayScore": 75,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+64 + +10 + 0 + +5 + 0 - 4 + 0 = 75",
+      "riskPenalty": -4,
+      "riskPenaltySummary": {
+        "totalPenalty": -4,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "VOLUME_DIVERGENCE",
+            "label": "volume divergence",
+            "penalty": -4,
+            "evidence": "5d price strength is not confirmed by relative volume 0.97x.",
+            "action": "Require relative volume recovery above 1.0x."
+          }
+        ],
+        "watchItems": [],
+        "summary": "1개 감점 리스크로 총 -4점 반영."
+      },
+      "reasonConfidence": "LOW",
+      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+      "directCatalyst": "직접 촉매: Cadence Design Is Cementing Its Place in the 2nm AI Chip Race By Solving the Die Size Limit in Partnership With a Major Chipmaker",
+      "tieBreakerReason": "최종 원점수 75, 리스크 패널티 -4, 5일 수익률 +9.17%, 상대 거래량 0.97배 순으로 정렬",
+      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+      "invalidationCondition": "거래량 회복 실패",
+      "actionGate": {
+        "label": "거래량 확인 전 관찰",
+        "status": "관찰",
+        "reasons": [
+          "Entry Quality 36 < 45",
+          "RVOL 0.97x < 1.00x"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / Entry Quality 36 < 45 / RVOL 0.97x < 1.00x"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 75,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 615.68,
+      "recommendationDate": "2026-06-03"
+    },
+    {
+      "ticker": "AIQ",
+      "assetType": "ETF",
+      "name": "Global X Artificial Intelligence & Technology ETF",
+      "actionLabel": "관찰",
+      "moneyFlowScore": 84,
+      "moneyFlowScoreInitial": 80,
+      "moneyFlowScoreFinal": 84,
+      "finalRawScore": 84,
+      "finalDisplayScore": 84,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+80 + +2 + 0 + +2 + 0 + 0 + 0 = 84",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "ETF 확산도 제한, 유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "직접 촉매: ETFs in Focus as Anthropic Eyes a Blockbuster IPO",
+      "tieBreakerReason": "최종 원점수 84, 리스크 패널티 0, 5일 수익률 +6.24%, 상대 거래량 1.50배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "관찰",
+        "status": "관찰",
+        "reasons": [
+          "스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / 스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하"
+      },
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 66,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 69.16,
+      "recommendationDate": "2026-06-03"
+    },
+    {
+      "ticker": "BOTZ",
+      "assetType": "ETF",
+      "name": "Global X Robotics & Artificial Intelligence ETF",
+      "actionLabel": "거래량 확인 전 관찰",
+      "moneyFlowScore": 0,
+      "moneyFlowScoreInitial": 6,
+      "moneyFlowScoreFinal": 0,
+      "finalRawScore": -8,
+      "finalDisplayScore": 0,
+      "wasCapped": true,
+      "capReason": "raw score -8 capped to displayed score 0",
+      "formulaText": "+6 + +2 + 0 - 5 + 0 - 11 + 0 = -8 -> 0",
+      "riskPenalty": -11,
+      "riskPenaltySummary": {
+        "totalPenalty": -11,
+        "riskLevel": "MEDIUM",
+        "items": [
+          {
+            "riskType": "MA_BREAK_RISK",
+            "label": "20d moving average break risk",
+            "penalty": -6,
+            "evidence": "Close is below the 20-day moving average.",
+            "action": "Hold off until 20-day moving average is recovered."
+          },
+          {
+            "riskType": "LOW_LIQUIDITY",
+            "label": "low liquidity",
+            "penalty": -5,
+            "evidence": "Liquidity signal: LOW.",
+            "action": "Avoid market-order chasing."
+          }
+        ],
+        "watchItems": [
+          "ETF breadth data not connected"
+        ],
+        "summary": "2개 감점 리스크로 총 -11점 반영."
+      },
+      "reasonConfidence": "LOW",
+      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+      "directCatalyst": "직접 촉매: Three Humanoid Robotics ETFs Built for the Tesla Optimus and Figure AI Era Most Investors Have Never Heard Of",
+      "tieBreakerReason": "최종 원점수 -8, 리스크 패널티 -11, 5일 수익률 +0.50%, 상대 거래량 0.64배 순으로 정렬",
+      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+      "invalidationCondition": "거래량 회복 실패",
+      "actionGate": {
+        "label": "거래량 확인 전 관찰",
+        "status": "관찰",
+        "reasons": [
+          "Entry Quality 0 < 45",
+          "RVOL 0.64x < 1.00x",
+          "스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 0 < 45 / RVOL 0.64x < 1.00x"
+      },
+      "linkedNarrative": "미분류",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 0,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 40.27,
+      "recommendationDate": "2026-06-03"
+    }
+  ],
   "dataReliability": {
     "priceVolumeStatus": "CONNECTED",
     "priceAsOfDate": "2026-06-03",
     "priceAsOfLabel": "2026-06-03 US regular close",
-    "reportGeneratedAtKST": "2026-06-04 13:11",
+    "reportGeneratedAtKST": "2026-06-04 13:30",
     "newsStatus": "CONNECTED",
-    "newsLastUpdatedAt": "2026-06-04T04:11:18.641Z",
+    "newsFetchedAt": "2026-06-04T04:30:47.325Z",
+    "newsLastUpdatedAt": "2026-06-04T04:30:47.325Z",
+    "latestNewsPublishedAt": "2026-06-04T03:54:50.000Z",
+    "newsFreshnessStatus": "FRESH",
     "etfBreadthStatus": "PARTIAL",
     "etfBreadthSampleCount": "2~4",
+    "etfBreadthReliability": "LOW",
     "spreadStatus": "UNKNOWN",
     "liquidityStatus": "PARTIAL",
     "prePostMarketStatus": "UNAVAILABLE",
+    "analysisReliability": "MEDIUM",
+    "executionReliability": "LOW",
+    "reliabilityNotes": [
+      "테마 확산 판단 제한",
+      "스프레드 UNKNOWN으로 시장가 판단 제한",
+      "프리/애프터마켓 확인 불가"
+    ],
     "providers": "yfinance, Yahoo Finance RSS, config fallback sample, price-volume dollar-volume fallback",
     "recommendationSession": "2026-06-04 US regular session",
-    "grade": "MEDIUM",
+    "grade": "LOW",
     "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 가격, 호가, 뉴스, 프리마켓/정규장 거래량을 별도 확인해야 한다."
+  },
+  "todayDecision": {
+    "label": "신규 추격 없음 / 관찰",
+    "entryReadyCount": 0,
+    "conditionalCount": 0,
+    "watchCount": 85,
+    "banCount": 53,
+    "actionCandidateCount": 0,
+    "mainLimiters": [
+      "스프레드 UNKNOWN",
+      "Entry Quality 부족",
+      "뉴스 직접성 부족"
+    ],
+    "orderDecision": "시장가 금지 / 지정가 또는 관찰",
+    "noTradeMessage": "오늘은 추세 후보는 있으나, 주문 실행 신뢰도와 거래량 확인 조건이 부족해 신규 추격은 보류한다. 기존 관심 종목은 전일 고점 돌파와 RVOL 1.00x 회복을 확인한 뒤 조건부로 본다."
+  },
+  "actionGateSummary": {
+    "total": 138,
+    "items": [
+      {
+        "label": "RVOL < 1.00x",
+        "count": 75
+      },
+      {
+        "label": "스프레드 UNKNOWN",
+        "count": 138
+      },
+      {
+        "label": "Entry Quality < 60",
+        "count": 138
+      },
+      {
+        "label": "Exhaustion Risk >= 70",
+        "count": 0
+      },
+      {
+        "label": "ETF breadth 샘플 부족",
+        "count": 37
+      },
+      {
+        "label": "뉴스 직접성 부족",
+        "count": 99
+      }
+    ],
+    "topLimiters": [
+      "스프레드 UNKNOWN",
+      "Entry Quality 부족",
+      "뉴스 직접성 부족"
+    ]
   },
   "dataMode": "REAL_TEST"
 }

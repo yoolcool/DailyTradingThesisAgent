@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-04",
-  "generatedAt": "2026년 6월 4일 목요일 오후 1:12",
+  "generatedAt": "2026년 6월 4일 목요일 오후 1:31",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -90,7 +90,7 @@
         "moneyFlowScore": 88,
         "moneyFlowScoreInitial": 88,
         "moneyFlowScoreFinal": 100,
-        "finalRawScore": 110,
+        "finalRawScore": 109,
         "todayActionLabel": "제외",
         "reasonConfidence": "MEDIUM",
         "oneDayReturn": 3.91,
@@ -2731,8 +2731,8 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "MEDIUM",
-      "reasonConfidenceExplanation": "유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-      "directCatalyst": "직접 촉매: Applied Materials: The AI Stock That Wins No Matter Which Chip Wins",
+      "reasonConfidenceExplanation": "직접 촉매 부재, 유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
       "tieBreakerReason": "최종 원점수 110, 리스크 패널티 0, 5일 수익률 +11.72%, 상대 거래량 1.09배 순으로 정렬",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -3092,18 +3092,78 @@
     "priceVolumeStatus": "CONNECTED",
     "priceAsOfDate": "2026-06-03",
     "priceAsOfLabel": "2026-06-03 US regular close",
-    "reportGeneratedAtKST": "2026-06-04 13:12",
+    "reportGeneratedAtKST": "2026-06-04 13:31",
     "newsStatus": "CONNECTED",
-    "newsLastUpdatedAt": "2026-06-04T04:12:56.614Z",
+    "newsFetchedAt": "2026-06-04T04:31:15.618Z",
+    "newsLastUpdatedAt": "2026-06-04T04:31:15.618Z",
+    "latestNewsPublishedAt": "2026-06-04T03:54:50.000Z",
+    "newsFreshnessStatus": "FRESH",
     "etfBreadthStatus": "PARTIAL",
     "etfBreadthSampleCount": "2~4",
+    "etfBreadthReliability": "LOW",
     "spreadStatus": "UNKNOWN",
     "liquidityStatus": "PARTIAL",
     "prePostMarketStatus": "UNAVAILABLE",
+    "analysisReliability": "MEDIUM",
+    "executionReliability": "LOW",
+    "reliabilityNotes": [
+      "테마 확산 판단 제한",
+      "스프레드 UNKNOWN으로 시장가 판단 제한",
+      "프리/애프터마켓 확인 불가"
+    ],
     "providers": "yfinance, Yahoo Finance RSS, config fallback sample, price-volume dollar-volume fallback",
     "recommendationSession": "2026-06-04 US regular session",
-    "grade": "MEDIUM",
+    "grade": "LOW",
     "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 가격, 호가, 뉴스, 프리마켓/정규장 거래량을 별도 확인해야 한다."
+  },
+  "todayDecision": {
+    "label": "신규 추격 없음 / 관찰",
+    "entryReadyCount": 0,
+    "conditionalCount": 0,
+    "watchCount": 85,
+    "banCount": 53,
+    "actionCandidateCount": 0,
+    "mainLimiters": [
+      "스프레드 UNKNOWN",
+      "Entry Quality 부족",
+      "뉴스 직접성 부족"
+    ],
+    "orderDecision": "시장가 금지 / 지정가 또는 관찰",
+    "noTradeMessage": "오늘은 추세 후보는 있으나, 왜 돈이 몰리는가와 누가 더 비싸게 사줄 수 있는가를 주문 실행 신뢰도와 거래량이 충분히 뒷받침하지 못해 신규 추격은 보류한다. 기존 관심 종목은 전일 고점 돌파와 RVOL 1.00x 회복을 확인한 뒤 조건부로 본다."
+  },
+  "actionGateSummary": {
+    "total": 138,
+    "items": [
+      {
+        "label": "RVOL < 1.00x",
+        "count": 75
+      },
+      {
+        "label": "스프레드 UNKNOWN",
+        "count": 138
+      },
+      {
+        "label": "Entry Quality < 60",
+        "count": 138
+      },
+      {
+        "label": "Exhaustion Risk >= 70",
+        "count": 0
+      },
+      {
+        "label": "ETF breadth 샘플 부족",
+        "count": 37
+      },
+      {
+        "label": "뉴스 직접성 부족",
+        "count": 99
+      }
+    ],
+    "topLimiters": [
+      "스프레드 UNKNOWN",
+      "Entry Quality 부족",
+      "뉴스 직접성 부족"
+    ]
   },
   "dataMode": "REAL_TEST"
 }

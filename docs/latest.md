@@ -43,12 +43,37 @@ ETF 후보 TOP 5:
 웹 리포트:
 https://yoolcool.github.io/DailyTradingThesisAgent/
 
+## 오늘 결론
+
+- 오늘 결론: 신규 추격 없음 / 관찰
+- 신규 진입 후보: 0개
+- 조건부 진입 후보: 0개
+- 관찰 후보: 85개
+- 주요 제한 요인: 스프레드 UNKNOWN, Entry Quality 부족, 뉴스 직접성 부족
+- 주문 판단: 시장가 금지 / 지정가 또는 관찰
+- 실전 판단: 오늘은 추세 후보는 있으나, 왜 돈이 몰리는가와 누가 더 비싸게 사줄 수 있는가를 주문 실행 신뢰도와 거래량이 충분히 뒷받침하지 못해 신규 추격은 보류한다. 기존 관심 종목은 전일 고점 돌파와 RVOL 1.00x 회복을 확인한 뒤 조건부로 본다.
+
+### 후보 제한 요인 집계
+
+- RVOL < 1.00x: 75개
+- 스프레드 UNKNOWN: 138개
+- Entry Quality < 60: 138개
+- Exhaustion Risk >= 70: 0개
+- ETF breadth 샘플 부족: 37개
+- 뉴스 직접성 부족: 99개
+
 ## 데이터 신뢰도
 
-- 전체 데이터 신뢰도 등급: MEDIUM
-- 리포트 생성 시각: 2026-06-04 13:12 KST
+- 전체 데이터 신뢰도 등급: LOW
+- 분석 신뢰도: MEDIUM
+- 주문 실행 신뢰도: LOW
+- ETF breadth 신뢰도: LOW
+- 신뢰도 해석: 테마 확산 판단 제한, 스프레드 UNKNOWN으로 시장가 판단 제한, 프리/애프터마켓 확인 불가
+- 리포트 생성 시각: 2026-06-04 13:31 KST
 - 가격 기준 거래일: 2026-06-03 US regular close
-- 뉴스 기준 시각: 2026-06-04 13:12 KST
+- 뉴스 수집 시각: 2026-06-04 13:31 KST
+- 가장 최근 뉴스 발행 시각: 2026-06-04 12:54 KST
+- 뉴스 신선도 상태: FRESH
 - 추천 적용 거래일: 2026-06-04 US regular session
 - 가격/거래량 데이터 상태: 연결됨
 - 뉴스 데이터 상태: 연결됨
@@ -67,7 +92,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스: 연결됨
 - ETF 구성종목 확산도: 일부 연결
 - 스프레드/유동성: 일부 연결
-- 생성 시각: 2026년 6월 4일 목요일 오후 1:12
+- 생성 시각: 2026년 6월 4일 목요일 오후 1:31
 - 시장 상태: 위험선호
 - 오늘 돈의 방향: 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 강한 테마 TOP 3: 반도체 장비/공급망(94), 메모리/HBM(87), AI 소프트웨어 ETF(84)
@@ -307,7 +332,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 ## 오늘 실제 행동 후보
 
-오늘 즉시 행동 후보 없음. 왜 돈이 몰리는가, 누가 더 비싸게 사줄 수 있는가, 진입 조건이 동시에 충족된 후보가 없어 TOP 5는 관찰 목록으로만 본다.
+오늘은 추세 후보는 있으나, 왜 돈이 몰리는가와 누가 더 비싸게 사줄 수 있는가를 주문 실행 신뢰도와 거래량이 충분히 뒷받침하지 못해 신규 추격은 보류한다. 기존 관심 종목은 전일 고점 돌파와 RVOL 1.00x 회복을 확인한 뒤 조건부로 본다.
 
 ## 오늘 돈이 몰리는 테마
 
@@ -346,6 +371,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidenceExplanation: ETF 확산도 제한, 유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
 
 - todayActionLabel: 제외
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
 - 기준일: 2026-06-03
 - 종가: $109.58
 - 1일 수익률: +1.42%
@@ -409,7 +435,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 3/5/0
   - 직접성/방향성/신선도: 3/1/1
   - 강한 촉매 수: 1
-  - 최종 갱신 시각: 2026-06-04 13:12 KST
+  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 가장 최근 뉴스 발행 시각: 2026-05-29 08:00 KST
+  - 뉴스 신선도 상태: UNKNOWN
+  - 뉴스 이후 가격 반응: 긍정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
   - 핵심 뉴스 요약: Your Portfolio Isn’t Invested in the Right Kind of AI Unless You Hold This ETF
   - 원점수/상한 점수: +9 / +9
   - 점수 반영: +9
@@ -456,6 +486,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidenceExplanation: ETF 확산도 제한, 유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
 
 - todayActionLabel: 관찰
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
 - 기준일: 2026-06-03
 - 종가: $69.16
 - 1일 수익률: -1.40%
@@ -519,7 +550,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 5/3/0
   - 직접성/방향성/신선도: 1/1/3
   - 강한 촉매 수: 1
-  - 최종 갱신 시각: 2026-06-04 13:12 KST
+  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-03 20:30 KST
+  - 뉴스 신선도 상태: FRESH
+  - 뉴스 이후 가격 반응: 부정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
   - 핵심 뉴스 요약: These 2 AI Software Stocks Are Through the Roof. Dan Ives Says There’s Still Time to Buy.
   - 원점수/상한 점수: +11 / +10
   - 점수 반영: +10
@@ -566,6 +601,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidenceExplanation: ETF 확산도 제한, 유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
 
 - todayActionLabel: 제외
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
 - 기준일: 2026-06-03
 - 종가: $102.21
 - 1일 수익률: -3.00%
@@ -630,7 +666,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 4/4/0
   - 직접성/방향성/신선도: 3/1/0
   - 강한 촉매 수: 0
-  - 최종 갱신 시각: 2026-06-04 13:12 KST
+  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 가장 최근 뉴스 발행 시각: 2026-05-27 23:58 KST
+  - 뉴스 신선도 상태: UNKNOWN
+  - 뉴스 이후 가격 반응: 부정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
   - 핵심 뉴스 요약: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout
   - 원점수/상한 점수: +7 / +7
   - 점수 반영: +7
@@ -677,6 +717,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidenceExplanation: 가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.
 
 - todayActionLabel: 거래량 확인 전 관찰
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
 - 기준일: 2026-06-03
 - 종가: $69.71
 - 1일 수익률: +0.20%
@@ -741,7 +782,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 3/5/0
   - 직접성/방향성/신선도: 3/1/2
   - 강한 촉매 수: 0
-  - 최종 갱신 시각: 2026-06-04 13:12 KST
+  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-03 02:15 KST
+  - 뉴스 신선도 상태: STALE
+  - 뉴스 이후 가격 반응: 긍정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
   - 핵심 뉴스 요약: Why 1 Little-Known ETF Is Riding the AI Chip Shortage
   - 원점수/상한 점수: +8 / +8
   - 점수 반영: +8
@@ -788,6 +833,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidenceExplanation: 가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.
 
 - todayActionLabel: 거래량 확인 전 관찰
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
 - 기준일: 2026-06-03
 - 종가: $91.67
 - 1일 수익률: -2.81%
@@ -852,7 +898,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 4/4/0
   - 직접성/방향성/신선도: 1/1/0
   - 강한 촉매 수: 0
-  - 최종 갱신 시각: 2026-06-04 13:12 KST
+  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 가장 최근 뉴스 발행 시각: 2026-05-27 23:58 KST
+  - 뉴스 신선도 상태: UNKNOWN
+  - 뉴스 이후 가격 반응: 부정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
   - 핵심 뉴스 요약: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout
   - 원점수/상한 점수: +5 / +5
   - 점수 반영: +5
@@ -964,6 +1014,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidenceExplanation: 유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
 
 - todayActionLabel: 관찰
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
 - 기준일: 2026-06-03
 - 종가: $747.61
 - 1일 수익률: -2.78%
@@ -1031,7 +1082,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 7/1/0
   - 직접성/방향성/신선도: 3/1/3
   - 강한 촉매 수: 6
-  - 최종 갱신 시각: 2026-06-04 13:12 KST
+  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-04 12:09 KST
+  - 뉴스 신선도 상태: FRESH
+  - 뉴스 이후 가격 반응: 부정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
   - 핵심 뉴스 요약: Dow Jones Futures: Broadcom, CrowdStrike Dive On Earnings; SpaceX IPO Price Target Set
   - 원점수/상한 점수: +25 / +10
   - 점수 반영: +10
@@ -1069,6 +1124,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidenceExplanation: 유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
 
 - todayActionLabel: 관찰
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
 - 기준일: 2026-06-03
 - 종가: $146.48
 - 1일 수익률: -1.60%
@@ -1133,13 +1189,17 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 연결됨
-  - 긍정/중립/부정: 4/4/0
+  - 긍정/중립/부정: 3/5/0
   - 직접성/방향성/신선도: 3/1/3
   - 강한 촉매 수: 0
-  - 최종 갱신 시각: 2026-06-04 13:12 KST
+  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-04 05:35 KST
+  - 뉴스 신선도 상태: FRESH
+  - 뉴스 이후 가격 반응: 부정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
   - 핵심 뉴스 요약: FTNT Jumps 87.5% YTD on AI Security Push: Buy, Sell or Hold the Stock?
-  - 원점수/상한 점수: +10 / +10
-  - 점수 반영: +10
+  - 원점수/상한 점수: +9 / +9
+  - 점수 반영: +9
   - 주의: 특이사항 없음
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 유동성/스프레드:
@@ -1174,6 +1234,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidenceExplanation: 유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
 
 - todayActionLabel: 관찰
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
 - 기준일: 2026-06-03
 - 종가: $236.06
 - 1일 수익률: +3.05%
@@ -1241,7 +1302,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 1/7/0
   - 직접성/방향성/신선도: 3/1/3
   - 강한 촉매 수: 1
-  - 최종 갱신 시각: 2026-06-04 13:12 KST
+  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-04 00:26 KST
+  - 뉴스 신선도 상태: FRESH
+  - 뉴스 이후 가격 반응: 긍정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
   - 핵심 뉴스 요약: Old Dominion (ODFL) Up 4% Since Last Earnings Report: Can It Continue?
   - 원점수/상한 점수: +9 / +9
   - 점수 반영: +9
@@ -1279,6 +1344,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidenceExplanation: 유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
 
 - todayActionLabel: 관찰
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
 - 기준일: 2026-06-03
 - 종가: $280.43
 - 1일 수익률: -5.64%
@@ -1346,7 +1412,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 4/4/0
   - 직접성/방향성/신선도: 3/1/3
   - 강한 촉매 수: 2
-  - 최종 갱신 시각: 2026-06-04 13:12 KST
+  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-04 07:49 KST
+  - 뉴스 신선도 상태: FRESH
+  - 뉴스 이후 가격 반응: 부정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
   - 핵심 뉴스 요약: PANW Price Targets Raised By Citi, Goldman Sachs On AI-Driven Security Demand
   - 원점수/상한 점수: +14 / +10
   - 점수 반영: +10
@@ -1384,6 +1454,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidenceExplanation: 유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
 
 - todayActionLabel: 제외
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
 - 기준일: 2026-06-03
 - 종가: $594.11
 - 1일 수익률: +5.51%
@@ -1452,7 +1523,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 3/5/0
   - 직접성/방향성/신선도: 3/1/3
   - 강한 촉매 수: 0
-  - 최종 갱신 시각: 2026-06-04 13:12 KST
+  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-04 11:30 KST
+  - 뉴스 신선도 상태: FRESH
+  - 뉴스 이후 가격 반응: 긍정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
   - 핵심 뉴스 요약: Sandisk Spin Off And AI Deals Test Lofty Valuation And Momentum
   - 원점수/상한 점수: +9 / +9
   - 점수 반영: +9
@@ -1477,75 +1552,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 이 섹션은 실제 계좌 보유 종목이 아니라 전일 리포트에서 제시된 개별 종목 후보의 사후 점검이다.
 실제 보유 수량/평단이 입력되지 않았으므로 계좌 수익률이 아니라 추천 기준일 이후 가격 변화를 추적한다.
 
-#### [CRWD] CrowdStrike Holdings Inc.
-- 전일 추천일: 2026-06-03
-- 전일 actionLabel: 개별 종목 우선
-- 전일 moneyFlowScore: 100
-- 전일 종가 또는 추천 기준가: $747.61
-- 오늘 종가: $747.61
-- 추천 이후 수익률: 0.00%
-- 진입 조건 충족 여부: 미충족
-- 무효화 조건 발생 여부: 미발생
-- 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 유지
-- 오늘 판단 근거: CRWD는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +15.84% vs ETF 평균 +9.59%, 주식 20일 +56.89% vs ETF 평균 +21.11%, 상대 거래량 1.41배 vs ETF 평균 0.96배
-- 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-
-#### [FTNT] Fortinet Inc.
-- 전일 추천일: 2026-06-03
-- 전일 actionLabel: 개별 종목 우선
-- 전일 moneyFlowScore: 100
-- 전일 종가 또는 추천 기준가: $146.48
-- 오늘 종가: $146.48
-- 추천 이후 수익률: 0.00%
-- 진입 조건 충족 여부: 미충족
-- 무효화 조건 발생 여부: 미발생
-- 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 유지
-- 오늘 판단 근거: FTNT는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +14.50% vs ETF 평균 +9.59%, 주식 20일 +62.90% vs ETF 평균 +21.11%, 상대 거래량 1.12배 vs ETF 평균 0.96배
-- 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-
-#### [PANW] Palo Alto Networks Inc.
-- 전일 추천일: 2026-06-03
-- 전일 actionLabel: 개별 종목 우선
-- 전일 moneyFlowScore: 97
-- 전일 종가 또는 추천 기준가: $280.43
-- 오늘 종가: $280.43
-- 추천 이후 수익률: 0.00%
-- 진입 조건 충족 여부: 미충족
-- 무효화 조건 발생 여부: 미발생
-- 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 유지
-- 오늘 판단 근거: PANW는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +12.86% vs ETF 평균 +9.59%, 주식 20일 +52.42% vs ETF 평균 +21.11%, 상대 거래량 1.44배 vs ETF 평균 0.96배
-- 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-
-#### [DDOG] Datadog Inc.
-- 전일 추천일: 2026-06-03
-- 전일 actionLabel: 개별 종목 우선
-- 전일 moneyFlowScore: 93
-- 전일 종가 또는 추천 기준가: $250.33
-- 오늘 종가: $250.33
-- 추천 이후 수익률: 0.00%
-- 진입 조건 충족 여부: 미충족
-- 무효화 조건 발생 여부: 미발생
-- 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 유지
-- 오늘 판단 근거: DDOG는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +12.86% vs ETF 평균 +5.31%, 주식 20일 +71.78% vs ETF 평균 +13.69%, 상대 거래량 1.15배 vs ETF 평균 1.21배
-- 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-
-#### [CDNS] Cadence Design Systems Inc.
-- 전일 추천일: 2026-06-03
-- 전일 actionLabel: 개별 종목 우선
-- 전일 moneyFlowScore: 100
-- 전일 종가 또는 추천 기준가: $408
-- 오늘 종가: $408
-- 추천 이후 수익률: 0.00%
-- 진입 조건 충족 여부: 미충족
-- 무효화 조건 발생 여부: 미발생
-- 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 유지
-- 오늘 판단 근거: CDNS는 전일 추천 이후 0.00% 변화. 관련 ETF와 비슷함 | 주식 5일 +9.08% vs ETF 평균 +5.31%, 주식 20일 +15.37% vs ETF 평균 +13.69%, 상대 거래량 1.24배 vs ETF 평균 1.21배
-- 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+전일 추천 종목 데이터 없음
 
 ### 2-4. ETF 대비 개별 종목 판단 로직
 
@@ -1577,7 +1584,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 #### [KLAC] KLA Corporation
 - moneyFlowScore(최종): 100
-- moneyFlowScore 산정 근거 요약: 1차 88, 최종 원점수 110, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
+- moneyFlowScore 산정 근거 요약: 1차 88, 최종 원점수 109, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
 - 제외/주의 사유: 매매 조건 미충족
 - 해제 조건: 전일 고점 돌파와 5일선 유지 확인
 
@@ -1608,7 +1615,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 1 | MRVL | Marvell Technology Inc. | 95 | 100 | 112 | 강한 자금 유입 후보 | 제외 | MEDIUM | +3.73% | +51.81% | +78.76% | 2.98 | SMH, SOXX, SOXQ, AIQ |
 | 2 | WDC | Western Digital Corporation | 93 | 100 | 108 | 강한 자금 유입 후보 | 제외 | MEDIUM | +5.51% | +11.97% | +27.69% | 1.15 | QQQ |
 | 3 | CRWD | CrowdStrike Holdings Inc. | 90 | 100 | 103 | 강한 자금 유입 후보 | 관찰 | MEDIUM | -2.78% | +15.84% | +56.89% | 1.41 | HACK, CIBR, IHAK, IGV |
-| 4 | KLAC | KLA Corporation | 88 | 100 | 110 | 강한 자금 유입 후보 | 제외 | MEDIUM | +3.91% | +8.58% | +22.63% | 1.00 | SMH, SOXX, SOXQ, AIQ |
+| 4 | KLAC | KLA Corporation | 88 | 100 | 109 | 강한 자금 유입 후보 | 제외 | MEDIUM | +3.91% | +8.58% | +22.63% | 1.00 | SMH, SOXX, SOXQ, AIQ |
 | 5 | AMAT | Applied Materials Inc. | 87 | 100 | 110 | 강한 자금 유입 후보 | 관찰 | MEDIUM | +2.19% | +11.72% | +21.90% | 1.09 | SMH, SOXX, SOXQ, AIQ |
 | 6 | FTNT | Fortinet Inc. | 86 | 99 | 99 | 강한 자금 유입 후보 | 관찰 | MEDIUM | -1.60% | +14.50% | +62.90% | 1.12 | HACK, CIBR, IHAK, IGV |
 | 7 | ODFL | Old Dominion Freight Line Inc. | 86 | 100 | 102 | 강한 자금 유입 후보 | 관찰 | MEDIUM | +3.05% | +7.57% | +20.39% | 1.29 | QQQ |
@@ -1634,7 +1641,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 1 | MRVL | Marvell Technology Inc. | 95 | 100 | 112 | 강한 자금 유입 후보 | 제외 | MEDIUM | +3.73% | +51.81% | +78.76% | 2.98 | SMH, SOXX, SOXQ, AIQ |
 | 2 | WDC | Western Digital Corporation | 93 | 100 | 108 | 강한 자금 유입 후보 | 제외 | MEDIUM | +5.51% | +11.97% | +27.69% | 1.15 | QQQ |
 | 3 | CRWD | CrowdStrike Holdings Inc. | 90 | 100 | 103 | 강한 자금 유입 후보 | 관찰 | MEDIUM | -2.78% | +15.84% | +56.89% | 1.41 | HACK, CIBR, IHAK, IGV |
-| 4 | KLAC | KLA Corporation | 88 | 100 | 110 | 강한 자금 유입 후보 | 제외 | MEDIUM | +3.91% | +8.58% | +22.63% | 1.00 | SMH, SOXX, SOXQ, AIQ |
+| 4 | KLAC | KLA Corporation | 88 | 100 | 109 | 강한 자금 유입 후보 | 제외 | MEDIUM | +3.91% | +8.58% | +22.63% | 1.00 | SMH, SOXX, SOXQ, AIQ |
 | 5 | AMAT | Applied Materials Inc. | 87 | 100 | 110 | 강한 자금 유입 후보 | 관찰 | MEDIUM | +2.19% | +11.72% | +21.90% | 1.09 | SMH, SOXX, SOXQ, AIQ |
 | 6 | FTNT | Fortinet Inc. | 86 | 99 | 99 | 강한 자금 유입 후보 | 관찰 | MEDIUM | -1.60% | +14.50% | +62.90% | 1.12 | HACK, CIBR, IHAK, IGV |
 | 7 | ODFL | Old Dominion Freight Line Inc. | 86 | 100 | 102 | 강한 자금 유입 후보 | 관찰 | MEDIUM | +3.05% | +7.57% | +20.39% | 1.29 | QQQ |
@@ -1820,7 +1827,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 - 전일 추천 snapshot:
   - 상태: 연결됨
-  - 점검 대상: 5
+  - 점검 대상: 0
   - 저장 위치: data/latest-report.json, data/previous-report.json, data/dailyReports/
 
 - 유동성/스프레드:

@@ -37,8 +37,23 @@ function main() {
   assert(html.includes("REAL DATA TEST") || html.includes("MOCK DATA"), "HTML missing data mode banner");
   assert(markdown.includes("데이터 신뢰도"), "Markdown missing data reliability panel");
   assert(html.includes("data-data-reliability"), "HTML missing data reliability panel");
+  assert(markdown.includes("오늘 결론"), "Markdown missing Today Decision panel");
+  assert(html.includes("data-today-decision"), "HTML missing Today Decision panel");
+  assert(markdown.includes("분석 신뢰도"), "Markdown missing analysis reliability");
+  assert(html.includes("분석 신뢰도"), "HTML missing analysis reliability");
+  assert(markdown.includes("주문 실행 신뢰도"), "Markdown missing execution reliability");
+  assert(html.includes("주문 실행 신뢰도"), "HTML missing execution reliability");
+  assert(markdown.includes("후보 제한 요인 집계"), "Markdown missing action gate summary");
+  assert(html.includes("data-action-gate-summary"), "HTML missing action gate summary");
+  assert(markdown.includes("뉴스 수집 시각"), "Markdown missing news fetched timestamp");
+  assert(markdown.includes("가장 최근 뉴스 발행 시각"), "Markdown missing latest news published timestamp");
+  assert(markdown.includes("뉴스 신선도 상태"), "Markdown missing news freshness status");
+  assert(html.includes("뉴스 수집 시각"), "HTML missing news fetched timestamp");
+  assert(html.includes("최근 뉴스 발행"), "HTML missing latest news published timestamp");
+  assert(html.includes("뉴스 신선도"), "HTML missing news freshness status");
   assert(markdown.includes("이 리포트는 투자판단 보조용이며"), "Markdown missing practical-use warning");
   assert(html.includes("이 리포트는 투자판단 보조용이며"), "HTML missing practical-use warning");
+  assert(/RVOL\s+\d+\.\d{2}x/.test(html), "HTML should show RVOL with two decimals");
 
   for (const pattern of ["\uFFFD", "?꾪", "?좏", "?댁", "?뺤", "?좊", "?덉", "?섎", "?곌"]) {
     assert(!markdown.includes(pattern), `Markdown contains broken Korean pattern: ${pattern}`);
@@ -148,8 +163,16 @@ function main() {
   ];
   assert(scoredItems.length > 0, "Snapshot missing scored recommendation items");
   assert(latestSnapshot.dataReliability?.grade, "Snapshot missing data reliability grade");
+  assert(latestSnapshot.dataReliability?.analysisReliability, "Snapshot missing analysis reliability");
+  assert(latestSnapshot.dataReliability?.executionReliability, "Snapshot missing execution reliability");
   assert(latestSnapshot.dataReliability?.priceAsOfLabel, "Snapshot missing price as-of label");
   assert(latestSnapshot.dataReliability?.recommendationSession, "Snapshot missing recommendation session");
+  assert(latestSnapshot.todayDecision?.label, "Snapshot missing today decision label");
+  assert(latestSnapshot.actionGateSummary?.items?.length, "Snapshot missing action gate summary");
+  if ((latestSnapshot.actionCandidates || []).length === 0) {
+    assert(markdown.includes("신규 추격은 보류"), "No-trade report missing practical no-trade wording");
+    assert(html.includes("신규 추격은 보류"), "No-trade HTML missing practical no-trade wording");
+  }
   for (const item of scoredItems) {
     assert(item.moneyFlowScoreInitial !== undefined, `Snapshot missing initial score for ${item.ticker}`);
     assert(item.moneyFlowScoreFinal !== undefined, `Snapshot missing final score for ${item.ticker}`);
