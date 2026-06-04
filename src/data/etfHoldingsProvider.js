@@ -68,15 +68,24 @@ async function calculateEtfBreadth(etf, holdings, marketData) {
     .sort((a, b) => (b.market.return5dPct || 0) - (a.market.return5dPct || 0))
     .slice(0, 5)
     .map((row) => row.holding.ticker);
-  const breadthSignal =
+  const sampleReliability =
+    sampled.length >= 20
+      ? "NORMAL"
+      : sampled.length >= 10
+        ? "LIMITED"
+        : sampled.length >= 5
+          ? "LOW_CONFIDENCE"
+          : "INSUFFICIENT";
+  const rawBreadthSignal =
     advancersRatio >= 0.6 && holdingsAbove20DMA >= 0.6
       ? "BROAD_ADVANCE"
       : advancersRatio < 0.35 || holdingsAbove20DMA < 0.35
         ? "WEAK_BREADTH"
-        : sampled.length <= 3
-          ? "NARROW_LEADERSHIP"
-          : "NARROW_LEADERSHIP";
-  const etfBreadthScore = breadthSignal === "BROAD_ADVANCE" ? 8 : breadthSignal === "NARROW_LEADERSHIP" ? 2 : breadthSignal === "WEAK_BREADTH" ? -4 : 0;
+        : "NARROW_LEADERSHIP";
+  const breadthSignal = sampleReliability === "INSUFFICIENT" && rawBreadthSignal === "BROAD_ADVANCE" ? "SAMPLE_TOO_SMALL" : rawBreadthSignal;
+  const rawBreadthScore = breadthSignal === "BROAD_ADVANCE" ? 8 : breadthSignal === "NARROW_LEADERSHIP" ? 2 : breadthSignal === "WEAK_BREADTH" ? -4 : 0;
+  const sampleCap = sampleReliability === "NORMAL" ? 8 : sampleReliability === "LIMITED" ? 4 : sampleReliability === "LOW_CONFIDENCE" ? 2 : 0;
+  const etfBreadthScore = Math.max(-4, Math.min(rawBreadthScore, sampleCap));
 
   return {
     etf,
@@ -85,6 +94,7 @@ async function calculateEtfBreadth(etf, holdings, marketData) {
     holdingsAvailable: true,
     holdingsCount: holdings.length,
     sampledHoldingsCount: sampled.length,
+    sampleReliability,
     advancersRatio,
     holdingsAbove20DMA,
     holdingsAbove50DMA,
@@ -92,8 +102,11 @@ async function calculateEtfBreadth(etf, holdings, marketData) {
     weightedReturn20D,
     topContributors,
     breadthSignal,
+    rawBreadthSignal,
+    rawBreadthScore,
+    sampleCap,
     etfBreadthScore,
-    notes: ["sample-based breadth from fallback holdings; weights may not reflect current issuer holdings"]
+    notes: [`sample-based breadth from fallback holdings; sample reliability ${sampleReliability}; weights may not reflect current issuer holdings`]
   };
 }
 

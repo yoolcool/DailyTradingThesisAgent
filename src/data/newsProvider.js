@@ -2,6 +2,7 @@ const { failedStatus, fetchText } = require("./providerUtils");
 
 const POSITIVE_KEYWORDS = ["earnings", "guidance", "upgrade", "contract", "partnership", "ai", "cybersecurity", "data center", "chip"];
 const NEGATIVE_KEYWORDS = ["downgrade", "regulation", "lawsuit", "investigation", "offering", "dilution"];
+const STRONG_CATALYST_KEYWORDS = ["earnings", "guidance", "contract", "award", "order", "policy", "regulation", "approval", "partnership", "acquisition", "buyback"];
 
 function stripTags(value) {
   return String(value || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
@@ -16,7 +17,8 @@ function parseRssItems(xml, ticker) {
     const source = stripTags(raw.match(/<source[^>]*>([\s\S]*?)<\/source>/i)?.[1] || "Yahoo Finance RSS");
     const publishedAt = stripTags(raw.match(/<pubDate>([\s\S]*?)<\/pubDate>/i)?.[1] || "");
     const url = stripTags(raw.match(/<link>([\s\S]*?)<\/link>/i)?.[1] || "");
-    const sentiment = classifySentiment(`${title} ${summary}`);
+    const text = `${title} ${summary}`;
+    const sentiment = classifySentiment(text);
     return {
       ticker,
       title,
@@ -25,7 +27,10 @@ function parseRssItems(xml, ticker) {
       url,
       summary,
       sentiment,
-      relevanceScore: relevanceScore(`${title} ${summary}`)
+      relevanceScore: relevanceScore(text),
+      directnessScore: directnessScore(text, ticker),
+      freshnessScore: freshnessScore(publishedAt),
+      strongCatalyst: STRONG_CATALYST_KEYWORDS.some((keyword) => text.toLowerCase().includes(keyword))
     };
   }).filter((item) => item.title);
 }
@@ -45,20 +50,57 @@ function relevanceScore(text) {
   return [...POSITIVE_KEYWORDS, ...NEGATIVE_KEYWORDS].reduce((score, keyword) => score + (lower.includes(keyword) ? 1 : 0), 0);
 }
 
+function directnessScore(text, ticker) {
+  const lower = String(text || "").toLowerCase();
+  const symbol = String(ticker || "").toLowerCase();
+  if (symbol && lower.includes(symbol)) return 3;
+  return relevanceScore(text) > 0 ? 1 : 0;
+}
+
+function freshnessScore(publishedAt) {
+  const timestamp = Date.parse(publishedAt);
+  if (!Number.isFinite(timestamp)) return 0;
+  const ageHours = (Date.now() - timestamp) / 36e5;
+  if (ageHours <= 24) return 3;
+  if (ageHours <= 72) return 2;
+  if (ageHours <= 168) return 1;
+  return 0;
+}
+
 function summarizeNews(ticker, items, providerStatus = "CONNECTED", notes = []) {
   const positive = items.filter((item) => item.sentiment === "POSITIVE").length;
   const negative = items.filter((item) => item.sentiment === "NEGATIVE").length;
   const neutral = items.filter((item) => item.sentiment === "NEUTRAL" || item.sentiment === "UNKNOWN").length;
   const meaningful = items.filter((item) => (item.relevanceScore || 0) > 0);
-  const newsScore = positive > negative ? Math.min(10, positive * 3 + meaningful.length) : negative > positive ? -4 : 0;
+  const directness = Math.max(0, ...items.map((item) => item.directnessScore || 0));
+  const freshness = Math.max(0, ...items.map((item) => item.freshnessScore || 0));
+  const strongCatalystCount = items.filter((item) => item.strongCatalyst).length;
+  const directionScore = positive > negative ? 1 : negative > positive ? -1 : 0;
+  const rawNewsScore = directionScore > 0
+    ? directness + freshness + strongCatalystCount * 2 + positive
+    : directionScore < 0
+      ? -4
+      : 0;
+  const newsScore = Math.max(-4, Math.min(10, rawNewsScore));
+  const lastPublishedTimestamp = items
+    .map((item) => Date.parse(item.publishedAt))
+    .filter(Number.isFinite)
+    .sort((a, b) => b - a)[0];
   return {
     ticker,
     status: providerStatus,
     source: "Yahoo Finance RSS",
+    fetchedAt: new Date().toISOString(),
+    lastPublishedAt: lastPublishedTimestamp ? new Date(lastPublishedTimestamp).toISOString() : null,
     items,
     itemCount: items.length,
     sentimentCounts: { positive, neutral, negative },
     headlineSummary: meaningful[0]?.title || items[0]?.title || "의미 있는 신규 뉴스 없음",
+    directnessScore: directness,
+    directionScore,
+    freshnessScore: freshness,
+    strongCatalystCount,
+    rawNewsScore,
     newsScore,
     notes: items.length ? notes : [...notes, "해당 티커의 의미 있는 신규 뉴스가 없거나 RSS가 비어 있음"]
   };

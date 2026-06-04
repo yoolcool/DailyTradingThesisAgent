@@ -35,6 +35,10 @@ function main() {
 
   assert(markdown.includes("REAL DATA TEST") || markdown.includes("MOCK DATA"), "Report missing data mode banner");
   assert(html.includes("REAL DATA TEST") || html.includes("MOCK DATA"), "HTML missing data mode banner");
+  assert(markdown.includes("데이터 신뢰도"), "Markdown missing data reliability panel");
+  assert(html.includes("data-data-reliability"), "HTML missing data reliability panel");
+  assert(markdown.includes("이 리포트는 투자판단 보조용이며"), "Markdown missing practical-use warning");
+  assert(html.includes("이 리포트는 투자판단 보조용이며"), "HTML missing practical-use warning");
 
   for (const pattern of ["\uFFFD", "?꾪", "?좏", "?댁", "?뺤", "?좊", "?덉", "?섎", "?곌"]) {
     assert(!markdown.includes(pattern), `Markdown contains broken Korean pattern: ${pattern}`);
@@ -138,9 +142,14 @@ function main() {
     ...(latestSnapshot.stockActionCandidates || []),
     ...(latestSnapshot.etfActionCandidates || []),
     ...(latestSnapshot.stockEntryCandidates || []),
-    ...(latestSnapshot.stockPullbackCandidates || [])
+    ...(latestSnapshot.stockPullbackCandidates || []),
+    ...(latestSnapshot.stockWatchCandidates || []),
+    ...(latestSnapshot.etfWatchCandidates || [])
   ];
   assert(scoredItems.length > 0, "Snapshot missing scored recommendation items");
+  assert(latestSnapshot.dataReliability?.grade, "Snapshot missing data reliability grade");
+  assert(latestSnapshot.dataReliability?.priceAsOfLabel, "Snapshot missing price as-of label");
+  assert(latestSnapshot.dataReliability?.recommendationSession, "Snapshot missing recommendation session");
   for (const item of scoredItems) {
     assert(item.moneyFlowScoreInitial !== undefined, `Snapshot missing initial score for ${item.ticker}`);
     assert(item.moneyFlowScoreFinal !== undefined, `Snapshot missing final score for ${item.ticker}`);
