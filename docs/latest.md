@@ -52,10 +52,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스: 연결됨
 - ETF 구성종목 확산도: 일부 연결
 - 스프레드/유동성: 일부 연결
-- 생성 시각: 2026년 6월 4일 목요일 오후 12:26
+- 생성 시각: 2026년 6월 4일 목요일 오후 12:47
 - 시장 상태: 위험선호
 - 오늘 돈의 방향: 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
-- 강한 테마 TOP 3: AI 소프트웨어 ETF(97), 반도체 장비/공급망(88), AI 반도체 ETF(86)
+- 강한 테마 TOP 3: AI 소프트웨어 ETF(97), 반도체 장비/공급망(87), AI 반도체 ETF(86)
 - 데이터 한계:
   - API 또는 provider 상태에 따라 뉴스/ETF 확산도/스프레드 반영 범위가 달라질 수 있다.
   - 수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한한다.
@@ -143,7 +143,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 <summary>상세 narrativeScore 근거 보기</summary>
 
 - rawScore: 54
-- ETF 평균 moneyFlowScore: 35
+- ETF 평균 moneyFlowScore: 34
 - 개별 종목 평균 moneyFlowScore: 43
 - ETF 후보 비율: 0%
 - 개별 종목 후보 비율: 0%
@@ -151,7 +151,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 평균 수익률: +19.00%
 - 평균 상대 거래량: 1.00배
 - 52주 고점 근접 후보 비율: 71%
-- 뉴스 직접성 점수: 8
+- 뉴스 직접성 점수: 7
 - ETF 확산도 점수: 2
 - 유동성 점수: 2
 - 과열 리스크 차감: 0
@@ -355,7 +355,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 ## 오늘 돈이 몰리는 테마
 
 - AI 소프트웨어 ETF: AIQ | 평균 moneyFlowScore 97 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
-- 반도체 장비/공급망: LRCX, AMAT, KLAC | 평균 moneyFlowScore 88 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
+- 반도체 장비/공급망: LRCX, AMAT, KLAC | 평균 moneyFlowScore 87 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
 - AI 반도체 ETF: SMH, SOXX, SOXQ | 평균 moneyFlowScore 86 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
 - 메모리/HBM: MU, STX, WDC | 평균 moneyFlowScore 86 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
 - 메모리/HBM ETF: DRAM | 평균 moneyFlowScore 81 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
@@ -1071,7 +1071,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 연결됨
-  - 긍정/중립/부정: 4/4/0
+  - 긍정/중립/부정: 3/5/0
   - 핵심 뉴스 요약: FTNT Jumps 87.5% YTD on AI Security Push: Buy, Sell or Hold the Stock?
   - 점수 반영: +10
   - 주의: 특이사항 없음
@@ -1251,7 +1251,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 연결됨
-  - 긍정/중립/부정: 4/4/0
+  - 긍정/중립/부정: 3/5/0
   - 핵심 뉴스 요약: These 2 AI Software Stocks Are Through the Roof. Dan Ives Says There’s Still Time to Buy.
   - 점수 반영: +10
   - 주의: 특이사항 없음
@@ -1494,7 +1494,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 1 | MRVL | Marvell Technology Inc. | 100 | 100 | 117 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +3.73% | +51.81% | +78.76% | 2.86 | SMH, SOXX, SOXQ, AIQ |
 | 2 | WDC | Western Digital Corporation | 98 | 100 | 113 | 강한 자금 유입 후보 | 돌파 확인 후 관찰 | HIGH | +5.51% | +11.97% | +27.69% | 1.06 | QQQ |
 | 3 | CRWD | CrowdStrike Holdings Inc. | 95 | 100 | 118 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | -2.78% | +15.84% | +56.89% | 1.35 | HACK, CIBR, IHAK, IGV |
-| 4 | AMAT | Applied Materials Inc. | 90 | 100 | 113 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +2.19% | +11.72% | +21.90% | 1.01 | SMH, SOXX, SOXQ, AIQ |
+| 4 | AMAT | Applied Materials Inc. | 90 | 100 | 113 | 강한 자금 유입 후보 | 개별 종목 우선 | MEDIUM | +2.19% | +11.72% | +21.90% | 1.01 | SMH, SOXX, SOXQ, AIQ |
 | 5 | FTNT | Fortinet Inc. | 86 | 100 | 109 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | -1.60% | +14.50% | +62.90% | 1.07 | HACK, CIBR, IHAK, IGV |
 | 6 | AVGO | Broadcom Inc. | 86 | 100 | 109 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | -0.49% | +13.60% | +12.14% | 1.61 | SMH, SOXX, SOXQ, AIQ |
 | 7 | ODFL | Old Dominion Freight Line Inc. | 86 | 97 | 97 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +3.05% | +7.57% | +20.39% | 1.24 | QQQ |
@@ -1507,7 +1507,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 14 | FANG | Diamondback Energy Inc. | 70 | 85 | 85 | 관심 후보 | 개별 종목 우선 | HIGH | +4.05% | +9.20% | +2.14% | 1.40 | QQQ |
 | 15 | AMD | Advanced Micro Devices Inc. | 68 | 83 | 83 | 관심 후보 | 돌파 확인 후 관찰 | LOW | +4.02% | +9.48% | +52.71% | 0.77 | SMH, SOXX, SOXQ, AIQ |
 | 16 | ADI | Analog Devices Inc. | 64 | 87 | 87 | 관찰 후보 | 눌림 매수 대기 | MEDIUM | +3.42% | +4.99% | +8.13% | 1.15 | SMH, SOXX, SOXQ, AIQ |
-| 17 | KLAC | KLA Corporation | 63 | 82 | 82 | 관찰 후보 | 개별 종목 우선 | LOW | +3.91% | +8.58% | +22.63% | 0.99 | SMH, SOXX, SOXQ, AIQ |
+| 17 | KLAC | KLA Corporation | 63 | 80 | 80 | 관찰 후보 | 개별 종목 우선 | LOW | +3.91% | +8.58% | +22.63% | 0.99 | SMH, SOXX, SOXQ, AIQ |
 | 18 | QCOM | QUALCOMM Incorporated | 63 | 80 | 80 | 관찰 후보 | 개별 종목 우선 | LOW | +3.81% | +7.12% | +34.02% | 0.68 | SMH, SOXX, SOXQ, AIQ |
 | 19 | LRCX | Lam Research Corporation | 62 | 81 | 81 | 관찰 후보 | 개별 종목 우선 | LOW | +2.78% | +7.77% | +24.62% | 0.93 | SMH, SOXX, SOXQ, AIQ |
 | 20 | STX | Seagate Technology Holdings plc | 59 | 73 | 73 | 관찰 후보 | 개별 종목 우선 | LOW | +1.52% | +8.04% | +22.01% | 0.79 | QQQ |
@@ -1520,7 +1520,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 1 | MRVL | Marvell Technology Inc. | 100 | 100 | 117 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +3.73% | +51.81% | +78.76% | 2.86 | SMH, SOXX, SOXQ, AIQ |
 | 2 | WDC | Western Digital Corporation | 98 | 100 | 113 | 강한 자금 유입 후보 | 돌파 확인 후 관찰 | HIGH | +5.51% | +11.97% | +27.69% | 1.06 | QQQ |
 | 3 | CRWD | CrowdStrike Holdings Inc. | 95 | 100 | 118 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | -2.78% | +15.84% | +56.89% | 1.35 | HACK, CIBR, IHAK, IGV |
-| 4 | AMAT | Applied Materials Inc. | 90 | 100 | 113 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +2.19% | +11.72% | +21.90% | 1.01 | SMH, SOXX, SOXQ, AIQ |
+| 4 | AMAT | Applied Materials Inc. | 90 | 100 | 113 | 강한 자금 유입 후보 | 개별 종목 우선 | MEDIUM | +2.19% | +11.72% | +21.90% | 1.01 | SMH, SOXX, SOXQ, AIQ |
 | 5 | FTNT | Fortinet Inc. | 86 | 100 | 109 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | -1.60% | +14.50% | +62.90% | 1.07 | HACK, CIBR, IHAK, IGV |
 | 6 | AVGO | Broadcom Inc. | 86 | 100 | 109 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | -0.49% | +13.60% | +12.14% | 1.61 | SMH, SOXX, SOXQ, AIQ |
 | 7 | ODFL | Old Dominion Freight Line Inc. | 86 | 97 | 97 | 강한 자금 유입 후보 | 개별 종목 우선 | HIGH | +3.05% | +7.57% | +20.39% | 1.24 | QQQ |
@@ -1533,7 +1533,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 14 | FANG | Diamondback Energy Inc. | 70 | 85 | 85 | 관심 후보 | 개별 종목 우선 | HIGH | +4.05% | +9.20% | +2.14% | 1.40 | QQQ |
 | 15 | AMD | Advanced Micro Devices Inc. | 68 | 83 | 83 | 관심 후보 | 돌파 확인 후 관찰 | LOW | +4.02% | +9.48% | +52.71% | 0.77 | SMH, SOXX, SOXQ, AIQ |
 | 16 | ADI | Analog Devices Inc. | 64 | 87 | 87 | 관찰 후보 | 눌림 매수 대기 | MEDIUM | +3.42% | +4.99% | +8.13% | 1.15 | SMH, SOXX, SOXQ, AIQ |
-| 17 | KLAC | KLA Corporation | 63 | 82 | 82 | 관찰 후보 | 개별 종목 우선 | LOW | +3.91% | +8.58% | +22.63% | 0.99 | SMH, SOXX, SOXQ, AIQ |
+| 17 | KLAC | KLA Corporation | 63 | 80 | 80 | 관찰 후보 | 개별 종목 우선 | LOW | +3.91% | +8.58% | +22.63% | 0.99 | SMH, SOXX, SOXQ, AIQ |
 | 18 | QCOM | QUALCOMM Incorporated | 63 | 80 | 80 | 관찰 후보 | 개별 종목 우선 | LOW | +3.81% | +7.12% | +34.02% | 0.68 | SMH, SOXX, SOXQ, AIQ |
 | 19 | LRCX | Lam Research Corporation | 62 | 81 | 81 | 관찰 후보 | 개별 종목 우선 | LOW | +2.78% | +7.77% | +24.62% | 0.93 | SMH, SOXX, SOXQ, AIQ |
 | 20 | STX | Seagate Technology Holdings plc | 59 | 73 | 73 | 관찰 후보 | 개별 종목 우선 | LOW | +1.52% | +8.04% | +22.01% | 0.79 | QQQ |
@@ -1658,7 +1658,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | IPO | IPO/신규상장 ETF | 31 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.99배라 신규 자금 유입 강도는 약함. 뉴스: Bill Ackman’s Pershing Square to Raise $5 Billion from IPO |
 | KWEB | 중국 인터넷 ETF | 0 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.79배라 신규 자금 유입 강도는 약함. 유동성: ACCEPTABLE |
 | MAGS | 메가캡 플랫폼 ETF | 31 | 매매 금지 | LOW | 20일 +1.95%, 5일 -2.72%, 상대 거래량 3.79배로 가격과 거래량이 함께 개선. 뉴스: Magnificent Seven Post Best Earnings In Nearly 5 Years. Sign Of A Bubble? / 유동성: ACCEPTABLE |
-| QQQ | 시장 기준 ETF | 52 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.97배라 신규 자금 유입 강도는 약함. 뉴스: Dot-Com Bubble Deja Vu? 'Big Short' Michael Burry's Chart Shows AI Chip Rally Is Within 7% Of 2000 Peak / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
+| QQQ | 시장 기준 ETF | 48 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.97배라 신규 자금 유입 강도는 약함. 뉴스: Dot-Com Bubble Deja Vu? 'Big Short' Michael Burry's Chart Shows AI Chip Rally Is Within 7% Of 2000 Peak / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
 | SPY | 시장 기준 ETF | 36 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.94배라 신규 자금 유입 강도는 약함. 뉴스: S&amp;P 500, Nasdaq Futures Slip Amid Renewed US-Iran Tensions, Chipmaker Losses: AVGO, KEEL, CRWD, MSTR Stocks In Focus / ETF 확산도: BROAD_ADVANCE / 유동성: LIQUID |
 | IWM | 시장 기준 ETF | 44 | 관찰 | MEDIUM | 20일 +1.81%, 5일 -0.93%, 상대 거래량 1.12배로 가격과 거래량이 함께 개선. 뉴스: Exchange-Traded Funds, Equity Futures Lower Pre-Bell Tuesday as Traders Assess AI Momentum / 유동성: LIQUID |
 | TLT | 채권 ETF | 8 | 매매 금지 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.55배라 신규 자금 유입 강도는 약함. 유동성: LIQUID |
