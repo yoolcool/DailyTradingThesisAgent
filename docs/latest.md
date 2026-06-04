@@ -1,6 +1,6 @@
 # 오늘의 데일리 트레이딩 요약
 
-**REAL DATA TEST - 가격/거래량은 실제 데이터, 뉴스 연결, ETF 구성종목 확산도/스프레드/유동성 일부 연결**
+**REAL DATA TEST - 가격/거래량은 실제 데이터, 뉴스/ETF 구성종목 확산도/스프레드/유동성 일부 연결**
 
 **목적:** 이 리포트는 최근 오른 자산을 나열하는 것이 아니라, 돈이 몰리는 근거와 다음 매수 주체가 확인할 트레이딩 후보를 찾기 위한 보고서다.
 
@@ -48,7 +48,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 오늘 결론: 신규 추격 없음 / 관찰
 - 신규 진입 후보: 0개
 - 조건부 진입 후보: 0개
-- 관찰 후보: 85개
+- 관찰 후보: 84개
 - 주요 제한 요인: 스프레드 UNKNOWN, Entry Quality 부족, 뉴스 직접성 부족
 - 주문 판단: 시장가 금지 / 지정가 또는 관찰
 - 실전 판단: 오늘은 추세 후보는 있으나, 왜 돈이 몰리는가와 누가 더 비싸게 사줄 수 있는가를 주문 실행 신뢰도와 거래량이 충분히 뒷받침하지 못해 신규 추격은 보류한다. 기존 관심 종목은 전일 고점 돌파와 RVOL 1.00x 회복을 확인한 뒤 조건부로 본다.
@@ -60,23 +60,23 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - Entry Quality < 60: 138개
 - Exhaustion Risk >= 70: 0개
 - ETF breadth 샘플 부족: 37개
-- 뉴스 직접성 부족: 99개
+- 뉴스 직접성 부족: 100개
 
 ## 데이터 신뢰도
 
 - 전체 데이터 신뢰도 등급: LOW
-- 분석 신뢰도: MEDIUM
+- 분석 신뢰도: LOW
 - 주문 실행 신뢰도: LOW
 - ETF breadth 신뢰도: LOW
 - 신뢰도 해석: 테마 확산 판단 제한, 스프레드 UNKNOWN으로 시장가 판단 제한, 프리/애프터마켓 확인 불가
-- 리포트 생성 시각: 2026-06-04 13:31 KST
+- 리포트 생성 시각: 2026-06-04 13:40 KST
 - 가격 기준 거래일: 2026-06-03 US regular close
-- 뉴스 수집 시각: 2026-06-04 13:31 KST
+- 뉴스 수집 시각: 2026-06-04 13:40 KST
 - 가장 최근 뉴스 발행 시각: 2026-06-04 12:54 KST
 - 뉴스 신선도 상태: FRESH
 - 추천 적용 거래일: 2026-06-04 US regular session
 - 가격/거래량 데이터 상태: 연결됨
-- 뉴스 데이터 상태: 연결됨
+- 뉴스 데이터 상태: 일부 연결
 - ETF 구성종목 확산도 상태: 일부 연결
 - ETF 구성종목 샘플 수: 2~4
 - 스프레드/bid-ask 데이터 상태: UNKNOWN
@@ -89,10 +89,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 - 데이터 모드: REAL_TEST
 - 가격/거래량: 연결됨
-- 뉴스: 연결됨
+- 뉴스: 일부 연결
 - ETF 구성종목 확산도: 일부 연결
 - 스프레드/유동성: 일부 연결
-- 생성 시각: 2026년 6월 4일 목요일 오후 1:31
+- 생성 시각: 2026년 6월 4일 목요일 오후 1:40
 - 시장 상태: 위험선호
 - 오늘 돈의 방향: 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 강한 테마 TOP 3: 반도체 장비/공급망(94), 메모리/HBM(87), AI 소프트웨어 ETF(84)
@@ -334,6 +334,80 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 오늘은 추세 후보는 있으나, 왜 돈이 몰리는가와 누가 더 비싸게 사줄 수 있는가를 주문 실행 신뢰도와 거래량이 충분히 뒷받침하지 못해 신규 추격은 보류한다. 기존 관심 종목은 전일 고점 돌파와 RVOL 1.00x 회복을 확인한 뒤 조건부로 본다.
 
+## 참고용 행동 후보
+
+> 실제 행동 후보가 없는 날에만 표시한다. 아래 후보는 매수 추천이 아니라 다음 정규장에서 전일 고점, RVOL 1.00x 이상, 스프레드/호가 확인을 기다리는 관찰 리스트다.
+
+### ETF 참고 후보 TOP 3
+
+#### 1. [SOXQ] Invesco PHLX Semiconductor ETF
+- 상태: 참고용 관찰 후보
+- todayActionLabel: 제외
+- 제한 사유: Entry Quality 44 < 45; 스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하; 진입 품질 부족
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
+- moneyFlowScore: 100
+- Entry Quality: 44 (관찰)
+- RVOL: 1.39x
+- 진입 전 확인: 전일 고점 돌파와 5일선 유지 확인
+- 무효화: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+
+#### 2. [AIQ] Global X Artificial Intelligence & Technology ETF
+- 상태: 참고용 관찰 후보
+- todayActionLabel: 관찰
+- 제한 사유: 스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
+- moneyFlowScore: 84
+- Entry Quality: 46 (관찰)
+- RVOL: 1.50x
+- 진입 전 확인: 전일 고점 돌파와 5일선 유지 확인
+- 무효화: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+
+#### 3. [HACK] Amplify Cybersecurity ETF
+- 상태: 참고용 관찰 후보
+- todayActionLabel: 제외
+- 제한 사유: Entry Quality 38 < 45; 스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하; 진입 품질 부족
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
+- moneyFlowScore: 72
+- Entry Quality: 38 (낮음)
+- RVOL: 1.07x
+- 진입 전 확인: 전일 고점 돌파와 5일선 유지 확인
+- 무효화: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+
+### 개별주 참고 후보 TOP 3
+
+#### 1. [CRWD] CrowdStrike Holdings Inc.
+- 상태: 참고용 관찰 후보
+- todayActionLabel: 관찰
+- 제한 사유: 실제 행동 후보 게이트 미충족
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
+- moneyFlowScore: 100
+- Entry Quality: 52 (관찰)
+- RVOL: 1.41x
+- 진입 전 확인: 전일 고점 돌파와 5일선 유지 확인
+- 무효화: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+
+#### 2. [FTNT] Fortinet Inc.
+- 상태: 참고용 관찰 후보
+- todayActionLabel: 관찰
+- 제한 사유: 실제 행동 후보 게이트 미충족
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
+- moneyFlowScore: 99
+- Entry Quality: 51 (관찰)
+- RVOL: 1.12x
+- 진입 전 확인: 전일 고점 돌파와 5일선 유지 확인
+- 무효화: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+
+#### 3. [ODFL] Old Dominion Freight Line Inc.
+- 상태: 참고용 관찰 후보
+- todayActionLabel: 관찰
+- 제한 사유: 스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하
+- 주문 실행: 스프레드 UNKNOWN, 시장가 판단 불가
+- moneyFlowScore: 100
+- Entry Quality: 48 (관찰)
+- RVOL: 1.29x
+- 진입 전 확인: 전일 고점 돌파와 5일선 유지 확인
+- 무효화: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+
 ## 오늘 돈이 몰리는 테마
 
 - 반도체 장비/공급망: LRCX, AMAT, KLAC | 평균 moneyFlowScore 94 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
@@ -341,7 +415,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - AI 소프트웨어 ETF: AIQ | 평균 moneyFlowScore 84 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
 - AI 반도체 ETF: SMH, SOXX, SOXQ | 평균 moneyFlowScore 80 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
 - 메모리/HBM ETF: DRAM | 평균 moneyFlowScore 79 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
-- AI 반도체: NVDA, AVGO, AMD, ASML, ARM, MRVL | 평균 moneyFlowScore 79 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
+- AI 반도체: NVDA, AVGO, AMD, ASML, ARM, MRVL | 평균 moneyFlowScore 78 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
 
 ## 1. ETF 트레이딩 보고서
 ### 1-1. ETF 결론
@@ -435,7 +509,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 3/5/0
   - 직접성/방향성/신선도: 3/1/1
   - 강한 촉매 수: 1
-  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 뉴스 수집 시각: 2026-06-04 13:40 KST
   - 가장 최근 뉴스 발행 시각: 2026-05-29 08:00 KST
   - 뉴스 신선도 상태: UNKNOWN
   - 뉴스 이후 가격 반응: 긍정
@@ -550,7 +624,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 5/3/0
   - 직접성/방향성/신선도: 1/1/3
   - 강한 촉매 수: 1
-  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 뉴스 수집 시각: 2026-06-04 13:40 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-03 20:30 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
@@ -666,7 +740,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 4/4/0
   - 직접성/방향성/신선도: 3/1/0
   - 강한 촉매 수: 0
-  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 뉴스 수집 시각: 2026-06-04 13:40 KST
   - 가장 최근 뉴스 발행 시각: 2026-05-27 23:58 KST
   - 뉴스 신선도 상태: UNKNOWN
   - 뉴스 이후 가격 반응: 부정
@@ -782,7 +856,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 3/5/0
   - 직접성/방향성/신선도: 3/1/2
   - 강한 촉매 수: 0
-  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 뉴스 수집 시각: 2026-06-04 13:40 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-03 02:15 KST
   - 뉴스 신선도 상태: STALE
   - 뉴스 이후 가격 반응: 긍정
@@ -898,7 +972,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 4/4/0
   - 직접성/방향성/신선도: 1/1/0
   - 강한 촉매 수: 0
-  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 뉴스 수집 시각: 2026-06-04 13:40 KST
   - 가장 최근 뉴스 발행 시각: 2026-05-27 23:58 KST
   - 뉴스 신선도 상태: UNKNOWN
   - 뉴스 이후 가격 반응: 부정
@@ -981,11 +1055,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상세 데이터 수집 대상: 가격/거래량 1차 스캔 상위 20개
 - 오늘 진입 후보: 0
 - 오늘 눌림 대기: 0
-- 오늘 관찰: 64
-- 오늘 매매 금지: 37
+- 오늘 관찰: 63
+- 오늘 매매 금지: 38
 - 개별 종목 진입 후보: 없음
 - 개별 종목 눌림 대기: 없음
-- 개별 종목 매매 금지: KLAC
+- 개별 종목 매매 금지: KLAC, WDC
 - 오늘 개별 종목 최우선 1개: 없음
 - 개별 종목 섹션 해석: 이 섹션은 ETF로 확인된 테마 자금 흐름 안에서 ETF보다 더 강한 돌파 가능성이 있는 개별 종목만 선별하는 영역이다.
 
@@ -1082,7 +1156,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 7/1/0
   - 직접성/방향성/신선도: 3/1/3
   - 강한 촉매 수: 6
-  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 뉴스 수집 시각: 2026-06-04 13:40 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-04 12:09 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
@@ -1192,7 +1266,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 3/5/0
   - 직접성/방향성/신선도: 3/1/3
   - 강한 촉매 수: 0
-  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 뉴스 수집 시각: 2026-06-04 13:40 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-04 05:35 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
@@ -1302,7 +1376,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 1/7/0
   - 직접성/방향성/신선도: 3/1/3
   - 강한 촉매 수: 1
-  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 뉴스 수집 시각: 2026-06-04 13:40 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-04 00:26 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1412,7 +1486,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 4/4/0
   - 직접성/방향성/신선도: 3/1/3
   - 강한 촉매 수: 2
-  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 뉴스 수집 시각: 2026-06-04 13:40 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-04 07:49 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
@@ -1523,7 +1597,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 3/5/0
   - 직접성/방향성/신선도: 3/1/3
   - 강한 촉매 수: 0
-  - 뉴스 수집 시각: 2026-06-04 13:31 KST
+  - 뉴스 수집 시각: 2026-06-04 13:40 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-04 11:30 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1564,12 +1638,6 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 ### 2-5. 개별 종목 제외/주의 후보
 
-#### [AVGO] Broadcom Inc.
-- moneyFlowScore(최종): 100
-- moneyFlowScore 산정 근거 요약: 1차 85, 최종 원점수 100, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 상대 거래량 증가. 주의: 큰 감점 제한적.
-- 제외/주의 사유: 개별 종목 우선 근거 부족
-- 해제 조건: 전일 고점 돌파와 5일선 유지 확인
-
 #### [ASML] ASML Holding N.V.
 - moneyFlowScore(최종): 100
 - moneyFlowScore 산정 근거 요약: 1차 80, 최종 원점수 102, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 52주 고점 근처. 주의: 큰 감점 제한적.
@@ -1592,6 +1660,12 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - moneyFlowScore(최종): 100
 - moneyFlowScore 산정 근거 요약: 1차 90, 최종 원점수 103, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 상대 거래량 증가. 주의: 큰 감점 제한적.
 - 제외/주의 사유: 개별 종목 우선 근거 부족
+- 해제 조건: 전일 고점 돌파와 5일선 유지 확인
+
+#### [WDC] Western Digital Corporation
+- moneyFlowScore(최종): 100
+- moneyFlowScore 산정 근거 요약: 1차 93, 최종 원점수 108, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
+- 제외/주의 사유: 매매 조건 미충족
 - 해제 조건: 전일 고점 돌파와 5일선 유지 확인
 
 
@@ -1619,7 +1693,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 5 | AMAT | Applied Materials Inc. | 87 | 100 | 110 | 강한 자금 유입 후보 | 관찰 | MEDIUM | +2.19% | +11.72% | +21.90% | 1.09 | SMH, SOXX, SOXQ, AIQ |
 | 6 | FTNT | Fortinet Inc. | 86 | 99 | 99 | 강한 자금 유입 후보 | 관찰 | MEDIUM | -1.60% | +14.50% | +62.90% | 1.12 | HACK, CIBR, IHAK, IGV |
 | 7 | ODFL | Old Dominion Freight Line Inc. | 86 | 100 | 102 | 강한 자금 유입 후보 | 관찰 | MEDIUM | +3.05% | +7.57% | +20.39% | 1.29 | QQQ |
-| 8 | AVGO | Broadcom Inc. | 85 | 100 | 100 | 강한 자금 유입 후보 | 관찰 | MEDIUM | -0.49% | +13.60% | +12.14% | 2.10 | SMH, SOXX, SOXQ, AIQ |
+| 8 | AVGO | Broadcom Inc. | 85 | 98 | 98 | 강한 자금 유입 후보 | 제외 | MEDIUM | -0.49% | +13.60% | +12.14% | 2.10 | SMH, SOXX, SOXQ, AIQ |
 | 9 | ASML | ASML Holding N.V. | 80 | 100 | 102 | 강한 자금 유입 후보 | 관찰 | MEDIUM | +1.23% | +8.04% | +19.64% | 1.12 | SMH, SOXX, SOXQ, AIQ |
 | 10 | CDNS | Cadence Design Systems Inc. | 77 | 91 | 91 | 관심 후보 | 관찰 | MEDIUM | -2.01% | +9.08% | +15.37% | 1.24 | IGV, AIQ, QQQ |
 | 11 | PANW | Palo Alto Networks Inc. | 74 | 87 | 87 | 관심 후보 | 관찰 | MEDIUM | -5.64% | +12.86% | +52.42% | 1.44 | HACK, CIBR, IHAK, IGV |
@@ -1645,7 +1719,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 5 | AMAT | Applied Materials Inc. | 87 | 100 | 110 | 강한 자금 유입 후보 | 관찰 | MEDIUM | +2.19% | +11.72% | +21.90% | 1.09 | SMH, SOXX, SOXQ, AIQ |
 | 6 | FTNT | Fortinet Inc. | 86 | 99 | 99 | 강한 자금 유입 후보 | 관찰 | MEDIUM | -1.60% | +14.50% | +62.90% | 1.12 | HACK, CIBR, IHAK, IGV |
 | 7 | ODFL | Old Dominion Freight Line Inc. | 86 | 100 | 102 | 강한 자금 유입 후보 | 관찰 | MEDIUM | +3.05% | +7.57% | +20.39% | 1.29 | QQQ |
-| 8 | AVGO | Broadcom Inc. | 85 | 100 | 100 | 강한 자금 유입 후보 | 관찰 | MEDIUM | -0.49% | +13.60% | +12.14% | 2.10 | SMH, SOXX, SOXQ, AIQ |
+| 8 | AVGO | Broadcom Inc. | 85 | 98 | 98 | 강한 자금 유입 후보 | 제외 | MEDIUM | -0.49% | +13.60% | +12.14% | 2.10 | SMH, SOXX, SOXQ, AIQ |
 | 9 | ASML | ASML Holding N.V. | 80 | 100 | 102 | 강한 자금 유입 후보 | 관찰 | MEDIUM | +1.23% | +8.04% | +19.64% | 1.12 | SMH, SOXX, SOXQ, AIQ |
 | 10 | CDNS | Cadence Design Systems Inc. | 77 | 91 | 91 | 관심 후보 | 관찰 | MEDIUM | -2.01% | +9.08% | +15.37% | 1.24 | IGV, AIQ, QQQ |
 | 11 | PANW | Palo Alto Networks Inc. | 74 | 87 | 87 | 관심 후보 | 관찰 | MEDIUM | -5.64% | +12.86% | +52.42% | 1.44 | HACK, CIBR, IHAK, IGV |
@@ -1808,10 +1882,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 비고: REAL_TEST 가격/거래량 및 차트 생성 사용
 
 - 뉴스:
-  - 상태: 연결됨
+  - 상태: 일부 연결
   - 소스: Yahoo Finance RSS fallback
-  - 수집 뉴스 수: 444
-  - 실패/제한 사유: 특이사항 없음
+  - 수집 뉴스 수: 436
+  - 실패/제한 사유: HTTP 502 from https://feeds.finance.yahoo.com/rss/2.0/headline?s=AVGO&region=US&lang=en-US; 해당 티커의 의미 있는 신규 뉴스가 없거나 RSS가 비어 있음
 
 - ETF 구성종목 확산도:
   - 상태: 일부 연결
@@ -1837,6 +1911,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 거래대금 fallback 사용 여부: 사용
 
 - 전체 비고:
+- 뉴스 수집 실패 티커 1개
 - ETF 구성종목 확산도 fallback sample 13개 사용
 - 스프레드/유동성 bid/ask 대신 거래대금 fallback 57개 사용
 

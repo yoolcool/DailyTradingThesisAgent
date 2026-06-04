@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-04",
-  "generatedAt": "2026년 6월 4일 목요일 오후 1:31",
+  "generatedAt": "2026년 6월 4일 목요일 오후 1:40",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -182,9 +182,9 @@
         "assetType": "STOCK",
         "moneyFlowScore": 85,
         "moneyFlowScoreInitial": 85,
-        "moneyFlowScoreFinal": 100,
-        "finalRawScore": 100,
-        "todayActionLabel": "관찰",
+        "moneyFlowScoreFinal": 98,
+        "finalRawScore": 98,
+        "todayActionLabel": "제외",
         "reasonConfidence": "MEDIUM",
         "oneDayReturn": -0.49,
         "fiveDayReturn": 13.6,
@@ -2612,55 +2612,6 @@
   "stockPullbackCandidates": [],
   "stockWatchCandidates": [
     {
-      "ticker": "AVGO",
-      "assetType": "STOCK",
-      "name": "Broadcom Inc.",
-      "actionLabel": "관찰",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 85,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 100,
-      "finalDisplayScore": 100,
-      "wasCapped": false,
-      "capReason": "cap not applied",
-      "formulaText": "+85 + +2 + 0 + +5 + +8 + 0 + 0 = 100",
-      "riskPenalty": 0,
-      "riskPenaltySummary": {
-        "totalPenalty": 0,
-        "riskLevel": "LOW",
-        "items": [],
-        "watchItems": [],
-        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-      },
-      "reasonConfidence": "MEDIUM",
-      "reasonConfidenceExplanation": "유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-      "directCatalyst": "직접 촉매: Broadcom shares plunge after AI forecast disappoints",
-      "tieBreakerReason": "최종 원점수 100, 리스크 패널티 0, 5일 수익률 +13.60%, 상대 거래량 2.10배 순으로 정렬",
-      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "actionGate": {
-        "label": "관찰",
-        "status": "관찰",
-        "reasons": []
-      },
-      "marketContext": {
-        "marketRegime": "위험선호",
-        "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세"
-      },
-      "linkedNarrative": "AI 인프라 재가속",
-      "narrativeStatus": "관찰",
-      "narrativeScore": 75,
-      "relatedEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ",
-        "AIQ"
-      ],
-      "closePriceAtRecommendation": 479.23,
-      "recommendationDate": "2026-06-03"
-    },
-    {
       "ticker": "ASML",
       "assetType": "STOCK",
       "name": "ASML Holding N.V.",
@@ -3088,14 +3039,316 @@
       "recommendationDate": "2026-06-03"
     }
   ],
+  "referenceCandidates": {
+    "etfs": [
+      {
+        "ticker": "SOXQ",
+        "assetType": "ETF",
+        "name": "Invesco PHLX Semiconductor ETF",
+        "actionLabel": "제외",
+        "moneyFlowScore": 100,
+        "moneyFlowScoreInitial": 90,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 101,
+        "finalDisplayScore": 100,
+        "wasCapped": true,
+        "capReason": "raw score 101 capped to displayed score 100",
+        "formulaText": "+90 + +9 + 0 + +2 + 0 + 0 + 0 = 101 -> 100",
+        "riskPenalty": 0,
+        "riskPenaltySummary": {
+          "totalPenalty": 0,
+          "riskLevel": "LOW",
+          "items": [],
+          "watchItems": [],
+          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+        },
+        "reasonConfidence": "MEDIUM",
+        "reasonConfidenceExplanation": "ETF 확산도 제한, 유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+        "directCatalyst": "직접 촉매: Your Portfolio Isn’t Invested in the Right Kind of AI Unless You Hold This ETF",
+        "tieBreakerReason": "최종 원점수 101, 리스크 패널티 0, 5일 수익률 +9.57%, 상대 거래량 1.39배 순으로 정렬",
+        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+        "actionGate": {
+          "label": "제외",
+          "status": "매매 금지",
+          "reasons": [
+            "Entry Quality 44 < 45",
+            "스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하",
+            "진입 품질 부족"
+          ]
+        },
+        "marketContext": {
+          "marketRegime": "위험선호",
+          "candidateEnvironment": "관찰",
+          "reason": "전체 시장은 위험선호 / Entry Quality 44 < 45 / 스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하"
+        },
+        "linkedNarrative": "AI 인프라 재가속",
+        "narrativeStatus": "관찰",
+        "narrativeScore": 75,
+        "relatedEtfs": [],
+        "closePriceAtRecommendation": 109.58,
+        "recommendationDate": "2026-06-03"
+      },
+      {
+        "ticker": "AIQ",
+        "assetType": "ETF",
+        "name": "Global X Artificial Intelligence & Technology ETF",
+        "actionLabel": "관찰",
+        "moneyFlowScore": 84,
+        "moneyFlowScoreInitial": 80,
+        "moneyFlowScoreFinal": 84,
+        "finalRawScore": 84,
+        "finalDisplayScore": 84,
+        "wasCapped": false,
+        "capReason": "cap not applied",
+        "formulaText": "+80 + +2 + 0 + +2 + 0 + 0 + 0 = 84",
+        "riskPenalty": 0,
+        "riskPenaltySummary": {
+          "totalPenalty": 0,
+          "riskLevel": "LOW",
+          "items": [],
+          "watchItems": [],
+          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+        },
+        "reasonConfidence": "MEDIUM",
+        "reasonConfidenceExplanation": "ETF 확산도 제한, 유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+        "directCatalyst": "직접 촉매: ETFs in Focus as Anthropic Eyes a Blockbuster IPO",
+        "tieBreakerReason": "최종 원점수 84, 리스크 패널티 0, 5일 수익률 +6.24%, 상대 거래량 1.50배 순으로 정렬",
+        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+        "actionGate": {
+          "label": "관찰",
+          "status": "관찰",
+          "reasons": [
+            "스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하"
+          ]
+        },
+        "marketContext": {
+          "marketRegime": "위험선호",
+          "candidateEnvironment": "관찰",
+          "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / 스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하"
+        },
+        "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+        "narrativeStatus": "부상",
+        "narrativeScore": 66,
+        "relatedEtfs": [],
+        "closePriceAtRecommendation": 69.16,
+        "recommendationDate": "2026-06-03"
+      },
+      {
+        "ticker": "HACK",
+        "assetType": "ETF",
+        "name": "Amplify Cybersecurity ETF",
+        "actionLabel": "제외",
+        "moneyFlowScore": 72,
+        "moneyFlowScoreInitial": 80,
+        "moneyFlowScoreFinal": 72,
+        "finalRawScore": 72,
+        "finalDisplayScore": 72,
+        "wasCapped": false,
+        "capReason": "cap not applied",
+        "formulaText": "+80 + +2 + 0 - 5 + 0 - 5 + 0 = 72",
+        "riskPenalty": -5,
+        "riskPenaltySummary": {
+          "totalPenalty": -5,
+          "riskLevel": "LOW",
+          "items": [
+            {
+              "riskType": "LOW_LIQUIDITY",
+              "label": "low liquidity",
+              "penalty": -5,
+              "evidence": "Liquidity signal: LOW.",
+              "action": "Avoid market-order chasing."
+            }
+          ],
+          "watchItems": [],
+          "summary": "1개 감점 리스크로 총 -5점 반영."
+        },
+        "reasonConfidence": "MEDIUM",
+        "reasonConfidenceExplanation": "ETF 확산도 제한, 유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+        "directCatalyst": "직접 촉매: The Asymmetric AI Winner: Cybersecurity ETFs Gaining From Cloud Buildout",
+        "tieBreakerReason": "최종 원점수 72, 리스크 패널티 -5, 5일 수익률 +11.35%, 상대 거래량 1.07배 순으로 정렬",
+        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+        "actionGate": {
+          "label": "제외",
+          "status": "매매 금지",
+          "reasons": [
+            "Entry Quality 38 < 45",
+            "스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하",
+            "진입 품질 부족"
+          ]
+        },
+        "marketContext": {
+          "marketRegime": "위험선호",
+          "candidateEnvironment": "관찰",
+          "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 38 < 45 / 스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하"
+        },
+        "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+        "narrativeStatus": "부상",
+        "narrativeScore": 66,
+        "relatedEtfs": [],
+        "closePriceAtRecommendation": 102.21,
+        "recommendationDate": "2026-06-03"
+      }
+    ],
+    "stocks": [
+      {
+        "ticker": "CRWD",
+        "assetType": "STOCK",
+        "name": "CrowdStrike Holdings Inc.",
+        "actionLabel": "관찰",
+        "moneyFlowScore": 100,
+        "moneyFlowScoreInitial": 90,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 103,
+        "finalDisplayScore": 100,
+        "wasCapped": true,
+        "capReason": "raw score 103 capped to displayed score 100",
+        "formulaText": "+90 + +2 + 0 + +5 + +6 + 0 + 0 = 103 -> 100",
+        "riskPenalty": 0,
+        "riskPenaltySummary": {
+          "totalPenalty": 0,
+          "riskLevel": "LOW",
+          "items": [],
+          "watchItems": [],
+          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+        },
+        "reasonConfidence": "MEDIUM",
+        "reasonConfidenceExplanation": "유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+        "directCatalyst": "직접 촉매: CrowdStrike (CRWD) Q1 2027 Earnings Transcript",
+        "tieBreakerReason": "최종 원점수 103, 리스크 패널티 0, 5일 수익률 +15.84%, 상대 거래량 1.41배 순으로 정렬",
+        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+        "actionGate": {
+          "label": "관찰",
+          "status": "관찰",
+          "reasons": []
+        },
+        "marketContext": {
+          "marketRegime": "위험선호",
+          "candidateEnvironment": "관찰",
+          "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세"
+        },
+        "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+        "narrativeStatus": "부상",
+        "narrativeScore": 66,
+        "relatedEtfs": [
+          "HACK",
+          "CIBR",
+          "IHAK",
+          "IGV"
+        ],
+        "closePriceAtRecommendation": 747.61,
+        "recommendationDate": "2026-06-03"
+      },
+      {
+        "ticker": "FTNT",
+        "assetType": "STOCK",
+        "name": "Fortinet Inc.",
+        "actionLabel": "관찰",
+        "moneyFlowScore": 99,
+        "moneyFlowScoreInitial": 86,
+        "moneyFlowScoreFinal": 99,
+        "finalRawScore": 99,
+        "finalDisplayScore": 99,
+        "wasCapped": false,
+        "capReason": "cap not applied",
+        "formulaText": "+86 + +2 + 0 + +5 + +6 + 0 + 0 = 99",
+        "riskPenalty": 0,
+        "riskPenaltySummary": {
+          "totalPenalty": 0,
+          "riskLevel": "LOW",
+          "items": [],
+          "watchItems": [],
+          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+        },
+        "reasonConfidence": "MEDIUM",
+        "reasonConfidenceExplanation": "유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+        "directCatalyst": "직접 촉매: FTNT Jumps 87.5% YTD on AI Security Push: Buy, Sell or Hold the Stock?",
+        "tieBreakerReason": "최종 원점수 99, 리스크 패널티 0, 5일 수익률 +14.50%, 상대 거래량 1.12배 순으로 정렬",
+        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+        "actionGate": {
+          "label": "관찰",
+          "status": "관찰",
+          "reasons": []
+        },
+        "marketContext": {
+          "marketRegime": "위험선호",
+          "candidateEnvironment": "관찰",
+          "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세"
+        },
+        "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+        "narrativeStatus": "부상",
+        "narrativeScore": 66,
+        "relatedEtfs": [
+          "HACK",
+          "CIBR",
+          "IHAK",
+          "IGV"
+        ],
+        "closePriceAtRecommendation": 146.48,
+        "recommendationDate": "2026-06-03"
+      },
+      {
+        "ticker": "ODFL",
+        "assetType": "STOCK",
+        "name": "Old Dominion Freight Line Inc.",
+        "actionLabel": "관찰",
+        "moneyFlowScore": 100,
+        "moneyFlowScoreInitial": 86,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 102,
+        "finalDisplayScore": 100,
+        "wasCapped": true,
+        "capReason": "raw score 102 capped to displayed score 100",
+        "formulaText": "+86 + +9 + 0 + +2 + +5 + 0 + 0 = 102 -> 100",
+        "riskPenalty": 0,
+        "riskPenaltySummary": {
+          "totalPenalty": 0,
+          "riskLevel": "LOW",
+          "items": [],
+          "watchItems": [],
+          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+        },
+        "reasonConfidence": "MEDIUM",
+        "reasonConfidenceExplanation": "유동성/스프레드 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+        "directCatalyst": "직접 촉매: Old Dominion (ODFL) Up 4% Since Last Earnings Report: Can It Continue?",
+        "tieBreakerReason": "최종 원점수 102, 리스크 패널티 0, 5일 수익률 +7.57%, 상대 거래량 1.29배 순으로 정렬",
+        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+        "actionGate": {
+          "label": "관찰",
+          "status": "관찰",
+          "reasons": [
+            "스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하"
+          ]
+        },
+        "marketContext": {
+          "marketRegime": "위험선호",
+          "candidateEnvironment": "관찰",
+          "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / 스프레드 UNKNOWN + 유동성 ACCEPTABLE 이하"
+        },
+        "linkedNarrative": "위험선호 성장주 재진입",
+        "narrativeStatus": "약화",
+        "narrativeScore": 47,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "closePriceAtRecommendation": 236.06,
+        "recommendationDate": "2026-06-03"
+      }
+    ]
+  },
   "dataReliability": {
     "priceVolumeStatus": "CONNECTED",
     "priceAsOfDate": "2026-06-03",
     "priceAsOfLabel": "2026-06-03 US regular close",
-    "reportGeneratedAtKST": "2026-06-04 13:31",
-    "newsStatus": "CONNECTED",
-    "newsFetchedAt": "2026-06-04T04:31:15.618Z",
-    "newsLastUpdatedAt": "2026-06-04T04:31:15.618Z",
+    "reportGeneratedAtKST": "2026-06-04 13:40",
+    "newsStatus": "PARTIAL",
+    "newsFetchedAt": "2026-06-04T04:40:45.387Z",
+    "newsLastUpdatedAt": "2026-06-04T04:40:45.387Z",
     "latestNewsPublishedAt": "2026-06-04T03:54:50.000Z",
     "newsFreshnessStatus": "FRESH",
     "etfBreadthStatus": "PARTIAL",
@@ -3104,7 +3357,7 @@
     "spreadStatus": "UNKNOWN",
     "liquidityStatus": "PARTIAL",
     "prePostMarketStatus": "UNAVAILABLE",
-    "analysisReliability": "MEDIUM",
+    "analysisReliability": "LOW",
     "executionReliability": "LOW",
     "reliabilityNotes": [
       "테마 확산 판단 제한",
@@ -3120,8 +3373,8 @@
     "label": "신규 추격 없음 / 관찰",
     "entryReadyCount": 0,
     "conditionalCount": 0,
-    "watchCount": 85,
-    "banCount": 53,
+    "watchCount": 84,
+    "banCount": 54,
     "actionCandidateCount": 0,
     "mainLimiters": [
       "스프레드 UNKNOWN",
@@ -3156,7 +3409,7 @@
       },
       {
         "label": "뉴스 직접성 부족",
-        "count": 99
+        "count": 100
       }
     ],
     "topLimiters": [

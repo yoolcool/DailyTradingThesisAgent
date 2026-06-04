@@ -1496,6 +1496,21 @@ function chooseActionCandidates(stocks, etfs) {
     .map((row, index) => ({ ...row, rank: index + 1 }));
 }
 
+function buildReferenceCandidates(stocks, etfs) {
+  return {
+    etfs: etfs
+      .filter((row) => row?.market?.dataStatus === "ok")
+      .sort(compareActionCandidateScore)
+      .slice(0, 3)
+      .map((row, index) => ({ ...row, referenceRank: index + 1, referenceType: "ETF" })),
+    stocks: stocks
+      .filter((row) => row?.market?.dataStatus === "ok" && !row.holdingInfo)
+      .sort(compareActionCandidateScore)
+      .slice(0, 3)
+      .map((row, index) => ({ ...row, referenceRank: index + 1, referenceType: "STOCK" }))
+  };
+}
+
 function compareActionCandidateScore(a, b) {
   const scoreA = actionCandidateScore(a);
   const scoreB = actionCandidateScore(b);
@@ -1561,6 +1576,7 @@ async function buildReport() {
   const etfBanRows = validEtfs.filter((row) => row.status === STATUS.BAN || row.moneyFlowScore < 50).sort((a, b) => a.moneyFlowScore - b.moneyFlowScore).slice(0, 5);
   const overheat = etfOverheat;
   const actionCandidates = chooseActionCandidates(stocks, etfs);
+  const referenceCandidates = actionCandidates.length ? { etfs: [], stocks: [] } : buildReferenceCandidates(stocks, validEtfs);
   const topExecutionCandidate = chooseTopExecutionCandidate(etfActionCandidates, stockActionCandidates);
   const previousSnapshot = loadPreviousRecommendationSnapshot();
   const previousRecommendationReviews = buildPreviousRecommendationReviews(previousSnapshot, stocks, etfs);
@@ -1626,6 +1642,7 @@ async function buildReport() {
     etfOverheat,
     overheat,
     actionCandidates,
+    referenceCandidates,
     topExecutionCandidate,
     chartCount
   };
@@ -1781,6 +1798,10 @@ function createRecommendationSnapshot(report) {
     stockPullbackCandidates: report.stockActionCandidates.filter((row) => row.stockVsEtfDecision !== "STOCK_PREFERRED").map(snapshotItem),
     stockWatchCandidates: report.stockCautionRows.filter((row) => row.status === STATUS.WATCH).map(snapshotItem),
     etfWatchCandidates: report.etfs.filter((row) => row.status === STATUS.WATCH).slice(0, 5).map(snapshotItem),
+    referenceCandidates: {
+      etfs: (report.referenceCandidates?.etfs || []).map(snapshotItem),
+      stocks: (report.referenceCandidates?.stocks || []).map(snapshotItem)
+    },
     finalTopPick: report.topExecutionCandidate ? snapshotItem(report.topExecutionCandidate) : undefined,
     dataReliability: report.dataReliability,
     todayDecision: report.todayDecision,
@@ -2480,6 +2501,8 @@ ${renderRecommendationTrackingMarkdown(report)}
 
 ${report.actionCandidates.slice(0, 3).map(renderActionMarkdown).join("\n\n") || `${report.todayDecision?.noTradeMessage || "오늘 즉시 행동 후보 없음. 왜 돈이 몰리는가, 누가 더 비싸게 사줄 수 있는가, 진입 조건이 동시에 충족된 후보가 없어 TOP 5는 관찰 목록으로만 본다."}`}
 
+${renderReferenceCandidatesMarkdown(report)}
+
 ## 오늘 돈이 몰리는 테마
 
 ${report.themes.slice(0, 6).map(renderThemeMarkdown).join("\n") || "데이터 없음"}
@@ -2667,6 +2690,37 @@ ${row.reasonConfidence === "HIGH" ? `- ${row.directCatalyst}` : ""}
 - 무효화 조건: ${row.invalidationCondition}
 - todayActionLabel: ${row.todayActionLabel}
 - 차트: ${chartMarkdown(row)}`;
+}
+
+function renderReferenceCandidatesMarkdown(report) {
+  if (report.actionCandidates.length) return "";
+  const etfs = report.referenceCandidates?.etfs || [];
+  const stocks = report.referenceCandidates?.stocks || [];
+  if (!etfs.length && !stocks.length) return "";
+  return `## 참고용 행동 후보
+
+> 실제 행동 후보가 없는 날에만 표시한다. 아래 후보는 매수 추천이 아니라 다음 정규장에서 전일 고점, RVOL 1.00x 이상, 스프레드/호가 확인을 기다리는 관찰 리스트다.
+
+### ETF 참고 후보 TOP 3
+
+${etfs.map(renderReferenceCandidateMarkdown).join("\n\n") || "데이터 없음"}
+
+### 개별주 참고 후보 TOP 3
+
+${stocks.map(renderReferenceCandidateMarkdown).join("\n\n") || "데이터 없음"}`;
+}
+
+function renderReferenceCandidateMarkdown(row) {
+  return `#### ${row.referenceRank}. [${row.ticker}] ${row.name || row.ticker}
+- 상태: 참고용 관찰 후보
+- todayActionLabel: ${row.todayActionLabel}
+- 제한 사유: ${row.actionGate?.reasons?.join("; ") || "실제 행동 후보 게이트 미충족"}
+- 주문 실행: ${orderExecutionLabel(row)}
+- moneyFlowScore: ${row.moneyFlowScoreFinal ?? row.moneyFlowScore}
+- Entry Quality: ${row.entryQualityScore ?? "데이터 없음"} (${row.entryQualityLabel || "데이터 없음"})
+- RVOL: ${num(row.market?.relativeVolume, 2)}x
+- 진입 전 확인: ${row.entryCondition}
+- 무효화: ${row.invalidationCondition}`;
 }
 
 function renderNarrativesMarkdown(report) {
@@ -3477,6 +3531,7 @@ function renderHtml(report) {
     ${renderTrendStrengthHtml(report)}
     ${renderRecommendationTrackingHtml(report)}
     ${renderActionCandidatesHtml(report)}
+    ${renderReferenceCandidatesHtml(report)}
     ${renderSplitConclusionHtml(report)}
     ${renderMobileNarrativeSummarySectionHtml(report.narratives)}
     <section><h2>오늘 돈이 몰리는 테마</h2>${report.themes.slice(0, 6).map(renderThemeHtml).join("") || "<p>데이터 없음</p>"}</section>
@@ -3819,6 +3874,38 @@ function renderActionCandidatesHtml(report) {
   return `<section id="actions"><h2>오늘 실제 행동 후보</h2>
     ${cards.length ? `<div class="action-grid">${cards.map(renderActionHtml).join("")}</div>` : `<p>${escapeHtml(report.todayDecision?.noTradeMessage || "오늘 즉시 행동 후보 없음. 왜 돈이 몰리는가, 누가 더 비싸게 사줄 수 있는가, 진입 조건이 동시에 충족된 후보가 없어 TOP 5는 관찰 목록으로만 본다.")}</p>`}
   </section>`;
+}
+
+function renderReferenceCandidatesHtml(report) {
+  if (report.actionCandidates.length) return "";
+  const etfs = report.referenceCandidates?.etfs || [];
+  const stocks = report.referenceCandidates?.stocks || [];
+  if (!etfs.length && !stocks.length) return "";
+  return `<section data-reference-candidates>
+    <h2>참고용 행동 후보</h2>
+    <p class="warning-note">실제 행동 후보가 없는 날에만 표시하는 관찰 리스트다. 매수 추천이 아니며, 전일 고점 돌파, RVOL 1.00x 이상, 호가/스프레드 확인 전에는 신규 추격하지 않는다.</p>
+    <h3>ETF 참고 후보 TOP 3</h3>
+    <div class="action-grid">${etfs.map(renderReferenceCandidateHtml).join("")}</div>
+    <h3>개별주 참고 후보 TOP 3</h3>
+    <div class="action-grid">${stocks.map(renderReferenceCandidateHtml).join("")}</div>
+  </section>`;
+}
+
+function renderReferenceCandidateHtml(row) {
+  return `<article class="compact-card" data-reference-card="${escapeHtml(row.ticker)}">
+    ${cardHeader(`${row.referenceRank}. [${row.ticker}] ${row.name || row.ticker}`, row.status, "참고용 관찰")}
+    ${chartImage(row)}
+    <div class="grid">
+      ${tile("제한 사유", row.actionGate?.reasons?.join(" / ") || "실제 행동 후보 게이트 미충족")}
+      ${tile("주문 실행", orderExecutionLabel(row))}
+      ${tile("Entry Quality", row.entryQualityScore === undefined ? "데이터 없음" : `${row.entryQualityLabel || ""} ${row.entryQualityScore}`)}
+      ${tile("RVOL", `${num(row.market?.relativeVolume, 2)}x`)}
+      ${tile("moneyFlowScore", row.moneyFlowScoreFinal ?? row.moneyFlowScore)}
+      ${tile("후보 환경", row.marketContext?.candidateEnvironment || "데이터 없음")}
+    </div>
+    ${fieldLine("진입 전 확인", escapeHtml(row.entryCondition || "데이터 없음"))}
+    ${fieldLine("무효화", escapeHtml(row.invalidationCondition || "데이터 없음"))}
+  </article>`;
 }
 
 function renderScoreGuideHtml() {

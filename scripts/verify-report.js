@@ -172,6 +172,11 @@ function main() {
   if ((latestSnapshot.actionCandidates || []).length === 0) {
     assert(markdown.includes("신규 추격은 보류"), "No-trade report missing practical no-trade wording");
     assert(html.includes("신규 추격은 보류"), "No-trade HTML missing practical no-trade wording");
+    assert(markdown.includes("참고용 행동 후보"), "No-trade report missing reference candidates section");
+    assert(html.includes("data-reference-candidates"), "No-trade HTML missing reference candidates section");
+    assert((latestSnapshot.referenceCandidates?.etfs || []).length <= 3, "Reference ETF candidates should be limited to 3");
+    assert((latestSnapshot.referenceCandidates?.stocks || []).length <= 3, "Reference stock candidates should be limited to 3");
+    assert((latestSnapshot.referenceCandidates?.etfs || []).length + (latestSnapshot.referenceCandidates?.stocks || []).length > 0, "No-trade snapshot missing reference candidates");
   }
   for (const item of scoredItems) {
     assert(item.moneyFlowScoreInitial !== undefined, `Snapshot missing initial score for ${item.ticker}`);
