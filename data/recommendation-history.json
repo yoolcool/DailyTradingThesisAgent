@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-04T05:33:08.056Z",
+  "updatedAt": "2026-06-04T22:45:28.481Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
     {
@@ -18,13 +18,13 @@
       "confidence": "HIGH",
       "actionLabel": "개별 종목 우선",
       "trackingSessionDate": "2026-06-04",
-      "trackingStatus": "pending",
-      "intradayHighAfterRecommendation": null,
-      "trackingClose": null,
-      "highReturnPct": null,
-      "closeReturnPct": null,
-      "resultLabel": "추적 대기",
-      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음"
+      "trackingStatus": "complete",
+      "intradayHighAfterRecommendation": 280.72,
+      "trackingClose": 279.25,
+      "highReturnPct": 0.1,
+      "closeReturnPct": -0.42,
+      "resultLabel": "실패",
+      "resultComment": "추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준)"
     },
     {
       "reportDate": "2026-06-04",
@@ -41,13 +41,13 @@
       "confidence": "HIGH",
       "actionLabel": "개별 종목 우선",
       "trackingSessionDate": "2026-06-04",
-      "trackingStatus": "pending",
-      "intradayHighAfterRecommendation": null,
-      "trackingClose": null,
-      "highReturnPct": null,
-      "closeReturnPct": null,
-      "resultLabel": "추적 대기",
-      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음"
+      "trackingStatus": "complete",
+      "intradayHighAfterRecommendation": 150.065,
+      "trackingClose": 149.67,
+      "highReturnPct": 2.45,
+      "closeReturnPct": 2.18,
+      "resultLabel": "제한적 유효",
+      "resultComment": "제한적인 장중 기회만 발생 (일봉 기준)"
     },
     {
       "reportDate": "2026-06-04",
@@ -64,13 +64,13 @@
       "confidence": "HIGH",
       "actionLabel": "개별 종목 우선",
       "trackingSessionDate": "2026-06-04",
-      "trackingStatus": "pending",
-      "intradayHighAfterRecommendation": null,
-      "trackingClose": null,
-      "highReturnPct": null,
-      "closeReturnPct": null,
-      "resultLabel": "추적 대기",
-      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음"
+      "trackingStatus": "complete",
+      "intradayHighAfterRecommendation": 720.92,
+      "trackingClose": 719.09,
+      "highReturnPct": -3.57,
+      "closeReturnPct": -3.81,
+      "resultLabel": "실패",
+      "resultComment": "추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준)"
     },
     {
       "reportDate": "2026-06-04",
@@ -90,9 +90,9 @@
       "trackingEndDate": "2026-06-11",
       "trackingStatus": "in_progress",
       "weeklyHigh": null,
-      "latestClose": 102.21,
+      "latestClose": 101.14,
       "weeklyHighReturnPct": null,
-      "latestCloseReturnPct": 0,
+      "latestCloseReturnPct": -1.05,
       "resultLabel": "진행 중",
       "resultComment": "아직 1주 추적 기간이 끝나지 않음 (일봉 high 미확보 시 close 기준 보조)"
     },
@@ -114,9 +114,9 @@
       "trackingEndDate": "2026-06-11",
       "trackingStatus": "in_progress",
       "weeklyHigh": null,
-      "latestClose": 109.58,
+      "latestClose": 107.22,
       "weeklyHighReturnPct": null,
-      "latestCloseReturnPct": 0,
+      "latestCloseReturnPct": -2.15,
       "resultLabel": "진행 중",
       "resultComment": "아직 1주 추적 기간이 끝나지 않음 (일봉 high 미확보 시 close 기준 보조)"
     },
@@ -138,9 +138,9 @@
       "trackingEndDate": "2026-06-11",
       "trackingStatus": "in_progress",
       "weeklyHigh": null,
-      "latestClose": 69.16,
+      "latestClose": 68.07,
       "weeklyHighReturnPct": null,
-      "latestCloseReturnPct": 0,
+      "latestCloseReturnPct": -1.58,
       "resultLabel": "진행 중",
       "resultComment": "아직 1주 추적 기간이 끝나지 않음 (일봉 high 미확보 시 close 기준 보조)"
     },
@@ -253,12 +253,12 @@
       "trackingStartDate": "2026-06-03",
       "trackingEndDate": "2026-06-10",
       "trackingStatus": "in_progress",
-      "weeklyHigh": null,
-      "latestClose": 69.71,
-      "weeklyHighReturnPct": null,
-      "latestCloseReturnPct": 0.2,
+      "weeklyHigh": 67.12,
+      "latestClose": 65.7,
+      "weeklyHighReturnPct": -3.52,
+      "latestCloseReturnPct": -5.56,
       "resultLabel": "진행 중",
-      "resultComment": "아직 1주 추적 기간이 끝나지 않음 (일봉 high 미확보 시 close 기준 보조)"
+      "resultComment": "아직 1주 추적 기간이 끝나지 않음"
     },
     {
       "reportDate": "2026-06-03",
@@ -277,12 +277,12 @@
       "trackingStartDate": "2026-06-03",
       "trackingEndDate": "2026-06-10",
       "trackingStatus": "in_progress",
-      "weeklyHigh": null,
-      "latestClose": 100.2,
-      "weeklyHighReturnPct": null,
-      "latestCloseReturnPct": -4.33,
+      "weeklyHigh": 101.2599,
+      "latestClose": 100.06,
+      "weeklyHighReturnPct": -3.31,
+      "latestCloseReturnPct": -4.46,
       "resultLabel": "진행 중",
-      "resultComment": "아직 1주 추적 기간이 끝나지 않음 (일봉 high 미확보 시 close 기준 보조)"
+      "resultComment": "아직 1주 추적 기간이 끝나지 않음"
     },
     {
       "reportDate": "2026-06-03",
@@ -301,12 +301,12 @@
       "trackingStartDate": "2026-06-03",
       "trackingEndDate": "2026-06-10",
       "trackingStatus": "in_progress",
-      "weeklyHigh": null,
-      "latestClose": 69.16,
-      "weeklyHighReturnPct": null,
-      "latestCloseReturnPct": -1.4,
+      "weeklyHigh": 68.51,
+      "latestClose": 68.07,
+      "weeklyHighReturnPct": -2.32,
+      "latestCloseReturnPct": -2.95,
       "resultLabel": "진행 중",
-      "resultComment": "아직 1주 추적 기간이 끝나지 않음 (일봉 high 미확보 시 close 기준 보조)"
+      "resultComment": "아직 1주 추적 기간이 끝나지 않음"
     },
     {
       "reportDate": "2026-06-03",
@@ -325,12 +325,12 @@
       "trackingStartDate": "2026-06-03",
       "trackingEndDate": "2026-06-10",
       "trackingStatus": "in_progress",
-      "weeklyHigh": null,
-      "latestClose": 91.67,
-      "weeklyHighReturnPct": null,
-      "latestCloseReturnPct": -2.81,
+      "weeklyHigh": 90.96,
+      "latestClose": 90.7,
+      "weeklyHighReturnPct": -3.56,
+      "latestCloseReturnPct": -3.84,
       "resultLabel": "진행 중",
-      "resultComment": "아직 1주 추적 기간이 끝나지 않음 (일봉 high 미확보 시 close 기준 보조)"
+      "resultComment": "아직 1주 추적 기간이 끝나지 않음"
     }
   ]
 }

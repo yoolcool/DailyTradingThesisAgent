@@ -3153,7 +3153,23 @@ ${stocks.map(renderReferenceCandidateMarkdown).join("\n\n") || "데이터 없음
 
 function renderDarkHorseCandidatesMarkdown(report) {
   const rows = report.darkHorseCandidates || [];
-  if (!rows.length) return `## 다크호스 후보\n\n다크호스 후보 없음. 상위 서사 정렬, MA20 위 안착, MA5/MA20 구조 개선, RVOL 0.90x 이상 조건을 동시에 충족한 개별주가 없다.`;
+  if (!rows.length) return `## 다크호스 후보
+
+다크호스 후보 없음. 상위 서사 정렬, MA20 위 안착, MA5/MA20 구조 개선, RVOL 0.90x 이상 조건을 동시에 충족한 개별주가 없다.
+
+- darkHorseScore: 조건 충족 후보 없음
+- 왜 아직 메인이 아닌가: 확인 조건을 통과한 보조 관찰 후보가 없다.
+
+<details>
+<summary>darkHorseScore 상세 근거 보기</summary>
+
+- 서사 정렬: 조건 미충족
+- 초기 추세 구조: 조건 미충족
+- 베이스 돌파/정돈: 조건 미충족
+- 거래량 확인: 조건 미충족
+- rawScore: 데이터 없음
+
+</details>`;
   return `## 다크호스 후보
 
 > 메인 행동 후보를 대체하지 않는 보조 관찰 섹션이다. 상위 서사 안에서 아직 과열되지 않았지만 초기 추세 전환, 베이스 돌파, 거래량 회복이 시작되는 개별주만 표시한다.
@@ -4372,7 +4388,21 @@ function renderDarkHorseCandidatesHtml(report) {
   return `<section id="dark-horse" data-dark-horse-candidates>
     <h2>다크호스 후보</h2>
     <p class="warning-note">메인 행동 후보를 대체하지 않는 보조 관찰 섹션이다. 상위 서사 안에서 초기 추세 전환, 베이스 돌파, 거래량 회복이 시작되는 개별주만 표시한다.</p>
-    ${rows.length ? `<div class="action-grid">${rows.map(renderDarkHorseCandidateHtml).join("")}</div>` : "<p>다크호스 후보 없음. 상위 서사 정렬, MA20 위 안착, MA5/MA20 구조 개선, RVOL 0.90x 이상 조건을 동시에 충족한 개별주가 없다.</p>"}
+    ${rows.length ? `<div class="action-grid">${rows.map(renderDarkHorseCandidateHtml).join("")}</div>` : `<p>다크호스 후보 없음. 상위 서사 정렬, MA20 위 안착, MA5/MA20 구조 개선, RVOL 0.90x 이상 조건을 동시에 충족한 개별주가 없다.</p>
+    <div class="grid">
+      ${tile("darkHorseScore", "조건 충족 후보 없음")}
+      ${tile("아직 메인이 아닌 이유", "확인 조건을 통과한 보조 관찰 후보가 없다.")}
+    </div>
+    <details>
+      <summary><strong>darkHorseScore 상세 근거 보기</strong></summary>
+      <div class="grid">
+        ${tile("서사 정렬", "조건 미충족")}
+        ${tile("초기 추세 구조", "조건 미충족")}
+        ${tile("베이스 돌파", "조건 미충족")}
+        ${tile("거래량 확인", "조건 미충족")}
+        ${tile("rawScore", "데이터 없음")}
+      </div>
+    </details>`}
   </section>`;
 }
 
