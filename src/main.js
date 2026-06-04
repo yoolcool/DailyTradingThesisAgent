@@ -2997,6 +2997,7 @@ function renderHtml(report) {
     .chart-grid { stroke: #edf0f2; stroke-width: 1; }
     .axis-line { stroke: #9aa4af; stroke-width: 1; }
     .axis-label, .panel-label { fill: #5d6670; font-size: 11px; font-weight: 700; }
+    .chart-summary-text { fill: #172026; font-size: 13px; font-weight: 900; }
     .date-label { text-anchor: middle; }
     .candle-up .wick, .candle-up .body { stroke: #059669; fill: #059669; }
     .candle-down .wick, .candle-down .body { stroke: #dc2626; fill: #dc2626; }
@@ -3005,16 +3006,21 @@ function renderHtml(report) {
     .ma5 { stroke: #2563eb; }
     .ma20 { stroke: #ea580c; }
     .ref-line line { stroke-width: 1.4; vector-effect: non-scaling-stroke; }
-    .ref-label { font-size: 10px; font-weight: 800; }
+    .ref-leader { fill: none; stroke-width: 1; opacity: 0.72; vector-effect: non-scaling-stroke; }
+    .ref-label-box { fill: #fff; stroke-width: 1; rx: 4; }
+    .ref-label, .ref-price { font-size: 10px; font-weight: 900; }
+    .axis-marker rect { rx: 4; }
+    .axis-marker text { fill: #fff; font-size: 10px; font-weight: 900; }
     .recommendation-marker line { stroke: #7c3aed; stroke-width: 1.2; }
+    .recommendation-marker rect { fill: #7c3aed; }
     .recommendation-marker circle { fill: #7c3aed; stroke: #fff; stroke-width: 1.5; }
-    .recommendation-marker text { fill: #7c3aed; font-size: 10px; font-weight: 800; }
+    .recommendation-marker text { fill: #fff; font-size: 10px; font-weight: 900; }
     .chart-hit { fill: transparent; pointer-events: all; }
     .chart-tooltip { position: absolute; z-index: 3; display: none; max-width: min(280px, calc(100% - 20px)); pointer-events: none; border: 1px solid #172026; border-radius: 6px; background: rgba(255,255,255,0.96); box-shadow: 0 8px 18px rgba(15,23,42,0.14); padding: 7px 8px; color: #172026; font-size: 12px; font-weight: 800; line-height: 1.35; }
     .chart-legend { display: flex; flex-wrap: wrap; gap: 6px 10px; padding: 7px 10px 9px; border-top: 1px solid #edf0f2; color: #5d6670; font-size: 11px; font-weight: 800; }
     .chart-legend span { display: inline-flex; align-items: center; gap: 4px; }
     .chart-legend i { display: inline-block; width: 14px; height: 3px; border-radius: 999px; }
-    .legend-up { background: #059669; } .legend-down { background: #dc2626; } .legend-ma5 { background: #2563eb; } .legend-ma20 { background: #ea580c; } .legend-entry { background: #0f766e; } .legend-invalid { background: #b91c1c; }
+    .legend-up { background: #059669; } .legend-down { background: #dc2626; } .legend-ma5 { background: #2563eb; } .legend-ma20 { background: #ea580c; } .legend-prev-high { background: #0f766e; } .legend-recommend { background: #2563eb; } .legend-invalid { background: #b91c1c; }
     .chart-fallback { display: none; }
     .table-scroll { overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; font-size: 14px; } th, td { border-top: 1px solid #d9dee3; padding: 8px; text-align: left; vertical-align: top; }
@@ -3739,10 +3745,10 @@ function chartReferenceLevels(row, bars) {
   const recommendationPrice = Number(row.closePriceAtRecommendation ?? row.recommendationPrice ?? row.market?.lastClose);
   const invalidationPrice = ma20.at(-1);
   return [
-    latest ? { key: "current", label: "현재가", value: latest.close, color: "#172026", dash: "" } : null,
-    Number.isFinite(recommendationPrice) ? { key: "recommendation", label: "추천가", value: recommendationPrice, color: "#2563eb", dash: "4 4" } : null,
-    previous ? { key: "previous-high", label: "전일 고점", value: previous.high, color: "#0f766e", dash: "6 4" } : null,
-    Number.isFinite(invalidationPrice) ? { key: "invalidation", label: "무효화", value: invalidationPrice, color: "#b91c1c", dash: "3 5" } : null
+    latest ? { key: "current", label: "현재", shortLabel: "현재", value: latest.close, color: latest.close >= (previous?.close ?? latest.close) ? "#059669" : "#dc2626", dash: "" } : null,
+    Number.isFinite(recommendationPrice) ? { key: "recommendation", label: "추천가", shortLabel: "추천", value: recommendationPrice, color: "#2563eb", dash: "4 4" } : null,
+    previous ? { key: "previous-high", label: "전일 고점", shortLabel: "전고", value: previous.high, color: "#0f766e", dash: "6 4" } : null,
+    Number.isFinite(invalidationPrice) ? { key: "invalidation", label: "무효화", shortLabel: "무효", value: invalidationPrice, color: "#b91c1c", dash: "3 5" } : null
   ].filter(Boolean);
 }
 
@@ -3773,8 +3779,9 @@ function renderTradingChart(row) {
       <span><i class="legend-down"></i>하락</span>
       <span><i class="legend-ma5"></i>MA5</span>
       <span><i class="legend-ma20"></i>MA20</span>
-      <span><i class="legend-entry"></i>전일 고점/추천가</span>
-      <span><i class="legend-invalid"></i>무효화</span>
+      <span><i class="legend-prev-high"></i>전고</span>
+      <span><i class="legend-recommend"></i>추천</span>
+      <span><i class="legend-invalid"></i>무효</span>
     </div>
     <img class="chart chart-fallback" src="${escapeHtml(row.chartPath)}" alt="${escapeHtml(row.ticker)} candlestick chart">
   </div>`;
@@ -3783,17 +3790,22 @@ function renderTradingChart(row) {
 function renderChartSvg(row, range, active) {
   const bars = chartBars(row.market?.history, range.count);
   if (bars.length < 5) return "";
-  const width = 760;
+  const width = 860;
   const height = 420;
   const priceTop = 24;
   const priceHeight = 286;
   const volumeTop = 322;
   const volumeHeight = 74;
-  const margin = { left: 18, right: 64 };
+  const layout = { left: 18, axisWidth: 62, gutterWidth: 116 };
+  const plotRight = width - layout.axisWidth - layout.gutterWidth;
+  const axisX = plotRight + 8;
+  const gutterX = plotRight + layout.axisWidth + 8;
   const closes = bars.map((bar) => bar.close);
   const ma5 = movingAverage(closes, 5);
   const ma20 = movingAverage(closes, 20);
   const refs = chartReferenceLevels(row, bars);
+  const currentRef = refs.find((ref) => ref.key === "current");
+  const annotationRefs = refs.filter((ref) => ref.key !== "current");
   const priceValues = [
     ...bars.flatMap((bar) => [bar.open, bar.high, bar.low, bar.close]),
     ...ma5.filter(Number.isFinite),
@@ -3807,16 +3819,16 @@ function renderChartSvg(row, range, active) {
   const priceMax = max + pad;
   const priceSpan = priceMax - priceMin || 1;
   const maxVolume = Math.max(...bars.map((bar) => bar.volume), 1);
-  const plotWidth = width - margin.left - margin.right;
+  const plotWidth = plotRight - layout.left;
   const step = plotWidth / bars.length;
   const candleWidth = clamp(step * 0.58, 3, 10);
-  const xCenter = (index) => margin.left + step * index + step / 2;
+  const xCenter = (index) => layout.left + step * index + step / 2;
   const yPrice = (value) => priceTop + ((priceMax - value) / priceSpan) * priceHeight;
   const yVolume = (value) => volumeTop + volumeHeight - (value / maxVolume) * volumeHeight;
   const grid = [0, 0.25, 0.5, 0.75, 1].map((ratio) => {
     const y = priceTop + ratio * priceHeight;
     const value = priceMax - ratio * priceSpan;
-    return `<line x1="${margin.left}" y1="${num(y, 1)}" x2="${width - margin.right}" y2="${num(y, 1)}" class="chart-grid"></line><text x="${width - margin.right + 8}" y="${num(y + 4, 1)}" class="axis-label">${escapeHtml(price(value))}</text>`;
+    return `<line x1="${layout.left}" y1="${num(y, 1)}" x2="${plotRight}" y2="${num(y, 1)}" class="chart-grid"></line><text x="${axisX}" y="${num(y + 4, 1)}" class="axis-label">${escapeHtml(priceFixed(value))}</text>`;
   }).join("");
   const dateTicks = chartDateTicks(bars).map(({ index, label }) => `<text x="${num(xCenter(index), 1)}" y="${height - 6}" class="axis-label date-label">${escapeHtml(label)}</text>`).join("");
   const candles = bars.map((bar, index) => {
@@ -3825,7 +3837,7 @@ function renderChartSvg(row, range, active) {
     const bodyTop = yPrice(Math.max(bar.open, bar.close));
     const bodyHeight = Math.max(1, Math.abs(yPrice(bar.open) - yPrice(bar.close)));
     const volumeY = yVolume(bar.volume);
-    const tooltip = `${bar.date} | O ${price(bar.open)} H ${price(bar.high)} L ${price(bar.low)} C ${price(bar.close)} | Vol ${formatVolume(bar.volume)}`;
+    const tooltip = `${bar.date} | O ${priceFixed(bar.open)} H ${priceFixed(bar.high)} L ${priceFixed(bar.low)} C ${priceFixed(bar.close)} | Vol ${formatVolume(bar.volume)}`;
     return `<g class="${up ? "candle-up" : "candle-down"}">
       <line x1="${num(x, 1)}" y1="${num(yPrice(bar.high), 1)}" x2="${num(x, 1)}" y2="${num(yPrice(bar.low), 1)}" class="wick"></line>
       <rect x="${num(x - candleWidth / 2, 1)}" y="${num(bodyTop, 1)}" width="${num(candleWidth, 1)}" height="${num(bodyHeight, 1)}" class="body"></rect>
@@ -3835,31 +3847,124 @@ function renderChartSvg(row, range, active) {
   }).join("");
   const ma5Path = seriesPath(ma5, xCenter, yPrice);
   const ma20Path = seriesPath(ma20, xCenter, yPrice);
-  const refsSvg = refs.map((ref) => {
+  const refLinesSvg = annotationRefs.map((ref) => {
     const y = yPrice(ref.value);
     return `<g class="ref-line ref-${escapeHtml(ref.key)}">
-      <line x1="${margin.left}" y1="${num(y, 1)}" x2="${width - margin.right}" y2="${num(y, 1)}" stroke="${ref.color}" stroke-dasharray="${ref.dash}"></line>
-      <text x="${width - margin.right + 8}" y="${num(y - 5, 1)}" fill="${ref.color}" class="ref-label">${escapeHtml(ref.label)}</text>
+      <line x1="${layout.left}" y1="${num(y, 1)}" x2="${plotRight}" y2="${num(y, 1)}" stroke="${ref.color}" stroke-dasharray="${ref.dash}"></line>
     </g>`;
   }).join("");
+  const annotationLabels = layoutAnnotationLabels(annotationRefs, yPrice, priceTop + 12, priceTop + priceHeight - 12, priceSpan);
+  const refLabelsSvg = annotationLabels.map((label) => {
+    const leader = Math.abs(label.y - label.targetY) > 2
+      ? `<path d="M${plotRight} ${num(label.targetY, 1)} L${num(gutterX - 8, 1)} ${num(label.y, 1)}" class="ref-leader" stroke="${label.color}"></path>`
+      : `<line x1="${plotRight}" y1="${num(label.targetY, 1)}" x2="${num(gutterX - 8, 1)}" y2="${num(label.y, 1)}" class="ref-leader" stroke="${label.color}"></line>`;
+    return `<g class="ref-label-group">
+      ${leader}
+      <rect x="${gutterX}" y="${num(label.y - 13, 1)}" width="100" height="26" rx="4" class="ref-label-box" stroke="${label.color}"></rect>
+      <text x="${num(gutterX + 6, 1)}" y="${num(label.y - 2, 1)}" class="ref-label" fill="${label.color}">${escapeHtml(label.label)}</text>
+      <text x="${num(gutterX + 6, 1)}" y="${num(label.y + 10, 1)}" class="ref-price" fill="${label.color}">${escapeHtml(label.priceText)}</text>
+    </g>`;
+  }).join("");
+  const currentMarker = currentRef ? renderCurrentAxisMarker(currentRef, yPrice(currentRef.value), axisX) : "";
   const markerDate = row.recommendationDate || row.market?.dataDate;
   const markerIndex = Math.max(0, bars.findIndex((bar) => bar.date === markerDate));
   const marker = markerIndex >= 0
-    ? `<g class="recommendation-marker"><line x1="${num(xCenter(markerIndex), 1)}" y1="${priceTop}" x2="${num(xCenter(markerIndex), 1)}" y2="${volumeTop + volumeHeight}" stroke-dasharray="3 5"></line><circle cx="${num(xCenter(markerIndex), 1)}" cy="${num(yPrice(bars[markerIndex].close), 1)}" r="5"></circle><text x="${num(xCenter(markerIndex) + 7, 1)}" y="${num(yPrice(bars[markerIndex].close) - 7, 1)}">추천일</text></g>`
+    ? `<g class="recommendation-marker"><line x1="${num(xCenter(markerIndex), 1)}" y1="${priceTop}" x2="${num(xCenter(markerIndex), 1)}" y2="${volumeTop + volumeHeight}" stroke-dasharray="3 5"></line><rect x="${num(xCenter(markerIndex) + 5, 1)}" y="${priceTop + 4}" width="30" height="16" rx="4"></rect><text x="${num(xCenter(markerIndex) + 10, 1)}" y="${priceTop + 16}">추천</text></g>`
     : "";
+  const summary = chartSummaryLine(row, range, bars);
   return `<svg class="candlestick-chart${active ? " active" : ""}" data-range-panel="${range.key}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(row.ticker)} ${range.label} candlestick chart">
     <rect x="0" y="0" width="${width}" height="${height}" class="chart-bg"></rect>
+    <text x="${layout.left}" y="16" class="chart-summary-text">${escapeHtml(summary)}</text>
     ${grid}
-    <line x1="${margin.left}" y1="${priceTop + priceHeight}" x2="${width - margin.right}" y2="${priceTop + priceHeight}" class="axis-line"></line>
-    <line x1="${margin.left}" y1="${volumeTop + volumeHeight}" x2="${width - margin.right}" y2="${volumeTop + volumeHeight}" class="axis-line"></line>
-    <text x="${margin.left}" y="${volumeTop - 8}" class="panel-label">Volume</text>
-    ${refsSvg}
+    <line x1="${layout.left}" y1="${priceTop + priceHeight}" x2="${plotRight}" y2="${priceTop + priceHeight}" class="axis-line"></line>
+    <line x1="${layout.left}" y1="${volumeTop + volumeHeight}" x2="${plotRight}" y2="${volumeTop + volumeHeight}" class="axis-line"></line>
+    <line x1="${plotRight}" y1="${priceTop}" x2="${plotRight}" y2="${volumeTop + volumeHeight}" class="axis-line"></line>
+    <text x="${layout.left}" y="${volumeTop - 8}" class="panel-label">Volume</text>
+    ${refLinesSvg}
     ${candles}
     ${ma5Path ? `<path d="${ma5Path}" class="ma-line ma5"></path>` : ""}
     ${ma20Path ? `<path d="${ma20Path}" class="ma-line ma20"></path>` : ""}
+    ${currentMarker}
+    ${refLabelsSvg}
     ${marker}
     ${dateTicks}
   </svg>`;
+}
+
+function priceFixed(value) {
+  if (value === null || value === undefined || Number.isNaN(Number(value))) return "데이터 없음";
+  return `$${Number(value).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+}
+
+function chartSummaryLine(row, range, bars) {
+  const latest = bars.at(-1);
+  return `${row.ticker} · ${range.label} Daily · Close ${priceFixed(latest?.close)} · 5D ${pct(row.market?.return5dPct)} · 20D ${pct(row.market?.return20dPct)} · RVOL ${row.market?.relativeVolume === null || row.market?.relativeVolume === undefined ? "데이터 없음" : `${num(row.market.relativeVolume, 2)}x`}`;
+}
+
+function renderCurrentAxisMarker(ref, y, axisX) {
+  const markerY = clamp(y, 20, 306);
+  return `<g class="axis-marker">
+    <rect x="${axisX - 2}" y="${num(markerY - 11, 1)}" width="58" height="22" fill="${ref.color}"></rect>
+    <text x="${axisX + 4}" y="${num(markerY + 4, 1)}">${escapeHtml(priceFixed(ref.value))}</text>
+  </g>`;
+}
+
+function layoutAnnotationLabels(refs, yPrice, top, bottom, priceSpan) {
+  const candidates = refs
+    .map((ref) => ({ ...ref, targetY: yPrice(ref.value) }))
+    .sort((a, b) => a.targetY - b.targetY);
+  const groups = [];
+  for (const ref of candidates) {
+    const last = groups.at(-1);
+    const averageValue = last ? average(last.refs.map((item) => item.value)) : null;
+    const closeByPixel = last && Math.abs(ref.targetY - last.targetY) <= 10;
+    const closeByPrice = last && averageValue && Math.abs(ref.value - averageValue) <= Math.max(priceSpan * 0.01, averageValue * 0.003);
+    if (last && (closeByPixel || closeByPrice)) {
+      last.refs.push(ref);
+      last.targetY = average(last.refs.map((item) => item.targetY));
+      last.valueMin = Math.min(last.valueMin, ref.value);
+      last.valueMax = Math.max(last.valueMax, ref.value);
+      last.color = last.refs.some((item) => item.key === "invalidation") ? "#b91c1c" : last.refs[0].color;
+    } else {
+      groups.push({
+        refs: [ref],
+        targetY: ref.targetY,
+        valueMin: ref.value,
+        valueMax: ref.value,
+        color: ref.color
+      });
+    }
+  }
+
+  const minGap = 30;
+  const labels = groups.map((group) => ({
+    ...group,
+    y: clamp(group.targetY, top, bottom),
+    label: group.refs.map((ref) => ref.shortLabel).join(" / "),
+    priceText: Math.abs(group.valueMax - group.valueMin) < 0.005
+      ? priceFixed(group.valueMax)
+      : `${priceFixed(group.valueMin)} ~ ${priceFixed(group.valueMax)}`
+  }));
+
+  for (let index = 1; index < labels.length; index += 1) {
+    if (labels[index].y - labels[index - 1].y < minGap) {
+      labels[index].y = labels[index - 1].y + minGap;
+    }
+  }
+  const overflow = labels.length ? labels.at(-1).y - bottom : 0;
+  if (overflow > 0) {
+    for (const label of labels) label.y -= overflow;
+  }
+  for (let index = labels.length - 2; index >= 0; index -= 1) {
+    if (labels[index + 1].y - labels[index].y < minGap) {
+      labels[index].y = labels[index + 1].y - minGap;
+    }
+  }
+  const underflow = labels.length ? top - labels[0].y : 0;
+  if (underflow > 0) {
+    for (const label of labels) label.y += underflow;
+  }
+  return labels.map((label) => ({ ...label, y: clamp(label.y, top, bottom) }));
 }
 
 function chartDateTicks(bars) {

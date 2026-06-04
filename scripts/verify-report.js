@@ -90,6 +90,10 @@ function main() {
   assert(html.includes('class="candlestick-chart'), "HTML missing candlestick SVG chart");
   assert(html.includes('data-chart-hit'), "HTML missing OHLCV tooltip hit areas");
   assert(html.includes('data-chart-range="1M"') && html.includes('data-chart-range="3M"') && html.includes('data-chart-range="6M"'), "HTML missing chart range controls");
+  assert(html.includes('class="axis-marker"'), "HTML missing current price axis marker");
+  assert(html.includes('class="ref-label-group"'), "HTML missing gutter annotation labels");
+  assert(html.includes('class="chart-summary-text"'), "HTML missing chart summary line");
+  assert(html.includes('legend-prev-high') && html.includes('legend-recommend') && html.includes('legend-invalid'), "HTML missing separated reference-line legend items");
 
   for (const file of [
     "src/data/newsProvider.js",

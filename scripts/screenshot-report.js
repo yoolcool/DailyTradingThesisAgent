@@ -49,6 +49,9 @@ async function main() {
         tradingCharts: document.querySelectorAll("[data-trading-chart]").length,
         activeCandles: document.querySelectorAll(".candlestick-chart.active").length,
         tooltipHits: document.querySelectorAll("[data-chart-hit]").length,
+        axisMarkers: document.querySelectorAll(".axis-marker").length,
+        gutterLabels: document.querySelectorAll(".ref-label-group").length,
+        chartSummaryLines: document.querySelectorAll(".chart-summary-text").length,
         detailsCount: document.querySelectorAll("details").length,
         hasValidWarning: warning.includes("MOCK DATA") || warning.includes("REAL DATA TEST"),
         hasConclusion: body.includes("오늘의 분리 결론"),
@@ -76,6 +79,9 @@ async function main() {
     if (checks.tradingCharts < 1) throw new Error("Rendered page has no interactive trading charts.");
     if (checks.activeCandles < 1) throw new Error("Rendered page has no active candlestick charts.");
     if (checks.tooltipHits < 1) throw new Error("Rendered page has no OHLCV tooltip hit areas.");
+    if (checks.axisMarkers < 1) throw new Error("Rendered page has no current price axis markers.");
+    if (checks.gutterLabels < 1) throw new Error("Rendered page has no gutter annotation labels.");
+    if (checks.chartSummaryLines < 1) throw new Error("Rendered page has no chart summary lines.");
 
     await page.screenshot({ path: pngPath, fullPage: true });
   } catch (error) {
