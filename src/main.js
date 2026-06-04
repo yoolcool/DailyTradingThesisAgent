@@ -1554,6 +1554,366 @@ function actionCandidateScore(row) {
   ));
 }
 
+function buildDarkHorseCandidates(stocks, actionCandidates, marketLabel) {
+  const mainTickers = new Set(actionCandidates.map((row) => row.ticker));
+  return stocks
+    .filter((row) => row?.assetType === "STOCK" && row?.market?.dataStatus === "ok" && !row.holdingInfo)
+    .filter((row) => !mainTickers.has(row.ticker))
+    .map((row) => attachDarkHorseScore(row, mainTickers.has(row.ticker), marketLabel))
+    .filter((row) => row.darkHorse?.eligible && row.darkHorse.score >= 50)
+    .sort((a, b) => b.darkHorse.score - a.darkHorse.score || compareActionCandidateScore(a, b))
+    .slice(0, 3)
+    .map((row, index) => ({ ...row, darkHorseRank: index + 1 }));
+}
+
+function attachDarkHorseScore(row, isMainActionCandidate, marketLabel) {
+  const input = darkHorseInput(row, isMainActionCandidate);
+  const darkHorse = calculateDarkHorseScore(input, marketLabel);
+  return { ...row, darkHorseInput: input, darkHorse };
+}
+
+function darkHorseInput(row, isMainActionCandidate) {
+  const history = chartBars(row.market?.history || [], 132);
+  const closeSeries = history.map((bar) => bar.close);
+  const volumeSeries = history.map((bar) => bar.volume);
+  const highSeries = history.map((bar) => bar.high);
+  const lowSeries = history.map((bar) => bar.low);
+  const dateSeries = history.map((bar) => bar.date);
+  const ma5Series = movingAverage(closeSeries, 5);
+  const ma20Series = movingAverage(closeSeries, 20);
+  const latest = history.at(-1);
+  const previous = history.at(-2);
+  const news = row.newsSummary || {};
+  return {
+    ticker: row.ticker,
+    name: row.name,
+    narrative: row.linkedNarrative || "미분류",
+    narrativeScore: Number(row.narrativeScore ?? 0),
+    trendStrengthIndex: Number(row.trendStrengthIndex ?? 0),
+    close: Number(row.market?.lastClose ?? latest?.close),
+    previousClose: Number(previous?.close),
+    return1D: Number(row.market?.dailyChangePct ?? 0),
+    return5D: Number(row.market?.return5dPct ?? 0),
+    return20D: Number(row.market?.return20dPct ?? 0),
+    rvol: Number(row.market?.relativeVolume ?? 0),
+    dollarVolume: Number(row.market?.lastClose) * Number(row.market?.volume),
+    ma5: Number(ma5Series.at(-1)),
+    ma20: Number(ma20Series.at(-1)),
+    ma5Prev: Number(ma5Series.at(-2)),
+    ma20Prev: Number(ma20Series.at(-2)),
+    ma5Series,
+    ma20Series,
+    closeSeries,
+    volumeSeries,
+    highSeries,
+    lowSeries,
+    dateSeries,
+    exhaustionRisk: Number(row.exhaustionRisk ?? 0),
+    entryQualityScore: Number(row.entryQualityScore ?? 0),
+    moneyFlowScore: Number(row.moneyFlowScoreFinal ?? row.moneyFlowScore ?? 0),
+    liquidityStatus: row.liquiditySummary?.liquiditySignal || row.liquiditySummary?.dollarVolumeLiquidity || "UNKNOWN",
+    spreadStatus: "UNKNOWN",
+    directNewsScore: Number(news.directnessScore ?? 0) + Number(news.strongCatalystCount ?? 0) * 2,
+    newsDirection: newsDirectionLabel(news),
+    isMainActionCandidate
+  };
+}
+
+function newsDirectionLabel(news) {
+  if (!news) return "unknown";
+  if (Number(news.directionScore || 0) > 0) return "positive";
+  if (Number(news.directionScore || 0) < 0) return "negative";
+  const counts = news.sentimentCounts || {};
+  if ((counts.positive || 0) > (counts.negative || 0)) return "positive";
+  if ((counts.negative || 0) > (counts.positive || 0)) return "negative";
+  return "neutral";
+}
+
+function calculateDarkHorseScore(c, marketLabel) {
+  const filter = darkHorseHardFilterResult(c);
+  if (!filter.eligible) {
+    return {
+      score: 0,
+      eligible: false,
+      label: "제외",
+      stage: "제외",
+      confidence: "LOW",
+      reason: filter.reason,
+      breakdown: {}
+    };
+  }
+  const breakdown = {
+    narrativeAlignmentScore: calcNarrativeAlignmentScore(c),
+    earlyTrendStructureScore: calcEarlyTrendStructureScore(c),
+    baseBreakoutScore: calcBaseBreakoutScore(c),
+    volumeConfirmationScore: calcVolumeConfirmationScore(c),
+    lowExhaustionScore: calcLowExhaustionScore(c),
+    liquidityRiskScore: calcDarkHorseLiquidityScore(c),
+    riskPenalty: calcDarkHorseRiskPenalty(c, marketLabel)
+  };
+  const rawScore = rounded(
+    breakdown.narrativeAlignmentScore +
+    breakdown.earlyTrendStructureScore +
+    breakdown.baseBreakoutScore +
+    breakdown.volumeConfirmationScore +
+    breakdown.lowExhaustionScore +
+    breakdown.liquidityRiskScore -
+    breakdown.riskPenalty
+  );
+  const score = rounded(clamp(rawScore, 0, 100));
+  return {
+    score,
+    eligible: true,
+    breakdown: { ...breakdown, rawScore },
+    label: getDarkHorseLabel(score),
+    stage: getDarkHorseStage(c),
+    confidence: getDarkHorseConfidence(score, c),
+    reason: generateDarkHorseReason(c),
+    confirmCondition: generateDarkHorseConfirmCondition(c),
+    invalidationCondition: generateDarkHorseInvalidationCondition(c),
+    whyNotMain: generateWhyNotMainCandidate(c)
+  };
+}
+
+function darkHorseHardFilterResult(c) {
+  if (c.isMainActionCandidate) return { eligible: false, reason: "이미 메인 행동 후보에 포함됨" };
+  const themeOk = c.narrativeScore >= 65 || (c.trendStrengthIndex ?? 0) >= 65;
+  if (!themeOk) return { eligible: false, reason: "상위 서사 정렬 부족" };
+  if (!hasDarkHorseRequiredData(c)) return { eligible: false, reason: "다크호스 필수 가격/거래량 데이터 부족" };
+  if (c.close <= c.ma20) return { eligible: false, reason: "종가가 MA20 아래" };
+  const maStructureOk = c.ma5 >= c.ma20 || crossedAboveRecently(c.ma5Series, c.ma20Series, 7);
+  if (!maStructureOk) return { eligible: false, reason: "MA5/MA20 정렬 개선 부족" };
+  if (c.rvol < 0.9) return { eligible: false, reason: "RVOL 0.90x 미만" };
+  if (c.exhaustionRisk > 60) return { eligible: false, reason: "Exhaustion Risk 과다" };
+  if (c.return5D > 18) return { eligible: false, reason: "5D 수익률 과도" };
+  if (c.return20D > 45) return { eligible: false, reason: "20D 수익률 과도" };
+  if (c.newsDirection === "negative" && (c.directNewsScore ?? 0) >= 7) return { eligible: false, reason: "부정 직접 뉴스" };
+  if (c.liquidityStatus === "LOW" || c.liquidityStatus === "LOW_LIQUIDITY") return { eligible: false, reason: "유동성 부족" };
+  return { eligible: true, reason: "필수 조건 통과" };
+}
+
+function hasDarkHorseRequiredData(c) {
+  return Number.isFinite(c.close) &&
+    Number.isFinite(c.return5D) &&
+    Number.isFinite(c.return20D) &&
+    Number.isFinite(c.rvol) &&
+    Number.isFinite(c.ma5) &&
+    Number.isFinite(c.ma20) &&
+    c.closeSeries.length >= 20 &&
+    c.volumeSeries.length >= 20 &&
+    Number.isFinite(c.exhaustionRisk) &&
+    (Number.isFinite(c.narrativeScore) || Number.isFinite(c.trendStrengthIndex));
+}
+
+function calcNarrativeAlignmentScore(c) {
+  const narrative = c.narrativeScore ?? 0;
+  const tsi = c.trendStrengthIndex ?? narrative;
+  if (narrative >= 85 || tsi >= 85) return 20;
+  if (narrative >= 75 || tsi >= 75) return 17;
+  if (narrative >= 65 || tsi >= 65) return 13;
+  if (narrative >= 55 || tsi >= 55) return 7;
+  return 0;
+}
+
+function calcEarlyTrendStructureScore(c) {
+  let score = 0;
+  if (c.close > c.ma20) score += 6;
+  if (c.close > c.ma5) score += 5;
+  if (c.ma5 > c.ma20) score += 7;
+  if (crossedAboveRecently(c.ma5Series, c.ma20Series, 7)) score += 6;
+  if (slopePositive(c.ma20Series, 5)) score += 4;
+  if (higherLows(c.lowSeries, 10)) score += 2;
+  return rounded(clamp(score, 0, 30));
+}
+
+function calcBaseBreakoutScore(c) {
+  const recentHigh = recentPriorHigh(c.highSeries, 15);
+  const recentLow = recentPriorLow(c.lowSeries, 15);
+  if (!Number.isFinite(recentHigh) || !Number.isFinite(recentLow) || recentLow <= 0) return 0;
+  const distanceToHighPct = ((c.close - recentHigh) / recentHigh) * 100;
+  const rangePct = ((recentHigh - recentLow) / recentLow) * 100;
+  let score = 0;
+  if (c.close > recentHigh) score += 8;
+  else if (distanceToHighPct >= -3 && distanceToHighPct <= 0) score += 5;
+  if (rangePct <= 18) score += 4;
+  else if (rangePct <= 25) score += 2;
+  if (c.close > c.ma5 && c.ma5 > c.ma20) score += 3;
+  return rounded(clamp(score, 0, 20));
+}
+
+function calcVolumeConfirmationScore(c) {
+  let score = 0;
+  if (c.rvol >= 1.0) score += 4;
+  if (c.rvol >= 1.2) score += 3;
+  const avg3 = average(c.volumeSeries.slice(-3));
+  const avg20 = average(c.volumeSeries.slice(-20));
+  if (Number.isFinite(avg3) && Number.isFinite(avg20) && avg3 > avg20) score += 4;
+  if (upVolumeDominates(c.closeSeries, c.volumeSeries, 10)) score += 3;
+  if (lastCandleBearishOnHighVolume(c)) score -= 3;
+  return rounded(clamp(score, 0, 15));
+}
+
+function calcLowExhaustionScore(c) {
+  let score = c.exhaustionRisk <= 25 ? 10 : c.exhaustionRisk <= 35 ? 8 : c.exhaustionRisk <= 45 ? 6 : c.exhaustionRisk <= 55 ? 3 : 0;
+  if (c.return5D < 0) score -= 3;
+  if (c.return20D < 0) score -= 3;
+  if (c.return5D > 15) score -= 3;
+  if (c.return20D > 40) score -= 3;
+  return rounded(clamp(score, 0, 10));
+}
+
+function calcDarkHorseLiquidityScore(c) {
+  if (c.liquidityStatus === "LIQUID") return 5;
+  if (c.liquidityStatus === "ACCEPTABLE") return 3;
+  if (c.liquidityStatus === "UNKNOWN") return 2;
+  return 0;
+}
+
+function calcDarkHorseRiskPenalty(c, marketLabel) {
+  let penalty = 0;
+  if (c.newsDirection === "negative" && (c.directNewsScore ?? 0) >= 7) penalty += 8;
+  if (lastCandleBearishOnHighVolume(c)) penalty += 6;
+  if (c.return5D > 18) penalty += 5;
+  if (c.return20D > 45) penalty += 5;
+  if (c.exhaustionRisk > 60) penalty += 8;
+  const distanceFromMA20Pct = ((c.close - c.ma20) / c.ma20) * 100;
+  if (distanceFromMA20Pct > 18) penalty += 4;
+  if (c.liquidityStatus === "LOW" || c.liquidityStatus === "LOW_LIQUIDITY") penalty += 6;
+  if (marketLabel === "위험회피") penalty += 4;
+  return rounded(clamp(penalty, 0, 20));
+}
+
+function crossedAboveRecently(shortSeries = [], longSeries = [], lookbackDays = 7) {
+  const start = Math.max(1, shortSeries.length - lookbackDays);
+  for (let i = start; i < shortSeries.length; i += 1) {
+    const prevShort = Number(shortSeries[i - 1]);
+    const prevLong = Number(longSeries[i - 1]);
+    const nowShort = Number(shortSeries[i]);
+    const nowLong = Number(longSeries[i]);
+    if ([prevShort, prevLong, nowShort, nowLong].every(Number.isFinite) && prevShort <= prevLong && nowShort > nowLong) return true;
+  }
+  return false;
+}
+
+function slopePositive(series = [], lookbackDays = 5) {
+  const valid = series.filter(Number.isFinite);
+  if (valid.length <= lookbackDays) return false;
+  return valid.at(-1) > valid.at(-1 - lookbackDays);
+}
+
+function higherLows(series = [], lookbackDays = 10) {
+  const lows = series.slice(-lookbackDays).map(Number).filter(Number.isFinite);
+  if (lows.length < 4) return false;
+  const firstHalf = lows.slice(0, Math.floor(lows.length / 2));
+  const secondHalf = lows.slice(Math.floor(lows.length / 2));
+  return Math.min(...secondHalf) > Math.min(...firstHalf);
+}
+
+function upVolumeDominates(closeSeries = [], volumeSeries = [], lookbackDays = 10) {
+  let up = 0;
+  let down = 0;
+  const start = Math.max(1, closeSeries.length - lookbackDays);
+  for (let i = start; i < closeSeries.length; i += 1) {
+    const volume = Number(volumeSeries[i]);
+    if (!Number.isFinite(volume)) continue;
+    if (Number(closeSeries[i]) >= Number(closeSeries[i - 1])) up += volume;
+    else down += volume;
+  }
+  return up > down;
+}
+
+function lastCandleBearishOnHighVolume(c) {
+  const latestClose = Number(c.closeSeries.at(-1));
+  const previousClose = Number(c.closeSeries.at(-2));
+  const latestVolume = Number(c.volumeSeries.at(-1));
+  const avg20 = average(c.volumeSeries.slice(-20));
+  return Number.isFinite(latestClose) && Number.isFinite(previousClose) && Number.isFinite(latestVolume) && Number.isFinite(avg20) && latestClose < previousClose && latestVolume > avg20 * 1.4;
+}
+
+function recentPriorHigh(series = [], lookback = 15) {
+  const values = series.slice(-lookback - 1, -1).map(Number).filter(Number.isFinite);
+  return values.length ? Math.max(...values) : null;
+}
+
+function recentPriorLow(series = [], lookback = 15) {
+  const values = series.slice(-lookback - 1, -1).map(Number).filter(Number.isFinite);
+  return values.length ? Math.min(...values) : null;
+}
+
+function findRecentSwingLow(series = [], lookback = 10) {
+  const values = series.slice(-lookback).map(Number).filter(Number.isFinite);
+  return values.length ? Math.min(...values) : null;
+}
+
+function getDarkHorseLabel(score) {
+  if (score >= 80) return "강한 다크호스";
+  if (score >= 70) return "다크호스 후보";
+  if (score >= 60) return "관찰 후보";
+  if (score >= 50) return "초기 관찰";
+  return "제외";
+}
+
+function getDarkHorseStage(c) {
+  const recentHigh = recentPriorHigh(c.highSeries, 15);
+  const distanceToHighPct = Number.isFinite(recentHigh) ? ((c.close - recentHigh) / recentHigh) * 100 : null;
+  const crossedMARecently = crossedAboveRecently(c.ma5Series, c.ma20Series, 7);
+  if (Number.isFinite(recentHigh) && c.close > recentHigh && c.rvol >= 1.2 && c.ma5 > c.ma20) return "베이스 돌파 확인";
+  if (Number.isFinite(distanceToHighPct) && distanceToHighPct >= -3 && distanceToHighPct <= 0 && c.ma5 >= c.ma20) return "베이스 돌파 직전";
+  if (crossedMARecently && c.close > c.ma20) return "초기 반전";
+  if (c.close > c.ma5 && c.ma5 > c.ma20 && c.return5D > 8) return "첫 눌림 대기";
+  if (c.moneyFlowScore >= 75 && c.entryQualityScore >= 60 && c.exhaustionRisk <= 50) return "메인 후보 승격 가능";
+  return "초기 관찰";
+}
+
+function getDarkHorseConfidence(score, c) {
+  if (score >= 85 && c.rvol >= 1.2 && c.narrativeScore >= 75 && c.close > c.ma5 && c.ma5 > c.ma20 && c.exhaustionRisk <= 35) return "HIGH";
+  if (score >= 75 && c.rvol >= 1.1 && c.narrativeScore >= 70 && c.exhaustionRisk <= 45) return "MEDIUM";
+  return "LOW";
+}
+
+function generateDarkHorseReason(c) {
+  const breakoutStatus = darkHorseBreakoutStatus(c);
+  const volumeStatus = c.rvol >= 1.2 ? "충분하다" : c.rvol >= 1.0 ? "보통 수준이다" : "아직 약하다";
+  return `${c.ticker}는 ${c.narrative} 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 ${breakoutStatus} 상태이고, RVOL ${num(c.rvol, 2)}x로 거래량 확인은 ${volumeStatus}. Exhaustion Risk ${c.exhaustionRisk}로 아직 메인 후보 대비 과열 상한 안에 있다.`;
+}
+
+function darkHorseBreakoutStatus(c) {
+  const recentHigh = recentPriorHigh(c.highSeries, 15);
+  if (!Number.isFinite(recentHigh)) return "확인 부족";
+  const distanceToHighPct = ((c.close - recentHigh) / recentHigh) * 100;
+  if (c.close > recentHigh) return "상단 돌파";
+  if (distanceToHighPct >= -3) return "상단 돌파 직전";
+  return "돌파 대기";
+}
+
+function generateDarkHorseConfirmCondition(c) {
+  const conditions = [];
+  const recentHigh = recentPriorHigh(c.highSeries, 15);
+  if (Number.isFinite(recentHigh) && c.close <= recentHigh) conditions.push(`최근 15거래일 고점 ${priceFixed(recentHigh)} 돌파`);
+  else conditions.push("돌파 후 고점 위 안착 유지");
+  if (c.rvol < 1.2) conditions.push("RVOL 1.20x 이상 재증가");
+  conditions.push("MA5 위 종가 유지");
+  conditions.push("관련 ETF 동반 강세");
+  return conditions.join(", ");
+}
+
+function generateDarkHorseInvalidationCondition(c) {
+  const conditions = [`MA20 ${priceFixed(c.ma20)} 종가 이탈`];
+  const swingLow = findRecentSwingLow(c.lowSeries, 10);
+  if (Number.isFinite(swingLow)) conditions.push(`최근 스윙 저점 ${priceFixed(swingLow)} 이탈`);
+  conditions.push("RVOL 0.80x 이하 둔화");
+  return conditions.join(", ");
+}
+
+function generateWhyNotMainCandidate(c) {
+  const reasons = [];
+  if (c.entryQualityScore < 60) reasons.push(`Entry Quality ${c.entryQualityScore} < 60`);
+  if (c.moneyFlowScore < 75) reasons.push(`moneyFlowScore ${c.moneyFlowScore} < 75`);
+  if (c.rvol < 1.2) reasons.push(`RVOL ${num(c.rvol, 2)}x < 1.20x`);
+  if (darkHorseBreakoutStatus(c) !== "상단 돌파") reasons.push("최근 고점 돌파 확인 전");
+  return reasons.join(", ") || "메인 후보 조건에 근접했지만 다음 거래일 확인이 필요";
+}
+
 async function buildReport() {
   const rawWatchlist = readJson("watchlist.json", []);
   const rawHoldings = readJson("holdings.json", []);
@@ -1587,6 +1947,7 @@ async function buildReport() {
   const etfBanRows = validEtfs.filter((row) => row.status === STATUS.BAN || row.moneyFlowScore < 50).sort((a, b) => a.moneyFlowScore - b.moneyFlowScore).slice(0, 5);
   const overheat = etfOverheat;
   const actionCandidates = chooseActionCandidates(stocks, etfs);
+  const darkHorseCandidates = buildDarkHorseCandidates(stocks, actionCandidates, marketLabel);
   const referenceCandidates = actionCandidates.length ? { etfs: [], stocks: [] } : buildReferenceCandidates(stocks, validEtfs);
   const topExecutionCandidate = chooseTopExecutionCandidate(etfActionCandidates, stockActionCandidates);
   const previousSnapshot = loadPreviousRecommendationSnapshot();
@@ -1595,6 +1956,7 @@ async function buildReport() {
   const stockUniverseScan = buildStockUniverseScanSummary(stockUniverse, stocks);
   const chartTickers = unique([
     ...actionCandidates.map((row) => row.ticker),
+    ...darkHorseCandidates.map((row) => row.ticker),
     ...etfTop5.map((row) => row.ticker),
     ...stockTop5.slice(0, 5).map((row) => row.ticker),
     ...previousRecommendationReviews.map((row) => row.ticker)
@@ -1653,6 +2015,7 @@ async function buildReport() {
     etfOverheat,
     overheat,
     actionCandidates,
+    darkHorseCandidates,
     referenceCandidates,
     topExecutionCandidate,
     chartCount
@@ -1805,6 +2168,7 @@ function createRecommendationSnapshot(report) {
     etfActionCandidates: report.etfActionCandidates.map(snapshotItem),
     stockActionCandidates: report.stockActionCandidates.map(snapshotItem),
     actionCandidates: report.actionCandidates.map(snapshotItem),
+    darkHorseCandidates: (report.darkHorseCandidates || []).map(snapshotDarkHorseItem),
     stockEntryCandidates: report.stockActionCandidates.filter((row) => row.stockVsEtfDecision === "STOCK_PREFERRED").map(snapshotItem),
     stockPullbackCandidates: report.stockActionCandidates.filter((row) => row.stockVsEtfDecision !== "STOCK_PREFERRED").map(snapshotItem),
     stockWatchCandidates: report.stockCautionRows.filter((row) => row.status === STATUS.WATCH).map(snapshotItem),
@@ -1818,6 +2182,22 @@ function createRecommendationSnapshot(report) {
     todayDecision: report.todayDecision,
     actionGateSummary: report.actionGateSummary,
     dataMode: report.dataMode
+  };
+}
+
+function snapshotDarkHorseItem(row) {
+  return {
+    ...snapshotItem(row),
+    darkHorseRank: row.darkHorseRank,
+    darkHorseScore: row.darkHorse?.score,
+    darkHorseLabel: row.darkHorse?.label,
+    darkHorseStage: row.darkHorse?.stage,
+    darkHorseConfidence: row.darkHorse?.confidence,
+    darkHorseReason: row.darkHorse?.reason,
+    darkHorseConfirmCondition: row.darkHorse?.confirmCondition,
+    darkHorseInvalidationCondition: row.darkHorse?.invalidationCondition,
+    darkHorseWhyNotMain: row.darkHorse?.whyNotMain,
+    darkHorseBreakdown: row.darkHorse?.breakdown
   };
 }
 
@@ -2558,6 +2938,8 @@ ${renderRecommendationTrackingMarkdown(report)}
 
 ${report.actionCandidates.slice(0, 3).map(renderActionMarkdown).join("\n\n") || `${report.todayDecision?.noTradeMessage || "오늘 즉시 행동 후보 없음. 왜 돈이 몰리는가, 누가 더 비싸게 사줄 수 있는가, 진입 조건이 동시에 충족된 후보가 없어 TOP 5는 관찰 목록으로만 본다."}`}
 
+${renderDarkHorseCandidatesMarkdown(report)}
+
 ${renderReferenceCandidatesMarkdown(report)}
 
 ## 오늘 돈이 몰리는 테마
@@ -2769,6 +3151,48 @@ ${etfs.map(renderReferenceCandidateMarkdown).join("\n\n") || "데이터 없음"}
 ${stocks.map(renderReferenceCandidateMarkdown).join("\n\n") || "데이터 없음"}`;
 }
 
+function renderDarkHorseCandidatesMarkdown(report) {
+  const rows = report.darkHorseCandidates || [];
+  if (!rows.length) return `## 다크호스 후보\n\n다크호스 후보 없음. 상위 서사 정렬, MA20 위 안착, MA5/MA20 구조 개선, RVOL 0.90x 이상 조건을 동시에 충족한 개별주가 없다.`;
+  return `## 다크호스 후보
+
+> 메인 행동 후보를 대체하지 않는 보조 관찰 섹션이다. 상위 서사 안에서 아직 과열되지 않았지만 초기 추세 전환, 베이스 돌파, 거래량 회복이 시작되는 개별주만 표시한다.
+
+${rows.map(renderDarkHorseCandidateMarkdown).join("\n\n")}`;
+}
+
+function renderDarkHorseCandidateMarkdown(row) {
+  const d = row.darkHorse || {};
+  const b = d.breakdown || {};
+  return `### ${row.darkHorseRank}. [${row.ticker}] ${row.name || row.ticker}
+- 소속 서사: ${row.linkedNarrative || "미분류"}
+- darkHorseScore: ${d.score ?? 0} (${d.label || "제외"})
+- 단계: ${d.stage || "초기 관찰"}
+- Confidence: ${d.confidence || "LOW"}
+- 5D / 20D / RVOL: ${pct(row.market?.return5dPct)} / ${pct(row.market?.return20dPct)} / ${num(row.market?.relativeVolume, 2)}x
+- MA 구조: 종가 ${price(row.market?.lastClose)} / MA5 ${price(row.darkHorseInput?.ma5)} / MA20 ${price(row.darkHorseInput?.ma20)}
+- 선정 이유: ${d.reason || "데이터 없음"}
+- 확인 조건: ${d.confirmCondition || "데이터 없음"}
+- 무효화 조건: ${d.invalidationCondition || "데이터 없음"}
+- 왜 아직 메인이 아닌가: ${d.whyNotMain || "메인 후보 조건 확인 전"}
+
+<details>
+<summary>darkHorseScore 상세 근거 보기</summary>
+
+- 서사 정렬: ${b.narrativeAlignmentScore ?? 0}/20
+- 초기 추세 구조: ${b.earlyTrendStructureScore ?? 0}/30
+- 베이스 돌파/정돈: ${b.baseBreakoutScore ?? 0}/20
+- 거래량 확인: ${b.volumeConfirmationScore ?? 0}/15
+- 낮은 과열: ${b.lowExhaustionScore ?? 0}/10
+- 유동성 리스크 보정: ${b.liquidityRiskScore ?? 0}/5
+- 리스크 차감: -${b.riskPenalty ?? 0}
+- rawScore: ${b.rawScore ?? 0}
+
+</details>
+
+- 차트: ${chartMarkdown(row)}`;
+}
+
 function renderReferenceCandidateMarkdown(row) {
   return `#### ${row.referenceRank}. [${row.ticker}] ${row.name || row.ticker}
 - 상태: 참고용 관찰 후보
@@ -2925,6 +3349,9 @@ ${report.topNarratives.map((row, index) => `${index + 1}. ${row.name} - TSI ${ro
 
 오늘 실제 행동 후보:
 ${report.actionCandidates.slice(0, 3).map((row, index) => `${index + 1}. ${row.ticker}(${row.assetType}) - ${row.linkedNarrative || "미분류"} - ${row.whyThisCouldTradeHigher}`).join("\n") || "1. 행동 후보 없음 - 미분류 - 조건 충족 후보 없음"}
+
+다크호스 후보:
+${(report.darkHorseCandidates || []).slice(0, 3).map((row, index) => `${index + 1}. ${row.ticker} - darkHorseScore ${row.darkHorse?.score ?? 0} - ${row.darkHorse?.stage || "초기 관찰"}`).join("\n") || "1. 다크호스 후보 없음 - 조건 충족 후보 없음"}
 
 ETF 후보 TOP 5:
 ${report.etfTop5.map((row, index) => `${index + 1}. ${row.ticker} - ${row.linkedNarrative || "미분류"} - ${row.todayActionLabel}`).join("\n") || "데이터 없음"}
@@ -3591,6 +4018,7 @@ function renderHtml(report) {
     ${renderTrendStrengthHtml(report)}
     ${renderRecommendationTrackingHtml(report)}
     ${renderActionCandidatesHtml(report)}
+    ${renderDarkHorseCandidatesHtml(report)}
     ${renderReferenceCandidatesHtml(report)}
     ${renderSplitConclusionHtml(report)}
     ${renderMobileNarrativeSummarySectionHtml(report.narratives)}
@@ -3689,6 +4117,7 @@ function renderStickyNavHtml() {
     <a href="#reliability">신뢰도</a>
     <a href="#market">시장</a>
     <a href="#actions">행동 후보</a>
+    <a href="#dark-horse">다크호스</a>
     <a href="#etf">ETF</a>
     <a href="#stocks">개별주</a>
     <a href="#tracking">트래킹</a>
@@ -3936,6 +4365,50 @@ function renderActionCandidatesHtml(report) {
   return `<section id="actions"><h2>오늘 실제 행동 후보</h2>
     ${cards.length ? `<div class="action-grid">${cards.map(renderActionHtml).join("")}</div>` : `<p>${escapeHtml(report.todayDecision?.noTradeMessage || "오늘 즉시 행동 후보 없음. 왜 돈이 몰리는가, 누가 더 비싸게 사줄 수 있는가, 진입 조건이 동시에 충족된 후보가 없어 TOP 5는 관찰 목록으로만 본다.")}</p>`}
   </section>`;
+}
+
+function renderDarkHorseCandidatesHtml(report) {
+  const rows = report.darkHorseCandidates || [];
+  return `<section id="dark-horse" data-dark-horse-candidates>
+    <h2>다크호스 후보</h2>
+    <p class="warning-note">메인 행동 후보를 대체하지 않는 보조 관찰 섹션이다. 상위 서사 안에서 초기 추세 전환, 베이스 돌파, 거래량 회복이 시작되는 개별주만 표시한다.</p>
+    ${rows.length ? `<div class="action-grid">${rows.map(renderDarkHorseCandidateHtml).join("")}</div>` : "<p>다크호스 후보 없음. 상위 서사 정렬, MA20 위 안착, MA5/MA20 구조 개선, RVOL 0.90x 이상 조건을 동시에 충족한 개별주가 없다.</p>"}
+  </section>`;
+}
+
+function renderDarkHorseCandidateHtml(row) {
+  const d = row.darkHorse || {};
+  const b = d.breakdown || {};
+  return `<article class="compact-card" data-dark-horse-card="${escapeHtml(row.ticker)}">
+    ${cardHeader(`${row.darkHorseRank}. [${row.ticker}] ${row.name || row.ticker}`, d.label || "다크호스", d.stage || "초기 관찰")}
+    ${chartImage(row)}
+    <div class="grid">
+      ${tile("darkHorseScore", `${d.score ?? 0}`)}
+      ${tile("Confidence", d.confidence || "LOW")}
+      ${tile("소속 서사", row.linkedNarrative || "미분류")}
+      ${tile("5D", pct(row.market?.return5dPct))}
+      ${tile("20D", pct(row.market?.return20dPct))}
+      ${tile("RVOL", `${num(row.market?.relativeVolume, 2)}x`)}
+      ${tile("MA 구조", `C ${price(row.market?.lastClose)} / MA5 ${price(row.darkHorseInput?.ma5)} / MA20 ${price(row.darkHorseInput?.ma20)}`)}
+      ${tile("아직 메인이 아닌 이유", d.whyNotMain || "조건 확인 전")}
+    </div>
+    ${fieldLine("선정 이유", escapeHtml(d.reason || "데이터 없음"))}
+    ${fieldLine("확인 조건", escapeHtml(d.confirmCondition || "데이터 없음"))}
+    ${fieldLine("무효화 조건", escapeHtml(d.invalidationCondition || "데이터 없음"))}
+    <details>
+      <summary><strong>darkHorseScore 상세 근거 보기</strong></summary>
+      <div class="grid">
+        ${tile("서사 정렬", `${b.narrativeAlignmentScore ?? 0}/20`)}
+        ${tile("초기 추세 구조", `${b.earlyTrendStructureScore ?? 0}/30`)}
+        ${tile("베이스 돌파", `${b.baseBreakoutScore ?? 0}/20`)}
+        ${tile("거래량 확인", `${b.volumeConfirmationScore ?? 0}/15`)}
+        ${tile("낮은 과열", `${b.lowExhaustionScore ?? 0}/10`)}
+        ${tile("유동성 보정", `${b.liquidityRiskScore ?? 0}/5`)}
+        ${tile("리스크 차감", `-${b.riskPenalty ?? 0}`)}
+        ${tile("rawScore", b.rawScore ?? 0)}
+      </div>
+    </details>
+  </article>`;
 }
 
 function renderReferenceCandidatesHtml(report) {

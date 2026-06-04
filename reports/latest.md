@@ -33,6 +33,11 @@
 오늘 실제 행동 후보:
 1. 행동 후보 없음 - 미분류 - 조건 충족 후보 없음
 
+다크호스 후보:
+1. ADI - darkHorseScore 78 - 초기 반전
+2. CDNS - darkHorseScore 76 - 베이스 돌파 직전
+3. AMAT - darkHorseScore 73 - 첫 눌림 대기
+
 ETF 후보 TOP 5:
 1. AIQ - AI 소프트웨어/사이버보안 확산 - 관찰
 2. SOXQ - AI 인프라 재가속 - 관찰
@@ -69,13 +74,13 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 주문 실행 신뢰도: LOW
 - ETF breadth 신뢰도: LOW
 - 신뢰도 해석: 테마 확산 판단 제한, 거래대금 유동성 낮음 또는 확인 불가, 프리/애프터마켓 확인 불가
-- 리포트 생성 시각: 2026-06-04 14:23 KST
+- 리포트 생성 시각: 2026-06-04 14:33 KST
 - 가격 기준 거래일: 2026-06-03 US regular close
-- 뉴스 수집 시각: 2026-06-04 14:23 KST
-- 가장 최근 뉴스 발행 시각: 2026-06-04 14:00 KST
+- 뉴스 수집 시각: 2026-06-04 14:33 KST
+- 가장 최근 뉴스 발행 시각: 2026-06-04 14:23 KST
 - 뉴스 신선도 상태: FRESH
 - 뉴스 소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API
-- 뉴스 소스 상태: Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS FAILED, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED
+- 뉴스 소스 상태: Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED
 - 뉴스 신뢰도: MEDIUM
 - 추천 적용 거래일: 2026-06-04 US regular session
 - 가격/거래량 데이터 상태: 연결됨
@@ -94,7 +99,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스: 일부 연결
 - ETF 구성종목 확산도: 일부 연결
 - 거래대금 유동성: 일부 연결
-- 생성 시각: 2026년 6월 4일 목요일 오후 2:23
+- 생성 시각: 2026년 6월 4일 목요일 오후 2:33
 - 시장 상태: 위험선호
 - 오늘 돈의 방향: 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 강한 테마 TOP 3: 반도체 장비/공급망(95), 메모리/HBM(90), AI 소프트웨어 ETF(84)
@@ -336,6 +341,94 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 오늘은 추세 후보는 있으나, 왜 돈이 몰리는가와 누가 더 비싸게 사줄 수 있는가를 주문 실행 신뢰도와 거래량이 충분히 뒷받침하지 못해 신규 추격은 보류한다. 기존 관심 종목은 전일 고점 돌파와 RVOL 1.00x 회복을 확인한 뒤 조건부로 본다.
 
+## 다크호스 후보
+
+> 메인 행동 후보를 대체하지 않는 보조 관찰 섹션이다. 상위 서사 안에서 아직 과열되지 않았지만 초기 추세 전환, 베이스 돌파, 거래량 회복이 시작되는 개별주만 표시한다.
+
+### 1. [ADI] Analog Devices Inc.
+- 소속 서사: AI 인프라 재가속
+- darkHorseScore: 78 (다크호스 후보)
+- 단계: 초기 반전
+- Confidence: LOW
+- 5D / 20D / RVOL: +4.99% / +8.13% / 1.15x
+- MA 구조: 종가 $437.67 / MA5 $419.28 / MA20 $415.26
+- 선정 이유: ADI는 AI 인프라 재가속 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 상단 돌파 상태이고, RVOL 1.15x로 거래량 확인은 보통 수준이다. Exhaustion Risk 54로 아직 메인 후보 대비 과열 상한 안에 있다.
+- 확인 조건: 돌파 후 고점 위 안착 유지, RVOL 1.20x 이상 재증가, MA5 위 종가 유지, 관련 ETF 동반 강세
+- 무효화 조건: MA20 $415.26 종가 이탈, 최근 스윙 저점 $381.22 이탈, RVOL 0.80x 이하 둔화
+- 왜 아직 메인이 아닌가: Entry Quality 40 < 60, RVOL 1.15x < 1.20x
+
+<details>
+<summary>darkHorseScore 상세 근거 보기</summary>
+
+- 서사 정렬: 17/20
+- 초기 추세 구조: 30/30
+- 베이스 돌파/정돈: 15/20
+- 거래량 확인: 8/15
+- 낮은 과열: 3/10
+- 유동성 리스크 보정: 5/5
+- 리스크 차감: -0
+- rawScore: 78
+
+</details>
+
+- 차트: ![ADI chart](charts/ADI.png)
+
+### 2. [CDNS] Cadence Design Systems Inc.
+- 소속 서사: AI 소프트웨어/사이버보안 확산
+- darkHorseScore: 76 (다크호스 후보)
+- 단계: 베이스 돌파 직전
+- Confidence: LOW
+- 5D / 20D / RVOL: +9.08% / +15.37% / 1.24x
+- MA 구조: 종가 $408 / MA5 $397.47 / MA20 $368.08
+- 선정 이유: CDNS는 AI 소프트웨어/사이버보안 확산 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 상단 돌파 직전 상태이고, RVOL 1.24x로 거래량 확인은 충분하다. Exhaustion Risk 33로 아직 메인 후보 대비 과열 상한 안에 있다.
+- 확인 조건: 최근 15거래일 고점 $416.69 돌파, MA5 위 종가 유지, 관련 ETF 동반 강세
+- 무효화 조건: MA20 $368.08 종가 이탈, 최근 스윙 저점 $331.56 이탈, RVOL 0.80x 이하 둔화
+- 왜 아직 메인이 아닌가: Entry Quality 50 < 60, 최근 고점 돌파 확인 전
+
+<details>
+<summary>darkHorseScore 상세 근거 보기</summary>
+
+- 서사 정렬: 17/20
+- 초기 추세 구조: 24/30
+- 베이스 돌파/정돈: 8/20
+- 거래량 확인: 14/15
+- 낮은 과열: 8/10
+- 유동성 리스크 보정: 5/5
+- 리스크 차감: -0
+- rawScore: 76
+
+</details>
+
+- 차트: ![CDNS chart](charts/CDNS.png)
+
+### 3. [AMAT] Applied Materials Inc.
+- 소속 서사: AI 인프라 재가속
+- darkHorseScore: 73 (다크호스 후보)
+- 단계: 첫 눌림 대기
+- Confidence: LOW
+- 5D / 20D / RVOL: +11.72% / +21.90% / 1.09x
+- MA 구조: 종가 $500.77 / MA5 $469.75 / MA20 $441.1
+- 선정 이유: AMAT는 AI 인프라 재가속 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 상단 돌파 상태이고, RVOL 1.09x로 거래량 확인은 보통 수준이다. Exhaustion Risk 54로 아직 메인 후보 대비 과열 상한 안에 있다.
+- 확인 조건: 돌파 후 고점 위 안착 유지, RVOL 1.20x 이상 재증가, MA5 위 종가 유지, 관련 ETF 동반 강세
+- 무효화 조건: MA20 $441.10 종가 이탈, 최근 스윙 저점 $415.85 이탈, RVOL 0.80x 이하 둔화
+- 왜 아직 메인이 아닌가: Entry Quality 45 < 60, RVOL 1.09x < 1.20x
+
+<details>
+<summary>darkHorseScore 상세 근거 보기</summary>
+
+- 서사 정렬: 17/20
+- 초기 추세 구조: 24/30
+- 베이스 돌파/정돈: 13/20
+- 거래량 확인: 11/15
+- 낮은 과열: 3/10
+- 유동성 리스크 보정: 5/5
+- 리스크 차감: -0
+- rawScore: 73
+
+</details>
+
+- 차트: ![AMAT chart](charts/AMAT.png)
+
 ## 참고용 행동 후보
 
 > 실제 행동 후보가 없는 날에만 표시한다. 아래 후보는 매수 추천이 아니라 다음 정규장에서 전일 고점 돌파, RVOL 1.00x 이상, 거래대금 유동성 확인을 기다리는 관찰 리스트다.
@@ -514,7 +607,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 1
   - 직접 촉매: 없음
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-04 14:23 KST
+  - 뉴스 수집 시각: 2026-06-04 14:33 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-04 11:22 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
@@ -571,7 +664,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +26.81%
 - 상대 거래량: 1.39배
 - 52주 고점 대비 위치: -0.87%
-- whyMoneyIsFlowing: 20일 +26.81%, 5일 +9.57%, 상대 거래량 1.39배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE
+- whyMoneyIsFlowing: 20일 +26.81%, 5일 +9.57%, 상대 거래량 1.39배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
@@ -623,22 +716,22 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Federal Reserve RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 9/7/0
-  - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 1
-  - 직접 촉매: Yahoo Finance RSS / general_market / stale / positive - The Zacks Analyst Blog Highlights MU, DRAM, IGPT, SOXQ and SOXX
-  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-04 14:23 KST
-  - 가장 최근 뉴스 발행 시각: 2026-06-04 11:22 KST
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 11/5/0
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 2
+  - 직접 촉매: 없음
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-06-04 14:33 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-04 14:23 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Only 5% of day traders make money, but the SEC is now making it easier for more people to try it anyway
+  - 핵심 뉴스 요약: SoftBank’s OpenAI bet and rising debt are raising liquidity crunch concerns
   - 원점수/상한 점수: +22 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 3/3
@@ -687,7 +780,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +50.59%
 - 상대 거래량: 0.70배
 - 52주 고점 대비 위치: -0.63%
-- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS contract/stale / 유동성: LIQUID
+- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 진입 조건: 상대 거래량 1.0배 회복 후 관찰
@@ -740,22 +833,22 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 10/6/0
-  - 직접성/방향성/신선도: 4/1/4
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 11/5/0
+  - 직접성/방향성/신선도: 2/1/4
   - 강한 촉매 수: 2
-  - 직접 촉매: Yahoo Finance RSS / contract / stale / positive - The AI Memory Shortage Is Just Getting Started and These 3 ETFs Own Every Layer of the Supply Chain
-  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-04 14:23 KST
-  - 가장 최근 뉴스 발행 시각: 2026-06-04 11:22 KST
+  - 직접 촉매: 없음
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-06-04 14:33 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-04 14:23 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Only 5% of day traders make money, but the SEC is now making it easier for more people to try it anyway
-  - 원점수/상한 점수: +25 / +12
+  - 핵심 뉴스 요약: SoftBank’s OpenAI bet and rising debt are raising liquidity crunch concerns
+  - 원점수/상한 점수: +22 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 미연결
   - 샘플 수: 0/0
@@ -864,7 +957,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 1
   - 직접 촉매: 없음
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-04 14:23 KST
+  - 뉴스 수집 시각: 2026-06-04 14:33 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-04 11:22 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
@@ -921,7 +1014,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +27.54%
 - 상대 거래량: 0.97배
 - 52주 고점 대비 위치: -0.51%
-- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.97배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID
+- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.97배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 진입 조건: 상대 거래량 1.0배 회복 후 관찰
@@ -974,22 +1067,22 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 10/6/0
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 11/5/0
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 1
+  - 강한 촉매 수: 2
   - 직접 촉매: 없음
-  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-04 14:23 KST
-  - 가장 최근 뉴스 발행 시각: 2026-06-04 11:22 KST
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-06-04 14:33 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-04 14:23 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Only 5% of day traders make money, but the SEC is now making it easier for more people to try it anyway
-  - 원점수/상한 점수: +21 / +12
+  - 핵심 뉴스 요약: SoftBank’s OpenAI bet and rising debt are raising liquidity crunch concerns
+  - 원점수/상한 점수: +22 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 3/3
@@ -1159,22 +1252,22 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 8/7/1
+  - 뉴스 소스: CNBC Markets RSS, Yahoo Finance RSS, MarketWatch RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 11/4/1
   - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 7
+  - 강한 촉매 수: 4
   - 직접 촉매: Yahoo Finance RSS / earnings / under_6h / positive - CrowdStrike Holdings Inc (CRWD) Q1 2027 Earnings Call Highlights: Record Growth and Strategic ...
-  - 보조 뉴스: Yahoo Finance RSS sector_theme / earnings / under_6h
-  - 뉴스 수집 시각: 2026-06-04 14:23 KST
-  - 가장 최근 뉴스 발행 시각: 2026-06-04 14:00 KST
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-06-04 14:33 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-04 14:23 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
-  - 핵심 뉴스 요약: CrowdStrike Holdings Inc (CRWD) Q1 2027 Earnings Call Highlights: Record Growth and Strategic ...
-  - 원점수/상한 점수: +33 / +12
+  - 핵심 뉴스 요약: SoftBank’s OpenAI bet and rising debt are raising liquidity crunch concerns
+  - 원점수/상한 점수: +28 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
@@ -1202,9 +1295,9 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - finalRawScore: 99
 - tieBreakerReason: 최종 원점수 99, 리스크 패널티 0, 5일 수익률 +14.50%, 상대 거래량 1.12배 순으로 정렬
 - 과열 리스크: 낮음
-- reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / earnings / under_24h - FTNT Jumps 87.5% YTD on AI Security Push: Buy, Sell or Hold the Stock? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / earnings / under_24h - FTNT Jumps 87.5% YTD on AI Security Push: Buy, Sell or Hold the Stock?
+- reasonConfidence: MEDIUM
+- reasonConfidenceExplanation: 직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
+
 - todayActionLabel: 관찰
 - 주문 실행: 시장가 가능
 - 기준일: 2026-06-03
@@ -1215,7 +1308,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 1.12배
 - 52주 고점 대비 위치: -1.71%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +14.50% vs ETF 평균 +9.59%, 주식 20일 +62.90% vs ETF 평균 +21.11%, 상대 거래량 1.12배 vs ETF 평균 0.96배
-- whyMoneyIsFlowing: 20일 +62.90%, 5일 +14.50%, 상대 거래량 1.12배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS earnings/under_24h / 유동성: LIQUID
+- whyMoneyIsFlowing: 20일 +62.90%, 5일 +14.50%, 상대 거래량 1.12배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: FTNT가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
@@ -1270,22 +1363,22 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
   - 긍정/중립/부정: 11/5/0
-  - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 3
-  - 직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - FTNT Jumps 87.5% YTD on AI Security Push: Buy, Sell or Hold the Stock?
-  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-04 14:23 KST
-  - 가장 최근 뉴스 발행 시각: 2026-06-04 11:22 KST
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 2
+  - 직접 촉매: 없음
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-06-04 14:33 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-04 14:23 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
-  - 핵심 뉴스 요약: Only 5% of day traders make money, but the SEC is now making it easier for more people to try it anyway
-  - 원점수/상한 점수: +28 / +12
+  - 핵심 뉴스 요약: SoftBank’s OpenAI bet and rising debt are raising liquidity crunch concerns
+  - 원점수/상한 점수: +22 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
@@ -1294,7 +1387,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 평균 거래대금: $1,046,199,710
   - 주문 영향: 시장가 가능
   - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
-- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
+- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-06-03 | 종가 $146.48 | 1일 -1.60% | 5일 +14.50% | 20일 +62.90% | 상대 거래량 1.12배 | 52주 고점 대비 -1.71% | 데이터 소스: yfinance
 
@@ -1314,8 +1407,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - tieBreakerReason: 최종 원점수 87, 리스크 패널티 0, 5일 수익률 +12.86%, 상대 거래량 1.44배 순으로 정렬
 - 과열 리스크: 낮음
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / earnings / under_24h - Palo Alto Networks Q3 Earnings and Revenues Surpass Estimates 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / earnings / under_24h - Palo Alto Networks Q3 Earnings and Revenues Surpass Estimates
+- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h - PANW Price Targets Raised By Citi, Goldman Sachs On AI-Driven Security Demand 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h - PANW Price Targets Raised By Citi, Goldman Sachs On AI-Driven Security Demand
 - todayActionLabel: 관찰
 - 주문 실행: 시장가 가능
 - 기준일: 2026-06-03
@@ -1326,7 +1419,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 1.44배
 - 52주 고점 대비 위치: -7.43%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +12.86% vs ETF 평균 +9.59%, 주식 20일 +52.42% vs ETF 평균 +21.11%, 상대 거래량 1.44배 vs ETF 평균 0.96배
-- whyMoneyIsFlowing: 20일 +52.42%, 5일 +12.86%, 상대 거래량 1.44배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS earnings/under_24h / 유동성: LIQUID
+- whyMoneyIsFlowing: 20일 +52.42%, 5일 +12.86%, 상대 거래량 1.44배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS analyst_upgrade/under_24h / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
 - 왜 ETF가 아니라 이 종목인가: PANW가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
@@ -1381,22 +1474,22 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 9/7/0
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 11/5/0
   - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 4
-  - 직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Palo Alto Networks Q3 Earnings and Revenues Surpass Estimates
-  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-04 14:23 KST
-  - 가장 최근 뉴스 발행 시각: 2026-06-04 11:22 KST
+  - 강한 촉매 수: 2
+  - 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / positive - PANW Price Targets Raised By Citi, Goldman Sachs On AI-Driven Security Demand
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-06-04 14:33 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-04 14:23 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
-  - 핵심 뉴스 요약: Only 5% of day traders make money, but the SEC is now making it easier for more people to try it anyway
-  - 원점수/상한 점수: +28 / +12
+  - 핵심 뉴스 요약: SoftBank’s OpenAI bet and rising debt are raising liquidity crunch concerns
+  - 원점수/상한 점수: +24 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
@@ -1499,7 +1592,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 1
   - 직접 촉매: Yahoo Finance RSS / general_market / under_24h / neutral - Investors Heavily Search Datadog, Inc. (DDOG): Here is What You Need to Know
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-04 14:23 KST
+  - 뉴스 수집 시각: 2026-06-04 14:33 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-04 11:22 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
@@ -1604,22 +1697,22 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 10/6/0
+  - 뉴스 소스: CNBC Markets RSS, Yahoo Finance RSS, MarketWatch RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 11/5/0
   - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 2
+  - 강한 촉매 수: 3
   - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - AVGO, MRVL, NVTS Stocks Hit 52-Week Highs: What Sent These Chipmakers Higher?
-  - 보조 뉴스: Yahoo Finance RSS sector_theme / guidance / under_6h
-  - 뉴스 수집 시각: 2026-06-04 14:23 KST
-  - 가장 최근 뉴스 발행 시각: 2026-06-04 12:54 KST
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-06-04 14:33 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-04 14:23 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: AVGO, MRVL, NVTS Stocks Hit 52-Week Highs: What Sent These Chipmakers Higher?
-  - 원점수/상한 점수: +25 / +12
+  - 핵심 뉴스 요약: SoftBank’s OpenAI bet and rising debt are raising liquidity crunch concerns
+  - 원점수/상한 점수: +26 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
@@ -1701,10 +1794,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 1 | MRVL | Marvell Technology Inc. | 95 | 100 | 114 | 강한 자금 유입 후보 | 제외 | HIGH | +3.73% | +51.81% | +78.76% | 2.98 | SMH, SOXX, SOXQ, AIQ |
 | 2 | WDC | Western Digital Corporation | 93 | 100 | 111 | 강한 자금 유입 후보 | 제외 | HIGH | +5.51% | +11.97% | +27.69% | 1.15 | QQQ |
 | 3 | CRWD | CrowdStrike Holdings Inc. | 90 | 100 | 103 | 강한 자금 유입 후보 | 관찰 | HIGH | -2.78% | +15.84% | +56.89% | 1.41 | HACK, CIBR, IHAK, IGV |
-| 4 | KLAC | KLA Corporation | 88 | 100 | 113 | 강한 자금 유입 후보 | 제외 | HIGH | +3.91% | +8.58% | +22.63% | 1.00 | SMH, SOXX, SOXQ, AIQ |
-| 5 | AMAT | Applied Materials Inc. | 87 | 100 | 112 | 강한 자금 유입 후보 | 관찰 | HIGH | +2.19% | +11.72% | +21.90% | 1.09 | SMH, SOXX, SOXQ, AIQ |
-| 6 | FTNT | Fortinet Inc. | 86 | 99 | 99 | 강한 자금 유입 후보 | 관찰 | HIGH | -1.60% | +14.50% | +62.90% | 1.12 | HACK, CIBR, IHAK, IGV |
-| 7 | ODFL | Old Dominion Freight Line Inc. | 86 | 100 | 105 | 강한 자금 유입 후보 | 제외 | HIGH | +3.05% | +7.57% | +20.39% | 1.29 | QQQ |
+| 4 | KLAC | KLA Corporation | 88 | 100 | 113 | 강한 자금 유입 후보 | 제외 | MEDIUM | +3.91% | +8.58% | +22.63% | 1.00 | SMH, SOXX, SOXQ, AIQ |
+| 5 | AMAT | Applied Materials Inc. | 87 | 100 | 112 | 강한 자금 유입 후보 | 관찰 | MEDIUM | +2.19% | +11.72% | +21.90% | 1.09 | SMH, SOXX, SOXQ, AIQ |
+| 6 | FTNT | Fortinet Inc. | 86 | 99 | 99 | 강한 자금 유입 후보 | 관찰 | MEDIUM | -1.60% | +14.50% | +62.90% | 1.12 | HACK, CIBR, IHAK, IGV |
+| 7 | ODFL | Old Dominion Freight Line Inc. | 86 | 100 | 105 | 강한 자금 유입 후보 | 제외 | MEDIUM | +3.05% | +7.57% | +20.39% | 1.29 | QQQ |
 | 8 | AVGO | Broadcom Inc. | 85 | 100 | 100 | 강한 자금 유입 후보 | 관찰 | HIGH | -0.49% | +13.60% | +12.14% | 2.10 | SMH, SOXX, SOXQ, AIQ |
 | 9 | ASML | ASML Holding N.V. | 80 | 100 | 105 | 강한 자금 유입 후보 | 관찰 | HIGH | +1.23% | +8.04% | +19.64% | 1.12 | SMH, SOXX, SOXQ, AIQ |
 | 10 | CDNS | Cadence Design Systems Inc. | 77 | 91 | 91 | 관심 후보 | 관찰 | HIGH | -2.01% | +9.08% | +15.37% | 1.24 | IGV, AIQ, QQQ |
@@ -1712,7 +1805,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 12 | ARM | Arm Holdings plc | 73 | 88 | 88 | 관심 후보 | 거래량 확인 전 관찰 | LOW | +2.26% | +36.05% | +97.20% | 0.87 | SMH, SOXX, SOXQ, AIQ |
 | 13 | MU | Micron Technology Inc. | 72 | 93 | 93 | 관심 후보 | 거래량 확인 전 관찰 | LOW | +1.45% | +16.28% | +68.63% | 0.73 | DRAM, SMH, SOXX, SOXQ |
 | 14 | DDOG | Datadog Inc. | 70 | 84 | 84 | 관심 후보 | 관찰 | HIGH | -6.99% | +12.86% | +71.78% | 1.15 | IGV, AIQ, QQQ |
-| 15 | FANG | Diamondback Energy Inc. | 69 | 88 | 88 | 관심 후보 | 제외 | HIGH | +4.05% | +9.20% | +2.14% | 1.46 | QQQ |
+| 15 | FANG | Diamondback Energy Inc. | 69 | 88 | 88 | 관심 후보 | 제외 | MEDIUM | +4.05% | +9.20% | +2.14% | 1.46 | QQQ |
 | 16 | AMD | Advanced Micro Devices Inc. | 67 | 84 | 84 | 관심 후보 | 거래량 확인 전 관찰 | LOW | +4.02% | +9.48% | +52.71% | 0.79 | SMH, SOXX, SOXQ, AIQ |
 | 17 | ADI | Analog Devices Inc. | 64 | 89 | 89 | 관찰 후보 | 제외 | HIGH | +3.42% | +4.99% | +8.13% | 1.15 | SMH, SOXX, SOXQ, AIQ |
 | 18 | LRCX | Lam Research Corporation | 63 | 84 | 84 | 관찰 후보 | 거래량 확인 전 관찰 | LOW | +2.78% | +7.77% | +24.62% | 0.94 | SMH, SOXX, SOXQ, AIQ |
@@ -1727,10 +1820,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 1 | MRVL | Marvell Technology Inc. | 95 | 100 | 114 | 강한 자금 유입 후보 | 제외 | HIGH | +3.73% | +51.81% | +78.76% | 2.98 | SMH, SOXX, SOXQ, AIQ |
 | 2 | WDC | Western Digital Corporation | 93 | 100 | 111 | 강한 자금 유입 후보 | 제외 | HIGH | +5.51% | +11.97% | +27.69% | 1.15 | QQQ |
 | 3 | CRWD | CrowdStrike Holdings Inc. | 90 | 100 | 103 | 강한 자금 유입 후보 | 관찰 | HIGH | -2.78% | +15.84% | +56.89% | 1.41 | HACK, CIBR, IHAK, IGV |
-| 4 | KLAC | KLA Corporation | 88 | 100 | 113 | 강한 자금 유입 후보 | 제외 | HIGH | +3.91% | +8.58% | +22.63% | 1.00 | SMH, SOXX, SOXQ, AIQ |
-| 5 | AMAT | Applied Materials Inc. | 87 | 100 | 112 | 강한 자금 유입 후보 | 관찰 | HIGH | +2.19% | +11.72% | +21.90% | 1.09 | SMH, SOXX, SOXQ, AIQ |
-| 6 | FTNT | Fortinet Inc. | 86 | 99 | 99 | 강한 자금 유입 후보 | 관찰 | HIGH | -1.60% | +14.50% | +62.90% | 1.12 | HACK, CIBR, IHAK, IGV |
-| 7 | ODFL | Old Dominion Freight Line Inc. | 86 | 100 | 105 | 강한 자금 유입 후보 | 제외 | HIGH | +3.05% | +7.57% | +20.39% | 1.29 | QQQ |
+| 4 | KLAC | KLA Corporation | 88 | 100 | 113 | 강한 자금 유입 후보 | 제외 | MEDIUM | +3.91% | +8.58% | +22.63% | 1.00 | SMH, SOXX, SOXQ, AIQ |
+| 5 | AMAT | Applied Materials Inc. | 87 | 100 | 112 | 강한 자금 유입 후보 | 관찰 | MEDIUM | +2.19% | +11.72% | +21.90% | 1.09 | SMH, SOXX, SOXQ, AIQ |
+| 6 | FTNT | Fortinet Inc. | 86 | 99 | 99 | 강한 자금 유입 후보 | 관찰 | MEDIUM | -1.60% | +14.50% | +62.90% | 1.12 | HACK, CIBR, IHAK, IGV |
+| 7 | ODFL | Old Dominion Freight Line Inc. | 86 | 100 | 105 | 강한 자금 유입 후보 | 제외 | MEDIUM | +3.05% | +7.57% | +20.39% | 1.29 | QQQ |
 | 8 | AVGO | Broadcom Inc. | 85 | 100 | 100 | 강한 자금 유입 후보 | 관찰 | HIGH | -0.49% | +13.60% | +12.14% | 2.10 | SMH, SOXX, SOXQ, AIQ |
 | 9 | ASML | ASML Holding N.V. | 80 | 100 | 105 | 강한 자금 유입 후보 | 관찰 | HIGH | +1.23% | +8.04% | +19.64% | 1.12 | SMH, SOXX, SOXQ, AIQ |
 | 10 | CDNS | Cadence Design Systems Inc. | 77 | 91 | 91 | 관심 후보 | 관찰 | HIGH | -2.01% | +9.08% | +15.37% | 1.24 | IGV, AIQ, QQQ |
@@ -1738,7 +1831,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 12 | ARM | Arm Holdings plc | 73 | 88 | 88 | 관심 후보 | 거래량 확인 전 관찰 | LOW | +2.26% | +36.05% | +97.20% | 0.87 | SMH, SOXX, SOXQ, AIQ |
 | 13 | MU | Micron Technology Inc. | 72 | 93 | 93 | 관심 후보 | 거래량 확인 전 관찰 | LOW | +1.45% | +16.28% | +68.63% | 0.73 | DRAM, SMH, SOXX, SOXQ |
 | 14 | DDOG | Datadog Inc. | 70 | 84 | 84 | 관심 후보 | 관찰 | HIGH | -6.99% | +12.86% | +71.78% | 1.15 | IGV, AIQ, QQQ |
-| 15 | FANG | Diamondback Energy Inc. | 69 | 88 | 88 | 관심 후보 | 제외 | HIGH | +4.05% | +9.20% | +2.14% | 1.46 | QQQ |
+| 15 | FANG | Diamondback Energy Inc. | 69 | 88 | 88 | 관심 후보 | 제외 | MEDIUM | +4.05% | +9.20% | +2.14% | 1.46 | QQQ |
 | 16 | AMD | Advanced Micro Devices Inc. | 67 | 84 | 84 | 관심 후보 | 거래량 확인 전 관찰 | LOW | +4.02% | +9.48% | +52.71% | 0.79 | SMH, SOXX, SOXQ, AIQ |
 | 17 | ADI | Analog Devices Inc. | 64 | 89 | 89 | 관찰 후보 | 제외 | HIGH | +3.42% | +4.99% | +8.13% | 1.15 | SMH, SOXX, SOXQ, AIQ |
 | 18 | LRCX | Lam Research Corporation | 63 | 84 | 84 | 관찰 후보 | 거래량 확인 전 관찰 | LOW | +2.78% | +7.77% | +24.62% | 0.94 | SMH, SOXX, SOXQ, AIQ |
@@ -1835,24 +1928,24 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 티커 | 카테고리 | moneyFlowScore | 상태 | reasonConfidence | 주요 이유 |
 | --- | --- | ---: | --- | --- | --- |
-| DRAM | 메모리/HBM ETF | 83 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS contract/stale / 유동성: LIQUID |
-| SMH | AI 반도체 ETF | 69 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.97배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
-| SOXX | AI 반도체 ETF | 77 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.97배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
-| SOXQ | AI 반도체 ETF | 100 | 관찰 | MEDIUM | 20일 +26.81%, 5일 +9.57%, 상대 거래량 1.39배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
-| IGV | 클라우드/엔터프라이즈 소프트웨어 ETF | 57 | 매매 금지 | MEDIUM | 20일 +13.52%, 5일 +7.68%, 상대 거래량 1.11배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
+| DRAM | 메모리/HBM ETF | 83 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
+| SMH | AI 반도체 ETF | 69 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.97배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
+| SOXX | AI 반도체 ETF | 77 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.97배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
+| SOXQ | AI 반도체 ETF | 100 | 관찰 | MEDIUM | 20일 +26.81%, 5일 +9.57%, 상대 거래량 1.39배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| IGV | 클라우드/엔터프라이즈 소프트웨어 ETF | 57 | 매매 금지 | MEDIUM | 20일 +13.52%, 5일 +7.68%, 상대 거래량 1.11배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
 | AIQ | AI 소프트웨어 ETF | 84 | 관찰 | MEDIUM | 20일 +18.36%, 5일 +6.24%, 상대 거래량 1.50배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| BOTZ | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.64배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
-| ROBO | 로봇/자동화 ETF | 21 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.78배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| BOTZ | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.64배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| ROBO | 로봇/자동화 ETF | 21 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.78배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
 | CIBR | 사이버보안 ETF | 64 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.85배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
 | HACK | 사이버보안 ETF | 72 | 매매 금지 | MEDIUM | 20일 +22.01%, 5일 +11.35%, 상대 거래량 1.07배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale |
-| IHAK | 사이버보안 ETF | 38 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.79배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
-| ITA | 방산 ETF | 11 | 매매 금지 | LOW | 20일 +4.42%, 5일 -2.43%, 상대 거래량 1.09배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
+| IHAK | 사이버보안 ETF | 38 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.79배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| ITA | 방산 ETF | 11 | 매매 금지 | LOW | 20일 +4.42%, 5일 -2.43%, 상대 거래량 1.09배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
 | XAR | 방산 ETF | 20 | 매매 금지 | LOW | 20일 +7.15%, 5일 -1.95%, 상대 거래량 1.15배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_72h |
 | SHLD | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.61배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
-| PPA | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.85배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
-| PAVE | 인프라 ETF | 41 | 매매 금지 | MEDIUM | 20일 -0.14%, 5일 +1.00%, 상대 거래량 1.05배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h |
-| GRID | 전력망 인프라 ETF | 26 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.71배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: ACCEPTABLE |
-| IFRA | 인프라 ETF | 15 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.77배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
+| PPA | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.85배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| PAVE | 인프라 ETF | 41 | 매매 금지 | MEDIUM | 20일 -0.14%, 5일 +1.00%, 상대 거래량 1.05배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
+| GRID | 전력망 인프라 ETF | 26 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.71배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| IFRA | 인프라 ETF | 15 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.77배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
 | XLU | 전력/유틸리티 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.98배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS macro/stale / 유동성: ACCEPTABLE |
 | URA | 원전/우라늄 ETF | 0 | 매매 금지 | LOW | 20일 -7.03%, 5일 +0.46%, 상대 거래량 1.16배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
 | NLR | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.98배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
@@ -1866,7 +1959,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | KWEB | 중국 인터넷 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.84배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
 | MAGS | 메가캡 플랫폼 ETF | 22 | 매매 금지 | LOW | 20일 +1.95%, 5일 -2.72%, 상대 거래량 3.80배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
 | QQQ | 시장 기준 ETF | 56 | 매매 금지 | MEDIUM | 20일 +9.18%, 5일 +2.02%, 상대 거래량 1.02배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
-| SPY | 시장 기준 ETF | 44 | 매매 금지 | MEDIUM | 20일 +4.21%, 5일 +0.50%, 상대 거래량 1.09배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
+| SPY | 시장 기준 ETF | 44 | 매매 금지 | MEDIUM | 20일 +4.21%, 5일 +0.50%, 상대 거래량 1.09배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
 | IWM | 시장 기준 ETF | 38 | 매매 금지 | MEDIUM | 20일 +1.81%, 5일 -0.93%, 상대 거래량 1.14배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS earnings/stale / 유동성: LIQUID |
 | TLT | 채권 ETF | 11 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.56배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS macro/under_72h / 유동성: LIQUID |
 | GLD | 금 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.85배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
@@ -1896,9 +1989,9 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스:
   - 상태: 일부 연결
   - 소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS PARTIAL; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
   - 수집 뉴스 수: 912
-  - 실패/제한 사유: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 실패/제한 사유: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured; CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html
 
 - ETF 구성종목 확산도:
   - 상태: 일부 연결

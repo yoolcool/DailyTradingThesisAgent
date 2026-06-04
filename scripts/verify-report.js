@@ -39,6 +39,14 @@ function main() {
   assert(html.includes("data-data-reliability"), "HTML missing data reliability panel");
   assert(markdown.includes("오늘 결론"), "Markdown missing Today Decision panel");
   assert(html.includes("data-today-decision"), "HTML missing Today Decision panel");
+  assert(markdown.includes("다크호스 후보"), "Markdown missing dark horse section");
+  assert(html.includes("data-dark-horse-candidates"), "HTML missing dark horse section");
+  assert(markdown.includes("darkHorseScore"), "Markdown missing darkHorseScore");
+  assert(html.includes("darkHorseScore"), "HTML missing darkHorseScore");
+  assert(markdown.includes("왜 아직 메인이 아닌가"), "Markdown missing dark horse not-main explanation");
+  assert(html.includes("아직 메인이 아닌 이유"), "HTML missing dark horse not-main explanation");
+  assert(markdown.includes("darkHorseScore 상세 근거"), "Markdown missing dark horse breakdown");
+  assert(html.includes("darkHorseScore 상세 근거"), "HTML missing dark horse breakdown");
   assert(markdown.includes("분석 신뢰도"), "Markdown missing analysis reliability");
   assert(html.includes("분석 신뢰도"), "HTML missing analysis reliability");
   assert(markdown.includes("주문 실행 신뢰도"), "Markdown missing execution reliability");
@@ -188,6 +196,17 @@ function main() {
   assert(latestSnapshot.dataReliability?.newsReliability, "Snapshot missing news reliability");
   assert(latestSnapshot.todayDecision?.label, "Snapshot missing today decision label");
   assert(latestSnapshot.actionGateSummary?.items?.length, "Snapshot missing action gate summary");
+  assert(Array.isArray(latestSnapshot.darkHorseCandidates), "Snapshot missing darkHorseCandidates array");
+  assert((latestSnapshot.darkHorseCandidates || []).length <= 3, "Dark horse candidates should be limited to 3");
+  for (const item of latestSnapshot.darkHorseCandidates || []) {
+    assert(item.assetType === "STOCK", `Dark horse should be stock-only: ${item.ticker}`);
+    assert(item.darkHorseScore !== undefined, `Dark horse missing score: ${item.ticker}`);
+    assert(item.darkHorseBreakdown?.rawScore !== undefined, `Dark horse missing breakdown rawScore: ${item.ticker}`);
+    assert(item.darkHorseConfirmCondition, `Dark horse missing confirm condition: ${item.ticker}`);
+    assert(item.darkHorseInvalidationCondition, `Dark horse missing invalidation condition: ${item.ticker}`);
+    assert(item.darkHorseWhyNotMain, `Dark horse missing not-main explanation: ${item.ticker}`);
+    assert(!(latestSnapshot.actionCandidates || []).some((candidate) => candidate.ticker === item.ticker), `Dark horse duplicated in action candidates: ${item.ticker}`);
+  }
   if ((latestSnapshot.actionCandidates || []).length === 0) {
     assert(markdown.includes("신규 추격은 보류"), "No-trade report missing practical no-trade wording");
     assert(html.includes("신규 추격은 보류"), "No-trade HTML missing practical no-trade wording");
