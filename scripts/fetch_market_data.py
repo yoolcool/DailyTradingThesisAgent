@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 OUTPUT_PATH = DATA_DIR / "market_data_real.json"
 NASDAQ100_FALLBACK_PATH = ROOT / "config" / "nasdaq100Fallback.json"
+NARRATIVE_STOCKS_PATH = ROOT / "config" / "narrativeStocks.json"
 
 TICKER_ALIASES = {
     "DRAM": "DRAM",
@@ -179,11 +180,19 @@ def load_nasdaq100_members():
     return [row for row in data.get("members", []) if row.get("isActive", True)]
 
 
+def load_narrative_stocks():
+    if not NARRATIVE_STOCKS_PATH.exists():
+        return []
+    with NARRATIVE_STOCKS_PATH.open("r", encoding="utf-8") as file:
+        return json.load(file)
+
+
 def main():
     watchlist = load_json("watchlist.json")
     holdings = load_json("holdings.json")
     etfs = load_json("watchlist_etfs.json")
     nasdaq100_members = load_nasdaq100_members()
+    narrative_stocks = load_narrative_stocks()
 
     targets = []
     seen = set()
@@ -193,6 +202,11 @@ def main():
             targets.append((ticker, "STOCK"))
             seen.add(ticker)
     for row in watchlist + holdings:
+        ticker = row["ticker"]
+        if ticker not in seen:
+            targets.append((ticker, "STOCK"))
+            seen.add(ticker)
+    for row in narrative_stocks:
         ticker = row["ticker"]
         if ticker not in seen:
             targets.append((ticker, "STOCK"))

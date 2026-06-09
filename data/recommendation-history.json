@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-06T00:32:21.433Z",
+  "updatedAt": "2026-06-09T01:53:46.032Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
     {
@@ -89,10 +89,10 @@
       "trackingStartDate": "2026-06-04",
       "trackingEndDate": "2026-06-11",
       "trackingStatus": "in_progress",
-      "weeklyHigh": 100.45,
-      "latestClose": 97.3,
-      "weeklyHighReturnPct": -1.72,
-      "latestCloseReturnPct": -4.8,
+      "weeklyHigh": 100.51,
+      "latestClose": 96.78,
+      "weeklyHighReturnPct": -1.66,
+      "latestCloseReturnPct": -5.31,
       "resultLabel": "진행 중",
       "resultComment": "아직 1주 추적 기간이 끝나지 않음"
     },
@@ -113,10 +113,10 @@
       "trackingStartDate": "2026-06-04",
       "trackingEndDate": "2026-06-11",
       "trackingStatus": "in_progress",
-      "weeklyHigh": 103.3,
-      "latestClose": 96.29,
-      "weeklyHighReturnPct": -5.73,
-      "latestCloseReturnPct": -12.13,
+      "weeklyHigh": 103.39,
+      "latestClose": 101.61,
+      "weeklyHighReturnPct": -5.65,
+      "latestCloseReturnPct": -7.27,
       "resultLabel": "진행 중",
       "resultComment": "아직 1주 추적 기간이 끝나지 않음"
     },
@@ -138,9 +138,9 @@
       "trackingEndDate": "2026-06-11",
       "trackingStatus": "in_progress",
       "weeklyHigh": 66.19,
-      "latestClose": 62.52,
+      "latestClose": 64.44,
       "weeklyHighReturnPct": -4.29,
-      "latestCloseReturnPct": -9.6,
+      "latestCloseReturnPct": -6.82,
       "resultLabel": "진행 중",
       "resultComment": "아직 1주 추적 기간이 끝나지 않음"
     },
@@ -254,9 +254,9 @@
       "trackingEndDate": "2026-06-10",
       "trackingStatus": "in_progress",
       "weeklyHigh": 67.12,
-      "latestClose": 55.79,
+      "latestClose": 60.52,
       "weeklyHighReturnPct": -3.52,
-      "latestCloseReturnPct": -19.81,
+      "latestCloseReturnPct": -13.01,
       "resultLabel": "진행 중",
       "resultComment": "아직 1주 추적 기간이 끝나지 않음"
     },
@@ -278,9 +278,9 @@
       "trackingEndDate": "2026-06-10",
       "trackingStatus": "in_progress",
       "weeklyHigh": 101.26,
-      "latestClose": 95.85,
+      "latestClose": 95.65,
       "weeklyHighReturnPct": -3.31,
-      "latestCloseReturnPct": -8.48,
+      "latestCloseReturnPct": -8.67,
       "resultLabel": "진행 중",
       "resultComment": "아직 1주 추적 기간이 끝나지 않음"
     },
@@ -302,9 +302,9 @@
       "trackingEndDate": "2026-06-10",
       "trackingStatus": "in_progress",
       "weeklyHigh": 68.51,
-      "latestClose": 62.52,
+      "latestClose": 64.44,
       "weeklyHighReturnPct": -2.32,
-      "latestCloseReturnPct": -10.86,
+      "latestCloseReturnPct": -8.13,
       "resultLabel": "진행 중",
       "resultComment": "아직 1주 추적 기간이 끝나지 않음"
     },
@@ -326,9 +326,9 @@
       "trackingEndDate": "2026-06-10",
       "trackingStatus": "in_progress",
       "weeklyHigh": 90.96,
-      "latestClose": 86.7,
+      "latestClose": 86.13,
       "weeklyHighReturnPct": -3.56,
-      "latestCloseReturnPct": -8.08,
+      "latestCloseReturnPct": -8.68,
       "resultLabel": "진행 중",
       "resultComment": "아직 1주 추적 기간이 끝나지 않음"
     }

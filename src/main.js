@@ -9,6 +9,7 @@ const { aggregateStatus, statusLabel } = require("./data/providerUtils");
 
 const ROOT = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(ROOT, "data");
+const CONFIG_DIR = path.join(ROOT, "config");
 const REPORTS_DIR = path.join(ROOT, "reports");
 const CHARTS_DIR = path.join(REPORTS_DIR, "charts");
 const DAILY_REPORTS_DIR = path.join(DATA_DIR, "dailyReports");
@@ -189,6 +190,12 @@ const NARRATIVE_STATUS = {
 
 function readJson(fileName, fallback = null) {
   const filePath = path.join(DATA_DIR, fileName);
+  if (!fs.existsSync(filePath)) return fallback;
+  return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
+
+function readConfigJson(fileName, fallback = null) {
+  const filePath = path.join(CONFIG_DIR, fileName);
   if (!fs.existsSync(filePath)) return fallback;
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
@@ -902,6 +909,35 @@ function universeMemberToStock(member) {
     relatedEtfSymbols: mapping.symbols,
     relatedEtfMappingNote: mapping.mappingNote
   };
+}
+
+function narrativeStockToStock(row) {
+  const mapping = relatedEtfSymbolsForUniverseMember(row);
+  const theme = inferStockTheme(row);
+  return {
+    ticker: row.ticker,
+    name: row.name || row.ticker,
+    market: "US",
+    theme,
+    primaryTheme: theme,
+    primarySector: row.sector || "데이터 없음",
+    industry: row.industry || "데이터 없음",
+    isNewScanCandidate: true,
+    universeName: "NARRATIVE_SUPPORT",
+    universeSource: "config/narrativeStocks.json",
+    universeAsOfDate: row.asOfDate,
+    relatedEtfSymbols: mapping.symbols,
+    relatedEtfMappingNote: mapping.mappingNote
+  };
+}
+
+function uniqueStocksByTicker(rows) {
+  const seen = new Set();
+  return rows.filter((row) => {
+    if (!row?.ticker || seen.has(row.ticker)) return false;
+    seen.add(row.ticker);
+    return true;
+  });
 }
 
 function entryCondition(item) {
@@ -1919,8 +1955,12 @@ async function buildReport() {
   const rawHoldings = readJson("holdings.json", []);
   const marketData = MODE === "REAL_TEST" ? readJson("market_data_real.json", { items: {} }) : null;
   const rawEtfs = readJson("watchlist_etfs.json", []);
+  const rawNarrativeStocks = readConfigJson("narrativeStocks.json", []);
   const stockUniverse = await fetchNasdaq100Universe();
-  const rawScanStocks = stockUniverse.members.map(universeMemberToStock);
+  const rawScanStocks = uniqueStocksByTicker([
+    ...stockUniverse.members.map(universeMemberToStock),
+    ...rawNarrativeStocks.map(narrativeStockToStock)
+  ]);
   const baseSupplementalData = createBaseSupplementalData(rawScanStocks, rawEtfs, marketData);
   const preliminaryEtfs = rawEtfs.map((etf) => enrichEtf(etf, marketData, baseSupplementalData));
   const preliminaryScanStocks = rawScanStocks.map((stock) => enrichStock(stock, preliminaryEtfs, marketData, baseSupplementalData));
