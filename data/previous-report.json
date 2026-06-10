@@ -1,17 +1,17 @@
 {
   "reportDate": "2026-06-09",
-  "generatedAt": "2026년 6월 9일 화요일 오전 10:50",
+  "generatedAt": "2026년 6월 9일 화요일 오전 10:53",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
     "totalCount": 101,
-    "successCount": 101,
+    "successCount": 120,
     "failedCount": 0,
     "scoreBands": {
       "strong": 2,
       "interest": 3,
       "watch": 3,
-      "low": 93
+      "low": 112
     },
     "results": [
       {
@@ -68,7 +68,7 @@
         "moneyFlowScoreFinal": 93,
         "finalRawScore": 93,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": 9.27,
         "fiveDayReturn": 8.66,
         "twentyDayReturn": 12.78,
@@ -116,7 +116,7 @@
         "moneyFlowScoreFinal": 91,
         "finalRawScore": 91,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": 8.64,
         "fiveDayReturn": 7.42,
         "twentyDayReturn": 13.03,
@@ -140,7 +140,7 @@
         "moneyFlowScoreFinal": 78,
         "finalRawScore": 78,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": 5.16,
         "fiveDayReturn": 2.34,
         "twentyDayReturn": 26.41,
@@ -161,7 +161,7 @@
         "moneyFlowScoreFinal": 72,
         "finalRawScore": 72,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": 1.51,
         "fiveDayReturn": 8.19,
         "twentyDayReturn": 3.61,
@@ -182,7 +182,7 @@
         "moneyFlowScoreFinal": 72,
         "finalRawScore": 72,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": 6.98,
         "fiveDayReturn": 2.31,
         "twentyDayReturn": 10.34,
@@ -206,7 +206,7 @@
         "moneyFlowScoreFinal": 55,
         "finalRawScore": 55,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": -1.1,
         "fiveDayReturn": 5.04,
         "twentyDayReturn": 4.23,
@@ -350,6 +350,28 @@
         "failureReason": ""
       },
       {
+        "ticker": "CIFR",
+        "name": "Cipher Mining",
+        "assetType": "STOCK",
+        "moneyFlowScore": 32,
+        "moneyFlowScoreInitial": 32,
+        "moneyFlowScoreFinal": 42,
+        "finalRawScore": 42,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 8.2,
+        "fiveDayReturn": 1.17,
+        "twentyDayReturn": 18.2,
+        "relativeVolume": 0.77,
+        "relatedEtfs": [
+          "IBIT",
+          "BLOK"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
         "ticker": "MNST",
         "name": "Monster Beverage Corporation",
         "assetType": "STOCK",
@@ -441,8 +463,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 26,
         "moneyFlowScoreInitial": 26,
-        "moneyFlowScoreFinal": 44,
-        "finalRawScore": 44,
+        "moneyFlowScoreFinal": 27,
+        "finalRawScore": 27,
         "todayActionLabel": "거래량 확인 전 관찰",
         "reasonConfidence": "LOW",
         "oneDayReturn": 9.87,
@@ -544,6 +566,27 @@
           "SOXX",
           "SOXQ",
           "AIQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "CVX",
+        "name": "Chevron",
+        "assetType": "STOCK",
+        "moneyFlowScore": 18,
+        "moneyFlowScoreInitial": 18,
+        "moneyFlowScoreFinal": 20,
+        "finalRawScore": 20,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 1.03,
+        "fiveDayReturn": 1.84,
+        "twentyDayReturn": 4.2,
+        "relativeVolume": 0.66,
+        "relatedEtfs": [
+          "QQQ"
         ],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -816,6 +859,27 @@
         "failureReason": ""
       },
       {
+        "ticker": "ETN",
+        "name": "Eaton",
+        "assetType": "STOCK",
+        "moneyFlowScore": 12,
+        "moneyFlowScoreInitial": 12,
+        "moneyFlowScoreFinal": 14,
+        "finalRawScore": 14,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 1.82,
+        "fiveDayReturn": 0.76,
+        "twentyDayReturn": 0.41,
+        "relativeVolume": 0.82,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
         "ticker": "ADI",
         "name": "Analog Devices Inc.",
         "assetType": "STOCK",
@@ -834,6 +898,29 @@
           "SOXX",
           "SOXQ",
           "AIQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "TSM",
+        "name": "Taiwan Semiconductor",
+        "assetType": "STOCK",
+        "moneyFlowScore": 12,
+        "moneyFlowScoreInitial": 12,
+        "moneyFlowScoreFinal": 17,
+        "finalRawScore": 17,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 2.8,
+        "fiveDayReturn": -2.03,
+        "twentyDayReturn": 3.67,
+        "relativeVolume": 0.88,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ"
         ],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -1013,6 +1100,50 @@
         "failureReason": ""
       },
       {
+        "ticker": "MARA",
+        "name": "MARA Holdings",
+        "assetType": "STOCK",
+        "moneyFlowScore": 9,
+        "moneyFlowScoreInitial": 9,
+        "moneyFlowScoreFinal": 5,
+        "finalRawScore": 5,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 11.85,
+        "fiveDayReturn": -7.21,
+        "twentyDayReturn": 6.49,
+        "relativeVolume": 0.81,
+        "relatedEtfs": [
+          "IBIT",
+          "BLOK"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "RIOT",
+        "name": "Riot Platforms",
+        "assetType": "STOCK",
+        "moneyFlowScore": 8,
+        "moneyFlowScoreInitial": 8,
+        "moneyFlowScoreFinal": 8,
+        "finalRawScore": 8,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 4.18,
+        "fiveDayReturn": -9.06,
+        "twentyDayReturn": 6.69,
+        "relativeVolume": 0.81,
+        "relatedEtfs": [
+          "IBIT",
+          "BLOK"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
         "ticker": "MDLZ",
         "name": "Mondelez International Inc.",
         "assetType": "STOCK",
@@ -1071,6 +1202,48 @@
         "fiveDayReturn": -7.3,
         "twentyDayReturn": 2.53,
         "relativeVolume": 1.02,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "RTX",
+        "name": "RTX",
+        "assetType": "STOCK",
+        "moneyFlowScore": 6,
+        "moneyFlowScoreInitial": 6,
+        "moneyFlowScoreFinal": 8,
+        "finalRawScore": 8,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -1.29,
+        "fiveDayReturn": 2.44,
+        "twentyDayReturn": 1.46,
+        "relativeVolume": 0.88,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "NOC",
+        "name": "Northrop Grumman",
+        "assetType": "STOCK",
+        "moneyFlowScore": 6,
+        "moneyFlowScoreInitial": 6,
+        "moneyFlowScoreFinal": 2,
+        "finalRawScore": 2,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.66,
+        "fiveDayReturn": 0.29,
+        "twentyDayReturn": -1.59,
+        "relativeVolume": 1.1,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -1272,6 +1445,28 @@
         "failureReason": ""
       },
       {
+        "ticker": "XOM",
+        "name": "Exxon Mobil",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -5,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 1.22,
+        "fiveDayReturn": 1.59,
+        "twentyDayReturn": 4.97,
+        "relativeVolume": 0.84,
+        "relatedEtfs": [
+          "XLE",
+          "OIH"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
         "ticker": "ISRG",
         "name": "Intuitive Surgical Inc.",
         "assetType": "STOCK",
@@ -1293,6 +1488,27 @@
         "failureReason": ""
       },
       {
+        "ticker": "PWR",
+        "name": "Quanta Services",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -19,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.19,
+        "fiveDayReturn": 0.92,
+        "twentyDayReturn": -6.87,
+        "relativeVolume": 0.74,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
         "ticker": "LIN",
         "name": "Linde plc",
         "assetType": "STOCK",
@@ -1306,6 +1522,27 @@
         "fiveDayReturn": 0.91,
         "twentyDayReturn": 1.78,
         "relativeVolume": 0.84,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "LMT",
+        "name": "Lockheed Martin",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -10,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.7,
+        "fiveDayReturn": 0.69,
+        "twentyDayReturn": 2.68,
+        "relativeVolume": 0.72,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -1456,6 +1693,27 @@
         "fiveDayReturn": -1.75,
         "twentyDayReturn": -9.63,
         "relativeVolume": 0.92,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "GEV",
+        "name": "GE Vernova",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -32,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.03,
+        "fiveDayReturn": -1.76,
+        "twentyDayReturn": -10.22,
+        "relativeVolume": 0.77,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -1697,6 +1955,27 @@
         "failureReason": ""
       },
       {
+        "ticker": "FCX",
+        "name": "Freeport-McMoRan",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -12,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.85,
+        "fiveDayReturn": -4.67,
+        "twentyDayReturn": 3.67,
+        "relativeVolume": 0.98,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
         "ticker": "QCOM",
         "name": "QUALCOMM Incorporated",
         "assetType": "STOCK",
@@ -1805,6 +2084,27 @@
         "failureReason": ""
       },
       {
+        "ticker": "CCJ",
+        "name": "Cameco",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -37,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 1.93,
+        "fiveDayReturn": -6.35,
+        "twentyDayReturn": -9.69,
+        "relativeVolume": 0.69,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
         "ticker": "TTWO",
         "name": "Take-Two Interactive Software Inc.",
         "assetType": "STOCK",
@@ -1865,6 +2165,27 @@
           "SOXX",
           "SOXQ",
           "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "VRT",
+        "name": "Vertiv",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -42,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.02,
+        "fiveDayReturn": -7.06,
+        "twentyDayReturn": -11.59,
+        "relativeVolume": 0.81,
+        "relatedEtfs": [
           "QQQ"
         ],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
@@ -1935,6 +2256,27 @@
         "failureReason": ""
       },
       {
+        "ticker": "KTOS",
+        "name": "Kratos Defense & Security Solutions",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -32,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -1.35,
+        "fiveDayReturn": -9.07,
+        "twentyDayReturn": -0.28,
+        "relativeVolume": 0.63,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
         "ticker": "ADSK",
         "name": "Autodesk Inc.",
         "assetType": "STOCK",
@@ -1952,6 +2294,52 @@
           "IGV",
           "AIQ",
           "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "IREN",
+        "name": "IREN",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -9,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 8.91,
+        "fiveDayReturn": -9.4,
+        "twentyDayReturn": -3.28,
+        "relativeVolume": 0.75,
+        "relatedEtfs": [
+          "IBIT",
+          "BLOK"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "AVAV",
+        "name": "AeroVironment",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -4,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.67,
+        "fiveDayReturn": -9.51,
+        "twentyDayReturn": 9.74,
+        "relativeVolume": 0.68,
+        "relatedEtfs": [
+          "XAR",
+          "SHLD",
+          "ITA",
+          "PPA"
         ],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -2062,6 +2450,27 @@
         "fiveDayReturn": -11.19,
         "twentyDayReturn": -7.08,
         "relativeVolume": 1.23,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "COIN",
+        "name": "Coinbase",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -38,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 6.37,
+        "fiveDayReturn": -11.23,
+        "twentyDayReturn": -19.41,
+        "relativeVolume": 0.89,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -2237,8 +2646,8 @@
     {
       "name": "AI 인프라 재가속",
       "status": "약화",
-      "narrativeScore": 23,
-      "rawScore": 23,
+      "narrativeScore": 16,
+      "rawScore": 16,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "SOXX",
@@ -2263,12 +2672,48 @@
         "NVDA",
         "AVGO"
       ],
-      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 SOXX, SOXQ, SMH와 MU, ARM, NVDA, AVGO의 5일(-5.68%)·20일(+11.05%) 흐름을 함께 본다. 평균 상대 거래량은 1.00배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 SOXX, SOXQ, SMH와 MU, ARM, NVDA, AVGO의 5일(-4.66%)·20일(+7.15%) 흐름을 함께 본다. 평균 상대 거래량은 0.95배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "AI 인프라 CAPEX를 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
       "bestTradingVehicle": "ETF 우선: SMH, SOXX, DRAM / 개별 종목 우선: NVDA, AVGO, MU",
       "breakCondition": "SMH/SOXX 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
       "todayAction": "추격보다 5일선 지지 후 재상승 확인",
-      "summaryReason": "SOXX, SOXQ, MU, ARM 중심으로 5일 -5.68%, 20일 +11.05% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "SOXX, SOXQ, MU, ARM 중심으로 5일 -4.66%, 20일 +7.15% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": -2,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "매크로 방어/헤지",
+      "status": "약화",
+      "narrativeScore": 11,
+      "rawScore": 11,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "XLE",
+        "GLD",
+        "TLT"
+      ],
+      "supportStocks": [
+        "CVX",
+        "XOM"
+      ],
+      "representativeEtfs": [
+        "XLE",
+        "GLD",
+        "TLT"
+      ],
+      "representativeStocks": [
+        "CVX",
+        "XOM"
+      ],
+      "whyMoneyIsFlowing": "매크로 방어/헤지 관련 XLE, GLD, TLT와 CVX, XOM의 5일(+0.51%)·20일(+0.98%) 흐름을 함께 본다. 평균 상대 거래량은 0.84배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "금리/에너지/방어 헤지를 찾는 매크로 자금",
+      "bestTradingVehicle": "ETF 우선: GLD, TLT, XLE / 개별 종목 우선: XOM, CVX",
+      "breakCondition": "방어 ETF 상대강도 둔화와 위험선호 성장주 재강세",
+      "todayAction": "위험회피가 확인될 때만 헤지성 접근",
+      "summaryReason": "XLE, GLD, CVX, XOM 중심으로 5일 +0.51%, 20일 +0.98% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": -2,
       "relativeVolumeAvg": 1,
@@ -2278,8 +2723,8 @@
     {
       "name": "위험선호 성장주 재진입",
       "status": "약화",
-      "narrativeScore": 16,
-      "rawScore": 16,
+      "narrativeScore": 10,
+      "rawScore": 10,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "QQQ",
@@ -2288,7 +2733,8 @@
       ],
       "supportStocks": [
         "ARM",
-        "TSLA"
+        "TSLA",
+        "COIN"
       ],
       "representativeEtfs": [
         "QQQ",
@@ -2297,114 +2743,19 @@
       ],
       "representativeStocks": [
         "ARM",
-        "TSLA"
+        "TSLA",
+        "COIN"
       ],
-      "whyMoneyIsFlowing": "위험선호 성장주 재진입 관련 QQQ, IPO, ARKK와 ARM, TSLA의 5일(-5.78%)·20일(+8.53%) 흐름을 함께 본다. 평균 상대 거래량은 0.85배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "위험선호 성장주 재진입 관련 QQQ, IPO, ARKK와 ARM, TSLA, COIN의 5일(-6.46%)·20일(+5.04%) 흐름을 함께 본다. 평균 상대 거래량은 0.85배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "위험선호 회복을 사는 성장주 ETF 자금과 고베타 단기 모멘텀 자금",
-      "bestTradingVehicle": "ETF 우선: QQQ, IPO, ARKK / 개별 종목 우선: ARM, TSLA",
+      "bestTradingVehicle": "ETF 우선: QQQ, IPO, ARKK / 개별 종목 우선: ARM, COIN, TSLA",
       "breakCondition": "QQQ/IWM 동반 약화, 고베타 성장주 상대 거래량 둔화",
       "todayAction": "지수 위험선호가 유지될 때만 선별 진입",
-      "summaryReason": "QQQ, IPO, ARM, TSLA 중심으로 5일 -5.78%, 20일 +8.53% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "QQQ, IPO, ARM, TSLA 중심으로 5일 -6.46%, 20일 +5.04% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": -1,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 1
-    },
-    {
-      "name": "매크로 방어/헤지",
-      "status": "약화",
-      "narrativeScore": 14,
-      "rawScore": 14,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "XLE",
-        "GLD",
-        "TLT"
-      ],
-      "supportStocks": [],
-      "representativeEtfs": [
-        "XLE",
-        "GLD",
-        "TLT"
-      ],
-      "representativeStocks": [],
-      "whyMoneyIsFlowing": "매크로 방어/헤지 관련 XLE, GLD, TLT와 관련 종목의 5일(-0.10%)·20일(-0.81%) 흐름을 함께 본다. 평균 상대 거래량은 0.89배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "금리/에너지/방어 헤지를 찾는 매크로 자금",
-      "bestTradingVehicle": "ETF 우선: GLD, TLT, XLE / 개별 종목 우선: 데이터 없음",
-      "breakCondition": "방어 ETF 상대강도 둔화와 위험선호 성장주 재강세",
-      "todayAction": "위험회피가 확인될 때만 헤지성 접근",
-      "summaryReason": "XLE, GLD 중심으로 5일 -0.10%, 20일 -0.81% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": 0,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 0
-    },
-    {
-      "name": "전력망/원전/인프라 병목",
-      "status": "소멸",
-      "narrativeScore": 0,
-      "rawScore": -2,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "PAVE",
-        "GRID",
-        "URA"
-      ],
-      "supportStocks": [
-        "CEG"
-      ],
-      "representativeEtfs": [
-        "PAVE",
-        "GRID",
-        "URA"
-      ],
-      "representativeStocks": [
-        "CEG"
-      ],
-      "whyMoneyIsFlowing": "전력망/원전/인프라 병목 관련 PAVE, GRID, URA와 CEG의 5일(-3.78%)·20일(-7.56%) 흐름을 함께 본다. 평균 상대 거래량은 0.85배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "AI 전력 수요와 인프라 병목을 사는 장기 테마 자금",
-      "bestTradingVehicle": "ETF 우선: GRID, PAVE, URA / 개별 종목 우선: CEG",
-      "breakCondition": "GRID/PAVE 20일선 이탈, 전력/원전 관련 종목 확산도 둔화",
-      "todayAction": "ETF 확산도와 거래량이 같이 살아날 때만 진입",
-      "summaryReason": "PAVE, GRID, CEG 중심으로 5일 -3.78%, 20일 -7.56% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": 0,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 1
-    },
-    {
-      "name": "비트코인/디지털 자산 위험선호",
-      "status": "소멸",
-      "narrativeScore": 0,
-      "rawScore": -2,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "BLOK",
-        "IBIT"
-      ],
-      "supportStocks": [
-        "MSTR"
-      ],
-      "representativeEtfs": [
-        "BLOK",
-        "IBIT"
-      ],
-      "representativeStocks": [
-        "MSTR"
-      ],
-      "whyMoneyIsFlowing": "비트코인/디지털 자산 위험선호 관련 BLOK, IBIT와 MSTR의 5일(-11.54%)·20일(-18.41%) 흐름을 함께 본다. 평균 상대 거래량은 1.92배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "비트코인 현물 ETF와 디지털 자산 베타를 사는 위험선호 자금",
-      "bestTradingVehicle": "ETF 우선: IBIT, BLOK / 개별 종목 우선: MSTR",
-      "breakCondition": "IBIT/BLOK 20일선 이탈 또는 채굴주 상대강도 급락",
-      "todayAction": "비트코인 베타가 살아날 때만 단기 매매",
-      "summaryReason": "BLOK, IBIT, MSTR 중심으로 5일 -11.54%, 20일 -18.41% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": 0,
-      "relativeVolumeAvg": 2,
-      "etfRelativeVolumeAvg": 2,
       "stockRelativeVolumeAvg": 1
     },
     {
@@ -2451,7 +2802,7 @@
       "name": "방산/안보 프리미엄",
       "status": "약화",
       "narrativeScore": 0,
-      "rawScore": -5,
+      "rawScore": -4,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "ITA",
@@ -2459,6 +2810,8 @@
         "SHLD"
       ],
       "supportStocks": [
+        "AVAV",
+        "KTOS",
         "PLTR"
       ],
       "representativeEtfs": [
@@ -2467,18 +2820,96 @@
         "SHLD"
       ],
       "representativeStocks": [
+        "AVAV",
+        "KTOS",
         "PLTR"
       ],
-      "whyMoneyIsFlowing": "방산/안보 프리미엄 관련 ITA, XAR, SHLD와 PLTR의 5일(-5.10%)·20일(+0.16%) 흐름을 함께 본다. 평균 상대 거래량은 0.76배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "방산/안보 프리미엄 관련 ITA, XAR, SHLD와 AVAV, KTOS, PLTR의 5일(-4.06%)·20일(+1.28%) 흐름을 함께 본다. 평균 상대 거래량은 0.78배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "지정학 리스크와 안보 예산 기대를 사는 테마 ETF 자금",
-      "bestTradingVehicle": "ETF 우선: XAR, SHLD, ITA / 개별 종목 우선: PLTR",
+      "bestTradingVehicle": "ETF 우선: XAR, SHLD, ITA / 개별 종목 우선: AVAV, KTOS, PLTR",
       "breakCondition": "방산 ETF 20일선 이탈 또는 안보 이벤트 프리미엄 둔화",
       "todayAction": "뉴스 촉매가 직접 확인될 때만 추세 추종",
-      "summaryReason": "ITA, XAR, PLTR 중심으로 5일 -5.10%, 20일 +0.16% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "ITA, XAR, AVAV, KTOS 중심으로 5일 -4.06%, 20일 +1.28% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "전력망/원전/인프라 병목",
+      "status": "소멸",
+      "narrativeScore": 0,
+      "rawScore": -4,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "PAVE",
+        "GRID",
+        "URA"
+      ],
+      "supportStocks": [
+        "ETN",
+        "VRT",
+        "PWR",
+        "CEG"
+      ],
+      "representativeEtfs": [
+        "PAVE",
+        "GRID",
+        "URA"
+      ],
+      "representativeStocks": [
+        "ETN",
+        "VRT",
+        "PWR",
+        "CEG"
+      ],
+      "whyMoneyIsFlowing": "전력망/원전/인프라 병목 관련 PAVE, GRID, URA와 ETN, VRT, PWR, CEG의 5일(-3.45%)·20일(-6.77%) 흐름을 함께 본다. 평균 상대 거래량은 0.83배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "AI 전력 수요와 인프라 병목을 사는 장기 테마 자금",
+      "bestTradingVehicle": "ETF 우선: GRID, PAVE, URA / 개별 종목 우선: VRT, ETN, PWR",
+      "breakCondition": "GRID/PAVE 20일선 이탈, 전력/원전 관련 종목 확산도 둔화",
+      "todayAction": "ETF 확산도와 거래량이 같이 살아날 때만 진입",
+      "summaryReason": "PAVE, GRID, ETN, VRT 중심으로 5일 -3.45%, 20일 -6.77% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "비트코인/디지털 자산 위험선호",
+      "status": "소멸",
+      "narrativeScore": 0,
+      "rawScore": -7,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "IBIT",
+        "BLOK"
+      ],
+      "supportStocks": [
+        "MSTR",
+        "COIN",
+        "IREN"
+      ],
+      "representativeEtfs": [
+        "IBIT",
+        "BLOK"
+      ],
+      "representativeStocks": [
+        "MSTR",
+        "COIN",
+        "IREN"
+      ],
+      "whyMoneyIsFlowing": "비트코인/디지털 자산 위험선호 관련 IBIT, BLOK와 MSTR, COIN, IREN의 5일(-8.79%)·20일(-5.82%) 흐름을 함께 본다. 평균 상대 거래량은 1.23배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "비트코인 현물 ETF와 디지털 자산 베타를 사는 위험선호 자금",
+      "bestTradingVehicle": "ETF 우선: IBIT, BLOK / 개별 종목 우선: MSTR, COIN, IREN",
+      "breakCondition": "IBIT/BLOK 20일선 이탈 또는 채굴주 상대강도 급락",
+      "todayAction": "비트코인 베타가 살아날 때만 단기 매매",
+      "summaryReason": "IBIT, BLOK, MSTR, COIN 중심으로 5일 -8.79%, 20일 -5.82% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": -4,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 2,
       "stockRelativeVolumeAvg": 1
     }
   ],
@@ -2486,8 +2917,8 @@
     {
       "name": "AI 인프라 재가속",
       "status": "약화",
-      "narrativeScore": 23,
-      "rawScore": 23,
+      "narrativeScore": 16,
+      "rawScore": 16,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "SOXX",
@@ -2512,12 +2943,48 @@
         "NVDA",
         "AVGO"
       ],
-      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 SOXX, SOXQ, SMH와 MU, ARM, NVDA, AVGO의 5일(-5.68%)·20일(+11.05%) 흐름을 함께 본다. 평균 상대 거래량은 1.00배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 SOXX, SOXQ, SMH와 MU, ARM, NVDA, AVGO의 5일(-4.66%)·20일(+7.15%) 흐름을 함께 본다. 평균 상대 거래량은 0.95배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "AI 인프라 CAPEX를 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
       "bestTradingVehicle": "ETF 우선: SMH, SOXX, DRAM / 개별 종목 우선: NVDA, AVGO, MU",
       "breakCondition": "SMH/SOXX 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
       "todayAction": "추격보다 5일선 지지 후 재상승 확인",
-      "summaryReason": "SOXX, SOXQ, MU, ARM 중심으로 5일 -5.68%, 20일 +11.05% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "SOXX, SOXQ, MU, ARM 중심으로 5일 -4.66%, 20일 +7.15% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": -2,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "매크로 방어/헤지",
+      "status": "약화",
+      "narrativeScore": 11,
+      "rawScore": 11,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "XLE",
+        "GLD",
+        "TLT"
+      ],
+      "supportStocks": [
+        "CVX",
+        "XOM"
+      ],
+      "representativeEtfs": [
+        "XLE",
+        "GLD",
+        "TLT"
+      ],
+      "representativeStocks": [
+        "CVX",
+        "XOM"
+      ],
+      "whyMoneyIsFlowing": "매크로 방어/헤지 관련 XLE, GLD, TLT와 CVX, XOM의 5일(+0.51%)·20일(+0.98%) 흐름을 함께 본다. 평균 상대 거래량은 0.84배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "금리/에너지/방어 헤지를 찾는 매크로 자금",
+      "bestTradingVehicle": "ETF 우선: GLD, TLT, XLE / 개별 종목 우선: XOM, CVX",
+      "breakCondition": "방어 ETF 상대강도 둔화와 위험선호 성장주 재강세",
+      "todayAction": "위험회피가 확인될 때만 헤지성 접근",
+      "summaryReason": "XLE, GLD, CVX, XOM 중심으로 5일 +0.51%, 20일 +0.98% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": -2,
       "relativeVolumeAvg": 1,
@@ -2527,8 +2994,8 @@
     {
       "name": "위험선호 성장주 재진입",
       "status": "약화",
-      "narrativeScore": 16,
-      "rawScore": 16,
+      "narrativeScore": 10,
+      "rawScore": 10,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "QQQ",
@@ -2537,7 +3004,8 @@
       ],
       "supportStocks": [
         "ARM",
-        "TSLA"
+        "TSLA",
+        "COIN"
       ],
       "representativeEtfs": [
         "QQQ",
@@ -2546,49 +3014,20 @@
       ],
       "representativeStocks": [
         "ARM",
-        "TSLA"
+        "TSLA",
+        "COIN"
       ],
-      "whyMoneyIsFlowing": "위험선호 성장주 재진입 관련 QQQ, IPO, ARKK와 ARM, TSLA의 5일(-5.78%)·20일(+8.53%) 흐름을 함께 본다. 평균 상대 거래량은 0.85배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "위험선호 성장주 재진입 관련 QQQ, IPO, ARKK와 ARM, TSLA, COIN의 5일(-6.46%)·20일(+5.04%) 흐름을 함께 본다. 평균 상대 거래량은 0.85배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "위험선호 회복을 사는 성장주 ETF 자금과 고베타 단기 모멘텀 자금",
-      "bestTradingVehicle": "ETF 우선: QQQ, IPO, ARKK / 개별 종목 우선: ARM, TSLA",
+      "bestTradingVehicle": "ETF 우선: QQQ, IPO, ARKK / 개별 종목 우선: ARM, COIN, TSLA",
       "breakCondition": "QQQ/IWM 동반 약화, 고베타 성장주 상대 거래량 둔화",
       "todayAction": "지수 위험선호가 유지될 때만 선별 진입",
-      "summaryReason": "QQQ, IPO, ARM, TSLA 중심으로 5일 -5.78%, 20일 +8.53% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "QQQ, IPO, ARM, TSLA 중심으로 5일 -6.46%, 20일 +5.04% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": -1,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
       "stockRelativeVolumeAvg": 1
-    },
-    {
-      "name": "매크로 방어/헤지",
-      "status": "약화",
-      "narrativeScore": 14,
-      "rawScore": 14,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "XLE",
-        "GLD",
-        "TLT"
-      ],
-      "supportStocks": [],
-      "representativeEtfs": [
-        "XLE",
-        "GLD",
-        "TLT"
-      ],
-      "representativeStocks": [],
-      "whyMoneyIsFlowing": "매크로 방어/헤지 관련 XLE, GLD, TLT와 관련 종목의 5일(-0.10%)·20일(-0.81%) 흐름을 함께 본다. 평균 상대 거래량은 0.89배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "금리/에너지/방어 헤지를 찾는 매크로 자금",
-      "bestTradingVehicle": "ETF 우선: GLD, TLT, XLE / 개별 종목 우선: 데이터 없음",
-      "breakCondition": "방어 ETF 상대강도 둔화와 위험선호 성장주 재강세",
-      "todayAction": "위험회피가 확인될 때만 헤지성 접근",
-      "summaryReason": "XLE, GLD 중심으로 5일 -0.10%, 20일 -0.81% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": 0,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 0
     }
   ],
   "etfActionCandidates": [],
@@ -2622,7 +3061,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Pentagon expands list of China military-linked firms to include Alibaba, Baidu in fresh blow to diplomatic thaw",
+      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Your tech portfolio could be on the wrong side of the AI boom",
       "tieBreakerReason": "최종 원점수 -2, 리스크 패널티 0, 5일 수익률 -11.19%, 상대 거래량 0.58배 순으로 정렬",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",
@@ -2686,7 +3125,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Pentagon expands list of China military-linked firms to include Alibaba, Baidu in fresh blow to diplomatic thaw",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / stale - Three Humanoid Robotics ETFs Built for the Tesla Optimus and Figure AI Era Most Investors Have Never Heard Of",
       "tieBreakerReason": "최종 원점수 -25, 리스크 패널티 -11, 5일 수익률 -5.62%, 상대 거래량 0.88배 순으로 정렬",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",
@@ -2791,7 +3230,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Elon Musk says SpaceX doesn&#x2019;t need &#x2018;magic&#x2019; to put AI data centers up in space",
+      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Your tech portfolio could be on the wrong side of the AI boom",
       "tieBreakerReason": "최종 원점수 -3, 리스크 패널티 -5, 5일 수익률 -7.18%, 상대 거래량 0.86배 순으로 정렬",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",
@@ -2891,7 +3330,7 @@
         },
         "reasonConfidence": "MEDIUM",
         "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-        "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Pentagon expands list of China military-linked firms to include Alibaba, Baidu in fresh blow to diplomatic thaw",
+        "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Is iShares Semiconductor ETF (SOXX) a Strong ETF Right Now?",
         "tieBreakerReason": "최종 원점수 60, 리스크 패널티 0, 5일 수익률 -0.08%, 상대 거래량 1.32배 순으로 정렬",
         "entryCondition": "20일선 위 눌림 후 재상승 확인",
         "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -2899,18 +3338,18 @@
           "label": "제외",
           "status": "매매 금지",
           "reasons": [
-            "Entry Quality 20 < 45",
+            "Entry Quality 19 < 45",
             "진입 품질 부족"
           ]
         },
         "marketContext": {
           "marketRegime": "중립",
           "candidateEnvironment": "관찰",
-          "reason": "Entry Quality 20 < 45 / 진입 품질 부족"
+          "reason": "Entry Quality 19 < 45 / 진입 품질 부족"
         },
         "linkedNarrative": "AI 인프라 재가속",
         "narrativeStatus": "약화",
-        "narrativeScore": 23,
+        "narrativeScore": 16,
         "relatedEtfs": [],
         "closePriceAtRecommendation": 571.45,
         "recommendationDate": "2026-06-08"
@@ -2938,7 +3377,7 @@
         },
         "reasonConfidence": "MEDIUM",
         "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-        "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Pentagon expands list of China military-linked firms to include Alibaba, Baidu in fresh blow to diplomatic thaw",
+        "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_24h - SOXQ Semiconductor ETF Surges 181.74% as AI Chip Boom Lifts NVIDIA, Broadcom, AMD",
         "tieBreakerReason": "최종 원점수 56, 리스크 패널티 0, 5일 수익률 -0.41%, 상대 거래량 1.26배 순으로 정렬",
         "entryCondition": "20일선 위 눌림 후 재상승 확인",
         "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -2946,18 +3385,18 @@
           "label": "제외",
           "status": "매매 금지",
           "reasons": [
-            "Entry Quality 19 < 45",
+            "Entry Quality 18 < 45",
             "진입 품질 부족"
           ]
         },
         "marketContext": {
           "marketRegime": "중립",
           "candidateEnvironment": "관찰",
-          "reason": "Entry Quality 19 < 45 / 진입 품질 부족"
+          "reason": "Entry Quality 18 < 45 / 진입 품질 부족"
         },
         "linkedNarrative": "AI 인프라 재가속",
         "narrativeStatus": "약화",
-        "narrativeScore": 23,
+        "narrativeScore": 16,
         "relatedEtfs": [],
         "closePriceAtRecommendation": 101.61,
         "recommendationDate": "2026-06-08"
@@ -2985,7 +3424,7 @@
         },
         "reasonConfidence": "MEDIUM",
         "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-        "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Pentagon expands list of China military-linked firms to include Alibaba, Baidu in fresh blow to diplomatic thaw",
+        "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - SMH vs. SOXX: Which Semiconductor ETF Is Better?",
         "tieBreakerReason": "최종 원점수 53, 리스크 패널티 0, 5일 수익률 -1.59%, 상대 거래량 1.25배 순으로 정렬",
         "entryCondition": "20일선 위 눌림 후 재상승 확인",
         "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -2993,18 +3432,18 @@
           "label": "제외",
           "status": "매매 금지",
           "reasons": [
-            "Entry Quality 21 < 45",
+            "Entry Quality 20 < 45",
             "진입 품질 부족"
           ]
         },
         "marketContext": {
           "marketRegime": "중립",
           "candidateEnvironment": "관찰",
-          "reason": "Entry Quality 21 < 45 / 진입 품질 부족"
+          "reason": "Entry Quality 20 < 45 / 진입 품질 부족"
         },
         "linkedNarrative": "AI 인프라 재가속",
         "narrativeStatus": "약화",
-        "narrativeScore": 23,
+        "narrativeScore": 16,
         "relatedEtfs": [],
         "closePriceAtRecommendation": 598.16,
         "recommendationDate": "2026-06-08"
@@ -3050,18 +3489,18 @@
           "label": "제외",
           "status": "매매 금지",
           "reasons": [
-            "Entry Quality 29 < 45",
+            "Entry Quality 28 < 45",
             "진입 품질 부족"
           ]
         },
         "marketContext": {
           "marketRegime": "중립",
           "candidateEnvironment": "관찰",
-          "reason": "고점 근처 추격 리스크 / Entry Quality 29 < 45 / 진입 품질 부족"
+          "reason": "고점 근처 추격 리스크 / Entry Quality 28 < 45 / 진입 품질 부족"
         },
         "linkedNarrative": "AI 인프라 재가속",
         "narrativeStatus": "약화",
-        "narrativeScore": 23,
+        "narrativeScore": 16,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -3117,18 +3556,18 @@
           "label": "제외",
           "status": "매매 금지",
           "reasons": [
-            "Entry Quality 18 < 45",
+            "Entry Quality 17 < 45",
             "진입 품질 부족"
           ]
         },
         "marketContext": {
           "marketRegime": "중립",
           "candidateEnvironment": "관찰",
-          "reason": "Entry Quality 18 < 45 / 진입 품질 부족"
+          "reason": "Entry Quality 17 < 45 / 진입 품질 부족"
         },
         "linkedNarrative": "AI 인프라 재가속",
         "narrativeStatus": "약화",
-        "narrativeScore": 23,
+        "narrativeScore": 16,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -3139,70 +3578,52 @@
         "recommendationDate": "2026-06-08"
       },
       {
-        "ticker": "KLAC",
+        "ticker": "ODFL",
         "assetType": "STOCK",
-        "name": "KLA Corporation",
+        "name": "Old Dominion Freight Line Inc.",
         "actionLabel": "제외",
-        "moneyFlowScore": 93,
-        "moneyFlowScoreInitial": 79,
-        "moneyFlowScoreFinal": 93,
-        "finalRawScore": 93,
-        "finalDisplayScore": 93,
-        "wasCapped": false,
-        "capReason": "cap not applied",
-        "formulaText": "+79 + +12 + 0 + +5 + +5 - 8 + 0 = 93",
-        "riskPenalty": -8,
+        "moneyFlowScore": 100,
+        "moneyFlowScoreInitial": 86,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 102,
+        "finalDisplayScore": 100,
+        "wasCapped": true,
+        "capReason": "raw score 102 capped to displayed score 100",
+        "formulaText": "+86 + +12 + 0 + +2 + +2 + 0 + 0 = 102 -> 100",
+        "riskPenalty": 0,
         "riskPenaltySummary": {
-          "totalPenalty": -8,
-          "riskLevel": "MEDIUM",
-          "items": [
-            {
-              "riskType": "EXTREME_1D_MOVE",
-              "label": "extreme 1d move",
-              "penalty": -4,
-              "evidence": "1d return +9.27% is unusually strong.",
-              "action": "Confirm next-session volume retention."
-            },
-            {
-              "riskType": "NEAR_52W_HIGH_CHASE",
-              "label": "near 52w high chase",
-              "penalty": -4,
-              "evidence": "Price is close to the 52-week high with fast short-term momentum.",
-              "action": "Downgrade if breakout fails."
-            }
-          ],
+          "totalPenalty": 0,
+          "riskLevel": "LOW",
+          "items": [],
           "watchItems": [],
-          "summary": "2개 감점 리스크로 총 -8점 반영."
+          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
         },
-        "reasonConfidence": "MEDIUM",
-        "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-        "directCatalyst": "",
-        "tieBreakerReason": "최종 원점수 93, 리스크 패널티 -8, 5일 수익률 +8.66%, 상대 거래량 1.15배 순으로 정렬",
+        "reasonConfidence": "HIGH",
+        "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Bell Asset Management Sold Old Dominion Freight Line (ODFL) Over Downside Risk Concerns 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+        "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Bell Asset Management Sold Old Dominion Freight Line (ODFL) Over Downside Risk Concerns",
+        "tieBreakerReason": "최종 원점수 102, 리스크 패널티 0, 5일 수익률 +8.09%, 상대 거래량 1.01배 순으로 정렬",
         "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
         "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
         "actionGate": {
           "label": "제외",
           "status": "매매 금지",
           "reasons": [
-            "Entry Quality 17 < 45",
+            "Entry Quality 33 < 45",
             "진입 품질 부족"
           ]
         },
         "marketContext": {
           "marketRegime": "중립",
           "candidateEnvironment": "관찰",
-          "reason": "고점 근처 추격 리스크 / Entry Quality 17 < 45 / 진입 품질 부족"
+          "reason": "Entry Quality 33 < 45 / 진입 품질 부족"
         },
-        "linkedNarrative": "AI 인프라 재가속",
+        "linkedNarrative": "위험선호 성장주 재진입",
         "narrativeStatus": "약화",
-        "narrativeScore": 23,
+        "narrativeScore": 10,
         "relatedEtfs": [
-          "SMH",
-          "SOXX",
-          "SOXQ",
-          "AIQ"
+          "QQQ"
         ],
-        "closePriceAtRecommendation": 2108.0601,
+        "closePriceAtRecommendation": 247.01,
         "recommendationDate": "2026-06-08"
       }
     ]
@@ -3211,17 +3632,17 @@
     "priceVolumeStatus": "CONNECTED",
     "priceAsOfDate": "2026-06-08",
     "priceAsOfLabel": "2026-06-08 US regular close",
-    "reportGeneratedAtKST": "2026-06-09 10:50",
+    "reportGeneratedAtKST": "2026-06-09 10:53",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-06-09T01:50:37.181Z",
-    "newsLastUpdatedAt": "2026-06-09T01:50:37.181Z",
-    "latestNewsPublishedAt": "2026-06-09T01:48:48.000Z",
+    "newsFetchedAt": "2026-06-09T01:53:45.922Z",
+    "newsLastUpdatedAt": "2026-06-09T01:53:45.922Z",
+    "latestNewsPublishedAt": "2026-06-09T01:52:00.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
-    "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
+    "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS FAILED, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
     "newsReliability": "MEDIUM",
     "etfBreadthStatus": "PARTIAL",
-    "etfBreadthSampleCount": "2~4",
+    "etfBreadthSampleCount": "1~4",
     "etfBreadthReliability": "LOW",
     "liquidityStatus": "PARTIAL",
     "prePostMarketStatus": "UNAVAILABLE",
@@ -3241,8 +3662,8 @@
     "label": "신규 추격 없음 / 관찰",
     "entryReadyCount": 0,
     "conditionalCount": 0,
-    "watchCount": 82,
-    "banCount": 56,
+    "watchCount": 100,
+    "banCount": 57,
     "actionCandidateCount": 0,
     "mainLimiters": [
       "Entry Quality 부족",
@@ -3253,11 +3674,11 @@
     "noTradeMessage": "오늘은 추세 후보는 있으나, 왜 돈이 몰리는가와 누가 더 비싸게 사줄 수 있는가를 주문 실행 신뢰도와 거래량이 충분히 뒷받침하지 못해 신규 추격은 보류한다. 기존 관심 종목은 전일 고점 돌파와 RVOL 1.00x 회복을 확인한 뒤 조건부로 본다."
   },
   "actionGateSummary": {
-    "total": 138,
+    "total": 157,
     "items": [
       {
         "label": "RVOL < 1.00x",
-        "count": 82
+        "count": 100
       },
       {
         "label": "거래대금 유동성 낮음",
@@ -3265,7 +3686,7 @@
       },
       {
         "label": "Entry Quality < 60",
-        "count": 138
+        "count": 157
       },
       {
         "label": "Exhaustion Risk >= 70",
@@ -3277,7 +3698,7 @@
       },
       {
         "label": "뉴스 직접성 부족",
-        "count": 81
+        "count": 100
       }
     ],
     "topLimiters": [
