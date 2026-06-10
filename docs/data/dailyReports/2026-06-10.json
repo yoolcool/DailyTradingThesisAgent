@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-10",
-  "generatedAt": "2026년 6월 10일 수요일 오전 11:38",
+  "generatedAt": "2026년 6월 10일 수요일 오전 11:58",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -22,7 +22,7 @@
         "moneyFlowScoreInitial": 74,
         "moneyFlowScoreFinal": 93,
         "finalRawScore": 93,
-        "todayActionLabel": "제외",
+        "todayActionLabel": "관찰",
         "reasonConfidence": "MEDIUM",
         "oneDayReturn": 1.64,
         "fiveDayReturn": 4.25,
@@ -46,7 +46,7 @@
         "moneyFlowScoreInitial": 71,
         "moneyFlowScoreFinal": 90,
         "finalRawScore": 90,
-        "todayActionLabel": "제외",
+        "todayActionLabel": "관찰",
         "reasonConfidence": "MEDIUM",
         "oneDayReturn": 1.49,
         "fiveDayReturn": 4.6,
@@ -158,7 +158,7 @@
         "moneyFlowScoreFinal": 58,
         "finalRawScore": 58,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": -0.34,
         "fiveDayReturn": 4.97,
         "twentyDayReturn": 4.54,
@@ -2644,43 +2644,83 @@
   },
   "narratives": [
     {
-      "name": "AI 인프라 재가속",
-      "status": "약화",
-      "narrativeScore": 10,
-      "rawScore": 10,
+      "name": "반도체 장비 사이클 재평가",
+      "status": "관찰",
+      "narrativeScore": 52,
+      "rawScore": 52,
       "reasonConfidence": "LOW",
       "supportEtfs": [
-        "DRAM",
         "SOXX",
-        "SMH"
+        "SMH",
+        "SOXQ"
+      ],
+      "supportStocks": [
+        "ASML",
+        "KLAC",
+        "AMAT",
+        "LRCX"
+      ],
+      "representativeEtfs": [
+        "SOXX",
+        "SMH",
+        "SOXQ"
+      ],
+      "representativeStocks": [
+        "ASML",
+        "KLAC",
+        "AMAT",
+        "LRCX"
+      ],
+      "whyMoneyIsFlowing": "반도체 장비 사이클 재평가 관련 SOXX, SMH, SOXQ와 ASML, KLAC, AMAT, LRCX의 5일(-2.85%)·20일(+8.23%) 흐름을 함께 본다. 평균 상대 거래량은 1.83배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "반도체 장비 사이클 회복을 확인한 섹터 ETF 자금과 장비주 상대강도 추종 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: KLAC, ASML, AMAT",
+      "breakCondition": "SMH/SOXX 20일선 이탈 또는 장비주 절반 이상 5일선 이탈",
+      "todayAction": "장비주가 반도체 ETF보다 강하게 버틸 때만 분리 테마로 관찰",
+      "summaryReason": "SOXX, SMH, ASML, KLAC 중심으로 5일 -2.85%, 20일 +8.23% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": -4,
+      "relativeVolumeAvg": 2,
+      "etfRelativeVolumeAvg": 2,
+      "stockRelativeVolumeAvg": 2
+    },
+    {
+      "name": "반도체 설계/공급망 재가속",
+      "status": "약화",
+      "narrativeScore": 22,
+      "rawScore": 22,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "SOXX",
+        "SMH",
+        "SOXQ"
       ],
       "supportStocks": [
         "TSM",
+        "MRVL",
         "ARM",
-        "MU",
-        "NVDA",
-        "AVGO"
+        "AVGO",
+        "ADI"
       ],
       "representativeEtfs": [
-        "DRAM",
         "SOXX",
-        "SMH"
+        "SMH",
+        "SOXQ"
       ],
       "representativeStocks": [
         "TSM",
+        "MRVL",
         "ARM",
-        "MU",
-        "NVDA"
+        "AVGO"
       ],
-      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 DRAM, SOXX, SMH와 TSM, ARM, MU, NVDA의 5일(-8.58%)·20일(+3.00%) 흐름을 함께 본다. 평균 상대 거래량은 1.41배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "AI 인프라 CAPEX를 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
-      "bestTradingVehicle": "ETF 우선: SMH, SOXX, DRAM / 개별 종목 우선: NVDA, AVGO, MU",
-      "breakCondition": "SMH/SOXX 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
-      "todayAction": "추격보다 5일선 지지 후 재상승 확인",
-      "summaryReason": "DRAM, SOXX, TSM, ARM 중심으로 5일 -8.58%, 20일 +3.00% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "whyMoneyIsFlowing": "반도체 설계/공급망 재가속 관련 SOXX, SMH, SOXQ와 TSM, MRVL, ARM, AVGO의 5일(-9.56%)·20일(+12.82%) 흐름을 함께 본다. 평균 상대 거래량은 1.68배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: MRVL, AVGO, ARM",
+      "breakCondition": "SMH/SOXX 20일선 이탈 또는 관련 설계/공급망 종목 절반 이상 5일선 이탈",
+      "todayAction": "AI 인프라 본류와 동조성이 확인될 때만 선별 관찰",
+      "summaryReason": "SOXX, SMH, TSM, MRVL 중심으로 5일 -9.56%, 20일 +12.82% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
-      "etfBreadthScore": -2,
-      "relativeVolumeAvg": 1,
+      "etfBreadthScore": -4,
+      "relativeVolumeAvg": 2,
       "etfRelativeVolumeAvg": 2,
       "stockRelativeVolumeAvg": 1
     },
@@ -2762,6 +2802,46 @@
       "stockRelativeVolumeAvg": 1
     },
     {
+      "name": "AI 인프라 재가속",
+      "status": "약화",
+      "narrativeScore": 3,
+      "rawScore": 3,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "DRAM",
+        "SOXX",
+        "SMH"
+      ],
+      "supportStocks": [
+        "MU",
+        "NVDA",
+        "VRT",
+        "ETN"
+      ],
+      "representativeEtfs": [
+        "DRAM",
+        "SOXX",
+        "SMH"
+      ],
+      "representativeStocks": [
+        "MU",
+        "NVDA",
+        "VRT",
+        "ETN"
+      ],
+      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 DRAM, SOXX, SMH와 MU, NVDA, VRT, ETN의 5일(-7.26%)·20일(-1.34%) 흐름을 함께 본다. 평균 상대 거래량은 1.49배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "AI 인프라 CAPEX와 데이터센터 병목을 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, DRAM / 개별 종목 우선: NVDA, MU, VRT",
+      "breakCondition": "SMH/SOXX/DRAM 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
+      "todayAction": "추격보다 5일선 지지 후 재상승 확인",
+      "summaryReason": "DRAM, SOXX, MU, NVDA 중심으로 5일 -7.26%, 20일 -1.34% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": -2,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 2,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
       "name": "매크로 방어/헤지",
       "status": "약화",
       "narrativeScore": 2,
@@ -2798,43 +2878,81 @@
       "stockRelativeVolumeAvg": 1
     },
     {
-      "name": "AI 소프트웨어/사이버보안 확산",
+      "name": "사이버보안 지출 재가속",
       "status": "약화",
-      "narrativeScore": 0,
-      "rawScore": -5,
+      "narrativeScore": 1,
+      "rawScore": 1,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "CIBR",
-        "AIQ",
-        "IGV"
+        "IHAK",
+        "HACK"
       ],
       "supportStocks": [
+        "FTNT",
         "PANW",
-        "DDOG",
-        "CRWD",
-        "TEAM"
+        "CRWD"
       ],
       "representativeEtfs": [
         "CIBR",
-        "AIQ",
-        "IGV"
+        "IHAK",
+        "HACK"
       ],
       "representativeStocks": [
+        "FTNT",
         "PANW",
-        "DDOG",
-        "CRWD",
-        "TEAM"
+        "CRWD"
       ],
-      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 CIBR, AIQ, IGV와 PANW, DDOG, CRWD, TEAM의 5일(-11.73%)·20일(+6.27%) 흐름을 함께 본다. 평균 상대 거래량은 1.05배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "섹터 베타를 사는 ETF 자금, AI/보안 실적 기대를 사는 스윙 트레이더, 신고가 추종 자금",
-      "bestTradingVehicle": "ETF 우선: IGV, CIBR, AIQ / 개별 종목 우선: PANW, CRWD, DDOG",
-      "breakCondition": "IGV/CIBR 20일선 이탈, 관련 개별 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
-      "todayAction": "추격보다 눌림 후 재상승 확인",
-      "summaryReason": "CIBR, AIQ, PANW, DDOG 중심으로 5일 -11.73%, 20일 +6.27% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "whyMoneyIsFlowing": "사이버보안 지출 재가속 관련 CIBR, IHAK, HACK와 FTNT, PANW, CRWD의 5일(-11.02%)·20일(+9.82%) 흐름을 함께 본다. 평균 상대 거래량은 1.06배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "사이버보안 지출 재가속을 확인한 보안 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: HACK, CIBR, IHAK / 개별 종목 우선: PANW, CRWD, FTNT",
+      "breakCondition": "HACK/CIBR 20일선 이탈 또는 보안주 절반 이상 5일선 이탈",
+      "todayAction": "보안 ETF와 대표 종목 동조성이 살아날 때만 관찰 편입",
+      "summaryReason": "CIBR, IHAK, FTNT, PANW 중심으로 5일 -11.02%, 20일 +9.82% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": -3,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "소프트웨어 실적/AI 수익화",
+      "status": "약화",
+      "narrativeScore": 0,
+      "rawScore": -3,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "QQQ",
+        "AIQ",
+        "IGV"
+      ],
+      "supportStocks": [
+        "CDNS",
+        "DDOG",
+        "PLTR",
+        "TEAM"
+      ],
+      "representativeEtfs": [
+        "QQQ",
+        "AIQ",
+        "IGV"
+      ],
+      "representativeStocks": [
+        "CDNS",
+        "DDOG",
+        "PLTR",
+        "TEAM"
+      ],
+      "whyMoneyIsFlowing": "소프트웨어 실적/AI 수익화 관련 QQQ, AIQ, IGV와 CDNS, DDOG, PLTR, TEAM의 5일(-10.51%)·20일(+3.99%) 흐름을 함께 본다. 평균 상대 거래량은 1.22배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "AI 수익화와 소프트웨어 실적 개선을 확인한 성장주 ETF 자금과 실적 모멘텀 자금",
+      "bestTradingVehicle": "ETF 우선: IGV, AIQ, QQQ / 개별 종목 우선: DDOG, CDNS, PLTR",
+      "breakCondition": "IGV 20일선 이탈 또는 소프트웨어 실적주 절반 이상 5일선 이탈",
+      "todayAction": "실적/가이던스 촉매와 가격 반응이 같이 확인될 때만 분리 테마로 관찰",
+      "summaryReason": "QQQ, AIQ, CDNS, DDOG 중심으로 5일 -10.51%, 20일 +3.99% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": -4,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 2,
       "stockRelativeVolumeAvg": 1
     },
     {
@@ -2878,6 +2996,46 @@
       "stockRelativeVolumeAvg": 1
     },
     {
+      "name": "AI 소프트웨어/사이버보안 확산",
+      "status": "약화",
+      "narrativeScore": 0,
+      "rawScore": -8,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "QQQ",
+        "AIQ",
+        "IGV"
+      ],
+      "supportStocks": [
+        "DDOG",
+        "PLTR",
+        "TEAM",
+        "MSFT"
+      ],
+      "representativeEtfs": [
+        "QQQ",
+        "AIQ",
+        "IGV"
+      ],
+      "representativeStocks": [
+        "DDOG",
+        "PLTR",
+        "TEAM",
+        "MSFT"
+      ],
+      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 QQQ, AIQ, IGV와 DDOG, PLTR, TEAM, MSFT의 5일(-11.09%)·20일(+0.36%) 흐름을 함께 본다. 평균 상대 거래량은 1.13배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "AI 소프트웨어 실적 기대를 사는 ETF 자금, 엔터프라이즈 소프트웨어 스윙 트레이더, 신고가 추종 자금",
+      "bestTradingVehicle": "ETF 우선: IGV, AIQ, QQQ / 개별 종목 우선: PLTR, DDOG, TEAM",
+      "breakCondition": "IGV/AIQ 20일선 이탈, 관련 소프트웨어 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
+      "todayAction": "추격보다 눌림 후 재상승 확인",
+      "summaryReason": "QQQ, AIQ, DDOG, PLTR 중심으로 5일 -11.09%, 20일 +0.36% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": -4,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 2,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
       "name": "비트코인/디지털 자산 위험선호",
       "status": "소멸",
       "narrativeScore": 0,
@@ -2916,43 +3074,83 @@
   ],
   "topNarratives": [
     {
-      "name": "AI 인프라 재가속",
-      "status": "약화",
-      "narrativeScore": 10,
-      "rawScore": 10,
+      "name": "반도체 장비 사이클 재평가",
+      "status": "관찰",
+      "narrativeScore": 52,
+      "rawScore": 52,
       "reasonConfidence": "LOW",
       "supportEtfs": [
-        "DRAM",
         "SOXX",
-        "SMH"
+        "SMH",
+        "SOXQ"
+      ],
+      "supportStocks": [
+        "ASML",
+        "KLAC",
+        "AMAT",
+        "LRCX"
+      ],
+      "representativeEtfs": [
+        "SOXX",
+        "SMH",
+        "SOXQ"
+      ],
+      "representativeStocks": [
+        "ASML",
+        "KLAC",
+        "AMAT",
+        "LRCX"
+      ],
+      "whyMoneyIsFlowing": "반도체 장비 사이클 재평가 관련 SOXX, SMH, SOXQ와 ASML, KLAC, AMAT, LRCX의 5일(-2.85%)·20일(+8.23%) 흐름을 함께 본다. 평균 상대 거래량은 1.83배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "반도체 장비 사이클 회복을 확인한 섹터 ETF 자금과 장비주 상대강도 추종 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: KLAC, ASML, AMAT",
+      "breakCondition": "SMH/SOXX 20일선 이탈 또는 장비주 절반 이상 5일선 이탈",
+      "todayAction": "장비주가 반도체 ETF보다 강하게 버틸 때만 분리 테마로 관찰",
+      "summaryReason": "SOXX, SMH, ASML, KLAC 중심으로 5일 -2.85%, 20일 +8.23% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": -4,
+      "relativeVolumeAvg": 2,
+      "etfRelativeVolumeAvg": 2,
+      "stockRelativeVolumeAvg": 2
+    },
+    {
+      "name": "반도체 설계/공급망 재가속",
+      "status": "약화",
+      "narrativeScore": 22,
+      "rawScore": 22,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "SOXX",
+        "SMH",
+        "SOXQ"
       ],
       "supportStocks": [
         "TSM",
+        "MRVL",
         "ARM",
-        "MU",
-        "NVDA",
-        "AVGO"
+        "AVGO",
+        "ADI"
       ],
       "representativeEtfs": [
-        "DRAM",
         "SOXX",
-        "SMH"
+        "SMH",
+        "SOXQ"
       ],
       "representativeStocks": [
         "TSM",
+        "MRVL",
         "ARM",
-        "MU",
-        "NVDA"
+        "AVGO"
       ],
-      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 DRAM, SOXX, SMH와 TSM, ARM, MU, NVDA의 5일(-8.58%)·20일(+3.00%) 흐름을 함께 본다. 평균 상대 거래량은 1.41배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "AI 인프라 CAPEX를 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
-      "bestTradingVehicle": "ETF 우선: SMH, SOXX, DRAM / 개별 종목 우선: NVDA, AVGO, MU",
-      "breakCondition": "SMH/SOXX 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
-      "todayAction": "추격보다 5일선 지지 후 재상승 확인",
-      "summaryReason": "DRAM, SOXX, TSM, ARM 중심으로 5일 -8.58%, 20일 +3.00% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "whyMoneyIsFlowing": "반도체 설계/공급망 재가속 관련 SOXX, SMH, SOXQ와 TSM, MRVL, ARM, AVGO의 5일(-9.56%)·20일(+12.82%) 흐름을 함께 본다. 평균 상대 거래량은 1.68배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: MRVL, AVGO, ARM",
+      "breakCondition": "SMH/SOXX 20일선 이탈 또는 관련 설계/공급망 종목 절반 이상 5일선 이탈",
+      "todayAction": "AI 인프라 본류와 동조성이 확인될 때만 선별 관찰",
+      "summaryReason": "SOXX, SMH, TSM, MRVL 중심으로 5일 -9.56%, 20일 +12.82% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
-      "etfBreadthScore": -2,
-      "relativeVolumeAvg": 1,
+      "etfBreadthScore": -4,
+      "relativeVolumeAvg": 2,
       "etfRelativeVolumeAvg": 2,
       "stockRelativeVolumeAvg": 1
     },
@@ -2993,45 +3191,6 @@
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
       "stockRelativeVolumeAvg": 1
-    },
-    {
-      "name": "위험선호 성장주 재진입",
-      "status": "약화",
-      "narrativeScore": 6,
-      "rawScore": 6,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "IWM",
-        "QQQ",
-        "IPO",
-        "ARKK"
-      ],
-      "supportStocks": [
-        "ARM",
-        "COIN",
-        "TSLA"
-      ],
-      "representativeEtfs": [
-        "IWM",
-        "QQQ",
-        "IPO"
-      ],
-      "representativeStocks": [
-        "ARM",
-        "COIN",
-        "TSLA"
-      ],
-      "whyMoneyIsFlowing": "위험선호 성장주 재진입 관련 IWM, QQQ, IPO와 ARM, COIN, TSLA의 5일(-7.68%)·20일(+1.18%) 흐름을 함께 본다. 평균 상대 거래량은 1.23배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "위험선호 회복을 사는 성장주 ETF 자금과 고베타 단기 모멘텀 자금",
-      "bestTradingVehicle": "ETF 우선: QQQ, IPO, ARKK / 개별 종목 우선: ARM, COIN, TSLA",
-      "breakCondition": "QQQ/IWM 동반 약화, 고베타 성장주 상대 거래량 둔화",
-      "todayAction": "지수 위험선호가 유지될 때만 선별 진입",
-      "summaryReason": "IWM, QQQ, ARM, COIN 중심으로 5일 -7.68%, 20일 +1.18% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": -1,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 1
     }
   ],
   "etfActionCandidates": [],
@@ -3041,6 +3200,104 @@
   "stockEntryCandidates": [],
   "stockPullbackCandidates": [],
   "stockWatchCandidates": [
+    {
+      "ticker": "ASML",
+      "assetType": "STOCK",
+      "name": "ASML Holding N.V.",
+      "actionLabel": "관찰",
+      "moneyFlowScore": 93,
+      "moneyFlowScoreInitial": 74,
+      "moneyFlowScoreFinal": 93,
+      "finalRawScore": 93,
+      "finalDisplayScore": 93,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+74 + +12 + 0 + +5 + +2 + 0 + 0 = 93",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
+      "tieBreakerReason": "최종 원점수 93, 리스크 패널티 0, 5일 수익률 +4.25%, 상대 거래량 1.83배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "관찰",
+        "status": "관찰",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "관찰",
+        "reason": "특이 충돌 없음"
+      },
+      "linkedNarrative": "반도체 장비 사이클 재평가",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 52,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 1777.77,
+      "recommendationDate": "2026-06-09"
+    },
+    {
+      "ticker": "KLAC",
+      "assetType": "STOCK",
+      "name": "KLA Corporation",
+      "actionLabel": "관찰",
+      "moneyFlowScore": 90,
+      "moneyFlowScoreInitial": 71,
+      "moneyFlowScoreFinal": 90,
+      "finalRawScore": 90,
+      "finalDisplayScore": 90,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+71 + +12 + 0 + +5 + +2 + 0 + 0 = 90",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
+      "tieBreakerReason": "최종 원점수 90, 리스크 패널티 0, 5일 수익률 +4.60%, 상대 거래량 1.57배 순으로 정렬",
+      "entryCondition": "20일선 위 눌림 후 재상승 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "관찰",
+        "status": "관찰",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "관찰",
+        "reason": "특이 충돌 없음"
+      },
+      "linkedNarrative": "반도체 장비 사이클 재평가",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 52,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 2139.3701,
+      "recommendationDate": "2026-06-09"
+    },
     {
       "ticker": "ODFL",
       "assetType": "STOCK",
@@ -3131,7 +3388,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / macro / under_6h - China May wholesale inflation hits near 4-year high on Iran war, AI costs; CPI misses",
+      "directCatalyst": "직접 촉매: MarketWatch RSS / earnings / under_6h - Oracle&#x2019;s stock has surged on AI hype. Now it has to deliver the earnings to match.",
       "tieBreakerReason": "최종 원점수 -6, 리스크 패널티 -5, 5일 수익률 -9.76%, 상대 거래량 0.95배 순으로 정렬",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",
@@ -3149,9 +3406,9 @@
         "candidateEnvironment": "관찰",
         "reason": "후보는 당일 음봉 또는 약세 / Entry Quality 0 < 45 / RVOL 0.95x < 1.00x"
       },
-      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "linkedNarrative": "사이버보안 지출 재가속",
       "narrativeStatus": "약화",
-      "narrativeScore": 0,
+      "narrativeScore": 1,
       "relatedEtfs": [],
       "closePriceAtRecommendation": 95.09,
       "recommendationDate": "2026-06-09"
@@ -3196,7 +3453,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / macro / under_6h - This proposed federal budget cut could eliminate job training for 42,000 vulnerable seniors",
+      "directCatalyst": "직접 촉매: MarketWatch RSS / earnings / under_6h - Oracle&#x2019;s stock has surged on AI hype. Now it has to deliver the earnings to match.",
       "tieBreakerReason": "최종 원점수 -26, 리스크 패널티 -11, 5일 수익률 -2.70%, 상대 거래량 0.71배 순으로 정렬",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",
@@ -3254,7 +3511,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / macro / under_6h - China May wholesale inflation hits near 4-year high on Iran war, AI costs; CPI misses",
+      "directCatalyst": "직접 촉매: MarketWatch RSS / earnings / under_6h - Oracle&#x2019;s stock has surged on AI hype. Now it has to deliver the earnings to match.",
       "tieBreakerReason": "최종 원점수 23, 리스크 패널티 -5, 5일 수익률 +0.49%, 상대 거래량 0.97배 순으로 정렬",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",
@@ -3446,101 +3703,97 @@
         "recommendationDate": "2026-06-09"
       },
       {
-        "ticker": "IWM",
+        "ticker": "SOXX",
         "assetType": "ETF",
-        "name": "iShares Russell 2000 ETF",
+        "name": "iShares Semiconductor ETF",
         "actionLabel": "제외",
-        "moneyFlowScore": 54,
-        "moneyFlowScoreInitial": 37,
-        "moneyFlowScoreFinal": 54,
-        "finalRawScore": 54,
-        "finalDisplayScore": 54,
+        "moneyFlowScore": 29,
+        "moneyFlowScoreInitial": 26,
+        "moneyFlowScoreFinal": 29,
+        "finalRawScore": 29,
+        "finalDisplayScore": 29,
         "wasCapped": false,
         "capReason": "cap not applied",
-        "formulaText": "+37 + +12 + 0 + +5 + 0 + 0 + 0 = 54",
+        "formulaText": "+26 + +2 - 4 + +5 + 0 + 0 + 0 = 29",
         "riskPenalty": 0,
         "riskPenaltySummary": {
           "totalPenalty": 0,
           "riskLevel": "LOW",
           "items": [],
-          "watchItems": [
-            "ETF breadth data not connected"
-          ],
-          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-        },
-        "reasonConfidence": "MEDIUM",
-        "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-        "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / stale - The Spill: Why Financial Pros Are Piling Into IWM Right Now",
-        "tieBreakerReason": "최종 원점수 54, 리스크 패널티 0, 5일 수익률 -2.28%, 상대 거래량 1.51배 순으로 정렬",
-        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-        "actionGate": {
-          "label": "제외",
-          "status": "매매 금지",
-          "reasons": [
-            "Entry Quality 18 < 45",
-            "진입 품질 부족"
-          ]
-        },
-        "marketContext": {
-          "marketRegime": "중립",
-          "candidateEnvironment": "관찰",
-          "reason": "Entry Quality 18 < 45 / 진입 품질 부족"
-        },
-        "linkedNarrative": "위험선호 성장주 재진입",
-        "narrativeStatus": "약화",
-        "narrativeScore": 6,
-        "relatedEtfs": [],
-        "closePriceAtRecommendation": 285.02,
-        "recommendationDate": "2026-06-09"
-      },
-      {
-        "ticker": "DRAM",
-        "assetType": "ETF",
-        "name": "Roundhill Memory ETF",
-        "actionLabel": "제외",
-        "moneyFlowScore": 32,
-        "moneyFlowScoreInitial": 25,
-        "moneyFlowScoreFinal": 32,
-        "finalRawScore": 32,
-        "finalDisplayScore": 32,
-        "wasCapped": false,
-        "capReason": "cap not applied",
-        "formulaText": "+25 + +2 + 0 + +5 + 0 + 0 + 0 = 32",
-        "riskPenalty": 0,
-        "riskPenaltySummary": {
-          "totalPenalty": 0,
-          "riskLevel": "LOW",
-          "items": [],
-          "watchItems": [
-            "ETF breadth data not connected"
-          ],
+          "watchItems": [],
           "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
         },
         "reasonConfidence": "LOW",
         "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-        "directCatalyst": "직접 촉매: CNBC Markets RSS / macro / under_6h - China May wholesale inflation hits near 4-year high on Iran war, AI costs; CPI misses",
-        "tieBreakerReason": "최종 원점수 32, 리스크 패널티 0, 5일 수익률 -13.96%, 상대 거래량 1.66배 순으로 정렬",
+        "directCatalyst": "직접 촉매: MarketWatch RSS / earnings / under_6h - Oracle&#x2019;s stock has surged on AI hype. Now it has to deliver the earnings to match.",
+        "tieBreakerReason": "최종 원점수 29, 리스크 패널티 0, 5일 수익률 -7.09%, 상대 거래량 2.31배 순으로 정렬",
         "entryCondition": "20일선 위 눌림 후 재상승 확인",
         "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
         "actionGate": {
           "label": "제외",
           "status": "매매 금지",
           "reasons": [
-            "Entry Quality 19 < 45",
+            "Entry Quality 24 < 45",
             "진입 품질 부족"
           ]
         },
         "marketContext": {
           "marketRegime": "중립",
           "candidateEnvironment": "관찰",
-          "reason": "후보는 당일 음봉 또는 약세 / Entry Quality 19 < 45 / 진입 품질 부족"
+          "reason": "후보는 당일 음봉 또는 약세 / Entry Quality 24 < 45 / 진입 품질 부족"
         },
-        "linkedNarrative": "AI 인프라 재가속",
-        "narrativeStatus": "약화",
-        "narrativeScore": 10,
+        "linkedNarrative": "반도체 장비 사이클 재평가",
+        "narrativeStatus": "관찰",
+        "narrativeScore": 52,
         "relatedEtfs": [],
-        "closePriceAtRecommendation": 59.86,
+        "closePriceAtRecommendation": 562.14,
+        "recommendationDate": "2026-06-09"
+      },
+      {
+        "ticker": "SMH",
+        "assetType": "ETF",
+        "name": "VanEck Semiconductor ETF",
+        "actionLabel": "제외",
+        "moneyFlowScore": 27,
+        "moneyFlowScoreInitial": 24,
+        "moneyFlowScoreFinal": 27,
+        "finalRawScore": 27,
+        "finalDisplayScore": 27,
+        "wasCapped": false,
+        "capReason": "cap not applied",
+        "formulaText": "+24 + +2 - 4 + +5 + 0 + 0 + 0 = 27",
+        "riskPenalty": 0,
+        "riskPenaltySummary": {
+          "totalPenalty": 0,
+          "riskLevel": "LOW",
+          "items": [],
+          "watchItems": [],
+          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+        },
+        "reasonConfidence": "LOW",
+        "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+        "directCatalyst": "직접 촉매: Yahoo Finance RSS / earnings / under_6h - SMH ETF Investors: Watch Hyperscaler Capex Guidance at July Earnings Calls",
+        "tieBreakerReason": "최종 원점수 27, 리스크 패널티 0, 5일 수익률 -6.52%, 상대 거래량 1.75배 순으로 정렬",
+        "entryCondition": "20일선 위 눌림 후 재상승 확인",
+        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+        "actionGate": {
+          "label": "제외",
+          "status": "매매 금지",
+          "reasons": [
+            "Entry Quality 24 < 45",
+            "진입 품질 부족"
+          ]
+        },
+        "marketContext": {
+          "marketRegime": "중립",
+          "candidateEnvironment": "관찰",
+          "reason": "후보는 당일 음봉 또는 약세 / Entry Quality 24 < 45 / 진입 품질 부족"
+        },
+        "linkedNarrative": "반도체 장비 사이클 재평가",
+        "narrativeStatus": "관찰",
+        "narrativeScore": 52,
+        "relatedEtfs": [],
+        "closePriceAtRecommendation": 591.01,
         "recommendationDate": "2026-06-09"
       }
     ],
@@ -3549,7 +3802,7 @@
         "ticker": "ASML",
         "assetType": "STOCK",
         "name": "ASML Holding N.V.",
-        "actionLabel": "제외",
+        "actionLabel": "관찰",
         "moneyFlowScore": 93,
         "moneyFlowScoreInitial": 74,
         "moneyFlowScoreFinal": 93,
@@ -3573,21 +3826,18 @@
         "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
         "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
         "actionGate": {
-          "label": "제외",
-          "status": "매매 금지",
-          "reasons": [
-            "Entry Quality 40 < 45",
-            "진입 품질 부족"
-          ]
+          "label": "관찰",
+          "status": "관찰",
+          "reasons": []
         },
         "marketContext": {
           "marketRegime": "중립",
           "candidateEnvironment": "관찰",
-          "reason": "Entry Quality 40 < 45 / 진입 품질 부족"
+          "reason": "특이 충돌 없음"
         },
-        "linkedNarrative": "AI 인프라 재가속",
-        "narrativeStatus": "약화",
-        "narrativeScore": 10,
+        "linkedNarrative": "반도체 장비 사이클 재평가",
+        "narrativeStatus": "관찰",
+        "narrativeScore": 52,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -3601,7 +3851,7 @@
         "ticker": "KLAC",
         "assetType": "STOCK",
         "name": "KLA Corporation",
-        "actionLabel": "제외",
+        "actionLabel": "관찰",
         "moneyFlowScore": 90,
         "moneyFlowScoreInitial": 71,
         "moneyFlowScoreFinal": 90,
@@ -3625,21 +3875,18 @@
         "entryCondition": "20일선 위 눌림 후 재상승 확인",
         "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
         "actionGate": {
-          "label": "제외",
-          "status": "매매 금지",
-          "reasons": [
-            "Entry Quality 39 < 45",
-            "진입 품질 부족"
-          ]
+          "label": "관찰",
+          "status": "관찰",
+          "reasons": []
         },
         "marketContext": {
           "marketRegime": "중립",
           "candidateEnvironment": "관찰",
-          "reason": "Entry Quality 39 < 45 / 진입 품질 부족"
+          "reason": "특이 충돌 없음"
         },
-        "linkedNarrative": "AI 인프라 재가속",
-        "narrativeStatus": "약화",
-        "narrativeScore": 10,
+        "linkedNarrative": "반도체 장비 사이클 재평가",
+        "narrativeStatus": "관찰",
+        "narrativeScore": 52,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -3680,18 +3927,18 @@
           "label": "제외",
           "status": "매매 금지",
           "reasons": [
-            "Entry Quality 33 < 45",
+            "Entry Quality 39 < 45",
             "진입 품질 부족"
           ]
         },
         "marketContext": {
           "marketRegime": "중립",
           "candidateEnvironment": "관찰",
-          "reason": "Entry Quality 33 < 45 / 진입 품질 부족"
+          "reason": "Entry Quality 39 < 45 / 진입 품질 부족"
         },
-        "linkedNarrative": "AI 인프라 재가속",
-        "narrativeStatus": "약화",
-        "narrativeScore": 10,
+        "linkedNarrative": "반도체 장비 사이클 재평가",
+        "narrativeStatus": "관찰",
+        "narrativeScore": 52,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -3707,11 +3954,11 @@
     "priceVolumeStatus": "CONNECTED",
     "priceAsOfDate": "2026-06-09",
     "priceAsOfLabel": "2026-06-09 US regular close",
-    "reportGeneratedAtKST": "2026-06-10 11:38",
+    "reportGeneratedAtKST": "2026-06-10 11:58",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-06-10T02:38:09.979Z",
-    "newsLastUpdatedAt": "2026-06-10T02:38:09.979Z",
-    "latestNewsPublishedAt": "2026-06-10T02:15:07.000Z",
+    "newsFetchedAt": "2026-06-10T02:58:29.217Z",
+    "newsLastUpdatedAt": "2026-06-10T02:58:29.217Z",
+    "latestNewsPublishedAt": "2026-06-10T02:47:11.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
     "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
@@ -3737,8 +3984,8 @@
     "label": "매매 보류",
     "entryReadyCount": 0,
     "conditionalCount": 0,
-    "watchCount": 74,
-    "banCount": 83,
+    "watchCount": 76,
+    "banCount": 81,
     "actionCandidateCount": 0,
     "mainLimiters": [
       "Entry Quality 부족",

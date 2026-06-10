@@ -134,6 +134,29 @@ ETF 후보 TOP 5:
 웹 리포트:
 https://yoolcool.github.io/DailyTradingThesisAgent/
 
+## 네러티브 재점검
+
+사용자가 아래처럼 요청하면 데일리 리포트를 생성/배포하지 않고, 시장 서사 템플릿 자체를 점검한다.
+
+```text
+네러티브 재점검
+```
+
+실행 명령:
+
+```powershell
+npm.cmd run narrative-review
+```
+
+이 명령은 `src/main.js`의 `NARRATIVE_DEFINITIONS`를 직접 수정하지 않는다. 최근 `data/dailyReports/*.json` 스냅샷을 바탕으로 기존 네러티브의 유지/수정/삭제 관찰 판정과 신규/분리 후보를 제안서로 생성한다.
+
+생성 파일:
+
+- `reports/narrative-review.md`
+- `reports/narrative-review.json`
+
+최종 보고에는 기존 템플릿 자동 변경이 없었음을 명시하고, 신규 후보 TOP 5와 기존 네러티브 판정을 요약한다. 사용자가 별도로 "적용해줘"라고 요청할 때만 `NARRATIVE_DEFINITIONS` 변경을 진행한다.
+
 남은 문제:
 - 없으면 “없음”
 ```

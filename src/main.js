@@ -110,23 +110,63 @@ const ETF_CATEGORY = {
 const NARRATIVE_DEFINITIONS = [
   {
     name: "AI 인프라 재가속",
-    etfs: ["SMH", "SOXX", "SOXQ", "DRAM", "GRID", "PAVE"],
-    stocks: ["NVDA", "TSM", "AMD", "AVGO", "MU", "ARM", "VRT", "ETN", "PWR"],
-    nextBuyer: "AI 인프라 CAPEX를 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
+    etfs: ["SMH", "SOXX", "SOXQ", "DRAM", "GRID", "PAVE", "AIQ"],
+    stocks: ["NVDA", "AMD", "MU", "VRT", "ETN", "PWR", "GEV"],
+    nextBuyer: "AI 인프라 CAPEX와 데이터센터 병목을 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
     preferredEtfs: ["SMH", "SOXX", "DRAM"],
-    preferredStocks: ["NVDA", "AVGO", "MU", "ARM"],
-    breakCondition: "SMH/SOXX 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
+    preferredStocks: ["NVDA", "MU", "VRT", "ETN"],
+    breakCondition: "SMH/SOXX/DRAM 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
     todayAction: "추격보다 5일선 지지 후 재상승 확인"
   },
   {
+    name: "반도체 설계/공급망 재가속",
+    etfs: ["SMH", "SOXX", "SOXQ", "AIQ"],
+    stocks: ["MRVL", "AVGO", "ARM", "ADI", "TSM"],
+    nextBuyer: "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+    preferredEtfs: ["SMH", "SOXX", "SOXQ"],
+    preferredStocks: ["MRVL", "AVGO", "ARM", "ADI"],
+    breakCondition: "SMH/SOXX 20일선 이탈 또는 관련 설계/공급망 종목 절반 이상 5일선 이탈",
+    todayAction: "AI 인프라 본류와 동조성이 확인될 때만 선별 관찰"
+  },
+  {
+    name: "반도체 장비 사이클 재평가",
+    etfs: ["SMH", "SOXX", "SOXQ", "AIQ"],
+    stocks: ["KLAC", "ASML", "AMAT", "LRCX"],
+    nextBuyer: "반도체 장비 사이클 회복을 확인한 섹터 ETF 자금과 장비주 상대강도 추종 자금",
+    preferredEtfs: ["SMH", "SOXX", "SOXQ"],
+    preferredStocks: ["KLAC", "ASML", "AMAT", "LRCX"],
+    breakCondition: "SMH/SOXX 20일선 이탈 또는 장비주 절반 이상 5일선 이탈",
+    todayAction: "장비주가 반도체 ETF보다 강하게 버틸 때만 분리 테마로 관찰"
+  },
+  {
     name: "AI 소프트웨어/사이버보안 확산",
-    etfs: ["IGV", "AIQ", "CIBR", "HACK", "IHAK"],
-    stocks: ["PLTR", "PANW", "CRWD", "DDOG", "TEAM", "MSFT", "NOW", "ZS"],
-    nextBuyer: "섹터 베타를 사는 ETF 자금, AI/보안 실적 기대를 사는 스윙 트레이더, 신고가 추종 자금",
-    preferredEtfs: ["IGV", "CIBR", "AIQ"],
-    preferredStocks: ["PANW", "CRWD", "DDOG", "TEAM"],
-    breakCondition: "IGV/CIBR 20일선 이탈, 관련 개별 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
+    etfs: ["IGV", "AIQ", "QQQ"],
+    stocks: ["PLTR", "DDOG", "TEAM", "MSFT", "NOW", "ZS"],
+    nextBuyer: "AI 소프트웨어 실적 기대를 사는 ETF 자금, 엔터프라이즈 소프트웨어 스윙 트레이더, 신고가 추종 자금",
+    preferredEtfs: ["IGV", "AIQ", "QQQ"],
+    preferredStocks: ["PLTR", "DDOG", "TEAM", "MSFT"],
+    breakCondition: "IGV/AIQ 20일선 이탈, 관련 소프트웨어 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
     todayAction: "추격보다 눌림 후 재상승 확인"
+  },
+  {
+    name: "사이버보안 지출 재가속",
+    etfs: ["HACK", "CIBR", "IHAK", "IGV"],
+    stocks: ["PANW", "CRWD", "FTNT", "ZS"],
+    nextBuyer: "사이버보안 지출 재가속을 확인한 보안 ETF 자금과 상대강도 추종 스윙 자금",
+    preferredEtfs: ["HACK", "CIBR", "IHAK"],
+    preferredStocks: ["PANW", "CRWD", "FTNT"],
+    breakCondition: "HACK/CIBR 20일선 이탈 또는 보안주 절반 이상 5일선 이탈",
+    todayAction: "보안 ETF와 대표 종목 동조성이 살아날 때만 관찰 편입"
+  },
+  {
+    name: "소프트웨어 실적/AI 수익화",
+    etfs: ["IGV", "AIQ", "QQQ"],
+    stocks: ["DDOG", "CDNS", "PLTR", "TEAM"],
+    nextBuyer: "AI 수익화와 소프트웨어 실적 개선을 확인한 성장주 ETF 자금과 실적 모멘텀 자금",
+    preferredEtfs: ["IGV", "AIQ", "QQQ"],
+    preferredStocks: ["DDOG", "CDNS", "PLTR", "TEAM"],
+    breakCondition: "IGV 20일선 이탈 또는 소프트웨어 실적주 절반 이상 5일선 이탈",
+    todayAction: "실적/가이던스 촉매와 가격 반응이 같이 확인될 때만 분리 테마로 관찰"
   },
   {
     name: "위험선호 성장주 재진입",

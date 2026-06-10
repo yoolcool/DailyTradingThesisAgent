@@ -60,6 +60,16 @@
 
 https://yoolcool.github.io/DailyTradingThesisAgent/
 
+## 네러티브 재점검
+
+사용자가 `네러티브 재점검`이라고 요청하면 데일리 리포트 생성/배포가 아니라 아래 명령을 실행한다.
+
+```powershell
+npm.cmd run narrative-review
+```
+
+이 명령은 기존 네러티브 템플릿을 자동 수정하지 않고 `reports/narrative-review.md`와 `reports/narrative-review.json` 제안서를 생성한다. 사용자가 별도로 적용을 요청할 때만 `src/main.js`의 `NARRATIVE_DEFINITIONS`를 수정한다.
+
 ## 모바일 최종 보고 형식
 
 최종 보고는 반드시 아래 형식으로만 한다. 첫 줄은 반드시 `[오늘의 데일리 트레이딩 요약]`으로 시작한다.

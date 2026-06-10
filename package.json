@@ -15,7 +15,8 @@
     "prepare-pages": "node scripts/prepare-pages.js",
     "daily-publish": "npm.cmd run daily-check:win && npm.cmd run prepare-pages",
     "daily-publish:real-test": "npm.cmd run daily-check:real-test && npm.cmd run prepare-pages",
-    "mobile-daily-routine": "node scripts/mobile-daily-routine.js"
+    "mobile-daily-routine": "node scripts/mobile-daily-routine.js",
+    "narrative-review": "node scripts/narrative-review.js"
   },
   "devDependencies": {
     "playwright": "^1.53.0"
