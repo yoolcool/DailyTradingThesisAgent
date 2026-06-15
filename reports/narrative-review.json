@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2026년 6월 10일 수요일 오전 11:58",
+  "generatedAtKST": "2026년 6월 15일 월요일 오후 12:47",
   "mode": "NARRATIVE_REVIEW",
   "source": {
     "definitions": "src/main.js NARRATIVE_DEFINITIONS",
@@ -12,24 +12,26 @@
     "2026-06-05",
     "2026-06-06",
     "2026-06-09",
-    "2026-06-10"
+    "2026-06-10",
+    "2026-06-12",
+    "2026-06-15"
   ],
   "existingNarratives": [
     {
       "name": "AI 인프라 재가속",
       "verdict": "KEEP",
-      "avgScore": 37,
+      "avgScore": 34.2,
       "avgTrendStrengthIndex": 0,
       "top3Days": 5,
       "directNewsDays": 2,
-      "itemDays": 5,
+      "itemDays": 7,
       "latestStatus": "약화",
-      "latestScore": 3,
+      "latestScore": 26,
       "statusCounts": {
         "없음": 1,
         "지배": 2,
         "관찰": 1,
-        "약화": 3
+        "약화": 5
       },
       "daily": [
         {
@@ -108,22 +110,44 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-06-12",
+          "score": 23,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 1,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-06-15",
+          "score": 26,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 2,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "반도체 설계/공급망 재가속",
-      "verdict": "REWORK",
-      "avgScore": 3.1,
+      "verdict": "KEEP",
+      "avgScore": 10.9,
       "avgTrendStrengthIndex": 0,
-      "top3Days": 1,
-      "directNewsDays": 0,
-      "itemDays": 0,
+      "top3Days": 3,
+      "directNewsDays": 1,
+      "itemDays": 1,
       "latestStatus": "약화",
-      "latestScore": 22,
+      "latestScore": 48,
       "statusCounts": {
         "없음": 6,
-        "약화": 1
+        "약화": 3
       },
       "daily": [
         {
@@ -202,22 +226,45 @@
           "topRank": 2,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-06-12",
+          "score": 28,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": 3,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-06-15",
+          "score": 48,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 1,
+          "topRank": 2,
+          "itemCount": 1,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "반도체 장비 사이클 재평가",
-      "verdict": "REWORK",
-      "avgScore": 7.4,
+      "verdict": "KEEP",
+      "avgScore": 22.2,
       "avgTrendStrengthIndex": 0,
-      "top3Days": 1,
-      "directNewsDays": 0,
-      "itemDays": 1,
-      "latestStatus": "관찰",
-      "latestScore": 52,
+      "top3Days": 3,
+      "directNewsDays": 2,
+      "itemDays": 3,
+      "latestStatus": "부상",
+      "latestScore": 78,
       "statusCounts": {
         "없음": 6,
-        "관찰": 1
+        "관찰": 1,
+        "부상": 2
       },
       "daily": [
         {
@@ -296,23 +343,45 @@
           "topRank": 1,
           "itemCount": 7,
           "actionCount": 0
+        },
+        {
+          "date": "2026-06-12",
+          "score": 70,
+          "trendStrengthIndex": 0,
+          "status": "부상",
+          "reasonConfidence": "MEDIUM",
+          "directNewsCount": 1,
+          "topRank": 1,
+          "itemCount": 7,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-06-15",
+          "score": 78,
+          "trendStrengthIndex": 0,
+          "status": "부상",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 1,
+          "topRank": 1,
+          "itemCount": 8,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "AI 소프트웨어/사이버보안 확산",
       "verdict": "KEEP",
-      "avgScore": 31.6,
+      "avgScore": 25.1,
       "avgTrendStrengthIndex": 0,
       "top3Days": 4,
       "directNewsDays": 3,
       "itemDays": 5,
       "latestStatus": "약화",
-      "latestScore": 0,
+      "latestScore": 3,
       "statusCounts": {
         "없음": 1,
         "부상": 2,
-        "약화": 4
+        "약화": 6
       },
       "daily": [
         {
@@ -391,22 +460,44 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-06-12",
+          "score": 2,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-06-15",
+          "score": 3,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "사이버보안 지출 재가속",
       "verdict": "RETIRE_WATCH",
-      "avgScore": 0.1,
+      "avgScore": 3.1,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
       "directNewsDays": 0,
-      "itemDays": 1,
+      "itemDays": 2,
       "latestStatus": "약화",
-      "latestScore": 1,
+      "latestScore": 8,
       "statusCounts": {
         "없음": 6,
-        "약화": 1
+        "약화": 3
       },
       "daily": [
         {
@@ -485,22 +576,44 @@
           "topRank": null,
           "itemCount": 1,
           "actionCount": 0
+        },
+        {
+          "date": "2026-06-12",
+          "score": 19,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 3,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-06-15",
+          "score": 8,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "소프트웨어 실적/AI 수익화",
       "verdict": "RETIRE_WATCH",
-      "avgScore": 0,
+      "avgScore": 1.7,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
       "directNewsDays": 0,
-      "itemDays": 0,
+      "itemDays": 2,
       "latestStatus": "약화",
-      "latestScore": 0,
+      "latestScore": 9,
       "statusCounts": {
         "없음": 6,
-        "약화": 1
+        "약화": 3
       },
       "daily": [
         {
@@ -579,23 +692,45 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-06-12",
+          "score": 6,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 1,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-06-15",
+          "score": 9,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 1,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "위험선호 성장주 재진입",
       "verdict": "KEEP",
-      "avgScore": 24.7,
+      "avgScore": 26.6,
       "avgTrendStrengthIndex": 0,
-      "top3Days": 5,
-      "directNewsDays": 1,
-      "itemDays": 4,
+      "top3Days": 6,
+      "directNewsDays": 2,
+      "itemDays": 5,
       "latestStatus": "약화",
-      "latestScore": 6,
+      "latestScore": 45,
       "statusCounts": {
         "없음": 1,
         "관찰": 1,
-        "약화": 5
+        "약화": 7
       },
       "daily": [
         {
@@ -674,22 +809,44 @@
           "topRank": null,
           "itemCount": 1,
           "actionCount": 0
+        },
+        {
+          "date": "2026-06-12",
+          "score": 21,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-06-15",
+          "score": 45,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 1,
+          "topRank": 3,
+          "itemCount": 3,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "방산/안보 프리미엄",
       "verdict": "REWORK",
-      "avgScore": 6.1,
+      "avgScore": 8.6,
       "avgTrendStrengthIndex": 0,
-      "top3Days": 1,
-      "directNewsDays": 0,
-      "itemDays": 3,
+      "top3Days": 2,
+      "directNewsDays": 1,
+      "itemDays": 4,
       "latestStatus": "약화",
-      "latestScore": 7,
+      "latestScore": 3,
       "statusCounts": {
         "없음": 1,
-        "약화": 6
+        "약화": 8
       },
       "daily": [
         {
@@ -768,23 +925,45 @@
           "topRank": 3,
           "itemCount": 2,
           "actionCount": 0
+        },
+        {
+          "date": "2026-06-12",
+          "score": 31,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 1,
+          "topRank": 2,
+          "itemCount": 2,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-06-15",
+          "score": 3,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "전력망/원전/인프라 병목",
       "verdict": "RETIRE_WATCH",
-      "avgScore": 4.6,
+      "avgScore": 4.4,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
       "directNewsDays": 0,
       "itemDays": 2,
       "latestStatus": "소멸",
-      "latestScore": 0,
+      "latestScore": 5,
       "statusCounts": {
         "없음": 1,
         "약화": 2,
-        "소멸": 4
+        "소멸": 6
       },
       "daily": [
         {
@@ -863,22 +1042,44 @@
           "topRank": null,
           "itemCount": 3,
           "actionCount": 0
+        },
+        {
+          "date": "2026-06-12",
+          "score": 3,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-06-15",
+          "score": 5,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "비트코인/디지털 자산 위험선호",
       "verdict": "RETIRE_WATCH",
-      "avgScore": 0,
+      "avgScore": 1.8,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
       "directNewsDays": 0,
       "itemDays": 0,
       "latestStatus": "소멸",
-      "latestScore": 0,
+      "latestScore": 16,
       "statusCounts": {
         "없음": 1,
-        "소멸": 6
+        "소멸": 8
       },
       "daily": [
         {
@@ -957,22 +1158,44 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-06-12",
+          "score": 0,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-06-15",
+          "score": 16,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "매크로 방어/헤지",
       "verdict": "RETIRE_WATCH",
-      "avgScore": 9.3,
+      "avgScore": 9,
       "avgTrendStrengthIndex": 0,
       "top3Days": 1,
       "directNewsDays": 0,
       "itemDays": 0,
       "latestStatus": "약화",
-      "latestScore": 2,
+      "latestScore": 6,
       "statusCounts": {
         "없음": 1,
-        "약화": 6
+        "약화": 8
       },
       "daily": [
         {
@@ -1051,182 +1274,45 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-06-12",
+          "score": 10,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-06-15",
+          "score": 6,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     }
   ],
   "newCandidates": [
     {
-      "key": "Cybersecurity",
-      "proposedName": "사이버보안 지출 재가속",
-      "discoveryScore": 159.1,
-      "recurrenceDays": 6,
-      "avgCandidateScore": 90.5,
-      "avgRawScore": 96.5,
-      "avgRelativeVolume": 0,
-      "confidenceCounts": {
-        "LOW": 5,
-        "HIGH": 10,
-        "MEDIUM": 2
-      },
-      "linkedNarratives": [
-        "AI 소프트웨어/사이버보안 확산"
-      ],
-      "overlapWithExistingTemplateCount": 3,
-      "members": [
-        {
-          "ticker": "CRWD",
-          "name": "CrowdStrike Holdings Inc.",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Cybersecurity",
-          "alreadyCovered": true
-        },
-        {
-          "ticker": "FTNT",
-          "name": "Fortinet Inc.",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Cybersecurity",
-          "alreadyCovered": true
-        },
-        {
-          "ticker": "PANW",
-          "name": "Palo Alto Networks Inc.",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Cybersecurity",
-          "alreadyCovered": true
-        }
-      ],
-      "proposedDefinition": {
-        "name": "사이버보안 지출 재가속",
-        "etfs": [
-          "HACK",
-          "CIBR",
-          "IHAK",
-          "IGV"
-        ],
-        "stocks": [
-          "PANW",
-          "CRWD",
-          "FTNT"
-        ],
-        "nextBuyer": "사이버보안 지출 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-        "preferredEtfs": [
-          "HACK",
-          "CIBR",
-          "IHAK"
-        ],
-        "preferredStocks": [
-          "PANW",
-          "CRWD",
-          "FTNT"
-        ],
-        "breakCondition": "HACK 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-        "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
-      }
-    },
-    {
-      "key": "Semiconductors",
-      "proposedName": "반도체 설계/공급망 재가속",
-      "discoveryScore": 148.7,
-      "recurrenceDays": 7,
-      "avgCandidateScore": 82.5,
-      "avgRawScore": 86.8,
-      "avgRelativeVolume": 0,
-      "confidenceCounts": {
-        "LOW": 2,
-        "HIGH": 8
-      },
-      "linkedNarratives": [
-        "AI 인프라 재가속"
-      ],
-      "overlapWithExistingTemplateCount": 5,
-      "members": [
-        {
-          "ticker": "ADI",
-          "name": "Analog Devices Inc.",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Semiconductors",
-          "alreadyCovered": true
-        },
-        {
-          "ticker": "ARM",
-          "name": "Arm Holdings plc",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Semiconductors",
-          "alreadyCovered": true
-        },
-        {
-          "ticker": "AVGO",
-          "name": "Broadcom Inc.",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Semiconductors",
-          "alreadyCovered": true
-        },
-        {
-          "ticker": "MRVL",
-          "name": "Marvell Technology Inc.",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Semiconductors",
-          "alreadyCovered": true
-        },
-        {
-          "ticker": "TSM",
-          "name": "Taiwan Semiconductor",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Semiconductors",
-          "alreadyCovered": true
-        }
-      ],
-      "proposedDefinition": {
-        "name": "반도체 설계/공급망 재가속",
-        "etfs": [
-          "SMH",
-          "SOXX",
-          "SOXQ",
-          "AIQ"
-        ],
-        "stocks": [
-          "MRVL",
-          "AVGO",
-          "ARM",
-          "ADI",
-          "TSM"
-        ],
-        "nextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-        "preferredEtfs": [
-          "SMH",
-          "SOXX",
-          "SOXQ"
-        ],
-        "preferredStocks": [
-          "MRVL",
-          "AVGO",
-          "ARM",
-          "ADI"
-        ],
-        "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-        "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
-      }
-    },
-    {
       "key": "Semiconductor Equipment",
       "proposedName": "반도체 장비 사이클 재평가",
-      "discoveryScore": 130.4,
-      "recurrenceDays": 5,
-      "avgCandidateScore": 90.1,
-      "avgRawScore": 92.5,
+      "discoveryScore": 198,
+      "recurrenceDays": 7,
+      "avgCandidateScore": 93.4,
+      "avgRawScore": 97.5,
       "avgRelativeVolume": 0,
       "confidenceCounts": {
-        "HIGH": 5,
-        "MEDIUM": 7
+        "HIGH": 10,
+        "MEDIUM": 11,
+        "LOW": 3
       },
       "linkedNarratives": [
         "AI 인프라 재가속",
@@ -1298,12 +1384,182 @@
       }
     },
     {
+      "key": "Semiconductors",
+      "proposedName": "반도체 설계/공급망 재가속",
+      "discoveryScore": 166.3,
+      "recurrenceDays": 7,
+      "avgCandidateScore": 88.9,
+      "avgRawScore": 93.6,
+      "avgRelativeVolume": 0,
+      "confidenceCounts": {
+        "LOW": 2,
+        "HIGH": 9
+      },
+      "linkedNarratives": [
+        "AI 인프라 재가속",
+        "반도체 설계/공급망 재가속"
+      ],
+      "overlapWithExistingTemplateCount": 5,
+      "members": [
+        {
+          "ticker": "INTC",
+          "name": "Intel Corporation",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Semiconductors",
+          "alreadyCovered": false
+        },
+        {
+          "ticker": "ADI",
+          "name": "Analog Devices Inc.",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Semiconductors",
+          "alreadyCovered": true
+        },
+        {
+          "ticker": "AMD",
+          "name": "Advanced Micro Devices Inc.",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Semiconductors",
+          "alreadyCovered": true
+        },
+        {
+          "ticker": "ARM",
+          "name": "Arm Holdings plc",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Semiconductors",
+          "alreadyCovered": true
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom Inc.",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Semiconductors",
+          "alreadyCovered": true
+        },
+        {
+          "ticker": "MRVL",
+          "name": "Marvell Technology Inc.",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Semiconductors",
+          "alreadyCovered": true
+        }
+      ],
+      "proposedDefinition": {
+        "name": "반도체 설계/공급망 재가속",
+        "etfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "stocks": [
+          "MRVL",
+          "AVGO",
+          "ARM",
+          "ADI",
+          "INTC",
+          "AMD"
+        ],
+        "nextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+        "preferredEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ"
+        ],
+        "preferredStocks": [
+          "MRVL",
+          "AVGO",
+          "ARM",
+          "ADI"
+        ],
+        "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+        "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
+      }
+    },
+    {
+      "key": "Cybersecurity",
+      "proposedName": "사이버보안 지출 재가속",
+      "discoveryScore": 158.2,
+      "recurrenceDays": 6,
+      "avgCandidateScore": 88.3,
+      "avgRawScore": 93.9,
+      "avgRelativeVolume": 0,
+      "confidenceCounts": {
+        "LOW": 5,
+        "HIGH": 10,
+        "MEDIUM": 2
+      },
+      "linkedNarratives": [
+        "AI 소프트웨어/사이버보안 확산"
+      ],
+      "overlapWithExistingTemplateCount": 3,
+      "members": [
+        {
+          "ticker": "CRWD",
+          "name": "CrowdStrike Holdings Inc.",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Cybersecurity",
+          "alreadyCovered": true
+        },
+        {
+          "ticker": "FTNT",
+          "name": "Fortinet Inc.",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Cybersecurity",
+          "alreadyCovered": true
+        },
+        {
+          "ticker": "PANW",
+          "name": "Palo Alto Networks Inc.",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Cybersecurity",
+          "alreadyCovered": true
+        }
+      ],
+      "proposedDefinition": {
+        "name": "사이버보안 지출 재가속",
+        "etfs": [
+          "HACK",
+          "CIBR",
+          "IHAK",
+          "IGV"
+        ],
+        "stocks": [
+          "PANW",
+          "CRWD",
+          "FTNT"
+        ],
+        "nextBuyer": "사이버보안 지출 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+        "preferredEtfs": [
+          "HACK",
+          "CIBR",
+          "IHAK"
+        ],
+        "preferredStocks": [
+          "PANW",
+          "CRWD",
+          "FTNT"
+        ],
+        "breakCondition": "HACK 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+        "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
+      }
+    },
+    {
       "key": "Software Application",
       "proposedName": "소프트웨어 실적/AI 수익화",
-      "discoveryScore": 82.7,
-      "recurrenceDays": 4,
-      "avgCandidateScore": 85.7,
-      "avgRawScore": 88.3,
+      "discoveryScore": 80.8,
+      "recurrenceDays": 3,
+      "avgCandidateScore": 98.2,
+      "avgRawScore": 101.4,
       "avgRelativeVolume": 0,
       "confidenceCounts": {
         "MEDIUM": 2,
@@ -1357,58 +1613,54 @@
       }
     },
     {
-      "key": "Beverages",
-      "proposedName": "필수소비재 음료 방어 성장",
-      "discoveryScore": 39.4,
-      "recurrenceDays": 1,
-      "avgCandidateScore": 51,
-      "avgRawScore": 51,
+      "key": "Data Storage",
+      "proposedName": "Data Storage 자금 유입",
+      "discoveryScore": 51.4,
+      "recurrenceDays": 2,
+      "avgCandidateScore": 73.5,
+      "avgRawScore": 73.5,
       "avgRelativeVolume": 0,
-      "confidenceCounts": {},
+      "confidenceCounts": {
+        "LOW": 2
+      },
       "linkedNarratives": [],
       "overlapWithExistingTemplateCount": 0,
       "members": [
         {
-          "ticker": "CCEP",
-          "name": "Coca-Cola Europacific Partners PLC",
+          "ticker": "STX",
+          "name": "Seagate Technology Holdings plc",
           "assetType": "STOCK",
-          "sector": "Consumer Defensive",
-          "industry": "Beverages",
+          "sector": "Technology",
+          "industry": "Data Storage",
           "alreadyCovered": false
         },
         {
-          "ticker": "KDP",
-          "name": "Keurig Dr Pepper Inc.",
+          "ticker": "WDC",
+          "name": "Western Digital Corporation",
           "assetType": "STOCK",
-          "sector": "Consumer Defensive",
-          "industry": "Beverages",
-          "alreadyCovered": false
-        },
-        {
-          "ticker": "MNST",
-          "name": "Monster Beverage Corporation",
-          "assetType": "STOCK",
-          "sector": "Consumer Defensive",
-          "industry": "Beverages",
+          "sector": "Technology",
+          "industry": "Data Storage",
           "alreadyCovered": false
         }
       ],
       "proposedDefinition": {
-        "name": "필수소비재 음료 방어 성장",
-        "etfs": [],
+        "name": "Data Storage 자금 유입",
+        "etfs": [
+          "QQQ"
+        ],
         "stocks": [
-          "MNST",
-          "KDP",
-          "CCEP"
+          "STX",
+          "WDC"
         ],
-        "nextBuyer": "필수소비재 음료 방어 성장을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-        "preferredEtfs": [],
+        "nextBuyer": "Data Storage 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+        "preferredEtfs": [
+          "QQQ"
+        ],
         "preferredStocks": [
-          "MNST",
-          "KDP",
-          "CCEP"
+          "STX",
+          "WDC"
         ],
-        "breakCondition": "MNST 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+        "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
         "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
       }
     }
