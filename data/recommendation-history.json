@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-11T23:11:41.530Z",
+  "updatedAt": "2026-06-15T03:55:07.056Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
     {
@@ -90,9 +90,9 @@
       "trackingEndDate": "2026-06-11",
       "trackingStatus": "complete",
       "weeklyHigh": 100.51,
-      "latestClose": 96.62,
+      "latestClose": 96.05,
       "weeklyHighReturnPct": -1.66,
-      "latestCloseReturnPct": -5.47,
+      "latestCloseReturnPct": -6.03,
       "resultLabel": "실패",
       "resultComment": "추천 이후 ETF 흐름이 약화됨"
     },
@@ -114,9 +114,9 @@
       "trackingEndDate": "2026-06-11",
       "trackingStatus": "complete",
       "weeklyHigh": 104.45,
-      "latestClose": 103.7,
+      "latestClose": 105.29,
       "weeklyHighReturnPct": -4.68,
-      "latestCloseReturnPct": -5.37,
+      "latestCloseReturnPct": -3.91,
       "resultLabel": "실패",
       "resultComment": "추천 이후 ETF 흐름이 약화됨"
     },
@@ -138,9 +138,9 @@
       "trackingEndDate": "2026-06-11",
       "trackingStatus": "complete",
       "weeklyHigh": 66.19,
-      "latestClose": 63.95,
+      "latestClose": 64,
       "weeklyHighReturnPct": -4.29,
-      "latestCloseReturnPct": -7.53,
+      "latestCloseReturnPct": -7.46,
       "resultLabel": "실패",
       "resultComment": "추천 이후 ETF 흐름이 약화됨"
     },
@@ -254,9 +254,9 @@
       "trackingEndDate": "2026-06-10",
       "trackingStatus": "complete",
       "weeklyHigh": 67.12,
-      "latestClose": 65.12,
+      "latestClose": 65.01,
       "weeklyHighReturnPct": -3.52,
-      "latestCloseReturnPct": -6.4,
+      "latestCloseReturnPct": -6.55,
       "resultLabel": "실패",
       "resultComment": "추천 이후 ETF 흐름이 약화됨"
     },
@@ -278,9 +278,9 @@
       "trackingEndDate": "2026-06-10",
       "trackingStatus": "complete",
       "weeklyHigh": 101.26,
-      "latestClose": 90.92,
+      "latestClose": 90.7,
       "weeklyHighReturnPct": -3.31,
-      "latestCloseReturnPct": -13.19,
+      "latestCloseReturnPct": -13.4,
       "resultLabel": "실패",
       "resultComment": "추천 이후 ETF 흐름이 약화됨"
     },
@@ -302,9 +302,9 @@
       "trackingEndDate": "2026-06-10",
       "trackingStatus": "complete",
       "weeklyHigh": 68.51,
-      "latestClose": 63.95,
+      "latestClose": 64,
       "weeklyHighReturnPct": -2.32,
-      "latestCloseReturnPct": -8.83,
+      "latestCloseReturnPct": -8.75,
       "resultLabel": "실패",
       "resultComment": "추천 이후 ETF 흐름이 약화됨"
     },
@@ -326,9 +326,9 @@
       "trackingEndDate": "2026-06-10",
       "trackingStatus": "complete",
       "weeklyHigh": 90.96,
-      "latestClose": 85.47,
+      "latestClose": 85.33,
       "weeklyHighReturnPct": -3.56,
-      "latestCloseReturnPct": -9.38,
+      "latestCloseReturnPct": -9.53,
       "resultLabel": "실패",
       "resultComment": "추천 이후 ETF 흐름이 약화됨"
     }

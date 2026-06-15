@@ -107,7 +107,7 @@ const ETF_CATEGORY = {
   BLOK: "비트코인 ETF"
 };
 
-const NARRATIVE_DEFINITIONS = [
+const DEFAULT_NARRATIVE_DEFINITIONS = [
   {
     name: "AI 인프라 재가속",
     etfs: ["SMH", "SOXX", "SOXQ", "DRAM", "GRID", "PAVE", "AIQ"],
@@ -220,6 +220,8 @@ const NARRATIVE_DEFINITIONS = [
   }
 ];
 
+const NARRATIVE_DEFINITIONS = loadNarrativeDefinitions();
+
 const NARRATIVE_STATUS = {
   DOMINANT: "지배",
   EMERGING: "부상",
@@ -238,6 +240,24 @@ function readConfigJson(fileName, fallback = null) {
   const filePath = path.join(CONFIG_DIR, fileName);
   if (!fs.existsSync(filePath)) return fallback;
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
+
+function loadNarrativeDefinitions() {
+  const definitions = readConfigJson("narrativeDefinitions.json", null);
+  if (!Array.isArray(definitions) || definitions.length === 0) return DEFAULT_NARRATIVE_DEFINITIONS;
+  const requiredFields = ["name", "etfs", "stocks", "nextBuyer", "preferredEtfs", "preferredStocks", "breakCondition", "todayAction"];
+  const valid = definitions.every((definition) =>
+    definition &&
+    requiredFields.every((field) => Object.prototype.hasOwnProperty.call(definition, field)) &&
+    Array.isArray(definition.etfs) &&
+    Array.isArray(definition.stocks) &&
+    Array.isArray(definition.preferredEtfs) &&
+    Array.isArray(definition.preferredStocks)
+  );
+  if (!valid) {
+    throw new Error("Invalid config/narrativeDefinitions.json. Run npm.cmd run apply-narrative-review or remove the file.");
+  }
+  return definitions;
 }
 
 function ensureDir(dir) {

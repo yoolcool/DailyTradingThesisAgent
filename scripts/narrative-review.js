@@ -5,6 +5,7 @@ const ROOT = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(ROOT, "data");
 const REPORTS_DIR = path.join(ROOT, "reports");
 const SRC_MAIN = path.join(ROOT, "src", "main.js");
+const NARRATIVE_DEFINITIONS_CONFIG = path.join(ROOT, "config", "narrativeDefinitions.json");
 const DAILY_REPORTS_DIR = path.join(DATA_DIR, "dailyReports");
 const NASDAQ_FALLBACK = path.join(ROOT, "config", "nasdaq100Fallback.json");
 const NARRATIVE_STOCKS = path.join(ROOT, "config", "narrativeStocks.json");
@@ -28,8 +29,13 @@ function writeText(filePath, value) {
 }
 
 function extractNarrativeDefinitions() {
+  const configured = readJson(NARRATIVE_DEFINITIONS_CONFIG, null);
+  if (Array.isArray(configured) && configured.length) return configured;
+
   const source = fs.readFileSync(SRC_MAIN, "utf8");
-  const startToken = "const NARRATIVE_DEFINITIONS = ";
+  const startToken = source.includes("const DEFAULT_NARRATIVE_DEFINITIONS = ")
+    ? "const DEFAULT_NARRATIVE_DEFINITIONS = "
+    : "const NARRATIVE_DEFINITIONS = ";
   const start = source.indexOf(startToken);
   if (start < 0) throw new Error("Could not find NARRATIVE_DEFINITIONS in src/main.js");
 
