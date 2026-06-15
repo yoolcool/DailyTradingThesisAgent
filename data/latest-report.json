@@ -1,12 +1,12 @@
 {
   "reportDate": "2026-06-15",
-  "generatedAt": "2026년 6월 15일 월요일 PM 12:38",
+  "generatedAt": "2026년 6월 15일 월요일 PM 12:49",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
     "totalCount": 101,
-    "successCount": 119,
-    "failedCount": 1,
+    "successCount": 120,
+    "failedCount": 0,
     "scoreBands": {
       "strong": 2,
       "interest": 6,
@@ -2572,6 +2572,29 @@
         "failureReason": ""
       },
       {
+        "ticker": "TEAM",
+        "name": "Atlassian Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -15,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.76,
+        "fiveDayReturn": -11.01,
+        "twentyDayReturn": 9.47,
+        "relativeVolume": 0.84,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
         "ticker": "ADSK",
         "name": "Autodesk Inc.",
         "assetType": "STOCK",
@@ -2616,29 +2639,6 @@
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
-      },
-      {
-        "ticker": "TEAM",
-        "name": "Atlassian Corporation",
-        "assetType": "STOCK",
-        "moneyFlowScore": null,
-        "moneyFlowScoreInitial": null,
-        "moneyFlowScoreFinal": null,
-        "finalRawScore": null,
-        "todayActionLabel": "돌파 확인 후 관찰",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": null,
-        "fiveDayReturn": null,
-        "twentyDayReturn": null,
-        "relativeVolume": null,
-        "relatedEtfs": [
-          "IGV",
-          "AIQ",
-          "QQQ"
-        ],
-        "scoreBandLabel": "계산 실패",
-        "scanStatus": "FAILED",
-        "failureReason": "not enough price history"
       }
     ]
   },
@@ -2871,12 +2871,12 @@
         "PLTR",
         "TEAM"
       ],
-      "whyMoneyIsFlowing": "소프트웨어 실적/AI 수익화 관련 QQQ, AIQ, IGV와 CDNS, DDOG, PLTR, TEAM의 5일(-0.95%)·20일(+3.49%) 흐름을 함께 본다. 평균 상대 거래량은 0.89배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "소프트웨어 실적/AI 수익화 관련 QQQ, AIQ, IGV와 CDNS, DDOG, PLTR, TEAM의 5일(-2.39%)·20일(+4.35%) 흐름을 함께 본다. 평균 상대 거래량은 0.88배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "AI 수익화와 소프트웨어 실적 개선을 확인한 성장주 ETF 자금과 실적 모멘텀 자금",
       "bestTradingVehicle": "ETF 우선: IGV, AIQ, QQQ / 개별 종목 우선: DDOG, CDNS, PLTR",
       "breakCondition": "IGV 20일선 이탈 또는 소프트웨어 실적주 절반 이상 5일선 이탈",
       "todayAction": "실적/가이던스 촉매와 가격 반응이 같이 확인될 때만 분리 테마로 관찰",
-      "summaryReason": "QQQ, AIQ, CDNS, DDOG 중심으로 5일 -0.95%, 20일 +3.49% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "QQQ, AIQ, CDNS, DDOG 중심으로 5일 -2.39%, 20일 +4.35% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": -4,
       "relativeVolumeAvg": 1,
@@ -3026,12 +3026,12 @@
         "TEAM",
         "MSFT"
       ],
-      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 QQQ, AIQ, IGV와 PLTR, DDOG, TEAM, MSFT의 5일(-2.18%)·20일(-1.21%) 흐름을 함께 본다. 평균 상대 거래량은 0.90배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 QQQ, AIQ, IGV와 PLTR, DDOG, TEAM, MSFT의 5일(-3.28%)·20일(+0.13%) 흐름을 함께 본다. 평균 상대 거래량은 0.89배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "AI 소프트웨어 실적 기대를 사는 ETF 자금, 엔터프라이즈 소프트웨어 스윙 트레이더, 신고가 추종 자금",
       "bestTradingVehicle": "ETF 우선: IGV, AIQ, QQQ / 개별 종목 우선: PLTR, DDOG, TEAM",
       "breakCondition": "IGV/AIQ 20일선 이탈, 관련 소프트웨어 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
       "todayAction": "추격보다 눌림 후 재상승 확인",
-      "summaryReason": "QQQ, AIQ, PLTR, DDOG 중심으로 5일 -2.18%, 20일 -1.21% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "QQQ, AIQ, PLTR, DDOG 중심으로 5일 -3.28%, 20일 +0.13% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": -4,
       "relativeVolumeAvg": 1,
@@ -3609,7 +3609,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_72h - Semiconductor ETFs 101: DRAM, EUV, SMH, SOXX, SOXL — The Complete Guide for 2026",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / mna / under_6h - Trump heads to G7 summit in France after reaching deal to end war with Iran",
       "tieBreakerReason": "최종 원점수 65, 리스크 패널티 -4, 5일 수익률 +10.46%, 상대 거래량 0.89배 순으로 정렬",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",
@@ -3664,7 +3664,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / stale - SOXQ Semiconductor ETF Surges 181.74% as AI Chip Boom Lifts NVIDIA, Broadcom, AMD",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / mna / under_6h - Trump heads to G7 summit in France after reaching deal to end war with Iran",
       "tieBreakerReason": "최종 원점수 58, 리스크 패널티 -4, 5일 수익률 +9.35%, 상대 거래량 0.86배 순으로 정렬",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",
@@ -3727,14 +3727,14 @@
         "label": "거래량 확인 전 관찰",
         "status": "관찰",
         "reasons": [
-          "Entry Quality 3 < 45",
+          "Entry Quality 2 < 45",
           "RVOL 0.70x < 1.00x"
         ]
       },
       "marketContext": {
         "marketRegime": "중립",
         "candidateEnvironment": "관찰",
-        "reason": "후보는 당일 음봉 또는 약세 / Entry Quality 3 < 45 / RVOL 0.70x < 1.00x"
+        "reason": "후보는 당일 음봉 또는 약세 / Entry Quality 2 < 45 / RVOL 0.70x < 1.00x"
       },
       "linkedNarrative": "소프트웨어 실적/AI 수익화",
       "narrativeStatus": "약화",
@@ -3771,7 +3771,7 @@
         },
         "reasonConfidence": "MEDIUM",
         "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-        "directCatalyst": "직접 촉매: MarketWatch RSS / macro / under_24h - Will the real Kevin Warsh please stand up? Ahead of his first Fed meeting, economists honestly don&#x2019;t know what to expect.",
+        "directCatalyst": "직접 촉매: CNBC Markets RSS / mna / under_6h - Trump heads to G7 summit in France after reaching deal to end war with Iran",
         "tieBreakerReason": "최종 원점수 70, 리스크 패널티 0, 5일 수익률 +4.01%, 상대 거래량 1.16배 순으로 정렬",
         "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
         "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -3882,7 +3882,7 @@
         },
         "reasonConfidence": "MEDIUM",
         "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-        "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / stale - Market Minute 6-09-26- OpenAI Joins Heated IPO Race",
+        "directCatalyst": "직접 촉매: CNBC Markets RSS / analyst_upgrade / under_24h - Elon Musk drifted from Larry Page over a decade ago, but their companies are closer than ever",
         "tieBreakerReason": "최종 원점수 67, 리스크 패널티 -5, 5일 수익률 +4.09%, 상대 거래량 1.50배 순으로 정렬",
         "entryCondition": "20일선 위 눌림 후 재상승 확인",
         "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -4070,14 +4070,14 @@
     "priceVolumeStatus": "CONNECTED",
     "priceAsOfDate": "2026-06-12",
     "priceAsOfLabel": "2026-06-12 US regular close",
-    "reportGeneratedAtKST": "2026-06-15 12:38",
+    "reportGeneratedAtKST": "2026-06-15 12:49",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-06-15T03:38:30.451Z",
-    "newsLastUpdatedAt": "2026-06-15T03:38:30.451Z",
+    "newsFetchedAt": "2026-06-15T03:49:37.047Z",
+    "newsLastUpdatedAt": "2026-06-15T03:49:37.047Z",
     "latestNewsPublishedAt": "2026-06-15T03:02:00.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
-    "newsSourceStatus": "Yahoo Finance RSS PARTIAL, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
+    "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS CONNECTED, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
     "newsReliability": "MEDIUM",
     "etfBreadthStatus": "PARTIAL",
     "etfBreadthSampleCount": "1~4",
@@ -4100,7 +4100,7 @@
     "label": "신규 추격 없음 / 관찰",
     "entryReadyCount": 0,
     "conditionalCount": 0,
-    "watchCount": 126,
+    "watchCount": 127,
     "banCount": 30,
     "actionCandidateCount": 0,
     "mainLimiters": [
@@ -4112,11 +4112,11 @@
     "noTradeMessage": "오늘은 추세 후보는 있으나, 왜 돈이 몰리는가와 누가 더 비싸게 사줄 수 있는가를 주문 실행 신뢰도와 거래량이 충분히 뒷받침하지 못해 신규 추격은 보류한다. 기존 관심 종목은 전일 고점 돌파와 RVOL 1.00x 회복을 확인한 뒤 조건부로 본다."
   },
   "actionGateSummary": {
-    "total": 156,
+    "total": 157,
     "items": [
       {
         "label": "RVOL < 1.00x",
-        "count": 123
+        "count": 124
       },
       {
         "label": "거래대금 유동성 낮음",
@@ -4124,7 +4124,7 @@
       },
       {
         "label": "Entry Quality < 60",
-        "count": 156
+        "count": 157
       },
       {
         "label": "Exhaustion Risk >= 70",
@@ -4136,7 +4136,7 @@
       },
       {
         "label": "뉴스 직접성 부족",
-        "count": 99
+        "count": 100
       }
     ],
     "topLimiters": [

@@ -51,19 +51,19 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 오늘 결론: 신규 추격 없음 / 관찰
 - 신규 진입 후보: 0개
 - 조건부 진입 후보: 0개
-- 관찰 후보: 126개
+- 관찰 후보: 127개
 - 주요 제한 요인: Entry Quality 부족, RVOL 미달, 뉴스 직접성 부족
 - 주문 판단: 시장가 금지 / 지정가 또는 관찰
 - 실전 판단: 오늘은 추세 후보는 있으나, 왜 돈이 몰리는가와 누가 더 비싸게 사줄 수 있는가를 주문 실행 신뢰도와 거래량이 충분히 뒷받침하지 못해 신규 추격은 보류한다. 기존 관심 종목은 전일 고점 돌파와 RVOL 1.00x 회복을 확인한 뒤 조건부로 본다.
 
 ### 후보 제한 요인 집계
 
-- RVOL < 1.00x: 123개
+- RVOL < 1.00x: 124개
 - 거래대금 유동성 낮음: 14개
-- Entry Quality < 60: 156개
+- Entry Quality < 60: 157개
 - Exhaustion Risk >= 70: 0개
 - ETF breadth 샘플 부족: 37개
-- 뉴스 직접성 부족: 99개
+- 뉴스 직접성 부족: 100개
 
 ## 데이터 신뢰도
 
@@ -72,13 +72,13 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 주문 실행 신뢰도: LOW
 - ETF breadth 신뢰도: LOW
 - 신뢰도 해석: 테마 확산 판단 제한, 거래대금 유동성 낮음 또는 확인 불가, 프리/애프터마켓 확인 불가
-- 리포트 생성 시각: 2026-06-15 12:38 KST
+- 리포트 생성 시각: 2026-06-15 12:49 KST
 - 가격 기준 거래일: 2026-06-12 US regular close
-- 뉴스 수집 시각: 2026-06-15 12:38 KST
+- 뉴스 수집 시각: 2026-06-15 12:49 KST
 - 가장 최근 뉴스 발행 시각: 2026-06-15 12:02 KST
 - 뉴스 신선도 상태: FRESH
 - 뉴스 소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API
-- 뉴스 소스 상태: Yahoo Finance RSS PARTIAL, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED
+- 뉴스 소스 상태: Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS CONNECTED, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED
 - 뉴스 신뢰도: MEDIUM
 - 추천 적용 거래일: 2026-06-14 US regular session
 - 가격/거래량 데이터 상태: 연결됨
@@ -97,7 +97,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스: 일부 연결
 - ETF 구성종목 확산도: 일부 연결
 - 거래대금 유동성: 일부 연결
-- 생성 시각: 2026년 6월 15일 월요일 PM 12:38
+- 생성 시각: 2026년 6월 15일 월요일 PM 12:49
 - 시장 상태: 중립
 - 오늘 돈의 방향: AI 반도체 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 강한 테마 TOP 3: 반도체 장비/공급망(83), 메모리/HBM(69), IPO/신규상장 ETF(67)
@@ -546,22 +546,22 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Federal Reserve RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 9/7/0
+  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 14/1/1
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 1
+  - 강한 촉매 수: 3
   - 직접 촉매: 없음
   - 보조 뉴스: MarketWatch RSS sector_theme / mna / under_6h
-  - 뉴스 수집 시각: 2026-06-15 12:38 KST
+  - 뉴스 수집 시각: 2026-06-15 12:49 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-15 12:02 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
   - 핵심 뉴스 요약: Stock futures jump, oil prices fall as Trump says U.S. has reached peace deal with Iran
-  - 원점수/상한 점수: +20 / +12
+  - 원점수/상한 점수: +27 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 미연결
   - 샘플 수: 0/0
@@ -665,18 +665,18 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 최근 뉴스 상태: 일부 연결
   - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 15/0/1
+  - 긍정/중립/부정: 14/1/1
   - 직접성/방향성/신선도: 2/1/4
   - 강한 촉매 수: 3
   - 직접 촉매: 없음
   - 보조 뉴스: MarketWatch RSS sector_theme / mna / under_6h
-  - 뉴스 수집 시각: 2026-06-15 12:38 KST
+  - 뉴스 수집 시각: 2026-06-15 12:49 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-15 12:02 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
   - 핵심 뉴스 요약: Stock futures jump, oil prices fall as Trump says U.S. has reached peace deal with Iran
-  - 원점수/상한 점수: +28 / +12
+  - 원점수/상한 점수: +27 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
@@ -727,7 +727,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +10.38%
 - 상대 거래량: 1.50배
 - 52주 고점 대비 위치: -5.14%
-- whyMoneyIsFlowing: 20일 +10.38%, 5일 +4.09%, 상대 거래량 1.50배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale
+- whyMoneyIsFlowing: 20일 +10.38%, 5일 +4.09%, 상대 거래량 1.50배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS analyst_upgrade/under_24h
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
 - 진입 조건: 20일선 위 눌림 후 재상승 확인
@@ -780,22 +780,22 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Federal Reserve RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 12/4/0
+  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 13/2/1
   - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 1
-  - 직접 촉매: Yahoo Finance RSS / general_market / stale / positive - Market Minute 6-09-26- OpenAI Joins Heated IPO Race
+  - 강한 촉매 수: 3
+  - 직접 촉매: CNBC Markets RSS / analyst_upgrade / under_24h / neutral - Elon Musk drifted from Larry Page over a decade ago, but their companies are closer than ever
   - 보조 뉴스: MarketWatch RSS sector_theme / mna / under_6h
-  - 뉴스 수집 시각: 2026-06-15 12:38 KST
+  - 뉴스 수집 시각: 2026-06-15 12:49 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-15 12:02 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
   - 핵심 뉴스 요약: Stock futures jump, oil prices fall as Trump says U.S. has reached peace deal with Iran
-  - 원점수/상한 점수: +25 / +12
+  - 원점수/상한 점수: +28 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 미연결
   - 샘플 수: 0/0
@@ -844,7 +844,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +12.49%
 - 상대 거래량: 0.89배
 - 52주 고점 대비 위치: -3.65%
-- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.89배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: LIQUID
+- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.89배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 진입 조건: 상대 거래량 1.0배 회복 후 관찰
@@ -897,22 +897,22 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 13/3/0
-  - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 2
-  - 직접 촉매: Yahoo Finance RSS / general_market / under_72h / positive - Semiconductor ETFs 101: DRAM, EUV, SMH, SOXX, SOXL — The Complete Guide for 2026
+  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS, Yahoo Finance RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 15/0/1
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 4
+  - 직접 촉매: 없음
   - 보조 뉴스: MarketWatch RSS sector_theme / mna / under_6h
-  - 뉴스 수집 시각: 2026-06-15 12:38 KST
+  - 뉴스 수집 시각: 2026-06-15 12:49 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-15 12:02 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
   - 핵심 뉴스 요약: Stock futures jump, oil prices fall as Trump says U.S. has reached peace deal with Iran
-  - 원점수/상한 점수: +28 / +12
+  - 원점수/상한 점수: +30 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 3/3
@@ -961,7 +961,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +10.83%
 - 상대 거래량: 0.86배
 - 52주 고점 대비 위치: -4.75%
-- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.86배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS product/stale / 유동성: ACCEPTABLE
+- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.86배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 진입 조건: 상대 거래량 1.0배 회복 후 관찰
@@ -1014,14 +1014,14 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Federal Reserve RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 12/4/0
-  - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 2
-  - 직접 촉매: Yahoo Finance RSS / product / stale / positive - SOXQ Semiconductor ETF Surges 181.74% as AI Chip Boom Lifts NVIDIA, Broadcom, AMD
+  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 14/1/1
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 3
+  - 직접 촉매: 없음
   - 보조 뉴스: MarketWatch RSS sector_theme / mna / under_6h
-  - 뉴스 수집 시각: 2026-06-15 12:38 KST
+  - 뉴스 수집 시각: 2026-06-15 12:49 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-15 12:02 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1029,7 +1029,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 핵심 뉴스 요약: Stock futures jump, oil prices fall as Trump says U.S. has reached peace deal with Iran
   - 원점수/상한 점수: +27 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 3/3
@@ -1097,13 +1097,13 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - universe source: fallback from StockAnalysis Nasdaq-100 list checked 2026-06-02
 - universe fetchStatus: FALLBACK
 - 총 스캔 종목 수: 101
-- 데이터 수집 성공: 119
-- 데이터 수집 실패: -18
+- 데이터 수집 성공: 120
+- 데이터 수집 실패: -19
 - 상세 데이터 수집 대상: 가격/거래량 1차 스캔 상위 20개
 - 오늘 진입 후보: 0
 - 오늘 눌림 대기: 0
-- 오늘 관찰: 97
-- 오늘 매매 금지: 23
+- 오늘 관찰: 98
+- 오늘 매매 금지: 22
 - 개별 종목 진입 후보: 없음
 - 개별 종목 눌림 대기: 없음
 - 개별 종목 매매 금지: ARM, INTC
@@ -1206,7 +1206,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 3
   - 직접 촉매: Yahoo Finance RSS / general_market / under_72h / positive - ASML’s Mistral AI Stake Adds New Angle To Hotly Valued Shares
   - 보조 뉴스: MarketWatch RSS sector_theme / mna / under_6h
-  - 뉴스 수집 시각: 2026-06-15 12:38 KST
+  - 뉴스 수집 시각: 2026-06-15 12:49 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-15 12:02 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
@@ -1318,7 +1318,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 4
   - 직접 촉매: Yahoo Finance RSS / guidance / under_72h / positive - Arm Holdings (ARM) Gets BofA Backing, 37% PT Upgrade, Climbs 11%
   - 보조 뉴스: MarketWatch RSS sector_theme / mna / under_6h
-  - 뉴스 수집 시각: 2026-06-15 12:38 KST
+  - 뉴스 수집 시각: 2026-06-15 12:49 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-15 12:02 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1424,18 +1424,18 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 최근 뉴스 상태: 일부 연결
   - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 15/0/1
+  - 긍정/중립/부정: 14/1/1
   - 직접성/방향성/신선도: 2/1/4
   - 강한 촉매 수: 3
   - 직접 촉매: 없음
   - 보조 뉴스: MarketWatch RSS sector_theme / mna / under_6h
-  - 뉴스 수집 시각: 2026-06-15 12:38 KST
+  - 뉴스 수집 시각: 2026-06-15 12:49 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-15 12:02 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
   - 핵심 뉴스 요약: Stock futures jump, oil prices fall as Trump says U.S. has reached peace deal with Iran
-  - 원점수/상한 점수: +28 / +12
+  - 원점수/상한 점수: +27 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
@@ -1542,7 +1542,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 3
   - 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_72h / positive - Cantor Fitzgerald Raises its Price Target on Applied Materials (AMAT)
   - 보조 뉴스: MarketWatch RSS sector_theme / mna / under_6h
-  - 뉴스 수집 시각: 2026-06-15 12:38 KST
+  - 뉴스 수집 시각: 2026-06-15 12:49 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-15 12:02 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1655,7 +1655,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 3
   - 직접 촉매: Yahoo Finance RSS / analyst_downgrade / under_72h / mixed - Lam Research (LRCX) Stock Fair Value Edges Higher After Analyst Target Increases
   - 보조 뉴스: MarketWatch RSS sector_theme / mna / under_6h
-  - 뉴스 수집 시각: 2026-06-15 12:38 KST
+  - 뉴스 수집 시각: 2026-06-15 12:49 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-15 12:02 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1731,8 +1731,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 주의: Top5 카드의 moneyFlowScore(최종)는 1차 점수에 상세 데이터 가감점과 리스크 패널티를 더한 값이다. 따라서 아래 전체 표의 1차 순위와 Top5 최종 순위는 다를 수 있다.
 
 - 총 스캔 종목 수: 101
-- 점수 계산 성공: 119
-- 점수 계산 실패: 1
+- 점수 계산 성공: 120
+- 점수 계산 실패: 0
 - moneyFlowScore(1차) 80점 이상: 2
 - moneyFlowScore(1차) 65~79점: 6
 - moneyFlowScore(1차) 50~64점: 5
@@ -1885,14 +1885,14 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 115 | INTU | Intuit Inc. | 0 | 0 | -39 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.07% | -6.75% | -26.85% | 0.70 | IGV, AIQ, QQQ |
 | 116 | AVAV | AeroVironment | 0 | 0 | -31 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -7.14% | -8.25% | +3.21% | 0.83 | XAR, SHLD, ITA, PPA |
 | 117 | APP | AppLovin Corporation | 0 | 0 | -16 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +3.80% | -10.85% | +2.39% | 0.92 | IGV, AIQ, QQQ |
-| 118 | ADSK | Autodesk Inc. | 0 | 0 | -18 | 우선순위 낮음/매매 금지 | 제외 | LOW | -3.47% | -13.71% | -15.15% | 2.03 | IGV, AIQ, QQQ |
-| 119 | ADBE | Adobe Inc. | 0 | 0 | -18 | 우선순위 낮음/매매 금지 | 제외 | LOW | -6.76% | -18.86% | -13.92% | 3.57 | IGV, AIQ, QQQ |
-| 120 | TEAM | Atlassian Corporation | N/A | - | - | 계산 실패 | 돌파 확인 후 관찰 | LOW | - | - | - | - | IGV, AIQ, QQQ |
+| 118 | TEAM | Atlassian Corporation | 0 | 0 | -15 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.76% | -11.01% | +9.47% | 0.84 | IGV, AIQ, QQQ |
+| 119 | ADSK | Autodesk Inc. | 0 | 0 | -18 | 우선순위 낮음/매매 금지 | 제외 | LOW | -3.47% | -13.71% | -15.15% | 2.03 | IGV, AIQ, QQQ |
+| 120 | ADBE | Adobe Inc. | 0 | 0 | -18 | 우선순위 낮음/매매 금지 | 제외 | LOW | -6.76% | -18.86% | -13.92% | 3.57 | IGV, AIQ, QQQ |
 
 </details>
 
 #### 데이터 수집 실패 종목
-- TEAM: not enough price history
+데이터 수집 실패 종목 없음
 
 ## 감시 ETF 목록
 
@@ -1900,40 +1900,40 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | --- | --- | ---: | --- | --- | --- |
 | DRAM | 메모리/HBM ETF | 62 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.80배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: LIQUID |
 | SMH | AI 반도체 ETF | 57 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.79배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
-| SOXX | AI 반도체 ETF | 65 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.89배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: LIQUID |
-| SOXQ | AI 반도체 ETF | 58 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.86배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS product/stale / 유동성: ACCEPTABLE |
+| SOXX | AI 반도체 ETF | 65 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.89배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: LIQUID |
+| SOXQ | AI 반도체 ETF | 58 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.86배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: ACCEPTABLE |
 | IGV | 클라우드/엔터프라이즈 소프트웨어 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: LIQUID |
-| AIQ | AI 소프트웨어 ETF | 35 | 매매 금지 | MEDIUM | 20일 +2.51%, 5일 +2.37%, 상대 거래량 1.15배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
+| AIQ | AI 소프트웨어 ETF | 35 | 매매 금지 | MEDIUM | 20일 +2.51%, 5일 +2.37%, 상대 거래량 1.15배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS mna/under_6h / 유동성: ACCEPTABLE |
 | BOTZ | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h |
 | ROBO | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.42배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h |
 | CIBR | 사이버보안 ETF | 1 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.69배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: ACCEPTABLE |
 | HACK | 사이버보안 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.38배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h |
 | IHAK | 사이버보안 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.57배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h |
 | ITA | 방산 ETF | 23 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: ACCEPTABLE |
-| XAR | 방산 ETF | 10 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.93배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| XAR | 방산 ETF | 10 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.93배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h |
 | SHLD | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.48배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h |
 | PPA | 방산 ETF | 9 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.97배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h |
-| PAVE | 인프라 ETF | 27 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.96배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| PAVE | 인프라 ETF | 27 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.96배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h |
 | GRID | 전력망 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.58배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h |
-| IFRA | 인프라 ETF | 24 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.89배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| IFRA | 인프라 ETF | 24 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.89배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h |
 | XLU | 전력/유틸리티 ETF | 23 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.86배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: ACCEPTABLE |
 | URA | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.73배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: ACCEPTABLE |
 | NLR | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.52배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h |
-| LIT | 배터리/리튬 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.45배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| LIT | 배터리/리튬 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.45배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h |
 | COPX | 구리/금속 ETF | 50 | 매매 금지 | MEDIUM | 20일 -3.82%, 5일 +6.61%, 상대 거래량 1.08배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS mna/under_6h / 유동성: ACCEPTABLE |
 | XME | 금속/광산 ETF | 30 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.64배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: ACCEPTABLE |
-| XLE | 전통 에너지 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.82배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: LIQUID |
-| OIH | 전통 에너지 ETF | 7 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.92배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
-| ARKK | 혁신 성장 ETF | 20 | 매매 금지 | LOW | 20일 -3.01%, 5일 +1.56%, 상대 거래량 1.41배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: ACCEPTABLE |
-| IPO | IPO/신규상장 ETF | 67 | 매매 금지 | MEDIUM | 20일 +10.38%, 5일 +4.09%, 상대 거래량 1.50배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale |
+| XLE | 전통 에너지 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.82배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: LIQUID |
+| OIH | 전통 에너지 ETF | 7 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.92배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: ACCEPTABLE |
+| ARKK | 혁신 성장 ETF | 20 | 매매 금지 | LOW | 20일 -3.01%, 5일 +1.56%, 상대 거래량 1.41배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS mna/under_6h / 유동성: ACCEPTABLE |
+| IPO | IPO/신규상장 ETF | 67 | 매매 금지 | MEDIUM | 20일 +10.38%, 5일 +4.09%, 상대 거래량 1.50배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS analyst_upgrade/under_24h |
 | KWEB | 중국 인터넷 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.52배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: ACCEPTABLE |
-| MAGS | 메가캡 플랫폼 ETF | 8 | 매매 금지 | LOW | 20일 -8.50%, 5일 -2.41%, 상대 거래량 1.30배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
+| MAGS | 메가캡 플랫폼 ETF | 8 | 매매 금지 | LOW | 20일 -8.50%, 5일 -2.41%, 상대 거래량 1.30배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS mna/under_6h / 유동성: ACCEPTABLE |
 | QQQ | 시장 기준 ETF | 42 | 매매 금지 | MEDIUM | 20일 +0.22%, 5일 +2.31%, 상대 거래량 1.06배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: LIQUID |
-| SPY | 시장 기준 ETF | 31 | 매매 금지 | LOW | 20일 -0.86%, 5일 +0.57%, 상대 거래량 1.05배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: LIQUID |
+| SPY | 시장 기준 ETF | 31 | 매매 금지 | LOW | 20일 -0.86%, 5일 +0.57%, 상대 거래량 1.05배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS mna/under_6h / 유동성: LIQUID |
 | IWM | 시장 기준 ETF | 70 | 관찰 | MEDIUM | 20일 +2.99%, 5일 +4.01%, 상대 거래량 1.16배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS mna/under_6h / 유동성: LIQUID |
 | TLT | 채권 ETF | 21 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.85배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS macro/under_24h / 유동성: LIQUID |
 | GLD | 금 ETF | 1 | 매매 금지 | LOW | 20일 -9.52%, 5일 -2.45%, 상대 거래량 1.03배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS mna/under_6h / 유동성: LIQUID |
-| IBIT | 비트코인 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.73배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: LIQUID |
+| IBIT | 비트코인 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.73배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h / 유동성: LIQUID |
 | BLOK | 비트코인 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.38배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS mna/under_6h |
 
 ## 3. 최종 실행 판단
@@ -1959,9 +1959,9 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스:
   - 상태: 일부 연결
   - 소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API
-  - 소스별 상태: Yahoo Finance RSS PARTIAL; MarketWatch RSS CONNECTED; CNBC Markets RSS PARTIAL; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
   - 수집 뉴스 수: 912
-  - 실패/제한 사유: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured; CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html
+  - 실패/제한 사유: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 
 - ETF 구성종목 확산도:
   - 상태: 일부 연결
