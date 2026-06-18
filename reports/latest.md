@@ -74,9 +74,9 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 주문 실행 신뢰도: LOW
 - ETF breadth 신뢰도: LOW
 - 신뢰도 해석: 테마 확산 판단 제한, 거래대금 유동성 낮음 또는 확인 불가, 프리/애프터마켓 확인 불가
-- 리포트 생성 시각: 2026-06-18 12:39 KST
+- 리포트 생성 시각: 2026-06-18 12:58 KST
 - 가격 기준 거래일: 2026-06-17 US regular close
-- 뉴스 수집 시각: 2026-06-18 12:39 KST
+- 뉴스 수집 시각: 2026-06-18 12:58 KST
 - 가장 최근 뉴스 발행 시각: 2026-06-18 12:21 KST
 - 뉴스 신선도 상태: FRESH
 - 뉴스 소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API
@@ -99,7 +99,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스: 일부 연결
 - ETF 구성종목 확산도: 일부 연결
 - 거래대금 유동성: 일부 연결
-- 생성 시각: 2026년 6월 18일 목요일 PM 12:39
+- 생성 시각: 2026년 6월 18일 목요일 PM 12:58
 - 시장 상태: 중립
 - 오늘 돈의 방향: 반도체 장비/공급망 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 강한 테마 TOP 3: 반도체 장비/공급망(100), 메모리/HBM(96), Materials(91)
@@ -553,7 +553,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +19.21%
 - 상대 거래량: 1.50배
 - 52주 고점 대비 위치: -4.65%
-- whyMoneyIsFlowing: 20일 +19.21%, 5일 +10.46%, 상대 거래량 1.50배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: ACCEPTABLE
+- whyMoneyIsFlowing: 20일 +19.21%, 5일 +10.46%, 상대 거래량 1.50배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
@@ -605,22 +605,22 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Federal Reserve RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 10/6/0
-  - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 1
-  - 직접 촉매: Yahoo Finance RSS / general_market / under_72h / positive - Why This Semiconductor ETF Is the Only Bet You Need Before the Next AI Wave
-  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-18 12:39 KST
-  - 가장 최근 뉴스 발행 시각: 2026-06-18 09:13 KST
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 12/3/1
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 0
+  - 직접 촉매: 없음
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-06-18 12:58 KST
+  - 가장 최근 뉴스 발행 시각: 2026-06-18 12:21 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Rumble gets 22,000 Nvidia chips, but the video company&#x2019;s CEO insists this isn&#x2019;t a fad-like pivot
-  - 원점수/상한 점수: +23 / +12
+  - 핵심 뉴스 요약: Google Gemini co-lead Noam Shazeer leaves for OpenAI
+  - 원점수/상한 점수: +19 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 3/3
@@ -730,7 +730,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-18 12:39 KST
+  - 뉴스 수집 시각: 2026-06-18 12:58 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-18 12:21 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -846,7 +846,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / stale / neutral - Should You Invest in the Global X U.S. Infrastructure Development ETF (PAVE)?
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-18 12:39 KST
+  - 뉴스 수집 시각: 2026-06-18 12:58 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-18 09:13 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
@@ -963,7 +963,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-18 12:39 KST
+  - 뉴스 수집 시각: 2026-06-18 12:58 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-18 12:21 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1080,7 +1080,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-18 12:39 KST
+  - 뉴스 수집 시각: 2026-06-18 12:58 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-18 12:21 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1271,7 +1271,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 0
   - 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / positive - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-18 12:39 KST
+  - 뉴스 수집 시각: 2026-06-18 12:58 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-18 12:21 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1382,7 +1382,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 0
   - 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / positive - KLA Corporation (KLAC) Price Target Raised by $500. Here is Why
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-18 12:39 KST
+  - 뉴스 수집 시각: 2026-06-18 12:58 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-18 12:21 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1493,7 +1493,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - Applied Materials, ASML, Lam Hit Record Highs, Lead Chip Gear Stocks Rally
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-18 12:39 KST
+  - 뉴스 수집 시각: 2026-06-18 12:58 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-18 12:21 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1604,7 +1604,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Freeport McMoRan (FCX) Stock Could Be 28% Below Fair Value On Copper Growth Narrative
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-18 12:39 KST
+  - 뉴스 수집 시각: 2026-06-18 12:58 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-18 12:21 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 부정
@@ -1716,7 +1716,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 강한 촉매 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Is Applied Materials (AMAT) One of the Most Profitable American Stocks to Buy in 2026?
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-06-18 12:39 KST
+  - 뉴스 수집 시각: 2026-06-18 12:58 KST
   - 가장 최근 뉴스 발행 시각: 2026-06-18 12:21 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1962,20 +1962,20 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | DRAM | 메모리/HBM ETF | 80 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.99배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
 | SMH | AI 반도체 ETF | 66 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.96배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
 | SOXX | AI 반도체 ETF | 70 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.80배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
-| SOXQ | AI 반도체 ETF | 100 | 관찰 | MEDIUM | 20일 +19.21%, 5일 +10.46%, 상대 거래량 1.50배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: ACCEPTABLE |
+| SOXQ | AI 반도체 ETF | 100 | 관찰 | MEDIUM | 20일 +19.21%, 5일 +10.46%, 상대 거래량 1.50배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
 | IGV | 클라우드/엔터프라이즈 소프트웨어 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.96배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
 | AIQ | AI 소프트웨어 ETF | 5 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.89배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| BOTZ | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| BOTZ | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
 | ROBO | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.42배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
 | CIBR | 사이버보안 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.83배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
 | HACK | 사이버보안 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.65배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
 | IHAK | 사이버보안 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.81배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
 | ITA | 방산 ETF | 56 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.83배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: ACCEPTABLE |
-| XAR | 방산 ETF | 42 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.95배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| XAR | 방산 ETF | 42 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.95배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
 | SHLD | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.69배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS product/under_72h |
 | PPA | 방산 ETF | 64 | 매매 금지 | MEDIUM | 20일 +7.68%, 5일 +6.03%, 상대 거래량 1.07배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS product/under_72h |
 | PAVE | 인프라 ETF | 70 | 관찰 | MEDIUM | 20일 +7.83%, 5일 +4.85%, 상대 거래량 2.52배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
-| GRID | 전력망 인프라 ETF | 1 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.62배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| GRID | 전력망 인프라 ETF | 1 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.62배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
 | IFRA | 인프라 ETF | 41 | 매매 금지 | MEDIUM | 20일 +2.81%, 5일 +2.60%, 상대 거래량 1.35배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_72h |
 | XLU | 전력/유틸리티 ETF | 32 | 매매 금지 | LOW | 20일 +0.27%, 5일 +1.05%, 상대 거래량 1.10배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
 | URA | 원전/우라늄 ETF | 2 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.67배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS mna/under_72h / 유동성: ACCEPTABLE |
