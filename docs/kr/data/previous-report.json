@@ -13,7 +13,7 @@
     "sessionLabel": "KRX regular session"
   },
   "reportDate": "2026-06-18",
-  "generatedAt": "2026년 6월 18일 목요일 오후 3:55",
+  "generatedAt": "2026년 6월 18일 목요일 오후 4:00",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-18",
@@ -6365,10 +6365,10 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-06-18",
     "priceAsOfLabel": "2026-06-18 KRX 정규장 종가",
-    "reportGeneratedAtKST": "2026-06-18 15:55",
+    "reportGeneratedAtKST": "2026-06-18 16:00",
     "newsStatus": "DISABLED",
-    "newsFetchedAt": "2026-06-18T06:55:24.534Z",
-    "newsLastUpdatedAt": "2026-06-18T06:55:24.534Z",
+    "newsFetchedAt": "2026-06-18T07:00:51.942Z",
+    "newsLastUpdatedAt": "2026-06-18T07:00:51.942Z",
     "latestNewsPublishedAt": null,
     "newsFreshnessStatus": "UNKNOWN",
     "newsSources": "DART",
