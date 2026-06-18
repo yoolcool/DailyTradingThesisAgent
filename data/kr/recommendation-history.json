@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-18T06:55:24.632Z",
+  "updatedAt": "2026-06-18T07:00:52.041Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
     {
       "reportDate": "2026-06-18",
       "reportGeneratedAt": "2026-06-18T06:44:35.028Z",
-      "reportGeneratedAtET": "2026-06-18 02:55:24 ET",
+      "reportGeneratedAtET": "2026-06-18 03:00:52 ET",
       "ticker": "402340.KS",
       "assetType": "STOCK",
       "rank": 3,
@@ -52,7 +52,7 @@
     {
       "reportDate": "2026-06-18",
       "reportGeneratedAt": "2026-06-18T06:54:32.013Z",
-      "reportGeneratedAtET": "2026-06-18 02:55:24 ET",
+      "reportGeneratedAtET": "2026-06-18 03:00:52 ET",
       "ticker": "000660.KS",
       "assetType": "STOCK",
       "rank": 2,
@@ -75,7 +75,7 @@
     {
       "reportDate": "2026-06-18",
       "reportGeneratedAt": "2026-06-18T06:44:35.028Z",
-      "reportGeneratedAtET": "2026-06-18 02:55:24 ET",
+      "reportGeneratedAtET": "2026-06-18 03:00:52 ET",
       "ticker": "011070.KS",
       "assetType": "STOCK",
       "rank": 1,

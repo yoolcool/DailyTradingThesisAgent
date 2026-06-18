@@ -669,7 +669,9 @@ function directCatalystLine(assetType, ticker, newsSummary, name = "") {
   if (!newsSummary || !isConnectedLike(newsSummary.status) || !newsSummary.itemCount) return "";
   if (newsSummary.directCatalyst) {
     const item = newsSummary.directCatalyst;
-    return `직접 촉매: ${item.source} / ${item.eventType} / ${item.freshnessBucket} - ${item.title}`;
+    const eventLabel = item.eventLabel || item.eventType;
+    const materiality = item.materialityScore !== undefined ? ` / 중요도 ${item.materialityScore}` : "";
+    return `직접 촉매: ${item.source} / ${eventLabel} / ${item.freshnessBucket} / ${item.direction}${materiality} - ${item.title}`;
   }
   const directKeywords = [
     "earnings", "guidance", "upgrade", "contract", "partnership", "policy", "regulation",
@@ -3791,8 +3793,9 @@ function newsMarkdown(summary) {
   - 긍정/중립/부정: ${counts.positive || 0}/${counts.neutral || 0}/${counts.negative || 0}
   - 직접성/방향성/신선도: ${summary.directnessScore ?? 0}/${summary.directionScore ?? 0}/${summary.freshnessScore ?? 0}
   - 강한 촉매 수: ${summary.strongCatalystCount ?? 0}
-  - 직접 촉매: ${catalyst ? `${catalyst.source} / ${catalyst.eventType} / ${catalyst.freshnessBucket} / ${catalyst.direction} - ${catalyst.title}` : "없음"}
-  - 보조 뉴스: ${support ? `${support.source} ${support.directness} / ${support.eventType} / ${support.freshnessBucket}` : "없음"}
+  - 중요 공시 수: ${summary.materialDisclosureCount ?? 0}
+  - 직접 촉매: ${catalyst ? `${catalyst.source} / ${catalyst.eventLabel || catalyst.eventType} / ${catalyst.freshnessBucket} / ${catalyst.direction}${catalyst.materialityScore !== undefined ? ` / 중요도 ${catalyst.materialityScore}` : ""} - ${catalyst.title}` : "없음"}
+  - 보조 뉴스: ${support ? `${support.source} ${support.directness} / ${support.eventLabel || support.eventType} / ${support.freshnessBucket}` : "없음"}
   - 뉴스 수집 시각: ${formatTimestampKst(summary.fetchedAt)}
   - 가장 최근 뉴스 발행 시각: ${formatTimestampKst(summary.lastPublishedAt)}
   - 뉴스 신선도 상태: ${summary.newsFreshnessStatus || newsFreshnessLabel(summary.lastPublishedAt)}

@@ -73,9 +73,9 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 주문 실행 신뢰도: MEDIUM
 - ETF breadth 신뢰도: LOW
 - 신뢰도 해석: 테마 확산 판단 제한, 장전/시간외 데이터 확인 불가
-- 리포트 생성 시각: 2026-06-18 15:55 KST
+- 리포트 생성 시각: 2026-06-18 16:00 KST
 - 가격 기준 거래일: 2026-06-18 KRX 정규장 종가
-- 뉴스 수집 시각: 2026-06-18 15:55 KST
+- 뉴스 수집 시각: 2026-06-18 16:00 KST
 - 가장 최근 뉴스 발행 시각: 데이터 없음
 - 뉴스 신선도 상태: UNKNOWN
 - 뉴스 소스: DART
@@ -98,7 +98,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스: 미연결
 - ETF 구성종목 확산도: 미연결
 - 거래대금 유동성: 일부 연결
-- 생성 시각: 2026년 6월 18일 목요일 오후 3:55
+- 생성 시각: 2026년 6월 18일 목요일 오후 4:00
 - 시장 상태: 위험선호
 - 오늘 돈의 방향: IT 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 강한 테마 TOP 3: 성장/테마 ETF(35), IT(32), Financials(18)
@@ -530,9 +530,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 0/0/0
   - 직접성/방향성/신선도: 0/0/0
   - 강한 촉매 수: 0
+  - 중요 공시 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: 없음
-  - 뉴스 수집 시각: 2026-06-18 15:55 KST
+  - 뉴스 수집 시각: 2026-06-18 16:00 KST
   - 가장 최근 뉴스 발행 시각: 데이터 없음
   - 뉴스 신선도 상태: UNKNOWN
   - 뉴스 이후 가격 반응: 긍정
@@ -540,7 +541,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 핵심 뉴스 요약: 의미 있는 신규 DART 공시 없음
   - 원점수/상한 점수: 0 / 0
   - 점수 반영: 0
-  - 주의: DART_API_KEY not configured; 해당 티커의 의미 있는 신규 DART 공시가 없거나 API 결과가 비어 있음
+  - 주의: DART_API_KEY 또는 OPENDART_API_KEY not configured; 해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 미연결
   - 샘플 수: 0/0
@@ -647,9 +648,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 0/0/0
   - 직접성/방향성/신선도: 0/0/0
   - 강한 촉매 수: 0
+  - 중요 공시 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: 없음
-  - 뉴스 수집 시각: 2026-06-18 15:55 KST
+  - 뉴스 수집 시각: 2026-06-18 16:00 KST
   - 가장 최근 뉴스 발행 시각: 데이터 없음
   - 뉴스 신선도 상태: UNKNOWN
   - 뉴스 이후 가격 반응: 부정
@@ -657,7 +659,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 핵심 뉴스 요약: 의미 있는 신규 DART 공시 없음
   - 원점수/상한 점수: 0 / 0
   - 점수 반영: 0
-  - 주의: DART_API_KEY not configured; 해당 티커의 의미 있는 신규 DART 공시가 없거나 API 결과가 비어 있음
+  - 주의: DART_API_KEY 또는 OPENDART_API_KEY not configured; 해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 미연결
   - 샘플 수: 0/0
@@ -815,9 +817,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 0/0/0
   - 직접성/방향성/신선도: 0/0/0
   - 강한 촉매 수: 0
+  - 중요 공시 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: 없음
-  - 뉴스 수집 시각: 2026-06-18 15:55 KST
+  - 뉴스 수집 시각: 2026-06-18 16:00 KST
   - 가장 최근 뉴스 발행 시각: 데이터 없음
   - 뉴스 신선도 상태: UNKNOWN
   - 뉴스 이후 가격 반응: 긍정
@@ -825,7 +828,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 핵심 뉴스 요약: 의미 있는 신규 DART 공시 없음
   - 원점수/상한 점수: 0 / 0
   - 점수 반영: 0
-  - 주의: DART_API_KEY not configured; 해당 티커의 의미 있는 신규 DART 공시가 없거나 API 결과가 비어 있음
+  - 주의: DART_API_KEY 또는 OPENDART_API_KEY not configured; 해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
@@ -929,9 +932,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 0/0/0
   - 직접성/방향성/신선도: 0/0/0
   - 강한 촉매 수: 0
+  - 중요 공시 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: 없음
-  - 뉴스 수집 시각: 2026-06-18 15:55 KST
+  - 뉴스 수집 시각: 2026-06-18 16:00 KST
   - 가장 최근 뉴스 발행 시각: 데이터 없음
   - 뉴스 신선도 상태: UNKNOWN
   - 뉴스 이후 가격 반응: 긍정
@@ -939,7 +943,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 핵심 뉴스 요약: 의미 있는 신규 DART 공시 없음
   - 원점수/상한 점수: 0 / 0
   - 점수 반영: 0
-  - 주의: DART_API_KEY not configured; 해당 티커의 의미 있는 신규 DART 공시가 없거나 API 결과가 비어 있음
+  - 주의: DART_API_KEY 또는 OPENDART_API_KEY not configured; 해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
@@ -1041,9 +1045,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 0/0/0
   - 직접성/방향성/신선도: 0/0/0
   - 강한 촉매 수: 0
+  - 중요 공시 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: 없음
-  - 뉴스 수집 시각: 2026-06-18 15:55 KST
+  - 뉴스 수집 시각: 2026-06-18 16:00 KST
   - 가장 최근 뉴스 발행 시각: 데이터 없음
   - 뉴스 신선도 상태: UNKNOWN
   - 뉴스 이후 가격 반응: 부정
@@ -1051,7 +1056,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 핵심 뉴스 요약: 의미 있는 신규 DART 공시 없음
   - 원점수/상한 점수: 0 / 0
   - 점수 반영: 0
-  - 주의: DART_API_KEY not configured; 해당 티커의 의미 있는 신규 DART 공시가 없거나 API 결과가 비어 있음
+  - 주의: DART_API_KEY 또는 OPENDART_API_KEY not configured; 해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
@@ -1155,9 +1160,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 0/0/0
   - 직접성/방향성/신선도: 0/0/0
   - 강한 촉매 수: 0
+  - 중요 공시 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: 없음
-  - 뉴스 수집 시각: 2026-06-18 15:55 KST
+  - 뉴스 수집 시각: 2026-06-18 16:00 KST
   - 가장 최근 뉴스 발행 시각: 데이터 없음
   - 뉴스 신선도 상태: UNKNOWN
   - 뉴스 이후 가격 반응: 긍정
@@ -1165,7 +1171,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 핵심 뉴스 요약: 의미 있는 신규 DART 공시 없음
   - 원점수/상한 점수: 0 / 0
   - 점수 반영: 0
-  - 주의: DART_API_KEY not configured; 해당 티커의 의미 있는 신규 DART 공시가 없거나 API 결과가 비어 있음
+  - 주의: DART_API_KEY 또는 OPENDART_API_KEY not configured; 해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
@@ -1268,9 +1274,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 긍정/중립/부정: 0/0/0
   - 직접성/방향성/신선도: 0/0/0
   - 강한 촉매 수: 0
+  - 중요 공시 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: 없음
-  - 뉴스 수집 시각: 2026-06-18 15:55 KST
+  - 뉴스 수집 시각: 2026-06-18 16:00 KST
   - 가장 최근 뉴스 발행 시각: 데이터 없음
   - 뉴스 신선도 상태: UNKNOWN
   - 뉴스 이후 가격 반응: 긍정
@@ -1278,7 +1285,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 핵심 뉴스 요약: 의미 있는 신규 DART 공시 없음
   - 원점수/상한 점수: 0 / 0
   - 점수 반영: 0
-  - 주의: DART_API_KEY not configured; 해당 티커의 의미 있는 신규 DART 공시가 없거나 API 결과가 비어 있음
+  - 주의: DART_API_KEY 또는 OPENDART_API_KEY not configured; 해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
@@ -1689,7 +1696,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 소스: DART
   - 소스별 상태: DART DISABLED
   - 수집 뉴스 수: 0
-  - 실패/제한 사유: DART_API_KEY not configured; 해당 티커의 의미 있는 신규 DART 공시가 없거나 API 결과가 비어 있음
+  - 실패/제한 사유: DART_API_KEY 또는 OPENDART_API_KEY not configured; 해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음
 
 - ETF 구성종목 확산도:
   - 상태: 미연결

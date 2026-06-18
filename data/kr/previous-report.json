@@ -6364,11 +6364,11 @@
     "priceVolumeExpiredFallbackCount": 0,
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-06-18",
-    "priceAsOfLabel": "2026-06-18 KRX regular close",
+    "priceAsOfLabel": "2026-06-18 KRX 정규장 종가",
     "reportGeneratedAtKST": "2026-06-18 15:55",
     "newsStatus": "DISABLED",
-    "newsFetchedAt": "2026-06-18T06:55:02.532Z",
-    "newsLastUpdatedAt": "2026-06-18T06:55:02.532Z",
+    "newsFetchedAt": "2026-06-18T06:55:24.534Z",
+    "newsLastUpdatedAt": "2026-06-18T06:55:24.534Z",
     "latestNewsPublishedAt": null,
     "newsFreshnessStatus": "UNKNOWN",
     "newsSources": "DART",
@@ -6386,7 +6386,7 @@
       "장전/시간외 데이터 확인 불가"
     ],
     "providers": "yfinance, DART, config fallback sample, price-volume dollar-volume fallback",
-    "recommendationSession": "2026-06-18 KRX regular session",
+    "recommendationSession": "2026-06-18 KRX 정규장",
     "grade": "LOW",
     "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 장전/시간외 가격과 정규장 거래대금을 별도 확인해야 한다."
   },
