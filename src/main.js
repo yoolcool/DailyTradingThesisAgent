@@ -1418,10 +1418,9 @@ function trendBreadthScore(rows, concentration) {
 function trendEtfSyncScore(narrativeEtfs, allEtfs) {
   const okEtfs = narrativeEtfs.filter((row) => row?.market?.dataStatus === "ok");
   if (!okEtfs.length) return 0;
-  const qqq = allEtfs.find((row) => row.ticker === "QQQ")?.market;
-  const spy = allEtfs.find((row) => row.ticker === "SPY")?.market;
-  const benchmark5 = averageNonEmpty([qqq?.return5dPct, spy?.return5dPct]);
-  const benchmark20 = averageNonEmpty([qqq?.return20dPct, spy?.return20dPct]);
+  const benchmarks = benchmarkMarkets(allEtfs);
+  const benchmark5 = averageNonEmpty(benchmarks.map((market) => market?.return5dPct));
+  const benchmark20 = averageNonEmpty(benchmarks.map((market) => market?.return20dPct));
   const avg5 = averageNonEmpty(okEtfs.map((row) => row.market?.return5dPct));
   const avg20 = averageNonEmpty(okEtfs.map((row) => row.market?.return20dPct));
   const avgRvol = averageNonEmpty(okEtfs.map((row) => row.market?.relativeVolume));
@@ -1440,13 +1439,18 @@ function trendCatalystScore(rows, narrativeEtfs, narrativeStocks) {
 }
 
 function marketRegimeScore(etfs) {
-  const qqq = etfs.find((row) => row.ticker === "QQQ")?.market;
-  const spy = etfs.find((row) => row.ticker === "SPY")?.market;
-  const iwm = etfs.find((row) => row.ticker === "IWM")?.market;
-  const growth = averageNonEmpty([qqq?.return5dPct, qqq?.return20dPct, iwm?.return5dPct]);
-  const broad = averageNonEmpty([spy?.return5dPct, spy?.return20dPct]);
-  const rvol = averageNonEmpty([qqq?.relativeVolume, spy?.relativeVolume, iwm?.relativeVolume]);
+  const benchmarks = benchmarkMarkets(etfs);
+  const primary = benchmarks[0];
+  const secondary = benchmarks.slice(1);
+  const growth = averageNonEmpty([primary?.return5dPct, primary?.return20dPct, ...secondary.map((market) => market?.return5dPct)]);
+  const broad = averageNonEmpty(benchmarks.flatMap((market) => [market?.return5dPct, market?.return20dPct]));
+  const rvol = averageNonEmpty(benchmarks.map((market) => market?.relativeVolume));
   return rounded(clamp(growth * 0.55 + broad * 0.35 + clamp((rvol - 0.8) * 2, 0, 2) + 4, 0, 10));
+}
+
+function benchmarkMarkets(etfs) {
+  const symbols = MARKET_PROFILE.benchmarkTickers || ["QQQ", "SPY", "IWM"];
+  return symbols.map((ticker) => etfs.find((row) => row.ticker === ticker)?.market).filter(Boolean);
 }
 
 function trendExhaustionRisk(rows, narrativeEtfs, narrativeStocks, concentration) {
@@ -1584,7 +1588,7 @@ function trendDetailReasons(components, exhaustionRisk, concentration, marketSco
     themeBreadth: `테마 확산도 ${components.themeBreadth}/20. 상위 1~2개 쏠림 감점 ${concentration}점 반영.`,
     catalystFreshness: `뉴스/촉매 신선도 ${components.catalystFreshness}/10. HIGH 직접 촉매 ${rows.filter((row) => row.reasonConfidence === "HIGH" && row.directCatalyst).length}개.`,
     exhaustionRisk: `과열 리스크 ${exhaustionRisk}/100. 단기 급등, 고점 근접, ETF-개별주 괴리, 쏠림을 함께 반영.`,
-    marketRegime: `시장 환경 ${marketScore}/10. QQQ/SPY/IWM 가격 흐름 기반 위험선호 점수.`
+    marketRegime: `시장 환경 ${marketScore}/10. ${MARKET_PROFILE.marketRegimeLabel || (MARKET_PROFILE.benchmarkTickers || []).join("/")} 가격 흐름 기반 위험선호 점수.`
   };
 }
 
@@ -2856,7 +2860,7 @@ function buildDataReliability(marketData, supplementalData, generatedAtDate) {
     supplementalData?.connectionStatus?.etfBreadth,
     supplementalData?.connectionStatus?.liquidity
   ].filter((status) => status !== "CONNECTED").length;
-  const prePostMarketStatus = "UNAVAILABLE";
+  const prePostMarketStatus = MARKET_ID === "kr" ? "NOT_APPLICABLE" : "UNAVAILABLE";
   const etfBreadthReliability = maxBreadthSample >= 20 ? "HIGH" : maxBreadthSample >= 10 ? "MEDIUM" : "LOW";
   const analysisReliability = !marketItems.length
     ? "LOW"
@@ -2869,7 +2873,7 @@ function buildDataReliability(marketData, supplementalData, generatedAtDate) {
     ? "LOW"
     : lowLiquidityCount > 0
       ? "LOW"
-      : prePostMarketStatus === "UNAVAILABLE"
+      : ["UNAVAILABLE", "NOT_APPLICABLE"].includes(prePostMarketStatus)
         ? "MEDIUM"
         : "HIGH";
   const grade = [analysisReliability, executionReliability, etfBreadthReliability].includes("LOW") ? "LOW" : analysisReliability === "HIGH" && executionReliability === "HIGH" ? "HIGH" : "MEDIUM";
@@ -2881,7 +2885,8 @@ function buildDataReliability(marketData, supplementalData, generatedAtDate) {
     : "데이터 없음";
   const configuredNewsSources = newsSourceRows.map((row) => row.source);
   const connectedNewsSources = newsSourceRows.filter((row) => row.status === "CONNECTED" || row.status === "PARTIAL").map((row) => row.source);
-  const officialNewsConnected = newsSourceRows.some((row) => ["SEC EDGAR RSS", "Federal Reserve RSS"].includes(row.source) && (row.status === "CONNECTED" || row.status === "PARTIAL"));
+  const officialNewsSourceNames = MARKET_ID === "kr" ? ["DART", "OpenDART"] : ["SEC EDGAR RSS", "Federal Reserve RSS"];
+  const officialNewsConnected = newsSourceRows.some((row) => officialNewsSourceNames.includes(row.source) && (row.status === "CONNECTED" || row.status === "PARTIAL"));
   const newsReliability = supplementalData?.connectionStatus?.news === "CONNECTED" && officialNewsConnected
     ? "HIGH"
     : connectedNewsSources.length >= 2
@@ -2893,7 +2898,7 @@ function buildDataReliability(marketData, supplementalData, generatedAtDate) {
     stalePriceCount > 0 ? `가격/거래량 stale fallback ${stalePriceCount}개 사용` : null,
     maxBreadthSample < 5 ? "테마 확산 판단 제한" : null,
     lowLiquidityCount > 0 ? "거래대금 유동성 낮음 또는 확인 불가" : null,
-    prePostMarketStatus === "UNAVAILABLE" ? "프리/애프터마켓 확인 불가" : null
+    ["UNAVAILABLE", "NOT_APPLICABLE"].includes(prePostMarketStatus) ? MARKET_PROFILE.prePostUnavailableNote || "프리/애프터마켓 확인 불가" : null
   ].filter(Boolean);
   return {
     priceVolumeStatus: supplementalData?.connectionStatus?.priceVolume || "FAILED",
@@ -2902,7 +2907,7 @@ function buildDataReliability(marketData, supplementalData, generatedAtDate) {
     priceVolumeExpiredFallbackCount: marketData?.fallbackPolicy?.expiredFallbackCount,
     priceVolumeMissingCount: marketData?.fallbackPolicy?.missingCount,
     priceAsOfDate: priceDates.at(-1) || "데이터 없음",
-    priceAsOfLabel: priceDates.at(-1) ? `${priceDates.at(-1)} US regular close` : "데이터 없음",
+    priceAsOfLabel: priceDates.at(-1) ? `${priceDates.at(-1)} ${MARKET_PROFILE.closeLabel || "regular close"}` : "데이터 없음",
     reportGeneratedAtKST: new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Seoul", dateStyle: "short", timeStyle: "short" }).format(generatedAtDate),
     newsStatus: supplementalData?.connectionStatus?.news || "FAILED",
     newsFetchedAt: newsFetchedTimes.at(-1) || supplementalData?.connectionStatus?.lastUpdated || null,
@@ -2928,9 +2933,9 @@ function buildDataReliability(marketData, supplementalData, generatedAtDate) {
       ...breadthRows.map((row) => row.source).filter(Boolean),
       ...liquidityRows.map((row) => row.source).filter(Boolean)
     ]).join(", "),
-    recommendationSession: nextUsSessionLabel(generatedAtDate),
+    recommendationSession: nextMarketSessionLabel(generatedAtDate),
     grade,
-    warning: "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 프리마켓/정규장 거래량을 별도 확인해야 한다."
+    warning: `이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, ${MARKET_ID === "kr" ? "장전/시간외 가격과 정규장 거래대금" : "프리마켓/정규장 거래량"}을 별도 확인해야 한다.`
   };
 }
 
@@ -3036,9 +3041,10 @@ function buildTodayDecision({ actionCandidates, etfActionCandidates, stockAction
   };
 }
 
-function nextUsSessionLabel(generatedAtDate) {
-  const et = new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).format(generatedAtDate);
-  return `${et} US regular session`;
+function nextMarketSessionLabel(generatedAtDate) {
+  const timezone = MARKET_PROFILE.nextSessionTimezone || MARKET_PROFILE.timezone || "America/New_York";
+  const date = new Intl.DateTimeFormat("en-CA", { timeZone: timezone, year: "numeric", month: "2-digit", day: "2-digit" }).format(generatedAtDate);
+  return `${date} ${MARKET_PROFILE.nextSessionSuffix || MARKET_PROFILE.sessionLabel || "regular session"}`;
 }
 
 function dynamicDataWarning(status) {
@@ -3089,6 +3095,9 @@ function marketLine(item) {
 function renderMarkdown(report) {
   const etfBest = report.etfActionCandidates[0];
   const stockBest = report.stockActionCandidates[0];
+  const universeLabel = report.stockUniverse.universeLabel || MARKET_PROFILE.universeLabel || report.stockUniverse.universeName || "주식 유니버스";
+  const marketRegimeLabel = MARKET_PROFILE.marketRegimeLabel || (MARKET_PROFILE.benchmarkTickers || []).join("/");
+  const dataGapLabel = MARKET_ID === "kr" ? "뉴스, ETF 구성종목 확산도, 장전/시간외 가격, 실제 보유 진입가" : "뉴스, ETF 구성종목 확산도, 프리마켓/정규장 거래량, 실제 보유 진입가";
   return `# 오늘의 데일리 트레이딩 요약
 
 **${report.dataWarning}**
@@ -3171,8 +3180,8 @@ ${report.etfBanRows.map((row) => `#### [${row.ticker}] ${row.name}
 `).join("\n") || "해당 없음"}
 
 ## 2. 개별 종목 트레이딩 보고서
-### 2-1. 오늘 Nasdaq-100 신규 발굴 요약
-- 신규 발굴 풀: Nasdaq-100 구성종목 전체
+### 2-1. 오늘 ${universeLabel} 신규 발굴 요약
+- 신규 발굴 풀: ${universeLabel} 구성종목 전체
 - universe source: ${report.stockUniverse.source}
 - universe fetchStatus: ${report.stockUniverse.fetchStatus}
 - 총 스캔 종목 수: ${report.stockScanSummary.total}
@@ -3192,7 +3201,7 @@ ${report.etfBanRows.map((row) => `#### [${row.ticker}] ${row.name}
 ### 2-2. 오늘 개별 종목 신규 후보 TOP 5
 
 선정 기준:
-1. Nasdaq-100 전체를 moneyFlowScore(1차)로 먼저 스캔
+1. ${universeLabel} 전체를 moneyFlowScore(1차)로 먼저 스캔
 2. moneyFlowScore(1차) 상위 ${report.stockScanSummary.detailedCount}개를 상세 분석
 3. 뉴스/유동성/관련 ETF 대비 상대강도/리스크 패널티를 반영
 4. moneyFlowScore(최종), 최종 원점수, 리스크 패널티, 5일 수익률, 상대 거래량 순으로 재정렬
@@ -3222,7 +3231,7 @@ ${report.stockCautionRows.map((row) => `#### [${row.ticker}] ${row.name}
 - 해제 조건: ${row.entryCondition}
 `).join("\n") || "해당 없음"}
 
-### Nasdaq-100 전체 moneyFlowScore(1차) 표
+### ${universeLabel} 전체 moneyFlowScore(1차) 표
 ${renderStockUniverseScoreMarkdown(report.stockUniverseScan)}
 
 ## 감시 ETF 목록
@@ -3241,8 +3250,8 @@ ${report.etfs.map((row) => `| ${row.ticker} | ${row.categoryType} | ${row.moneyF
 ### 3-2. 내일 확인할 조건
 - ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인
 - 개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인
-- 시장 상태 확인 조건: QQQ/SPY의 5일/20일 추세와 위험선호 유지 여부 확인
-- 데이터 보강 필요 항목: 뉴스, ETF 구성종목 확산도, 프리마켓/정규장 거래량, 실제 보유 진입가
+- 시장 상태 확인 조건: ${marketRegimeLabel}의 5일/20일 추세와 위험선호 유지 여부 확인
+- 데이터 보강 필요 항목: ${dataGapLabel}
 
 ## 데이터 수집 상태
 
@@ -3275,7 +3284,7 @@ function renderDataReliabilityMarkdown(report) {
 - ETF 구성종목 확산도 상태: ${statusLabel(r.etfBreadthStatus)}
 - ETF 구성종목 샘플 수: ${r.etfBreadthSampleCount || "0"}
 - 거래대금 유동성 데이터 상태: ${statusLabel(r.liquidityStatus)}
-- 프리마켓/애프터마켓 데이터 상태: ${r.prePostMarketStatus || "UNAVAILABLE"}
+- ${MARKET_PROFILE.prePostMarketLabel || "프리/애프터마켓"} 데이터 상태: ${r.prePostMarketStatus || "UNAVAILABLE"}
 - 데이터 provider: ${r.providers || "데이터 없음"}
 - 실전 사용 경고: ${r.warning || REAL_WARNING}`;
 }
@@ -3846,6 +3855,8 @@ function renderDataCollectionMarkdown(report) {
   const newsCount = rows.reduce((sum, row) => sum + (row.news?.itemCount || 0), 0);
   const breadthCount = rows.filter((row) => row.etfBreadth?.sampledHoldingsCount > 0).length;
   const liquidityFallback = rows.filter((row) => row.liquidity?.status === "PARTIAL").length;
+  const universeLabel = report.stockUniverse.universeLabel || MARKET_PROFILE.universeLabel || report.stockUniverse.universeName || "주식 유니버스";
+  const defaultNewsSource = MARKET_ID === "kr" ? "DART" : "Yahoo Finance RSS";
   return `- 가격/거래량:
   - 상태: ${statusLabel(report.dataConnectionStatus.priceVolume)}
   - 소스: yfinance
@@ -3853,7 +3864,7 @@ function renderDataCollectionMarkdown(report) {
 
 - 뉴스:
   - 상태: ${statusLabel(report.dataConnectionStatus.news)}
-  - 소스: ${(report.dataConnectionStatus.newsSources || []).map((row) => row.source).join(", ") || "Yahoo Finance RSS"}
+  - 소스: ${(report.dataConnectionStatus.newsSources || []).map((row) => row.source).join(", ") || defaultNewsSource}
   - 소스별 상태: ${(report.dataConnectionStatus.newsSources || []).map((row) => `${row.source} ${row.status}`).join("; ") || "데이터 없음"}
   - 수집 뉴스 수: ${newsCount}
   - 실패/제한 사유: ${providerNotes(rows, "news")}
@@ -3864,7 +3875,7 @@ function renderDataCollectionMarkdown(report) {
   - 수집 가능 ETF 수: ${breadthCount}
   - fallback 사용 여부: 사용
 
-- Nasdaq-100 구성종목:
+- ${universeLabel} 구성종목:
   - 상태: ${report.stockUniverse.fetchStatus}
   - 소스: ${report.stockUniverse.source}
   - 총 구성종목 수: ${report.stockUniverse.members.length}
@@ -4027,9 +4038,10 @@ function renderPreviousReviewMarkdown(row) {
 }
 
 function renderStockUniverseScoreMarkdown(scan) {
-  if (!scan) return "Nasdaq-100 전체 스캔 데이터 없음";
+  const universeLabel = scan?.universeName || MARKET_PROFILE.universeLabel || MARKET_PROFILE.universeName || "주식 유니버스";
+  if (!scan) return `${universeLabel} 전체 스캔 데이터 없음`;
   const failures = scan.results.filter((row) => row.scanStatus !== "OK");
-  return `이 표는 Nasdaq-100 전체 구성종목을 가격/거래량/추세 중심으로 빠르게 스캔한 moneyFlowScore(1차) 결과다. 뉴스, 유동성, 관련 ETF 대비 상대강도, 리스크 패널티를 반영한 최종 추천 점수는 Top5 카드의 moneyFlowScore(최종)에서 확인한다.
+  return `이 표는 ${universeLabel} 전체 구성종목을 가격/거래량/추세 중심으로 빠르게 스캔한 moneyFlowScore(1차) 결과다. 뉴스, 유동성, 관련 ETF 대비 상대강도, 리스크 패널티를 반영한 최종 추천 점수는 Top5 카드의 moneyFlowScore(최종)에서 확인한다.
 
 주의: Top5 카드의 moneyFlowScore(최종)는 1차 점수에 상세 데이터 가감점과 리스크 패널티를 더한 값이다. 따라서 아래 전체 표의 1차 순위와 Top5 최종 순위는 다를 수 있다.
 
@@ -4046,7 +4058,7 @@ function renderStockUniverseScoreMarkdown(scan) {
 ${stockScoreTableMarkdown(scan.results.slice(0, 20))}
 
 <details>
-<summary>Nasdaq-100 전체 moneyFlowScore(1차) 표 펼치기</summary>
+<summary>${universeLabel} 전체 moneyFlowScore(1차) 표 펼치기</summary>
 
 ${stockScoreTableMarkdown(scan.results)}
 
@@ -4073,6 +4085,9 @@ function pctOrDash(value) {
 function renderHtml(report) {
   const etfBest = report.etfActionCandidates[0];
   const stockBest = report.stockActionCandidates[0];
+  const universeLabel = report.stockUniverse.universeLabel || MARKET_PROFILE.universeLabel || report.stockUniverse.universeName || "주식 유니버스";
+  const marketRegimeLabel = MARKET_PROFILE.marketRegimeLabel || (MARKET_PROFILE.benchmarkTickers || []).join("/");
+  const dataGapLabel = MARKET_ID === "kr" ? "뉴스, ETF 구성종목 확산도, 장전/시간외 가격, 실제 보유 진입가" : "뉴스, ETF 구성종목 확산도, 프리마켓/정규장 거래량, 실제 보유 진입가";
   return `<!doctype html>
 <html lang="ko">
 <head>
@@ -4248,9 +4263,9 @@ function renderHtml(report) {
       <h3>1-4. ETF 제외/매매 금지 후보</h3>${htmlList(report.etfBanRows.map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | 해제 조건 ${escapeHtml(row.entryCondition)}`))}
     </section>
     <section id="stocks"><h2>2. 개별 종목 트레이딩 보고서</h2>
-      <h3>2-1. 오늘 Nasdaq-100 신규 발굴 요약</h3>
+      <h3>2-1. 오늘 ${escapeHtml(universeLabel)} 신규 발굴 요약</h3>
       ${htmlList([
-        "신규 발굴 풀: Nasdaq-100 구성종목 전체",
+        `신규 발굴 풀: ${escapeHtml(universeLabel)} 구성종목 전체`,
         `universe source: ${escapeHtml(report.stockUniverse.source)}`,
         `universe fetchStatus: ${escapeHtml(report.stockUniverse.fetchStatus)}`,
         `총 스캔 종목 수: ${report.stockScanSummary.total}`,
@@ -4269,7 +4284,7 @@ function renderHtml(report) {
       ${report.previousRecommendationReviews.length ? report.previousRecommendationReviews.map(renderPreviousReviewHtml).join("") : "<p>전일 추천 종목 데이터 없음</p>"}
       <h3>2-4. ETF 대비 개별 종목 판단 로직</h3>${htmlList(["관련 ETF의 5일/20일 수익률과 개별 종목의 5일/20일 수익률을 비교한다.", "관련 ETF의 상대 거래량과 개별 종목의 상대 거래량을 비교한다.", "개별 종목이 관련 ETF보다 강하면 개별 종목 우선 가능성으로 본다.", "관련 ETF가 더 강하면 개별 종목 대신 ETF를 우선한다."])}
       <h3>2-5. 개별 종목 제외/주의 후보</h3>${htmlList(report.stockCautionRows.map((row) => `${escapeHtml(row.ticker)} | moneyFlowScore ${row.moneyFlowScore} | ${escapeHtml(scoreOneLine(row))} | 해제 조건 ${escapeHtml(row.entryCondition)}`))}
-      <h3 id="score-table">Nasdaq-100 전체 moneyFlowScore(1차) 표</h3>${renderStockUniverseScoreHtml(report.stockUniverseScan)}
+      <h3 id="score-table">${escapeHtml(universeLabel)} 전체 moneyFlowScore(1차) 표</h3>${renderStockUniverseScoreHtml(report.stockUniverseScan)}
     </section>
     <section><h2>감시 ETF 목록</h2>${renderEtfTable(report.etfs)}</section>
     <section><h2>3. 최종 실행 판단</h2>
@@ -4280,7 +4295,7 @@ function renderHtml(report) {
         "하지 말아야 할 일: ETF와 개별 종목을 같은 테마 안에서 중복 매수하지 않는다."
       ])}
       <h3>3-2. 내일 확인할 조건</h3>
-      ${htmlList(["ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인", "개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인", "시장 상태 확인 조건: QQQ/SPY의 5일/20일 추세와 위험선호 유지 여부 확인", "데이터 보강 필요 항목: 뉴스, ETF 구성종목 확산도, 프리마켓/정규장 거래량, 실제 보유 진입가"])}
+      ${htmlList(["ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인", "개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인", `시장 상태 확인 조건: ${escapeHtml(marketRegimeLabel)}의 5일/20일 추세와 위험선호 유지 여부 확인`, `데이터 보강 필요 항목: ${escapeHtml(dataGapLabel)}`])}
     </section>
     <section><h2>데이터 수집 상태</h2>
       <div class="desktop-table">${renderDataCollectionHtml(report)}</div>
@@ -4384,7 +4399,7 @@ function renderDataReliabilityHtml(report) {
       ${tile("ETF 확산도", statusLabel(r.etfBreadthStatus))}
       ${tile("ETF 샘플 수", r.etfBreadthSampleCount || "0")}
       ${tile("거래대금 유동성", statusLabel(r.liquidityStatus))}
-      ${tile("프리/애프터마켓", r.prePostMarketStatus || "UNAVAILABLE")}
+      ${tile(MARKET_PROFILE.prePostMarketLabel || "프리/애프터마켓", r.prePostMarketStatus || "UNAVAILABLE")}
       ${tile("Provider", r.providers || "데이터 없음")}
     </div>
     <p class="muted"><strong>신뢰도 해석:</strong> ${escapeHtml((r.reliabilityNotes || []).join(", ") || "핵심 데이터 제한 없음")}</p>
@@ -4788,9 +4803,10 @@ function renderPreviousReviewHtml(row) {
 }
 
 function renderStockUniverseScoreHtml(scan) {
-  if (!scan) return "<p>Nasdaq-100 전체 스캔 데이터 없음</p>";
+  const universeLabel = scan?.universeName || MARKET_PROFILE.universeLabel || MARKET_PROFILE.universeName || "주식 유니버스";
+  if (!scan) return `<p>${escapeHtml(universeLabel)} 전체 스캔 데이터 없음</p>`;
   const failures = scan.results.filter((row) => row.scanStatus !== "OK");
-  return `<p>이 표는 Nasdaq-100 전체 구성종목을 가격/거래량/추세 중심으로 빠르게 스캔한 moneyFlowScore(1차) 결과다. 뉴스, 유동성, 관련 ETF 대비 상대강도, 리스크 패널티를 반영한 최종 추천 점수는 Top5 카드의 moneyFlowScore(최종)에서 확인한다.</p>
+  return `<p>이 표는 ${escapeHtml(universeLabel)} 전체 구성종목을 가격/거래량/추세 중심으로 빠르게 스캔한 moneyFlowScore(1차) 결과다. 뉴스, 유동성, 관련 ETF 대비 상대강도, 리스크 패널티를 반영한 최종 추천 점수는 Top5 카드의 moneyFlowScore(최종)에서 확인한다.</p>
     <p class="muted">Top5 카드의 moneyFlowScore(최종)는 1차 점수에 상세 데이터 가감점과 리스크 패널티를 더한 값이다. 따라서 아래 전체 표의 1차 순위와 Top5 최종 순위는 다를 수 있다.</p>
     <div class="grid">
       ${tile("총 스캔 종목 수", scan.totalCount)}
@@ -4805,11 +4821,11 @@ function renderStockUniverseScoreHtml(scan) {
     <div class="table-scroll desktop-table">${stockScoreTableHtml(scan.results.slice(0, 20))}</div>
     ${stockScoreCardsHtml(scan.results.slice(0, 20))}
     <details class="desktop-table">
-      <summary><strong>Nasdaq-100 전체 moneyFlowScore(1차) 표 펼치기</strong></summary>
+      <summary><strong>${escapeHtml(universeLabel)} 전체 moneyFlowScore(1차) 표 펼치기</strong></summary>
       <div class="table-scroll">${stockScoreTableHtml(scan.results)}</div>
     </details>
     <details class="mobile-card-list">
-      <summary><strong>Nasdaq-100 전체 moneyFlowScore(1차) 목록 펼치기</strong></summary>
+      <summary><strong>${escapeHtml(universeLabel)} 전체 moneyFlowScore(1차) 목록 펼치기</strong></summary>
       ${stockScoreCardsHtml(scan.results)}
     </details>
     <h4>데이터 수집 실패 종목</h4>
