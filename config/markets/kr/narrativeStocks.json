@@ -4,26 +4,359 @@
     "displayTicker": "005930",
     "name": "Samsung Electronics",
     "market": "KOSPI",
-    "sector": "Semiconductors",
+    "sector": "IT",
     "industry": "Memory and devices",
-    "primaryTheme": "AI semiconductor/HBM supply chain"
+    "primaryTheme": "AI 반도체/HBM 공급망"
   },
   {
     "ticker": "000660.KS",
     "displayTicker": "000660",
-    "name": "SK hynix",
+    "name": "SK Hynix",
     "market": "KOSPI",
-    "sector": "Semiconductors",
+    "sector": "IT",
     "industry": "Memory and HBM",
-    "primaryTheme": "AI semiconductor/HBM supply chain"
+    "primaryTheme": "AI 반도체/HBM 공급망"
+  },
+  {
+    "ticker": "042700.KS",
+    "displayTicker": "042700",
+    "name": "Hanmi Semiconductor",
+    "market": "KOSPI",
+    "sector": "IT",
+    "industry": "Semiconductor equipment",
+    "primaryTheme": "AI 반도체/HBM 공급망"
+  },
+  {
+    "ticker": "009150.KS",
+    "displayTicker": "009150",
+    "name": "Samsung Electro-Mechanics",
+    "market": "KOSPI",
+    "sector": "IT",
+    "industry": "Electronic components",
+    "primaryTheme": "AI 반도체/HBM 공급망"
   },
   {
     "ticker": "005380.KS",
     "displayTicker": "005380",
     "name": "Hyundai Motor",
     "market": "KOSPI",
-    "sector": "Autos",
+    "sector": "Consumer Discretionary",
     "industry": "Automobiles",
-    "primaryTheme": "Auto export momentum"
+    "primaryTheme": "자동차/부품 수출 모멘텀"
+  },
+  {
+    "ticker": "000270.KS",
+    "displayTicker": "000270",
+    "name": "Kia",
+    "market": "KOSPI",
+    "sector": "Consumer Discretionary",
+    "industry": "Automobiles",
+    "primaryTheme": "자동차/부품 수출 모멘텀"
+  },
+  {
+    "ticker": "012330.KS",
+    "displayTicker": "012330",
+    "name": "Hyundai Mobis",
+    "market": "KOSPI",
+    "sector": "Consumer Discretionary",
+    "industry": "Auto parts",
+    "primaryTheme": "자동차/부품 수출 모멘텀"
+  },
+  {
+    "ticker": "011210.KS",
+    "displayTicker": "011210",
+    "name": "Hyundai WIA",
+    "market": "KOSPI",
+    "sector": "Consumer Discretionary",
+    "industry": "Auto parts",
+    "primaryTheme": "자동차/부품 수출 모멘텀"
+  },
+  {
+    "ticker": "042660.KS",
+    "displayTicker": "042660",
+    "name": "Hanwha Ocean",
+    "market": "KOSPI",
+    "sector": "Heavy Industries",
+    "industry": "Shipbuilding",
+    "primaryTheme": "조선/방산 수주 사이클"
+  },
+  {
+    "ticker": "329180.KS",
+    "displayTicker": "329180",
+    "name": "HD Hyundai Heavy Industries",
+    "market": "KOSPI",
+    "sector": "Heavy Industries",
+    "industry": "Shipbuilding",
+    "primaryTheme": "조선/방산 수주 사이클"
+  },
+  {
+    "ticker": "012450.KS",
+    "displayTicker": "012450",
+    "name": "Hanwha Aerospace",
+    "market": "KOSPI",
+    "sector": "Industrials",
+    "industry": "Aerospace and defense",
+    "primaryTheme": "조선/방산 수주 사이클"
+  },
+  {
+    "ticker": "047810.KS",
+    "displayTicker": "047810",
+    "name": "Korea Aerospace",
+    "market": "KOSPI",
+    "sector": "Industrials",
+    "industry": "Aerospace and defense",
+    "primaryTheme": "조선/방산 수주 사이클"
+  },
+  {
+    "ticker": "267260.KS",
+    "displayTicker": "267260",
+    "name": "HD Hyundai Electric",
+    "market": "KOSPI",
+    "sector": "Heavy Industries",
+    "industry": "Electrical equipment",
+    "primaryTheme": "전력기기/인프라 투자"
+  },
+  {
+    "ticker": "010120.KS",
+    "displayTicker": "010120",
+    "name": "LS Electric",
+    "market": "KOSPI",
+    "sector": "Industrials",
+    "industry": "Electrical equipment",
+    "primaryTheme": "전력기기/인프라 투자"
+  },
+  {
+    "ticker": "298040.KS",
+    "displayTicker": "298040",
+    "name": "Hyosung Heavy Industries",
+    "market": "KOSPI",
+    "sector": "Heavy Industries",
+    "industry": "Electrical equipment",
+    "primaryTheme": "전력기기/인프라 투자"
+  },
+  {
+    "ticker": "267250.KS",
+    "displayTicker": "267250",
+    "name": "HD Hyundai",
+    "market": "KOSPI",
+    "sector": "Energy & Chemicals",
+    "industry": "Industrial holding company",
+    "primaryTheme": "전력기기/인프라 투자"
+  },
+  {
+    "ticker": "105560.KS",
+    "displayTicker": "105560",
+    "name": "KB Financial",
+    "market": "KOSPI",
+    "sector": "Financials",
+    "industry": "Financial holding company",
+    "primaryTheme": "금융/밸류업 주주환원"
+  },
+  {
+    "ticker": "055550.KS",
+    "displayTicker": "055550",
+    "name": "Shinhan Financial",
+    "market": "KOSPI",
+    "sector": "Financials",
+    "industry": "Financial holding company",
+    "primaryTheme": "금융/밸류업 주주환원"
+  },
+  {
+    "ticker": "086790.KS",
+    "displayTicker": "086790",
+    "name": "Hana Financial",
+    "market": "KOSPI",
+    "sector": "Financials",
+    "industry": "Financial holding company",
+    "primaryTheme": "금융/밸류업 주주환원"
+  },
+  {
+    "ticker": "316140.KS",
+    "displayTicker": "316140",
+    "name": "Woori Financial",
+    "market": "KOSPI",
+    "sector": "Financials",
+    "industry": "Financial holding company",
+    "primaryTheme": "금융/밸류업 주주환원"
+  },
+  {
+    "ticker": "090430.KS",
+    "displayTicker": "090430",
+    "name": "Amorepacific",
+    "market": "KOSPI",
+    "sector": "Consumer Staples",
+    "industry": "Cosmetics",
+    "primaryTheme": "화장품/음식료 수출 소비재"
+  },
+  {
+    "ticker": "051900.KS",
+    "displayTicker": "051900",
+    "name": "LG H&H",
+    "market": "KOSPI",
+    "sector": "Consumer Staples",
+    "industry": "Cosmetics and household goods",
+    "primaryTheme": "화장품/음식료 수출 소비재"
+  },
+  {
+    "ticker": "161890.KS",
+    "displayTicker": "161890",
+    "name": "Kolmar Korea",
+    "market": "KOSPI",
+    "sector": "Consumer Staples",
+    "industry": "Cosmetics ODM",
+    "primaryTheme": "화장품/음식료 수출 소비재"
+  },
+  {
+    "ticker": "003230.KS",
+    "displayTicker": "003230",
+    "name": "Samyang Foods",
+    "market": "KOSPI",
+    "sector": "Consumer Staples",
+    "industry": "Food exports",
+    "primaryTheme": "화장품/음식료 수출 소비재"
+  },
+  {
+    "ticker": "207940.KS",
+    "displayTicker": "207940",
+    "name": "Samsung Biologics",
+    "market": "KOSPI",
+    "sector": "Health Care",
+    "industry": "CDMO",
+    "primaryTheme": "바이오/헬스케어 실적 전환"
+  },
+  {
+    "ticker": "068270.KS",
+    "displayTicker": "068270",
+    "name": "Celltrion",
+    "market": "KOSPI",
+    "sector": "Health Care",
+    "industry": "Biosimilars",
+    "primaryTheme": "바이오/헬스케어 실적 전환"
+  },
+  {
+    "ticker": "000100.KS",
+    "displayTicker": "000100",
+    "name": "Yuhan",
+    "market": "KOSPI",
+    "sector": "Health Care",
+    "industry": "Pharmaceuticals",
+    "primaryTheme": "바이오/헬스케어 실적 전환"
+  },
+  {
+    "ticker": "128940.KS",
+    "displayTicker": "128940",
+    "name": "Hanmi Pharm",
+    "market": "KOSPI",
+    "sector": "Health Care",
+    "industry": "Pharmaceuticals",
+    "primaryTheme": "바이오/헬스케어 실적 전환"
+  },
+  {
+    "ticker": "373220.KS",
+    "displayTicker": "373220",
+    "name": "LG Energy Solution",
+    "market": "KOSPI",
+    "sector": "Industrials",
+    "industry": "Battery cells",
+    "primaryTheme": "2차전지 소재/셀 반등"
+  },
+  {
+    "ticker": "006400.KS",
+    "displayTicker": "006400",
+    "name": "Samsung SDI",
+    "market": "KOSPI",
+    "sector": "IT",
+    "industry": "Battery cells",
+    "primaryTheme": "2차전지 소재/셀 반등"
+  },
+  {
+    "ticker": "003670.KS",
+    "displayTicker": "003670",
+    "name": "POSCO Future M",
+    "market": "KOSPI",
+    "sector": "Industrials",
+    "industry": "Battery materials",
+    "primaryTheme": "2차전지 소재/셀 반등"
+  },
+  {
+    "ticker": "450080.KS",
+    "displayTicker": "450080",
+    "name": "Ecopro Materials",
+    "market": "KOSPI",
+    "sector": "Industrials",
+    "industry": "Battery materials",
+    "primaryTheme": "2차전지 소재/셀 반등"
+  },
+  {
+    "ticker": "035420.KS",
+    "displayTicker": "035420",
+    "name": "Naver",
+    "market": "KOSPI",
+    "sector": "Communication Services",
+    "industry": "Internet platform",
+    "primaryTheme": "인터넷/게임/엔터 성장주"
+  },
+  {
+    "ticker": "035720.KS",
+    "displayTicker": "035720",
+    "name": "Kakao",
+    "market": "KOSPI",
+    "sector": "Communication Services",
+    "industry": "Internet platform",
+    "primaryTheme": "인터넷/게임/엔터 성장주"
+  },
+  {
+    "ticker": "259960.KS",
+    "displayTicker": "259960",
+    "name": "Krafton",
+    "market": "KOSPI",
+    "sector": "Communication Services",
+    "industry": "Games",
+    "primaryTheme": "인터넷/게임/엔터 성장주"
+  },
+  {
+    "ticker": "352820.KS",
+    "displayTicker": "352820",
+    "name": "Hybe",
+    "market": "KOSPI",
+    "sector": "Communication Services",
+    "industry": "Entertainment",
+    "primaryTheme": "인터넷/게임/엔터 성장주"
+  },
+  {
+    "ticker": "003550.KS",
+    "displayTicker": "003550",
+    "name": "LG",
+    "market": "KOSPI",
+    "sector": "IT",
+    "industry": "Holding company",
+    "primaryTheme": "지주/배당/자사주 재평가"
+  },
+  {
+    "ticker": "034730.KS",
+    "displayTicker": "034730",
+    "name": "SK",
+    "market": "KOSPI",
+    "sector": "Energy & Chemicals",
+    "industry": "Holding company",
+    "primaryTheme": "지주/배당/자사주 재평가"
+  },
+  {
+    "ticker": "000150.KS",
+    "displayTicker": "000150",
+    "name": "Doosan",
+    "market": "KOSPI",
+    "sector": "Heavy Industries",
+    "industry": "Holding company",
+    "primaryTheme": "지주/배당/자사주 재평가"
+  },
+  {
+    "ticker": "004990.KS",
+    "displayTicker": "004990",
+    "name": "Lotte",
+    "market": "KOSPI",
+    "sector": "Consumer Staples",
+    "industry": "Holding company",
+    "primaryTheme": "지주/배당/자사주 재평가"
   }
 ]
