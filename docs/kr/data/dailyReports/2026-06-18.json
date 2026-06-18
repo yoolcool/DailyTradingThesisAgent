@@ -13,7 +13,7 @@
     "sessionLabel": "KRX regular session"
   },
   "reportDate": "2026-06-18",
-  "generatedAt": "2026년 6월 18일 목요일 PM 4:31",
+  "generatedAt": "2026년 6월 18일 목요일 오후 4:38",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-18",
@@ -28,30 +28,8 @@
     },
     "results": [
       {
-        "ticker": "032830.KS",
-        "name": "Samsung Life",
-        "assetType": "STOCK",
-        "moneyFlowScore": 99,
-        "moneyFlowScoreInitial": 99,
-        "moneyFlowScoreFinal": 100,
-        "finalRawScore": 104,
-        "todayActionLabel": "강한 자금흐름 조건부",
-        "reasonConfidence": "MEDIUM",
-        "oneDayReturn": 4.92,
-        "fiveDayReturn": 28.49,
-        "twentyDayReturn": 50.32,
-        "relativeVolume": 1.2,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "강한 자금 유입 후보",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
         "ticker": "402340.KS",
-        "name": "SK Square",
+        "name": "SK스퀘어",
         "assetType": "STOCK",
         "moneyFlowScore": 97,
         "moneyFlowScoreInitial": 97,
@@ -73,7 +51,7 @@
       },
       {
         "ticker": "000660.KS",
-        "name": "SK Hynix",
+        "name": "SK하이닉스",
         "assetType": "STOCK",
         "moneyFlowScore": 97,
         "moneyFlowScoreInitial": 97,
@@ -95,7 +73,7 @@
       },
       {
         "ticker": "009150.KS",
-        "name": "Samsung Electro-Mechanics",
+        "name": "삼성전기",
         "assetType": "STOCK",
         "moneyFlowScore": 96,
         "moneyFlowScoreInitial": 96,
@@ -106,7 +84,29 @@
         "oneDayReturn": 8.27,
         "fiveDayReturn": 21.88,
         "twentyDayReturn": 122.9,
-        "relativeVolume": 1.04,
+        "relativeVolume": 1.08,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "강한 자금 유입 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "032830.KS",
+        "name": "삼성생명",
+        "assetType": "STOCK",
+        "moneyFlowScore": 95,
+        "moneyFlowScoreInitial": 95,
+        "moneyFlowScoreFinal": 96,
+        "finalRawScore": 96,
+        "todayActionLabel": "강한 자금흐름 조건부",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": 4.92,
+        "fiveDayReturn": 28.49,
+        "twentyDayReturn": 50.32,
+        "relativeVolume": 1.09,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -117,14 +117,14 @@
       },
       {
         "ticker": "005930.KS",
-        "name": "Samsung Electronics",
+        "name": "삼성전자",
         "assetType": "STOCK",
         "moneyFlowScore": 95,
         "moneyFlowScoreInitial": 95,
-        "moneyFlowScoreFinal": 100,
-        "finalRawScore": 102,
+        "moneyFlowScoreFinal": 96,
+        "finalRawScore": 96,
         "todayActionLabel": "강한 자금흐름 조건부",
-        "reasonConfidence": "HIGH",
+        "reasonConfidence": "MEDIUM",
         "oneDayReturn": 4.62,
         "fiveDayReturn": 21.24,
         "twentyDayReturn": 31.58,
@@ -138,30 +138,8 @@
         "failureReason": ""
       },
       {
-        "ticker": "034730.KS",
-        "name": "SK",
-        "assetType": "STOCK",
-        "moneyFlowScore": 89,
-        "moneyFlowScoreInitial": 89,
-        "moneyFlowScoreFinal": 94,
-        "finalRawScore": 94,
-        "todayActionLabel": "강한 자금흐름 조건부",
-        "reasonConfidence": "MEDIUM",
-        "oneDayReturn": -2.97,
-        "fiveDayReturn": 19.48,
-        "twentyDayReturn": 32.37,
-        "relativeVolume": 1.3,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "강한 자금 유입 후보",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
         "ticker": "093370.KS",
-        "name": "Foosung",
+        "name": "후성",
         "assetType": "STOCK",
         "moneyFlowScore": 89,
         "moneyFlowScoreInitial": 89,
@@ -182,8 +160,30 @@
         "failureReason": ""
       },
       {
+        "ticker": "034730.KS",
+        "name": "SK",
+        "assetType": "STOCK",
+        "moneyFlowScore": 85,
+        "moneyFlowScoreInitial": 85,
+        "moneyFlowScoreFinal": 90,
+        "finalRawScore": 90,
+        "todayActionLabel": "강한 자금흐름 조건부",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": -2.97,
+        "fiveDayReturn": 19.48,
+        "twentyDayReturn": 32.37,
+        "relativeVolume": 1.13,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "강한 자금 유입 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
         "ticker": "011070.KS",
-        "name": "LG Innotek",
+        "name": "LG이노텍",
         "assetType": "STOCK",
         "moneyFlowScore": 80,
         "moneyFlowScoreInitial": 80,
@@ -194,7 +194,7 @@
         "oneDayReturn": 2.8,
         "fiveDayReturn": 19.68,
         "twentyDayReturn": 61.79,
-        "relativeVolume": 1.14,
+        "relativeVolume": 1.11,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -205,7 +205,7 @@
       },
       {
         "ticker": "204320.KS",
-        "name": "HL Mando",
+        "name": "HL만도",
         "assetType": "STOCK",
         "moneyFlowScore": 75,
         "moneyFlowScoreInitial": 75,
@@ -227,12 +227,12 @@
       },
       {
         "ticker": "207940.KS",
-        "name": "Samsung Biologics",
+        "name": "삼성바이오로직스",
         "assetType": "STOCK",
         "moneyFlowScore": 66,
         "moneyFlowScoreInitial": 66,
-        "moneyFlowScoreFinal": 81,
-        "finalRawScore": 81,
+        "moneyFlowScoreFinal": 71,
+        "finalRawScore": 71,
         "todayActionLabel": "제외",
         "reasonConfidence": "MEDIUM",
         "oneDayReturn": 4.38,
@@ -246,7 +246,7 @@
       },
       {
         "ticker": "042660.KS",
-        "name": "Hanwha Ocean",
+        "name": "한화오션",
         "assetType": "STOCK",
         "moneyFlowScore": 61,
         "moneyFlowScoreInitial": 61,
@@ -257,7 +257,7 @@
         "oneDayReturn": -6.01,
         "fiveDayReturn": 19.71,
         "twentyDayReturn": 11.8,
-        "relativeVolume": 1.05,
+        "relativeVolume": 1.08,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -268,7 +268,7 @@
       },
       {
         "ticker": "028260.KS",
-        "name": "Samsung C&T",
+        "name": "삼성물산",
         "assetType": "STOCK",
         "moneyFlowScore": 57,
         "moneyFlowScoreInitial": 57,
@@ -279,7 +279,7 @@
         "oneDayReturn": -0.92,
         "fiveDayReturn": 18.41,
         "twentyDayReturn": 27.6,
-        "relativeVolume": 0.68,
+        "relativeVolume": 0.78,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -290,7 +290,7 @@
       },
       {
         "ticker": "004490.KS",
-        "name": "Sebang Global Battery",
+        "name": "세방전지",
         "assetType": "STOCK",
         "moneyFlowScore": 55,
         "moneyFlowScoreInitial": 55,
@@ -301,7 +301,7 @@
         "oneDayReturn": -3.61,
         "fiveDayReturn": 17.85,
         "twentyDayReturn": 5.32,
-        "relativeVolume": 1.16,
+        "relativeVolume": 1.13,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -312,18 +312,18 @@
       },
       {
         "ticker": "069960.KS",
-        "name": "Hyundai Department Store",
+        "name": "현대백화점",
         "assetType": "STOCK",
         "moneyFlowScore": 54,
         "moneyFlowScoreInitial": 54,
-        "moneyFlowScoreFinal": 63,
-        "finalRawScore": 63,
+        "moneyFlowScoreFinal": 61,
+        "finalRawScore": 61,
         "todayActionLabel": "거래량 확인 전 관찰",
         "reasonConfidence": "LOW",
         "oneDayReturn": -1.45,
         "fiveDayReturn": 9.03,
         "twentyDayReturn": 88.89,
-        "relativeVolume": 0.79,
+        "relativeVolume": 0.82,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -334,7 +334,7 @@
       },
       {
         "ticker": "000810.KS",
-        "name": "Samsung Fire & Marine",
+        "name": "삼성화재",
         "assetType": "STOCK",
         "moneyFlowScore": 54,
         "moneyFlowScoreInitial": 54,
@@ -345,7 +345,7 @@
         "oneDayReturn": 3.09,
         "fiveDayReturn": 5.58,
         "twentyDayReturn": 27.04,
-        "relativeVolume": 0.6,
+        "relativeVolume": 0.66,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -356,7 +356,7 @@
       },
       {
         "ticker": "003490.KS",
-        "name": "Korean Air",
+        "name": "대한항공",
         "assetType": "STOCK",
         "moneyFlowScore": 49,
         "moneyFlowScoreInitial": 49,
@@ -367,29 +367,7 @@
         "oneDayReturn": 0.17,
         "fiveDayReturn": 16.33,
         "twentyDayReturn": 11.82,
-        "relativeVolume": 0.94,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "079550.KS",
-        "name": "LIG Nex1",
-        "assetType": "STOCK",
-        "moneyFlowScore": 47,
-        "moneyFlowScoreInitial": 47,
-        "moneyFlowScoreFinal": 58,
-        "finalRawScore": 58,
-        "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
-        "oneDayReturn": -6.95,
-        "fiveDayReturn": 15.71,
-        "twentyDayReturn": 2.55,
-        "relativeVolume": 1,
+        "relativeVolume": 0.9,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -400,7 +378,7 @@
       },
       {
         "ticker": "052690.KS",
-        "name": "KEPCO E&C",
+        "name": "한전기술",
         "assetType": "STOCK",
         "moneyFlowScore": 46,
         "moneyFlowScoreInitial": 46,
@@ -411,29 +389,7 @@
         "oneDayReturn": 1.03,
         "fiveDayReturn": 17.44,
         "twentyDayReturn": -2.36,
-        "relativeVolume": 3.13,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "055550.KS",
-        "name": "Shinhan Financial",
-        "assetType": "STOCK",
-        "moneyFlowScore": 45,
-        "moneyFlowScoreInitial": 45,
-        "moneyFlowScoreFinal": 56,
-        "finalRawScore": 56,
-        "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
-        "oneDayReturn": -2.23,
-        "fiveDayReturn": 4.02,
-        "twentyDayReturn": 7.35,
-        "relativeVolume": 1.04,
+        "relativeVolume": 3.08,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -444,14 +400,14 @@
       },
       {
         "ticker": "375500.KS",
-        "name": "DL E&C",
+        "name": "DL이앤씨",
         "assetType": "STOCK",
         "moneyFlowScore": 44,
         "moneyFlowScoreInitial": 44,
-        "moneyFlowScoreFinal": 57,
-        "finalRawScore": 57,
+        "moneyFlowScoreFinal": 55,
+        "finalRawScore": 55,
         "todayActionLabel": "제외",
-        "reasonConfidence": "HIGH",
+        "reasonConfidence": "MEDIUM",
         "oneDayReturn": -6.82,
         "fiveDayReturn": 12.82,
         "twentyDayReturn": 1.54,
@@ -465,19 +421,19 @@
         "failureReason": ""
       },
       {
-        "ticker": "004170.KS",
-        "name": "Shinsegae",
+        "ticker": "015760.KS",
+        "name": "한국전력",
         "assetType": "STOCK",
         "moneyFlowScore": 40,
         "moneyFlowScoreInitial": 40,
-        "moneyFlowScoreFinal": 46,
-        "finalRawScore": 46,
-        "todayActionLabel": "거래량 확인 전 관찰",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -3.05,
-        "fiveDayReturn": 2.24,
-        "twentyDayReturn": 44.27,
-        "relativeVolume": 0.84,
+        "moneyFlowScoreFinal": 51,
+        "finalRawScore": 51,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": -2.84,
+        "fiveDayReturn": 9.61,
+        "twentyDayReturn": 0.51,
+        "relativeVolume": 1.24,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -487,19 +443,19 @@
         "failureReason": ""
       },
       {
-        "ticker": "015760.KS",
-        "name": "KEPCO",
+        "ticker": "004170.KS",
+        "name": "신세계",
         "assetType": "STOCK",
-        "moneyFlowScore": 36,
-        "moneyFlowScoreInitial": 36,
-        "moneyFlowScoreFinal": 42,
-        "finalRawScore": 42,
-        "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
-        "oneDayReturn": -2.84,
-        "fiveDayReturn": 9.61,
-        "twentyDayReturn": 0.51,
-        "relativeVolume": 1.17,
+        "moneyFlowScore": 40,
+        "moneyFlowScoreInitial": 40,
+        "moneyFlowScoreFinal": 51,
+        "finalRawScore": 51,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -3.05,
+        "fiveDayReturn": 2.24,
+        "twentyDayReturn": 44.27,
+        "relativeVolume": 0.79,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -510,7 +466,7 @@
       },
       {
         "ticker": "086790.KS",
-        "name": "Hana Financial",
+        "name": "하나금융지주",
         "assetType": "STOCK",
         "moneyFlowScore": 35,
         "moneyFlowScoreInitial": 35,
@@ -532,7 +488,7 @@
       },
       {
         "ticker": "008770.KS",
-        "name": "Hotel Shilla",
+        "name": "호텔신라",
         "assetType": "STOCK",
         "moneyFlowScore": 33,
         "moneyFlowScoreInitial": 33,
@@ -543,7 +499,7 @@
         "oneDayReturn": -0.35,
         "fiveDayReturn": 3.41,
         "twentyDayReturn": -0.35,
-        "relativeVolume": 1.29,
+        "relativeVolume": 1.24,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -554,7 +510,7 @@
       },
       {
         "ticker": "329180.KS",
-        "name": "HD Hyundai Heavy Industries",
+        "name": "HD현대중공업",
         "assetType": "STOCK",
         "moneyFlowScore": 30,
         "moneyFlowScoreInitial": 30,
@@ -576,7 +532,7 @@
       },
       {
         "ticker": "105560.KS",
-        "name": "KB Financial",
+        "name": "KB금융",
         "assetType": "STOCK",
         "moneyFlowScore": 28,
         "moneyFlowScoreInitial": 28,
@@ -598,7 +554,7 @@
       },
       {
         "ticker": "009420.KS",
-        "name": "Hanall Biopharma",
+        "name": "한올바이오파마",
         "assetType": "STOCK",
         "moneyFlowScore": 27,
         "moneyFlowScoreInitial": 27,
@@ -609,7 +565,7 @@
         "oneDayReturn": -1.96,
         "fiveDayReturn": 3.58,
         "twentyDayReturn": 33.25,
-        "relativeVolume": 0.43,
+        "relativeVolume": 0.42,
         "relatedEtfs": [],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -617,7 +573,7 @@
       },
       {
         "ticker": "064350.KS",
-        "name": "Hyundai Rotem",
+        "name": "현대로템",
         "assetType": "STOCK",
         "moneyFlowScore": 25,
         "moneyFlowScoreInitial": 25,
@@ -628,7 +584,7 @@
         "oneDayReturn": -3.42,
         "fiveDayReturn": 12.26,
         "twentyDayReturn": 8.13,
-        "relativeVolume": 0.65,
+        "relativeVolume": 0.7,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -639,7 +595,7 @@
       },
       {
         "ticker": "062040.KS",
-        "name": "Sanil Electric",
+        "name": "산일전기",
         "assetType": "STOCK",
         "moneyFlowScore": 24,
         "moneyFlowScoreInitial": 24,
@@ -650,7 +606,29 @@
         "oneDayReturn": -3.78,
         "fiveDayReturn": 13.38,
         "twentyDayReturn": -1.63,
-        "relativeVolume": 1.1,
+        "relativeVolume": 1.01,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "079550.KS",
+        "name": "LIG디펜스앤에어로스페이스",
+        "assetType": "STOCK",
+        "moneyFlowScore": 23,
+        "moneyFlowScoreInitial": 23,
+        "moneyFlowScoreFinal": 25,
+        "finalRawScore": 25,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -6.95,
+        "fiveDayReturn": 15.71,
+        "twentyDayReturn": 2.55,
+        "relativeVolume": 0.97,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -661,7 +639,7 @@
       },
       {
         "ticker": "298040.KS",
-        "name": "Hyosung Heavy Industries",
+        "name": "효성중공업",
         "assetType": "STOCK",
         "moneyFlowScore": 23,
         "moneyFlowScoreInitial": 23,
@@ -683,7 +661,7 @@
       },
       {
         "ticker": "042700.KS",
-        "name": "Hanmi Semiconductor",
+        "name": "한미반도체",
         "assetType": "STOCK",
         "moneyFlowScore": 22,
         "moneyFlowScoreInitial": 22,
@@ -694,7 +672,7 @@
         "oneDayReturn": -1.25,
         "fiveDayReturn": 8.42,
         "twentyDayReturn": 9.55,
-        "relativeVolume": 0.55,
+        "relativeVolume": 0.53,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -705,7 +683,7 @@
       },
       {
         "ticker": "009540.KS",
-        "name": "HD KSOE",
+        "name": "HD한국조선해양",
         "assetType": "STOCK",
         "moneyFlowScore": 21,
         "moneyFlowScoreInitial": 21,
@@ -716,7 +694,29 @@
         "oneDayReturn": -3,
         "fiveDayReturn": 12.12,
         "twentyDayReturn": 5.25,
-        "relativeVolume": 0.83,
+        "relativeVolume": 0.7,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "055550.KS",
+        "name": "신한지주",
+        "assetType": "STOCK",
+        "moneyFlowScore": 21,
+        "moneyFlowScoreInitial": 21,
+        "moneyFlowScoreFinal": 27,
+        "finalRawScore": 27,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -2.23,
+        "fiveDayReturn": 4.02,
+        "twentyDayReturn": 7.35,
+        "relativeVolume": 0.89,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -727,7 +727,7 @@
       },
       {
         "ticker": "034020.KS",
-        "name": "Doosan Enerbility",
+        "name": "두산에너빌리티",
         "assetType": "STOCK",
         "moneyFlowScore": 19,
         "moneyFlowScoreInitial": 19,
@@ -749,7 +749,7 @@
       },
       {
         "ticker": "001450.KS",
-        "name": "Hyundai Marine & Fire",
+        "name": "현대해상",
         "assetType": "STOCK",
         "moneyFlowScore": 19,
         "moneyFlowScoreInitial": 19,
@@ -760,7 +760,7 @@
         "oneDayReturn": -1,
         "fiveDayReturn": 5.16,
         "twentyDayReturn": 2.32,
-        "relativeVolume": 0.79,
+        "relativeVolume": 0.84,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -771,7 +771,7 @@
       },
       {
         "ticker": "180640.KS",
-        "name": "Hanjin KAL",
+        "name": "한진칼",
         "assetType": "STOCK",
         "moneyFlowScore": 19,
         "moneyFlowScoreInitial": 19,
@@ -804,7 +804,7 @@
         "oneDayReturn": 0.27,
         "fiveDayReturn": 6.07,
         "twentyDayReturn": 5.16,
-        "relativeVolume": 0.88,
+        "relativeVolume": 0.93,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -815,7 +815,7 @@
       },
       {
         "ticker": "088350.KS",
-        "name": "Hanwha Life",
+        "name": "한화생명",
         "assetType": "STOCK",
         "moneyFlowScore": 17,
         "moneyFlowScoreInitial": 17,
@@ -836,8 +836,30 @@
         "failureReason": ""
       },
       {
+        "ticker": "011170.KS",
+        "name": "롯데케미칼",
+        "assetType": "STOCK",
+        "moneyFlowScore": 17,
+        "moneyFlowScoreInitial": 17,
+        "moneyFlowScoreFinal": 23,
+        "finalRawScore": 23,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -2.93,
+        "fiveDayReturn": 4.61,
+        "twentyDayReturn": -3.05,
+        "relativeVolume": 1.05,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
         "ticker": "082740.KS",
-        "name": "Hanwha Engine",
+        "name": "한화엔진",
         "assetType": "STOCK",
         "moneyFlowScore": 15,
         "moneyFlowScoreInitial": 15,
@@ -859,7 +881,7 @@
       },
       {
         "ticker": "012450.KS",
-        "name": "Hanwha Aerospace",
+        "name": "한화에어로스페이스",
         "assetType": "STOCK",
         "moneyFlowScore": 15,
         "moneyFlowScoreInitial": 15,
@@ -870,7 +892,7 @@
         "oneDayReturn": -2.86,
         "fiveDayReturn": 17.26,
         "twentyDayReturn": -7.54,
-        "relativeVolume": 0.97,
+        "relativeVolume": 0.92,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -892,7 +914,7 @@
         "oneDayReturn": -7.47,
         "fiveDayReturn": 8.49,
         "twentyDayReturn": 3.18,
-        "relativeVolume": 0.88,
+        "relativeVolume": 0.95,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -903,7 +925,7 @@
       },
       {
         "ticker": "035420.KS",
-        "name": "Naver",
+        "name": "NAVER",
         "assetType": "STOCK",
         "moneyFlowScore": 15,
         "moneyFlowScoreInitial": 15,
@@ -925,7 +947,7 @@
       },
       {
         "ticker": "138040.KS",
-        "name": "Meritz Financial",
+        "name": "메리츠금융지주",
         "assetType": "STOCK",
         "moneyFlowScore": 13,
         "moneyFlowScoreInitial": 13,
@@ -947,7 +969,7 @@
       },
       {
         "ticker": "024110.KS",
-        "name": "Industrial Bank of Korea",
+        "name": "기업은행",
         "assetType": "STOCK",
         "moneyFlowScore": 13,
         "moneyFlowScoreInitial": 13,
@@ -958,7 +980,7 @@
         "oneDayReturn": -2.67,
         "fiveDayReturn": 4.3,
         "twentyDayReturn": 6.07,
-        "relativeVolume": 0.45,
+        "relativeVolume": 0.52,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -969,7 +991,7 @@
       },
       {
         "ticker": "071970.KS",
-        "name": "HD Hyundai Marine Engine",
+        "name": "HD현대마린엔진",
         "assetType": "STOCK",
         "moneyFlowScore": 12,
         "moneyFlowScoreInitial": 12,
@@ -980,7 +1002,7 @@
         "oneDayReturn": -8.63,
         "fiveDayReturn": 10.43,
         "twentyDayReturn": -7.9,
-        "relativeVolume": 1.37,
+        "relativeVolume": 1.4,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -991,7 +1013,7 @@
       },
       {
         "ticker": "112610.KS",
-        "name": "CS Wind",
+        "name": "씨에스윈드",
         "assetType": "STOCK",
         "moneyFlowScore": 12,
         "moneyFlowScoreInitial": 12,
@@ -1013,7 +1035,7 @@
       },
       {
         "ticker": "023530.KS",
-        "name": "Lotte Shopping",
+        "name": "롯데쇼핑",
         "assetType": "STOCK",
         "moneyFlowScore": 11,
         "moneyFlowScoreInitial": 11,
@@ -1024,7 +1046,29 @@
         "oneDayReturn": -7.27,
         "fiveDayReturn": -6.58,
         "twentyDayReturn": 17.13,
-        "relativeVolume": 0.71,
+        "relativeVolume": 0.75,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "000720.KS",
+        "name": "현대건설",
+        "assetType": "STOCK",
+        "moneyFlowScore": 10,
+        "moneyFlowScoreInitial": 10,
+        "moneyFlowScoreFinal": 10,
+        "finalRawScore": 10,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -4.38,
+        "fiveDayReturn": 8.56,
+        "twentyDayReturn": -4.38,
+        "relativeVolume": 1.03,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1035,7 +1079,7 @@
       },
       {
         "ticker": "066570.KS",
-        "name": "LG Electronics",
+        "name": "LG전자",
         "assetType": "STOCK",
         "moneyFlowScore": 10,
         "moneyFlowScoreInitial": 10,
@@ -1046,7 +1090,7 @@
         "oneDayReturn": -2.56,
         "fiveDayReturn": 1.11,
         "twentyDayReturn": 19.2,
-        "relativeVolume": 0.41,
+        "relativeVolume": 0.39,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1057,7 +1101,7 @@
       },
       {
         "ticker": "005850.KS",
-        "name": "SL",
+        "name": "에스엘",
         "assetType": "STOCK",
         "moneyFlowScore": 9,
         "moneyFlowScoreInitial": 9,
@@ -1068,7 +1112,7 @@
         "oneDayReturn": -5.06,
         "fiveDayReturn": 6.93,
         "twentyDayReturn": 11.04,
-        "relativeVolume": 0.54,
+        "relativeVolume": 0.53,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1079,7 +1123,7 @@
       },
       {
         "ticker": "029780.KS",
-        "name": "Samsung Card",
+        "name": "삼성카드",
         "assetType": "STOCK",
         "moneyFlowScore": 9,
         "moneyFlowScoreInitial": 9,
@@ -1090,7 +1134,7 @@
         "oneDayReturn": -0.1,
         "fiveDayReturn": 5.2,
         "twentyDayReturn": 0.92,
-        "relativeVolume": 0.5,
+        "relativeVolume": 0.48,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1101,7 +1145,7 @@
       },
       {
         "ticker": "012330.KS",
-        "name": "Hyundai Mobis",
+        "name": "현대모비스",
         "assetType": "STOCK",
         "moneyFlowScore": 9,
         "moneyFlowScoreInitial": 9,
@@ -1112,7 +1156,7 @@
         "oneDayReturn": -4.44,
         "fiveDayReturn": 4.69,
         "twentyDayReturn": 14.86,
-        "relativeVolume": 0.47,
+        "relativeVolume": 0.44,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1123,7 +1167,7 @@
       },
       {
         "ticker": "285130.KS",
-        "name": "SK Chemicals",
+        "name": "SK케미칼",
         "assetType": "STOCK",
         "moneyFlowScore": 9,
         "moneyFlowScoreInitial": 9,
@@ -1145,7 +1189,7 @@
       },
       {
         "ticker": "268280.KS",
-        "name": "Miwon Specialty Chemical",
+        "name": "미원에스씨",
         "assetType": "STOCK",
         "moneyFlowScore": 9,
         "moneyFlowScoreInitial": 9,
@@ -1167,7 +1211,7 @@
       },
       {
         "ticker": "138930.KS",
-        "name": "BNK Financial",
+        "name": "BNK금융지주",
         "assetType": "STOCK",
         "moneyFlowScore": 8,
         "moneyFlowScoreInitial": 8,
@@ -1189,7 +1233,7 @@
       },
       {
         "ticker": "316140.KS",
-        "name": "Woori Financial",
+        "name": "우리금융지주",
         "assetType": "STOCK",
         "moneyFlowScore": 8,
         "moneyFlowScoreInitial": 8,
@@ -1211,7 +1255,7 @@
       },
       {
         "ticker": "007340.KS",
-        "name": "DN Automotive",
+        "name": "DN오토모티브",
         "assetType": "STOCK",
         "moneyFlowScore": 7,
         "moneyFlowScoreInitial": 7,
@@ -1222,7 +1266,7 @@
         "oneDayReturn": -5.32,
         "fiveDayReturn": 6.88,
         "twentyDayReturn": -7.27,
-        "relativeVolume": 1.32,
+        "relativeVolume": 1.35,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1233,7 +1277,7 @@
       },
       {
         "ticker": "009240.KS",
-        "name": "Hanssem",
+        "name": "한샘",
         "assetType": "STOCK",
         "moneyFlowScore": 6,
         "moneyFlowScoreInitial": 6,
@@ -1244,7 +1288,7 @@
         "oneDayReturn": -3.56,
         "fiveDayReturn": 4.8,
         "twentyDayReturn": 3.68,
-        "relativeVolume": 0.76,
+        "relativeVolume": 0.74,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1255,7 +1299,7 @@
       },
       {
         "ticker": "051600.KS",
-        "name": "KEPCO KPS",
+        "name": "한전KPS",
         "assetType": "STOCK",
         "moneyFlowScore": 6,
         "moneyFlowScoreInitial": 6,
@@ -1266,7 +1310,7 @@
         "oneDayReturn": -2.11,
         "fiveDayReturn": 3.45,
         "twentyDayReturn": -5.38,
-        "relativeVolume": 1.24,
+        "relativeVolume": 1.27,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1277,7 +1321,7 @@
       },
       {
         "ticker": "241560.KS",
-        "name": "Doosan Bobcat",
+        "name": "두산밥캣",
         "assetType": "STOCK",
         "moneyFlowScore": 6,
         "moneyFlowScoreInitial": 6,
@@ -1310,7 +1354,7 @@
         "oneDayReturn": -2.91,
         "fiveDayReturn": 8.66,
         "twentyDayReturn": 6.71,
-        "relativeVolume": 0.86,
+        "relativeVolume": 0.9,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1321,7 +1365,7 @@
       },
       {
         "ticker": "047810.KS",
-        "name": "Korea Aerospace",
+        "name": "한국항공우주",
         "assetType": "STOCK",
         "moneyFlowScore": 5,
         "moneyFlowScoreInitial": 5,
@@ -1332,7 +1376,7 @@
         "oneDayReturn": -2.31,
         "fiveDayReturn": 7.12,
         "twentyDayReturn": -6.06,
-        "relativeVolume": 0.57,
+        "relativeVolume": 0.54,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1343,7 +1387,7 @@
       },
       {
         "ticker": "018260.KS",
-        "name": "Samsung SDS",
+        "name": "삼성에스디에스",
         "assetType": "STOCK",
         "moneyFlowScore": 5,
         "moneyFlowScoreInitial": 5,
@@ -1354,7 +1398,7 @@
         "oneDayReturn": -4.95,
         "fiveDayReturn": -3.7,
         "twentyDayReturn": 29.24,
-        "relativeVolume": 0.42,
+        "relativeVolume": 0.4,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1365,7 +1409,7 @@
       },
       {
         "ticker": "018880.KS",
-        "name": "Hanon Systems",
+        "name": "한온시스템",
         "assetType": "STOCK",
         "moneyFlowScore": 4,
         "moneyFlowScoreInitial": 4,
@@ -1387,7 +1431,7 @@
       },
       {
         "ticker": "267260.KS",
-        "name": "HD Hyundai Electric",
+        "name": "HD현대일렉트릭",
         "assetType": "STOCK",
         "moneyFlowScore": 4,
         "moneyFlowScoreInitial": 4,
@@ -1409,7 +1453,7 @@
       },
       {
         "ticker": "377300.KS",
-        "name": "KakaoPay",
+        "name": "카카오페이",
         "assetType": "STOCK",
         "moneyFlowScore": 4,
         "moneyFlowScoreInitial": 4,
@@ -1431,7 +1475,7 @@
       },
       {
         "ticker": "161890.KS",
-        "name": "Kolmar Korea",
+        "name": "한국콜마",
         "assetType": "STOCK",
         "moneyFlowScore": 4,
         "moneyFlowScoreInitial": 4,
@@ -1453,7 +1497,7 @@
       },
       {
         "ticker": "443060.KS",
-        "name": "HD Hyundai Marine Solution",
+        "name": "HD현대마린솔루션",
         "assetType": "STOCK",
         "moneyFlowScore": 4,
         "moneyFlowScoreInitial": 4,
@@ -1475,7 +1519,7 @@
       },
       {
         "ticker": "352820.KS",
-        "name": "Hybe",
+        "name": "하이브",
         "assetType": "STOCK",
         "moneyFlowScore": 3,
         "moneyFlowScoreInitial": 3,
@@ -1497,7 +1541,7 @@
       },
       {
         "ticker": "175330.KS",
-        "name": "JB Financial",
+        "name": "JB금융지주",
         "assetType": "STOCK",
         "moneyFlowScore": 3,
         "moneyFlowScoreInitial": 3,
@@ -1530,7 +1574,7 @@
         "oneDayReturn": -2.6,
         "fiveDayReturn": -3.23,
         "twentyDayReturn": 20.32,
-        "relativeVolume": 0.3,
+        "relativeVolume": 0.28,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1541,7 +1585,7 @@
       },
       {
         "ticker": "016360.KS",
-        "name": "Samsung Securities",
+        "name": "삼성증권",
         "assetType": "STOCK",
         "moneyFlowScore": 2,
         "moneyFlowScoreInitial": 2,
@@ -1552,7 +1596,7 @@
         "oneDayReturn": -3.79,
         "fiveDayReturn": 6.62,
         "twentyDayReturn": 4.1,
-        "relativeVolume": 0.76,
+        "relativeVolume": 0.8,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1563,7 +1607,7 @@
       },
       {
         "ticker": "073240.KS",
-        "name": "Kumho Tire",
+        "name": "금호타이어",
         "assetType": "STOCK",
         "moneyFlowScore": 2,
         "moneyFlowScoreInitial": 2,
@@ -1574,7 +1618,7 @@
         "oneDayReturn": -4.21,
         "fiveDayReturn": 5.75,
         "twentyDayReturn": -1.24,
-        "relativeVolume": 0.52,
+        "relativeVolume": 0.54,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1585,7 +1629,7 @@
       },
       {
         "ticker": "069260.KS",
-        "name": "TKG Huchems",
+        "name": "TKG휴켐스",
         "assetType": "STOCK",
         "moneyFlowScore": 2,
         "moneyFlowScoreInitial": 2,
@@ -1596,7 +1640,7 @@
         "oneDayReturn": -2.6,
         "fiveDayReturn": 4.86,
         "twentyDayReturn": -5.29,
-        "relativeVolume": 0.69,
+        "relativeVolume": 0.67,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1607,7 +1651,7 @@
       },
       {
         "ticker": "000150.KS",
-        "name": "Doosan",
+        "name": "두산",
         "assetType": "STOCK",
         "moneyFlowScore": 2,
         "moneyFlowScoreInitial": 2,
@@ -1618,7 +1662,7 @@
         "oneDayReturn": 0.62,
         "fiveDayReturn": 0.8,
         "twentyDayReturn": 8.93,
-        "relativeVolume": 0.72,
+        "relativeVolume": 0.76,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1629,7 +1673,7 @@
       },
       {
         "ticker": "014680.KS",
-        "name": "Hansol Chemical",
+        "name": "한솔케미칼",
         "assetType": "STOCK",
         "moneyFlowScore": 2,
         "moneyFlowScoreInitial": 2,
@@ -1640,7 +1684,29 @@
         "oneDayReturn": -1.16,
         "fiveDayReturn": 0.51,
         "twentyDayReturn": -3.57,
-        "relativeVolume": 0.51,
+        "relativeVolume": 0.54,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "078930.KS",
+        "name": "GS",
+        "assetType": "STOCK",
+        "moneyFlowScore": 2,
+        "moneyFlowScoreInitial": 2,
+        "moneyFlowScoreFinal": 2,
+        "finalRawScore": 2,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -2.19,
+        "fiveDayReturn": -0.56,
+        "twentyDayReturn": -5.56,
+        "relativeVolume": 1.78,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1651,7 +1717,7 @@
       },
       {
         "ticker": "307950.KS",
-        "name": "Hyundai AutoEver",
+        "name": "현대오토에버",
         "assetType": "STOCK",
         "moneyFlowScore": 2,
         "moneyFlowScoreInitial": 2,
@@ -1673,7 +1739,7 @@
       },
       {
         "ticker": "000880.KS",
-        "name": "Hanwha",
+        "name": "한화",
         "assetType": "STOCK",
         "moneyFlowScore": 1,
         "moneyFlowScoreInitial": 1,
@@ -1684,7 +1750,7 @@
         "oneDayReturn": -6.28,
         "fiveDayReturn": 2.81,
         "twentyDayReturn": -1.71,
-        "relativeVolume": 1.03,
+        "relativeVolume": 1.11,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1695,7 +1761,7 @@
       },
       {
         "ticker": "047040.KS",
-        "name": "Daewoo E&C",
+        "name": "대우건설",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1728,7 +1794,7 @@
         "oneDayReturn": -3.58,
         "fiveDayReturn": 11.78,
         "twentyDayReturn": -22.83,
-        "relativeVolume": 0.72,
+        "relativeVolume": 0.77,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1739,7 +1805,7 @@
       },
       {
         "ticker": "010140.KS",
-        "name": "Samsung Heavy Industries",
+        "name": "삼성중공업",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1750,7 +1816,7 @@
         "oneDayReturn": -4.32,
         "fiveDayReturn": 9.49,
         "twentyDayReturn": -2.98,
-        "relativeVolume": 0.76,
+        "relativeVolume": 0.7,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1761,7 +1827,7 @@
       },
       {
         "ticker": "003670.KS",
-        "name": "POSCO Future M",
+        "name": "포스코퓨처엠",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1772,7 +1838,7 @@
         "oneDayReturn": -3.58,
         "fiveDayReturn": 9.37,
         "twentyDayReturn": -9.82,
-        "relativeVolume": 0.86,
+        "relativeVolume": 0.82,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1783,7 +1849,7 @@
       },
       {
         "ticker": "028050.KS",
-        "name": "Samsung E&A",
+        "name": "삼성E&A",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1794,29 +1860,7 @@
         "oneDayReturn": -5.33,
         "fiveDayReturn": 9.11,
         "twentyDayReturn": 0.91,
-        "relativeVolume": 0.96,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "000720.KS",
-        "name": "Hyundai E&C",
-        "assetType": "STOCK",
-        "moneyFlowScore": 0,
-        "moneyFlowScoreInitial": 0,
-        "moneyFlowScoreFinal": 0,
-        "finalRawScore": -12,
-        "todayActionLabel": "거래량 확인 전 관찰",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -4.38,
-        "fiveDayReturn": 8.56,
-        "twentyDayReturn": -4.38,
-        "relativeVolume": 0.96,
+        "relativeVolume": 0.92,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1827,7 +1871,7 @@
       },
       {
         "ticker": "272210.KS",
-        "name": "Hanwha Systems",
+        "name": "한화시스템",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1849,7 +1893,7 @@
       },
       {
         "ticker": "009830.KS",
-        "name": "Hanwha Solutions",
+        "name": "한화솔루션",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1860,7 +1904,7 @@
         "oneDayReturn": -7.75,
         "fiveDayReturn": 8.38,
         "twentyDayReturn": -7.75,
-        "relativeVolume": 0.93,
+        "relativeVolume": 0.91,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1871,7 +1915,7 @@
       },
       {
         "ticker": "086280.KS",
-        "name": "Hyundai Glovis",
+        "name": "현대글로비스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1893,7 +1937,7 @@
       },
       {
         "ticker": "051910.KS",
-        "name": "LG Chem",
+        "name": "LG화학",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1904,7 +1948,7 @@
         "oneDayReturn": -5.12,
         "fiveDayReturn": 8.21,
         "twentyDayReturn": -2.28,
-        "relativeVolume": 0.82,
+        "relativeVolume": 0.96,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1915,7 +1959,7 @@
       },
       {
         "ticker": "011780.KS",
-        "name": "Kumho Petrochemical",
+        "name": "금호석유화학",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1926,7 +1970,7 @@
         "oneDayReturn": -4.73,
         "fiveDayReturn": 7.77,
         "twentyDayReturn": -6.25,
-        "relativeVolume": 0.84,
+        "relativeVolume": 0.9,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1937,7 +1981,7 @@
       },
       {
         "ticker": "005830.KS",
-        "name": "DB Insurance",
+        "name": "DB손해보험",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1948,7 +1992,7 @@
         "oneDayReturn": -1.06,
         "fiveDayReturn": 7.07,
         "twentyDayReturn": -8.65,
-        "relativeVolume": 0.52,
+        "relativeVolume": 0.57,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1959,7 +2003,7 @@
       },
       {
         "ticker": "001440.KS",
-        "name": "Taihan Cable & Solution",
+        "name": "대한전선",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1981,7 +2025,7 @@
       },
       {
         "ticker": "006650.KS",
-        "name": "Korea Petrochemical",
+        "name": "대한유화",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1992,7 +2036,7 @@
         "oneDayReturn": -5.7,
         "fiveDayReturn": 6.78,
         "twentyDayReturn": -4.51,
-        "relativeVolume": 0.6,
+        "relativeVolume": 0.65,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2003,7 +2047,7 @@
       },
       {
         "ticker": "011210.KS",
-        "name": "Hyundai WIA",
+        "name": "현대위아",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2014,7 +2058,7 @@
         "oneDayReturn": -8.29,
         "fiveDayReturn": 6.56,
         "twentyDayReturn": -4.86,
-        "relativeVolume": 0.68,
+        "relativeVolume": 0.71,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2025,7 +2069,7 @@
       },
       {
         "ticker": "006360.KS",
-        "name": "GS E&C",
+        "name": "GS건설",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2036,7 +2080,7 @@
         "oneDayReturn": -5.94,
         "fiveDayReturn": 5.73,
         "twentyDayReturn": -7.51,
-        "relativeVolume": 0.81,
+        "relativeVolume": 0.85,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2047,7 +2091,7 @@
       },
       {
         "ticker": "010120.KS",
-        "name": "LS Electric",
+        "name": "LS ELECTRIC",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2069,7 +2113,7 @@
       },
       {
         "ticker": "034220.KS",
-        "name": "LG Display",
+        "name": "LG디스플레이",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2091,7 +2135,7 @@
       },
       {
         "ticker": "006280.KS",
-        "name": "Green Cross",
+        "name": "녹십자",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2102,7 +2146,7 @@
         "oneDayReturn": -0.38,
         "fiveDayReturn": 5.15,
         "twentyDayReturn": -0.08,
-        "relativeVolume": 0.53,
+        "relativeVolume": 0.51,
         "relatedEtfs": [],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -2110,7 +2154,7 @@
       },
       {
         "ticker": "006400.KS",
-        "name": "Samsung SDI",
+        "name": "삼성SDI",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2121,29 +2165,7 @@
         "oneDayReturn": -5.09,
         "fiveDayReturn": 4.71,
         "twentyDayReturn": -11.07,
-        "relativeVolume": 0.64,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "011170.KS",
-        "name": "Lotte Chemical",
-        "assetType": "STOCK",
-        "moneyFlowScore": 0,
-        "moneyFlowScoreInitial": 0,
-        "moneyFlowScoreFinal": 5,
-        "finalRawScore": 5,
-        "todayActionLabel": "거래량 확인 전 관찰",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -2.93,
-        "fiveDayReturn": 4.61,
-        "twentyDayReturn": -3.05,
-        "relativeVolume": 0.98,
+        "relativeVolume": 0.57,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2154,7 +2176,7 @@
       },
       {
         "ticker": "0126Z0.KS",
-        "name": "Samsung Epis",
+        "name": "삼성에피스홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2165,7 +2187,7 @@
         "oneDayReturn": 0,
         "fiveDayReturn": 4.49,
         "twentyDayReturn": -5.32,
-        "relativeVolume": 0.62,
+        "relativeVolume": 0.58,
         "relatedEtfs": [],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -2173,7 +2195,7 @@
       },
       {
         "ticker": "068270.KS",
-        "name": "Celltrion",
+        "name": "셀트리온",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2184,7 +2206,7 @@
         "oneDayReturn": -0.57,
         "fiveDayReturn": 4.45,
         "twentyDayReturn": -0.12,
-        "relativeVolume": 0.68,
+        "relativeVolume": 0.74,
         "relatedEtfs": [],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -2192,7 +2214,7 @@
       },
       {
         "ticker": "103140.KS",
-        "name": "Poongsan",
+        "name": "풍산",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2214,7 +2236,7 @@
       },
       {
         "ticker": "373220.KS",
-        "name": "LG Energy Solution",
+        "name": "LG에너지솔루션",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2236,7 +2258,7 @@
       },
       {
         "ticker": "010130.KS",
-        "name": "Korea Zinc",
+        "name": "고려아연",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2247,7 +2269,7 @@
         "oneDayReturn": -4.12,
         "fiveDayReturn": 3.87,
         "twentyDayReturn": -12.01,
-        "relativeVolume": 1,
+        "relativeVolume": 1.13,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2258,7 +2280,7 @@
       },
       {
         "ticker": "004020.KS",
-        "name": "Hyundai Steel",
+        "name": "현대제철",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2269,7 +2291,7 @@
         "oneDayReturn": -4.44,
         "fiveDayReturn": 3.73,
         "twentyDayReturn": -13.6,
-        "relativeVolume": 0.6,
+        "relativeVolume": 0.55,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2280,7 +2302,7 @@
       },
       {
         "ticker": "128940.KS",
-        "name": "Hanmi Pharm",
+        "name": "한미약품",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2299,7 +2321,7 @@
       },
       {
         "ticker": "450080.KS",
-        "name": "Ecopro Materials",
+        "name": "에코프로머티",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2321,7 +2343,7 @@
       },
       {
         "ticker": "028670.KS",
-        "name": "Pan Ocean",
+        "name": "팬오션",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2343,18 +2365,18 @@
       },
       {
         "ticker": "039490.KS",
-        "name": "Kiwoom Securities",
+        "name": "키움증권",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
         "moneyFlowScoreFinal": 0,
-        "finalRawScore": -6,
-        "todayActionLabel": "제외",
+        "finalRawScore": -24,
+        "todayActionLabel": "거래량 확인 전 관찰",
         "reasonConfidence": "LOW",
         "oneDayReturn": -5.01,
         "fiveDayReturn": 2.64,
         "twentyDayReturn": -7.15,
-        "relativeVolume": 1.01,
+        "relativeVolume": 0.97,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2365,18 +2387,18 @@
       },
       {
         "ticker": "005490.KS",
-        "name": "POSCO",
+        "name": "POSCO홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
         "moneyFlowScoreFinal": 0,
-        "finalRawScore": -8,
-        "todayActionLabel": "제외",
+        "finalRawScore": -26,
+        "todayActionLabel": "거래량 확인 전 관찰",
         "reasonConfidence": "LOW",
         "oneDayReturn": -4.55,
         "fiveDayReturn": 2.51,
         "twentyDayReturn": -16.69,
-        "relativeVolume": 1.09,
+        "relativeVolume": 0.96,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2387,7 +2409,7 @@
       },
       {
         "ticker": "017960.KS",
-        "name": "Hankuk Carbon",
+        "name": "한국카본",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2398,7 +2420,7 @@
         "oneDayReturn": -8.31,
         "fiveDayReturn": 2.4,
         "twentyDayReturn": -11.72,
-        "relativeVolume": 1.03,
+        "relativeVolume": 1,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2409,7 +2431,7 @@
       },
       {
         "ticker": "457190.KS",
-        "name": "Isu Specialty Chemical",
+        "name": "이수스페셜티케미컬",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2431,7 +2453,7 @@
       },
       {
         "ticker": "000100.KS",
-        "name": "Yuhan",
+        "name": "유한양행",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2442,7 +2464,7 @@
         "oneDayReturn": -1.14,
         "fiveDayReturn": 2.36,
         "twentyDayReturn": -3.81,
-        "relativeVolume": 0.7,
+        "relativeVolume": 0.75,
         "relatedEtfs": [],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -2461,7 +2483,7 @@
         "oneDayReturn": -2.31,
         "fiveDayReturn": 2.23,
         "twentyDayReturn": 4.37,
-        "relativeVolume": 0.31,
+        "relativeVolume": 0.34,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2472,7 +2494,7 @@
       },
       {
         "ticker": "259960.KS",
-        "name": "Krafton",
+        "name": "크래프톤",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2494,7 +2516,7 @@
       },
       {
         "ticker": "000120.KS",
-        "name": "CJ Logistics",
+        "name": "CJ대한통운",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2505,7 +2527,7 @@
         "oneDayReturn": -3.9,
         "fiveDayReturn": 2.01,
         "twentyDayReturn": -8.13,
-        "relativeVolume": 0.57,
+        "relativeVolume": 0.62,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2516,7 +2538,7 @@
       },
       {
         "ticker": "185750.KS",
-        "name": "Chong Kun Dang",
+        "name": "종근당",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2535,7 +2557,7 @@
       },
       {
         "ticker": "000270.KS",
-        "name": "Kia",
+        "name": "기아",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2546,7 +2568,7 @@
         "oneDayReturn": -4.51,
         "fiveDayReturn": 1.79,
         "twentyDayReturn": 2.52,
-        "relativeVolume": 0.75,
+        "relativeVolume": 0.83,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2557,7 +2579,7 @@
       },
       {
         "ticker": "005300.KS",
-        "name": "Lotte Chilsung",
+        "name": "롯데칠성",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2568,7 +2590,7 @@
         "oneDayReturn": -2.64,
         "fiveDayReturn": 1.78,
         "twentyDayReturn": -10.18,
-        "relativeVolume": 0.64,
+        "relativeVolume": 0.62,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2579,7 +2601,7 @@
       },
       {
         "ticker": "066970.KS",
-        "name": "L&F",
+        "name": "엘앤에프",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2590,7 +2612,7 @@
         "oneDayReturn": -9.03,
         "fiveDayReturn": 1.67,
         "twentyDayReturn": -18.54,
-        "relativeVolume": 1.06,
+        "relativeVolume": 1.04,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2601,7 +2623,7 @@
       },
       {
         "ticker": "008930.KS",
-        "name": "Hanmi Science",
+        "name": "한미사이언스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2612,7 +2634,7 @@
         "oneDayReturn": -3.99,
         "fiveDayReturn": 1.01,
         "twentyDayReturn": -10.01,
-        "relativeVolume": 0.46,
+        "relativeVolume": 0.48,
         "relatedEtfs": [],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -2620,7 +2642,7 @@
       },
       {
         "ticker": "298050.KS",
-        "name": "HS Hyosung Advanced Materials",
+        "name": "HS효성첨단소재",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2642,7 +2664,7 @@
       },
       {
         "ticker": "300720.KS",
-        "name": "Hanil Cement",
+        "name": "한일시멘트",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2664,7 +2686,7 @@
       },
       {
         "ticker": "005420.KS",
-        "name": "Cosmo Chemical",
+        "name": "코스모화학",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2675,7 +2697,7 @@
         "oneDayReturn": -5.43,
         "fiveDayReturn": 0.81,
         "twentyDayReturn": -13.13,
-        "relativeVolume": 0.68,
+        "relativeVolume": 0.65,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2686,7 +2708,7 @@
       },
       {
         "ticker": "005940.KS",
-        "name": "NH Investment & Securities",
+        "name": "NH투자증권",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2697,7 +2719,7 @@
         "oneDayReturn": -2.78,
         "fiveDayReturn": 0.8,
         "twentyDayReturn": 1.29,
-        "relativeVolume": 0.57,
+        "relativeVolume": 0.59,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2708,7 +2730,7 @@
       },
       {
         "ticker": "008730.KS",
-        "name": "Youlchon Chemical",
+        "name": "율촌화학",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2719,7 +2741,7 @@
         "oneDayReturn": -7.56,
         "fiveDayReturn": 0.79,
         "twentyDayReturn": -16.83,
-        "relativeVolume": 1.09,
+        "relativeVolume": 1.1,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2741,7 +2763,7 @@
         "oneDayReturn": -3.14,
         "fiveDayReturn": 0.77,
         "twentyDayReturn": -4.73,
-        "relativeVolume": 0.95,
+        "relativeVolume": 0.92,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2752,7 +2774,7 @@
       },
       {
         "ticker": "005380.KS",
-        "name": "Hyundai Motor",
+        "name": "현대차",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2763,7 +2785,7 @@
         "oneDayReturn": -2.75,
         "fiveDayReturn": 0.67,
         "twentyDayReturn": -0.5,
-        "relativeVolume": 0.65,
+        "relativeVolume": 0.6,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2774,7 +2796,7 @@
       },
       {
         "ticker": "069620.KS",
-        "name": "Daewoong Pharmaceutical",
+        "name": "대웅제약",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2785,7 +2807,7 @@
         "oneDayReturn": -1.94,
         "fiveDayReturn": 0.67,
         "twentyDayReturn": -9.76,
-        "relativeVolume": 0.54,
+        "relativeVolume": 0.51,
         "relatedEtfs": [],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -2793,7 +2815,7 @@
       },
       {
         "ticker": "006040.KS",
-        "name": "Dongwon Industries",
+        "name": "동원산업",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2804,7 +2826,7 @@
         "oneDayReturn": -4.27,
         "fiveDayReturn": 0.62,
         "twentyDayReturn": -10.84,
-        "relativeVolume": 1.05,
+        "relativeVolume": 1.08,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2815,7 +2837,7 @@
       },
       {
         "ticker": "004000.KS",
-        "name": "Lotte Fine Chemical",
+        "name": "롯데정밀화학",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2826,7 +2848,7 @@
         "oneDayReturn": -2.58,
         "fiveDayReturn": 0.51,
         "twentyDayReturn": -9.74,
-        "relativeVolume": 0.82,
+        "relativeVolume": 0.88,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2837,7 +2859,7 @@
       },
       {
         "ticker": "096770.KS",
-        "name": "SK Innovation",
+        "name": "SK이노베이션",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2848,7 +2870,7 @@
         "oneDayReturn": -5.05,
         "fiveDayReturn": 0.29,
         "twentyDayReturn": -13.46,
-        "relativeVolume": 0.82,
+        "relativeVolume": 0.77,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2859,7 +2881,7 @@
       },
       {
         "ticker": "001680.KS",
-        "name": "Daesang",
+        "name": "대상",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2870,7 +2892,7 @@
         "oneDayReturn": -3.15,
         "fiveDayReturn": 0.28,
         "twentyDayReturn": -9.93,
-        "relativeVolume": 0.9,
+        "relativeVolume": 0.97,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2881,7 +2903,7 @@
       },
       {
         "ticker": "326030.KS",
-        "name": "SK Biopharm",
+        "name": "SK바이오팜",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2900,7 +2922,7 @@
       },
       {
         "ticker": "071050.KS",
-        "name": "Korea Investment",
+        "name": "한국금융지주",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2911,7 +2933,7 @@
         "oneDayReturn": -3.96,
         "fiveDayReturn": 0.22,
         "twentyDayReturn": -1.5,
-        "relativeVolume": 1.1,
+        "relativeVolume": 1.18,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2922,7 +2944,7 @@
       },
       {
         "ticker": "302440.KS",
-        "name": "SK Bioscience",
+        "name": "SK바이오사이언스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2941,7 +2963,7 @@
       },
       {
         "ticker": "035720.KS",
-        "name": "Kakao",
+        "name": "카카오",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2952,7 +2974,7 @@
         "oneDayReturn": -3.08,
         "fiveDayReturn": 0,
         "twentyDayReturn": -5.53,
-        "relativeVolume": 0.42,
+        "relativeVolume": 0.39,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2963,7 +2985,7 @@
       },
       {
         "ticker": "192820.KS",
-        "name": "Cosmax",
+        "name": "코스맥스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2985,7 +3007,7 @@
       },
       {
         "ticker": "003090.KS",
-        "name": "Daewoong",
+        "name": "대웅",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2996,7 +3018,7 @@
         "oneDayReturn": -3.96,
         "fiveDayReturn": -0.44,
         "twentyDayReturn": -11.26,
-        "relativeVolume": 0.59,
+        "relativeVolume": 0.64,
         "relatedEtfs": [],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -3004,7 +3026,7 @@
       },
       {
         "ticker": "298020.KS",
-        "name": "Hyosung TNC",
+        "name": "효성티앤씨",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3026,7 +3048,7 @@
       },
       {
         "ticker": "034230.KS",
-        "name": "Paradise",
+        "name": "파라다이스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3037,182 +3059,6 @@
         "oneDayReturn": -2.78,
         "fiveDayReturn": -0.54,
         "twentyDayReturn": 1.59,
-        "relativeVolume": 0.76,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "078930.KS",
-        "name": "GS",
-        "assetType": "STOCK",
-        "moneyFlowScore": 0,
-        "moneyFlowScoreInitial": 0,
-        "moneyFlowScoreFinal": 0,
-        "finalRawScore": -2,
-        "todayActionLabel": "제외",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -2.19,
-        "fiveDayReturn": -0.56,
-        "twentyDayReturn": -5.56,
-        "relativeVolume": 1.47,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "004990.KS",
-        "name": "Lotte",
-        "assetType": "STOCK",
-        "moneyFlowScore": 0,
-        "moneyFlowScoreInitial": 0,
-        "moneyFlowScoreFinal": 0,
-        "finalRawScore": -3,
-        "todayActionLabel": "거래량 확인 전 관찰",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -1.85,
-        "fiveDayReturn": -0.56,
-        "twentyDayReturn": -3.28,
-        "relativeVolume": 0.82,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "071320.KS",
-        "name": "Korea District Heating",
-        "assetType": "STOCK",
-        "moneyFlowScore": 0,
-        "moneyFlowScoreInitial": 0,
-        "moneyFlowScoreFinal": 0,
-        "finalRawScore": -26,
-        "todayActionLabel": "거래량 확인 전 관찰",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -3.6,
-        "fiveDayReturn": -0.57,
-        "twentyDayReturn": -6.32,
-        "relativeVolume": 0.81,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "030000.KS",
-        "name": "Cheil Worldwide",
-        "assetType": "STOCK",
-        "moneyFlowScore": 0,
-        "moneyFlowScoreInitial": 0,
-        "moneyFlowScoreFinal": 0,
-        "finalRawScore": -2,
-        "todayActionLabel": "거래량 확인 전 관찰",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -3.95,
-        "fiveDayReturn": -0.57,
-        "twentyDayReturn": -0.67,
-        "relativeVolume": 0.51,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "036570.KS",
-        "name": "NCSoft",
-        "assetType": "STOCK",
-        "moneyFlowScore": 0,
-        "moneyFlowScoreInitial": 0,
-        "moneyFlowScoreFinal": 0,
-        "finalRawScore": -22,
-        "todayActionLabel": "거래량 확인 전 관찰",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -3,
-        "fiveDayReturn": -0.58,
-        "twentyDayReturn": -2.45,
-        "relativeVolume": 0.43,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "017800.KS",
-        "name": "Hyundai Elevator",
-        "assetType": "STOCK",
-        "moneyFlowScore": 0,
-        "moneyFlowScoreInitial": 0,
-        "moneyFlowScoreFinal": 0,
-        "finalRawScore": -26,
-        "todayActionLabel": "거래량 확인 전 관찰",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -4.36,
-        "fiveDayReturn": -0.63,
-        "twentyDayReturn": -5.17,
-        "relativeVolume": 0.69,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "051900.KS",
-        "name": "LG H&H",
-        "assetType": "STOCK",
-        "moneyFlowScore": 0,
-        "moneyFlowScoreInitial": 0,
-        "moneyFlowScoreFinal": 0,
-        "finalRawScore": -27,
-        "todayActionLabel": "거래량 확인 전 관찰",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -1.04,
-        "fiveDayReturn": -0.63,
-        "twentyDayReturn": -8.85,
-        "relativeVolume": 0.57,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "003030.KS",
-        "name": "Seah Steel Holdings",
-        "assetType": "STOCK",
-        "moneyFlowScore": 0,
-        "moneyFlowScoreInitial": 0,
-        "moneyFlowScoreFinal": 0,
-        "finalRawScore": -34,
-        "todayActionLabel": "거래량 확인 전 관찰",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -6.34,
-        "fiveDayReturn": -0.75,
-        "twentyDayReturn": -23.69,
         "relativeVolume": 0.75,
         "relatedEtfs": [
           "069500.KS",
@@ -3223,8 +3069,162 @@
         "failureReason": ""
       },
       {
+        "ticker": "004990.KS",
+        "name": "롯데지주",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -3,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -1.85,
+        "fiveDayReturn": -0.56,
+        "twentyDayReturn": -3.28,
+        "relativeVolume": 0.85,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "071320.KS",
+        "name": "지역난방공사",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -26,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -3.6,
+        "fiveDayReturn": -0.57,
+        "twentyDayReturn": -6.32,
+        "relativeVolume": 0.78,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "030000.KS",
+        "name": "제일기획",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -2,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -3.95,
+        "fiveDayReturn": -0.57,
+        "twentyDayReturn": -0.67,
+        "relativeVolume": 0.54,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "036570.KS",
+        "name": "NC",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -22,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -3,
+        "fiveDayReturn": -0.58,
+        "twentyDayReturn": -2.45,
+        "relativeVolume": 0.45,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "017800.KS",
+        "name": "현대엘리베이터",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -26,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -4.36,
+        "fiveDayReturn": -0.63,
+        "twentyDayReturn": -5.17,
+        "relativeVolume": 0.75,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "051900.KS",
+        "name": "LG생활건강",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -27,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -1.04,
+        "fiveDayReturn": -0.63,
+        "twentyDayReturn": -8.85,
+        "relativeVolume": 0.68,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "003030.KS",
+        "name": "세아제강지주",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -34,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -6.34,
+        "fiveDayReturn": -0.75,
+        "twentyDayReturn": -23.69,
+        "relativeVolume": 0.71,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
         "ticker": "006800.KS",
-        "name": "Mirae Asset Securities",
+        "name": "미래에셋증권",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3235,7 +3235,7 @@
         "oneDayReturn": 0.6,
         "fiveDayReturn": -0.78,
         "twentyDayReturn": -23.64,
-        "relativeVolume": 0.97,
+        "relativeVolume": 0.93,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3246,7 +3246,7 @@
       },
       {
         "ticker": "003240.KS",
-        "name": "Taekwang Industrial",
+        "name": "태광산업",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3257,7 +3257,7 @@
         "oneDayReturn": -2.82,
         "fiveDayReturn": -0.78,
         "twentyDayReturn": -9.96,
-        "relativeVolume": 0.52,
+        "relativeVolume": 0.51,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3268,7 +3268,7 @@
       },
       {
         "ticker": "005250.KS",
-        "name": "Green Cross Holdings",
+        "name": "녹십자홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3287,7 +3287,7 @@
       },
       {
         "ticker": "097950.KS",
-        "name": "CJ CheilJedang",
+        "name": "CJ제일제당",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3309,7 +3309,7 @@
       },
       {
         "ticker": "139480.KS",
-        "name": "Emart",
+        "name": "이마트",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3331,7 +3331,7 @@
       },
       {
         "ticker": "021240.KS",
-        "name": "Coway",
+        "name": "코웨이",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3342,7 +3342,7 @@
         "oneDayReturn": -0.87,
         "fiveDayReturn": -1.09,
         "twentyDayReturn": -0.11,
-        "relativeVolume": 0.6,
+        "relativeVolume": 0.66,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3353,7 +3353,7 @@
       },
       {
         "ticker": "000670.KS",
-        "name": "Young Poong",
+        "name": "영풍",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3364,7 +3364,7 @@
         "oneDayReturn": -4.47,
         "fiveDayReturn": -1.29,
         "twentyDayReturn": -18,
-        "relativeVolume": 1.12,
+        "relativeVolume": 1.06,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3375,7 +3375,7 @@
       },
       {
         "ticker": "007660.KS",
-        "name": "Isu Petasys",
+        "name": "이수페타시스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3386,7 +3386,7 @@
         "oneDayReturn": -2.1,
         "fiveDayReturn": -1.46,
         "twentyDayReturn": 0.41,
-        "relativeVolume": 0.57,
+        "relativeVolume": 0.59,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3397,7 +3397,7 @@
       },
       {
         "ticker": "035250.KS",
-        "name": "Kangwon Land",
+        "name": "강원랜드",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3408,7 +3408,7 @@
         "oneDayReturn": -1.54,
         "fiveDayReturn": -1.92,
         "twentyDayReturn": -2.8,
-        "relativeVolume": 0.39,
+        "relativeVolume": 0.41,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3419,7 +3419,7 @@
       },
       {
         "ticker": "022100.KS",
-        "name": "POSCO DX",
+        "name": "포스코DX",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3430,7 +3430,7 @@
         "oneDayReturn": -4.5,
         "fiveDayReturn": -2.03,
         "twentyDayReturn": -14.35,
-        "relativeVolume": 0.37,
+        "relativeVolume": 0.35,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3441,7 +3441,7 @@
       },
       {
         "ticker": "323410.KS",
-        "name": "KakaoBank",
+        "name": "카카오뱅크",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3463,7 +3463,7 @@
       },
       {
         "ticker": "032640.KS",
-        "name": "LG Uplus",
+        "name": "LG유플러스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3474,7 +3474,7 @@
         "oneDayReturn": -3.78,
         "fiveDayReturn": -2.47,
         "twentyDayReturn": -3.53,
-        "relativeVolume": 0.52,
+        "relativeVolume": 0.63,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3485,7 +3485,7 @@
       },
       {
         "ticker": "137310.KS",
-        "name": "SD Biosensor",
+        "name": "에스디바이오센서",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3526,7 +3526,7 @@
       },
       {
         "ticker": "036460.KS",
-        "name": "Korea Gas",
+        "name": "한국가스공사",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3537,7 +3537,7 @@
         "oneDayReturn": -3.61,
         "fiveDayReturn": -2.8,
         "twentyDayReturn": -8.79,
-        "relativeVolume": 0.98,
+        "relativeVolume": 0.93,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3548,7 +3548,7 @@
       },
       {
         "ticker": "267250.KS",
-        "name": "HD Hyundai",
+        "name": "HD현대",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3570,18 +3570,18 @@
       },
       {
         "ticker": "004370.KS",
-        "name": "Nongshim",
+        "name": "농심",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
         "moneyFlowScoreFinal": 0,
-        "finalRawScore": -12,
-        "todayActionLabel": "제외",
+        "finalRawScore": -30,
+        "todayActionLabel": "거래량 확인 전 관찰",
         "reasonConfidence": "LOW",
         "oneDayReturn": -1.09,
         "fiveDayReturn": -2.93,
         "twentyDayReturn": -8.2,
-        "relativeVolume": 1,
+        "relativeVolume": 0.89,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3592,18 +3592,18 @@
       },
       {
         "ticker": "007070.KS",
-        "name": "GS Retail",
+        "name": "GS리테일",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
         "moneyFlowScoreFinal": 0,
-        "finalRawScore": -36,
-        "todayActionLabel": "거래량 확인 전 관찰",
+        "finalRawScore": -18,
+        "todayActionLabel": "제외",
         "reasonConfidence": "LOW",
         "oneDayReturn": -3.56,
         "fiveDayReturn": -2.95,
         "twentyDayReturn": -15.72,
-        "relativeVolume": 0.97,
+        "relativeVolume": 1.12,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3614,7 +3614,7 @@
       },
       {
         "ticker": "002030.KS",
-        "name": "Asia Holdings",
+        "name": "아세아",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3625,7 +3625,7 @@
         "oneDayReturn": -3.55,
         "fiveDayReturn": -2.95,
         "twentyDayReturn": -16.99,
-        "relativeVolume": 0.71,
+        "relativeVolume": 0.69,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3636,7 +3636,7 @@
       },
       {
         "ticker": "271560.KS",
-        "name": "Orion",
+        "name": "오리온",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3658,7 +3658,7 @@
       },
       {
         "ticker": "047050.KS",
-        "name": "POSCO International",
+        "name": "포스코인터내셔널",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3669,7 +3669,7 @@
         "oneDayReturn": -5.7,
         "fiveDayReturn": -3.1,
         "twentyDayReturn": -20.25,
-        "relativeVolume": 0.82,
+        "relativeVolume": 0.79,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3680,7 +3680,7 @@
       },
       {
         "ticker": "026960.KS",
-        "name": "Dongsuh",
+        "name": "동서",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3691,7 +3691,7 @@
         "oneDayReturn": -2.57,
         "fiveDayReturn": -3.14,
         "twentyDayReturn": -3.9,
-        "relativeVolume": 0.59,
+        "relativeVolume": 0.63,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3724,7 +3724,7 @@
       },
       {
         "ticker": "111770.KS",
-        "name": "Youngone",
+        "name": "영원무역",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3746,7 +3746,7 @@
       },
       {
         "ticker": "002840.KS",
-        "name": "Miwon Commercial",
+        "name": "미원상사",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3757,7 +3757,7 @@
         "oneDayReturn": 0.25,
         "fiveDayReturn": -3.69,
         "twentyDayReturn": -5.9,
-        "relativeVolume": 0.74,
+        "relativeVolume": 0.72,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3768,7 +3768,7 @@
       },
       {
         "ticker": "280360.KS",
-        "name": "Lotte Wellfood",
+        "name": "롯데웰푸드",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3790,7 +3790,7 @@
       },
       {
         "ticker": "014820.KS",
-        "name": "Dongwon Systems",
+        "name": "동원시스템즈",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3801,7 +3801,7 @@
         "oneDayReturn": -3.73,
         "fiveDayReturn": -3.73,
         "twentyDayReturn": -11.94,
-        "relativeVolume": 0.55,
+        "relativeVolume": 0.53,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3812,7 +3812,7 @@
       },
       {
         "ticker": "017670.KS",
-        "name": "SK Telecom",
+        "name": "SK텔레콤",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3823,7 +3823,7 @@
         "oneDayReturn": -3.13,
         "fiveDayReturn": -4.1,
         "twentyDayReturn": -1.84,
-        "relativeVolume": 0.66,
+        "relativeVolume": 0.59,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3834,7 +3834,7 @@
       },
       {
         "ticker": "010060.KS",
-        "name": "OCI Holdings",
+        "name": "OCI홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3856,7 +3856,7 @@
       },
       {
         "ticker": "000240.KS",
-        "name": "Hankook & Company",
+        "name": "한국앤컴퍼니",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3867,7 +3867,7 @@
         "oneDayReturn": -3.52,
         "fiveDayReturn": -4.64,
         "twentyDayReturn": 4.89,
-        "relativeVolume": 0.75,
+        "relativeVolume": 0.72,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3878,7 +3878,7 @@
       },
       {
         "ticker": "000080.KS",
-        "name": "HiteJinro",
+        "name": "하이트진로",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3889,7 +3889,7 @@
         "oneDayReturn": -1.82,
         "fiveDayReturn": -4.87,
         "twentyDayReturn": -7.35,
-        "relativeVolume": 0.69,
+        "relativeVolume": 0.74,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3900,7 +3900,7 @@
       },
       {
         "ticker": "090430.KS",
-        "name": "Amorepacific",
+        "name": "아모레퍼시픽",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3922,7 +3922,7 @@
       },
       {
         "ticker": "009970.KS",
-        "name": "Youngone Holdings",
+        "name": "영원무역홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3933,7 +3933,7 @@
         "oneDayReturn": -4.71,
         "fiveDayReturn": -4.96,
         "twentyDayReturn": -10.97,
-        "relativeVolume": 0.74,
+        "relativeVolume": 0.93,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3944,7 +3944,7 @@
       },
       {
         "ticker": "002790.KS",
-        "name": "Amorepacific Holdings",
+        "name": "아모레퍼시픽홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3955,7 +3955,7 @@
         "oneDayReturn": -3.33,
         "fiveDayReturn": -5.5,
         "twentyDayReturn": -5.11,
-        "relativeVolume": 0.96,
+        "relativeVolume": 0.87,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3966,7 +3966,7 @@
       },
       {
         "ticker": "003230.KS",
-        "name": "Samyang Foods",
+        "name": "삼양식품",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3977,7 +3977,7 @@
         "oneDayReturn": -2.97,
         "fiveDayReturn": -5.53,
         "twentyDayReturn": -20.13,
-        "relativeVolume": 0.73,
+        "relativeVolume": 0.76,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3988,7 +3988,7 @@
       },
       {
         "ticker": "139130.KS",
-        "name": "IM Financial",
+        "name": "iM금융지주",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4010,7 +4010,7 @@
       },
       {
         "ticker": "007310.KS",
-        "name": "Ottogi",
+        "name": "오뚜기",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4021,7 +4021,7 @@
         "oneDayReturn": -3.47,
         "fiveDayReturn": -6.03,
         "twentyDayReturn": -9.23,
-        "relativeVolume": 0.75,
+        "relativeVolume": 0.63,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -4032,7 +4032,7 @@
       },
       {
         "ticker": "454910.KS",
-        "name": "Doosan Robotics",
+        "name": "두산로보틱스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4054,7 +4054,7 @@
       },
       {
         "ticker": "251270.KS",
-        "name": "Netmarble",
+        "name": "넷마블",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4076,7 +4076,7 @@
       },
       {
         "ticker": "001430.KS",
-        "name": "Seah Besteel",
+        "name": "세아베스틸지주",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4087,7 +4087,7 @@
         "oneDayReturn": -6.59,
         "fiveDayReturn": -6.8,
         "twentyDayReturn": -39.5,
-        "relativeVolume": 0.76,
+        "relativeVolume": 0.71,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -4109,7 +4109,7 @@
         "oneDayReturn": -4.28,
         "fiveDayReturn": -7.07,
         "twentyDayReturn": -4.54,
-        "relativeVolume": 0.87,
+        "relativeVolume": 0.96,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -4120,7 +4120,7 @@
       },
       {
         "ticker": "012750.KS",
-        "name": "S-1",
+        "name": "에스원",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4131,7 +4131,7 @@
         "oneDayReturn": -3.52,
         "fiveDayReturn": -7.17,
         "twentyDayReturn": -0.14,
-        "relativeVolume": 0.6,
+        "relativeVolume": 0.52,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -4142,7 +4142,7 @@
       },
       {
         "ticker": "161390.KS",
-        "name": "Hankook",
+        "name": "한국타이어앤테크놀로지",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4164,7 +4164,7 @@
       },
       {
         "ticker": "120110.KS",
-        "name": "Kolon Industries",
+        "name": "코오롱인더",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4186,7 +4186,7 @@
       },
       {
         "ticker": "278470.KS",
-        "name": "APR",
+        "name": "에이피알",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4208,7 +4208,7 @@
       },
       {
         "ticker": "282330.KS",
-        "name": "BGF Retail",
+        "name": "BGF리테일",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4230,7 +4230,7 @@
       },
       {
         "ticker": "001800.KS",
-        "name": "Orion Holdings",
+        "name": "오리온홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4241,7 +4241,7 @@
         "oneDayReturn": -3.22,
         "fiveDayReturn": -8.59,
         "twentyDayReturn": 2.2,
-        "relativeVolume": 0.59,
+        "relativeVolume": 0.68,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -4252,7 +4252,7 @@
       },
       {
         "ticker": "114090.KS",
-        "name": "Grand Korea Leisure",
+        "name": "GKL",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4274,7 +4274,7 @@
       },
       {
         "ticker": "081660.KS",
-        "name": "Misto",
+        "name": "미스토홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4285,7 +4285,7 @@
         "oneDayReturn": -0.99,
         "fiveDayReturn": -9.11,
         "twentyDayReturn": -0.99,
-        "relativeVolume": 0.58,
+        "relativeVolume": 0.52,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -4318,7 +4318,7 @@
       },
       {
         "ticker": "361610.KS",
-        "name": "SK IE Technology",
+        "name": "SK아이이테크놀로지",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4340,7 +4340,7 @@
       },
       {
         "ticker": "192080.KS",
-        "name": "DoubleU Games",
+        "name": "더블유게임즈",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4373,7 +4373,7 @@
         "oneDayReturn": -3.25,
         "fiveDayReturn": -10.83,
         "twentyDayReturn": -4.8,
-        "relativeVolume": 0.61,
+        "relativeVolume": 0.54,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -4388,8 +4388,8 @@
     {
       "name": "AI 반도체/HBM 공급망",
       "status": "관찰",
-      "narrativeScore": 70,
-      "rawScore": 70,
+      "narrativeScore": 68,
+      "rawScore": 68,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS"
@@ -4409,13 +4409,13 @@
         "009150.KS",
         "042700.KS"
       ],
-      "whyMoneyIsFlowing": "AI 반도체/HBM 공급망 관련 069500.KS와 005930.KS, 000660.KS, 009150.KS, 042700.KS의 5일(+19.60%)·20일(+49.29%) 흐름을 함께 본다. 평균 상대 거래량은 0.96배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "whyMoneyIsFlowing": "AI 반도체/HBM 공급망 관련 KODEX 200(069500.KS)와 삼성전자(005930.KS), SK하이닉스(000660.KS), 삼성전기(009150.KS), 한미반도체(042700.KS)의 5일(+19.60%)·20일(+49.29%) 흐름을 함께 본다. 평균 상대 거래량은 0.97배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "HBM, AI 서버, 온디바이스 AI 수요가 이어질 때 국내 반도체 대형주와 후공정/부품주로 자금이 확산",
-      "bestTradingVehicle": "ETF 우선: 069500.KS / 개별 종목 우선: 000660.KS, 005930.KS, 042700.KS",
+      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: SK하이닉스(000660.KS), 삼성전자(005930.KS), 한미반도체(042700.KS)",
       "breakCondition": "KOSPI200이 20일선을 이탈하거나 반도체 대표 종목 절반 이상이 5일선을 동시에 이탈",
       "todayAction": "추격보다 SK하이닉스/삼성전자 동조성과 거래대금 회복을 확인한 뒤 눌림 구간에서 선별",
-      "summaryReason": "069500.KS, 005930.KS, 000660.KS 중심으로 5일 +19.60%, 20일 +49.29% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 1,
+      "summaryReason": "KODEX 200(069500.KS), 삼성전자(005930.KS), SK하이닉스(000660.KS) 중심으로 5일 +19.60%, 20일 +49.29% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
@@ -4445,12 +4445,12 @@
         "012450.KS",
         "047810.KS"
       ],
-      "whyMoneyIsFlowing": "조선/방산 수주 사이클 관련 069500.KS와 042660.KS, 329180.KS, 012450.KS, 047810.KS의 5일(+13.72%)·20일(+8.22%) 흐름을 함께 본다. 평균 상대 거래량은 0.86배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "조선/방산 수주 사이클 관련 KODEX 200(069500.KS)와 한화오션(042660.KS), HD현대중공업(329180.KS), 한화에어로스페이스(012450.KS), 한국항공우주(047810.KS)의 5일(+13.72%)·20일(+8.22%) 흐름을 함께 본다. 평균 상대 거래량은 0.85배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "선가, LNG/해양플랜트, 방산 수출 수주가 확인될 때 중공업과 방산 대표주로 자금이 이동",
-      "bestTradingVehicle": "ETF 우선: 069500.KS / 개별 종목 우선: 042660.KS, 329180.KS, 012450.KS",
+      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: 한화오션(042660.KS), HD현대중공업(329180.KS), 한화에어로스페이스(012450.KS)",
       "breakCondition": "조선/방산 대표 종목 절반 이상이 5일선을 이탈하거나 수주 뉴스 이후 거래대금이 급감",
       "todayAction": "수주 공시나 업황 뉴스가 직접 확인될 때만 추세 추종, 과열 구간은 신규 진입 보류",
-      "summaryReason": "069500.KS, 042660.KS, 329180.KS 중심으로 5일 +13.72%, 20일 +8.22% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "KODEX 200(069500.KS), 한화오션(042660.KS), HD현대중공업(329180.KS) 중심으로 5일 +13.72%, 20일 +8.22% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -4481,12 +4481,12 @@
         "003550.KS",
         "004990.KS"
       ],
-      "whyMoneyIsFlowing": "지주/배당/자사주 재평가 관련 069500.KS와 034730.KS, 000150.KS, 003550.KS, 004990.KS의 5일(+8.12%)·20일(+14.19%) 흐름을 함께 본다. 평균 상대 거래량은 0.80배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "지주/배당/자사주 재평가 관련 KODEX 200(069500.KS)와 SK(034730.KS), 두산(000150.KS), LG(003550.KS), 롯데지주(004990.KS)의 5일(+8.12%)·20일(+14.19%) 흐름을 함께 본다. 평균 상대 거래량은 0.79배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "자사주 소각, 배당 확대, 지배구조 개편 기대가 커질 때 지주회사와 저평가 대형주로 순환매 유입",
-      "bestTradingVehicle": "ETF 우선: 069500.KS / 개별 종목 우선: 003550.KS, 034730.KS, 000150.KS",
+      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: LG(003550.KS), SK(034730.KS), 두산(000150.KS)",
       "breakCondition": "정책/주주환원 기대가 약화되고 지주사 대표 종목이 시장 대비 언더퍼폼",
       "todayAction": "강한 시장에서는 후순위, 변동성 확대 구간에서 방어적 재평가 후보로 관찰",
-      "summaryReason": "069500.KS, 034730.KS, 000150.KS 중심으로 5일 +8.12%, 20일 +14.19% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "KODEX 200(069500.KS), SK(034730.KS), 두산(000150.KS) 중심으로 5일 +8.12%, 20일 +14.19% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -4496,33 +4496,33 @@
     {
       "name": "금융/밸류업 주주환원",
       "status": "약화",
-      "narrativeScore": 39,
-      "rawScore": 39,
+      "narrativeScore": 36,
+      "rawScore": 36,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS"
       ],
       "supportStocks": [
-        "055550.KS",
         "086790.KS",
         "105560.KS",
+        "055550.KS",
         "316140.KS"
       ],
       "representativeEtfs": [
         "069500.KS"
       ],
       "representativeStocks": [
-        "055550.KS",
         "086790.KS",
         "105560.KS",
+        "055550.KS",
         "316140.KS"
       ],
-      "whyMoneyIsFlowing": "금융/밸류업 주주환원 관련 069500.KS와 055550.KS, 086790.KS, 105560.KS, 316140.KS의 5일(+8.96%)·20일(+11.23%) 흐름을 함께 본다. 평균 상대 거래량은 0.85배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "금융/밸류업 주주환원 관련 KODEX 200(069500.KS)와 하나금융지주(086790.KS), KB금융(105560.KS), 신한지주(055550.KS), 우리금융지주(316140.KS)의 5일(+8.96%)·20일(+11.23%) 흐름을 함께 본다. 평균 상대 거래량은 0.82배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "배당, 자사주, 자본비율 개선 기대가 커질 때 은행/금융지주가 방어적 주도주로 부상",
-      "bestTradingVehicle": "ETF 우선: 069500.KS / 개별 종목 우선: 105560.KS, 055550.KS, 086790.KS",
+      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: KB금융(105560.KS), 신한지주(055550.KS), 하나금융지주(086790.KS)",
       "breakCondition": "금리 하락/정책 기대 둔화로 금융주가 KOSPI200 대비 상대강도를 잃는 경우",
       "todayAction": "지수 변동성이 커질 때 방어적 대안으로 관찰하고, 급등 후에는 배당락/정책 뉴스 확인",
-      "summaryReason": "069500.KS, 055550.KS, 086790.KS 중심으로 5일 +8.96%, 20일 +11.23% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "KODEX 200(069500.KS), 하나금융지주(086790.KS), KB금융(105560.KS) 중심으로 5일 +8.96%, 20일 +11.23% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -4532,8 +4532,8 @@
     {
       "name": "바이오/헬스케어 실적 전환",
       "status": "약화",
-      "narrativeScore": 36,
-      "rawScore": 36,
+      "narrativeScore": 34,
+      "rawScore": 34,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS"
@@ -4553,12 +4553,12 @@
         "000100.KS",
         "128940.KS"
       ],
-      "whyMoneyIsFlowing": "바이오/헬스케어 실적 전환 관련 069500.KS와 207940.KS, 068270.KS, 000100.KS, 128940.KS의 5일(+8.04%)·20일(+5.53%) 흐름을 함께 본다. 평균 상대 거래량은 0.89배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "바이오/헬스케어 실적 전환 관련 KODEX 200(069500.KS)와 삼성바이오로직스(207940.KS), 셀트리온(068270.KS), 유한양행(000100.KS), 한미약품(128940.KS)의 5일(+8.04%)·20일(+5.53%) 흐름을 함께 본다. 평균 상대 거래량은 0.92배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "CDMO, 바이오시밀러, 신약 모멘텀이 살아날 때 대형 바이오에서 제약주로 매수세가 확산",
-      "bestTradingVehicle": "ETF 우선: 069500.KS / 개별 종목 우선: 207940.KS, 068270.KS, 000100.KS",
+      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: 삼성바이오로직스(207940.KS), 셀트리온(068270.KS), 유한양행(000100.KS)",
       "breakCondition": "임상/실적 촉매 없이 거래량만 감소하거나 대표 종목이 20일선 아래로 재진입",
       "todayAction": "뉴스 촉매와 거래량이 동반될 때만 관찰 편입, 이벤트 소멸 후 추격은 금지",
-      "summaryReason": "069500.KS, 207940.KS, 068270.KS 중심으로 5일 +8.04%, 20일 +5.53% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "KODEX 200(069500.KS), 삼성바이오로직스(207940.KS), 셀트리온(068270.KS) 중심으로 5일 +8.04%, 20일 +5.53% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -4589,12 +4589,12 @@
         "010120.KS",
         "267250.KS"
       ],
-      "whyMoneyIsFlowing": "전력기기/인프라 투자 관련 069500.KS와 298040.KS, 267260.KS, 010120.KS, 267250.KS의 5일(+8.05%)·20일(+4.07%) 흐름을 함께 본다. 평균 상대 거래량은 0.91배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "전력기기/인프라 투자 관련 KODEX 200(069500.KS)와 효성중공업(298040.KS), HD현대일렉트릭(267260.KS), LS ELECTRIC(010120.KS), HD현대(267250.KS)의 5일(+8.05%)·20일(+4.07%) 흐름을 함께 본다. 평균 상대 거래량은 0.91배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "전력망, 변압기, 데이터센터 전력 수요가 강할 때 전력기기와 인프라 대형주로 매수세가 집중",
-      "bestTradingVehicle": "ETF 우선: 069500.KS / 개별 종목 우선: 267260.KS, 010120.KS, 298040.KS",
+      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: HD현대일렉트릭(267260.KS), LS ELECTRIC(010120.KS), 효성중공업(298040.KS)",
       "breakCondition": "전력기기 대표 종목의 상대 거래량이 1배 아래로 내려가고 5일 수익률이 동반 둔화",
       "todayAction": "강한 종목을 추격하기보다 거래대금 유지와 5일선 재지지를 확인",
-      "summaryReason": "069500.KS, 298040.KS, 267260.KS 중심으로 5일 +8.05%, 20일 +4.07% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "KODEX 200(069500.KS), 효성중공업(298040.KS), HD현대일렉트릭(267260.KS) 중심으로 5일 +8.05%, 20일 +4.07% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -4625,12 +4625,12 @@
         "000270.KS",
         "011210.KS"
       ],
-      "whyMoneyIsFlowing": "자동차/부품 수출 모멘텀 관련 069500.KS와 012330.KS, 005380.KS, 000270.KS, 011210.KS의 5일(+6.47%)·20일(+8.11%) 흐름을 함께 본다. 평균 상대 거래량은 0.68배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "자동차/부품 수출 모멘텀 관련 KODEX 200(069500.KS)와 현대모비스(012330.KS), 현대차(005380.KS), 기아(000270.KS), 현대위아(011210.KS)의 5일(+6.47%)·20일(+8.11%) 흐름을 함께 본다. 평균 상대 거래량은 0.69배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "환율, 북미 판매, 주주환원 기대가 동시에 살아날 때 완성차에서 부품주로 매수세가 확산",
-      "bestTradingVehicle": "ETF 우선: 069500.KS / 개별 종목 우선: 005380.KS, 000270.KS, 012330.KS",
+      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: 현대차(005380.KS), 기아(000270.KS), 현대모비스(012330.KS)",
       "breakCondition": "현대차/기아가 20일선을 이탈하거나 KOSPI200 대비 상대강도가 3거래일 이상 둔화",
       "todayAction": "완성차 쌍두마차가 시장 대비 강할 때만 부품주까지 확산 여부를 확인",
-      "summaryReason": "069500.KS, 012330.KS, 005380.KS 중심으로 5일 +6.47%, 20일 +8.11% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "KODEX 200(069500.KS), 현대모비스(012330.KS), 현대차(005380.KS) 중심으로 5일 +6.47%, 20일 +8.11% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -4640,8 +4640,8 @@
     {
       "name": "화장품/음식료 수출 소비재",
       "status": "소멸",
-      "narrativeScore": 14,
-      "rawScore": 14,
+      "narrativeScore": 15,
+      "rawScore": 15,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS"
@@ -4661,12 +4661,12 @@
         "051900.KS",
         "003230.KS"
       ],
-      "whyMoneyIsFlowing": "화장품/음식료 수출 소비재 관련 069500.KS와 161890.KS, 090430.KS, 051900.KS, 003230.KS의 5일(+1.91%)·20일(-3.23%) 흐름을 함께 본다. 평균 상대 거래량은 0.81배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "화장품/음식료 수출 소비재 관련 KODEX 200(069500.KS)와 한국콜마(161890.KS), 아모레퍼시픽(090430.KS), LG생활건강(051900.KS), 삼양식품(003230.KS)의 5일(+1.91%)·20일(-3.23%) 흐름을 함께 본다. 평균 상대 거래량은 0.84배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "중국/미국 수출, 면세, K-푸드 모멘텀이 확인될 때 소비재 대표주와 ODM 업체로 자금 유입",
-      "bestTradingVehicle": "ETF 우선: 069500.KS / 개별 종목 우선: 003230.KS, 161890.KS, 090430.KS",
+      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: 삼양식품(003230.KS), 한국콜마(161890.KS), 아모레퍼시픽(090430.KS)",
       "breakCondition": "수출 소비재 대표 종목의 거래대금이 줄고 20일선 회복에 실패",
       "todayAction": "실적 기대와 가격 반응이 같이 나타나는 종목만 선별, 단기 급등주는 눌림 대기",
-      "summaryReason": "069500.KS, 161890.KS, 090430.KS 중심으로 5일 +1.91%, 20일 -3.23% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "KODEX 200(069500.KS), 한국콜마(161890.KS), 아모레퍼시픽(090430.KS) 중심으로 5일 +1.91%, 20일 -3.23% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -4699,12 +4699,12 @@
         "035720.KS",
         "259960.KS"
       ],
-      "whyMoneyIsFlowing": "인터넷/게임/엔터 성장주 관련 069500.KS, 229200.KS와 035420.KS, 352820.KS, 035720.KS, 259960.KS의 5일(+5.06%)·20일(+3.63%) 흐름을 함께 본다. 평균 상대 거래량은 0.61배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "인터넷/게임/엔터 성장주 관련 KODEX 200(069500.KS), KODEX 코스닥150(229200.KS)와 NAVER(035420.KS), 하이브(352820.KS), 카카오(035720.KS), 크래프톤(259960.KS)의 5일(+5.06%)·20일(+3.63%) 흐름을 함께 본다. 평균 상대 거래량은 0.61배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "금리 부담 완화, 광고/커머스 회복, 신작/콘텐츠 모멘텀이 있을 때 성장주로 위험선호 자금 유입",
-      "bestTradingVehicle": "ETF 우선: 229200.KS, 069500.KS / 개별 종목 우선: 035420.KS, 259960.KS, 352820.KS",
+      "bestTradingVehicle": "ETF 우선: KODEX 코스닥150(229200.KS), KODEX 200(069500.KS) / 개별 종목 우선: NAVER(035420.KS), 크래프톤(259960.KS), 하이브(352820.KS)",
       "breakCondition": "KOSDAQ150 ETF가 20일선을 이탈하거나 성장주 대표 종목의 상대 거래량이 둔화",
       "todayAction": "지수 위험선호가 유지될 때만 선별 진입, 대형 플랫폼은 실적 반응을 우선 확인",
-      "summaryReason": "069500.KS, 229200.KS, 035420.KS, 352820.KS 중심으로 5일 +5.06%, 20일 +3.63% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "KODEX 200(069500.KS), KODEX 코스닥150(229200.KS), NAVER(035420.KS), 하이브(352820.KS) 중심으로 5일 +5.06%, 20일 +3.63% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -4737,12 +4737,12 @@
         "003670.KS",
         "450080.KS"
       ],
-      "whyMoneyIsFlowing": "2차전지 소재/셀 반등 관련 069500.KS, 229200.KS와 373220.KS, 006400.KS, 003670.KS, 450080.KS의 5일(+6.65%)·20일(-1.05%) 흐름을 함께 본다. 평균 상대 거래량은 0.68배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "2차전지 소재/셀 반등 관련 KODEX 200(069500.KS), KODEX 코스닥150(229200.KS)와 LG에너지솔루션(373220.KS), 삼성SDI(006400.KS), 포스코퓨처엠(003670.KS), 에코프로머티(450080.KS)의 5일(+6.65%)·20일(-1.05%) 흐름을 함께 본다. 평균 상대 거래량은 0.66배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "리튬 가격 안정, 전기차 수요 회복, 재고 조정 종료 기대가 생길 때 셀과 소재주로 단기 반등 자금 유입",
-      "bestTradingVehicle": "ETF 우선: 069500.KS, 229200.KS / 개별 종목 우선: 373220.KS, 006400.KS, 003670.KS",
+      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS), KODEX 코스닥150(229200.KS) / 개별 종목 우선: LG에너지솔루션(373220.KS), 삼성SDI(006400.KS), 포스코퓨처엠(003670.KS)",
       "breakCondition": "대표 종목이 반등 후 5일선을 지키지 못하거나 KOSDAQ 성장주 위험선호가 약화",
       "todayAction": "추세 전환보다 반등 성격으로 접근하고, 상대 거래량이 살아나는 종목만 단기 관찰",
-      "summaryReason": "069500.KS, 229200.KS, 373220.KS, 006400.KS 중심으로 5일 +6.65%, 20일 -1.05% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "KODEX 200(069500.KS), KODEX 코스닥150(229200.KS), LG에너지솔루션(373220.KS), 삼성SDI(006400.KS) 중심으로 5일 +6.65%, 20일 -1.05% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -4754,8 +4754,8 @@
     {
       "name": "AI 반도체/HBM 공급망",
       "status": "관찰",
-      "narrativeScore": 70,
-      "rawScore": 70,
+      "narrativeScore": 68,
+      "rawScore": 68,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS"
@@ -4775,13 +4775,13 @@
         "009150.KS",
         "042700.KS"
       ],
-      "whyMoneyIsFlowing": "AI 반도체/HBM 공급망 관련 069500.KS와 005930.KS, 000660.KS, 009150.KS, 042700.KS의 5일(+19.60%)·20일(+49.29%) 흐름을 함께 본다. 평균 상대 거래량은 0.96배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "whyMoneyIsFlowing": "AI 반도체/HBM 공급망 관련 KODEX 200(069500.KS)와 삼성전자(005930.KS), SK하이닉스(000660.KS), 삼성전기(009150.KS), 한미반도체(042700.KS)의 5일(+19.60%)·20일(+49.29%) 흐름을 함께 본다. 평균 상대 거래량은 0.97배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "HBM, AI 서버, 온디바이스 AI 수요가 이어질 때 국내 반도체 대형주와 후공정/부품주로 자금이 확산",
-      "bestTradingVehicle": "ETF 우선: 069500.KS / 개별 종목 우선: 000660.KS, 005930.KS, 042700.KS",
+      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: SK하이닉스(000660.KS), 삼성전자(005930.KS), 한미반도체(042700.KS)",
       "breakCondition": "KOSPI200이 20일선을 이탈하거나 반도체 대표 종목 절반 이상이 5일선을 동시에 이탈",
       "todayAction": "추격보다 SK하이닉스/삼성전자 동조성과 거래대금 회복을 확인한 뒤 눌림 구간에서 선별",
-      "summaryReason": "069500.KS, 005930.KS, 000660.KS 중심으로 5일 +19.60%, 20일 +49.29% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 1,
+      "summaryReason": "KODEX 200(069500.KS), 삼성전자(005930.KS), SK하이닉스(000660.KS) 중심으로 5일 +19.60%, 20일 +49.29% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
@@ -4811,12 +4811,12 @@
         "012450.KS",
         "047810.KS"
       ],
-      "whyMoneyIsFlowing": "조선/방산 수주 사이클 관련 069500.KS와 042660.KS, 329180.KS, 012450.KS, 047810.KS의 5일(+13.72%)·20일(+8.22%) 흐름을 함께 본다. 평균 상대 거래량은 0.86배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "조선/방산 수주 사이클 관련 KODEX 200(069500.KS)와 한화오션(042660.KS), HD현대중공업(329180.KS), 한화에어로스페이스(012450.KS), 한국항공우주(047810.KS)의 5일(+13.72%)·20일(+8.22%) 흐름을 함께 본다. 평균 상대 거래량은 0.85배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "선가, LNG/해양플랜트, 방산 수출 수주가 확인될 때 중공업과 방산 대표주로 자금이 이동",
-      "bestTradingVehicle": "ETF 우선: 069500.KS / 개별 종목 우선: 042660.KS, 329180.KS, 012450.KS",
+      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: 한화오션(042660.KS), HD현대중공업(329180.KS), 한화에어로스페이스(012450.KS)",
       "breakCondition": "조선/방산 대표 종목 절반 이상이 5일선을 이탈하거나 수주 뉴스 이후 거래대금이 급감",
       "todayAction": "수주 공시나 업황 뉴스가 직접 확인될 때만 추세 추종, 과열 구간은 신규 진입 보류",
-      "summaryReason": "069500.KS, 042660.KS, 329180.KS 중심으로 5일 +13.72%, 20일 +8.22% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "KODEX 200(069500.KS), 한화오션(042660.KS), HD현대중공업(329180.KS) 중심으로 5일 +13.72%, 20일 +8.22% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -4847,12 +4847,12 @@
         "003550.KS",
         "004990.KS"
       ],
-      "whyMoneyIsFlowing": "지주/배당/자사주 재평가 관련 069500.KS와 034730.KS, 000150.KS, 003550.KS, 004990.KS의 5일(+8.12%)·20일(+14.19%) 흐름을 함께 본다. 평균 상대 거래량은 0.80배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "지주/배당/자사주 재평가 관련 KODEX 200(069500.KS)와 SK(034730.KS), 두산(000150.KS), LG(003550.KS), 롯데지주(004990.KS)의 5일(+8.12%)·20일(+14.19%) 흐름을 함께 본다. 평균 상대 거래량은 0.79배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "자사주 소각, 배당 확대, 지배구조 개편 기대가 커질 때 지주회사와 저평가 대형주로 순환매 유입",
-      "bestTradingVehicle": "ETF 우선: 069500.KS / 개별 종목 우선: 003550.KS, 034730.KS, 000150.KS",
+      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: LG(003550.KS), SK(034730.KS), 두산(000150.KS)",
       "breakCondition": "정책/주주환원 기대가 약화되고 지주사 대표 종목이 시장 대비 언더퍼폼",
       "todayAction": "강한 시장에서는 후순위, 변동성 확대 구간에서 방어적 재평가 후보로 관찰",
-      "summaryReason": "069500.KS, 034730.KS, 000150.KS 중심으로 5일 +8.12%, 20일 +14.19% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "KODEX 200(069500.KS), SK(034730.KS), 두산(000150.KS) 중심으로 5일 +8.12%, 20일 +14.19% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -4868,14 +4868,14 @@
       "name": "SK",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
-      "moneyFlowScore": 94,
-      "moneyFlowScoreInitial": 89,
-      "moneyFlowScoreFinal": 94,
-      "finalRawScore": 94,
-      "finalDisplayScore": 94,
+      "moneyFlowScore": 90,
+      "moneyFlowScoreInitial": 85,
+      "moneyFlowScoreFinal": 90,
+      "finalRawScore": 90,
+      "finalDisplayScore": 90,
       "wasCapped": false,
       "capReason": "cap not applied",
-      "formulaText": "+89 + 0 + 0 + +5 + +6 - 6 + 0 = 94",
+      "formulaText": "+85 + 0 + 0 + +5 + +6 - 6 + 0 = 90",
       "riskPenalty": -6,
       "riskPenaltySummary": {
         "totalPenalty": -6,
@@ -4889,21 +4889,23 @@
             "action": "Prefer pullback or prior high reclaim over chasing."
           }
         ],
-        "watchItems": [],
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "MEDIUM",
       "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
-      "tieBreakerReason": "최종 원점수 94, 리스크 패널티 -6, 5일 수익률 +19.48%, 상대 거래량 1.30배 순으로 정렬",
-      "entryQualityScore": 44,
+      "tieBreakerReason": "최종 원점수 90, 리스크 패널티 -6, 5일 수익률 +19.48%, 상대 거래량 1.13배 순으로 정렬",
+      "entryQualityScore": 42,
       "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 57,
+      "trendStrengthIndex": 55,
       "trendStateLabel": "약화",
       "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
       "exhaustionRisk": 35,
       "exhaustionRiskLabel": "보통",
-      "relativeVolume": 1.3,
+      "relativeVolume": 1.13,
       "marketDataStatus": "ok",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -4911,13 +4913,13 @@
         "label": "강한 자금흐름 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 44 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+          "Entry Quality 42 < 50, but moneyFlow 90 and confidence MEDIUM support conditional watch"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 44 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 42 < 50, but moneyFlow 90 and confidence MEDIUM support conditional watch"
       },
       "linkedNarrative": "지주/배당/자사주 재평가",
       "narrativeStatus": "약화",
@@ -4932,17 +4934,17 @@
     {
       "ticker": "005930.KS",
       "assetType": "STOCK",
-      "name": "Samsung Electronics",
+      "name": "삼성전자",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
-      "moneyFlowScore": 100,
+      "moneyFlowScore": 96,
       "moneyFlowScoreInitial": 95,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 102,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 102 capped to displayed score 100",
-      "formulaText": "+95 + +6 + 0 + +5 + +6 - 10 + 0 = 102 -> 100",
+      "moneyFlowScoreFinal": 96,
+      "finalRawScore": 96,
+      "finalDisplayScore": 96,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+95 + 0 + 0 + +5 + +6 - 10 + 0 = 96",
       "riskPenalty": -10,
       "riskPenaltySummary": {
         "totalPenalty": -10,
@@ -4963,16 +4965,18 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [],
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
         "summary": "2개 감점 리스크로 총 -10점 반영."
       },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서",
-      "tieBreakerReason": "최종 원점수 102, 리스크 패널티 -10, 5일 수익률 +21.24%, 상대 거래량 1.19배 순으로 정렬",
-      "entryQualityScore": 37,
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
+      "tieBreakerReason": "최종 원점수 96, 리스크 패널티 -10, 5일 수익률 +21.24%, 상대 거래량 1.19배 순으로 정렬",
+      "entryQualityScore": 35,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 77,
+      "trendStrengthIndex": 75,
       "trendStateLabel": "과열",
       "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
       "exhaustionRisk": 65,
@@ -4985,17 +4989,17 @@
         "label": "강한 자금흐름 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+          "Entry Quality 35 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 35 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
       },
       "linkedNarrative": "AI 반도체/HBM 공급망",
       "narrativeStatus": "관찰",
-      "narrativeScore": 70,
+      "narrativeScore": 68,
       "relatedEtfs": [
         "069500.KS",
         "229200.KS"
@@ -5006,21 +5010,21 @@
     {
       "ticker": "032830.KS",
       "assetType": "STOCK",
-      "name": "Samsung Life",
+      "name": "삼성생명",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 99,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 104,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 104 capped to displayed score 100",
-      "formulaText": "+99 + 0 + 0 + +5 + +6 - 6 + 0 = 104 -> 100",
-      "riskPenalty": -6,
+      "moneyFlowScore": 96,
+      "moneyFlowScoreInitial": 95,
+      "moneyFlowScoreFinal": 96,
+      "finalRawScore": 96,
+      "finalDisplayScore": 96,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+95 + 0 + 0 + +5 + +6 - 10 + 0 = 96",
+      "riskPenalty": -10,
       "riskPenaltySummary": {
-        "totalPenalty": -6,
-        "riskLevel": "LOW",
+        "totalPenalty": -10,
+        "riskLevel": "MEDIUM",
         "items": [
           {
             "riskType": "SHORT_TERM_OVERHEAT",
@@ -5028,23 +5032,32 @@
             "penalty": -6,
             "evidence": "5d return +28.49% is extended.",
             "action": "Prefer pullback or prior high reclaim over chasing."
+          },
+          {
+            "riskType": "NEAR_52W_HIGH_CHASE",
+            "label": "near 52w high chase",
+            "penalty": -4,
+            "evidence": "Price is close to the 52-week high with fast short-term momentum.",
+            "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [],
-        "summary": "1개 감점 리스크로 총 -6점 반영."
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
+        "summary": "2개 감점 리스크로 총 -10점 반영."
       },
       "reasonConfidence": "MEDIUM",
       "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
-      "tieBreakerReason": "최종 원점수 104, 리스크 패널티 -6, 5일 수익률 +28.49%, 상대 거래량 1.20배 순으로 정렬",
-      "entryQualityScore": 35,
+      "tieBreakerReason": "최종 원점수 96, 리스크 패널티 -10, 5일 수익률 +28.49%, 상대 거래량 1.09배 순으로 정렬",
+      "entryQualityScore": 34,
       "entryQualityLabel": "낮음",
       "trendStrengthIndex": 40,
       "trendStateLabel": "잠복",
       "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
       "exhaustionRisk": 25,
       "exhaustionRiskLabel": "보통",
-      "relativeVolume": 1.2,
+      "relativeVolume": 1.09,
       "marketDataStatus": "ok",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -5052,13 +5065,13 @@
         "label": "강한 자금흐름 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 35 < 50, but moneyFlow 100 and confidence MEDIUM support conditional watch"
+          "Entry Quality 34 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 35 < 50, but moneyFlow 100 and confidence MEDIUM support conditional watch"
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 34 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
       },
       "linkedNarrative": "인터넷/게임/엔터 성장주",
       "narrativeStatus": "약화",
@@ -5073,7 +5086,7 @@
     {
       "ticker": "000660.KS",
       "assetType": "STOCK",
-      "name": "SK Hynix",
+      "name": "SK하이닉스",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
       "moneyFlowScore": 94,
@@ -5111,16 +5124,18 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [],
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
         "summary": "3개 감점 리스크로 총 -14점 반영."
       },
       "reasonConfidence": "MEDIUM",
       "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
       "tieBreakerReason": "최종 원점수 94, 리스크 패널티 -14, 5일 수익률 +27.80%, 상대 거래량 1.18배 순으로 정렬",
-      "entryQualityScore": 28,
+      "entryQualityScore": 27,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 77,
+      "trendStrengthIndex": 75,
       "trendStateLabel": "과열",
       "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
       "exhaustionRisk": 65,
@@ -5133,17 +5148,17 @@
         "label": "강한 자금흐름 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 28 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+          "Entry Quality 27 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 28 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 27 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
       },
       "linkedNarrative": "AI 반도체/HBM 공급망",
       "narrativeStatus": "관찰",
-      "narrativeScore": 70,
+      "narrativeScore": 68,
       "relatedEtfs": [
         "069500.KS",
         "229200.KS"
@@ -5154,7 +5169,7 @@
     {
       "ticker": "402340.KS",
       "assetType": "STOCK",
-      "name": "SK Square",
+      "name": "SK스퀘어",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
       "moneyFlowScore": 94,
@@ -5192,7 +5207,9 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [],
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
         "summary": "3개 감점 리스크로 총 -14점 반영."
       },
       "reasonConfidence": "MEDIUM",
@@ -5240,14 +5257,14 @@
       "name": "SK",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
-      "moneyFlowScore": 94,
-      "moneyFlowScoreInitial": 89,
-      "moneyFlowScoreFinal": 94,
-      "finalRawScore": 94,
-      "finalDisplayScore": 94,
+      "moneyFlowScore": 90,
+      "moneyFlowScoreInitial": 85,
+      "moneyFlowScoreFinal": 90,
+      "finalRawScore": 90,
+      "finalDisplayScore": 90,
       "wasCapped": false,
       "capReason": "cap not applied",
-      "formulaText": "+89 + 0 + 0 + +5 + +6 - 6 + 0 = 94",
+      "formulaText": "+85 + 0 + 0 + +5 + +6 - 6 + 0 = 90",
       "riskPenalty": -6,
       "riskPenaltySummary": {
         "totalPenalty": -6,
@@ -5261,21 +5278,23 @@
             "action": "Prefer pullback or prior high reclaim over chasing."
           }
         ],
-        "watchItems": [],
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "MEDIUM",
       "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
-      "tieBreakerReason": "최종 원점수 94, 리스크 패널티 -6, 5일 수익률 +19.48%, 상대 거래량 1.30배 순으로 정렬",
-      "entryQualityScore": 44,
+      "tieBreakerReason": "최종 원점수 90, 리스크 패널티 -6, 5일 수익률 +19.48%, 상대 거래량 1.13배 순으로 정렬",
+      "entryQualityScore": 42,
       "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 57,
+      "trendStrengthIndex": 55,
       "trendStateLabel": "약화",
       "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
       "exhaustionRisk": 35,
       "exhaustionRiskLabel": "보통",
-      "relativeVolume": 1.3,
+      "relativeVolume": 1.13,
       "marketDataStatus": "ok",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -5283,13 +5302,13 @@
         "label": "강한 자금흐름 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 44 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+          "Entry Quality 42 < 50, but moneyFlow 90 and confidence MEDIUM support conditional watch"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 44 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 42 < 50, but moneyFlow 90 and confidence MEDIUM support conditional watch"
       },
       "linkedNarrative": "지주/배당/자사주 재평가",
       "narrativeStatus": "약화",
@@ -5304,17 +5323,17 @@
     {
       "ticker": "005930.KS",
       "assetType": "STOCK",
-      "name": "Samsung Electronics",
+      "name": "삼성전자",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
-      "moneyFlowScore": 100,
+      "moneyFlowScore": 96,
       "moneyFlowScoreInitial": 95,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 102,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 102 capped to displayed score 100",
-      "formulaText": "+95 + +6 + 0 + +5 + +6 - 10 + 0 = 102 -> 100",
+      "moneyFlowScoreFinal": 96,
+      "finalRawScore": 96,
+      "finalDisplayScore": 96,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+95 + 0 + 0 + +5 + +6 - 10 + 0 = 96",
       "riskPenalty": -10,
       "riskPenaltySummary": {
         "totalPenalty": -10,
@@ -5335,16 +5354,18 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [],
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
         "summary": "2개 감점 리스크로 총 -10점 반영."
       },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서",
-      "tieBreakerReason": "최종 원점수 102, 리스크 패널티 -10, 5일 수익률 +21.24%, 상대 거래량 1.19배 순으로 정렬",
-      "entryQualityScore": 37,
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
+      "tieBreakerReason": "최종 원점수 96, 리스크 패널티 -10, 5일 수익률 +21.24%, 상대 거래량 1.19배 순으로 정렬",
+      "entryQualityScore": 35,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 77,
+      "trendStrengthIndex": 75,
       "trendStateLabel": "과열",
       "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
       "exhaustionRisk": 65,
@@ -5357,17 +5378,17 @@
         "label": "강한 자금흐름 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+          "Entry Quality 35 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 35 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
       },
       "linkedNarrative": "AI 반도체/HBM 공급망",
       "narrativeStatus": "관찰",
-      "narrativeScore": 70,
+      "narrativeScore": 68,
       "relatedEtfs": [
         "069500.KS",
         "229200.KS"
@@ -5378,21 +5399,21 @@
     {
       "ticker": "032830.KS",
       "assetType": "STOCK",
-      "name": "Samsung Life",
+      "name": "삼성생명",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 99,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 104,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 104 capped to displayed score 100",
-      "formulaText": "+99 + 0 + 0 + +5 + +6 - 6 + 0 = 104 -> 100",
-      "riskPenalty": -6,
+      "moneyFlowScore": 96,
+      "moneyFlowScoreInitial": 95,
+      "moneyFlowScoreFinal": 96,
+      "finalRawScore": 96,
+      "finalDisplayScore": 96,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+95 + 0 + 0 + +5 + +6 - 10 + 0 = 96",
+      "riskPenalty": -10,
       "riskPenaltySummary": {
-        "totalPenalty": -6,
-        "riskLevel": "LOW",
+        "totalPenalty": -10,
+        "riskLevel": "MEDIUM",
         "items": [
           {
             "riskType": "SHORT_TERM_OVERHEAT",
@@ -5400,23 +5421,32 @@
             "penalty": -6,
             "evidence": "5d return +28.49% is extended.",
             "action": "Prefer pullback or prior high reclaim over chasing."
+          },
+          {
+            "riskType": "NEAR_52W_HIGH_CHASE",
+            "label": "near 52w high chase",
+            "penalty": -4,
+            "evidence": "Price is close to the 52-week high with fast short-term momentum.",
+            "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [],
-        "summary": "1개 감점 리스크로 총 -6점 반영."
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
+        "summary": "2개 감점 리스크로 총 -10점 반영."
       },
       "reasonConfidence": "MEDIUM",
       "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
-      "tieBreakerReason": "최종 원점수 104, 리스크 패널티 -6, 5일 수익률 +28.49%, 상대 거래량 1.20배 순으로 정렬",
-      "entryQualityScore": 35,
+      "tieBreakerReason": "최종 원점수 96, 리스크 패널티 -10, 5일 수익률 +28.49%, 상대 거래량 1.09배 순으로 정렬",
+      "entryQualityScore": 34,
       "entryQualityLabel": "낮음",
       "trendStrengthIndex": 40,
       "trendStateLabel": "잠복",
       "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
       "exhaustionRisk": 25,
       "exhaustionRiskLabel": "보통",
-      "relativeVolume": 1.2,
+      "relativeVolume": 1.09,
       "marketDataStatus": "ok",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -5424,13 +5454,13 @@
         "label": "강한 자금흐름 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 35 < 50, but moneyFlow 100 and confidence MEDIUM support conditional watch"
+          "Entry Quality 34 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 35 < 50, but moneyFlow 100 and confidence MEDIUM support conditional watch"
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 34 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
       },
       "linkedNarrative": "인터넷/게임/엔터 성장주",
       "narrativeStatus": "약화",
@@ -5451,14 +5481,14 @@
       "name": "SK",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
-      "moneyFlowScore": 94,
-      "moneyFlowScoreInitial": 89,
-      "moneyFlowScoreFinal": 94,
-      "finalRawScore": 94,
-      "finalDisplayScore": 94,
+      "moneyFlowScore": 90,
+      "moneyFlowScoreInitial": 85,
+      "moneyFlowScoreFinal": 90,
+      "finalRawScore": 90,
+      "finalDisplayScore": 90,
       "wasCapped": false,
       "capReason": "cap not applied",
-      "formulaText": "+89 + 0 + 0 + +5 + +6 - 6 + 0 = 94",
+      "formulaText": "+85 + 0 + 0 + +5 + +6 - 6 + 0 = 90",
       "riskPenalty": -6,
       "riskPenaltySummary": {
         "totalPenalty": -6,
@@ -5472,21 +5502,23 @@
             "action": "Prefer pullback or prior high reclaim over chasing."
           }
         ],
-        "watchItems": [],
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "MEDIUM",
       "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
-      "tieBreakerReason": "최종 원점수 94, 리스크 패널티 -6, 5일 수익률 +19.48%, 상대 거래량 1.30배 순으로 정렬",
-      "entryQualityScore": 44,
+      "tieBreakerReason": "최종 원점수 90, 리스크 패널티 -6, 5일 수익률 +19.48%, 상대 거래량 1.13배 순으로 정렬",
+      "entryQualityScore": 42,
       "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 57,
+      "trendStrengthIndex": 55,
       "trendStateLabel": "약화",
       "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
       "exhaustionRisk": 35,
       "exhaustionRiskLabel": "보통",
-      "relativeVolume": 1.3,
+      "relativeVolume": 1.13,
       "marketDataStatus": "ok",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -5494,13 +5526,13 @@
         "label": "강한 자금흐름 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 44 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+          "Entry Quality 42 < 50, but moneyFlow 90 and confidence MEDIUM support conditional watch"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 44 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 42 < 50, but moneyFlow 90 and confidence MEDIUM support conditional watch"
       },
       "linkedNarrative": "지주/배당/자사주 재평가",
       "narrativeStatus": "약화",
@@ -5515,17 +5547,17 @@
     {
       "ticker": "005930.KS",
       "assetType": "STOCK",
-      "name": "Samsung Electronics",
+      "name": "삼성전자",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
-      "moneyFlowScore": 100,
+      "moneyFlowScore": 96,
       "moneyFlowScoreInitial": 95,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 102,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 102 capped to displayed score 100",
-      "formulaText": "+95 + +6 + 0 + +5 + +6 - 10 + 0 = 102 -> 100",
+      "moneyFlowScoreFinal": 96,
+      "finalRawScore": 96,
+      "finalDisplayScore": 96,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+95 + 0 + 0 + +5 + +6 - 10 + 0 = 96",
       "riskPenalty": -10,
       "riskPenaltySummary": {
         "totalPenalty": -10,
@@ -5546,16 +5578,18 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [],
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
         "summary": "2개 감점 리스크로 총 -10점 반영."
       },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서",
-      "tieBreakerReason": "최종 원점수 102, 리스크 패널티 -10, 5일 수익률 +21.24%, 상대 거래량 1.19배 순으로 정렬",
-      "entryQualityScore": 37,
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
+      "tieBreakerReason": "최종 원점수 96, 리스크 패널티 -10, 5일 수익률 +21.24%, 상대 거래량 1.19배 순으로 정렬",
+      "entryQualityScore": 35,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 77,
+      "trendStrengthIndex": 75,
       "trendStateLabel": "과열",
       "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
       "exhaustionRisk": 65,
@@ -5568,17 +5602,17 @@
         "label": "강한 자금흐름 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+          "Entry Quality 35 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 35 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
       },
       "linkedNarrative": "AI 반도체/HBM 공급망",
       "narrativeStatus": "관찰",
-      "narrativeScore": 70,
+      "narrativeScore": 68,
       "relatedEtfs": [
         "069500.KS",
         "229200.KS"
@@ -5589,21 +5623,21 @@
     {
       "ticker": "032830.KS",
       "assetType": "STOCK",
-      "name": "Samsung Life",
+      "name": "삼성생명",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 99,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 104,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 104 capped to displayed score 100",
-      "formulaText": "+99 + 0 + 0 + +5 + +6 - 6 + 0 = 104 -> 100",
-      "riskPenalty": -6,
+      "moneyFlowScore": 96,
+      "moneyFlowScoreInitial": 95,
+      "moneyFlowScoreFinal": 96,
+      "finalRawScore": 96,
+      "finalDisplayScore": 96,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+95 + 0 + 0 + +5 + +6 - 10 + 0 = 96",
+      "riskPenalty": -10,
       "riskPenaltySummary": {
-        "totalPenalty": -6,
-        "riskLevel": "LOW",
+        "totalPenalty": -10,
+        "riskLevel": "MEDIUM",
         "items": [
           {
             "riskType": "SHORT_TERM_OVERHEAT",
@@ -5611,23 +5645,32 @@
             "penalty": -6,
             "evidence": "5d return +28.49% is extended.",
             "action": "Prefer pullback or prior high reclaim over chasing."
+          },
+          {
+            "riskType": "NEAR_52W_HIGH_CHASE",
+            "label": "near 52w high chase",
+            "penalty": -4,
+            "evidence": "Price is close to the 52-week high with fast short-term momentum.",
+            "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [],
-        "summary": "1개 감점 리스크로 총 -6점 반영."
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
+        "summary": "2개 감점 리스크로 총 -10점 반영."
       },
       "reasonConfidence": "MEDIUM",
       "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
-      "tieBreakerReason": "최종 원점수 104, 리스크 패널티 -6, 5일 수익률 +28.49%, 상대 거래량 1.20배 순으로 정렬",
-      "entryQualityScore": 35,
+      "tieBreakerReason": "최종 원점수 96, 리스크 패널티 -10, 5일 수익률 +28.49%, 상대 거래량 1.09배 순으로 정렬",
+      "entryQualityScore": 34,
       "entryQualityLabel": "낮음",
       "trendStrengthIndex": 40,
       "trendStateLabel": "잠복",
       "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
       "exhaustionRisk": 25,
       "exhaustionRiskLabel": "보통",
-      "relativeVolume": 1.2,
+      "relativeVolume": 1.09,
       "marketDataStatus": "ok",
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -5635,13 +5678,13 @@
         "label": "강한 자금흐름 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 35 < 50, but moneyFlow 100 and confidence MEDIUM support conditional watch"
+          "Entry Quality 34 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 35 < 50, but moneyFlow 100 and confidence MEDIUM support conditional watch"
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 34 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
       },
       "linkedNarrative": "인터넷/게임/엔터 성장주",
       "narrativeStatus": "약화",
@@ -5656,7 +5699,7 @@
     {
       "ticker": "000660.KS",
       "assetType": "STOCK",
-      "name": "SK Hynix",
+      "name": "SK하이닉스",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
       "moneyFlowScore": 94,
@@ -5694,16 +5737,18 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [],
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
         "summary": "3개 감점 리스크로 총 -14점 반영."
       },
       "reasonConfidence": "MEDIUM",
       "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
       "tieBreakerReason": "최종 원점수 94, 리스크 패널티 -14, 5일 수익률 +27.80%, 상대 거래량 1.18배 순으로 정렬",
-      "entryQualityScore": 28,
+      "entryQualityScore": 27,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 77,
+      "trendStrengthIndex": 75,
       "trendStateLabel": "과열",
       "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
       "exhaustionRisk": 65,
@@ -5716,17 +5761,17 @@
         "label": "강한 자금흐름 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 28 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+          "Entry Quality 27 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 28 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 27 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
       },
       "linkedNarrative": "AI 반도체/HBM 공급망",
       "narrativeStatus": "관찰",
-      "narrativeScore": 70,
+      "narrativeScore": 68,
       "relatedEtfs": [
         "069500.KS",
         "229200.KS"
@@ -5737,7 +5782,7 @@
     {
       "ticker": "402340.KS",
       "assetType": "STOCK",
-      "name": "SK Square",
+      "name": "SK스퀘어",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
       "moneyFlowScore": 94,
@@ -5775,7 +5820,9 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [],
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
         "summary": "3개 감점 리스크로 총 -14점 반영."
       },
       "reasonConfidence": "MEDIUM",
@@ -5821,17 +5868,17 @@
     {
       "ticker": "069960.KS",
       "assetType": "STOCK",
-      "name": "Hyundai Department Store",
+      "name": "현대백화점",
       "actionLabel": "거래량 확인 전 관찰",
       "status": "관찰",
-      "moneyFlowScore": 63,
+      "moneyFlowScore": 61,
       "moneyFlowScoreInitial": 54,
-      "moneyFlowScoreFinal": 63,
-      "finalRawScore": 63,
-      "finalDisplayScore": 63,
+      "moneyFlowScoreFinal": 61,
+      "finalRawScore": 61,
+      "finalDisplayScore": 61,
       "wasCapped": false,
       "capReason": "cap not applied",
-      "formulaText": "+54 + +2 + 0 + +5 + +6 - 4 + 0 = 63",
+      "formulaText": "+54 + 0 + 0 + +5 + +6 - 4 + 0 = 61",
       "riskPenalty": -4,
       "riskPenaltySummary": {
         "totalPenalty": -4,
@@ -5841,25 +5888,27 @@
             "riskType": "VOLUME_DIVERGENCE",
             "label": "volume divergence",
             "penalty": -4,
-            "evidence": "5d price strength is not confirmed by relative volume 0.79x.",
+            "evidence": "5d price strength is not confirmed by relative volume 0.82x.",
             "action": "Require relative volume recovery above 1.0x."
           }
         ],
-        "watchItems": [],
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
         "summary": "1개 감점 리스크로 총 -4점 반영."
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: DART / 정기/기타공시 / under_72h / neutral / 중요도 2 - 기업설명회(IR)개최(안내공시)              ",
-      "tieBreakerReason": "최종 원점수 63, 리스크 패널티 -4, 5일 수익률 +9.03%, 상대 거래량 0.79배 순으로 정렬",
-      "entryQualityScore": 31,
+      "directCatalyst": "",
+      "tieBreakerReason": "최종 원점수 61, 리스크 패널티 -4, 5일 수익률 +9.03%, 상대 거래량 0.82배 순으로 정렬",
+      "entryQualityScore": 30,
       "entryQualityLabel": "낮음",
       "trendStrengthIndex": 40,
       "trendStateLabel": "잠복",
       "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
       "exhaustionRisk": 25,
       "exhaustionRiskLabel": "보통",
-      "relativeVolume": 0.79,
+      "relativeVolume": 0.82,
       "marketDataStatus": "ok",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",
@@ -5867,14 +5916,14 @@
         "label": "거래량 확인 전 관찰",
         "status": "관찰",
         "reasons": [
-          "Entry Quality 31 < 40",
-          "RVOL 0.79x < 1.00x"
+          "Entry Quality 30 < 40",
+          "RVOL 0.82x < 1.00x"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 31 < 40 / RVOL 0.79x < 1.00x"
+        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 30 < 40 / RVOL 0.82x < 1.00x"
       },
       "linkedNarrative": "인터넷/게임/엔터 성장주",
       "narrativeStatus": "약화",
@@ -5923,6 +5972,7 @@
           }
         ],
         "watchItems": [
+          "news data not connected or unavailable",
           "ETF breadth data not connected"
         ],
         "summary": "2개 감점 리스크로 총 -10점 반영."
@@ -5933,7 +5983,7 @@
       "tieBreakerReason": "최종 원점수 69, 리스크 패널티 -10, 5일 수익률 +18.65%, 상대 거래량 0.86배 순으로 정렬",
       "entryQualityScore": 31,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 77,
+      "trendStrengthIndex": 75,
       "trendStateLabel": "과열",
       "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
       "exhaustionRisk": 65,
@@ -5957,7 +6007,7 @@
       },
       "linkedNarrative": "AI 반도체/HBM 공급망",
       "narrativeStatus": "관찰",
-      "narrativeScore": 70,
+      "narrativeScore": 68,
       "relatedEtfs": [],
       "closePriceAtRecommendation": 146945,
       "recommendationDate": "2026-06-18"
@@ -5990,6 +6040,7 @@
           }
         ],
         "watchItems": [
+          "news data not connected or unavailable",
           "ETF breadth data not connected"
         ],
         "summary": "1개 감점 리스크로 총 -6점 반영."
@@ -6040,14 +6091,14 @@
     "name": "SK",
     "actionLabel": "강한 자금흐름 조건부",
     "status": "진입 후보",
-    "moneyFlowScore": 94,
-    "moneyFlowScoreInitial": 89,
-    "moneyFlowScoreFinal": 94,
-    "finalRawScore": 94,
-    "finalDisplayScore": 94,
+    "moneyFlowScore": 90,
+    "moneyFlowScoreInitial": 85,
+    "moneyFlowScoreFinal": 90,
+    "finalRawScore": 90,
+    "finalDisplayScore": 90,
     "wasCapped": false,
     "capReason": "cap not applied",
-    "formulaText": "+89 + 0 + 0 + +5 + +6 - 6 + 0 = 94",
+    "formulaText": "+85 + 0 + 0 + +5 + +6 - 6 + 0 = 90",
     "riskPenalty": -6,
     "riskPenaltySummary": {
       "totalPenalty": -6,
@@ -6061,21 +6112,23 @@
           "action": "Prefer pullback or prior high reclaim over chasing."
         }
       ],
-      "watchItems": [],
+      "watchItems": [
+        "news data not connected or unavailable"
+      ],
       "summary": "1개 감점 리스크로 총 -6점 반영."
     },
     "reasonConfidence": "MEDIUM",
     "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
     "directCatalyst": "",
-    "tieBreakerReason": "최종 원점수 94, 리스크 패널티 -6, 5일 수익률 +19.48%, 상대 거래량 1.30배 순으로 정렬",
-    "entryQualityScore": 44,
+    "tieBreakerReason": "최종 원점수 90, 리스크 패널티 -6, 5일 수익률 +19.48%, 상대 거래량 1.13배 순으로 정렬",
+    "entryQualityScore": 42,
     "entryQualityLabel": "관찰",
-    "trendStrengthIndex": 57,
+    "trendStrengthIndex": 55,
     "trendStateLabel": "약화",
     "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
     "exhaustionRisk": 35,
     "exhaustionRiskLabel": "보통",
-    "relativeVolume": 1.3,
+    "relativeVolume": 1.13,
     "marketDataStatus": "ok",
     "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
     "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -6083,13 +6136,13 @@
       "label": "강한 자금흐름 조건부",
       "status": "진입 후보",
       "reasons": [
-        "Entry Quality 44 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+        "Entry Quality 42 < 50, but moneyFlow 90 and confidence MEDIUM support conditional watch"
       ]
     },
     "marketContext": {
       "marketRegime": "위험선호",
       "candidateEnvironment": "제한적",
-      "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 44 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+      "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 42 < 50, but moneyFlow 90 and confidence MEDIUM support conditional watch"
     },
     "linkedNarrative": "지주/배당/자사주 재평가",
     "narrativeStatus": "약화",
@@ -6109,21 +6162,21 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-06-18",
     "priceAsOfLabel": "2026-06-18 KRX 정규장 종가",
-    "reportGeneratedAtKST": "2026-06-18 16:31",
-    "newsStatus": "CONNECTED",
-    "newsFetchedAt": "2026-06-18T07:31:56.634Z",
-    "newsLastUpdatedAt": "2026-06-18T07:31:56.634Z",
-    "latestNewsPublishedAt": "2026-06-16T15:00:00.000Z",
-    "newsFreshnessStatus": "STALE",
+    "reportGeneratedAtKST": "2026-06-18 16:38",
+    "newsStatus": "DISABLED",
+    "newsFetchedAt": "2026-06-18T07:38:50.479Z",
+    "newsLastUpdatedAt": "2026-06-18T07:38:50.479Z",
+    "latestNewsPublishedAt": null,
+    "newsFreshnessStatus": "UNKNOWN",
     "newsSources": "DART",
-    "newsSourceStatus": "DART CONNECTED",
-    "newsReliability": "HIGH",
+    "newsSourceStatus": "DART DISABLED",
+    "newsReliability": "LOW",
     "etfBreadthStatus": "DISABLED",
     "etfBreadthSampleCount": "0",
     "etfBreadthReliability": "LOW",
     "liquidityStatus": "PARTIAL",
     "prePostMarketStatus": "NOT_APPLICABLE",
-    "analysisReliability": "MEDIUM",
+    "analysisReliability": "LOW",
     "executionReliability": "MEDIUM",
     "reliabilityNotes": [
       "테마 확산 판단 제한",
@@ -6139,12 +6192,12 @@
     "screeningUnavailable": false,
     "entryReadyCount": 0,
     "conditionalCount": 5,
-    "watchCount": 149,
-    "banCount": 45,
+    "watchCount": 151,
+    "banCount": 43,
     "actionCandidateCount": 3,
     "mainLimiters": [
-      "Entry Quality < 40",
       "뉴스 직접성 부족",
+      "Entry Quality < 40",
       "RVOL 미달"
     ],
     "orderDecision": "지정가 권장 / 시장가 주의",
@@ -6155,7 +6208,7 @@
     "items": [
       {
         "label": "RVOL < 1.00x",
-        "count": 149
+        "count": 151
       },
       {
         "label": "거래대금 유동성 낮음",
@@ -6183,12 +6236,12 @@
       },
       {
         "label": "뉴스 직접성 부족",
-        "count": 198
+        "count": 202
       }
     ],
     "topLimiters": [
-      "Entry Quality < 40",
       "뉴스 직접성 부족",
+      "Entry Quality < 40",
       "RVOL 미달"
     ]
   },
