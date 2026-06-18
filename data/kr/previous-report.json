@@ -13,7 +13,7 @@
     "sessionLabel": "KRX regular session"
   },
   "reportDate": "2026-06-18",
-  "generatedAt": "2026년 6월 18일 목요일 오후 4:36",
+  "generatedAt": "2026년 6월 18일 목요일 오후 4:38",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-18",
@@ -95,7 +95,7 @@
       },
       {
         "ticker": "032830.KS",
-        "name": "Samsung Life",
+        "name": "삼성생명",
         "assetType": "STOCK",
         "moneyFlowScore": 95,
         "moneyFlowScoreInitial": 95,
@@ -268,7 +268,7 @@
       },
       {
         "ticker": "028260.KS",
-        "name": "Samsung C&T",
+        "name": "삼성물산",
         "assetType": "STOCK",
         "moneyFlowScore": 57,
         "moneyFlowScoreInitial": 57,
@@ -290,7 +290,7 @@
       },
       {
         "ticker": "004490.KS",
-        "name": "Sebang Global Battery",
+        "name": "세방전지",
         "assetType": "STOCK",
         "moneyFlowScore": 55,
         "moneyFlowScoreInitial": 55,
@@ -312,7 +312,7 @@
       },
       {
         "ticker": "069960.KS",
-        "name": "Hyundai Department Store",
+        "name": "현대백화점",
         "assetType": "STOCK",
         "moneyFlowScore": 54,
         "moneyFlowScoreInitial": 54,
@@ -334,7 +334,7 @@
       },
       {
         "ticker": "000810.KS",
-        "name": "Samsung Fire & Marine",
+        "name": "삼성화재",
         "assetType": "STOCK",
         "moneyFlowScore": 54,
         "moneyFlowScoreInitial": 54,
@@ -356,7 +356,7 @@
       },
       {
         "ticker": "003490.KS",
-        "name": "Korean Air",
+        "name": "대한항공",
         "assetType": "STOCK",
         "moneyFlowScore": 49,
         "moneyFlowScoreInitial": 49,
@@ -378,7 +378,7 @@
       },
       {
         "ticker": "052690.KS",
-        "name": "KEPCO E&C",
+        "name": "한전기술",
         "assetType": "STOCK",
         "moneyFlowScore": 46,
         "moneyFlowScoreInitial": 46,
@@ -400,7 +400,7 @@
       },
       {
         "ticker": "375500.KS",
-        "name": "DL E&C",
+        "name": "DL이앤씨",
         "assetType": "STOCK",
         "moneyFlowScore": 44,
         "moneyFlowScoreInitial": 44,
@@ -422,7 +422,7 @@
       },
       {
         "ticker": "015760.KS",
-        "name": "KEPCO",
+        "name": "한국전력",
         "assetType": "STOCK",
         "moneyFlowScore": 40,
         "moneyFlowScoreInitial": 40,
@@ -444,7 +444,7 @@
       },
       {
         "ticker": "004170.KS",
-        "name": "Shinsegae",
+        "name": "신세계",
         "assetType": "STOCK",
         "moneyFlowScore": 40,
         "moneyFlowScoreInitial": 40,
@@ -488,7 +488,7 @@
       },
       {
         "ticker": "008770.KS",
-        "name": "Hotel Shilla",
+        "name": "호텔신라",
         "assetType": "STOCK",
         "moneyFlowScore": 33,
         "moneyFlowScoreInitial": 33,
@@ -554,7 +554,7 @@
       },
       {
         "ticker": "009420.KS",
-        "name": "Hanall Biopharma",
+        "name": "한올바이오파마",
         "assetType": "STOCK",
         "moneyFlowScore": 27,
         "moneyFlowScoreInitial": 27,
@@ -573,7 +573,7 @@
       },
       {
         "ticker": "064350.KS",
-        "name": "Hyundai Rotem",
+        "name": "현대로템",
         "assetType": "STOCK",
         "moneyFlowScore": 25,
         "moneyFlowScoreInitial": 25,
@@ -595,7 +595,7 @@
       },
       {
         "ticker": "062040.KS",
-        "name": "Sanil Electric",
+        "name": "산일전기",
         "assetType": "STOCK",
         "moneyFlowScore": 24,
         "moneyFlowScoreInitial": 24,
@@ -617,7 +617,7 @@
       },
       {
         "ticker": "079550.KS",
-        "name": "LIG Nex1",
+        "name": "LIG디펜스앤에어로스페이스",
         "assetType": "STOCK",
         "moneyFlowScore": 23,
         "moneyFlowScoreInitial": 23,
@@ -683,7 +683,7 @@
       },
       {
         "ticker": "009540.KS",
-        "name": "HD KSOE",
+        "name": "HD한국조선해양",
         "assetType": "STOCK",
         "moneyFlowScore": 21,
         "moneyFlowScoreInitial": 21,
@@ -727,7 +727,7 @@
       },
       {
         "ticker": "034020.KS",
-        "name": "Doosan Enerbility",
+        "name": "두산에너빌리티",
         "assetType": "STOCK",
         "moneyFlowScore": 19,
         "moneyFlowScoreInitial": 19,
@@ -749,7 +749,7 @@
       },
       {
         "ticker": "001450.KS",
-        "name": "Hyundai Marine & Fire",
+        "name": "현대해상",
         "assetType": "STOCK",
         "moneyFlowScore": 19,
         "moneyFlowScoreInitial": 19,
@@ -771,7 +771,7 @@
       },
       {
         "ticker": "180640.KS",
-        "name": "Hanjin KAL",
+        "name": "한진칼",
         "assetType": "STOCK",
         "moneyFlowScore": 19,
         "moneyFlowScoreInitial": 19,
@@ -815,7 +815,7 @@
       },
       {
         "ticker": "088350.KS",
-        "name": "Hanwha Life",
+        "name": "한화생명",
         "assetType": "STOCK",
         "moneyFlowScore": 17,
         "moneyFlowScoreInitial": 17,
@@ -837,7 +837,7 @@
       },
       {
         "ticker": "011170.KS",
-        "name": "Lotte Chemical",
+        "name": "롯데케미칼",
         "assetType": "STOCK",
         "moneyFlowScore": 17,
         "moneyFlowScoreInitial": 17,
@@ -859,7 +859,7 @@
       },
       {
         "ticker": "082740.KS",
-        "name": "Hanwha Engine",
+        "name": "한화엔진",
         "assetType": "STOCK",
         "moneyFlowScore": 15,
         "moneyFlowScoreInitial": 15,
@@ -947,7 +947,7 @@
       },
       {
         "ticker": "138040.KS",
-        "name": "Meritz Financial",
+        "name": "메리츠금융지주",
         "assetType": "STOCK",
         "moneyFlowScore": 13,
         "moneyFlowScoreInitial": 13,
@@ -969,7 +969,7 @@
       },
       {
         "ticker": "024110.KS",
-        "name": "Industrial Bank of Korea",
+        "name": "기업은행",
         "assetType": "STOCK",
         "moneyFlowScore": 13,
         "moneyFlowScoreInitial": 13,
@@ -991,7 +991,7 @@
       },
       {
         "ticker": "071970.KS",
-        "name": "HD Hyundai Marine Engine",
+        "name": "HD현대마린엔진",
         "assetType": "STOCK",
         "moneyFlowScore": 12,
         "moneyFlowScoreInitial": 12,
@@ -1013,7 +1013,7 @@
       },
       {
         "ticker": "112610.KS",
-        "name": "CS Wind",
+        "name": "씨에스윈드",
         "assetType": "STOCK",
         "moneyFlowScore": 12,
         "moneyFlowScoreInitial": 12,
@@ -1035,7 +1035,7 @@
       },
       {
         "ticker": "023530.KS",
-        "name": "Lotte Shopping",
+        "name": "롯데쇼핑",
         "assetType": "STOCK",
         "moneyFlowScore": 11,
         "moneyFlowScoreInitial": 11,
@@ -1057,7 +1057,7 @@
       },
       {
         "ticker": "000720.KS",
-        "name": "Hyundai E&C",
+        "name": "현대건설",
         "assetType": "STOCK",
         "moneyFlowScore": 10,
         "moneyFlowScoreInitial": 10,
@@ -1101,7 +1101,7 @@
       },
       {
         "ticker": "005850.KS",
-        "name": "SL",
+        "name": "에스엘",
         "assetType": "STOCK",
         "moneyFlowScore": 9,
         "moneyFlowScoreInitial": 9,
@@ -1123,7 +1123,7 @@
       },
       {
         "ticker": "029780.KS",
-        "name": "Samsung Card",
+        "name": "삼성카드",
         "assetType": "STOCK",
         "moneyFlowScore": 9,
         "moneyFlowScoreInitial": 9,
@@ -1167,7 +1167,7 @@
       },
       {
         "ticker": "285130.KS",
-        "name": "SK Chemicals",
+        "name": "SK케미칼",
         "assetType": "STOCK",
         "moneyFlowScore": 9,
         "moneyFlowScoreInitial": 9,
@@ -1189,7 +1189,7 @@
       },
       {
         "ticker": "268280.KS",
-        "name": "Miwon Specialty Chemical",
+        "name": "미원에스씨",
         "assetType": "STOCK",
         "moneyFlowScore": 9,
         "moneyFlowScoreInitial": 9,
@@ -1211,7 +1211,7 @@
       },
       {
         "ticker": "138930.KS",
-        "name": "BNK Financial",
+        "name": "BNK금융지주",
         "assetType": "STOCK",
         "moneyFlowScore": 8,
         "moneyFlowScoreInitial": 8,
@@ -1255,7 +1255,7 @@
       },
       {
         "ticker": "007340.KS",
-        "name": "DN Automotive",
+        "name": "DN오토모티브",
         "assetType": "STOCK",
         "moneyFlowScore": 7,
         "moneyFlowScoreInitial": 7,
@@ -1277,7 +1277,7 @@
       },
       {
         "ticker": "009240.KS",
-        "name": "Hanssem",
+        "name": "한샘",
         "assetType": "STOCK",
         "moneyFlowScore": 6,
         "moneyFlowScoreInitial": 6,
@@ -1299,7 +1299,7 @@
       },
       {
         "ticker": "051600.KS",
-        "name": "KEPCO KPS",
+        "name": "한전KPS",
         "assetType": "STOCK",
         "moneyFlowScore": 6,
         "moneyFlowScoreInitial": 6,
@@ -1321,7 +1321,7 @@
       },
       {
         "ticker": "241560.KS",
-        "name": "Doosan Bobcat",
+        "name": "두산밥캣",
         "assetType": "STOCK",
         "moneyFlowScore": 6,
         "moneyFlowScoreInitial": 6,
@@ -1387,7 +1387,7 @@
       },
       {
         "ticker": "018260.KS",
-        "name": "Samsung SDS",
+        "name": "삼성에스디에스",
         "assetType": "STOCK",
         "moneyFlowScore": 5,
         "moneyFlowScoreInitial": 5,
@@ -1409,7 +1409,7 @@
       },
       {
         "ticker": "018880.KS",
-        "name": "Hanon Systems",
+        "name": "한온시스템",
         "assetType": "STOCK",
         "moneyFlowScore": 4,
         "moneyFlowScoreInitial": 4,
@@ -1453,7 +1453,7 @@
       },
       {
         "ticker": "377300.KS",
-        "name": "KakaoPay",
+        "name": "카카오페이",
         "assetType": "STOCK",
         "moneyFlowScore": 4,
         "moneyFlowScoreInitial": 4,
@@ -1497,7 +1497,7 @@
       },
       {
         "ticker": "443060.KS",
-        "name": "HD Hyundai Marine Solution",
+        "name": "HD현대마린솔루션",
         "assetType": "STOCK",
         "moneyFlowScore": 4,
         "moneyFlowScoreInitial": 4,
@@ -1541,7 +1541,7 @@
       },
       {
         "ticker": "175330.KS",
-        "name": "JB Financial",
+        "name": "JB금융지주",
         "assetType": "STOCK",
         "moneyFlowScore": 3,
         "moneyFlowScoreInitial": 3,
@@ -1585,7 +1585,7 @@
       },
       {
         "ticker": "016360.KS",
-        "name": "Samsung Securities",
+        "name": "삼성증권",
         "assetType": "STOCK",
         "moneyFlowScore": 2,
         "moneyFlowScoreInitial": 2,
@@ -1607,7 +1607,7 @@
       },
       {
         "ticker": "073240.KS",
-        "name": "Kumho Tire",
+        "name": "금호타이어",
         "assetType": "STOCK",
         "moneyFlowScore": 2,
         "moneyFlowScoreInitial": 2,
@@ -1629,7 +1629,7 @@
       },
       {
         "ticker": "069260.KS",
-        "name": "TKG Huchems",
+        "name": "TKG휴켐스",
         "assetType": "STOCK",
         "moneyFlowScore": 2,
         "moneyFlowScoreInitial": 2,
@@ -1673,7 +1673,7 @@
       },
       {
         "ticker": "014680.KS",
-        "name": "Hansol Chemical",
+        "name": "한솔케미칼",
         "assetType": "STOCK",
         "moneyFlowScore": 2,
         "moneyFlowScoreInitial": 2,
@@ -1739,7 +1739,7 @@
       },
       {
         "ticker": "000880.KS",
-        "name": "Hanwha",
+        "name": "한화",
         "assetType": "STOCK",
         "moneyFlowScore": 1,
         "moneyFlowScoreInitial": 1,
@@ -1761,7 +1761,7 @@
       },
       {
         "ticker": "047040.KS",
-        "name": "Daewoo E&C",
+        "name": "대우건설",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1805,7 +1805,7 @@
       },
       {
         "ticker": "010140.KS",
-        "name": "Samsung Heavy Industries",
+        "name": "삼성중공업",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1849,7 +1849,7 @@
       },
       {
         "ticker": "028050.KS",
-        "name": "Samsung E&A",
+        "name": "삼성E&A",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1871,7 +1871,7 @@
       },
       {
         "ticker": "272210.KS",
-        "name": "Hanwha Systems",
+        "name": "한화시스템",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1893,7 +1893,7 @@
       },
       {
         "ticker": "009830.KS",
-        "name": "Hanwha Solutions",
+        "name": "한화솔루션",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1915,7 +1915,7 @@
       },
       {
         "ticker": "086280.KS",
-        "name": "Hyundai Glovis",
+        "name": "현대글로비스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1937,7 +1937,7 @@
       },
       {
         "ticker": "051910.KS",
-        "name": "LG Chem",
+        "name": "LG화학",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1959,7 +1959,7 @@
       },
       {
         "ticker": "011780.KS",
-        "name": "Kumho Petrochemical",
+        "name": "금호석유화학",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -1981,7 +1981,7 @@
       },
       {
         "ticker": "005830.KS",
-        "name": "DB Insurance",
+        "name": "DB손해보험",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2003,7 +2003,7 @@
       },
       {
         "ticker": "001440.KS",
-        "name": "Taihan Cable & Solution",
+        "name": "대한전선",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2025,7 +2025,7 @@
       },
       {
         "ticker": "006650.KS",
-        "name": "Korea Petrochemical",
+        "name": "대한유화",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2069,7 +2069,7 @@
       },
       {
         "ticker": "006360.KS",
-        "name": "GS E&C",
+        "name": "GS건설",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2135,7 +2135,7 @@
       },
       {
         "ticker": "006280.KS",
-        "name": "Green Cross",
+        "name": "녹십자",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2176,7 +2176,7 @@
       },
       {
         "ticker": "0126Z0.KS",
-        "name": "Samsung Epis",
+        "name": "삼성에피스홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2214,7 +2214,7 @@
       },
       {
         "ticker": "103140.KS",
-        "name": "Poongsan",
+        "name": "풍산",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2258,7 +2258,7 @@
       },
       {
         "ticker": "010130.KS",
-        "name": "Korea Zinc",
+        "name": "고려아연",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2280,7 +2280,7 @@
       },
       {
         "ticker": "004020.KS",
-        "name": "Hyundai Steel",
+        "name": "현대제철",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2343,7 +2343,7 @@
       },
       {
         "ticker": "028670.KS",
-        "name": "Pan Ocean",
+        "name": "팬오션",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2365,7 +2365,7 @@
       },
       {
         "ticker": "039490.KS",
-        "name": "Kiwoom Securities",
+        "name": "키움증권",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2387,7 +2387,7 @@
       },
       {
         "ticker": "005490.KS",
-        "name": "POSCO",
+        "name": "POSCO홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2409,7 +2409,7 @@
       },
       {
         "ticker": "017960.KS",
-        "name": "Hankuk Carbon",
+        "name": "한국카본",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2431,7 +2431,7 @@
       },
       {
         "ticker": "457190.KS",
-        "name": "Isu Specialty Chemical",
+        "name": "이수스페셜티케미컬",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2516,7 +2516,7 @@
       },
       {
         "ticker": "000120.KS",
-        "name": "CJ Logistics",
+        "name": "CJ대한통운",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2538,7 +2538,7 @@
       },
       {
         "ticker": "185750.KS",
-        "name": "Chong Kun Dang",
+        "name": "종근당",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2579,7 +2579,7 @@
       },
       {
         "ticker": "005300.KS",
-        "name": "Lotte Chilsung",
+        "name": "롯데칠성",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2601,7 +2601,7 @@
       },
       {
         "ticker": "066970.KS",
-        "name": "L&F",
+        "name": "엘앤에프",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2623,7 +2623,7 @@
       },
       {
         "ticker": "008930.KS",
-        "name": "Hanmi Science",
+        "name": "한미사이언스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2642,7 +2642,7 @@
       },
       {
         "ticker": "298050.KS",
-        "name": "HS Hyosung Advanced Materials",
+        "name": "HS효성첨단소재",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2664,7 +2664,7 @@
       },
       {
         "ticker": "300720.KS",
-        "name": "Hanil Cement",
+        "name": "한일시멘트",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2686,7 +2686,7 @@
       },
       {
         "ticker": "005420.KS",
-        "name": "Cosmo Chemical",
+        "name": "코스모화학",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2708,7 +2708,7 @@
       },
       {
         "ticker": "005940.KS",
-        "name": "NH Investment & Securities",
+        "name": "NH투자증권",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2730,7 +2730,7 @@
       },
       {
         "ticker": "008730.KS",
-        "name": "Youlchon Chemical",
+        "name": "율촌화학",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2796,7 +2796,7 @@
       },
       {
         "ticker": "069620.KS",
-        "name": "Daewoong Pharmaceutical",
+        "name": "대웅제약",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2815,7 +2815,7 @@
       },
       {
         "ticker": "006040.KS",
-        "name": "Dongwon Industries",
+        "name": "동원산업",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2837,7 +2837,7 @@
       },
       {
         "ticker": "004000.KS",
-        "name": "Lotte Fine Chemical",
+        "name": "롯데정밀화학",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2859,7 +2859,7 @@
       },
       {
         "ticker": "096770.KS",
-        "name": "SK Innovation",
+        "name": "SK이노베이션",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2881,7 +2881,7 @@
       },
       {
         "ticker": "001680.KS",
-        "name": "Daesang",
+        "name": "대상",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2903,7 +2903,7 @@
       },
       {
         "ticker": "326030.KS",
-        "name": "SK Biopharm",
+        "name": "SK바이오팜",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2922,7 +2922,7 @@
       },
       {
         "ticker": "071050.KS",
-        "name": "Korea Investment",
+        "name": "한국금융지주",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2944,7 +2944,7 @@
       },
       {
         "ticker": "302440.KS",
-        "name": "SK Bioscience",
+        "name": "SK바이오사이언스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -2985,7 +2985,7 @@
       },
       {
         "ticker": "192820.KS",
-        "name": "Cosmax",
+        "name": "코스맥스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3007,7 +3007,7 @@
       },
       {
         "ticker": "003090.KS",
-        "name": "Daewoong",
+        "name": "대웅",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3026,7 +3026,7 @@
       },
       {
         "ticker": "298020.KS",
-        "name": "Hyosung TNC",
+        "name": "효성티앤씨",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3048,7 +3048,7 @@
       },
       {
         "ticker": "034230.KS",
-        "name": "Paradise",
+        "name": "파라다이스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3092,7 +3092,7 @@
       },
       {
         "ticker": "071320.KS",
-        "name": "Korea District Heating",
+        "name": "지역난방공사",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3114,7 +3114,7 @@
       },
       {
         "ticker": "030000.KS",
-        "name": "Cheil Worldwide",
+        "name": "제일기획",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3136,7 +3136,7 @@
       },
       {
         "ticker": "036570.KS",
-        "name": "NCSoft",
+        "name": "NC",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3158,7 +3158,7 @@
       },
       {
         "ticker": "017800.KS",
-        "name": "Hyundai Elevator",
+        "name": "현대엘리베이터",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3202,7 +3202,7 @@
       },
       {
         "ticker": "003030.KS",
-        "name": "Seah Steel Holdings",
+        "name": "세아제강지주",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3224,7 +3224,7 @@
       },
       {
         "ticker": "006800.KS",
-        "name": "Mirae Asset Securities",
+        "name": "미래에셋증권",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3246,7 +3246,7 @@
       },
       {
         "ticker": "003240.KS",
-        "name": "Taekwang Industrial",
+        "name": "태광산업",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3268,7 +3268,7 @@
       },
       {
         "ticker": "005250.KS",
-        "name": "Green Cross Holdings",
+        "name": "녹십자홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3287,7 +3287,7 @@
       },
       {
         "ticker": "097950.KS",
-        "name": "CJ CheilJedang",
+        "name": "CJ제일제당",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3309,7 +3309,7 @@
       },
       {
         "ticker": "139480.KS",
-        "name": "Emart",
+        "name": "이마트",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3331,7 +3331,7 @@
       },
       {
         "ticker": "021240.KS",
-        "name": "Coway",
+        "name": "코웨이",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3353,7 +3353,7 @@
       },
       {
         "ticker": "000670.KS",
-        "name": "Young Poong",
+        "name": "영풍",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3397,7 +3397,7 @@
       },
       {
         "ticker": "035250.KS",
-        "name": "Kangwon Land",
+        "name": "강원랜드",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3419,7 +3419,7 @@
       },
       {
         "ticker": "022100.KS",
-        "name": "POSCO DX",
+        "name": "포스코DX",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3441,7 +3441,7 @@
       },
       {
         "ticker": "323410.KS",
-        "name": "KakaoBank",
+        "name": "카카오뱅크",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3463,7 +3463,7 @@
       },
       {
         "ticker": "032640.KS",
-        "name": "LG Uplus",
+        "name": "LG유플러스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3485,7 +3485,7 @@
       },
       {
         "ticker": "137310.KS",
-        "name": "SD Biosensor",
+        "name": "에스디바이오센서",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3526,7 +3526,7 @@
       },
       {
         "ticker": "036460.KS",
-        "name": "Korea Gas",
+        "name": "한국가스공사",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3570,7 +3570,7 @@
       },
       {
         "ticker": "004370.KS",
-        "name": "Nongshim",
+        "name": "농심",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3592,7 +3592,7 @@
       },
       {
         "ticker": "007070.KS",
-        "name": "GS Retail",
+        "name": "GS리테일",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3614,7 +3614,7 @@
       },
       {
         "ticker": "002030.KS",
-        "name": "Asia Holdings",
+        "name": "아세아",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3636,7 +3636,7 @@
       },
       {
         "ticker": "271560.KS",
-        "name": "Orion",
+        "name": "오리온",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3658,7 +3658,7 @@
       },
       {
         "ticker": "047050.KS",
-        "name": "POSCO International",
+        "name": "포스코인터내셔널",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3680,7 +3680,7 @@
       },
       {
         "ticker": "026960.KS",
-        "name": "Dongsuh",
+        "name": "동서",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3724,7 +3724,7 @@
       },
       {
         "ticker": "111770.KS",
-        "name": "Youngone",
+        "name": "영원무역",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3746,7 +3746,7 @@
       },
       {
         "ticker": "002840.KS",
-        "name": "Miwon Commercial",
+        "name": "미원상사",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3768,7 +3768,7 @@
       },
       {
         "ticker": "280360.KS",
-        "name": "Lotte Wellfood",
+        "name": "롯데웰푸드",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3790,7 +3790,7 @@
       },
       {
         "ticker": "014820.KS",
-        "name": "Dongwon Systems",
+        "name": "동원시스템즈",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3812,7 +3812,7 @@
       },
       {
         "ticker": "017670.KS",
-        "name": "SK Telecom",
+        "name": "SK텔레콤",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3834,7 +3834,7 @@
       },
       {
         "ticker": "010060.KS",
-        "name": "OCI Holdings",
+        "name": "OCI홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3856,7 +3856,7 @@
       },
       {
         "ticker": "000240.KS",
-        "name": "Hankook & Company",
+        "name": "한국앤컴퍼니",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3878,7 +3878,7 @@
       },
       {
         "ticker": "000080.KS",
-        "name": "HiteJinro",
+        "name": "하이트진로",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3922,7 +3922,7 @@
       },
       {
         "ticker": "009970.KS",
-        "name": "Youngone Holdings",
+        "name": "영원무역홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3944,7 +3944,7 @@
       },
       {
         "ticker": "002790.KS",
-        "name": "Amorepacific Holdings",
+        "name": "아모레퍼시픽홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -3988,7 +3988,7 @@
       },
       {
         "ticker": "139130.KS",
-        "name": "IM Financial",
+        "name": "iM금융지주",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4010,7 +4010,7 @@
       },
       {
         "ticker": "007310.KS",
-        "name": "Ottogi",
+        "name": "오뚜기",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4032,7 +4032,7 @@
       },
       {
         "ticker": "454910.KS",
-        "name": "Doosan Robotics",
+        "name": "두산로보틱스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4054,7 +4054,7 @@
       },
       {
         "ticker": "251270.KS",
-        "name": "Netmarble",
+        "name": "넷마블",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4076,7 +4076,7 @@
       },
       {
         "ticker": "001430.KS",
-        "name": "Seah Besteel",
+        "name": "세아베스틸지주",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4120,7 +4120,7 @@
       },
       {
         "ticker": "012750.KS",
-        "name": "S-1",
+        "name": "에스원",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4142,7 +4142,7 @@
       },
       {
         "ticker": "161390.KS",
-        "name": "Hankook",
+        "name": "한국타이어앤테크놀로지",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4164,7 +4164,7 @@
       },
       {
         "ticker": "120110.KS",
-        "name": "Kolon Industries",
+        "name": "코오롱인더",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4186,7 +4186,7 @@
       },
       {
         "ticker": "278470.KS",
-        "name": "APR",
+        "name": "에이피알",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4208,7 +4208,7 @@
       },
       {
         "ticker": "282330.KS",
-        "name": "BGF Retail",
+        "name": "BGF리테일",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4230,7 +4230,7 @@
       },
       {
         "ticker": "001800.KS",
-        "name": "Orion Holdings",
+        "name": "오리온홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4252,7 +4252,7 @@
       },
       {
         "ticker": "114090.KS",
-        "name": "Grand Korea Leisure",
+        "name": "GKL",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4274,7 +4274,7 @@
       },
       {
         "ticker": "081660.KS",
-        "name": "Misto",
+        "name": "미스토홀딩스",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4318,7 +4318,7 @@
       },
       {
         "ticker": "361610.KS",
-        "name": "SK IE Technology",
+        "name": "SK아이이테크놀로지",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -4340,7 +4340,7 @@
       },
       {
         "ticker": "192080.KS",
-        "name": "DoubleU Games",
+        "name": "더블유게임즈",
         "assetType": "STOCK",
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
@@ -5010,7 +5010,7 @@
     {
       "ticker": "032830.KS",
       "assetType": "STOCK",
-      "name": "Samsung Life",
+      "name": "삼성생명",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
       "moneyFlowScore": 96,
@@ -5399,7 +5399,7 @@
     {
       "ticker": "032830.KS",
       "assetType": "STOCK",
-      "name": "Samsung Life",
+      "name": "삼성생명",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
       "moneyFlowScore": 96,
@@ -5623,7 +5623,7 @@
     {
       "ticker": "032830.KS",
       "assetType": "STOCK",
-      "name": "Samsung Life",
+      "name": "삼성생명",
       "actionLabel": "강한 자금흐름 조건부",
       "status": "진입 후보",
       "moneyFlowScore": 96,
@@ -5868,7 +5868,7 @@
     {
       "ticker": "069960.KS",
       "assetType": "STOCK",
-      "name": "Hyundai Department Store",
+      "name": "현대백화점",
       "actionLabel": "거래량 확인 전 관찰",
       "status": "관찰",
       "moneyFlowScore": 61,
@@ -6162,10 +6162,10 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-06-18",
     "priceAsOfLabel": "2026-06-18 KRX 정규장 종가",
-    "reportGeneratedAtKST": "2026-06-18 16:36",
+    "reportGeneratedAtKST": "2026-06-18 16:38",
     "newsStatus": "DISABLED",
-    "newsFetchedAt": "2026-06-18T07:36:43.363Z",
-    "newsLastUpdatedAt": "2026-06-18T07:36:43.363Z",
+    "newsFetchedAt": "2026-06-18T07:38:50.479Z",
+    "newsLastUpdatedAt": "2026-06-18T07:38:50.479Z",
     "latestNewsPublishedAt": null,
     "newsFreshnessStatus": "UNKNOWN",
     "newsSources": "DART",

@@ -13,7 +13,7 @@
     "sessionLabel": "KRX regular session"
   },
   "reportDate": "2026-06-18",
-  "generatedAt": "2026년 6월 18일 목요일 오후 4:38",
+  "generatedAt": "2026년 6월 18일 목요일 PM 4:45",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-18",
@@ -121,14 +121,14 @@
         "assetType": "STOCK",
         "moneyFlowScore": 95,
         "moneyFlowScoreInitial": 95,
-        "moneyFlowScoreFinal": 96,
-        "finalRawScore": 96,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 102,
         "todayActionLabel": "강한 자금흐름 조건부",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": 4.62,
         "fiveDayReturn": 21.24,
         "twentyDayReturn": 31.58,
-        "relativeVolume": 1.19,
+        "relativeVolume": 1.08,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -150,7 +150,7 @@
         "oneDayReturn": 7.17,
         "fiveDayReturn": 19.47,
         "twentyDayReturn": 58.59,
-        "relativeVolume": 2.23,
+        "relativeVolume": 2.22,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -231,8 +231,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 66,
         "moneyFlowScoreInitial": 66,
-        "moneyFlowScoreFinal": 71,
-        "finalRawScore": 71,
+        "moneyFlowScoreFinal": 81,
+        "finalRawScore": 81,
         "todayActionLabel": "제외",
         "reasonConfidence": "MEDIUM",
         "oneDayReturn": 4.38,
@@ -345,7 +345,7 @@
         "oneDayReturn": 3.09,
         "fiveDayReturn": 5.58,
         "twentyDayReturn": 27.04,
-        "relativeVolume": 0.66,
+        "relativeVolume": 0.6,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -404,10 +404,10 @@
         "assetType": "STOCK",
         "moneyFlowScore": 44,
         "moneyFlowScoreInitial": 44,
-        "moneyFlowScoreFinal": 55,
-        "finalRawScore": 55,
+        "moneyFlowScoreFinal": 57,
+        "finalRawScore": 57,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": -6.82,
         "fiveDayReturn": 12.82,
         "twentyDayReturn": 1.54,
@@ -426,10 +426,10 @@
         "assetType": "STOCK",
         "moneyFlowScore": 40,
         "moneyFlowScoreInitial": 40,
-        "moneyFlowScoreFinal": 51,
-        "finalRawScore": 51,
+        "moneyFlowScoreFinal": 53,
+        "finalRawScore": 53,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": -2.84,
         "fiveDayReturn": 9.61,
         "twentyDayReturn": 0.51,
@@ -738,7 +738,7 @@
         "oneDayReturn": -3.49,
         "fiveDayReturn": 12.42,
         "twentyDayReturn": -6.04,
-        "relativeVolume": 1.35,
+        "relativeVolume": 1.29,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -760,7 +760,7 @@
         "oneDayReturn": -1,
         "fiveDayReturn": 5.16,
         "twentyDayReturn": 2.32,
-        "relativeVolume": 0.84,
+        "relativeVolume": 0.79,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -804,7 +804,7 @@
         "oneDayReturn": 0.27,
         "fiveDayReturn": 6.07,
         "twentyDayReturn": 5.16,
-        "relativeVolume": 0.93,
+        "relativeVolume": 0.88,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -826,7 +826,7 @@
         "oneDayReturn": -4.56,
         "fiveDayReturn": 14.53,
         "twentyDayReturn": -6.21,
-        "relativeVolume": 0.98,
+        "relativeVolume": 0.96,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -936,7 +936,7 @@
         "oneDayReturn": -3.49,
         "fiveDayReturn": 4.91,
         "twentyDayReturn": 18.63,
-        "relativeVolume": 0.37,
+        "relativeVolume": 0.35,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1047,28 +1047,6 @@
         "fiveDayReturn": -6.58,
         "twentyDayReturn": 17.13,
         "relativeVolume": 0.75,
-        "relatedEtfs": [
-          "069500.KS",
-          "229200.KS"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "000720.KS",
-        "name": "현대건설",
-        "assetType": "STOCK",
-        "moneyFlowScore": 10,
-        "moneyFlowScoreInitial": 10,
-        "moneyFlowScoreFinal": 10,
-        "finalRawScore": 10,
-        "todayActionLabel": "제외",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -4.38,
-        "fiveDayReturn": 8.56,
-        "twentyDayReturn": -4.38,
-        "relativeVolume": 1.03,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1354,7 +1332,7 @@
         "oneDayReturn": -2.91,
         "fiveDayReturn": 8.66,
         "twentyDayReturn": 6.71,
-        "relativeVolume": 0.9,
+        "relativeVolume": 0.86,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1420,7 +1398,7 @@
         "oneDayReturn": -4.62,
         "fiveDayReturn": 9.69,
         "twentyDayReturn": 1.98,
-        "relativeVolume": 0.39,
+        "relativeVolume": 0.38,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1662,7 +1640,7 @@
         "oneDayReturn": 0.62,
         "fiveDayReturn": 0.8,
         "twentyDayReturn": 8.93,
-        "relativeVolume": 0.76,
+        "relativeVolume": 0.72,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1750,7 +1728,7 @@
         "oneDayReturn": -6.28,
         "fiveDayReturn": 2.81,
         "twentyDayReturn": -1.71,
-        "relativeVolume": 1.11,
+        "relativeVolume": 1.03,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1772,7 +1750,7 @@
         "oneDayReturn": -7.46,
         "fiveDayReturn": 12.22,
         "twentyDayReturn": -15.16,
-        "relativeVolume": 0.95,
+        "relativeVolume": 0.92,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -1861,6 +1839,28 @@
         "fiveDayReturn": 9.11,
         "twentyDayReturn": 0.91,
         "relativeVolume": 0.92,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "000720.KS",
+        "name": "현대건설",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -12,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -4.38,
+        "fiveDayReturn": 8.56,
+        "twentyDayReturn": -4.38,
+        "relativeVolume": 0.96,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2102,7 +2102,7 @@
         "oneDayReturn": -5.1,
         "fiveDayReturn": 5.45,
         "twentyDayReturn": -0.62,
-        "relativeVolume": 0.77,
+        "relativeVolume": 0.7,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2124,7 +2124,7 @@
         "oneDayReturn": -1.74,
         "fiveDayReturn": 5.29,
         "twentyDayReturn": 6.45,
-        "relativeVolume": 0.22,
+        "relativeVolume": 0.21,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2354,7 +2354,7 @@
         "oneDayReturn": -4.47,
         "fiveDayReturn": 2.7,
         "twentyDayReturn": -15.21,
-        "relativeVolume": 1.11,
+        "relativeVolume": 1.05,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2464,7 +2464,7 @@
         "oneDayReturn": -1.14,
         "fiveDayReturn": 2.36,
         "twentyDayReturn": -3.81,
-        "relativeVolume": 0.75,
+        "relativeVolume": 0.7,
         "relatedEtfs": [],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -2527,7 +2527,7 @@
         "oneDayReturn": -3.9,
         "fiveDayReturn": 2.01,
         "twentyDayReturn": -8.13,
-        "relativeVolume": 0.62,
+        "relativeVolume": 0.57,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2568,7 +2568,7 @@
         "oneDayReturn": -4.51,
         "fiveDayReturn": 1.79,
         "twentyDayReturn": 2.52,
-        "relativeVolume": 0.83,
+        "relativeVolume": 0.75,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2763,7 +2763,7 @@
         "oneDayReturn": -3.14,
         "fiveDayReturn": 0.77,
         "twentyDayReturn": -4.73,
-        "relativeVolume": 0.92,
+        "relativeVolume": 0.95,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -2892,7 +2892,7 @@
         "oneDayReturn": -3.15,
         "fiveDayReturn": 0.28,
         "twentyDayReturn": -9.93,
-        "relativeVolume": 0.97,
+        "relativeVolume": 0.9,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3213,7 +3213,7 @@
         "oneDayReturn": -6.34,
         "fiveDayReturn": -0.75,
         "twentyDayReturn": -23.69,
-        "relativeVolume": 0.71,
+        "relativeVolume": 0.75,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3257,7 +3257,7 @@
         "oneDayReturn": -2.82,
         "fiveDayReturn": -0.78,
         "twentyDayReturn": -9.96,
-        "relativeVolume": 0.51,
+        "relativeVolume": 0.52,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3364,7 +3364,7 @@
         "oneDayReturn": -4.47,
         "fiveDayReturn": -1.29,
         "twentyDayReturn": -18,
-        "relativeVolume": 1.06,
+        "relativeVolume": 1.12,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3515,7 +3515,7 @@
         "oneDayReturn": -3.63,
         "fiveDayReturn": -2.54,
         "twentyDayReturn": 1.81,
-        "relativeVolume": 0.66,
+        "relativeVolume": 0.59,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3625,7 +3625,7 @@
         "oneDayReturn": -3.55,
         "fiveDayReturn": -2.95,
         "twentyDayReturn": -16.99,
-        "relativeVolume": 0.69,
+        "relativeVolume": 0.71,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3757,7 +3757,7 @@
         "oneDayReturn": 0.25,
         "fiveDayReturn": -3.69,
         "twentyDayReturn": -5.9,
-        "relativeVolume": 0.72,
+        "relativeVolume": 0.74,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3845,7 +3845,7 @@
         "oneDayReturn": -9.35,
         "fiveDayReturn": -4.23,
         "twentyDayReturn": -7.81,
-        "relativeVolume": 0.72,
+        "relativeVolume": 0.69,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3867,7 +3867,7 @@
         "oneDayReturn": -3.52,
         "fiveDayReturn": -4.64,
         "twentyDayReturn": 4.89,
-        "relativeVolume": 0.72,
+        "relativeVolume": 0.75,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -3889,7 +3889,7 @@
         "oneDayReturn": -1.82,
         "fiveDayReturn": -4.87,
         "twentyDayReturn": -7.35,
-        "relativeVolume": 0.74,
+        "relativeVolume": 0.69,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -4087,7 +4087,7 @@
         "oneDayReturn": -6.59,
         "fiveDayReturn": -6.8,
         "twentyDayReturn": -39.5,
-        "relativeVolume": 0.71,
+        "relativeVolume": 0.76,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -4241,7 +4241,7 @@
         "oneDayReturn": -3.22,
         "fiveDayReturn": -8.59,
         "twentyDayReturn": 2.2,
-        "relativeVolume": 0.68,
+        "relativeVolume": 0.59,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -4307,7 +4307,7 @@
         "oneDayReturn": -11.8,
         "fiveDayReturn": -10.29,
         "twentyDayReturn": -1.72,
-        "relativeVolume": 2.37,
+        "relativeVolume": 2.35,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -4388,8 +4388,8 @@
     {
       "name": "AI 반도체/HBM 공급망",
       "status": "관찰",
-      "narrativeScore": 68,
-      "rawScore": 68,
+      "narrativeScore": 70,
+      "rawScore": 70,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS"
@@ -4409,13 +4409,13 @@
         "009150.KS",
         "042700.KS"
       ],
-      "whyMoneyIsFlowing": "AI 반도체/HBM 공급망 관련 KODEX 200(069500.KS)와 삼성전자(005930.KS), SK하이닉스(000660.KS), 삼성전기(009150.KS), 한미반도체(042700.KS)의 5일(+19.60%)·20일(+49.29%) 흐름을 함께 본다. 평균 상대 거래량은 0.97배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "AI 반도체/HBM 공급망 관련 KODEX 200(069500.KS)와 삼성전자(005930.KS), SK하이닉스(000660.KS), 삼성전기(009150.KS), 한미반도체(042700.KS)의 5일(+19.60%)·20일(+49.29%) 흐름을 함께 본다. 평균 상대 거래량은 0.95배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
       "likelyNextBuyer": "HBM, AI 서버, 온디바이스 AI 수요가 이어질 때 국내 반도체 대형주와 후공정/부품주로 자금이 확산",
       "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: SK하이닉스(000660.KS), 삼성전자(005930.KS), 한미반도체(042700.KS)",
       "breakCondition": "KOSPI200이 20일선을 이탈하거나 반도체 대표 종목 절반 이상이 5일선을 동시에 이탈",
       "todayAction": "추격보다 SK하이닉스/삼성전자 동조성과 거래대금 회복을 확인한 뒤 눌림 구간에서 선별",
-      "summaryReason": "KODEX 200(069500.KS), 삼성전자(005930.KS), SK하이닉스(000660.KS) 중심으로 5일 +19.60%, 20일 +49.29% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
+      "summaryReason": "KODEX 200(069500.KS), 삼성전자(005930.KS), SK하이닉스(000660.KS) 중심으로 5일 +19.60%, 20일 +49.29% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 1,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
@@ -4481,12 +4481,48 @@
         "003550.KS",
         "004990.KS"
       ],
-      "whyMoneyIsFlowing": "지주/배당/자사주 재평가 관련 KODEX 200(069500.KS)와 SK(034730.KS), 두산(000150.KS), LG(003550.KS), 롯데지주(004990.KS)의 5일(+8.12%)·20일(+14.19%) 흐름을 함께 본다. 평균 상대 거래량은 0.79배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "지주/배당/자사주 재평가 관련 KODEX 200(069500.KS)와 SK(034730.KS), 두산(000150.KS), LG(003550.KS), 롯데지주(004990.KS)의 5일(+8.12%)·20일(+14.19%) 흐름을 함께 본다. 평균 상대 거래량은 0.78배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "자사주 소각, 배당 확대, 지배구조 개편 기대가 커질 때 지주회사와 저평가 대형주로 순환매 유입",
       "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: LG(003550.KS), SK(034730.KS), 두산(000150.KS)",
       "breakCondition": "정책/주주환원 기대가 약화되고 지주사 대표 종목이 시장 대비 언더퍼폼",
       "todayAction": "강한 시장에서는 후순위, 변동성 확대 구간에서 방어적 재평가 후보로 관찰",
       "summaryReason": "KODEX 200(069500.KS), SK(034730.KS), 두산(000150.KS) 중심으로 5일 +8.12%, 20일 +14.19% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "바이오/헬스케어 실적 전환",
+      "status": "약화",
+      "narrativeScore": 37,
+      "rawScore": 37,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "069500.KS"
+      ],
+      "supportStocks": [
+        "207940.KS",
+        "068270.KS",
+        "000100.KS",
+        "128940.KS"
+      ],
+      "representativeEtfs": [
+        "069500.KS"
+      ],
+      "representativeStocks": [
+        "207940.KS",
+        "068270.KS",
+        "000100.KS",
+        "128940.KS"
+      ],
+      "whyMoneyIsFlowing": "바이오/헬스케어 실적 전환 관련 KODEX 200(069500.KS)와 삼성바이오로직스(207940.KS), 셀트리온(068270.KS), 유한양행(000100.KS), 한미약품(128940.KS)의 5일(+8.04%)·20일(+5.53%) 흐름을 함께 본다. 평균 상대 거래량은 0.91배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "CDMO, 바이오시밀러, 신약 모멘텀이 살아날 때 대형 바이오에서 제약주로 매수세가 확산",
+      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: 삼성바이오로직스(207940.KS), 셀트리온(068270.KS), 유한양행(000100.KS)",
+      "breakCondition": "임상/실적 촉매 없이 거래량만 감소하거나 대표 종목이 20일선 아래로 재진입",
+      "todayAction": "뉴스 촉매와 거래량이 동반될 때만 관찰 편입, 이벤트 소멸 후 추격은 금지",
+      "summaryReason": "KODEX 200(069500.KS), 삼성바이오로직스(207940.KS), 셀트리온(068270.KS) 중심으로 5일 +8.04%, 20일 +5.53% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -4530,42 +4566,6 @@
       "stockRelativeVolumeAvg": 1
     },
     {
-      "name": "바이오/헬스케어 실적 전환",
-      "status": "약화",
-      "narrativeScore": 34,
-      "rawScore": 34,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "069500.KS"
-      ],
-      "supportStocks": [
-        "207940.KS",
-        "068270.KS",
-        "000100.KS",
-        "128940.KS"
-      ],
-      "representativeEtfs": [
-        "069500.KS"
-      ],
-      "representativeStocks": [
-        "207940.KS",
-        "068270.KS",
-        "000100.KS",
-        "128940.KS"
-      ],
-      "whyMoneyIsFlowing": "바이오/헬스케어 실적 전환 관련 KODEX 200(069500.KS)와 삼성바이오로직스(207940.KS), 셀트리온(068270.KS), 유한양행(000100.KS), 한미약품(128940.KS)의 5일(+8.04%)·20일(+5.53%) 흐름을 함께 본다. 평균 상대 거래량은 0.92배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "CDMO, 바이오시밀러, 신약 모멘텀이 살아날 때 대형 바이오에서 제약주로 매수세가 확산",
-      "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: 삼성바이오로직스(207940.KS), 셀트리온(068270.KS), 유한양행(000100.KS)",
-      "breakCondition": "임상/실적 촉매 없이 거래량만 감소하거나 대표 종목이 20일선 아래로 재진입",
-      "todayAction": "뉴스 촉매와 거래량이 동반될 때만 관찰 편입, 이벤트 소멸 후 추격은 금지",
-      "summaryReason": "KODEX 200(069500.KS), 삼성바이오로직스(207940.KS), 셀트리온(068270.KS) 중심으로 5일 +8.04%, 20일 +5.53% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": 0,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 1
-    },
-    {
       "name": "전력기기/인프라 투자",
       "status": "약화",
       "narrativeScore": 27,
@@ -4589,7 +4589,7 @@
         "010120.KS",
         "267250.KS"
       ],
-      "whyMoneyIsFlowing": "전력기기/인프라 투자 관련 KODEX 200(069500.KS)와 효성중공업(298040.KS), HD현대일렉트릭(267260.KS), LS ELECTRIC(010120.KS), HD현대(267250.KS)의 5일(+8.05%)·20일(+4.07%) 흐름을 함께 본다. 평균 상대 거래량은 0.91배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "전력기기/인프라 투자 관련 KODEX 200(069500.KS)와 효성중공업(298040.KS), HD현대일렉트릭(267260.KS), LS ELECTRIC(010120.KS), HD현대(267250.KS)의 5일(+8.05%)·20일(+4.07%) 흐름을 함께 본다. 평균 상대 거래량은 0.90배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "전력망, 변압기, 데이터센터 전력 수요가 강할 때 전력기기와 인프라 대형주로 매수세가 집중",
       "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: HD현대일렉트릭(267260.KS), LS ELECTRIC(010120.KS), 효성중공업(298040.KS)",
       "breakCondition": "전력기기 대표 종목의 상대 거래량이 1배 아래로 내려가고 5일 수익률이 동반 둔화",
@@ -4625,7 +4625,7 @@
         "000270.KS",
         "011210.KS"
       ],
-      "whyMoneyIsFlowing": "자동차/부품 수출 모멘텀 관련 KODEX 200(069500.KS)와 현대모비스(012330.KS), 현대차(005380.KS), 기아(000270.KS), 현대위아(011210.KS)의 5일(+6.47%)·20일(+8.11%) 흐름을 함께 본다. 평균 상대 거래량은 0.69배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "자동차/부품 수출 모멘텀 관련 KODEX 200(069500.KS)와 현대모비스(012330.KS), 현대차(005380.KS), 기아(000270.KS), 현대위아(011210.KS)의 5일(+6.47%)·20일(+8.11%) 흐름을 함께 본다. 평균 상대 거래량은 0.67배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "환율, 북미 판매, 주주환원 기대가 동시에 살아날 때 완성차에서 부품주로 매수세가 확산",
       "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: 현대차(005380.KS), 기아(000270.KS), 현대모비스(012330.KS)",
       "breakCondition": "현대차/기아가 20일선을 이탈하거나 KOSPI200 대비 상대강도가 3거래일 이상 둔화",
@@ -4699,7 +4699,7 @@
         "035720.KS",
         "259960.KS"
       ],
-      "whyMoneyIsFlowing": "인터넷/게임/엔터 성장주 관련 KODEX 200(069500.KS), KODEX 코스닥150(229200.KS)와 NAVER(035420.KS), 하이브(352820.KS), 카카오(035720.KS), 크래프톤(259960.KS)의 5일(+5.06%)·20일(+3.63%) 흐름을 함께 본다. 평균 상대 거래량은 0.61배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "인터넷/게임/엔터 성장주 관련 KODEX 200(069500.KS), KODEX 코스닥150(229200.KS)와 NAVER(035420.KS), 하이브(352820.KS), 카카오(035720.KS), 크래프톤(259960.KS)의 5일(+5.06%)·20일(+3.63%) 흐름을 함께 본다. 평균 상대 거래량은 0.60배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "금리 부담 완화, 광고/커머스 회복, 신작/콘텐츠 모멘텀이 있을 때 성장주로 위험선호 자금 유입",
       "bestTradingVehicle": "ETF 우선: KODEX 코스닥150(229200.KS), KODEX 200(069500.KS) / 개별 종목 우선: NAVER(035420.KS), 크래프톤(259960.KS), 하이브(352820.KS)",
       "breakCondition": "KOSDAQ150 ETF가 20일선을 이탈하거나 성장주 대표 종목의 상대 거래량이 둔화",
@@ -4754,8 +4754,8 @@
     {
       "name": "AI 반도체/HBM 공급망",
       "status": "관찰",
-      "narrativeScore": 68,
-      "rawScore": 68,
+      "narrativeScore": 70,
+      "rawScore": 70,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS"
@@ -4775,13 +4775,13 @@
         "009150.KS",
         "042700.KS"
       ],
-      "whyMoneyIsFlowing": "AI 반도체/HBM 공급망 관련 KODEX 200(069500.KS)와 삼성전자(005930.KS), SK하이닉스(000660.KS), 삼성전기(009150.KS), 한미반도체(042700.KS)의 5일(+19.60%)·20일(+49.29%) 흐름을 함께 본다. 평균 상대 거래량은 0.97배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "AI 반도체/HBM 공급망 관련 KODEX 200(069500.KS)와 삼성전자(005930.KS), SK하이닉스(000660.KS), 삼성전기(009150.KS), 한미반도체(042700.KS)의 5일(+19.60%)·20일(+49.29%) 흐름을 함께 본다. 평균 상대 거래량은 0.95배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
       "likelyNextBuyer": "HBM, AI 서버, 온디바이스 AI 수요가 이어질 때 국내 반도체 대형주와 후공정/부품주로 자금이 확산",
       "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: SK하이닉스(000660.KS), 삼성전자(005930.KS), 한미반도체(042700.KS)",
       "breakCondition": "KOSPI200이 20일선을 이탈하거나 반도체 대표 종목 절반 이상이 5일선을 동시에 이탈",
       "todayAction": "추격보다 SK하이닉스/삼성전자 동조성과 거래대금 회복을 확인한 뒤 눌림 구간에서 선별",
-      "summaryReason": "KODEX 200(069500.KS), 삼성전자(005930.KS), SK하이닉스(000660.KS) 중심으로 5일 +19.60%, 20일 +49.29% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
+      "summaryReason": "KODEX 200(069500.KS), 삼성전자(005930.KS), SK하이닉스(000660.KS) 중심으로 5일 +19.60%, 20일 +49.29% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 1,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
@@ -4847,7 +4847,7 @@
         "003550.KS",
         "004990.KS"
       ],
-      "whyMoneyIsFlowing": "지주/배당/자사주 재평가 관련 KODEX 200(069500.KS)와 SK(034730.KS), 두산(000150.KS), LG(003550.KS), 롯데지주(004990.KS)의 5일(+8.12%)·20일(+14.19%) 흐름을 함께 본다. 평균 상대 거래량은 0.79배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "지주/배당/자사주 재평가 관련 KODEX 200(069500.KS)와 SK(034730.KS), 두산(000150.KS), LG(003550.KS), 롯데지주(004990.KS)의 5일(+8.12%)·20일(+14.19%) 흐름을 함께 본다. 평균 상대 거래량은 0.78배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "자사주 소각, 배당 확대, 지배구조 개편 기대가 커질 때 지주회사와 저평가 대형주로 순환매 유입",
       "bestTradingVehicle": "ETF 우선: KODEX 200(069500.KS) / 개별 종목 우선: LG(003550.KS), SK(034730.KS), 두산(000150.KS)",
       "breakCondition": "정책/주주환원 기대가 약화되고 지주사 대표 종목이 시장 대비 언더퍼폼",
@@ -4862,6 +4862,80 @@
   ],
   "etfActionCandidates": [],
   "stockActionCandidates": [
+    {
+      "ticker": "005930.KS",
+      "assetType": "STOCK",
+      "name": "삼성전자",
+      "actionLabel": "강한 자금흐름 조건부",
+      "status": "진입 후보",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 95,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 102,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 102 capped to displayed score 100",
+      "formulaText": "+95 + +6 + 0 + +5 + +6 - 10 + 0 = 102 -> 100",
+      "riskPenalty": -10,
+      "riskPenaltySummary": {
+        "totalPenalty": -10,
+        "riskLevel": "MEDIUM",
+        "items": [
+          {
+            "riskType": "SHORT_TERM_OVERHEAT",
+            "label": "short-term overheat",
+            "penalty": -6,
+            "evidence": "5d return +21.24% is extended.",
+            "action": "Prefer pullback or prior high reclaim over chasing."
+          },
+          {
+            "riskType": "NEAR_52W_HIGH_CHASE",
+            "label": "near 52w high chase",
+            "penalty": -4,
+            "evidence": "Price is close to the 52-week high with fast short-term momentum.",
+            "action": "Downgrade if breakout fails."
+          }
+        ],
+        "watchItems": [],
+        "summary": "2개 감점 리스크로 총 -10점 반영."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서",
+      "tieBreakerReason": "최종 원점수 102, 리스크 패널티 -10, 5일 수익률 +21.24%, 상대 거래량 1.08배 순으로 정렬",
+      "entryQualityScore": 37,
+      "entryQualityLabel": "낮음",
+      "trendStrengthIndex": 77,
+      "trendStateLabel": "과열",
+      "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
+      "exhaustionRisk": 65,
+      "exhaustionRiskLabel": "주의",
+      "relativeVolume": 1.08,
+      "marketDataStatus": "ok",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "강한 자금흐름 조건부",
+        "status": "진입 후보",
+        "reasons": [
+          "Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "제한적",
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+      },
+      "linkedNarrative": "AI 반도체/HBM 공급망",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 70,
+      "relatedEtfs": [
+        "069500.KS",
+        "229200.KS"
+      ],
+      "closePriceAtRecommendation": 362500,
+      "recommendationDate": "2026-06-18"
+    },
     {
       "ticker": "034730.KS",
       "assetType": "STOCK",
@@ -4889,9 +4963,7 @@
             "action": "Prefer pullback or prior high reclaim over chasing."
           }
         ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
+        "watchItems": [],
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "MEDIUM",
@@ -4932,82 +5004,6 @@
       "recommendationDate": "2026-06-18"
     },
     {
-      "ticker": "005930.KS",
-      "assetType": "STOCK",
-      "name": "삼성전자",
-      "actionLabel": "강한 자금흐름 조건부",
-      "status": "진입 후보",
-      "moneyFlowScore": 96,
-      "moneyFlowScoreInitial": 95,
-      "moneyFlowScoreFinal": 96,
-      "finalRawScore": 96,
-      "finalDisplayScore": 96,
-      "wasCapped": false,
-      "capReason": "cap not applied",
-      "formulaText": "+95 + 0 + 0 + +5 + +6 - 10 + 0 = 96",
-      "riskPenalty": -10,
-      "riskPenaltySummary": {
-        "totalPenalty": -10,
-        "riskLevel": "MEDIUM",
-        "items": [
-          {
-            "riskType": "SHORT_TERM_OVERHEAT",
-            "label": "short-term overheat",
-            "penalty": -6,
-            "evidence": "5d return +21.24% is extended.",
-            "action": "Prefer pullback or prior high reclaim over chasing."
-          },
-          {
-            "riskType": "NEAR_52W_HIGH_CHASE",
-            "label": "near 52w high chase",
-            "penalty": -4,
-            "evidence": "Price is close to the 52-week high with fast short-term momentum.",
-            "action": "Downgrade if breakout fails."
-          }
-        ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
-        "summary": "2개 감점 리스크로 총 -10점 반영."
-      },
-      "reasonConfidence": "MEDIUM",
-      "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-      "directCatalyst": "",
-      "tieBreakerReason": "최종 원점수 96, 리스크 패널티 -10, 5일 수익률 +21.24%, 상대 거래량 1.19배 순으로 정렬",
-      "entryQualityScore": 35,
-      "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 75,
-      "trendStateLabel": "과열",
-      "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
-      "exhaustionRisk": 65,
-      "exhaustionRiskLabel": "주의",
-      "relativeVolume": 1.19,
-      "marketDataStatus": "ok",
-      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "actionGate": {
-        "label": "강한 자금흐름 조건부",
-        "status": "진입 후보",
-        "reasons": [
-          "Entry Quality 35 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
-        ]
-      },
-      "marketContext": {
-        "marketRegime": "위험선호",
-        "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 35 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
-      },
-      "linkedNarrative": "AI 반도체/HBM 공급망",
-      "narrativeStatus": "관찰",
-      "narrativeScore": 68,
-      "relatedEtfs": [
-        "069500.KS",
-        "229200.KS"
-      ],
-      "closePriceAtRecommendation": 362500,
-      "recommendationDate": "2026-06-18"
-    },
-    {
       "ticker": "032830.KS",
       "assetType": "STOCK",
       "name": "삼성생명",
@@ -5041,9 +5037,7 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
+        "watchItems": [],
         "summary": "2개 감점 리스크로 총 -10점 반영."
       },
       "reasonConfidence": "MEDIUM",
@@ -5124,18 +5118,16 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
+        "watchItems": [],
         "summary": "3개 감점 리스크로 총 -14점 반영."
       },
       "reasonConfidence": "MEDIUM",
       "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
       "tieBreakerReason": "최종 원점수 94, 리스크 패널티 -14, 5일 수익률 +27.80%, 상대 거래량 1.18배 순으로 정렬",
-      "entryQualityScore": 27,
+      "entryQualityScore": 28,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 75,
+      "trendStrengthIndex": 77,
       "trendStateLabel": "과열",
       "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
       "exhaustionRisk": 65,
@@ -5148,17 +5140,17 @@
         "label": "강한 자금흐름 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 27 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+          "Entry Quality 28 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 27 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 28 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
       },
       "linkedNarrative": "AI 반도체/HBM 공급망",
       "narrativeStatus": "관찰",
-      "narrativeScore": 68,
+      "narrativeScore": 70,
       "relatedEtfs": [
         "069500.KS",
         "229200.KS"
@@ -5207,9 +5199,7 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
+        "watchItems": [],
         "summary": "3개 감점 리스크로 총 -14점 반영."
       },
       "reasonConfidence": "MEDIUM",
@@ -5252,6 +5242,80 @@
   ],
   "actionCandidates": [
     {
+      "ticker": "005930.KS",
+      "assetType": "STOCK",
+      "name": "삼성전자",
+      "actionLabel": "강한 자금흐름 조건부",
+      "status": "진입 후보",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 95,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 102,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 102 capped to displayed score 100",
+      "formulaText": "+95 + +6 + 0 + +5 + +6 - 10 + 0 = 102 -> 100",
+      "riskPenalty": -10,
+      "riskPenaltySummary": {
+        "totalPenalty": -10,
+        "riskLevel": "MEDIUM",
+        "items": [
+          {
+            "riskType": "SHORT_TERM_OVERHEAT",
+            "label": "short-term overheat",
+            "penalty": -6,
+            "evidence": "5d return +21.24% is extended.",
+            "action": "Prefer pullback or prior high reclaim over chasing."
+          },
+          {
+            "riskType": "NEAR_52W_HIGH_CHASE",
+            "label": "near 52w high chase",
+            "penalty": -4,
+            "evidence": "Price is close to the 52-week high with fast short-term momentum.",
+            "action": "Downgrade if breakout fails."
+          }
+        ],
+        "watchItems": [],
+        "summary": "2개 감점 리스크로 총 -10점 반영."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서",
+      "tieBreakerReason": "최종 원점수 102, 리스크 패널티 -10, 5일 수익률 +21.24%, 상대 거래량 1.08배 순으로 정렬",
+      "entryQualityScore": 37,
+      "entryQualityLabel": "낮음",
+      "trendStrengthIndex": 77,
+      "trendStateLabel": "과열",
+      "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
+      "exhaustionRisk": 65,
+      "exhaustionRiskLabel": "주의",
+      "relativeVolume": 1.08,
+      "marketDataStatus": "ok",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "강한 자금흐름 조건부",
+        "status": "진입 후보",
+        "reasons": [
+          "Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "제한적",
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+      },
+      "linkedNarrative": "AI 반도체/HBM 공급망",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 70,
+      "relatedEtfs": [
+        "069500.KS",
+        "229200.KS"
+      ],
+      "closePriceAtRecommendation": 362500,
+      "recommendationDate": "2026-06-18"
+    },
+    {
       "ticker": "034730.KS",
       "assetType": "STOCK",
       "name": "SK",
@@ -5278,9 +5342,7 @@
             "action": "Prefer pullback or prior high reclaim over chasing."
           }
         ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
+        "watchItems": [],
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "MEDIUM",
@@ -5321,82 +5383,6 @@
       "recommendationDate": "2026-06-18"
     },
     {
-      "ticker": "005930.KS",
-      "assetType": "STOCK",
-      "name": "삼성전자",
-      "actionLabel": "강한 자금흐름 조건부",
-      "status": "진입 후보",
-      "moneyFlowScore": 96,
-      "moneyFlowScoreInitial": 95,
-      "moneyFlowScoreFinal": 96,
-      "finalRawScore": 96,
-      "finalDisplayScore": 96,
-      "wasCapped": false,
-      "capReason": "cap not applied",
-      "formulaText": "+95 + 0 + 0 + +5 + +6 - 10 + 0 = 96",
-      "riskPenalty": -10,
-      "riskPenaltySummary": {
-        "totalPenalty": -10,
-        "riskLevel": "MEDIUM",
-        "items": [
-          {
-            "riskType": "SHORT_TERM_OVERHEAT",
-            "label": "short-term overheat",
-            "penalty": -6,
-            "evidence": "5d return +21.24% is extended.",
-            "action": "Prefer pullback or prior high reclaim over chasing."
-          },
-          {
-            "riskType": "NEAR_52W_HIGH_CHASE",
-            "label": "near 52w high chase",
-            "penalty": -4,
-            "evidence": "Price is close to the 52-week high with fast short-term momentum.",
-            "action": "Downgrade if breakout fails."
-          }
-        ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
-        "summary": "2개 감점 리스크로 총 -10점 반영."
-      },
-      "reasonConfidence": "MEDIUM",
-      "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-      "directCatalyst": "",
-      "tieBreakerReason": "최종 원점수 96, 리스크 패널티 -10, 5일 수익률 +21.24%, 상대 거래량 1.19배 순으로 정렬",
-      "entryQualityScore": 35,
-      "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 75,
-      "trendStateLabel": "과열",
-      "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
-      "exhaustionRisk": 65,
-      "exhaustionRiskLabel": "주의",
-      "relativeVolume": 1.19,
-      "marketDataStatus": "ok",
-      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "actionGate": {
-        "label": "강한 자금흐름 조건부",
-        "status": "진입 후보",
-        "reasons": [
-          "Entry Quality 35 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
-        ]
-      },
-      "marketContext": {
-        "marketRegime": "위험선호",
-        "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 35 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
-      },
-      "linkedNarrative": "AI 반도체/HBM 공급망",
-      "narrativeStatus": "관찰",
-      "narrativeScore": 68,
-      "relatedEtfs": [
-        "069500.KS",
-        "229200.KS"
-      ],
-      "closePriceAtRecommendation": 362500,
-      "recommendationDate": "2026-06-18"
-    },
-    {
       "ticker": "032830.KS",
       "assetType": "STOCK",
       "name": "삼성생명",
@@ -5430,9 +5416,7 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
+        "watchItems": [],
         "summary": "2개 감점 리스크로 총 -10점 반영."
       },
       "reasonConfidence": "MEDIUM",
@@ -5476,6 +5460,80 @@
   "darkHorseCandidates": [],
   "stockEntryCandidates": [
     {
+      "ticker": "005930.KS",
+      "assetType": "STOCK",
+      "name": "삼성전자",
+      "actionLabel": "강한 자금흐름 조건부",
+      "status": "진입 후보",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 95,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 102,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 102 capped to displayed score 100",
+      "formulaText": "+95 + +6 + 0 + +5 + +6 - 10 + 0 = 102 -> 100",
+      "riskPenalty": -10,
+      "riskPenaltySummary": {
+        "totalPenalty": -10,
+        "riskLevel": "MEDIUM",
+        "items": [
+          {
+            "riskType": "SHORT_TERM_OVERHEAT",
+            "label": "short-term overheat",
+            "penalty": -6,
+            "evidence": "5d return +21.24% is extended.",
+            "action": "Prefer pullback or prior high reclaim over chasing."
+          },
+          {
+            "riskType": "NEAR_52W_HIGH_CHASE",
+            "label": "near 52w high chase",
+            "penalty": -4,
+            "evidence": "Price is close to the 52-week high with fast short-term momentum.",
+            "action": "Downgrade if breakout fails."
+          }
+        ],
+        "watchItems": [],
+        "summary": "2개 감점 리스크로 총 -10점 반영."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서",
+      "tieBreakerReason": "최종 원점수 102, 리스크 패널티 -10, 5일 수익률 +21.24%, 상대 거래량 1.08배 순으로 정렬",
+      "entryQualityScore": 37,
+      "entryQualityLabel": "낮음",
+      "trendStrengthIndex": 77,
+      "trendStateLabel": "과열",
+      "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
+      "exhaustionRisk": 65,
+      "exhaustionRiskLabel": "주의",
+      "relativeVolume": 1.08,
+      "marketDataStatus": "ok",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "강한 자금흐름 조건부",
+        "status": "진입 후보",
+        "reasons": [
+          "Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "제한적",
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+      },
+      "linkedNarrative": "AI 반도체/HBM 공급망",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 70,
+      "relatedEtfs": [
+        "069500.KS",
+        "229200.KS"
+      ],
+      "closePriceAtRecommendation": 362500,
+      "recommendationDate": "2026-06-18"
+    },
+    {
       "ticker": "034730.KS",
       "assetType": "STOCK",
       "name": "SK",
@@ -5502,9 +5560,7 @@
             "action": "Prefer pullback or prior high reclaim over chasing."
           }
         ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
+        "watchItems": [],
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "MEDIUM",
@@ -5545,82 +5601,6 @@
       "recommendationDate": "2026-06-18"
     },
     {
-      "ticker": "005930.KS",
-      "assetType": "STOCK",
-      "name": "삼성전자",
-      "actionLabel": "강한 자금흐름 조건부",
-      "status": "진입 후보",
-      "moneyFlowScore": 96,
-      "moneyFlowScoreInitial": 95,
-      "moneyFlowScoreFinal": 96,
-      "finalRawScore": 96,
-      "finalDisplayScore": 96,
-      "wasCapped": false,
-      "capReason": "cap not applied",
-      "formulaText": "+95 + 0 + 0 + +5 + +6 - 10 + 0 = 96",
-      "riskPenalty": -10,
-      "riskPenaltySummary": {
-        "totalPenalty": -10,
-        "riskLevel": "MEDIUM",
-        "items": [
-          {
-            "riskType": "SHORT_TERM_OVERHEAT",
-            "label": "short-term overheat",
-            "penalty": -6,
-            "evidence": "5d return +21.24% is extended.",
-            "action": "Prefer pullback or prior high reclaim over chasing."
-          },
-          {
-            "riskType": "NEAR_52W_HIGH_CHASE",
-            "label": "near 52w high chase",
-            "penalty": -4,
-            "evidence": "Price is close to the 52-week high with fast short-term momentum.",
-            "action": "Downgrade if breakout fails."
-          }
-        ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
-        "summary": "2개 감점 리스크로 총 -10점 반영."
-      },
-      "reasonConfidence": "MEDIUM",
-      "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-      "directCatalyst": "",
-      "tieBreakerReason": "최종 원점수 96, 리스크 패널티 -10, 5일 수익률 +21.24%, 상대 거래량 1.19배 순으로 정렬",
-      "entryQualityScore": 35,
-      "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 75,
-      "trendStateLabel": "과열",
-      "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
-      "exhaustionRisk": 65,
-      "exhaustionRiskLabel": "주의",
-      "relativeVolume": 1.19,
-      "marketDataStatus": "ok",
-      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "actionGate": {
-        "label": "강한 자금흐름 조건부",
-        "status": "진입 후보",
-        "reasons": [
-          "Entry Quality 35 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
-        ]
-      },
-      "marketContext": {
-        "marketRegime": "위험선호",
-        "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 35 < 50, but moneyFlow 96 and confidence MEDIUM support conditional watch"
-      },
-      "linkedNarrative": "AI 반도체/HBM 공급망",
-      "narrativeStatus": "관찰",
-      "narrativeScore": 68,
-      "relatedEtfs": [
-        "069500.KS",
-        "229200.KS"
-      ],
-      "closePriceAtRecommendation": 362500,
-      "recommendationDate": "2026-06-18"
-    },
-    {
       "ticker": "032830.KS",
       "assetType": "STOCK",
       "name": "삼성생명",
@@ -5654,9 +5634,7 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
+        "watchItems": [],
         "summary": "2개 감점 리스크로 총 -10점 반영."
       },
       "reasonConfidence": "MEDIUM",
@@ -5737,18 +5715,16 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
+        "watchItems": [],
         "summary": "3개 감점 리스크로 총 -14점 반영."
       },
       "reasonConfidence": "MEDIUM",
       "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
       "tieBreakerReason": "최종 원점수 94, 리스크 패널티 -14, 5일 수익률 +27.80%, 상대 거래량 1.18배 순으로 정렬",
-      "entryQualityScore": 27,
+      "entryQualityScore": 28,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 75,
+      "trendStrengthIndex": 77,
       "trendStateLabel": "과열",
       "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
       "exhaustionRisk": 65,
@@ -5761,17 +5737,17 @@
         "label": "강한 자금흐름 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 27 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+          "Entry Quality 28 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
         ]
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 27 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 28 < 50, but moneyFlow 94 and confidence MEDIUM support conditional watch"
       },
       "linkedNarrative": "AI 반도체/HBM 공급망",
       "narrativeStatus": "관찰",
-      "narrativeScore": 68,
+      "narrativeScore": 70,
       "relatedEtfs": [
         "069500.KS",
         "229200.KS"
@@ -5820,9 +5796,7 @@
             "action": "Downgrade if breakout fails."
           }
         ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
+        "watchItems": [],
         "summary": "3개 감점 리스크로 총 -14점 반영."
       },
       "reasonConfidence": "MEDIUM",
@@ -5892,9 +5866,7 @@
             "action": "Require relative volume recovery above 1.0x."
           }
         ],
-        "watchItems": [
-          "news data not connected or unavailable"
-        ],
+        "watchItems": [],
         "summary": "1개 감점 리스크로 총 -4점 반영."
       },
       "reasonConfidence": "LOW",
@@ -5972,7 +5944,6 @@
           }
         ],
         "watchItems": [
-          "news data not connected or unavailable",
           "ETF breadth data not connected"
         ],
         "summary": "2개 감점 리스크로 총 -10점 반영."
@@ -5983,7 +5954,7 @@
       "tieBreakerReason": "최종 원점수 69, 리스크 패널티 -10, 5일 수익률 +18.65%, 상대 거래량 0.86배 순으로 정렬",
       "entryQualityScore": 31,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 75,
+      "trendStrengthIndex": 77,
       "trendStateLabel": "과열",
       "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
       "exhaustionRisk": 65,
@@ -6007,7 +5978,7 @@
       },
       "linkedNarrative": "AI 반도체/HBM 공급망",
       "narrativeStatus": "관찰",
-      "narrativeScore": 68,
+      "narrativeScore": 70,
       "relatedEtfs": [],
       "closePriceAtRecommendation": 146945,
       "recommendationDate": "2026-06-18"
@@ -6040,7 +6011,6 @@
           }
         ],
         "watchItems": [
-          "news data not connected or unavailable",
           "ETF breadth data not connected"
         ],
         "summary": "1개 감점 리스크로 총 -6점 반영."
@@ -6086,49 +6056,54 @@
     "stocks": []
   },
   "finalTopPick": {
-    "ticker": "034730.KS",
+    "ticker": "005930.KS",
     "assetType": "STOCK",
-    "name": "SK",
+    "name": "삼성전자",
     "actionLabel": "강한 자금흐름 조건부",
     "status": "진입 후보",
-    "moneyFlowScore": 90,
-    "moneyFlowScoreInitial": 85,
-    "moneyFlowScoreFinal": 90,
-    "finalRawScore": 90,
-    "finalDisplayScore": 90,
-    "wasCapped": false,
-    "capReason": "cap not applied",
-    "formulaText": "+85 + 0 + 0 + +5 + +6 - 6 + 0 = 90",
-    "riskPenalty": -6,
+    "moneyFlowScore": 100,
+    "moneyFlowScoreInitial": 95,
+    "moneyFlowScoreFinal": 100,
+    "finalRawScore": 102,
+    "finalDisplayScore": 100,
+    "wasCapped": true,
+    "capReason": "raw score 102 capped to displayed score 100",
+    "formulaText": "+95 + +6 + 0 + +5 + +6 - 10 + 0 = 102 -> 100",
+    "riskPenalty": -10,
     "riskPenaltySummary": {
-      "totalPenalty": -6,
-      "riskLevel": "LOW",
+      "totalPenalty": -10,
+      "riskLevel": "MEDIUM",
       "items": [
         {
           "riskType": "SHORT_TERM_OVERHEAT",
           "label": "short-term overheat",
           "penalty": -6,
-          "evidence": "5d return +19.48% is extended.",
+          "evidence": "5d return +21.24% is extended.",
           "action": "Prefer pullback or prior high reclaim over chasing."
+        },
+        {
+          "riskType": "NEAR_52W_HIGH_CHASE",
+          "label": "near 52w high chase",
+          "penalty": -4,
+          "evidence": "Price is close to the 52-week high with fast short-term momentum.",
+          "action": "Downgrade if breakout fails."
         }
       ],
-      "watchItems": [
-        "news data not connected or unavailable"
-      ],
-      "summary": "1개 감점 리스크로 총 -6점 반영."
+      "watchItems": [],
+      "summary": "2개 감점 리스크로 총 -10점 반영."
     },
-    "reasonConfidence": "MEDIUM",
-    "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-    "directCatalyst": "",
-    "tieBreakerReason": "최종 원점수 90, 리스크 패널티 -6, 5일 수익률 +19.48%, 상대 거래량 1.13배 순으로 정렬",
-    "entryQualityScore": 42,
-    "entryQualityLabel": "관찰",
-    "trendStrengthIndex": 55,
-    "trendStateLabel": "약화",
-    "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
-    "exhaustionRisk": 35,
-    "exhaustionRiskLabel": "보통",
-    "relativeVolume": 1.13,
+    "reasonConfidence": "HIGH",
+    "reasonConfidenceExplanation": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+    "directCatalyst": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 임원ㆍ주요주주특정증권등소유상황보고서",
+    "tieBreakerReason": "최종 원점수 102, 리스크 패널티 -10, 5일 수익률 +21.24%, 상대 거래량 1.08배 순으로 정렬",
+    "entryQualityScore": 37,
+    "entryQualityLabel": "낮음",
+    "trendStrengthIndex": 77,
+    "trendStateLabel": "과열",
+    "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
+    "exhaustionRisk": 65,
+    "exhaustionRiskLabel": "주의",
+    "relativeVolume": 1.08,
     "marketDataStatus": "ok",
     "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
     "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -6136,22 +6111,22 @@
       "label": "강한 자금흐름 조건부",
       "status": "진입 후보",
       "reasons": [
-        "Entry Quality 42 < 50, but moneyFlow 90 and confidence MEDIUM support conditional watch"
+        "Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
       ]
     },
     "marketContext": {
       "marketRegime": "위험선호",
       "candidateEnvironment": "제한적",
-      "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 42 < 50, but moneyFlow 90 and confidence MEDIUM support conditional watch"
+      "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 37 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
     },
-    "linkedNarrative": "지주/배당/자사주 재평가",
-    "narrativeStatus": "약화",
-    "narrativeScore": 42,
+    "linkedNarrative": "AI 반도체/HBM 공급망",
+    "narrativeStatus": "관찰",
+    "narrativeScore": 70,
     "relatedEtfs": [
       "069500.KS",
       "229200.KS"
     ],
-    "closePriceAtRecommendation": 687000,
+    "closePriceAtRecommendation": 362500,
     "recommendationDate": "2026-06-18"
   },
   "dataReliability": {
@@ -6162,21 +6137,21 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-06-18",
     "priceAsOfLabel": "2026-06-18 KRX 정규장 종가",
-    "reportGeneratedAtKST": "2026-06-18 16:38",
-    "newsStatus": "DISABLED",
-    "newsFetchedAt": "2026-06-18T07:38:50.479Z",
-    "newsLastUpdatedAt": "2026-06-18T07:38:50.479Z",
-    "latestNewsPublishedAt": null,
-    "newsFreshnessStatus": "UNKNOWN",
+    "reportGeneratedAtKST": "2026-06-18 16:45",
+    "newsStatus": "CONNECTED",
+    "newsFetchedAt": "2026-06-18T07:45:11.316Z",
+    "newsLastUpdatedAt": "2026-06-18T07:45:11.316Z",
+    "latestNewsPublishedAt": "2026-06-17T15:00:00.000Z",
+    "newsFreshnessStatus": "FRESH",
     "newsSources": "DART",
-    "newsSourceStatus": "DART DISABLED",
-    "newsReliability": "LOW",
+    "newsSourceStatus": "DART CONNECTED",
+    "newsReliability": "HIGH",
     "etfBreadthStatus": "DISABLED",
     "etfBreadthSampleCount": "0",
     "etfBreadthReliability": "LOW",
     "liquidityStatus": "PARTIAL",
     "prePostMarketStatus": "NOT_APPLICABLE",
-    "analysisReliability": "LOW",
+    "analysisReliability": "MEDIUM",
     "executionReliability": "MEDIUM",
     "reliabilityNotes": [
       "테마 확산 판단 제한",
@@ -6192,12 +6167,12 @@
     "screeningUnavailable": false,
     "entryReadyCount": 0,
     "conditionalCount": 5,
-    "watchCount": 151,
-    "banCount": 43,
+    "watchCount": 152,
+    "banCount": 42,
     "actionCandidateCount": 3,
     "mainLimiters": [
-      "뉴스 직접성 부족",
       "Entry Quality < 40",
+      "뉴스 직접성 부족",
       "RVOL 미달"
     ],
     "orderDecision": "지정가 권장 / 시장가 주의",
@@ -6208,7 +6183,7 @@
     "items": [
       {
         "label": "RVOL < 1.00x",
-        "count": 151
+        "count": 152
       },
       {
         "label": "거래대금 유동성 낮음",
@@ -6236,12 +6211,12 @@
       },
       {
         "label": "뉴스 직접성 부족",
-        "count": 202
+        "count": 198
       }
     ],
     "topLimiters": [
-      "뉴스 직접성 부족",
       "Entry Quality < 40",
+      "뉴스 직접성 부족",
       "RVOL 미달"
     ]
   },
