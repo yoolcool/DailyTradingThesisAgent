@@ -52,8 +52,13 @@ jobs:
         run: npx playwright install chromium
 
       - name: Refresh KOSPI200 fallback universe
-        run: python scripts/update_kospi200_fallback.py
-        continue-on-error: true
+        shell: pwsh
+        run: |
+          python scripts/update_kospi200_fallback.py
+          if ($LASTEXITCODE -ne 0) {
+            "KOSPI200 fallback refresh failed; continuing with committed fallback universe."
+            exit 0
+          }
 
       - name: Generate KR REAL_TEST report
         run: npm.cmd run daily-publish:kr
