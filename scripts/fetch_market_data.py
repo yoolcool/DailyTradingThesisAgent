@@ -1,4 +1,5 @@
 import json
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -11,9 +12,19 @@ DATA_DIR = ROOT / "data"
 OUTPUT_PATH = DATA_DIR / "market_data_real.json"
 NASDAQ100_FALLBACK_PATH = ROOT / "config" / "nasdaq100Fallback.json"
 NARRATIVE_STOCKS_PATH = ROOT / "config" / "narrativeStocks.json"
+BATCH_SIZE = 25
+MAX_RETRIES = 3
+RETRY_BASE_SECONDS = 2
+MIN_FRESH_OK_RATIO_TO_OVERWRITE = 0.2
+MAX_STALE_FALLBACK_DAYS = 3
 
 TICKER_ALIASES = {
     "DRAM": "DRAM",
+}
+
+STOOQ_ALIASES = {
+    "BRK.B": "brk-b.us",
+    "BRK-B": "brk-b.us",
 }
 
 
@@ -24,6 +35,10 @@ def load_json(name):
 
 def normalize_ticker(ticker):
     return TICKER_ALIASES.get(ticker, ticker)
+
+
+def stooq_symbol(ticker):
+    return STOOQ_ALIASES.get(ticker, f"{ticker.lower().replace('.', '-').replace('/', '-')}.us")
 
 
 def pct_change(current, previous):
@@ -37,9 +52,52 @@ def safe_float(value):
         return None
     return round(float(value), 4)
 
+
+def utc_now_iso():
+    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+def load_previous_market_data():
+    if not OUTPUT_PATH.exists():
+        return {}
+    try:
+        with OUTPUT_PATH.open("r", encoding="utf-8") as file:
+            data = json.load(file)
+        return data if isinstance(data, dict) else {}
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def age_days(value):
+    if not value:
+        return None
+    try:
+        date_value = datetime.fromisoformat(value[:10]).date()
+    except ValueError:
+        return None
+    return (datetime.now(timezone.utc).date() - date_value).days
+
+
+def stale_fallback_item(ticker, asset_type, previous_item, fresh_error):
+    if not previous_item or previous_item.get("dataStatus") != "ok":
+        return None
+    stale_days = age_days(previous_item.get("dataDate"))
+    if stale_days is None or stale_days > MAX_STALE_FALLBACK_DAYS:
+        return None
+    item = dict(previous_item)
+    item["ticker"] = ticker
+    item["assetType"] = asset_type
+    item["dataStatus"] = "ok"
+    item["dataFreshness"] = "STALE"
+    item["staleFallback"] = True
+    item["staleDays"] = stale_days
+    item["freshFetchStatus"] = "missing"
+    item["fallbackReason"] = fresh_error or "fresh price fetch failed"
+    item["dataSource"] = f"{previous_item.get('dataSource', 'previous')} stale fallback"
+    return item
+
+
 def summarize_history(ticker, asset_type, history):
-      if isinstance(history.columns, pd.MultiIndex):
-          history.columns = history.columns.get_level_values(-1)
       if history is None or history.empty:
           return {
               "ticker": ticker,
@@ -47,6 +105,8 @@ def summarize_history(ticker, asset_type, history):
               "dataStatus": "missing",
               "error": "empty history from yfinance",
           }
+      if isinstance(history.columns, pd.MultiIndex):
+          history.columns = history.columns.get_level_values(-1)
 
       history = history.dropna(subset=["Close"])
       if len(history) < 2:
@@ -103,6 +163,8 @@ def summarize_history(ticker, asset_type, history):
           "drawdownFrom52wHighPct": drawdown,
           "dataDate": data_date,
           "dataSource": "yfinance",
+          "dataFreshness": "FRESH",
+          "staleFallback": False,
           "dataStatus": "ok",
           "history": chart_history,
       }
@@ -110,23 +172,67 @@ def summarize_history(ticker, asset_type, history):
 
 def fetch_one(ticker, asset_type):
     yf_ticker = normalize_ticker(ticker)
+    errors = []
+    for attempt in range(1, MAX_RETRIES + 1):
+        for period in ["1y", "6mo", "3mo"]:
+            try:
+                history = yf.download(
+                    yf_ticker,
+                    period=period,
+                    interval="1d",
+                    progress=False,
+                    auto_adjust=False,
+                    threads=False,
+                )
+                result = summarize_history(ticker, asset_type, history)
+                if result.get("dataStatus") == "ok":
+                    result["fetchAttempt"] = attempt
+                    result["fetchPeriod"] = period
+                    return result
+                errors.append(result.get("error", "empty history"))
+            except Exception as exc:
+                errors.append(str(exc))
+        if attempt < MAX_RETRIES:
+            time.sleep(RETRY_BASE_SECONDS * attempt)
+    stooq_result = fetch_stooq_one(ticker, asset_type)
+    if stooq_result.get("dataStatus") == "ok":
+        stooq_result["fetchProvider"] = "stooq"
+        return stooq_result
+    errors.append(stooq_result.get("error", "stooq fallback failed"))
+    return {
+        "ticker": ticker,
+        "assetType": asset_type,
+        "dataStatus": "missing",
+        "error": "; ".join(errors[-3:]) or "fetch failed",
+    }
+
+
+def fetch_stooq_one(ticker, asset_type):
+    symbol = stooq_symbol(ticker)
+    url = f"https://stooq.com/q/d/l/?s={symbol}&i=d"
     try:
-      history = yf.download(
-          yf_ticker,
-          period="1y",
-          interval="1d",
-          progress=False,
-          auto_adjust=False,
-          threads=False,
-      )
-      return summarize_history(ticker, asset_type, history)
+        history = pd.read_csv(url)
+        if history is None or history.empty or "Date" not in history:
+            return {
+                "ticker": ticker,
+                "assetType": asset_type,
+                "dataStatus": "missing",
+                "error": "empty history from stooq",
+            }
+        history["Date"] = pd.to_datetime(history["Date"], errors="coerce")
+        history = history.dropna(subset=["Date"]).set_index("Date")
+        result = summarize_history(ticker, asset_type, history.tail(260))
+        if result.get("dataStatus") == "ok":
+            result["dataSource"] = "stooq"
+            result["fetchPeriod"] = "daily_csv"
+        return result
     except Exception as exc:
-      return {
-          "ticker": ticker,
-          "assetType": asset_type,
-          "dataStatus": "missing",
-          "error": str(exc),
-      }
+        return {
+            "ticker": ticker,
+            "assetType": asset_type,
+            "dataStatus": "missing",
+            "error": f"stooq fallback failed: {exc}",
+        }
 
 
 def ticker_history_from_batch(batch_history, yf_ticker):
@@ -143,7 +249,12 @@ def ticker_history_from_batch(batch_history, yf_ticker):
     return None
 
 
-def fetch_many(targets):
+def chunked(values, size):
+    for index in range(0, len(values), size):
+        yield values[index:index + size]
+
+
+def fetch_many_batch(targets):
     if not targets:
         return {}
     yf_symbols = [normalize_ticker(ticker) for ticker, _asset_type in targets]
@@ -170,6 +281,47 @@ def fetch_many(targets):
         for ticker, asset_type in targets:
             results[ticker] = fetch_one(ticker, asset_type)
     return results
+
+
+def fetch_many(targets):
+    results = {}
+    for batch in chunked(targets, BATCH_SIZE):
+        results.update(fetch_many_batch(batch))
+    failed = [(ticker, asset_type) for ticker, asset_type in targets if results.get(ticker, {}).get("dataStatus") != "ok"]
+    for ticker, asset_type in failed:
+        results[ticker] = fetch_one(ticker, asset_type)
+    return results
+
+
+def merge_with_previous(targets, fresh_results, previous_data):
+    previous_items = previous_data.get("items", {}) if isinstance(previous_data.get("items"), dict) else {}
+    merged = {}
+    stale_count = 0
+    expired_count = 0
+    for ticker, asset_type in targets:
+        fresh = fresh_results.get(ticker) or {
+            "ticker": ticker,
+            "assetType": asset_type,
+            "dataStatus": "missing",
+            "error": "fresh result missing",
+        }
+        if fresh.get("dataStatus") == "ok":
+            merged[ticker] = fresh
+            continue
+        fallback = stale_fallback_item(ticker, asset_type, previous_items.get(ticker), fresh.get("error"))
+        if fallback:
+            merged[ticker] = fallback
+            stale_count += 1
+        else:
+            merged[ticker] = fresh
+            if previous_items.get(ticker, {}).get("dataStatus") == "ok":
+                expired_count += 1
+    return merged, stale_count, expired_count
+
+
+def previous_ok_count(previous_data):
+    items = previous_data.get("items", {}) if isinstance(previous_data.get("items"), dict) else {}
+    return sum(1 for item in items.values() if item.get("dataStatus") == "ok")
 
 
 def load_nasdaq100_members():
@@ -217,11 +369,33 @@ def main():
             targets.append((ticker, "ETF"))
             seen.add(ticker)
 
-    results = fetch_many(targets)
+    previous_data = load_previous_market_data()
+    fresh_results = fetch_many(targets)
+    results, stale_count, expired_count = merge_with_previous(targets, fresh_results, previous_data)
+    fresh_ok = sum(1 for item in fresh_results.values() if item.get("dataStatus") == "ok")
+    ok = sum(1 for item in results.values() if item.get("dataStatus") == "ok")
+    missing = len(results) - ok
+    fresh_ok_ratio = fresh_ok / len(targets) if targets else 1
+
+    if fresh_ok_ratio < MIN_FRESH_OK_RATIO_TO_OVERWRITE and stale_count == 0 and previous_ok_count(previous_data) > 0:
+        print(
+            "Fresh fetch success ratio too low; preserving existing market_data_real.json "
+            f"(fresh_ok={fresh_ok}, total={len(targets)}, previous_ok={previous_ok_count(previous_data)})"
+        )
+        return
 
     output = {
-        "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "generatedAt": utc_now_iso(),
         "dataSource": "yfinance",
+        "fallbackPolicy": {
+            "staleFallbackEnabled": True,
+            "maxStaleFallbackDays": MAX_STALE_FALLBACK_DAYS,
+            "minFreshOkRatioToOverwrite": MIN_FRESH_OK_RATIO_TO_OVERWRITE,
+            "freshOkCount": fresh_ok,
+            "staleFallbackCount": stale_count,
+            "expiredFallbackCount": expired_count,
+            "missingCount": missing,
+        },
         "universe": {
             "stockUniverse": "NASDAQ_100",
             "stockUniverseCount": len(nasdaq100_members),
@@ -232,10 +406,8 @@ def main():
     with OUTPUT_PATH.open("w", encoding="utf-8") as file:
         json.dump(output, file, ensure_ascii=False, indent=2)
 
-    ok = sum(1 for item in results.values() if item.get("dataStatus") == "ok")
-    missing = len(results) - ok
     print(f"Wrote {OUTPUT_PATH}")
-    print(f"ok={ok} missing={missing}")
+    print(f"fresh_ok={fresh_ok} stale_fallback={stale_count} ok={ok} missing={missing}")
 
 
 if __name__ == "__main__":

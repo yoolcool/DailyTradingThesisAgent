@@ -11,10 +11,10 @@
     "screenshot-report": "node scripts/screenshot-report.js",
     "daily-check": "node src/main.js && node scripts/verify-report.js && node scripts/screenshot-report.js",
     "daily-check:win": "node src/main.js && node scripts/verify-report.js && node scripts/screenshot-report.js",
-    "daily-check:real-test": "npm.cmd run fetch-real-data && npm.cmd run daily-report:real-test && npm.cmd run verify-report && npm.cmd run screenshot-report",
+    "daily-check:real-test": "node scripts/run-fetch-real-data.js && node src/main.js --real-test && node scripts/verify-report.js && node scripts/screenshot-report.js",
     "prepare-pages": "node scripts/prepare-pages.js",
     "daily-publish": "npm.cmd run daily-check:win && npm.cmd run prepare-pages",
-    "daily-publish:real-test": "npm.cmd run daily-check:real-test && npm.cmd run prepare-pages",
+    "daily-publish:real-test": "node scripts/run-fetch-real-data.js && node src/main.js --real-test && node scripts/verify-report.js && node scripts/screenshot-report.js && node scripts/prepare-pages.js",
     "mobile-daily-routine": "node scripts/mobile-daily-routine.js",
     "narrative-review": "node scripts/narrative-review.js",
     "apply-narrative-review": "node scripts/apply-narrative-review.js"

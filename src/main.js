@@ -1174,26 +1174,32 @@ function applyActionLabelGates(rows, marketLabel) {
 
 function actionGate(row) {
   const entryQuality = Number(row.entryQualityScore ?? 0);
+  const moneyFlow = Number(row.moneyFlowScoreFinal ?? row.moneyFlowScore ?? 0);
   const exhaustion = Number(row.exhaustionRisk ?? 0);
   const rvol = Number(row.market?.relativeVolume ?? 0);
   const liquidity = row.liquiditySummary || {};
   const lowLiquidity = ["LOW", "LOW_LIQUIDITY", "UNKNOWN"].includes(liquidity.liquiditySignal);
+  const strongMoneyFlowRescue = moneyFlow >= 85 && row.reasonConfidence !== "LOW" && rvol >= 0.9 && exhaustion < 70;
   const reasons = [];
   let label = "제외";
   let status = STATUS.BAN;
 
-  if (entryQuality >= 75) {
+  if (entryQuality >= 70) {
     label = "진입 가능";
     status = STATUS.ENTRY_READY;
-  } else if (entryQuality >= 60) {
+  } else if (entryQuality >= 55) {
     label = "조건부 진입";
     status = STATUS.ENTRY_CANDIDATE;
-  } else if (entryQuality >= 45) {
+  } else if (entryQuality >= 40) {
     label = "관찰";
     status = STATUS.WATCH;
+  } else if (strongMoneyFlowRescue) {
+    label = "강한 자금흐름 조건부";
+    status = STATUS.ENTRY_CANDIDATE;
+    reasons.push(`Entry Quality ${entryQuality} < 40, but moneyFlow ${moneyFlow} and confidence ${row.reasonConfidence} support conditional watch`);
   }
 
-  if (entryQuality < 45) reasons.push(`Entry Quality ${entryQuality} < 45`);
+  if (entryQuality < 40 && !strongMoneyFlowRescue) reasons.push(`Entry Quality ${entryQuality} < 40`);
   if (exhaustion >= 70) {
     label = "추격 금지";
     status = STATUS.WATCH;
@@ -2133,7 +2139,7 @@ function createBaseSupplementalData(rawStocks, rawEtfs, marketData) {
   return {
     byTicker,
     connectionStatus: {
-      priceVolume: marketData?.items && Object.values(marketData.items).some((item) => item.dataStatus === "ok") ? "CONNECTED" : "FAILED",
+      priceVolume: priceVolumeStatus(marketData),
       news: "DISABLED",
       etfBreadth: "DISABLED",
       liquidity: aggregateStatus(tickers.map((ticker) => byTicker[ticker]?.liquidity?.status)),
@@ -2307,6 +2313,7 @@ function snapshotItem(row) {
     assetType: row.assetType,
     name: row.name,
     actionLabel: row.todayActionLabel,
+    status: row.status,
     moneyFlowScore: row.moneyFlowScore,
     moneyFlowScoreInitial: row.moneyFlowScoreInitial,
     moneyFlowScoreFinal: row.moneyFlowScoreFinal,
@@ -2321,6 +2328,15 @@ function snapshotItem(row) {
     reasonConfidenceExplanation: row.reasonConfidenceExplanation,
     directCatalyst: row.directCatalyst,
     tieBreakerReason: row.tieBreakerReason,
+    entryQualityScore: row.entryQualityScore,
+    entryQualityLabel: row.entryQualityLabel,
+    trendStrengthIndex: row.trendStrengthIndex,
+    trendStateLabel: row.trendStateLabel,
+    trendDecisionLine: row.trendDecisionLine,
+    exhaustionRisk: row.exhaustionRisk,
+    exhaustionRiskLabel: row.exhaustionRiskLabel,
+    relativeVolume: row.market?.relativeVolume ?? null,
+    marketDataStatus: row.market?.dataStatus || "missing",
     entryCondition: row.entryCondition,
     invalidationCondition: row.invalidationCondition,
     actionGate: row.actionGate,
@@ -2726,7 +2742,7 @@ async function collectSupplementalData(rawWatchlist, rawHoldings, rawEtfs, marke
   }
 
   const connectionStatus = {
-    priceVolume: marketData?.items && Object.values(marketData.items).some((item) => item.dataStatus === "ok") ? "CONNECTED" : "FAILED",
+    priceVolume: priceVolumeStatus(marketData),
     news: aggregateStatus(newsRows.map((row) => row.status)),
     newsSources: aggregateNewsSourceStatuses(newsRows),
     etfBreadth: aggregateStatus(etfTickers.map((ticker) => byTicker[ticker]?.etfBreadth?.status)),
@@ -2735,6 +2751,15 @@ async function collectSupplementalData(rawWatchlist, rawHoldings, rawEtfs, marke
     notes: supplementalNotes(byTicker)
   };
   return { byTicker, connectionStatus };
+}
+
+function priceVolumeStatus(marketData) {
+  const items = Object.values(marketData?.items || {});
+  const okItems = items.filter((item) => item.dataStatus === "ok");
+  if (!okItems.length) return "FAILED";
+  const staleCount = okItems.filter((item) => item.staleFallback).length;
+  const missingCount = items.length - okItems.length;
+  return staleCount > 0 || missingCount > 0 ? "PARTIAL" : "CONNECTED";
 }
 
 function supplementalNotes(byTicker) {
@@ -2766,6 +2791,7 @@ function aggregateNewsSourceStatuses(newsRows) {
 
 function buildDataReliability(marketData, supplementalData, generatedAtDate) {
   const marketItems = Object.values(marketData?.items || {}).filter((item) => item.dataStatus === "ok");
+  const stalePriceCount = marketItems.filter((item) => item.staleFallback).length;
   const priceDates = marketItems.map((item) => item.dataDate).filter(Boolean).sort();
   const rows = Object.values(supplementalData?.byTicker || {});
   const newsRows = rows.map((row) => row.news).filter(Boolean);
@@ -2815,12 +2841,17 @@ function buildDataReliability(marketData, supplementalData, generatedAtDate) {
         ? "MEDIUM"
         : "LOW";
   const reliabilityNotes = [
+    stalePriceCount > 0 ? `가격/거래량 stale fallback ${stalePriceCount}개 사용` : null,
     maxBreadthSample < 5 ? "테마 확산 판단 제한" : null,
     lowLiquidityCount > 0 ? "거래대금 유동성 낮음 또는 확인 불가" : null,
     prePostMarketStatus === "UNAVAILABLE" ? "프리/애프터마켓 확인 불가" : null
   ].filter(Boolean);
   return {
     priceVolumeStatus: supplementalData?.connectionStatus?.priceVolume || "FAILED",
+    priceVolumeFreshOkCount: marketData?.fallbackPolicy?.freshOkCount,
+    priceVolumeStaleFallbackCount: marketData?.fallbackPolicy?.staleFallbackCount || stalePriceCount,
+    priceVolumeExpiredFallbackCount: marketData?.fallbackPolicy?.expiredFallbackCount,
+    priceVolumeMissingCount: marketData?.fallbackPolicy?.missingCount,
     priceAsOfDate: priceDates.at(-1) || "데이터 없음",
     priceAsOfLabel: priceDates.at(-1) ? `${priceDates.at(-1)} US regular close` : "데이터 없음",
     reportGeneratedAtKST: new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Seoul", dateStyle: "short", timeStyle: "short" }).format(generatedAtDate),
@@ -2882,7 +2913,7 @@ function buildActionGateSummary(rows) {
   const counts = {
     rvolBelowOne: validRows.filter((row) => Number(row.market?.relativeVolume ?? 0) < 1).length,
     lowLiquidity: validRows.filter((row) => ["LOW", "UNKNOWN", "LOW_LIQUIDITY"].includes(row.liquiditySummary?.liquiditySignal)).length,
-    entryQualityBelow60: validRows.filter((row) => Number(row.entryQualityScore ?? 0) < 60).length,
+    entryQualityBelow55: validRows.filter((row) => Number(row.entryQualityScore ?? 0) < 55).length,
     exhaustionHigh: validRows.filter((row) => Number(row.exhaustionRisk ?? 0) >= 70).length,
     etfBreadthSmallSample: validRows.filter((row) => row.assetType === "ETF" && Number(row.etfBreadthSummary?.sampledHoldingsCount || 0) < 5).length,
     weakNewsDirectness: validRows.filter((row) => Number(row.newsSummary?.directnessScore || 0) < 2).length
@@ -2892,7 +2923,7 @@ function buildActionGateSummary(rows) {
     items: [
       { label: "RVOL < 1.00x", count: counts.rvolBelowOne },
       { label: "거래대금 유동성 낮음", count: counts.lowLiquidity },
-      { label: "Entry Quality < 60", count: counts.entryQualityBelow60 },
+      { label: "Entry Quality < 55", count: counts.entryQualityBelow55 },
       { label: "Exhaustion Risk >= 70", count: counts.exhaustionHigh },
       { label: "ETF breadth 샘플 부족", count: counts.etfBreadthSmallSample },
       { label: "뉴스 직접성 부족", count: counts.weakNewsDirectness }
@@ -2901,7 +2932,7 @@ function buildActionGateSummary(rows) {
       "거래대금 유동성 낮음": counts.lowLiquidity,
       "ETF breadth 샘플 부족": counts.etfBreadthSmallSample,
       "RVOL 미달": counts.rvolBelowOne,
-      "Entry Quality 부족": counts.entryQualityBelow60,
+      "Entry Quality 부족": counts.entryQualityBelow55,
       "뉴스 직접성 부족": counts.weakNewsDirectness,
       "과열 위험": counts.exhaustionHigh
     }).filter(([, count]) => count > 0).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([label]) => label)
@@ -2910,12 +2941,15 @@ function buildActionGateSummary(rows) {
 
 function buildTodayDecision({ actionCandidates, etfActionCandidates, stockActionCandidates, stocks, etfs, dataReliability, actionGateSummary }) {
   const rows = [...stocks, ...etfs].filter((row) => row?.market?.dataStatus === "ok");
+  const screeningUnavailable = rows.length === 0 || dataReliability?.priceVolumeStatus === "FAILED";
   const entryReadyCount = [...etfActionCandidates, ...stockActionCandidates].filter((row) => row.status === STATUS.ENTRY_READY).length;
   const conditionalCount = [...etfActionCandidates, ...stockActionCandidates].filter((row) => row.status === STATUS.ENTRY_CANDIDATE).length;
   const watchCount = rows.filter((row) => row.status === STATUS.WATCH).length;
   const banCount = rows.filter((row) => row.status === STATUS.BAN).length;
   const banMajority = rows.length > 0 && banCount / rows.length >= 0.5;
-  const label = dataReliability?.grade === "LOW" && banMajority
+  const label = screeningUnavailable
+    ? "데이터 수집 실패 / 판단 보류"
+    : dataReliability?.grade === "LOW" && banMajority
     ? "매매 보류"
     : entryReadyCount > 0
       ? "선별 진입 가능"
@@ -2929,11 +2963,14 @@ function buildTodayDecision({ actionCandidates, etfActionCandidates, stockAction
     : dataReliability?.executionReliability === "MEDIUM"
       ? "지정가 권장 / 시장가 주의"
       : "시장가 금지 / 지정가 또는 관찰";
-  const noTradeMessage = actionCandidates.length
+  const noTradeMessage = screeningUnavailable
+    ? "가격/거래량 수집 실패로 오늘 스크리닝 대상이 없다. 왜 돈이 몰리는가를 검증할 가격/거래량 근거가 비어 있어 후보 0개가 아니라 판단 불가 상태이므로, 데이터 재수집 전까지 신규 추격은 보류한다."
+    : actionCandidates.length
     ? "진입 후보는 있으나, 전일 고점 돌파와 거래량 확인 후 선별적으로 접근한다."
     : "오늘은 추세 후보는 있으나, 왜 돈이 몰리는가와 누가 더 비싸게 사줄 수 있는가를 주문 실행 신뢰도와 거래량이 충분히 뒷받침하지 못해 신규 추격은 보류한다. 기존 관심 종목은 전일 고점 돌파와 RVOL 1.00x 회복을 확인한 뒤 조건부로 본다.";
   return {
     label,
+    screeningUnavailable,
     entryReadyCount,
     conditionalCount,
     watchCount,
@@ -3191,19 +3228,23 @@ function renderDataReliabilityMarkdown(report) {
 
 function renderTodayDecisionMarkdown(report) {
   const d = report.todayDecision || {};
+  const gateSummary = report.actionGateSummary || {};
+  const gateSummaryMarkdown = d.screeningUnavailable || gateSummary.total === 0
+    ? "- 평가 대상 없음: 가격/거래량 수집 실패 또는 유효 데이터 없음"
+    : (gateSummary.items || []).map((item) => `- ${item.label}: ${item.count}개`).join("\n") || "- 집계 데이터 없음";
   return `## 오늘 결론
 
 - 오늘 결론: ${d.label || "매매 보류"}
 - 신규 진입 후보: ${d.entryReadyCount ?? 0}개
 - 조건부 진입 후보: ${d.conditionalCount ?? 0}개
 - 관찰 후보: ${d.watchCount ?? 0}개
-- 주요 제한 요인: ${(d.mainLimiters || []).join(", ") || "특이 제한 없음"}
+- 주요 제한 요인: ${d.screeningUnavailable ? "평가 대상 없음" : (d.mainLimiters || []).join(", ") || "특이 제한 없음"}
 - 주문 판단: ${d.orderDecision || "시장가 금지 / 지정가 또는 관찰"}
 - 실전 판단: ${d.noTradeMessage || "후보 조건이 충분히 충족될 때까지 관찰한다."}
 
 ### 후보 제한 요인 집계
 
-${(report.actionGateSummary?.items || []).map((item) => `- ${item.label}: ${item.count}개`).join("\n") || "- 집계 데이터 없음"}`;
+${gateSummaryMarkdown}`;
 }
 
 function renderActionMarkdown(row) {
@@ -4243,6 +4284,10 @@ function renderStickyNavHtml() {
 
 function renderTodayDecisionHtml(report) {
   const d = report.todayDecision || {};
+  const gateSummary = report.actionGateSummary || {};
+  const gateSummaryHtml = d.screeningUnavailable || gateSummary.total === 0
+    ? "<span class=\"limiter-pill\">평가 대상 없음: 가격/거래량 수집 실패 또는 유효 데이터 없음</span>"
+    : (gateSummary.items || []).map((item) => `<span class="limiter-pill">${escapeHtml(item.label)}: ${item.count}개</span>`).join("") || "<span class=\"limiter-pill\">집계 데이터 없음</span>";
   return `<section id="decision" class="decision-panel" data-today-decision>
     <h2>오늘 결론</h2>
     <p><span class="decision-label">${escapeHtml(d.label || "매매 보류")}</span></p>
@@ -4252,12 +4297,12 @@ function renderTodayDecisionHtml(report) {
       ${tile("관찰 후보", `${d.watchCount ?? 0}개`)}
       ${tile("오늘 행동 후보", `${d.actionCandidateCount ?? 0}개`)}
       ${tile("주문 판단", d.orderDecision || "시장가 금지 / 지정가 또는 관찰")}
-      ${tile("주요 제한 요인", (d.mainLimiters || []).join(", ") || "특이 제한 없음")}
+      ${tile("주요 제한 요인", d.screeningUnavailable ? "평가 대상 없음" : (d.mainLimiters || []).join(", ") || "특이 제한 없음")}
     </div>
     <p><strong>실전 판단:</strong> ${escapeHtml(d.noTradeMessage || "후보 조건이 충분히 충족될 때까지 관찰한다.")}</p>
     <div data-action-gate-summary>
       <h3>후보 제한 요인 집계</h3>
-      <div class="limiter-list">${(report.actionGateSummary?.items || []).map((item) => `<span class="limiter-pill">${escapeHtml(item.label)}: ${item.count}개</span>`).join("") || "<span class=\"limiter-pill\">집계 데이터 없음</span>"}</div>
+      <div class="limiter-list">${gateSummaryHtml}</div>
     </div>
   </section>`;
 }

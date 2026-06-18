@@ -24,7 +24,19 @@ function capture(command, args) {
 }
 
 function main() {
-  let status = run("npm.cmd", ["run", "daily-publish:real-test"]);
+  let status = run("node", ["scripts/run-fetch-real-data.js"]);
+  if (status !== 0) process.exit(status);
+
+  status = run("node", ["src/main.js", "--real-test"]);
+  if (status !== 0) process.exit(status);
+
+  status = run("node", ["scripts/verify-report.js"]);
+  if (status !== 0) process.exit(status);
+
+  status = run("node", ["scripts/screenshot-report.js"]);
+  if (status !== 0) process.exit(status);
+
+  status = run("node", ["scripts/prepare-pages.js"]);
   if (status !== 0) process.exit(status);
 
   status = run("git", ["add", "data/market_data_real.json", "reports", "docs"]);
