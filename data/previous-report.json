@@ -1,6 +1,6 @@
 {
   "reportDate": "2026-06-18",
-  "generatedAt": "2026년 6월 18일 목요일 PM 12:39",
+  "generatedAt": "2026년 6월 18일 목요일 오후 1:04",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -43,7 +43,7 @@
         "moneyFlowScoreInitial": 98,
         "moneyFlowScoreFinal": 100,
         "finalRawScore": 117,
-        "todayActionLabel": "관찰",
+        "todayActionLabel": "강한 자금흐름 조건부",
         "reasonConfidence": "HIGH",
         "oneDayReturn": 4.35,
         "fiveDayReturn": 19.3,
@@ -88,7 +88,7 @@
         "moneyFlowScoreInitial": 87,
         "moneyFlowScoreFinal": 100,
         "finalRawScore": 112,
-        "todayActionLabel": "관찰",
+        "todayActionLabel": "조건부 진입",
         "reasonConfidence": "HIGH",
         "oneDayReturn": 3.54,
         "fiveDayReturn": 7.71,
@@ -112,7 +112,7 @@
         "moneyFlowScoreInitial": 85,
         "moneyFlowScoreFinal": 100,
         "finalRawScore": 110,
-        "todayActionLabel": "관찰",
+        "todayActionLabel": "조건부 진입",
         "reasonConfidence": "HIGH",
         "oneDayReturn": 1.31,
         "fiveDayReturn": 16.28,
@@ -136,7 +136,7 @@
         "moneyFlowScoreInitial": 83,
         "moneyFlowScoreFinal": 91,
         "finalRawScore": 91,
-        "todayActionLabel": "관찰",
+        "todayActionLabel": "조건부 진입",
         "reasonConfidence": "HIGH",
         "oneDayReturn": -1.55,
         "fiveDayReturn": 11.24,
@@ -157,7 +157,7 @@
         "moneyFlowScoreInitial": 77,
         "moneyFlowScoreFinal": 100,
         "finalRawScore": 102,
-        "todayActionLabel": "관찰",
+        "todayActionLabel": "조건부 진입",
         "reasonConfidence": "HIGH",
         "oneDayReturn": 0.59,
         "fiveDayReturn": 11.78,
@@ -274,7 +274,7 @@
         "moneyFlowScoreInitial": 67,
         "moneyFlowScoreFinal": 85,
         "finalRawScore": 85,
-        "todayActionLabel": "관찰",
+        "todayActionLabel": "강한 자금흐름 조건부",
         "reasonConfidence": "HIGH",
         "oneDayReturn": 3.11,
         "fiveDayReturn": 8.55,
@@ -3225,16 +3225,246 @@
       "stockRelativeVolumeAvg": 1
     }
   ],
-  "etfActionCandidates": [],
-  "stockActionCandidates": [],
-  "actionCandidates": [],
-  "darkHorseCandidates": [
+  "etfActionCandidates": [
+    {
+      "ticker": "SOXQ",
+      "assetType": "ETF",
+      "name": "Invesco PHLX Semiconductor ETF",
+      "actionLabel": "조건부 진입",
+      "status": "진입 후보",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 87,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 101,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 101 capped to displayed score 100",
+      "formulaText": "+87 + +12 + 0 + +2 + 0 + 0 + 0 = 101 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Google Gemini co-lead Noam Shazeer leaves for OpenAI",
+      "tieBreakerReason": "최종 원점수 101, 리스크 패널티 0, 5일 수익률 +10.46%, 상대 거래량 1.50배 순으로 정렬",
+      "entryQualityScore": 52,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 79,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 38,
+      "exhaustionRiskLabel": "보통",
+      "relativeVolume": 1.5,
+      "marketDataStatus": "ok",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "조건부 진입",
+        "status": "진입 후보",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "제한적",
+        "reason": "특이 충돌 없음"
+      },
+      "linkedNarrative": "반도체 장비 사이클 재평가",
+      "narrativeStatus": "부상",
+      "narrativeScore": 94,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 106.13,
+      "recommendationDate": "2026-06-17"
+    }
+  ],
+  "stockActionCandidates": [
+    {
+      "ticker": "LRCX",
+      "assetType": "STOCK",
+      "name": "Lam Research Corporation",
+      "actionLabel": "조건부 진입",
+      "status": "진입 후보",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 85,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 110,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 110 capped to displayed score 100",
+      "formulaText": "+85 + +12 + 0 + +5 + +8 + 0 + 0 = 110 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why",
+      "tieBreakerReason": "최종 원점수 110, 리스크 패널티 0, 5일 수익률 +16.28%, 상대 거래량 1.03배 순으로 정렬",
+      "entryQualityScore": 53,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 79,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 38,
+      "exhaustionRiskLabel": "보통",
+      "relativeVolume": 1.03,
+      "marketDataStatus": "ok",
+      "entryCondition": "20일선 위 눌림 후 재상승 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "조건부 진입",
+        "status": "진입 후보",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "제한적",
+        "reason": "특이 충돌 없음"
+      },
+      "linkedNarrative": "반도체 장비 사이클 재평가",
+      "narrativeStatus": "부상",
+      "narrativeScore": 94,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 374.18,
+      "recommendationDate": "2026-06-17"
+    },
+    {
+      "ticker": "KLAC",
+      "assetType": "STOCK",
+      "name": "KLA Corporation",
+      "actionLabel": "조건부 진입",
+      "status": "진입 후보",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 77,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 102,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 102 capped to displayed score 100",
+      "formulaText": "+77 + +12 + 0 + +5 + +8 + 0 + 0 = 102 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - KLA Corporation (KLAC) Price Target Raised by $500. Here is Why 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - KLA Corporation (KLAC) Price Target Raised by $500. Here is Why",
+      "tieBreakerReason": "최종 원점수 102, 리스크 패널티 0, 5일 수익률 +11.78%, 상대 거래량 1.11배 순으로 정렬",
+      "entryQualityScore": 53,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 79,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 38,
+      "exhaustionRiskLabel": "보통",
+      "relativeVolume": 1.11,
+      "marketDataStatus": "ok",
+      "entryCondition": "20일선 위 눌림 후 재상승 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "조건부 진입",
+        "status": "진입 후보",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "제한적",
+        "reason": "특이 충돌 없음"
+      },
+      "linkedNarrative": "반도체 장비 사이클 재평가",
+      "narrativeStatus": "부상",
+      "narrativeScore": 94,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 238.73,
+      "recommendationDate": "2026-06-17"
+    },
+    {
+      "ticker": "ASML",
+      "assetType": "STOCK",
+      "name": "ASML Holding N.V.",
+      "actionLabel": "조건부 진입",
+      "status": "진입 후보",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 87,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 112,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 112 capped to displayed score 100",
+      "formulaText": "+87 + +12 + 0 + +5 + +8 + 0 + 0 = 112 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Applied Materials, ASML, Lam Hit Record Highs, Lead Chip Gear Stocks Rally 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Applied Materials, ASML, Lam Hit Record Highs, Lead Chip Gear Stocks Rally",
+      "tieBreakerReason": "최종 원점수 112, 리스크 패널티 0, 5일 수익률 +7.71%, 상대 거래량 1.19배 순으로 정렬",
+      "entryQualityScore": 51,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 79,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 38,
+      "exhaustionRiskLabel": "보통",
+      "relativeVolume": 1.19,
+      "marketDataStatus": "ok",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "조건부 진입",
+        "status": "진입 후보",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "제한적",
+        "reason": "고점 근처 추격 리스크"
+      },
+      "linkedNarrative": "반도체 장비 사이클 재평가",
+      "narrativeStatus": "부상",
+      "narrativeScore": 94,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 1867.83,
+      "recommendationDate": "2026-06-17"
+    },
     {
       "ticker": "FCX",
       "assetType": "STOCK",
       "name": "Freeport-McMoRan",
-      "actionLabel": "관찰",
-      "status": "관찰",
+      "actionLabel": "조건부 진입",
+      "status": "진입 후보",
       "moneyFlowScore": 91,
       "moneyFlowScoreInitial": 83,
       "moneyFlowScoreFinal": 91,
@@ -3267,13 +3497,13 @@
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
       "actionGate": {
-        "label": "관찰",
-        "status": "관찰",
+        "label": "조건부 진입",
+        "status": "진입 후보",
         "reasons": []
       },
       "marketContext": {
         "marketRegime": "중립",
-        "candidateEnvironment": "관찰",
+        "candidateEnvironment": "제한적",
         "reason": "후보는 당일 음봉 또는 약세"
       },
       "linkedNarrative": "전력망/원전/인프라 병목",
@@ -3283,311 +3513,14 @@
         "QQQ"
       ],
       "closePriceAtRecommendation": 69.06,
-      "recommendationDate": "2026-06-17",
-      "darkHorseRank": 1,
-      "darkHorseScore": 79,
-      "darkHorseLabel": "다크호스 후보",
-      "darkHorseStage": "초기 반전",
-      "darkHorseConfidence": "LOW",
-      "darkHorseReason": "FCX는 전력망/원전/인프라 병목 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 돌파 대기 상태이고, RVOL 1.25x로 거래량 확인은 충분하다. Exhaustion Risk 13로 아직 메인 후보 대비 과열 상한 안에 있다.",
-      "darkHorseConfirmCondition": "최근 15거래일 고점 $72.09 돌파, MA5 위 종가 유지, 관련 ETF 동반 강세",
-      "darkHorseInvalidationCondition": "MA20 $66.08 종가 이탈, 최근 스윙 저점 $61.73 이탈, RVOL 0.80x 이하 둔화",
-      "darkHorseWhyNotMain": "Entry Quality 53 < 60, 최근 고점 돌파 확인 전",
-      "darkHorseBreakdown": {
-        "narrativeAlignmentScore": 13,
-        "earlyTrendStructureScore": 30,
-        "baseBreakoutScore": 7,
-        "volumeConfirmationScore": 14,
-        "lowExhaustionScore": 10,
-        "liquidityRiskScore": 5,
-        "riskPenalty": 0,
-        "rawScore": 79
-      }
-    },
-    {
-      "ticker": "ASML",
-      "assetType": "STOCK",
-      "name": "ASML Holding N.V.",
-      "actionLabel": "관찰",
-      "status": "관찰",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 87,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 112,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 112 capped to displayed score 100",
-      "formulaText": "+87 + +12 + 0 + +5 + +8 + 0 + 0 = 112 -> 100",
-      "riskPenalty": 0,
-      "riskPenaltySummary": {
-        "totalPenalty": 0,
-        "riskLevel": "LOW",
-        "items": [],
-        "watchItems": [],
-        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-      },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Applied Materials, ASML, Lam Hit Record Highs, Lead Chip Gear Stocks Rally 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Applied Materials, ASML, Lam Hit Record Highs, Lead Chip Gear Stocks Rally",
-      "tieBreakerReason": "최종 원점수 112, 리스크 패널티 0, 5일 수익률 +7.71%, 상대 거래량 1.19배 순으로 정렬",
-      "entryQualityScore": 51,
-      "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 79,
-      "trendStateLabel": "부상",
-      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-      "exhaustionRisk": 38,
-      "exhaustionRiskLabel": "보통",
-      "relativeVolume": 1.19,
-      "marketDataStatus": "ok",
-      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "actionGate": {
-        "label": "관찰",
-        "status": "관찰",
-        "reasons": []
-      },
-      "marketContext": {
-        "marketRegime": "중립",
-        "candidateEnvironment": "관찰",
-        "reason": "고점 근처 추격 리스크"
-      },
-      "linkedNarrative": "반도체 장비 사이클 재평가",
-      "narrativeStatus": "부상",
-      "narrativeScore": 94,
-      "relatedEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ",
-        "AIQ"
-      ],
-      "closePriceAtRecommendation": 1867.83,
-      "recommendationDate": "2026-06-17",
-      "darkHorseRank": 2,
-      "darkHorseScore": 76,
-      "darkHorseLabel": "다크호스 후보",
-      "darkHorseStage": "베이스 돌파 직전",
-      "darkHorseConfidence": "MEDIUM",
-      "darkHorseReason": "ASML는 반도체 장비 사이클 재평가 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 상단 돌파 직전 상태이고, RVOL 1.19x로 거래량 확인은 보통 수준이다. Exhaustion Risk 38로 아직 메인 후보 대비 과열 상한 안에 있다.",
-      "darkHorseConfirmCondition": "최근 15거래일 고점 $1,913.70 돌파, RVOL 1.20x 이상 재증가, MA5 위 종가 유지, 관련 ETF 동반 강세",
-      "darkHorseInvalidationCondition": "MA20 $1,713.57 종가 이탈, 최근 스윙 저점 $1,638.38 이탈, RVOL 0.80x 이하 둔화",
-      "darkHorseWhyNotMain": "Entry Quality 51 < 60, RVOL 1.19x < 1.20x, 최근 고점 돌파 확인 전",
-      "darkHorseBreakdown": {
-        "narrativeAlignmentScore": 20,
-        "earlyTrendStructureScore": 24,
-        "baseBreakoutScore": 10,
-        "volumeConfirmationScore": 11,
-        "lowExhaustionScore": 6,
-        "liquidityRiskScore": 5,
-        "riskPenalty": 0,
-        "rawScore": 76
-      }
-    },
-    {
-      "ticker": "LRCX",
-      "assetType": "STOCK",
-      "name": "Lam Research Corporation",
-      "actionLabel": "관찰",
-      "status": "관찰",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 85,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 110,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 110 capped to displayed score 100",
-      "formulaText": "+85 + +12 + 0 + +5 + +8 + 0 + 0 = 110 -> 100",
-      "riskPenalty": 0,
-      "riskPenaltySummary": {
-        "totalPenalty": 0,
-        "riskLevel": "LOW",
-        "items": [],
-        "watchItems": [],
-        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-      },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why",
-      "tieBreakerReason": "최종 원점수 110, 리스크 패널티 0, 5일 수익률 +16.28%, 상대 거래량 1.03배 순으로 정렬",
-      "entryQualityScore": 53,
-      "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 79,
-      "trendStateLabel": "부상",
-      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-      "exhaustionRisk": 38,
-      "exhaustionRiskLabel": "보통",
-      "relativeVolume": 1.03,
-      "marketDataStatus": "ok",
-      "entryCondition": "20일선 위 눌림 후 재상승 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "actionGate": {
-        "label": "관찰",
-        "status": "관찰",
-        "reasons": []
-      },
-      "marketContext": {
-        "marketRegime": "중립",
-        "candidateEnvironment": "관찰",
-        "reason": "특이 충돌 없음"
-      },
-      "linkedNarrative": "반도체 장비 사이클 재평가",
-      "narrativeStatus": "부상",
-      "narrativeScore": 94,
-      "relatedEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ",
-        "AIQ"
-      ],
-      "closePriceAtRecommendation": 374.18,
-      "recommendationDate": "2026-06-17",
-      "darkHorseRank": 3,
-      "darkHorseScore": 66,
-      "darkHorseLabel": "관찰 후보",
-      "darkHorseStage": "첫 눌림 대기",
-      "darkHorseConfidence": "LOW",
-      "darkHorseReason": "LRCX는 반도체 장비 사이클 재평가 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 돌파 대기 상태이고, RVOL 1.03x로 거래량 확인은 보통 수준이다. Exhaustion Risk 38로 아직 메인 후보 대비 과열 상한 안에 있다.",
-      "darkHorseConfirmCondition": "최근 15거래일 고점 $393.07 돌파, RVOL 1.20x 이상 재증가, MA5 위 종가 유지, 관련 ETF 동반 강세",
-      "darkHorseInvalidationCondition": "MA20 $332.38 종가 이탈, 최근 스윙 저점 $302.74 이탈, RVOL 0.80x 이하 둔화",
-      "darkHorseWhyNotMain": "Entry Quality 53 < 60, RVOL 1.03x < 1.20x, 최근 고점 돌파 확인 전",
-      "darkHorseBreakdown": {
-        "narrativeAlignmentScore": 20,
-        "earlyTrendStructureScore": 24,
-        "baseBreakoutScore": 3,
-        "volumeConfirmationScore": 11,
-        "lowExhaustionScore": 3,
-        "liquidityRiskScore": 5,
-        "riskPenalty": 0,
-        "rawScore": 66
-      }
-    }
-  ],
-  "stockEntryCandidates": [],
-  "stockPullbackCandidates": [],
-  "stockWatchCandidates": [
-    {
-      "ticker": "ASML",
-      "assetType": "STOCK",
-      "name": "ASML Holding N.V.",
-      "actionLabel": "관찰",
-      "status": "관찰",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 87,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 112,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 112 capped to displayed score 100",
-      "formulaText": "+87 + +12 + 0 + +5 + +8 + 0 + 0 = 112 -> 100",
-      "riskPenalty": 0,
-      "riskPenaltySummary": {
-        "totalPenalty": 0,
-        "riskLevel": "LOW",
-        "items": [],
-        "watchItems": [],
-        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-      },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Applied Materials, ASML, Lam Hit Record Highs, Lead Chip Gear Stocks Rally 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Applied Materials, ASML, Lam Hit Record Highs, Lead Chip Gear Stocks Rally",
-      "tieBreakerReason": "최종 원점수 112, 리스크 패널티 0, 5일 수익률 +7.71%, 상대 거래량 1.19배 순으로 정렬",
-      "entryQualityScore": 51,
-      "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 79,
-      "trendStateLabel": "부상",
-      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-      "exhaustionRisk": 38,
-      "exhaustionRiskLabel": "보통",
-      "relativeVolume": 1.19,
-      "marketDataStatus": "ok",
-      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "actionGate": {
-        "label": "관찰",
-        "status": "관찰",
-        "reasons": []
-      },
-      "marketContext": {
-        "marketRegime": "중립",
-        "candidateEnvironment": "관찰",
-        "reason": "고점 근처 추격 리스크"
-      },
-      "linkedNarrative": "반도체 장비 사이클 재평가",
-      "narrativeStatus": "부상",
-      "narrativeScore": 94,
-      "relatedEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ",
-        "AIQ"
-      ],
-      "closePriceAtRecommendation": 1867.83,
-      "recommendationDate": "2026-06-17"
-    },
-    {
-      "ticker": "LRCX",
-      "assetType": "STOCK",
-      "name": "Lam Research Corporation",
-      "actionLabel": "관찰",
-      "status": "관찰",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 85,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 110,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 110 capped to displayed score 100",
-      "formulaText": "+85 + +12 + 0 + +5 + +8 + 0 + 0 = 110 -> 100",
-      "riskPenalty": 0,
-      "riskPenaltySummary": {
-        "totalPenalty": 0,
-        "riskLevel": "LOW",
-        "items": [],
-        "watchItems": [],
-        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-      },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why",
-      "tieBreakerReason": "최종 원점수 110, 리스크 패널티 0, 5일 수익률 +16.28%, 상대 거래량 1.03배 순으로 정렬",
-      "entryQualityScore": 53,
-      "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 79,
-      "trendStateLabel": "부상",
-      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-      "exhaustionRisk": 38,
-      "exhaustionRiskLabel": "보통",
-      "relativeVolume": 1.03,
-      "marketDataStatus": "ok",
-      "entryCondition": "20일선 위 눌림 후 재상승 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "actionGate": {
-        "label": "관찰",
-        "status": "관찰",
-        "reasons": []
-      },
-      "marketContext": {
-        "marketRegime": "중립",
-        "candidateEnvironment": "관찰",
-        "reason": "특이 충돌 없음"
-      },
-      "linkedNarrative": "반도체 장비 사이클 재평가",
-      "narrativeStatus": "부상",
-      "narrativeScore": 94,
-      "relatedEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ",
-        "AIQ"
-      ],
-      "closePriceAtRecommendation": 374.18,
       "recommendationDate": "2026-06-17"
     },
     {
       "ticker": "AMAT",
       "assetType": "STOCK",
       "name": "Applied Materials Inc.",
-      "actionLabel": "관찰",
-      "status": "관찰",
+      "actionLabel": "강한 자금흐름 조건부",
+      "status": "진입 후보",
       "moneyFlowScore": 100,
       "moneyFlowScoreInitial": 98,
       "moneyFlowScoreFinal": 100,
@@ -3628,14 +3561,16 @@
       "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
       "actionGate": {
-        "label": "관찰",
-        "status": "관찰",
-        "reasons": []
+        "label": "강한 자금흐름 조건부",
+        "status": "진입 후보",
+        "reasons": [
+          "Entry Quality 48 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+        ]
       },
       "marketContext": {
         "marketRegime": "중립",
-        "candidateEnvironment": "관찰",
-        "reason": "고점 근처 추격 리스크"
+        "candidateEnvironment": "제한적",
+        "reason": "고점 근처 추격 리스크 / Entry Quality 48 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
       },
       "linkedNarrative": "반도체 장비 사이클 재평가",
       "narrativeStatus": "부상",
@@ -3648,13 +3583,74 @@
       ],
       "closePriceAtRecommendation": 592.92,
       "recommendationDate": "2026-06-17"
+    }
+  ],
+  "actionCandidates": [
+    {
+      "ticker": "LRCX",
+      "assetType": "STOCK",
+      "name": "Lam Research Corporation",
+      "actionLabel": "조건부 진입",
+      "status": "진입 후보",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 85,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 110,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 110 capped to displayed score 100",
+      "formulaText": "+85 + +12 + 0 + +5 + +8 + 0 + 0 = 110 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why",
+      "tieBreakerReason": "최종 원점수 110, 리스크 패널티 0, 5일 수익률 +16.28%, 상대 거래량 1.03배 순으로 정렬",
+      "entryQualityScore": 53,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 79,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 38,
+      "exhaustionRiskLabel": "보통",
+      "relativeVolume": 1.03,
+      "marketDataStatus": "ok",
+      "entryCondition": "20일선 위 눌림 후 재상승 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "조건부 진입",
+        "status": "진입 후보",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "제한적",
+        "reason": "특이 충돌 없음"
+      },
+      "linkedNarrative": "반도체 장비 사이클 재평가",
+      "narrativeStatus": "부상",
+      "narrativeScore": 94,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 374.18,
+      "recommendationDate": "2026-06-17"
     },
     {
       "ticker": "KLAC",
       "assetType": "STOCK",
       "name": "KLA Corporation",
-      "actionLabel": "관찰",
-      "status": "관찰",
+      "actionLabel": "조건부 진입",
+      "status": "진입 후보",
       "moneyFlowScore": 100,
       "moneyFlowScoreInitial": 77,
       "moneyFlowScoreFinal": 100,
@@ -3687,13 +3683,13 @@
       "entryCondition": "20일선 위 눌림 후 재상승 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
       "actionGate": {
-        "label": "관찰",
-        "status": "관찰",
+        "label": "조건부 진입",
+        "status": "진입 후보",
         "reasons": []
       },
       "marketContext": {
         "marketRegime": "중립",
-        "candidateEnvironment": "관찰",
+        "candidateEnvironment": "제한적",
         "reason": "특이 충돌 없음"
       },
       "linkedNarrative": "반도체 장비 사이클 재평가",
@@ -3708,6 +3704,613 @@
       "closePriceAtRecommendation": 238.73,
       "recommendationDate": "2026-06-17"
     },
+    {
+      "ticker": "ASML",
+      "assetType": "STOCK",
+      "name": "ASML Holding N.V.",
+      "actionLabel": "조건부 진입",
+      "status": "진입 후보",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 87,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 112,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 112 capped to displayed score 100",
+      "formulaText": "+87 + +12 + 0 + +5 + +8 + 0 + 0 = 112 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Applied Materials, ASML, Lam Hit Record Highs, Lead Chip Gear Stocks Rally 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Applied Materials, ASML, Lam Hit Record Highs, Lead Chip Gear Stocks Rally",
+      "tieBreakerReason": "최종 원점수 112, 리스크 패널티 0, 5일 수익률 +7.71%, 상대 거래량 1.19배 순으로 정렬",
+      "entryQualityScore": 51,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 79,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 38,
+      "exhaustionRiskLabel": "보통",
+      "relativeVolume": 1.19,
+      "marketDataStatus": "ok",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "조건부 진입",
+        "status": "진입 후보",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "제한적",
+        "reason": "고점 근처 추격 리스크"
+      },
+      "linkedNarrative": "반도체 장비 사이클 재평가",
+      "narrativeStatus": "부상",
+      "narrativeScore": 94,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 1867.83,
+      "recommendationDate": "2026-06-17"
+    }
+  ],
+  "darkHorseCandidates": [
+    {
+      "ticker": "FCX",
+      "assetType": "STOCK",
+      "name": "Freeport-McMoRan",
+      "actionLabel": "조건부 진입",
+      "status": "진입 후보",
+      "moneyFlowScore": 91,
+      "moneyFlowScoreInitial": 83,
+      "moneyFlowScoreFinal": 91,
+      "finalRawScore": 91,
+      "finalDisplayScore": 91,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+83 + +2 + 0 + +5 + +1 + 0 + 0 = 91",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Freeport McMoRan (FCX) Stock Could Be 28% Below Fair Value On Copper Growth Narrative 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Freeport McMoRan (FCX) Stock Could Be 28% Below Fair Value On Copper Growth Narrative",
+      "tieBreakerReason": "최종 원점수 91, 리스크 패널티 0, 5일 수익률 +11.24%, 상대 거래량 1.25배 순으로 정렬",
+      "entryQualityScore": 53,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 65,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 13,
+      "exhaustionRiskLabel": "낮음",
+      "relativeVolume": 1.25,
+      "marketDataStatus": "ok",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "조건부 진입",
+        "status": "진입 후보",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "제한적",
+        "reason": "후보는 당일 음봉 또는 약세"
+      },
+      "linkedNarrative": "전력망/원전/인프라 병목",
+      "narrativeStatus": "약화",
+      "narrativeScore": 39,
+      "relatedEtfs": [
+        "QQQ"
+      ],
+      "closePriceAtRecommendation": 69.06,
+      "recommendationDate": "2026-06-17",
+      "darkHorseRank": 1,
+      "darkHorseScore": 79,
+      "darkHorseLabel": "다크호스 후보",
+      "darkHorseStage": "초기 반전",
+      "darkHorseConfidence": "LOW",
+      "darkHorseReason": "FCX는 전력망/원전/인프라 병목 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 돌파 대기 상태이고, RVOL 1.25x로 거래량 확인은 충분하다. Exhaustion Risk 13로 아직 메인 후보 대비 과열 상한 안에 있다.",
+      "darkHorseConfirmCondition": "최근 15거래일 고점 $72.09 돌파, MA5 위 종가 유지, 관련 ETF 동반 강세",
+      "darkHorseInvalidationCondition": "MA20 $66.08 종가 이탈, 최근 스윙 저점 $61.73 이탈, RVOL 0.80x 이하 둔화",
+      "darkHorseWhyNotMain": "Entry Quality 53 < 60, 최근 고점 돌파 확인 전",
+      "darkHorseBreakdown": {
+        "narrativeAlignmentScore": 13,
+        "earlyTrendStructureScore": 30,
+        "baseBreakoutScore": 7,
+        "volumeConfirmationScore": 14,
+        "lowExhaustionScore": 10,
+        "liquidityRiskScore": 5,
+        "riskPenalty": 0,
+        "rawScore": 79
+      }
+    },
+    {
+      "ticker": "PWR",
+      "assetType": "STOCK",
+      "name": "Quanta Services",
+      "actionLabel": "관찰",
+      "status": "관찰",
+      "moneyFlowScore": 58,
+      "moneyFlowScoreInitial": 53,
+      "moneyFlowScoreFinal": 58,
+      "finalRawScore": 58,
+      "finalDisplayScore": 58,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+53 + +2 + 0 + +2 + +1 + 0 + 0 = 58",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
+      "tieBreakerReason": "최종 원점수 58, 리스크 패널티 0, 5일 수익률 +9.82%, 상대 거래량 1.05배 순으로 정렬",
+      "entryQualityScore": 41,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 70,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 19,
+      "exhaustionRiskLabel": "낮음",
+      "relativeVolume": 1.05,
+      "marketDataStatus": "ok",
+      "entryCondition": "20일선 위 눌림 후 재상승 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "관찰",
+        "status": "관찰",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "관찰",
+        "reason": "후보는 당일 음봉 또는 약세"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 61,
+      "relatedEtfs": [
+        "QQQ"
+      ],
+      "closePriceAtRecommendation": 714.85,
+      "recommendationDate": "2026-06-17",
+      "darkHorseRank": 2,
+      "darkHorseScore": 63,
+      "darkHorseLabel": "관찰 후보",
+      "darkHorseStage": "초기 반전",
+      "darkHorseConfidence": "LOW",
+      "darkHorseReason": "PWR는 AI 인프라 재가속 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 돌파 대기 상태이고, RVOL 1.05x로 거래량 확인은 보통 수준이다. Exhaustion Risk 19로 아직 메인 후보 대비 과열 상한 안에 있다.",
+      "darkHorseConfirmCondition": "최근 15거래일 고점 $747.00 돌파, RVOL 1.20x 이상 재증가, MA5 위 종가 유지, 관련 ETF 동반 강세",
+      "darkHorseInvalidationCondition": "MA20 $708.88 종가 이탈, 최근 스윙 저점 $642.11 이탈, RVOL 0.80x 이하 둔화",
+      "darkHorseWhyNotMain": "Entry Quality 41 < 60, moneyFlowScore 58 < 75, RVOL 1.05x < 1.20x, 최근 고점 돌파 확인 전",
+      "darkHorseBreakdown": {
+        "narrativeAlignmentScore": 13,
+        "earlyTrendStructureScore": 26,
+        "baseBreakoutScore": 7,
+        "volumeConfirmationScore": 4,
+        "lowExhaustionScore": 10,
+        "liquidityRiskScore": 3,
+        "riskPenalty": 0,
+        "rawScore": 63
+      }
+    },
+    {
+      "ticker": "ETN",
+      "assetType": "STOCK",
+      "name": "Eaton",
+      "actionLabel": "거래량 확인 전 관찰",
+      "status": "관찰",
+      "moneyFlowScore": 38,
+      "moneyFlowScoreInitial": 41,
+      "moneyFlowScoreFinal": 38,
+      "finalRawScore": 38,
+      "finalDisplayScore": 38,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+41 + 0 + 0 + 0 + +1 - 4 + 0 = 38",
+      "riskPenalty": -4,
+      "riskPenaltySummary": {
+        "totalPenalty": -4,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "VOLUME_DIVERGENCE",
+            "label": "volume divergence",
+            "penalty": -4,
+            "evidence": "5d price strength is not confirmed by relative volume 0.92x.",
+            "action": "Require relative volume recovery above 1.0x."
+          }
+        ],
+        "watchItems": [
+          "news data not connected or unavailable",
+          "liquidity/spread data is fallback or unavailable"
+        ],
+        "summary": "1개 감점 리스크로 총 -4점 반영."
+      },
+      "reasonConfidence": "LOW",
+      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+      "directCatalyst": "",
+      "tieBreakerReason": "최종 원점수 38, 리스크 패널티 -4, 5일 수익률 +9.10%, 상대 거래량 0.92배 순으로 정렬",
+      "entryQualityScore": 34,
+      "entryQualityLabel": "낮음",
+      "trendStrengthIndex": 65,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 13,
+      "exhaustionRiskLabel": "낮음",
+      "relativeVolume": 0.92,
+      "marketDataStatus": "ok",
+      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+      "invalidationCondition": "거래량 회복 실패",
+      "actionGate": {
+        "label": "거래량 확인 전 관찰",
+        "status": "관찰",
+        "reasons": [
+          "Entry Quality 34 < 40",
+          "RVOL 0.92x < 1.00x"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "관찰",
+        "reason": "Entry Quality 34 < 40 / RVOL 0.92x < 1.00x"
+      },
+      "linkedNarrative": "전력망/원전/인프라 병목",
+      "narrativeStatus": "약화",
+      "narrativeScore": 39,
+      "relatedEtfs": [
+        "QQQ"
+      ],
+      "closePriceAtRecommendation": 409.64,
+      "recommendationDate": "2026-06-17",
+      "darkHorseRank": 3,
+      "darkHorseScore": 62,
+      "darkHorseLabel": "관찰 후보",
+      "darkHorseStage": "초기 반전",
+      "darkHorseConfidence": "LOW",
+      "darkHorseReason": "ETN는 전력망/원전/인프라 병목 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 돌파 대기 상태이고, RVOL 0.92x로 거래량 확인은 아직 약하다. Exhaustion Risk 13로 아직 메인 후보 대비 과열 상한 안에 있다.",
+      "darkHorseConfirmCondition": "최근 15거래일 고점 $426.59 돌파, RVOL 1.20x 이상 재증가, MA5 위 종가 유지, 관련 ETF 동반 강세",
+      "darkHorseInvalidationCondition": "MA20 $400.39 종가 이탈, 최근 스윙 저점 $375.04 이탈, RVOL 0.80x 이하 둔화",
+      "darkHorseWhyNotMain": "Entry Quality 34 < 60, moneyFlowScore 38 < 75, RVOL 0.92x < 1.20x, 최근 고점 돌파 확인 전",
+      "darkHorseBreakdown": {
+        "narrativeAlignmentScore": 13,
+        "earlyTrendStructureScore": 30,
+        "baseBreakoutScore": 7,
+        "volumeConfirmationScore": 0,
+        "lowExhaustionScore": 10,
+        "liquidityRiskScore": 2,
+        "riskPenalty": 0,
+        "rawScore": 62
+      }
+    }
+  ],
+  "stockEntryCandidates": [
+    {
+      "ticker": "LRCX",
+      "assetType": "STOCK",
+      "name": "Lam Research Corporation",
+      "actionLabel": "조건부 진입",
+      "status": "진입 후보",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 85,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 110,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 110 capped to displayed score 100",
+      "formulaText": "+85 + +12 + 0 + +5 + +8 + 0 + 0 = 110 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why",
+      "tieBreakerReason": "최종 원점수 110, 리스크 패널티 0, 5일 수익률 +16.28%, 상대 거래량 1.03배 순으로 정렬",
+      "entryQualityScore": 53,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 79,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 38,
+      "exhaustionRiskLabel": "보통",
+      "relativeVolume": 1.03,
+      "marketDataStatus": "ok",
+      "entryCondition": "20일선 위 눌림 후 재상승 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "조건부 진입",
+        "status": "진입 후보",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "제한적",
+        "reason": "특이 충돌 없음"
+      },
+      "linkedNarrative": "반도체 장비 사이클 재평가",
+      "narrativeStatus": "부상",
+      "narrativeScore": 94,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 374.18,
+      "recommendationDate": "2026-06-17"
+    },
+    {
+      "ticker": "KLAC",
+      "assetType": "STOCK",
+      "name": "KLA Corporation",
+      "actionLabel": "조건부 진입",
+      "status": "진입 후보",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 77,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 102,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 102 capped to displayed score 100",
+      "formulaText": "+77 + +12 + 0 + +5 + +8 + 0 + 0 = 102 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - KLA Corporation (KLAC) Price Target Raised by $500. Here is Why 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - KLA Corporation (KLAC) Price Target Raised by $500. Here is Why",
+      "tieBreakerReason": "최종 원점수 102, 리스크 패널티 0, 5일 수익률 +11.78%, 상대 거래량 1.11배 순으로 정렬",
+      "entryQualityScore": 53,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 79,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 38,
+      "exhaustionRiskLabel": "보통",
+      "relativeVolume": 1.11,
+      "marketDataStatus": "ok",
+      "entryCondition": "20일선 위 눌림 후 재상승 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "조건부 진입",
+        "status": "진입 후보",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "제한적",
+        "reason": "특이 충돌 없음"
+      },
+      "linkedNarrative": "반도체 장비 사이클 재평가",
+      "narrativeStatus": "부상",
+      "narrativeScore": 94,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 238.73,
+      "recommendationDate": "2026-06-17"
+    },
+    {
+      "ticker": "ASML",
+      "assetType": "STOCK",
+      "name": "ASML Holding N.V.",
+      "actionLabel": "조건부 진입",
+      "status": "진입 후보",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 87,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 112,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 112 capped to displayed score 100",
+      "formulaText": "+87 + +12 + 0 + +5 + +8 + 0 + 0 = 112 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Applied Materials, ASML, Lam Hit Record Highs, Lead Chip Gear Stocks Rally 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Applied Materials, ASML, Lam Hit Record Highs, Lead Chip Gear Stocks Rally",
+      "tieBreakerReason": "최종 원점수 112, 리스크 패널티 0, 5일 수익률 +7.71%, 상대 거래량 1.19배 순으로 정렬",
+      "entryQualityScore": 51,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 79,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 38,
+      "exhaustionRiskLabel": "보통",
+      "relativeVolume": 1.19,
+      "marketDataStatus": "ok",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "조건부 진입",
+        "status": "진입 후보",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "제한적",
+        "reason": "고점 근처 추격 리스크"
+      },
+      "linkedNarrative": "반도체 장비 사이클 재평가",
+      "narrativeStatus": "부상",
+      "narrativeScore": 94,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 1867.83,
+      "recommendationDate": "2026-06-17"
+    },
+    {
+      "ticker": "FCX",
+      "assetType": "STOCK",
+      "name": "Freeport-McMoRan",
+      "actionLabel": "조건부 진입",
+      "status": "진입 후보",
+      "moneyFlowScore": 91,
+      "moneyFlowScoreInitial": 83,
+      "moneyFlowScoreFinal": 91,
+      "finalRawScore": 91,
+      "finalDisplayScore": 91,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+83 + +2 + 0 + +5 + +1 + 0 + 0 = 91",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Freeport McMoRan (FCX) Stock Could Be 28% Below Fair Value On Copper Growth Narrative 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Freeport McMoRan (FCX) Stock Could Be 28% Below Fair Value On Copper Growth Narrative",
+      "tieBreakerReason": "최종 원점수 91, 리스크 패널티 0, 5일 수익률 +11.24%, 상대 거래량 1.25배 순으로 정렬",
+      "entryQualityScore": 53,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 65,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 13,
+      "exhaustionRiskLabel": "낮음",
+      "relativeVolume": 1.25,
+      "marketDataStatus": "ok",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "조건부 진입",
+        "status": "진입 후보",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "제한적",
+        "reason": "후보는 당일 음봉 또는 약세"
+      },
+      "linkedNarrative": "전력망/원전/인프라 병목",
+      "narrativeStatus": "약화",
+      "narrativeScore": 39,
+      "relatedEtfs": [
+        "QQQ"
+      ],
+      "closePriceAtRecommendation": 69.06,
+      "recommendationDate": "2026-06-17"
+    },
+    {
+      "ticker": "AMAT",
+      "assetType": "STOCK",
+      "name": "Applied Materials Inc.",
+      "actionLabel": "강한 자금흐름 조건부",
+      "status": "진입 후보",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 98,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 117,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 117 capped to displayed score 100",
+      "formulaText": "+98 + +12 + 0 + +5 + +8 - 6 + 0 = 117 -> 100",
+      "riskPenalty": -6,
+      "riskPenaltySummary": {
+        "totalPenalty": -6,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "SHORT_TERM_OVERHEAT",
+            "label": "short-term overheat",
+            "penalty": -6,
+            "evidence": "5d return +19.30% is extended.",
+            "action": "Prefer pullback or prior high reclaim over chasing."
+          }
+        ],
+        "watchItems": [],
+        "summary": "1개 감점 리스크로 총 -6점 반영."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Is Applied Materials (AMAT) One of the Most Profitable American Stocks to Buy in 2026? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Is Applied Materials (AMAT) One of the Most Profitable American Stocks to Buy in 2026?",
+      "tieBreakerReason": "최종 원점수 117, 리스크 패널티 -6, 5일 수익률 +19.30%, 상대 거래량 1.24배 순으로 정렬",
+      "entryQualityScore": 48,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 79,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 38,
+      "exhaustionRiskLabel": "보통",
+      "relativeVolume": 1.24,
+      "marketDataStatus": "ok",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "강한 자금흐름 조건부",
+        "status": "진입 후보",
+        "reasons": [
+          "Entry Quality 48 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "제한적",
+        "reason": "고점 근처 추격 리스크 / Entry Quality 48 < 50, but moneyFlow 100 and confidence HIGH support conditional watch"
+      },
+      "linkedNarrative": "반도체 장비 사이클 재평가",
+      "narrativeStatus": "부상",
+      "narrativeScore": 94,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 592.92,
+      "recommendationDate": "2026-06-17"
+    }
+  ],
+  "stockPullbackCandidates": [],
+  "stockWatchCandidates": [
     {
       "ticker": "STX",
       "assetType": "STOCK",
@@ -3774,6 +4377,288 @@
       ],
       "closePriceAtRecommendation": 1066.0699,
       "recommendationDate": "2026-06-17"
+    },
+    {
+      "ticker": "WDC",
+      "assetType": "STOCK",
+      "name": "Western Digital Corporation",
+      "actionLabel": "추격 금지",
+      "status": "관찰",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 100,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 114,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 114 capped to displayed score 100",
+      "formulaText": "+102 + +12 + 0 + +5 + +1 - 6 + 0 = 114 -> 100",
+      "riskPenalty": -6,
+      "riskPenaltySummary": {
+        "totalPenalty": -6,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "SHORT_TERM_OVERHEAT",
+            "label": "short-term overheat",
+            "penalty": -6,
+            "evidence": "5d return +45.31% is extended.",
+            "action": "Prefer pullback or prior high reclaim over chasing."
+          }
+        ],
+        "watchItems": [],
+        "summary": "1개 감점 리스크로 총 -6점 반영."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Morgan Stanley Raises Price Target on Western Digital (WDC). Here is Why 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Morgan Stanley Raises Price Target on Western Digital (WDC). Here is Why",
+      "tieBreakerReason": "최종 원점수 114, 리스크 패널티 -6, 5일 수익률 +45.31%, 상대 거래량 1.74배 순으로 정렬",
+      "entryQualityScore": 32,
+      "entryQualityLabel": "낮음",
+      "trendStrengthIndex": 71,
+      "trendStateLabel": "과열",
+      "trendDecisionLine": "테마는 강하지만 추격 위험이 커서 돌파 매수보다 눌림 후 재상승 확인이 필요하다.",
+      "exhaustionRisk": 75,
+      "exhaustionRiskLabel": "높음",
+      "relativeVolume": 1.74,
+      "marketDataStatus": "ok",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "추격 금지",
+        "status": "관찰",
+        "reasons": [
+          "Entry Quality 32 < 40",
+          "Exhaustion Risk 75 >= 70"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "관찰",
+        "reason": "고점 근처 추격 리스크 / Entry Quality 32 < 40 / Exhaustion Risk 75 >= 70"
+      },
+      "linkedNarrative": "Data Storage 자금 유입",
+      "narrativeStatus": "부상",
+      "narrativeScore": 84,
+      "relatedEtfs": [
+        "QQQ"
+      ],
+      "closePriceAtRecommendation": 712.13,
+      "recommendationDate": "2026-06-17"
+    },
+    {
+      "ticker": "MRVL",
+      "assetType": "STOCK",
+      "name": "Marvell Technology Inc.",
+      "actionLabel": "거래량 확인 전 관찰",
+      "status": "관찰",
+      "moneyFlowScore": 89,
+      "moneyFlowScoreInitial": 68,
+      "moneyFlowScoreFinal": 89,
+      "finalRawScore": 89,
+      "finalDisplayScore": 89,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+68 + +12 + 0 + +5 + +8 - 4 + 0 = 89",
+      "riskPenalty": -4,
+      "riskPenaltySummary": {
+        "totalPenalty": -4,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "VOLUME_DIVERGENCE",
+            "label": "volume divergence",
+            "penalty": -4,
+            "evidence": "5d price strength is not confirmed by relative volume 0.82x.",
+            "action": "Require relative volume recovery above 1.0x."
+          }
+        ],
+        "watchItems": [],
+        "summary": "1개 감점 리스크로 총 -4점 반영."
+      },
+      "reasonConfidence": "LOW",
+      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_6h - Analyst Raises Marvell Technology (MRVL) Price Target by $105. Here is Why",
+      "tieBreakerReason": "최종 원점수 89, 리스크 패널티 -4, 5일 수익률 +14.63%, 상대 거래량 0.82배 순으로 정렬",
+      "entryQualityScore": 40,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 61,
+      "trendStateLabel": "약화",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 35,
+      "exhaustionRiskLabel": "보통",
+      "relativeVolume": 0.82,
+      "marketDataStatus": "ok",
+      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+      "invalidationCondition": "거래량 회복 실패",
+      "actionGate": {
+        "label": "거래량 확인 전 관찰",
+        "status": "관찰",
+        "reasons": [
+          "RVOL 0.82x < 1.00x"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "관찰",
+        "reason": "RVOL 0.82x < 1.00x"
+      },
+      "linkedNarrative": "반도체 설계/공급망 재가속",
+      "narrativeStatus": "부상",
+      "narrativeScore": 65,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 289.54,
+      "recommendationDate": "2026-06-17"
+    },
+    {
+      "ticker": "MU",
+      "assetType": "STOCK",
+      "name": "Micron Technology Inc.",
+      "actionLabel": "거래량 확인 전 관찰",
+      "status": "관찰",
+      "moneyFlowScore": 88,
+      "moneyFlowScoreInitial": 67,
+      "moneyFlowScoreFinal": 88,
+      "finalRawScore": 88,
+      "finalDisplayScore": 88,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+67 + +12 + 0 + +5 + +8 - 4 + 0 = 88",
+      "riskPenalty": -4,
+      "riskPenaltySummary": {
+        "totalPenalty": -4,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "VOLUME_DIVERGENCE",
+            "label": "volume divergence",
+            "penalty": -4,
+            "evidence": "5d price strength is not confirmed by relative volume 0.82x.",
+            "action": "Require relative volume recovery above 1.0x."
+          }
+        ],
+        "watchItems": [],
+        "summary": "1개 감점 리스크로 총 -4점 반영."
+      },
+      "reasonConfidence": "LOW",
+      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Micron Technology (MU) Price Target Lifted by $675 at RBC Capital. Here is Why",
+      "tieBreakerReason": "최종 원점수 88, 리스크 패널티 -4, 5일 수익률 +16.97%, 상대 거래량 0.82배 순으로 정렬",
+      "entryQualityScore": 52,
+      "entryQualityLabel": "관찰",
+      "trendStrengthIndex": 70,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 19,
+      "exhaustionRiskLabel": "낮음",
+      "relativeVolume": 0.82,
+      "marketDataStatus": "ok",
+      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+      "invalidationCondition": "거래량 회복 실패",
+      "actionGate": {
+        "label": "거래량 확인 전 관찰",
+        "status": "관찰",
+        "reasons": [
+          "RVOL 0.82x < 1.00x"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "관찰",
+        "reason": "RVOL 0.82x < 1.00x"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 61,
+      "relatedEtfs": [
+        "DRAM",
+        "SMH",
+        "SOXX",
+        "SOXQ"
+      ],
+      "closePriceAtRecommendation": 1043.1899,
+      "recommendationDate": "2026-06-17"
+    },
+    {
+      "ticker": "ARM",
+      "assetType": "STOCK",
+      "name": "Arm Holdings plc",
+      "actionLabel": "거래량 확인 전 관찰",
+      "status": "관찰",
+      "moneyFlowScore": 86,
+      "moneyFlowScoreInitial": 71,
+      "moneyFlowScoreFinal": 86,
+      "finalRawScore": 86,
+      "finalDisplayScore": 86,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+71 + +12 + 0 + +5 + +8 - 10 + 0 = 86",
+      "riskPenalty": -10,
+      "riskPenaltySummary": {
+        "totalPenalty": -10,
+        "riskLevel": "MEDIUM",
+        "items": [
+          {
+            "riskType": "SHORT_TERM_OVERHEAT",
+            "label": "short-term overheat",
+            "penalty": -6,
+            "evidence": "5d return +36.25% is extended.",
+            "action": "Prefer pullback or prior high reclaim over chasing."
+          },
+          {
+            "riskType": "VOLUME_DIVERGENCE",
+            "label": "volume divergence",
+            "penalty": -4,
+            "evidence": "5d price strength is not confirmed by relative volume 0.87x.",
+            "action": "Require relative volume recovery above 1.0x."
+          }
+        ],
+        "watchItems": [],
+        "summary": "2개 감점 리스크로 총 -10점 반영."
+      },
+      "reasonConfidence": "LOW",
+      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Why Did RXT, NBIS, ARM Stocks Surge To 52-Week Highs?",
+      "tieBreakerReason": "최종 원점수 86, 리스크 패널티 -10, 5일 수익률 +36.25%, 상대 거래량 0.87배 순으로 정렬",
+      "entryQualityScore": 32,
+      "entryQualityLabel": "낮음",
+      "trendStrengthIndex": 61,
+      "trendStateLabel": "약화",
+      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+      "exhaustionRisk": 35,
+      "exhaustionRiskLabel": "보통",
+      "relativeVolume": 0.87,
+      "marketDataStatus": "ok",
+      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+      "invalidationCondition": "거래량 회복 실패",
+      "actionGate": {
+        "label": "거래량 확인 전 관찰",
+        "status": "관찰",
+        "reasons": [
+          "Entry Quality 32 < 40",
+          "RVOL 0.87x < 1.00x"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "관찰",
+        "reason": "Entry Quality 32 < 40 / RVOL 0.87x < 1.00x"
+      },
+      "linkedNarrative": "반도체 설계/공급망 재가속",
+      "narrativeStatus": "부상",
+      "narrativeScore": 65,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 418.88,
+      "recommendationDate": "2026-06-17"
     }
   ],
   "etfWatchCandidates": [
@@ -3818,7 +4703,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Google Gemini co-lead Noam Shazeer leaves for OpenAI",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / guidance / stale - Guidance Miss Becomes a Bloodbath: DRAM’s 15% Implosion is At The Center",
       "tieBreakerReason": "최종 원점수 80, 리스크 패널티 -10, 5일 수익률 +21.93%, 상대 거래량 0.99배 순으로 정렬",
       "entryQualityScore": 49,
       "entryQualityLabel": "관찰",
@@ -3979,60 +4864,6 @@
       "recommendationDate": "2026-06-17"
     },
     {
-      "ticker": "SOXQ",
-      "assetType": "ETF",
-      "name": "Invesco PHLX Semiconductor ETF",
-      "actionLabel": "관찰",
-      "status": "관찰",
-      "moneyFlowScore": 100,
-      "moneyFlowScoreInitial": 87,
-      "moneyFlowScoreFinal": 100,
-      "finalRawScore": 101,
-      "finalDisplayScore": 100,
-      "wasCapped": true,
-      "capReason": "raw score 101 capped to displayed score 100",
-      "formulaText": "+87 + +12 + 0 + +2 + 0 + 0 + 0 = 101 -> 100",
-      "riskPenalty": 0,
-      "riskPenaltySummary": {
-        "totalPenalty": 0,
-        "riskLevel": "LOW",
-        "items": [],
-        "watchItems": [],
-        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-      },
-      "reasonConfidence": "MEDIUM",
-      "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_72h - Why This Semiconductor ETF Is the Only Bet You Need Before the Next AI Wave",
-      "tieBreakerReason": "최종 원점수 101, 리스크 패널티 0, 5일 수익률 +10.46%, 상대 거래량 1.50배 순으로 정렬",
-      "entryQualityScore": 52,
-      "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 79,
-      "trendStateLabel": "부상",
-      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-      "exhaustionRisk": 38,
-      "exhaustionRiskLabel": "보통",
-      "relativeVolume": 1.5,
-      "marketDataStatus": "ok",
-      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "actionGate": {
-        "label": "관찰",
-        "status": "관찰",
-        "reasons": []
-      },
-      "marketContext": {
-        "marketRegime": "중립",
-        "candidateEnvironment": "관찰",
-        "reason": "특이 충돌 없음"
-      },
-      "linkedNarrative": "반도체 장비 사이클 재평가",
-      "narrativeStatus": "부상",
-      "narrativeScore": 94,
-      "relatedEtfs": [],
-      "closePriceAtRecommendation": 106.13,
-      "recommendationDate": "2026-06-17"
-    },
-    {
       "ticker": "IGV",
       "assetType": "ETF",
       "name": "iShares Expanded Tech-Software Sector ETF",
@@ -4096,373 +4927,135 @@
       "relatedEtfs": [],
       "closePriceAtRecommendation": 89.16,
       "recommendationDate": "2026-06-17"
+    },
+    {
+      "ticker": "AIQ",
+      "assetType": "ETF",
+      "name": "Global X Artificial Intelligence & Technology ETF",
+      "actionLabel": "거래량 확인 전 관찰",
+      "status": "관찰",
+      "moneyFlowScore": 5,
+      "moneyFlowScoreInitial": 11,
+      "moneyFlowScoreFinal": 5,
+      "finalRawScore": 5,
+      "finalDisplayScore": 5,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+11 + +2 - 4 + +2 + 0 - 6 + 0 = 5",
+      "riskPenalty": -6,
+      "riskPenaltySummary": {
+        "totalPenalty": -6,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "MA_BREAK_RISK",
+            "label": "20d moving average break risk",
+            "penalty": -6,
+            "evidence": "Close is below the 20-day moving average.",
+            "action": "Hold off until 20-day moving average is recovered."
+          }
+        ],
+        "watchItems": [],
+        "summary": "1개 감점 리스크로 총 -6점 반영."
+      },
+      "reasonConfidence": "LOW",
+      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Google Gemini co-lead Noam Shazeer leaves for OpenAI",
+      "tieBreakerReason": "최종 원점수 5, 리스크 패널티 -6, 5일 수익률 +4.84%, 상대 거래량 0.89배 순으로 정렬",
+      "entryQualityScore": 6,
+      "entryQualityLabel": "낮음",
+      "trendStrengthIndex": 23,
+      "trendStateLabel": "잠복",
+      "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
+      "exhaustionRisk": 18,
+      "exhaustionRiskLabel": "낮음",
+      "relativeVolume": 0.89,
+      "marketDataStatus": "ok",
+      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+      "invalidationCondition": "거래량 회복 실패",
+      "actionGate": {
+        "label": "거래량 확인 전 관찰",
+        "status": "관찰",
+        "reasons": [
+          "Entry Quality 6 < 40",
+          "RVOL 0.89x < 1.00x"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "중립",
+        "candidateEnvironment": "관찰",
+        "reason": "후보는 당일 음봉 또는 약세 / Entry Quality 6 < 40 / RVOL 0.89x < 1.00x"
+      },
+      "linkedNarrative": "소프트웨어 실적/AI 수익화",
+      "narrativeStatus": "약화",
+      "narrativeScore": 9,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 64.33,
+      "recommendationDate": "2026-06-17"
     }
   ],
   "referenceCandidates": {
-    "etfs": [
-      {
-        "ticker": "SOXQ",
-        "assetType": "ETF",
-        "name": "Invesco PHLX Semiconductor ETF",
-        "actionLabel": "관찰",
-        "status": "관찰",
-        "moneyFlowScore": 100,
-        "moneyFlowScoreInitial": 87,
-        "moneyFlowScoreFinal": 100,
-        "finalRawScore": 101,
-        "finalDisplayScore": 100,
-        "wasCapped": true,
-        "capReason": "raw score 101 capped to displayed score 100",
-        "formulaText": "+87 + +12 + 0 + +2 + 0 + 0 + 0 = 101 -> 100",
-        "riskPenalty": 0,
-        "riskPenaltySummary": {
-          "totalPenalty": 0,
-          "riskLevel": "LOW",
-          "items": [],
-          "watchItems": [],
-          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-        },
-        "reasonConfidence": "MEDIUM",
-        "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-        "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_72h - Why This Semiconductor ETF Is the Only Bet You Need Before the Next AI Wave",
-        "tieBreakerReason": "최종 원점수 101, 리스크 패널티 0, 5일 수익률 +10.46%, 상대 거래량 1.50배 순으로 정렬",
-        "entryQualityScore": 52,
-        "entryQualityLabel": "관찰",
-        "trendStrengthIndex": 79,
-        "trendStateLabel": "부상",
-        "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-        "exhaustionRisk": 38,
-        "exhaustionRiskLabel": "보통",
-        "relativeVolume": 1.5,
-        "marketDataStatus": "ok",
-        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-        "actionGate": {
-          "label": "관찰",
-          "status": "관찰",
-          "reasons": []
-        },
-        "marketContext": {
-          "marketRegime": "중립",
-          "candidateEnvironment": "관찰",
-          "reason": "특이 충돌 없음"
-        },
-        "linkedNarrative": "반도체 장비 사이클 재평가",
-        "narrativeStatus": "부상",
-        "narrativeScore": 94,
-        "relatedEtfs": [],
-        "closePriceAtRecommendation": 106.13,
-        "recommendationDate": "2026-06-17"
-      },
-      {
-        "ticker": "DRAM",
-        "assetType": "ETF",
-        "name": "Roundhill Memory ETF",
-        "actionLabel": "거래량 확인 전 관찰",
-        "status": "관찰",
-        "moneyFlowScore": 80,
-        "moneyFlowScoreInitial": 73,
-        "moneyFlowScoreFinal": 80,
-        "finalRawScore": 80,
-        "finalDisplayScore": 80,
-        "wasCapped": false,
-        "capReason": "cap not applied",
-        "formulaText": "+73 + +12 + 0 + +5 + 0 - 10 + 0 = 80",
-        "riskPenalty": -10,
-        "riskPenaltySummary": {
-          "totalPenalty": -10,
-          "riskLevel": "MEDIUM",
-          "items": [
-            {
-              "riskType": "SHORT_TERM_OVERHEAT",
-              "label": "short-term overheat",
-              "penalty": -6,
-              "evidence": "5d return +21.93% is extended.",
-              "action": "Prefer pullback or prior high reclaim over chasing."
-            },
-            {
-              "riskType": "VOLUME_DIVERGENCE",
-              "label": "volume divergence",
-              "penalty": -4,
-              "evidence": "5d price strength is not confirmed by relative volume 0.99x.",
-              "action": "Require relative volume recovery above 1.0x."
-            }
-          ],
-          "watchItems": [
-            "ETF breadth data not connected"
-          ],
-          "summary": "2개 감점 리스크로 총 -10점 반영."
-        },
-        "reasonConfidence": "LOW",
-        "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-        "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Google Gemini co-lead Noam Shazeer leaves for OpenAI",
-        "tieBreakerReason": "최종 원점수 80, 리스크 패널티 -10, 5일 수익률 +21.93%, 상대 거래량 0.99배 순으로 정렬",
-        "entryQualityScore": 49,
-        "entryQualityLabel": "관찰",
-        "trendStrengthIndex": 70,
-        "trendStateLabel": "부상",
-        "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-        "exhaustionRisk": 19,
-        "exhaustionRiskLabel": "낮음",
-        "relativeVolume": 0.99,
-        "marketDataStatus": "ok",
-        "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
-        "invalidationCondition": "거래량 회복 실패",
-        "actionGate": {
-          "label": "거래량 확인 전 관찰",
-          "status": "관찰",
-          "reasons": [
-            "RVOL 0.99x < 1.00x"
-          ]
-        },
-        "marketContext": {
-          "marketRegime": "중립",
-          "candidateEnvironment": "관찰",
-          "reason": "고점 근처 추격 리스크 / RVOL 0.99x < 1.00x"
-        },
-        "linkedNarrative": "AI 인프라 재가속",
-        "narrativeStatus": "관찰",
-        "narrativeScore": 61,
-        "relatedEtfs": [],
-        "closePriceAtRecommendation": 69.95,
-        "recommendationDate": "2026-06-17"
-      },
-      {
-        "ticker": "PAVE",
-        "assetType": "ETF",
-        "name": "Global X U.S. Infrastructure Development ETF",
-        "actionLabel": "관찰",
-        "status": "관찰",
-        "moneyFlowScore": 70,
-        "moneyFlowScoreInitial": 66,
-        "moneyFlowScoreFinal": 70,
-        "finalRawScore": 70,
-        "finalDisplayScore": 70,
-        "wasCapped": false,
-        "capReason": "cap not applied",
-        "formulaText": "+66 + +2 + 0 + +2 + 0 + 0 + 0 = 70",
-        "riskPenalty": 0,
-        "riskPenaltySummary": {
-          "totalPenalty": 0,
-          "riskLevel": "LOW",
-          "items": [],
-          "watchItems": [
-            "ETF breadth data not connected"
-          ],
-          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-        },
-        "reasonConfidence": "MEDIUM",
-        "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-        "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / stale - Should You Invest in the Global X U.S. Infrastructure Development ETF (PAVE)?",
-        "tieBreakerReason": "최종 원점수 70, 리스크 패널티 0, 5일 수익률 +4.85%, 상대 거래량 2.52배 순으로 정렬",
-        "entryQualityScore": 45,
-        "entryQualityLabel": "관찰",
-        "trendStrengthIndex": 70,
-        "trendStateLabel": "부상",
-        "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-        "exhaustionRisk": 19,
-        "exhaustionRiskLabel": "낮음",
-        "relativeVolume": 2.52,
-        "marketDataStatus": "ok",
-        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-        "actionGate": {
-          "label": "관찰",
-          "status": "관찰",
-          "reasons": []
-        },
-        "marketContext": {
-          "marketRegime": "중립",
-          "candidateEnvironment": "관찰",
-          "reason": "후보는 당일 음봉 또는 약세"
-        },
-        "linkedNarrative": "AI 인프라 재가속",
-        "narrativeStatus": "관찰",
-        "narrativeScore": 61,
-        "relatedEtfs": [],
-        "closePriceAtRecommendation": 57.98,
-        "recommendationDate": "2026-06-17"
-      }
+    "etfs": [],
+    "stocks": []
+  },
+  "finalTopPick": {
+    "ticker": "LRCX",
+    "assetType": "STOCK",
+    "name": "Lam Research Corporation",
+    "actionLabel": "조건부 진입",
+    "status": "진입 후보",
+    "moneyFlowScore": 100,
+    "moneyFlowScoreInitial": 85,
+    "moneyFlowScoreFinal": 100,
+    "finalRawScore": 110,
+    "finalDisplayScore": 100,
+    "wasCapped": true,
+    "capReason": "raw score 110 capped to displayed score 100",
+    "formulaText": "+85 + +12 + 0 + +5 + +8 + 0 + 0 = 110 -> 100",
+    "riskPenalty": 0,
+    "riskPenaltySummary": {
+      "totalPenalty": 0,
+      "riskLevel": "LOW",
+      "items": [],
+      "watchItems": [],
+      "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+    },
+    "reasonConfidence": "HIGH",
+    "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+    "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why",
+    "tieBreakerReason": "최종 원점수 110, 리스크 패널티 0, 5일 수익률 +16.28%, 상대 거래량 1.03배 순으로 정렬",
+    "entryQualityScore": 53,
+    "entryQualityLabel": "관찰",
+    "trendStrengthIndex": 79,
+    "trendStateLabel": "부상",
+    "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
+    "exhaustionRisk": 38,
+    "exhaustionRiskLabel": "보통",
+    "relativeVolume": 1.03,
+    "marketDataStatus": "ok",
+    "entryCondition": "20일선 위 눌림 후 재상승 확인",
+    "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+    "actionGate": {
+      "label": "조건부 진입",
+      "status": "진입 후보",
+      "reasons": []
+    },
+    "marketContext": {
+      "marketRegime": "중립",
+      "candidateEnvironment": "제한적",
+      "reason": "특이 충돌 없음"
+    },
+    "linkedNarrative": "반도체 장비 사이클 재평가",
+    "narrativeStatus": "부상",
+    "narrativeScore": 94,
+    "relatedEtfs": [
+      "SMH",
+      "SOXX",
+      "SOXQ",
+      "AIQ"
     ],
-    "stocks": [
-      {
-        "ticker": "LRCX",
-        "assetType": "STOCK",
-        "name": "Lam Research Corporation",
-        "actionLabel": "관찰",
-        "status": "관찰",
-        "moneyFlowScore": 100,
-        "moneyFlowScoreInitial": 85,
-        "moneyFlowScoreFinal": 100,
-        "finalRawScore": 110,
-        "finalDisplayScore": 100,
-        "wasCapped": true,
-        "capReason": "raw score 110 capped to displayed score 100",
-        "formulaText": "+85 + +12 + 0 + +5 + +8 + 0 + 0 = 110 -> 100",
-        "riskPenalty": 0,
-        "riskPenaltySummary": {
-          "totalPenalty": 0,
-          "riskLevel": "LOW",
-          "items": [],
-          "watchItems": [],
-          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-        },
-        "reasonConfidence": "HIGH",
-        "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-        "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - Lam Research (LRCX) Receives a Price Target Boost at Barclays. Here is Why",
-        "tieBreakerReason": "최종 원점수 110, 리스크 패널티 0, 5일 수익률 +16.28%, 상대 거래량 1.03배 순으로 정렬",
-        "entryQualityScore": 53,
-        "entryQualityLabel": "관찰",
-        "trendStrengthIndex": 79,
-        "trendStateLabel": "부상",
-        "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-        "exhaustionRisk": 38,
-        "exhaustionRiskLabel": "보통",
-        "relativeVolume": 1.03,
-        "marketDataStatus": "ok",
-        "entryCondition": "20일선 위 눌림 후 재상승 확인",
-        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-        "actionGate": {
-          "label": "관찰",
-          "status": "관찰",
-          "reasons": []
-        },
-        "marketContext": {
-          "marketRegime": "중립",
-          "candidateEnvironment": "관찰",
-          "reason": "특이 충돌 없음"
-        },
-        "linkedNarrative": "반도체 장비 사이클 재평가",
-        "narrativeStatus": "부상",
-        "narrativeScore": 94,
-        "relatedEtfs": [
-          "SMH",
-          "SOXX",
-          "SOXQ",
-          "AIQ"
-        ],
-        "closePriceAtRecommendation": 374.18,
-        "recommendationDate": "2026-06-17"
-      },
-      {
-        "ticker": "KLAC",
-        "assetType": "STOCK",
-        "name": "KLA Corporation",
-        "actionLabel": "관찰",
-        "status": "관찰",
-        "moneyFlowScore": 100,
-        "moneyFlowScoreInitial": 77,
-        "moneyFlowScoreFinal": 100,
-        "finalRawScore": 102,
-        "finalDisplayScore": 100,
-        "wasCapped": true,
-        "capReason": "raw score 102 capped to displayed score 100",
-        "formulaText": "+77 + +12 + 0 + +5 + +8 + 0 + 0 = 102 -> 100",
-        "riskPenalty": 0,
-        "riskPenaltySummary": {
-          "totalPenalty": 0,
-          "riskLevel": "LOW",
-          "items": [],
-          "watchItems": [],
-          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-        },
-        "reasonConfidence": "HIGH",
-        "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - KLA Corporation (KLAC) Price Target Raised by $500. Here is Why 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-        "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h - KLA Corporation (KLAC) Price Target Raised by $500. Here is Why",
-        "tieBreakerReason": "최종 원점수 102, 리스크 패널티 0, 5일 수익률 +11.78%, 상대 거래량 1.11배 순으로 정렬",
-        "entryQualityScore": 53,
-        "entryQualityLabel": "관찰",
-        "trendStrengthIndex": 79,
-        "trendStateLabel": "부상",
-        "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-        "exhaustionRisk": 38,
-        "exhaustionRiskLabel": "보통",
-        "relativeVolume": 1.11,
-        "marketDataStatus": "ok",
-        "entryCondition": "20일선 위 눌림 후 재상승 확인",
-        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-        "actionGate": {
-          "label": "관찰",
-          "status": "관찰",
-          "reasons": []
-        },
-        "marketContext": {
-          "marketRegime": "중립",
-          "candidateEnvironment": "관찰",
-          "reason": "특이 충돌 없음"
-        },
-        "linkedNarrative": "반도체 장비 사이클 재평가",
-        "narrativeStatus": "부상",
-        "narrativeScore": 94,
-        "relatedEtfs": [
-          "SMH",
-          "SOXX",
-          "SOXQ",
-          "AIQ"
-        ],
-        "closePriceAtRecommendation": 238.73,
-        "recommendationDate": "2026-06-17"
-      },
-      {
-        "ticker": "ASML",
-        "assetType": "STOCK",
-        "name": "ASML Holding N.V.",
-        "actionLabel": "관찰",
-        "status": "관찰",
-        "moneyFlowScore": 100,
-        "moneyFlowScoreInitial": 87,
-        "moneyFlowScoreFinal": 100,
-        "finalRawScore": 112,
-        "finalDisplayScore": 100,
-        "wasCapped": true,
-        "capReason": "raw score 112 capped to displayed score 100",
-        "formulaText": "+87 + +12 + 0 + +5 + +8 + 0 + 0 = 112 -> 100",
-        "riskPenalty": 0,
-        "riskPenaltySummary": {
-          "totalPenalty": 0,
-          "riskLevel": "LOW",
-          "items": [],
-          "watchItems": [],
-          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-        },
-        "reasonConfidence": "HIGH",
-        "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Applied Materials, ASML, Lam Hit Record Highs, Lead Chip Gear Stocks Rally 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-        "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Applied Materials, ASML, Lam Hit Record Highs, Lead Chip Gear Stocks Rally",
-        "tieBreakerReason": "최종 원점수 112, 리스크 패널티 0, 5일 수익률 +7.71%, 상대 거래량 1.19배 순으로 정렬",
-        "entryQualityScore": 51,
-        "entryQualityLabel": "관찰",
-        "trendStrengthIndex": 79,
-        "trendStateLabel": "부상",
-        "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-        "exhaustionRisk": 38,
-        "exhaustionRiskLabel": "보통",
-        "relativeVolume": 1.19,
-        "marketDataStatus": "ok",
-        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
-        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-        "actionGate": {
-          "label": "관찰",
-          "status": "관찰",
-          "reasons": []
-        },
-        "marketContext": {
-          "marketRegime": "중립",
-          "candidateEnvironment": "관찰",
-          "reason": "고점 근처 추격 리스크"
-        },
-        "linkedNarrative": "반도체 장비 사이클 재평가",
-        "narrativeStatus": "부상",
-        "narrativeScore": 94,
-        "relatedEtfs": [
-          "SMH",
-          "SOXX",
-          "SOXQ",
-          "AIQ"
-        ],
-        "closePriceAtRecommendation": 1867.83,
-        "recommendationDate": "2026-06-17"
-      }
-    ]
+    "closePriceAtRecommendation": 374.18,
+    "recommendationDate": "2026-06-17"
   },
   "dataReliability": {
     "priceVolumeStatus": "CONNECTED",
@@ -4472,11 +5065,11 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-06-17",
     "priceAsOfLabel": "2026-06-17 US regular close",
-    "reportGeneratedAtKST": "2026-06-18 12:39",
+    "reportGeneratedAtKST": "2026-06-18 13:04",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-06-18T03:39:03.985Z",
-    "newsLastUpdatedAt": "2026-06-18T03:39:03.985Z",
-    "latestNewsPublishedAt": "2026-06-18T03:21:21.000Z",
+    "newsFetchedAt": "2026-06-18T04:04:44.067Z",
+    "newsLastUpdatedAt": "2026-06-18T04:04:44.067Z",
+    "latestNewsPublishedAt": "2026-06-18T03:46:21.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
     "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
@@ -4494,25 +5087,25 @@
       "프리/애프터마켓 확인 불가"
     ],
     "providers": "yfinance, Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API, config fallback sample, price-volume dollar-volume fallback",
-    "recommendationSession": "2026-06-17 US regular session",
+    "recommendationSession": "2026-06-18 US regular session",
     "grade": "LOW",
     "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 프리마켓/정규장 거래량을 별도 확인해야 한다."
   },
   "todayDecision": {
-    "label": "신규 추격 없음 / 관찰",
+    "label": "조건부 진입",
     "screeningUnavailable": false,
     "entryReadyCount": 0,
-    "conditionalCount": 0,
-    "watchCount": 138,
+    "conditionalCount": 6,
+    "watchCount": 131,
     "banCount": 19,
-    "actionCandidateCount": 0,
+    "actionCandidateCount": 3,
     "mainLimiters": [
-      "Entry Quality 부족",
+      "Entry Quality < 40",
       "뉴스 직접성 부족",
       "RVOL 미달"
     ],
     "orderDecision": "시장가 금지 / 지정가 또는 관찰",
-    "noTradeMessage": "오늘은 추세 후보는 있으나, 왜 돈이 몰리는가와 누가 더 비싸게 사줄 수 있는가를 주문 실행 신뢰도와 거래량이 충분히 뒷받침하지 못해 신규 추격은 보류한다. 기존 관심 종목은 전일 고점 돌파와 RVOL 1.00x 회복을 확인한 뒤 조건부로 본다."
+    "noTradeMessage": "진입 후보는 있으나, 전일 고점 돌파와 거래량 확인 후 선별적으로 접근한다."
   },
   "actionGateSummary": {
     "total": 157,
@@ -4526,8 +5119,16 @@
         "count": 13
       },
       {
-        "label": "Entry Quality < 55",
-        "count": 157
+        "label": "Entry Quality 50~54 near miss",
+        "count": 6
+      },
+      {
+        "label": "Entry Quality 40~49 관찰",
+        "count": 9
+      },
+      {
+        "label": "Entry Quality < 40",
+        "count": 142
       },
       {
         "label": "Exhaustion Risk >= 70",
@@ -4543,7 +5144,7 @@
       }
     ],
     "topLimiters": [
-      "Entry Quality 부족",
+      "Entry Quality < 40",
       "뉴스 직접성 부족",
       "RVOL 미달"
     ]

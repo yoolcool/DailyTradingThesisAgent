@@ -1187,16 +1187,16 @@ function actionGate(row) {
   if (entryQuality >= 70) {
     label = "진입 가능";
     status = STATUS.ENTRY_READY;
-  } else if (entryQuality >= 55) {
+  } else if (entryQuality >= 50 || strongMoneyFlowRescue) {
     label = "조건부 진입";
     status = STATUS.ENTRY_CANDIDATE;
+    if (entryQuality < 50) {
+      label = "강한 자금흐름 조건부";
+      reasons.push(`Entry Quality ${entryQuality} < 50, but moneyFlow ${moneyFlow} and confidence ${row.reasonConfidence} support conditional watch`);
+    }
   } else if (entryQuality >= 40) {
     label = "관찰";
     status = STATUS.WATCH;
-  } else if (strongMoneyFlowRescue) {
-    label = "강한 자금흐름 조건부";
-    status = STATUS.ENTRY_CANDIDATE;
-    reasons.push(`Entry Quality ${entryQuality} < 40, but moneyFlow ${moneyFlow} and confidence ${row.reasonConfidence} support conditional watch`);
   }
 
   if (entryQuality < 40 && !strongMoneyFlowRescue) reasons.push(`Entry Quality ${entryQuality} < 40`);
@@ -2009,7 +2009,7 @@ function generateDarkHorseInvalidationCondition(c) {
 
 function generateWhyNotMainCandidate(c) {
   const reasons = [];
-  if (c.entryQualityScore < 60) reasons.push(`Entry Quality ${c.entryQualityScore} < 60`);
+  if (c.entryQualityScore < 50) reasons.push(`Entry Quality ${c.entryQualityScore} < 50`);
   if (c.moneyFlowScore < 75) reasons.push(`moneyFlowScore ${c.moneyFlowScore} < 75`);
   if (c.rvol < 1.2) reasons.push(`RVOL ${num(c.rvol, 2)}x < 1.20x`);
   if (darkHorseBreakoutStatus(c) !== "상단 돌파") reasons.push("최근 고점 돌파 확인 전");
@@ -2913,7 +2913,9 @@ function buildActionGateSummary(rows) {
   const counts = {
     rvolBelowOne: validRows.filter((row) => Number(row.market?.relativeVolume ?? 0) < 1).length,
     lowLiquidity: validRows.filter((row) => ["LOW", "UNKNOWN", "LOW_LIQUIDITY"].includes(row.liquiditySummary?.liquiditySignal)).length,
-    entryQualityBelow55: validRows.filter((row) => Number(row.entryQualityScore ?? 0) < 55).length,
+    entryQualityNearMiss: validRows.filter((row) => Number(row.entryQualityScore ?? 0) >= 50 && Number(row.entryQualityScore ?? 0) < 55).length,
+    entryQualityWatch: validRows.filter((row) => Number(row.entryQualityScore ?? 0) >= 40 && Number(row.entryQualityScore ?? 0) < 50).length,
+    entryQualityBelow40: validRows.filter((row) => Number(row.entryQualityScore ?? 0) < 40).length,
     exhaustionHigh: validRows.filter((row) => Number(row.exhaustionRisk ?? 0) >= 70).length,
     etfBreadthSmallSample: validRows.filter((row) => row.assetType === "ETF" && Number(row.etfBreadthSummary?.sampledHoldingsCount || 0) < 5).length,
     weakNewsDirectness: validRows.filter((row) => Number(row.newsSummary?.directnessScore || 0) < 2).length
@@ -2923,7 +2925,9 @@ function buildActionGateSummary(rows) {
     items: [
       { label: "RVOL < 1.00x", count: counts.rvolBelowOne },
       { label: "거래대금 유동성 낮음", count: counts.lowLiquidity },
-      { label: "Entry Quality < 55", count: counts.entryQualityBelow55 },
+      { label: "Entry Quality 50~54 near miss", count: counts.entryQualityNearMiss },
+      { label: "Entry Quality 40~49 관찰", count: counts.entryQualityWatch },
+      { label: "Entry Quality < 40", count: counts.entryQualityBelow40 },
       { label: "Exhaustion Risk >= 70", count: counts.exhaustionHigh },
       { label: "ETF breadth 샘플 부족", count: counts.etfBreadthSmallSample },
       { label: "뉴스 직접성 부족", count: counts.weakNewsDirectness }
@@ -2932,7 +2936,8 @@ function buildActionGateSummary(rows) {
       "거래대금 유동성 낮음": counts.lowLiquidity,
       "ETF breadth 샘플 부족": counts.etfBreadthSmallSample,
       "RVOL 미달": counts.rvolBelowOne,
-      "Entry Quality 부족": counts.entryQualityBelow55,
+      "Entry Quality < 40": counts.entryQualityBelow40,
+      "Entry Quality 관찰 구간": counts.entryQualityWatch,
       "뉴스 직접성 부족": counts.weakNewsDirectness,
       "과열 위험": counts.exhaustionHigh
     }).filter(([, count]) => count > 0).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([label]) => label)
