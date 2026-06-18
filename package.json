@@ -9,6 +9,7 @@
     "daily-report:real-test": "node src/main.js --real-test",
     "fetch-real-data:us": "node scripts/run-fetch-real-data.js --market us",
     "fetch-real-data:kr": "node scripts/run-fetch-real-data.js --market kr",
+    "update-kospi200-fallback": "python scripts/update_kospi200_fallback.py",
     "daily-report:us": "node src/main.js --market us --real-test",
     "daily-report:kr": "node src/main.js --market kr --real-test",
     "verify-report": "node scripts/verify-report.js",

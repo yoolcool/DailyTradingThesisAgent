@@ -424,7 +424,8 @@ def load_kospi200_members_from_krx():
                 "asOfDate": datetime.now(timezone.utc).date().isoformat(),
             })
         return rows
-    except Exception:
+    except Exception as exc:
+        print(f"KOSPI200 KRX universe fetch failed: {exc}")
         return []
 
 
@@ -432,12 +433,13 @@ def load_universe_members():
     if MARKET_ID == "kr":
         krx_members = load_kospi200_members_from_krx()
         if krx_members:
-            return krx_members
+            return krx_members, "pykrx KOSPI200"
     if not NASDAQ100_FALLBACK_PATH.exists():
-        return []
+        return [], "missing fallback"
     with NASDAQ100_FALLBACK_PATH.open("r", encoding="utf-8") as file:
         data = json.load(file)
-    return [row for row in data.get("members", []) if row.get("isActive", True)]
+    members = [row for row in data.get("members", []) if row.get("isActive", True)]
+    return members, str(NASDAQ100_FALLBACK_PATH)
 
 
 def load_narrative_stocks():
@@ -451,7 +453,7 @@ def main():
     watchlist = load_json("watchlist.json")
     holdings = load_json("holdings.json")
     etfs = load_json("watchlist_etfs.json")
-    universe_members = load_universe_members()
+    universe_members, universe_source = load_universe_members()
     narrative_stocks = load_narrative_stocks()
 
     targets = []
@@ -508,7 +510,7 @@ def main():
         "universe": {
             "stockUniverse": "NASDAQ_100" if MARKET_ID == "us" else "KOSPI200",
             "stockUniverseCount": len(universe_members),
-            "stockUniverseSource": str(NASDAQ100_FALLBACK_PATH),
+            "stockUniverseSource": universe_source,
             "members": universe_members,
         },
         "items": results,
