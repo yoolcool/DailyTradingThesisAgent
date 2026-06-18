@@ -226,6 +226,7 @@ const DEFAULT_NARRATIVE_DEFINITIONS = [
 
 const NARRATIVE_DEFINITIONS = loadNarrativeDefinitions();
 const LOCALIZED_TICKER_NAMES = loadLocalizedTickerNames();
+const NARRATIVE_OVERRIDES = loadNarrativeOverrides();
 
 const NARRATIVE_STATUS = {
   DOMINANT: "지배",
@@ -269,6 +270,14 @@ function loadLocalizedTickerNames() {
   const filePath = path.join(CONFIG_DIR, "tickerNames.json");
   if (!fs.existsSync(filePath)) return {};
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
+
+function loadNarrativeOverrides() {
+  return readConfigJson("narrativeOverrides.json", {
+    tickerNarratives: {},
+    sectorNarratives: {},
+    sectorThemes: {}
+  }) || { tickerNarratives: {}, sectorNarratives: {}, sectorThemes: {} };
 }
 
 function localizedName(ticker, fallback = "") {
@@ -958,6 +967,7 @@ function relatedEtfSymbolsForUniverseMember(member) {
 }
 
 function inferStockTheme(member) {
+  if (MARKET_ID === "kr") return inferKrStockTheme(member);
   const ticker = member.ticker;
   const sector = String(member.sector || "");
   const industry = String(member.industry || "");
@@ -982,6 +992,15 @@ function inferStockTheme(member) {
   if (staples.includes(ticker)) return "필수소비재";
   if (sector === "Technology") return "기술 기타";
   return sector || "Nasdaq-100";
+}
+
+function inferKrStockTheme(member) {
+  const ticker = member.ticker;
+  const sector = String(member.sector || "");
+  return NARRATIVE_OVERRIDES.tickerNarratives?.[ticker] ||
+    NARRATIVE_OVERRIDES.sectorThemes?.[sector] ||
+    sector ||
+    "KOSPI200";
 }
 
 function universeMemberToStock(member) {
@@ -1308,7 +1327,16 @@ function bestNarrativeForRow(row, narratives) {
       const definition = NARRATIVE_DEFINITIONS.find((row) => row.name === narrative.name);
       return definition?.etfs.includes(ticker) || definition?.stocks.includes(ticker);
     })
-    || bestNarrativeByRelatedEtfs(relatedEtfSymbols, narratives);
+    || configuredNarrativeForRow(row, narratives)
+    || (MARKET_ID === "kr" ? null : bestNarrativeByRelatedEtfs(relatedEtfSymbols, narratives));
+}
+
+function configuredNarrativeForRow(row, narratives) {
+  const narrativeName = NARRATIVE_OVERRIDES.tickerNarratives?.[row.ticker] ||
+    NARRATIVE_OVERRIDES.sectorNarratives?.[row.primarySector] ||
+    NARRATIVE_OVERRIDES.sectorNarratives?.[row.sector];
+  if (!narrativeName) return null;
+  return narratives.find((narrative) => narrative.name === narrativeName) || null;
 }
 
 function bestNarrativeByRelatedEtfs(relatedEtfSymbols, narratives) {

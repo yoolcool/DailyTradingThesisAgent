@@ -1,0 +1,29 @@
+{
+  "tickerNarratives": {
+    "004490.KS": "2차전지 소재/셀 반등",
+    "028260.KS": "지주/배당/자사주 재평가",
+    "032830.KS": "금융/밸류업 주주환원",
+    "093370.KS": "2차전지 소재/셀 반등",
+    "402340.KS": "지주/배당/자사주 재평가"
+  },
+  "sectorNarratives": {
+    "Communication Services": "인터넷/게임/엔터 성장주",
+    "Consumer Staples": "화장품/음식료 수출 소비재",
+    "Financials": "금융/밸류업 주주환원",
+    "Health Care": "바이오/헬스케어 실적 전환",
+    "Heavy Industries": "조선/방산 수주 사이클"
+  },
+  "sectorThemes": {
+    "Communication Services": "인터넷/게임/엔터 성장주",
+    "Constructions": "건설/인프라",
+    "Consumer Discretionary": "경기소비재/자동차",
+    "Consumer Staples": "화장품/음식료 수출 소비재",
+    "Energy & Chemicals": "화학/에너지",
+    "Financials": "금융/밸류업 주주환원",
+    "Health Care": "바이오/헬스케어 실적 전환",
+    "Heavy Industries": "조선/방산 수주 사이클",
+    "IT": "IT/전자",
+    "Industrials": "산업재",
+    "Steels & Materials": "철강/소재"
+  }
+}
