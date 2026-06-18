@@ -1,12 +1,15 @@
 const fs = require("fs");
 const path = require("path");
+const { loadMarketProfile } = require("../src/marketProfile");
 
 const ROOT = path.resolve(__dirname, "..");
-const REPORTS_DIR = path.join(ROOT, "reports");
-const DOCS_DIR = path.join(ROOT, "docs");
+const MARKET_PROFILE = loadMarketProfile({ root: ROOT });
+const REPORTS_DIR = MARKET_PROFILE.paths.reportsDir;
+const DOCS_DIR = MARKET_PROFILE.paths.docsDir;
+const DOCS_ROOT_DIR = path.join(ROOT, "docs");
 const REPORT_CHARTS_DIR = path.join(REPORTS_DIR, "charts");
 const DOCS_CHARTS_DIR = path.join(DOCS_DIR, "charts");
-const DATA_DIR = path.join(ROOT, "data");
+const DATA_DIR = MARKET_PROFILE.paths.dataDir;
 const DOCS_DATA_DIR = path.join(DOCS_DIR, "data");
 
 const files = {
@@ -86,9 +89,45 @@ function injectPagesLinks(html) {
   return withStyles.replace("<main>", `<main>${links}`);
 }
 
+function writeRootIndex() {
+  fs.mkdirSync(DOCS_ROOT_DIR, { recursive: true });
+  const generatedAt = new Date().toLocaleString("en-US", { timeZone: "Asia/Seoul" });
+  const html = `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Trading Thesis Reports</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, sans-serif; background: #f8fafc; color: #111827; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; }
+    main { width: min(920px, calc(100vw - 32px)); }
+    h1 { margin: 0 0 10px; font-size: clamp(30px, 6vw, 56px); line-height: 1; letter-spacing: 0; }
+    p { margin: 0 0 28px; color: #475569; font-size: 16px; }
+    nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    a { display: block; padding: 22px; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; color: #0f766e; text-decoration: none; }
+    strong { display: block; margin-bottom: 8px; color: #111827; font-size: 20px; }
+    span { color: #64748b; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Daily Trading Thesis Reports</h1>
+    <p>Generated market reports. Last root index update: ${generatedAt} KST.</p>
+    <nav aria-label="Market reports">
+      <a href="./us/"><strong>US Market</strong><span>NASDAQ-100, US ETFs, and US narrative review</span></a>
+      <a href="./kr/"><strong>Korean Market</strong><span>KOSPI200, KRX data, DART disclosures, and KR narrative review</span></a>
+    </nav>
+  </main>
+</body>
+</html>`;
+  fs.writeFileSync(path.join(DOCS_ROOT_DIR, "index.html"), html, "utf8");
+}
+
 function main() {
   Object.values(files).forEach(assertFile);
   fs.mkdirSync(DOCS_DIR, { recursive: true });
+  writeRootIndex();
 
   const html = fs.readFileSync(files.html, "utf8");
   const indexHtml = injectPagesLinks(html);
@@ -107,6 +146,7 @@ function main() {
   }
 
   console.log(`Prepared ${path.join(DOCS_DIR, "index.html")}`);
+  console.log(`Prepared ${path.join(DOCS_ROOT_DIR, "index.html")}`);
   console.log(`Prepared ${path.join(DOCS_DIR, "latest.md")}`);
   console.log(`Prepared ${path.join(DOCS_DIR, "latest.png")}`);
   if (fs.existsSync(DOCS_CHARTS_DIR)) console.log(`Prepared ${DOCS_CHARTS_DIR}`);

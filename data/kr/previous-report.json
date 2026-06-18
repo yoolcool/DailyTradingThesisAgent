@@ -1,0 +1,298 @@
+{
+  "marketId": "kr",
+  "marketProfile": {
+    "id": "kr",
+    "label": "Korean market",
+    "timezone": "Asia/Seoul",
+    "currency": "KRW",
+    "universeName": "KOSPI200",
+    "benchmarkTickers": [
+      "069500.KS",
+      "229200.KS"
+    ],
+    "sessionLabel": "KRX regular session"
+  },
+  "reportDate": "2026-06-18",
+  "generatedAt": "2026년 6월 18일 목요일 오후 1:59",
+  "stockUniverseScan": {
+    "universeName": "NASDAQ_100",
+    "asOfDate": null,
+    "totalCount": 0,
+    "successCount": 0,
+    "failedCount": 3,
+    "scoreBands": {
+      "strong": 0,
+      "interest": 0,
+      "watch": 0,
+      "low": 3
+    },
+    "results": [
+      {
+        "ticker": "005930.KS",
+        "name": "Samsung Electronics",
+        "assetType": "STOCK",
+        "moneyFlowScore": null,
+        "moneyFlowScoreInitial": null,
+        "moneyFlowScoreFinal": null,
+        "finalRawScore": null,
+        "todayActionLabel": "돌파 확인 후 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": null,
+        "fiveDayReturn": null,
+        "twentyDayReturn": null,
+        "relativeVolume": null,
+        "relatedEtfs": [],
+        "scoreBandLabel": "계산 실패",
+        "scanStatus": "FAILED",
+        "failureReason": "데이터 없음"
+      },
+      {
+        "ticker": "000660.KS",
+        "name": "SK hynix",
+        "assetType": "STOCK",
+        "moneyFlowScore": null,
+        "moneyFlowScoreInitial": null,
+        "moneyFlowScoreFinal": null,
+        "finalRawScore": null,
+        "todayActionLabel": "돌파 확인 후 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": null,
+        "fiveDayReturn": null,
+        "twentyDayReturn": null,
+        "relativeVolume": null,
+        "relatedEtfs": [],
+        "scoreBandLabel": "계산 실패",
+        "scanStatus": "FAILED",
+        "failureReason": "데이터 없음"
+      },
+      {
+        "ticker": "005380.KS",
+        "name": "Hyundai Motor",
+        "assetType": "STOCK",
+        "moneyFlowScore": null,
+        "moneyFlowScoreInitial": null,
+        "moneyFlowScoreFinal": null,
+        "finalRawScore": null,
+        "todayActionLabel": "돌파 확인 후 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": null,
+        "fiveDayReturn": null,
+        "twentyDayReturn": null,
+        "relativeVolume": null,
+        "relatedEtfs": [
+          "069500.KS",
+          "229200.KS"
+        ],
+        "scoreBandLabel": "계산 실패",
+        "scanStatus": "FAILED",
+        "failureReason": "데이터 없음"
+      }
+    ]
+  },
+  "narratives": [
+    {
+      "name": "AI 반도체/HBM 공급망",
+      "status": "약화",
+      "narrativeScore": 0,
+      "rawScore": -10,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [],
+      "supportStocks": [
+        "005930.KS",
+        "000660.KS"
+      ],
+      "representativeEtfs": [],
+      "representativeStocks": [
+        "005930.KS",
+        "000660.KS"
+      ],
+      "whyMoneyIsFlowing": "AI 반도체/HBM 공급망 관련 관련 ETF와 005930.KS, 000660.KS의 5일(0.00%)·20일(0.00%) 흐름을 함께 본다. 평균 상대 거래량은 0.00배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "HBM과 AI 서버 공급망 회복을 확인한 국내 대형주 및 반도체 섹터 자금",
+      "bestTradingVehicle": "ETF 우선: 데이터 없음 / 개별 종목 우선: 005930.KS, 000660.KS",
+      "breakCondition": "KOSPI200 약세 전환 또는 삼성전자/SK하이닉스가 20일선을 동반 이탈",
+      "todayAction": "추격보다 대형 반도체 동조성과 거래대금 회복 확인",
+      "summaryReason": "005930.KS, 000660.KS 중심으로 5일 0.00%, 20일 0.00% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 0,
+      "etfRelativeVolumeAvg": 0,
+      "stockRelativeVolumeAvg": 0
+    },
+    {
+      "name": "자동차/부품 수출 모멘텀",
+      "status": "약화",
+      "narrativeScore": 0,
+      "rawScore": -10,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [],
+      "supportStocks": [
+        "005380.KS"
+      ],
+      "representativeEtfs": [],
+      "representativeStocks": [
+        "005380.KS"
+      ],
+      "whyMoneyIsFlowing": "자동차/부품 수출 모멘텀 관련 관련 ETF와 005380.KS의 5일(0.00%)·20일(0.00%) 흐름을 함께 본다. 평균 상대 거래량은 0.00배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "원화 약세, 수출 호조, 주주환원을 확인한 국내 대형 가치/수출주 자금",
+      "bestTradingVehicle": "ETF 우선: 데이터 없음 / 개별 종목 우선: 005380.KS",
+      "breakCondition": "자동차 대표주가 20일선을 이탈하거나 KOSPI200 대비 상대강도가 약화",
+      "todayAction": "시장 대비 상대강도와 거래대금이 유지될 때만 선별 관찰",
+      "summaryReason": "005380.KS 중심으로 5일 0.00%, 20일 0.00% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 0,
+      "etfRelativeVolumeAvg": 0,
+      "stockRelativeVolumeAvg": 0
+    }
+  ],
+  "topNarratives": [
+    {
+      "name": "AI 반도체/HBM 공급망",
+      "status": "약화",
+      "narrativeScore": 0,
+      "rawScore": -10,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [],
+      "supportStocks": [
+        "005930.KS",
+        "000660.KS"
+      ],
+      "representativeEtfs": [],
+      "representativeStocks": [
+        "005930.KS",
+        "000660.KS"
+      ],
+      "whyMoneyIsFlowing": "AI 반도체/HBM 공급망 관련 관련 ETF와 005930.KS, 000660.KS의 5일(0.00%)·20일(0.00%) 흐름을 함께 본다. 평균 상대 거래량은 0.00배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "HBM과 AI 서버 공급망 회복을 확인한 국내 대형주 및 반도체 섹터 자금",
+      "bestTradingVehicle": "ETF 우선: 데이터 없음 / 개별 종목 우선: 005930.KS, 000660.KS",
+      "breakCondition": "KOSPI200 약세 전환 또는 삼성전자/SK하이닉스가 20일선을 동반 이탈",
+      "todayAction": "추격보다 대형 반도체 동조성과 거래대금 회복 확인",
+      "summaryReason": "005930.KS, 000660.KS 중심으로 5일 0.00%, 20일 0.00% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 0,
+      "etfRelativeVolumeAvg": 0,
+      "stockRelativeVolumeAvg": 0
+    },
+    {
+      "name": "자동차/부품 수출 모멘텀",
+      "status": "약화",
+      "narrativeScore": 0,
+      "rawScore": -10,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [],
+      "supportStocks": [
+        "005380.KS"
+      ],
+      "representativeEtfs": [],
+      "representativeStocks": [
+        "005380.KS"
+      ],
+      "whyMoneyIsFlowing": "자동차/부품 수출 모멘텀 관련 관련 ETF와 005380.KS의 5일(0.00%)·20일(0.00%) 흐름을 함께 본다. 평균 상대 거래량은 0.00배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "원화 약세, 수출 호조, 주주환원을 확인한 국내 대형 가치/수출주 자금",
+      "bestTradingVehicle": "ETF 우선: 데이터 없음 / 개별 종목 우선: 005380.KS",
+      "breakCondition": "자동차 대표주가 20일선을 이탈하거나 KOSPI200 대비 상대강도가 약화",
+      "todayAction": "시장 대비 상대강도와 거래대금이 유지될 때만 선별 관찰",
+      "summaryReason": "005380.KS 중심으로 5일 0.00%, 20일 0.00% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 0,
+      "etfRelativeVolumeAvg": 0,
+      "stockRelativeVolumeAvg": 0
+    }
+  ],
+  "etfActionCandidates": [],
+  "stockActionCandidates": [],
+  "actionCandidates": [],
+  "darkHorseCandidates": [],
+  "stockEntryCandidates": [],
+  "stockPullbackCandidates": [],
+  "stockWatchCandidates": [],
+  "etfWatchCandidates": [],
+  "referenceCandidates": {
+    "etfs": [],
+    "stocks": []
+  },
+  "dataReliability": {
+    "priceVolumeStatus": "FAILED",
+    "priceVolumeStaleFallbackCount": 0,
+    "priceAsOfDate": "데이터 없음",
+    "priceAsOfLabel": "데이터 없음",
+    "reportGeneratedAtKST": "2026-06-18 13:59",
+    "newsStatus": "DISABLED",
+    "newsFetchedAt": "2026-06-18T04:59:13.878Z",
+    "newsLastUpdatedAt": "2026-06-18T04:59:13.878Z",
+    "latestNewsPublishedAt": null,
+    "newsFreshnessStatus": "UNKNOWN",
+    "newsSources": "DART",
+    "newsSourceStatus": "DART DISABLED",
+    "newsReliability": "LOW",
+    "etfBreadthStatus": "DISABLED",
+    "etfBreadthSampleCount": "0",
+    "etfBreadthReliability": "LOW",
+    "liquidityStatus": "FAILED",
+    "prePostMarketStatus": "UNAVAILABLE",
+    "analysisReliability": "LOW",
+    "executionReliability": "LOW",
+    "reliabilityNotes": [
+      "테마 확산 판단 제한",
+      "거래대금 유동성 낮음 또는 확인 불가",
+      "프리/애프터마켓 확인 불가"
+    ],
+    "providers": "pending, DART, config fallback sample, price-volume fallback",
+    "recommendationSession": "2026-06-18 US regular session",
+    "grade": "LOW",
+    "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 프리마켓/정규장 거래량을 별도 확인해야 한다."
+  },
+  "todayDecision": {
+    "label": "데이터 수집 실패 / 판단 보류",
+    "screeningUnavailable": true,
+    "entryReadyCount": 0,
+    "conditionalCount": 0,
+    "watchCount": 0,
+    "banCount": 0,
+    "actionCandidateCount": 0,
+    "mainLimiters": [],
+    "orderDecision": "시장가 금지 / 지정가 또는 관찰",
+    "noTradeMessage": "가격/거래량 수집 실패로 오늘 스크리닝 대상이 없다. 왜 돈이 몰리는가를 검증할 가격/거래량 근거가 비어 있어 후보 0개가 아니라 판단 불가 상태이므로, 데이터 재수집 전까지 신규 추격은 보류한다."
+  },
+  "actionGateSummary": {
+    "total": 0,
+    "items": [
+      {
+        "label": "RVOL < 1.00x",
+        "count": 0
+      },
+      {
+        "label": "거래대금 유동성 낮음",
+        "count": 0
+      },
+      {
+        "label": "Entry Quality 50~54 near miss",
+        "count": 0
+      },
+      {
+        "label": "Entry Quality 40~49 관찰",
+        "count": 0
+      },
+      {
+        "label": "Entry Quality < 40",
+        "count": 0
+      },
+      {
+        "label": "Exhaustion Risk >= 70",
+        "count": 0
+      },
+      {
+        "label": "ETF breadth 샘플 부족",
+        "count": 0
+      },
+      {
+        "label": "뉴스 직접성 부족",
+        "count": 0
+      }
+    ],
+    "topLimiters": []
+  },
+  "dataMode": "REAL_TEST"
+}

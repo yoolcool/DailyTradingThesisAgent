@@ -1,0 +1,24 @@
+[
+  {
+    "ticker": "069500.KS",
+    "name": "KODEX 200",
+    "category": "KOSPI200 benchmark",
+    "theme": ["kospi200", "large-cap", "market-benchmark"],
+    "role": "market_benchmark",
+    "priority": 1,
+    "useCase": "KOSPI200 large-cap risk appetite benchmark",
+    "compareStocks": ["005930.KS", "000660.KS", "005380.KS"],
+    "riskNotes": "Broad market beta can mask sector rotation."
+  },
+  {
+    "ticker": "229200.KS",
+    "name": "KODEX KOSDAQ150",
+    "category": "KOSDAQ150 benchmark",
+    "theme": ["kosdaq150", "growth", "risk-on"],
+    "role": "growth_benchmark",
+    "priority": 1,
+    "useCase": "KOSDAQ growth risk appetite benchmark",
+    "compareStocks": ["247540.KQ", "086520.KQ"],
+    "riskNotes": "Higher volatility growth benchmark."
+  }
+]

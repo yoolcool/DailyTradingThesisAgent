@@ -1,0 +1,56 @@
+name: KR Narrative Review
+
+on:
+  schedule:
+    # 17:30 Asia/Seoul, Tuesday and Thursday.
+    # GitHub Actions schedules use UTC, so this runs 08:30 UTC Tuesday and Thursday.
+    - cron: "30 8 * * 2,4"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  DART_API_KEY: ${{ secrets.DART_API_KEY }}
+  OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
+
+concurrency:
+  group: kr-narrative-review
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: windows-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Generate KR narrative review
+        run: npm.cmd run narrative-review:kr
+
+      - name: Apply KR narrative review
+        run: npm.cmd run apply-narrative-review:kr
+
+      - name: Commit and push KR narrative review
+        shell: pwsh
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/markets/kr/narrativeDefinitions.json reports/kr/narrative-review.md reports/kr/narrative-review.json
+          git diff --cached --quiet; if ($LASTEXITCODE -eq 0) { "No KR narrative review changes to commit."; exit 0 }
+          git commit -m "Update KR narrative review"
+          git push

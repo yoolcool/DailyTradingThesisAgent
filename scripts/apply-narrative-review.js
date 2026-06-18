@@ -1,10 +1,12 @@
 const fs = require("fs");
 const path = require("path");
+const { loadMarketProfile } = require("../src/marketProfile");
 
 const ROOT = path.resolve(__dirname, "..");
+const MARKET_PROFILE = loadMarketProfile({ root: ROOT });
 const SRC_MAIN = path.join(ROOT, "src", "main.js");
-const REVIEW_PATH = path.join(ROOT, "reports", "narrative-review.json");
-const OUTPUT_PATH = path.join(ROOT, "config", "narrativeDefinitions.json");
+const REVIEW_PATH = path.join(MARKET_PROFILE.paths.reportsDir, "narrative-review.json");
+const OUTPUT_PATH = path.join(MARKET_PROFILE.paths.configDir, "narrativeDefinitions.json");
 
 const REQUIRED_FIELDS = [
   "name",

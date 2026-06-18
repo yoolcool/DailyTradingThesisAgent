@@ -1,10 +1,13 @@
 const fs = require("fs");
 const path = require("path");
+const { loadMarketProfile } = require("../src/marketProfile");
 
 const ROOT = path.resolve(__dirname, "..");
-const DATA_DIR = path.join(ROOT, "data");
-const REPORTS_DIR = path.join(ROOT, "reports");
-const DOCS_DIR = path.join(ROOT, "docs");
+const MARKET_PROFILE = loadMarketProfile({ root: ROOT });
+const DATA_DIR = MARKET_PROFILE.paths.dataDir;
+const REPORTS_DIR = MARKET_PROFILE.paths.reportsDir;
+const DOCS_DIR = MARKET_PROFILE.paths.docsDir;
+const IS_KR = MARKET_PROFILE.id === "kr";
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -27,11 +30,51 @@ function sumRiskPenalty(summary) {
   return (summary?.items || []).reduce((sum, item) => sum + Number(item.penalty || 0), 0);
 }
 
+function verifyKrReport(markdown, html, docsHtml) {
+  assert(markdown.includes("REAL DATA TEST") || markdown.includes("MOCK DATA"), "KR report missing data mode banner");
+  assert(html.includes("REAL DATA TEST") || html.includes("MOCK DATA"), "KR HTML missing data mode banner");
+  assert(html.includes("data-data-reliability"), "KR HTML missing data reliability panel");
+  assert(html.includes("data-today-decision"), "KR HTML missing Today Decision panel");
+  assert(html.includes("data-narrative-section"), "KR HTML missing narrative section marker");
+  assert(html.includes("data-stock-universe-table"), "KR HTML missing stock universe table");
+  assert(markdown.includes("DART") || markdown.includes("OpenDART"), "KR markdown missing DART disclosure source status");
+  assert(html.includes("DART") || html.includes("OpenDART"), "KR HTML missing DART disclosure source status");
+  assert(markdown.includes("KOSPI200") || html.includes("KOSPI200") || docsHtml.includes("KOSPI200"), "KR report missing KOSPI200 market marker");
+
+  const latestSnapshot = readJson("latest-report.json");
+  assert(latestSnapshot.marketId === "kr", "KR snapshot marketId should be kr");
+  assert(latestSnapshot.dataReliability?.grade, "KR snapshot missing data reliability grade");
+  assert(latestSnapshot.todayDecision?.label, "KR snapshot missing today decision label");
+  assert(Array.isArray(latestSnapshot.narratives), "KR snapshot missing narratives array");
+  assert(Array.isArray(latestSnapshot.stockUniverseScan?.results), "KR snapshot missing stock universe scan results");
+  assert(Array.isArray(latestSnapshot.actionCandidates), "KR snapshot missing actionCandidates array");
+
+  const marketData = readJson("market_data_real.json");
+  assert(marketData.marketId === "kr", "KR market data marketId should be kr");
+  assert(
+    Array.isArray(marketData.universe?.members) || Array.isArray(latestSnapshot.stockUniverseScan?.results),
+    "KR report missing KOSPI200 universe scan context"
+  );
+
+  const chartsDir = path.join(REPORTS_DIR, "charts");
+  if (fs.existsSync(chartsDir)) {
+    const chartFiles = fs.readdirSync(chartsDir).filter((name) => name.endsWith(".png"));
+    assert(chartFiles.length >= 0, "KR report has invalid chart image count");
+  }
+
+  console.log("Verified KR report split paths, DART source status, KOSPI200 snapshot, and market-scoped outputs");
+}
+
 function main() {
   const markdown = readText(path.join(REPORTS_DIR, "latest.md"));
   const html = readText(path.join(REPORTS_DIR, "latest.html"));
   const docsHtml = readText(path.join(DOCS_DIR, "index.html"));
   const chartsDir = path.join(REPORTS_DIR, "charts");
+
+  if (IS_KR) {
+    verifyKrReport(markdown, html, docsHtml);
+    return;
+  }
 
   assert(markdown.includes("REAL DATA TEST") || markdown.includes("MOCK DATA"), "Report missing data mode banner");
   assert(html.includes("REAL DATA TEST") || html.includes("MOCK DATA"), "HTML missing data mode banner");

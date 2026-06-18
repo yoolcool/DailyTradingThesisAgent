@@ -1,22 +1,39 @@
+import argparse
 import json
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import pandas as pd
 import yfinance as yf
 
+try:
+    from pykrx import stock as pykrx_stock
+except Exception:
+    pykrx_stock = None
+
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA_DIR = ROOT / "data"
-OUTPUT_PATH = DATA_DIR / "market_data_real.json"
-NASDAQ100_FALLBACK_PATH = ROOT / "config" / "nasdaq100Fallback.json"
-NARRATIVE_STOCKS_PATH = ROOT / "config" / "narrativeStocks.json"
 BATCH_SIZE = 25
 MAX_RETRIES = 3
 RETRY_BASE_SECONDS = 2
 MIN_FRESH_OK_RATIO_TO_OVERWRITE = 0.2
 MAX_STALE_FALLBACK_DAYS = 3
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Fetch market price/volume data")
+    parser.add_argument("--market", default="us", choices=["us", "kr"], help="Market profile id")
+    return parser.parse_args()
+
+
+ARGS = parse_args()
+MARKET_ID = ARGS.market.lower()
+CONFIG_DIR = ROOT / "config" if MARKET_ID == "us" else ROOT / "config" / "markets" / MARKET_ID
+DATA_DIR = ROOT / "data" / MARKET_ID
+OUTPUT_PATH = DATA_DIR / "market_data_real.json"
+NASDAQ100_FALLBACK_PATH = CONFIG_DIR / ("nasdaq100Fallback.json" if MARKET_ID == "us" else "kospi200Fallback.json")
+NARRATIVE_STOCKS_PATH = CONFIG_DIR / "narrativeStocks.json"
 
 TICKER_ALIASES = {
     "DRAM": "DRAM",
@@ -35,6 +52,13 @@ def load_json(name):
 
 def normalize_ticker(ticker):
     return TICKER_ALIASES.get(ticker, ticker)
+
+
+def krx_code(ticker):
+    value = str(ticker or "").strip()
+    if value.endswith(".KS") or value.endswith(".KQ"):
+        return value.split(".")[0]
+    return value if value.isdigit() and len(value) == 6 else None
 
 
 def stooq_symbol(ticker):
@@ -194,6 +218,12 @@ def fetch_one(ticker, asset_type):
                 errors.append(str(exc))
         if attempt < MAX_RETRIES:
             time.sleep(RETRY_BASE_SECONDS * attempt)
+    if MARKET_ID == "kr":
+        krx_result = fetch_krx_one(ticker, asset_type)
+        if krx_result.get("dataStatus") == "ok":
+            krx_result["fetchProvider"] = "pykrx"
+            return krx_result
+        errors.append(krx_result.get("error", "KRX fallback failed"))
     stooq_result = fetch_stooq_one(ticker, asset_type)
     if stooq_result.get("dataStatus") == "ok":
         stooq_result["fetchProvider"] = "stooq"
@@ -205,6 +235,57 @@ def fetch_one(ticker, asset_type):
         "dataStatus": "missing",
         "error": "; ".join(errors[-3:]) or "fetch failed",
     }
+
+
+def fetch_krx_one(ticker, asset_type):
+    if pykrx_stock is None:
+        return {
+            "ticker": ticker,
+            "assetType": asset_type,
+            "dataStatus": "missing",
+            "error": "pykrx is not installed",
+        }
+    code = krx_code(ticker)
+    if not code:
+        return {
+            "ticker": ticker,
+            "assetType": asset_type,
+            "dataStatus": "missing",
+            "error": "not a KRX ticker",
+        }
+    end = datetime.now(timezone.utc).date()
+    start = end - timedelta(days=420)
+    try:
+        if asset_type == "ETF":
+            history = pykrx_stock.get_etf_ohlcv_by_date(start.strftime("%Y%m%d"), end.strftime("%Y%m%d"), code)
+        else:
+            history = pykrx_stock.get_market_ohlcv_by_date(start.strftime("%Y%m%d"), end.strftime("%Y%m%d"), code)
+        if history is None or history.empty:
+            return {
+                "ticker": ticker,
+                "assetType": asset_type,
+                "dataStatus": "missing",
+                "error": "empty history from KRX",
+            }
+        converted = history.rename(columns={
+            "시가": "Open",
+            "고가": "High",
+            "저가": "Low",
+            "종가": "Close",
+            "거래량": "Volume",
+        })
+        result = summarize_history(ticker, asset_type, converted.tail(260))
+        if result.get("dataStatus") == "ok":
+            result["dataSource"] = "pykrx"
+            result["fetchPeriod"] = "krx_daily"
+        return result
+    except Exception as exc:
+        return {
+            "ticker": ticker,
+            "assetType": asset_type,
+            "dataStatus": "missing",
+            "error": f"KRX fallback failed: {exc}",
+        }
 
 
 def fetch_stooq_one(ticker, asset_type):
@@ -324,7 +405,34 @@ def previous_ok_count(previous_data):
     return sum(1 for item in items.values() if item.get("dataStatus") == "ok")
 
 
-def load_nasdaq100_members():
+def load_kospi200_members_from_krx():
+    if pykrx_stock is None:
+        return []
+    try:
+        tickers = pykrx_stock.get_index_portfolio_deposit_file("1028")
+        rows = []
+        for ticker in tickers:
+            rows.append({
+                "ticker": f"{ticker}.KS",
+                "displayTicker": ticker,
+                "name": pykrx_stock.get_market_ticker_name(ticker) or ticker,
+                "market": "KOSPI",
+                "sector": "Unknown",
+                "industry": "Unknown",
+                "isActive": True,
+                "source": "pykrx KOSPI200",
+                "asOfDate": datetime.now(timezone.utc).date().isoformat(),
+            })
+        return rows
+    except Exception:
+        return []
+
+
+def load_universe_members():
+    if MARKET_ID == "kr":
+        krx_members = load_kospi200_members_from_krx()
+        if krx_members:
+            return krx_members
     if not NASDAQ100_FALLBACK_PATH.exists():
         return []
     with NASDAQ100_FALLBACK_PATH.open("r", encoding="utf-8") as file:
@@ -343,12 +451,12 @@ def main():
     watchlist = load_json("watchlist.json")
     holdings = load_json("holdings.json")
     etfs = load_json("watchlist_etfs.json")
-    nasdaq100_members = load_nasdaq100_members()
+    universe_members = load_universe_members()
     narrative_stocks = load_narrative_stocks()
 
     targets = []
     seen = set()
-    for row in nasdaq100_members:
+    for row in universe_members:
         ticker = row["ticker"]
         if ticker not in seen:
             targets.append((ticker, "STOCK"))
@@ -386,6 +494,7 @@ def main():
 
     output = {
         "generatedAt": utc_now_iso(),
+        "marketId": MARKET_ID,
         "dataSource": "yfinance",
         "fallbackPolicy": {
             "staleFallbackEnabled": True,
@@ -397,12 +506,14 @@ def main():
             "missingCount": missing,
         },
         "universe": {
-            "stockUniverse": "NASDAQ_100",
-            "stockUniverseCount": len(nasdaq100_members),
+            "stockUniverse": "NASDAQ_100" if MARKET_ID == "us" else "KOSPI200",
+            "stockUniverseCount": len(universe_members),
             "stockUniverseSource": str(NASDAQ100_FALLBACK_PATH),
+            "members": universe_members,
         },
         "items": results,
     }
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
     with OUTPUT_PATH.open("w", encoding="utf-8") as file:
         json.dump(output, file, ensure_ascii=False, indent=2)
 

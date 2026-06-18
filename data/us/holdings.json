@@ -1,0 +1,42 @@
+[
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft",
+    "market": "US",
+    "theme": "AI 플랫폼",
+    "status": "보유 유지",
+    "entryPrice": 420.0,
+    "currentPrice": 431.6,
+    "positionSize": "medium",
+    "changePct": 0.9,
+    "relativeVolume": 1.1,
+    "score": 74,
+    "existingThesis": ["AI 플랫폼과 클라우드 대형주 안정성", "대형 기술주 선호가 유지될 때 방어력과 성장 서사를 동시에 가짐"],
+    "holdEvidence": ["Nasdaq이 약하지 않고 대형 기술주 선호가 유지됨", "MSFT가 QQQ 대비 크게 언더퍼폼하지 않는지 확인 필요", "AI 플랫폼 서사가 아직 훼손되지 않았다는 가정"],
+    "partialProfitConditions": ["QQQ 대비 2거래일 연속 언더퍼폼", "AI 대형주 내 상대강도 하락"],
+    "fullExitCandidateConditions": ["10일선 종가 이탈", "Nasdaq 약세와 동반 하락"],
+    "addPossibility": "현재는 신규 추가보다 보유 관찰 우선",
+    "todayAction": ["보유 유지", "시장 대비 약하면 부분 익절 후보로 격상"],
+    "dataReliability": "MOCK DATA"
+  },
+  {
+    "ticker": "AAPL",
+    "name": "Apple",
+    "market": "US",
+    "theme": "소비자 기술 대형주",
+    "status": "청산 후보",
+    "entryPrice": 192.5,
+    "currentPrice": 188.1,
+    "positionSize": "small",
+    "changePct": -1.2,
+    "relativeVolume": 1.4,
+    "score": 42,
+    "existingThesis": ["대형 기술주 안정성과 소비자 생태계 방어력", "시장 변동성 완화 시 대형주 자금 재유입 가능성"],
+    "holdEvidence": ["QQQ 대비 상대강도가 약하면 보유 논리가 약화됨", "AI 주도주 대비 매수 주체가 선명하지 않음"],
+    "partialProfitConditions": ["전일 종가 회복 실패", "QQQ 대비 언더퍼폼 지속"],
+    "fullExitCandidateConditions": ["장 초반 지지 이탈", "대형 기술주 강세에도 동반 회복 실패"],
+    "addPossibility": "현재는 추가보다 리스크 축소 여부 관찰 우선",
+    "todayAction": ["청산 후보로 관찰", "상대강도 회복 전까지 보유 논리 약화"],
+    "dataReliability": "MOCK DATA"
+  }
+]

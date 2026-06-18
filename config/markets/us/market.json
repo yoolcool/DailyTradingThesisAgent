@@ -1,0 +1,15 @@
+{
+  "id": "us",
+  "label": "US market",
+  "timezone": "America/New_York",
+  "currency": "USD",
+  "universeName": "NASDAQ_100",
+  "benchmarkTickers": ["QQQ", "SPY", "IWM"],
+  "sessionLabel": "US regular session",
+  "paths": {
+    "configDir": "config",
+    "dataDir": "data/us",
+    "reportsDir": "reports/us",
+    "docsDir": "docs/us"
+  }
+}

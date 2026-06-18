@@ -4,6 +4,9 @@ const { spawnSync } = require("child_process");
 
 const ROOT = path.resolve(__dirname, "..");
 const script = path.join(ROOT, "scripts", "fetch_market_data.py");
+const marketArg = process.argv.find((arg) => arg.startsWith("--market="));
+const marketIndex = process.argv.indexOf("--market");
+const market = marketArg ? marketArg.split("=")[1] : marketIndex >= 0 ? process.argv[marketIndex + 1] : process.env.MARKET || process.env.REPORT_MARKET;
 
 const candidates = [
   process.env.PYTHON,
@@ -31,6 +34,7 @@ function main() {
   }
 
   const args = python === "py" ? ["-3", script] : [script];
+  if (market) args.push("--market", market);
   const result = spawnSync(python, args, {
     cwd: ROOT,
     stdio: "inherit",

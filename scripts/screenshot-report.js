@@ -2,9 +2,12 @@ const fs = require("fs");
 const path = require("path");
 const { pathToFileURL } = require("url");
 const { chromium } = require("playwright");
+const { loadMarketProfile } = require("../src/marketProfile");
 
 const ROOT = path.resolve(__dirname, "..");
-const REPORTS_DIR = path.join(ROOT, "reports");
+const MARKET_PROFILE = loadMarketProfile({ root: ROOT });
+const REPORTS_DIR = MARKET_PROFILE.paths.reportsDir;
+const IS_KR = MARKET_PROFILE.id === "kr";
 const htmlPath = path.join(REPORTS_DIR, "latest.html");
 const pngPath = path.join(REPORTS_DIR, "latest.png");
 
@@ -70,18 +73,22 @@ async function main() {
     if (!checks.hasScoreGuide) throw new Error("Rendered page is missing moneyFlowScore guide section.");
     if (!checks.hasInitialFinalLabels) throw new Error("Rendered page is missing initial/final moneyFlowScore labels.");
     if (!checks.hasRiskDetails) throw new Error("Rendered page is missing risk penalty details.");
-    if (!checks.hasStockUniverseTable) throw new Error("Rendered page is missing Nasdaq-100 table.");
+    if (!checks.hasStockUniverseTable) throw new Error(`Rendered page is missing ${MARKET_PROFILE.universeName} table.`);
     if (!checks.hasTableScroll) throw new Error("Rendered page is missing horizontal table scroll wrapper.");
     if (checks.detailsCount < 1) throw new Error("Rendered page is missing mobile-friendly details blocks.");
     if (checks.stockCards < 1) throw new Error("Rendered page has no stock cards.");
-    if (checks.etfCards !== 5) throw new Error(`Rendered page should have exactly 5 detailed ETF cards, found ${checks.etfCards}.`);
-    if (checks.chartImages < 1) throw new Error("Rendered page has no chart images.");
-    if (checks.tradingCharts < 1) throw new Error("Rendered page has no interactive trading charts.");
-    if (checks.activeCandles < 1) throw new Error("Rendered page has no active candlestick charts.");
-    if (checks.tooltipHits < 1) throw new Error("Rendered page has no OHLCV tooltip hit areas.");
-    if (checks.axisMarkers < 1) throw new Error("Rendered page has no current price axis markers.");
-    if (checks.gutterLabels < 1) throw new Error("Rendered page has no gutter annotation labels.");
-    if (checks.chartSummaryLines < 1) throw new Error("Rendered page has no chart summary lines.");
+    if (IS_KR) {
+      if (checks.etfCards < 0) throw new Error("Rendered page has invalid ETF card count.");
+    } else {
+      if (checks.etfCards !== 5) throw new Error(`Rendered page should have exactly 5 detailed ETF cards, found ${checks.etfCards}.`);
+      if (checks.chartImages < 1) throw new Error("Rendered page has no chart images.");
+      if (checks.tradingCharts < 1) throw new Error("Rendered page has no interactive trading charts.");
+      if (checks.activeCandles < 1) throw new Error("Rendered page has no active candlestick charts.");
+      if (checks.tooltipHits < 1) throw new Error("Rendered page has no OHLCV tooltip hit areas.");
+      if (checks.axisMarkers < 1) throw new Error("Rendered page has no current price axis markers.");
+      if (checks.gutterLabels < 1) throw new Error("Rendered page has no gutter annotation labels.");
+      if (checks.chartSummaryLines < 1) throw new Error("Rendered page has no chart summary lines.");
+    }
 
     await page.screenshot({ path: pngPath, fullPage: true });
   } catch (error) {

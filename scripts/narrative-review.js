@@ -1,14 +1,16 @@
 const fs = require("fs");
 const path = require("path");
+const { loadMarketProfile } = require("../src/marketProfile");
 
 const ROOT = path.resolve(__dirname, "..");
-const DATA_DIR = path.join(ROOT, "data");
-const REPORTS_DIR = path.join(ROOT, "reports");
+const MARKET_PROFILE = loadMarketProfile({ root: ROOT });
+const DATA_DIR = MARKET_PROFILE.paths.dataDir;
+const REPORTS_DIR = MARKET_PROFILE.paths.reportsDir;
 const SRC_MAIN = path.join(ROOT, "src", "main.js");
-const NARRATIVE_DEFINITIONS_CONFIG = path.join(ROOT, "config", "narrativeDefinitions.json");
+const NARRATIVE_DEFINITIONS_CONFIG = path.join(MARKET_PROFILE.paths.configDir, "narrativeDefinitions.json");
 const DAILY_REPORTS_DIR = path.join(DATA_DIR, "dailyReports");
-const NASDAQ_FALLBACK = path.join(ROOT, "config", "nasdaq100Fallback.json");
-const NARRATIVE_STOCKS = path.join(ROOT, "config", "narrativeStocks.json");
+const NASDAQ_FALLBACK = path.join(MARKET_PROFILE.paths.configDir, MARKET_PROFILE.id === "kr" ? "kospi200Fallback.json" : "nasdaq100Fallback.json");
+const NARRATIVE_STOCKS = path.join(MARKET_PROFILE.paths.configDir, "narrativeStocks.json");
 
 const LOOKBACK_REPORTS = 10;
 const TOP_NEW_CANDIDATES = 5;
@@ -417,6 +419,12 @@ function main() {
   const reports = loadDailyReports();
   const review = {
     generatedAtKST: generatedAtKST(),
+    marketId: MARKET_PROFILE.id,
+    marketProfile: {
+      id: MARKET_PROFILE.id,
+      label: MARKET_PROFILE.label,
+      universeName: MARKET_PROFILE.universeName
+    },
     mode: "NARRATIVE_REVIEW",
     source: {
       definitions: "src/main.js NARRATIVE_DEFINITIONS",

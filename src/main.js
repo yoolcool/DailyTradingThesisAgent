@@ -2,15 +2,19 @@
 const path = require("path");
 const zlib = require("zlib");
 const { calculateEtfBreadth, fetchEtfHoldings } = require("./data/etfHoldingsProvider");
+const { fetchDartDisclosuresForTicker } = require("./data/dartProvider");
 const { fetchLiquidityProfile } = require("./data/liquidityProvider");
 const { fetchNasdaq100Universe } = require("./data/nasdaq100Universe");
 const { fetchNewsForTicker } = require("./data/newsProvider");
 const { aggregateStatus, statusLabel } = require("./data/providerUtils");
+const { loadMarketProfile } = require("./marketProfile");
 
 const ROOT = path.resolve(__dirname, "..");
-const DATA_DIR = path.join(ROOT, "data");
-const CONFIG_DIR = path.join(ROOT, "config");
-const REPORTS_DIR = path.join(ROOT, "reports");
+const MARKET_PROFILE = loadMarketProfile({ root: ROOT });
+const MARKET_ID = MARKET_PROFILE.id;
+const DATA_DIR = MARKET_PROFILE.paths.dataDir;
+const CONFIG_DIR = MARKET_PROFILE.paths.configDir;
+const REPORTS_DIR = MARKET_PROFILE.paths.reportsDir;
 const CHARTS_DIR = path.join(REPORTS_DIR, "charts");
 const DAILY_REPORTS_DIR = path.join(DATA_DIR, "dailyReports");
 const RECOMMENDATION_HISTORY_FILE = "recommendation-history.json";
@@ -921,7 +925,7 @@ function relatedEtfSymbolsForUniverseMember(member) {
   if (sector.includes("semiconductor")) return { symbols: ["SMH", "SOXX", "SOXQ", "AIQ"], mappingNote: "sector semiconductor fallback" };
   if (sector.includes("software")) return { symbols: ["IGV", "AIQ", "QQQ"], mappingNote: "sector software fallback" };
   if (sector.includes("biotech") || sector.includes("health")) return { symbols: ["IBB", "XBI", "QQQ"], mappingNote: "sector healthcare fallback" };
-  return { symbols: ["QQQ"], mappingNote: "정밀 ETF 매핑 부족 - QQQ 기본값" };
+  return { symbols: MARKET_PROFILE.benchmarkTickers || ["QQQ"], mappingNote: "정밀 ETF 매핑 부족 - 시장 기준 ETF 기본값" };
 }
 
 function inferStockTheme(member) {
@@ -957,13 +961,13 @@ function universeMemberToStock(member) {
   return {
     ticker: member.ticker,
     name: member.name || member.ticker,
-    market: "US",
+    market: MARKET_ID.toUpperCase(),
     theme,
     primaryTheme: theme,
     primarySector: member.sector || "데이터 없음",
     industry: member.industry || "데이터 없음",
     isNewScanCandidate: true,
-    universeName: "NASDAQ_100",
+    universeName: MARKET_PROFILE.universeName,
     universeSource: member.source,
     universeAsOfDate: member.asOfDate,
     relatedEtfSymbols: mapping.symbols,
@@ -977,7 +981,7 @@ function narrativeStockToStock(row) {
   return {
     ticker: row.ticker,
     name: row.name || row.ticker,
-    market: "US",
+    market: MARKET_ID.toUpperCase(),
     theme,
     primaryTheme: theme,
     primarySector: row.sector || "데이터 없음",
@@ -1000,6 +1004,36 @@ function uniqueStocksByTicker(rows) {
   });
 }
 
+async function fetchStockUniverse() {
+  if (MARKET_ID !== "kr") return fetchNasdaq100Universe();
+  const marketData = readJson("market_data_real.json", { universe: {} }) || { universe: {} };
+  const marketDataMembers = Array.isArray(marketData.universe?.members) ? marketData.universe.members : [];
+  if (marketDataMembers.length) {
+    return {
+      universeName: marketData.universe.stockUniverse || MARKET_PROFILE.universeName,
+      source: marketData.universe.stockUniverseSource || "data/kr/market_data_real.json",
+      fetchStatus: "MARKET_DATA",
+      notes: ["Loaded KOSPI200 universe from latest market data"],
+      asOfDate: marketData.generatedAt ? String(marketData.generatedAt).slice(0, 10) : null,
+      members: marketDataMembers
+    };
+  }
+  const fallback = readConfigJson("kospi200Fallback.json", { members: [] }) || { members: [] };
+  const members = Array.isArray(fallback.members) ? fallback.members : [];
+  return {
+    universeName: fallback.universeName || MARKET_PROFILE.universeName,
+    source: fallback.source || "config/markets/kr/kospi200Fallback.json",
+    fetchStatus: members.length ? "FALLBACK" : "EMPTY",
+    notes: members.length ? ["Loaded KOSPI200 fallback universe"] : ["KOSPI200 fallback universe is empty"],
+    asOfDate: fallback.asOfDate || null,
+    members: members.map((row) => ({
+      ...row,
+      source: fallback.source || "config/markets/kr/kospi200Fallback.json",
+      asOfDate: fallback.asOfDate || null
+    }))
+  };
+}
+
 function entryCondition(item) {
   if (!item || item.dataStatus !== "ok") return "데이터 없음";
   if ((item.relativeVolume ?? 0) < 1) return "상대 거래량 1.0배 회복 후 관찰";
@@ -1014,11 +1048,12 @@ function invalidationCondition(item) {
 }
 
 function marketStatus(etfs) {
-  const qqq = etfs.find((etf) => etf.ticker === "QQQ")?.market;
-  const spy = etfs.find((etf) => etf.ticker === "SPY")?.market;
-  if (qqq?.dataStatus !== "ok" || spy?.dataStatus !== "ok") return "중립";
-  const avg20 = ((qqq.return20dPct ?? 0) + (spy.return20dPct ?? 0)) / 2;
-  const avg5 = ((qqq.return5dPct ?? 0) + (spy.return5dPct ?? 0)) / 2;
+  const benchmarkRows = (MARKET_PROFILE.benchmarkTickers || ["QQQ", "SPY"])
+    .map((ticker) => etfs.find((etf) => etf.ticker === ticker)?.market)
+    .filter((market) => market?.dataStatus === "ok");
+  if (benchmarkRows.length < 2) return "중립";
+  const avg20 = averageNonEmpty(benchmarkRows.map((row) => row.return20dPct));
+  const avg5 = averageNonEmpty(benchmarkRows.map((row) => row.return5dPct));
   if (avg20 > 2 && avg5 > 0) return "위험선호";
   if (avg20 < -2 && avg5 < 0) return "위험회피";
   return "중립";
@@ -2022,7 +2057,7 @@ async function buildReport() {
   const marketData = MODE === "REAL_TEST" ? readJson("market_data_real.json", { items: {} }) : null;
   const rawEtfs = readJson("watchlist_etfs.json", []);
   const rawNarrativeStocks = readConfigJson("narrativeStocks.json", []);
-  const stockUniverse = await fetchNasdaq100Universe();
+  const stockUniverse = await fetchStockUniverse();
   const rawScanStocks = uniqueStocksByTicker([
     ...stockUniverse.members.map(universeMemberToStock),
     ...rawNarrativeStocks.map(narrativeStockToStock)
@@ -2083,6 +2118,16 @@ async function buildReport() {
   });
 
   const report = {
+    marketId: MARKET_ID,
+    marketProfile: {
+      id: MARKET_PROFILE.id,
+      label: MARKET_PROFILE.label,
+      timezone: MARKET_PROFILE.timezone,
+      currency: MARKET_PROFILE.currency,
+      universeName: MARKET_PROFILE.universeName,
+      benchmarkTickers: MARKET_PROFILE.benchmarkTickers,
+      sessionLabel: MARKET_PROFILE.sessionLabel
+    },
     generatedAt: new Intl.DateTimeFormat("ko-KR", { timeZone: "Asia/Seoul", dateStyle: "full", timeStyle: "short" }).format(generatedAtDate),
     generatedAtISO: generatedAtDate.toISOString(),
     generatedAtET: formatEasternTimestamp(generatedAtETParts),
@@ -2266,6 +2311,8 @@ function saveDailyRecommendationSnapshot(report) {
 
 function createRecommendationSnapshot(report) {
   return {
+    marketId: report.marketId,
+    marketProfile: report.marketProfile,
     reportDate: report.reportDate,
     generatedAt: report.generatedAt,
     stockUniverseScan: report.stockUniverseScan,
@@ -2731,7 +2778,9 @@ async function collectSupplementalData(rawWatchlist, rawHoldings, rawEtfs, marke
   const tickers = unique([...stockTickers, ...etfTickers]);
   const byTicker = Object.fromEntries(tickers.map((ticker) => [ticker, {}]));
 
-  const newsRows = await Promise.all(tickers.map((ticker) => fetchNewsForTicker(ticker)));
+  const newsRows = await Promise.all(tickers.map((ticker) => (
+    MARKET_ID === "kr" ? fetchDartDisclosuresForTicker(ticker) : fetchNewsForTicker(ticker)
+  )));
   for (const row of newsRows) byTicker[row.ticker].news = row;
   for (const ticker of tickers) {
     byTicker[ticker].liquidity = fetchLiquidityProfile(ticker, marketItem(marketData, ticker));

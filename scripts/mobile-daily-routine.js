@@ -1,4 +1,8 @@
 const { spawnSync } = require("child_process");
+const { marketArg } = require("../src/marketProfile");
+
+const market = marketArg();
+const marketArgs = ["--market", market];
 
 function run(command, args, options = {}) {
   const result = spawnSync(command, args, {
@@ -24,19 +28,19 @@ function capture(command, args) {
 }
 
 function main() {
-  let status = run("node", ["scripts/run-fetch-real-data.js"]);
+  let status = run("node", ["scripts/run-fetch-real-data.js", ...marketArgs]);
   if (status !== 0) process.exit(status);
 
-  status = run("node", ["src/main.js", "--real-test"]);
+  status = run("node", ["src/main.js", "--real-test", ...marketArgs]);
   if (status !== 0) process.exit(status);
 
-  status = run("node", ["scripts/verify-report.js"]);
+  status = run("node", ["scripts/verify-report.js", ...marketArgs]);
   if (status !== 0) process.exit(status);
 
-  status = run("node", ["scripts/screenshot-report.js"]);
+  status = run("node", ["scripts/screenshot-report.js", ...marketArgs]);
   if (status !== 0) process.exit(status);
 
-  status = run("node", ["scripts/prepare-pages.js"]);
+  status = run("node", ["scripts/prepare-pages.js", ...marketArgs]);
   if (status !== 0) process.exit(status);
 
   status = run("git", ["add", "data/market_data_real.json", "reports", "docs"]);

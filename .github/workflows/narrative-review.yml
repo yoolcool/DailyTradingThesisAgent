@@ -1,4 +1,4 @@
-name: Narrative Review
+name: US Narrative Review
 
 on:
   schedule:
@@ -14,7 +14,7 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 concurrency:
-  group: narrative-review
+  group: us-narrative-review
   cancel-in-progress: false
 
 jobs:
@@ -37,18 +37,18 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
-      - name: Generate narrative review
-        run: npm.cmd run narrative-review
+      - name: Generate US narrative review
+        run: npm.cmd run narrative-review:us
 
-      - name: Apply narrative review
-        run: npm.cmd run apply-narrative-review
+      - name: Apply US narrative review
+        run: npm.cmd run apply-narrative-review:us
 
       - name: Commit and push narrative review
         shell: pwsh
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add config/narrativeDefinitions.json reports/narrative-review.md reports/narrative-review.json
+          git add config/narrativeDefinitions.json reports/us/narrative-review.md reports/us/narrative-review.json
           git diff --cached --quiet; if ($LASTEXITCODE -eq 0) { "No narrative review changes to commit."; exit 0 }
-          git commit -m "Update narrative review"
+          git commit -m "Update US narrative review"
           git push

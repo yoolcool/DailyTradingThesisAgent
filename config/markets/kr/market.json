@@ -1,0 +1,15 @@
+{
+  "id": "kr",
+  "label": "Korean market",
+  "timezone": "Asia/Seoul",
+  "currency": "KRW",
+  "universeName": "KOSPI200",
+  "benchmarkTickers": ["069500.KS", "229200.KS"],
+  "sessionLabel": "KRX regular session",
+  "paths": {
+    "configDir": "config/markets/kr",
+    "dataDir": "data/kr",
+    "reportsDir": "reports/kr",
+    "docsDir": "docs/kr"
+  }
+}

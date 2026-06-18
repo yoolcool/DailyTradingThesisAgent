@@ -1,4 +1,4 @@
-name: Mobile Daily Routine
+name: US Daily Routine
 
 on:
   schedule:
@@ -14,7 +14,7 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 concurrency:
-  group: mobile-daily-routine
+  group: us-daily-routine
   cancel-in-progress: false
 
 jobs:
@@ -49,15 +49,15 @@ jobs:
       - name: Install Playwright browser
         run: npx playwright install chromium
 
-      - name: Generate REAL_TEST report
-        run: npm.cmd run daily-publish:real-test
+      - name: Generate US REAL_TEST report
+        run: npm.cmd run daily-publish:us
 
       - name: Commit and push report
         shell: pwsh
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/market_data_real.json data/latest-report.json data/previous-report.json data/dailyReports reports docs
+          git add data/us reports/us docs/us docs/index.html
           $hasChanges = git diff --cached --quiet; if ($LASTEXITCODE -eq 0) { "No report changes to commit."; exit 0 }
-          git commit -m "Update daily trading report"
+          git commit -m "Update US daily trading report"
           git push

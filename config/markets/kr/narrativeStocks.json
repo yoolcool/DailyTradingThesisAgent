@@ -1,0 +1,29 @@
+[
+  {
+    "ticker": "005930.KS",
+    "displayTicker": "005930",
+    "name": "Samsung Electronics",
+    "market": "KOSPI",
+    "sector": "Semiconductors",
+    "industry": "Memory and devices",
+    "primaryTheme": "AI semiconductor/HBM supply chain"
+  },
+  {
+    "ticker": "000660.KS",
+    "displayTicker": "000660",
+    "name": "SK hynix",
+    "market": "KOSPI",
+    "sector": "Semiconductors",
+    "industry": "Memory and HBM",
+    "primaryTheme": "AI semiconductor/HBM supply chain"
+  },
+  {
+    "ticker": "005380.KS",
+    "displayTicker": "005380",
+    "name": "Hyundai Motor",
+    "market": "KOSPI",
+    "sector": "Autos",
+    "industry": "Automobiles",
+    "primaryTheme": "Auto export momentum"
+  }
+]

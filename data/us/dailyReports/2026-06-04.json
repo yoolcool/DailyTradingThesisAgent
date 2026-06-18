@@ -1,0 +1,3654 @@
+{
+  "reportDate": "2026-06-04",
+  "generatedAt": "2026년 6월 4일 목요일 오후 2:33",
+  "stockUniverseScan": {
+    "universeName": "NASDAQ_100",
+    "asOfDate": "2026-06-02",
+    "totalCount": 101,
+    "successCount": 101,
+    "failedCount": 0,
+    "scoreBands": {
+      "strong": 9,
+      "interest": 7,
+      "watch": 7,
+      "low": 78
+    },
+    "results": [
+      {
+        "ticker": "MRVL",
+        "name": "Marvell Technology Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 95,
+        "moneyFlowScoreInitial": 95,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 114,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "HIGH",
+        "oneDayReturn": 3.73,
+        "fiveDayReturn": 51.81,
+        "twentyDayReturn": 78.76,
+        "relativeVolume": 2.98,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "강한 자금 유입 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "WDC",
+        "name": "Western Digital Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 93,
+        "moneyFlowScoreInitial": 93,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 111,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "HIGH",
+        "oneDayReturn": 5.51,
+        "fiveDayReturn": 11.97,
+        "twentyDayReturn": 27.69,
+        "relativeVolume": 1.15,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "강한 자금 유입 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "CRWD",
+        "name": "CrowdStrike Holdings Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 90,
+        "moneyFlowScoreInitial": 90,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 103,
+        "todayActionLabel": "관찰",
+        "reasonConfidence": "HIGH",
+        "oneDayReturn": -2.78,
+        "fiveDayReturn": 15.84,
+        "twentyDayReturn": 56.89,
+        "relativeVolume": 1.41,
+        "relatedEtfs": [
+          "HACK",
+          "CIBR",
+          "IHAK",
+          "IGV"
+        ],
+        "scoreBandLabel": "강한 자금 유입 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "KLAC",
+        "name": "KLA Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 88,
+        "moneyFlowScoreInitial": 88,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 113,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": 3.91,
+        "fiveDayReturn": 8.58,
+        "twentyDayReturn": 22.63,
+        "relativeVolume": 1,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "강한 자금 유입 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "AMAT",
+        "name": "Applied Materials Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 87,
+        "moneyFlowScoreInitial": 87,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 112,
+        "todayActionLabel": "관찰",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": 2.19,
+        "fiveDayReturn": 11.72,
+        "twentyDayReturn": 21.9,
+        "relativeVolume": 1.09,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "강한 자금 유입 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "FTNT",
+        "name": "Fortinet Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 86,
+        "moneyFlowScoreInitial": 86,
+        "moneyFlowScoreFinal": 99,
+        "finalRawScore": 99,
+        "todayActionLabel": "관찰",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": -1.6,
+        "fiveDayReturn": 14.5,
+        "twentyDayReturn": 62.9,
+        "relativeVolume": 1.12,
+        "relatedEtfs": [
+          "HACK",
+          "CIBR",
+          "IHAK",
+          "IGV"
+        ],
+        "scoreBandLabel": "강한 자금 유입 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ODFL",
+        "name": "Old Dominion Freight Line Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 86,
+        "moneyFlowScoreInitial": 86,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 105,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": 3.05,
+        "fiveDayReturn": 7.57,
+        "twentyDayReturn": 20.39,
+        "relativeVolume": 1.29,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "강한 자금 유입 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "AVGO",
+        "name": "Broadcom Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 85,
+        "moneyFlowScoreInitial": 85,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 100,
+        "todayActionLabel": "관찰",
+        "reasonConfidence": "HIGH",
+        "oneDayReturn": -0.49,
+        "fiveDayReturn": 13.6,
+        "twentyDayReturn": 12.14,
+        "relativeVolume": 2.1,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "강한 자금 유입 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ASML",
+        "name": "ASML Holding N.V.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 80,
+        "moneyFlowScoreInitial": 80,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 105,
+        "todayActionLabel": "관찰",
+        "reasonConfidence": "HIGH",
+        "oneDayReturn": 1.23,
+        "fiveDayReturn": 8.04,
+        "twentyDayReturn": 19.64,
+        "relativeVolume": 1.12,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "강한 자금 유입 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "CDNS",
+        "name": "Cadence Design Systems Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 77,
+        "moneyFlowScoreInitial": 77,
+        "moneyFlowScoreFinal": 91,
+        "finalRawScore": 91,
+        "todayActionLabel": "관찰",
+        "reasonConfidence": "HIGH",
+        "oneDayReturn": -2.01,
+        "fiveDayReturn": 9.08,
+        "twentyDayReturn": 15.37,
+        "relativeVolume": 1.24,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "관심 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "PANW",
+        "name": "Palo Alto Networks Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 74,
+        "moneyFlowScoreInitial": 74,
+        "moneyFlowScoreFinal": 87,
+        "finalRawScore": 87,
+        "todayActionLabel": "관찰",
+        "reasonConfidence": "HIGH",
+        "oneDayReturn": -5.64,
+        "fiveDayReturn": 12.86,
+        "twentyDayReturn": 52.42,
+        "relativeVolume": 1.44,
+        "relatedEtfs": [
+          "HACK",
+          "CIBR",
+          "IHAK",
+          "IGV"
+        ],
+        "scoreBandLabel": "관심 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ARM",
+        "name": "Arm Holdings plc",
+        "assetType": "STOCK",
+        "moneyFlowScore": 73,
+        "moneyFlowScoreInitial": 73,
+        "moneyFlowScoreFinal": 88,
+        "finalRawScore": 88,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 2.26,
+        "fiveDayReturn": 36.05,
+        "twentyDayReturn": 97.2,
+        "relativeVolume": 0.87,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "관심 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "MU",
+        "name": "Micron Technology Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 72,
+        "moneyFlowScoreInitial": 72,
+        "moneyFlowScoreFinal": 93,
+        "finalRawScore": 93,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 1.45,
+        "fiveDayReturn": 16.28,
+        "twentyDayReturn": 68.63,
+        "relativeVolume": 0.73,
+        "relatedEtfs": [
+          "DRAM",
+          "SMH",
+          "SOXX",
+          "SOXQ"
+        ],
+        "scoreBandLabel": "관심 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "DDOG",
+        "name": "Datadog Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 70,
+        "moneyFlowScoreInitial": 70,
+        "moneyFlowScoreFinal": 84,
+        "finalRawScore": 84,
+        "todayActionLabel": "관찰",
+        "reasonConfidence": "HIGH",
+        "oneDayReturn": -6.99,
+        "fiveDayReturn": 12.86,
+        "twentyDayReturn": 71.78,
+        "relativeVolume": 1.15,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "관심 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "FANG",
+        "name": "Diamondback Energy Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 69,
+        "moneyFlowScoreInitial": 69,
+        "moneyFlowScoreFinal": 88,
+        "finalRawScore": 88,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": 4.05,
+        "fiveDayReturn": 9.2,
+        "twentyDayReturn": 2.14,
+        "relativeVolume": 1.46,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "관심 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "AMD",
+        "name": "Advanced Micro Devices Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 67,
+        "moneyFlowScoreInitial": 67,
+        "moneyFlowScoreFinal": 84,
+        "finalRawScore": 84,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 4.02,
+        "fiveDayReturn": 9.48,
+        "twentyDayReturn": 52.71,
+        "relativeVolume": 0.79,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "관심 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ADI",
+        "name": "Analog Devices Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 64,
+        "moneyFlowScoreInitial": 64,
+        "moneyFlowScoreFinal": 89,
+        "finalRawScore": 89,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "HIGH",
+        "oneDayReturn": 3.42,
+        "fiveDayReturn": 4.99,
+        "twentyDayReturn": 8.13,
+        "relativeVolume": 1.15,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "관찰 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "LRCX",
+        "name": "Lam Research Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 63,
+        "moneyFlowScoreInitial": 63,
+        "moneyFlowScoreFinal": 84,
+        "finalRawScore": 84,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 2.78,
+        "fiveDayReturn": 7.77,
+        "twentyDayReturn": 24.62,
+        "relativeVolume": 0.94,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "관찰 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "QCOM",
+        "name": "QUALCOMM Incorporated",
+        "assetType": "STOCK",
+        "moneyFlowScore": 63,
+        "moneyFlowScoreInitial": 63,
+        "moneyFlowScoreFinal": 84,
+        "finalRawScore": 84,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 3.81,
+        "fiveDayReturn": 7.12,
+        "twentyDayReturn": 34.02,
+        "relativeVolume": 0.69,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "관찰 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "STX",
+        "name": "Seagate Technology Holdings plc",
+        "assetType": "STOCK",
+        "moneyFlowScore": 58,
+        "moneyFlowScoreInitial": 58,
+        "moneyFlowScoreFinal": 76,
+        "finalRawScore": 76,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 1.52,
+        "fiveDayReturn": 8.04,
+        "twentyDayReturn": 22.01,
+        "relativeVolume": 0.79,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "관찰 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "AXON",
+        "name": "Axon Enterprise Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 56,
+        "moneyFlowScoreInitial": 56,
+        "moneyFlowScoreFinal": 51,
+        "finalRawScore": 51,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -1.76,
+        "fiveDayReturn": 23.04,
+        "twentyDayReturn": 26.51,
+        "relativeVolume": 0.94,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "관찰 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "CSCO",
+        "name": "Cisco Systems Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 55,
+        "moneyFlowScoreInitial": 55,
+        "moneyFlowScoreFinal": 56,
+        "finalRawScore": 56,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -1.17,
+        "fiveDayReturn": 5.71,
+        "twentyDayReturn": 34.15,
+        "relativeVolume": 0.99,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "관찰 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "FAST",
+        "name": "Fastenal Company",
+        "assetType": "STOCK",
+        "moneyFlowScore": 53,
+        "moneyFlowScoreInitial": 53,
+        "moneyFlowScoreFinal": 58,
+        "finalRawScore": 58,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": 3.87,
+        "fiveDayReturn": 3.66,
+        "twentyDayReturn": 4.8,
+        "relativeVolume": 1.18,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "관찰 후보",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "WDAY",
+        "name": "Workday Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 43,
+        "moneyFlowScoreInitial": 43,
+        "moneyFlowScoreFinal": 46,
+        "finalRawScore": 46,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -1.33,
+        "fiveDayReturn": 17.99,
+        "twentyDayReturn": 13.98,
+        "relativeVolume": 0.77,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "LIN",
+        "name": "Linde plc",
+        "assetType": "STOCK",
+        "moneyFlowScore": 41,
+        "moneyFlowScoreInitial": 41,
+        "moneyFlowScoreFinal": 46,
+        "finalRawScore": 46,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": 2.35,
+        "fiveDayReturn": -0.06,
+        "twentyDayReturn": 1.46,
+        "relativeVolume": 1.06,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "KDP",
+        "name": "Keurig Dr Pepper Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 40,
+        "moneyFlowScoreInitial": 40,
+        "moneyFlowScoreFinal": 45,
+        "finalRawScore": 45,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": 0.63,
+        "fiveDayReturn": 1.5,
+        "twentyDayReturn": 5.64,
+        "relativeVolume": 1.17,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "AAPL",
+        "name": "Apple Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 40,
+        "moneyFlowScoreInitial": 40,
+        "moneyFlowScoreFinal": 45,
+        "finalRawScore": 45,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": -1.57,
+        "fiveDayReturn": -0.19,
+        "twentyDayReturn": 9.18,
+        "relativeVolume": 1.07,
+        "relatedEtfs": [
+          "QQQ",
+          "MAGS",
+          "SPY"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "MNST",
+        "name": "Monster Beverage Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 38,
+        "moneyFlowScoreInitial": 38,
+        "moneyFlowScoreFinal": 43,
+        "finalRawScore": 43,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.91,
+        "fiveDayReturn": -0.22,
+        "twentyDayReturn": 17.47,
+        "relativeVolume": 0.79,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "MPWR",
+        "name": "Monolithic Power Systems Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 37,
+        "moneyFlowScoreInitial": 37,
+        "moneyFlowScoreFinal": 45,
+        "finalRawScore": 45,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 3.99,
+        "fiveDayReturn": 4.3,
+        "twentyDayReturn": 6.41,
+        "relativeVolume": 0.66,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "DXCM",
+        "name": "DexCom Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 33,
+        "moneyFlowScoreInitial": 33,
+        "moneyFlowScoreFinal": 38,
+        "finalRawScore": 38,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.93,
+        "fiveDayReturn": 3.57,
+        "twentyDayReturn": 22.34,
+        "relativeVolume": 0.57,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "MSFT",
+        "name": "Microsoft Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 33,
+        "moneyFlowScoreInitial": 33,
+        "moneyFlowScoreFinal": 40,
+        "finalRawScore": 40,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": -3.17,
+        "fiveDayReturn": 3.55,
+        "twentyDayReturn": 3.88,
+        "relativeVolume": 1.05,
+        "relatedEtfs": [
+          "QQQ",
+          "MAGS",
+          "IGV",
+          "AIQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "META",
+        "name": "Meta Platforms Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 33,
+        "moneyFlowScoreInitial": 33,
+        "moneyFlowScoreFinal": 38,
+        "finalRawScore": 38,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": 4.24,
+        "fiveDayReturn": -1.93,
+        "twentyDayReturn": 2.98,
+        "relativeVolume": 1.45,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "PCAR",
+        "name": "PACCAR Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 32,
+        "moneyFlowScoreInitial": 32,
+        "moneyFlowScoreFinal": 37,
+        "finalRawScore": 37,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": 1.32,
+        "fiveDayReturn": 1.89,
+        "twentyDayReturn": 0.85,
+        "relativeVolume": 1.16,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "TEAM",
+        "name": "Atlassian Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 29,
+        "moneyFlowScoreInitial": 29,
+        "moneyFlowScoreFinal": 32,
+        "finalRawScore": 32,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -6.94,
+        "fiveDayReturn": 13.99,
+        "twentyDayReturn": 9.94,
+        "relativeVolume": 0.69,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "IDXX",
+        "name": "IDEXX Laboratories Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 26,
+        "moneyFlowScoreInitial": 26,
+        "moneyFlowScoreFinal": 31,
+        "finalRawScore": 31,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 1.8,
+        "fiveDayReturn": 1.77,
+        "twentyDayReturn": -0.4,
+        "relativeVolume": 1.32,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ROST",
+        "name": "Ross Stores Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 24,
+        "moneyFlowScoreInitial": 24,
+        "moneyFlowScoreFinal": 29,
+        "finalRawScore": 29,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 3.93,
+        "fiveDayReturn": -0.36,
+        "twentyDayReturn": 2.29,
+        "relativeVolume": 0.82,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ADP",
+        "name": "Automatic Data Processing Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 21,
+        "moneyFlowScoreInitial": 21,
+        "moneyFlowScoreFinal": 26,
+        "finalRawScore": 26,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -1.48,
+        "fiveDayReturn": 4.64,
+        "twentyDayReturn": 8.14,
+        "relativeVolume": 0.94,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "CSGP",
+        "name": "CoStar Group Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 20,
+        "moneyFlowScoreInitial": 20,
+        "moneyFlowScoreFinal": 25,
+        "finalRawScore": 25,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.77,
+        "fiveDayReturn": 3.34,
+        "twentyDayReturn": -4.3,
+        "relativeVolume": 1.08,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "EA",
+        "name": "Electronic Arts Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 20,
+        "moneyFlowScoreInitial": 20,
+        "moneyFlowScoreFinal": 25,
+        "finalRawScore": 25,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.31,
+        "fiveDayReturn": 0.97,
+        "twentyDayReturn": 0.53,
+        "relativeVolume": 0.8,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "CSX",
+        "name": "CSX Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 20,
+        "moneyFlowScoreInitial": 20,
+        "moneyFlowScoreFinal": 25,
+        "finalRawScore": 25,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.65,
+        "fiveDayReturn": -1.48,
+        "twentyDayReturn": 3.13,
+        "relativeVolume": 0.95,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "NXPI",
+        "name": "NXP Semiconductors N.V.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 19,
+        "moneyFlowScoreInitial": 19,
+        "moneyFlowScoreFinal": 27,
+        "finalRawScore": 27,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.54,
+        "fiveDayReturn": -2.24,
+        "twentyDayReturn": 10.1,
+        "relativeVolume": 0.74,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "EXC",
+        "name": "Exelon Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 19,
+        "moneyFlowScoreInitial": 19,
+        "moneyFlowScoreFinal": 24,
+        "finalRawScore": 24,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.18,
+        "fiveDayReturn": -2.4,
+        "twentyDayReturn": -2.38,
+        "relativeVolume": 1.38,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "APP",
+        "name": "AppLovin Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 18,
+        "moneyFlowScoreInitial": 18,
+        "moneyFlowScoreFinal": 25,
+        "finalRawScore": 25,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -5.75,
+        "fiveDayReturn": 0.53,
+        "twentyDayReturn": 19.39,
+        "relativeVolume": 0.63,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "TXN",
+        "name": "Texas Instruments Incorporated",
+        "assetType": "STOCK",
+        "moneyFlowScore": 18,
+        "moneyFlowScoreInitial": 18,
+        "moneyFlowScoreFinal": 26,
+        "finalRawScore": 26,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.15,
+        "fiveDayReturn": -2.79,
+        "twentyDayReturn": 9.82,
+        "relativeVolume": 0.83,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "MAR",
+        "name": "Marriott International Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 17,
+        "moneyFlowScoreInitial": 17,
+        "moneyFlowScoreFinal": 22,
+        "finalRawScore": 22,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.8,
+        "fiveDayReturn": -2.36,
+        "twentyDayReturn": 6.27,
+        "relativeVolume": 0.75,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "CTAS",
+        "name": "Cintas Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 15,
+        "moneyFlowScoreInitial": 15,
+        "moneyFlowScoreFinal": 20,
+        "finalRawScore": 20,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.81,
+        "fiveDayReturn": 2.86,
+        "twentyDayReturn": 3.23,
+        "relativeVolume": 0.89,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "PLTR",
+        "name": "Palantir Technologies Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 14,
+        "moneyFlowScoreInitial": 14,
+        "moneyFlowScoreFinal": 17,
+        "finalRawScore": 17,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -6.55,
+        "fiveDayReturn": 7.31,
+        "twentyDayReturn": 4.63,
+        "relativeVolume": 0.96,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "CIBR",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "PAYX",
+        "name": "Paychex Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 14,
+        "moneyFlowScoreInitial": 14,
+        "moneyFlowScoreFinal": 19,
+        "finalRawScore": 19,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -2.32,
+        "fiveDayReturn": 4.26,
+        "twentyDayReturn": 6.03,
+        "relativeVolume": 0.75,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ADBE",
+        "name": "Adobe Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 13,
+        "moneyFlowScoreInitial": 13,
+        "moneyFlowScoreFinal": 16,
+        "finalRawScore": 16,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -2.24,
+        "fiveDayReturn": 7.56,
+        "twentyDayReturn": 0.24,
+        "relativeVolume": 0.99,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "VRSK",
+        "name": "Verisk Analytics Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 11,
+        "moneyFlowScoreInitial": 11,
+        "moneyFlowScoreFinal": 16,
+        "finalRawScore": 16,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.43,
+        "fiveDayReturn": 3.98,
+        "twentyDayReturn": -1.17,
+        "relativeVolume": 0.87,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "SHOP",
+        "name": "Shopify Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 10,
+        "moneyFlowScoreInitial": 10,
+        "moneyFlowScoreFinal": 13,
+        "finalRawScore": 13,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -3.48,
+        "fiveDayReturn": 5.95,
+        "twentyDayReturn": 4.93,
+        "relativeVolume": 0.57,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "AMGN",
+        "name": "Amgen Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 10,
+        "moneyFlowScoreInitial": 10,
+        "moneyFlowScoreFinal": 15,
+        "finalRawScore": 15,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 3.03,
+        "fiveDayReturn": 0.64,
+        "twentyDayReturn": 2.62,
+        "relativeVolume": 0.93,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "MCHP",
+        "name": "Microchip Technology Incorporated",
+        "assetType": "STOCK",
+        "moneyFlowScore": 9,
+        "moneyFlowScoreInitial": 9,
+        "moneyFlowScoreFinal": 17,
+        "finalRawScore": 17,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.42,
+        "fiveDayReturn": -0.31,
+        "twentyDayReturn": -1.96,
+        "relativeVolume": 0.88,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "CCEP",
+        "name": "Coca-Cola Europacific Partners PLC",
+        "assetType": "STOCK",
+        "moneyFlowScore": 8,
+        "moneyFlowScoreInitial": 8,
+        "moneyFlowScoreFinal": 7,
+        "finalRawScore": 7,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 1.55,
+        "fiveDayReturn": -2.42,
+        "twentyDayReturn": -1.21,
+        "relativeVolume": 1.25,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "HON",
+        "name": "Honeywell International Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 8,
+        "moneyFlowScoreInitial": 8,
+        "moneyFlowScoreFinal": 7,
+        "finalRawScore": 7,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -5.09,
+        "fiveDayReturn": -3.58,
+        "twentyDayReturn": 6.79,
+        "relativeVolume": 1.33,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ZS",
+        "name": "Zscaler Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 4,
+        "moneyFlowScoreInitial": 4,
+        "moneyFlowScoreFinal": 4,
+        "finalRawScore": 4,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -6.78,
+        "fiveDayReturn": 6.3,
+        "twentyDayReturn": -4.94,
+        "relativeVolume": 1.08,
+        "relatedEtfs": [
+          "HACK",
+          "CIBR",
+          "IHAK",
+          "IGV"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "NVDA",
+        "name": "NVIDIA Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 3,
+        "moneyFlowScoreInitial": 3,
+        "moneyFlowScoreFinal": 5,
+        "finalRawScore": 5,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -3.62,
+        "fiveDayReturn": 1.01,
+        "twentyDayReturn": 9.29,
+        "relativeVolume": 0.91,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "WMT",
+        "name": "Walmart Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 3,
+        "moneyFlowScoreInitial": 3,
+        "moneyFlowScoreFinal": 2,
+        "finalRawScore": 2,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 3.39,
+        "fiveDayReturn": -1.39,
+        "twentyDayReturn": -10.63,
+        "relativeVolume": 1.35,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ALNY",
+        "name": "Alnylam Pharmaceuticals Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 2,
+        "moneyFlowScoreInitial": 2,
+        "moneyFlowScoreFinal": 1,
+        "finalRawScore": 1,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 2.26,
+        "fiveDayReturn": -1.03,
+        "twentyDayReturn": -2.83,
+        "relativeVolume": 1,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "VRTX",
+        "name": "Vertex Pharmaceuticals Incorporated",
+        "assetType": "STOCK",
+        "moneyFlowScore": 2,
+        "moneyFlowScoreInitial": 2,
+        "moneyFlowScoreFinal": 1,
+        "finalRawScore": 1,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.76,
+        "fiveDayReturn": -2.03,
+        "twentyDayReturn": 0.94,
+        "relativeVolume": 1.19,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ROP",
+        "name": "Roper Technologies Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 1,
+        "moneyFlowScoreInitial": 1,
+        "moneyFlowScoreFinal": 8,
+        "finalRawScore": 8,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -1.43,
+        "fiveDayReturn": 4.76,
+        "twentyDayReturn": -6.97,
+        "relativeVolume": 0.67,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "BKR",
+        "name": "Baker Hughes Company",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -4,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.42,
+        "fiveDayReturn": 1.69,
+        "twentyDayReturn": -5.18,
+        "relativeVolume": 0.78,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "TRI",
+        "name": "Thomson Reuters Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -28,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -3.36,
+        "fiveDayReturn": 1.53,
+        "twentyDayReturn": -12.6,
+        "relativeVolume": 0.52,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "INTU",
+        "name": "Intuit Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -27,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -3.32,
+        "fiveDayReturn": 1.21,
+        "twentyDayReturn": -21.81,
+        "relativeVolume": 0.94,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ABNB",
+        "name": "Airbnb Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -13,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.57,
+        "fiveDayReturn": 1.13,
+        "twentyDayReturn": -4.39,
+        "relativeVolume": 0.84,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "CTSH",
+        "name": "Cognizant Technology Solutions Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 4,
+        "finalRawScore": 4,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -2.96,
+        "fiveDayReturn": 0.66,
+        "twentyDayReturn": 3.16,
+        "relativeVolume": 0.78,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "WBD",
+        "name": "Warner Bros. Discovery Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -12,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.66,
+        "fiveDayReturn": -0.52,
+        "twentyDayReturn": -0.81,
+        "relativeVolume": 0.91,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "TTWO",
+        "name": "Take-Two Interactive Software Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -21,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -2.96,
+        "fiveDayReturn": -1.22,
+        "twentyDayReturn": -3.28,
+        "relativeVolume": 0.77,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "PDD",
+        "name": "PDD Holdings Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -33,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -3.15,
+        "fiveDayReturn": -1.4,
+        "twentyDayReturn": -11.73,
+        "relativeVolume": 0.88,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "REGN",
+        "name": "Regeneron Pharmaceuticals Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -22,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 2.66,
+        "fiveDayReturn": -1.4,
+        "twentyDayReturn": -11.86,
+        "relativeVolume": 0.83,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "MDLZ",
+        "name": "Mondelez International Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -14,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.39,
+        "fiveDayReturn": -1.51,
+        "twentyDayReturn": -0.08,
+        "relativeVolume": 0.93,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ORLY",
+        "name": "O'Reilly Automotive Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -3,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 1.33,
+        "fiveDayReturn": -1.84,
+        "twentyDayReturn": -8.02,
+        "relativeVolume": 1.15,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "DASH",
+        "name": "DoorDash Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -28,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -1.51,
+        "fiveDayReturn": -1.9,
+        "twentyDayReturn": -6.96,
+        "relativeVolume": 0.75,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "BKNG",
+        "name": "Booking Holdings Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -4,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -1.45,
+        "fiveDayReturn": -2.13,
+        "twentyDayReturn": -1.7,
+        "relativeVolume": 0.91,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "INSM",
+        "name": "Insmed Incorporated",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -31,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.13,
+        "fiveDayReturn": -2.39,
+        "twentyDayReturn": -25.52,
+        "relativeVolume": 0.65,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "AEP",
+        "name": "American Electric Power Company Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -23,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.63,
+        "fiveDayReturn": -2.52,
+        "twentyDayReturn": -7.83,
+        "relativeVolume": 0.96,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "PYPL",
+        "name": "PayPal Holdings Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -11,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -4.31,
+        "fiveDayReturn": -2.63,
+        "twentyDayReturn": -8.35,
+        "relativeVolume": 1.28,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ISRG",
+        "name": "Intuitive Surgical Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -11,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 1.24,
+        "fiveDayReturn": -2.69,
+        "twentyDayReturn": -9.77,
+        "relativeVolume": 1.06,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "GEHC",
+        "name": "GE HealthCare Technologies Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -18,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.06,
+        "fiveDayReturn": -2.9,
+        "twentyDayReturn": 1.62,
+        "relativeVolume": 0.83,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "ADSK",
+        "name": "Autodesk Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -31,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -2.98,
+        "fiveDayReturn": -3.12,
+        "twentyDayReturn": -7.95,
+        "relativeVolume": 0.99,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "MELI",
+        "name": "MercadoLibre Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -33,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -2.05,
+        "fiveDayReturn": -3.4,
+        "twentyDayReturn": -9.84,
+        "relativeVolume": 0.69,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "GILD",
+        "name": "Gilead Sciences Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -23,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 1.11,
+        "fiveDayReturn": -3.52,
+        "twentyDayReturn": -3.36,
+        "relativeVolume": 0.91,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "PEP",
+        "name": "PepsiCo Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -29,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.38,
+        "fiveDayReturn": -3.52,
+        "twentyDayReturn": -8.06,
+        "relativeVolume": 0.85,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "TSLA",
+        "name": "Tesla Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -8,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.01,
+        "fiveDayReturn": -3.78,
+        "twentyDayReturn": 8.82,
+        "relativeVolume": 0.87,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "COST",
+        "name": "Costco Wholesale Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -27,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.79,
+        "fiveDayReturn": -4.17,
+        "twentyDayReturn": -5.37,
+        "relativeVolume": 0.87,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "XEL",
+        "name": "Xcel Energy Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -1,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.62,
+        "fiveDayReturn": -4.46,
+        "twentyDayReturn": -4.98,
+        "relativeVolume": 1.26,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "FER",
+        "name": "Ferrovial N.V.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -1,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.08,
+        "fiveDayReturn": -4.5,
+        "twentyDayReturn": -4.61,
+        "relativeVolume": 1.2,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "TMUS",
+        "name": "T-Mobile US Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -14,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -3.91,
+        "fiveDayReturn": -4.91,
+        "twentyDayReturn": -6.62,
+        "relativeVolume": 1.45,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "SNPS",
+        "name": "Synopsys Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -19,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -2.03,
+        "fiveDayReturn": -5.3,
+        "twentyDayReturn": -0.89,
+        "relativeVolume": 0.84,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "SBUX",
+        "name": "Starbucks Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -11,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 0.4,
+        "fiveDayReturn": -6.08,
+        "twentyDayReturn": -8.62,
+        "relativeVolume": 1.1,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "KHC",
+        "name": "The Kraft Heinz Company",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -10,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -2.44,
+        "fiveDayReturn": -6.64,
+        "twentyDayReturn": 0.98,
+        "relativeVolume": 1.19,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "NFLX",
+        "name": "Netflix Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -19,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -2.17,
+        "fiveDayReturn": -6.67,
+        "twentyDayReturn": -7.25,
+        "relativeVolume": 1.09,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "CMCSA",
+        "name": "Comcast Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -20,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -5.35,
+        "fiveDayReturn": -6.74,
+        "twentyDayReturn": -11.11,
+        "relativeVolume": 1.36,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "CEG",
+        "name": "Constellation Energy Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -23,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -1.98,
+        "fiveDayReturn": -7.43,
+        "twentyDayReturn": -16.6,
+        "relativeVolume": 1.02,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "INTC",
+        "name": "Intel Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -10,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 4.43,
+        "fiveDayReturn": -7.44,
+        "twentyDayReturn": 4.22,
+        "relativeVolume": 0.87,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "GOOG",
+        "name": "Alphabet Inc. Class C",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -6,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.76,
+        "fiveDayReturn": -7.57,
+        "twentyDayReturn": -7.44,
+        "relativeVolume": 2.03,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "CPRT",
+        "name": "Copart Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -38,
+        "todayActionLabel": "거래량 확인 전 관찰",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -1.65,
+        "fiveDayReturn": -7.61,
+        "twentyDayReturn": -8.45,
+        "relativeVolume": 0.95,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "GOOGL",
+        "name": "Alphabet Inc. Class A",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -6,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.79,
+        "fiveDayReturn": -7.67,
+        "twentyDayReturn": -7.58,
+        "relativeVolume": 1.84,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "AMZN",
+        "name": "Amazon.com Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -8,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -2.53,
+        "fiveDayReturn": -8.03,
+        "twentyDayReturn": -8.6,
+        "relativeVolume": 1.29,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "CHTR",
+        "name": "Charter Communications Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -21,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -8.03,
+        "fiveDayReturn": -12.35,
+        "twentyDayReturn": -18.47,
+        "relativeVolume": 1.39,
+        "relatedEtfs": [
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "MSTR",
+        "name": "Strategy Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 0,
+        "moneyFlowScoreInitial": 0,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -19,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -7,
+        "fiveDayReturn": -17.93,
+        "twentyDayReturn": -32.29,
+        "relativeVolume": 1.32,
+        "relatedEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      }
+    ]
+  },
+  "narratives": [
+    {
+      "name": "AI 인프라 재가속",
+      "status": "지배",
+      "narrativeScore": 80,
+      "rawScore": 80,
+      "reasonConfidence": "MEDIUM",
+      "supportEtfs": [
+        "SOXQ",
+        "DRAM",
+        "SOXX",
+        "SMH"
+      ],
+      "supportStocks": [
+        "AVGO",
+        "MU",
+        "ARM",
+        "AMD",
+        "NVDA"
+      ],
+      "representativeEtfs": [
+        "SOXQ",
+        "DRAM",
+        "SOXX"
+      ],
+      "representativeStocks": [
+        "AVGO",
+        "MU",
+        "ARM",
+        "AMD"
+      ],
+      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 SOXQ, DRAM, SOXX와 AVGO, MU, ARM, AMD의 5일(+10.87%)·20일(+33.52%) 흐름을 함께 본다. 평균 상대 거래량은 1.02배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "AI 인프라 CAPEX를 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, DRAM / 개별 종목 우선: NVDA, AVGO, MU",
+      "breakCondition": "SMH/SOXX 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
+      "todayAction": "추격보다 5일선 지지 후 재상승 확인",
+      "summaryReason": "SOXQ, DRAM, AVGO, MU 중심으로 5일 +10.87%, 20일 +33.52% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 1,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "AI 소프트웨어/사이버보안 확산",
+      "status": "부상",
+      "narrativeScore": 68,
+      "rawScore": 68,
+      "reasonConfidence": "MEDIUM",
+      "supportEtfs": [
+        "AIQ",
+        "HACK",
+        "CIBR",
+        "IGV"
+      ],
+      "supportStocks": [
+        "CRWD",
+        "PANW",
+        "DDOG",
+        "TEAM"
+      ],
+      "representativeEtfs": [
+        "AIQ",
+        "HACK",
+        "CIBR"
+      ],
+      "representativeStocks": [
+        "CRWD",
+        "PANW",
+        "DDOG",
+        "TEAM"
+      ],
+      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 AIQ, HACK, CIBR와 CRWD, PANW, DDOG, TEAM의 5일(+9.77%)·20일(+24.78%) 흐름을 함께 본다. 평균 상대 거래량은 1.09배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "섹터 베타를 사는 ETF 자금, AI/보안 실적 기대를 사는 스윙 트레이더, 신고가 추종 자금",
+      "bestTradingVehicle": "ETF 우선: IGV, CIBR, AIQ / 개별 종목 우선: PANW, CRWD, DDOG",
+      "breakCondition": "IGV/CIBR 20일선 이탈, 관련 개별 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
+      "todayAction": "추격보다 눌림 후 재상승 확인",
+      "summaryReason": "AIQ, HACK, CRWD, PANW 중심으로 5일 +9.77%, 20일 +24.78% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 3,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "위험선호 성장주 재진입",
+      "status": "약화",
+      "narrativeScore": 48,
+      "rawScore": 48,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "QQQ",
+        "IPO",
+        "ARKK"
+      ],
+      "supportStocks": [
+        "ARM",
+        "TSLA"
+      ],
+      "representativeEtfs": [
+        "QQQ",
+        "IPO",
+        "ARKK"
+      ],
+      "representativeStocks": [
+        "ARM",
+        "TSLA"
+      ],
+      "whyMoneyIsFlowing": "위험선호 성장주 재진입 관련 QQQ, IPO, ARKK와 ARM, TSLA의 5일(+5.22%)·20일(+18.86%) 흐름을 함께 본다. 평균 상대 거래량은 1.34배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "위험선호 회복을 사는 성장주 ETF 자금과 고베타 단기 모멘텀 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ, IPO, ARKK / 개별 종목 우선: ARM, TSLA",
+      "breakCondition": "QQQ/IWM 동반 약화, 고베타 성장주 상대 거래량 둔화",
+      "todayAction": "지수 위험선호가 유지될 때만 선별 진입",
+      "summaryReason": "QQQ, IPO, ARM, TSLA 중심으로 5일 +5.22%, 20일 +18.86% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 2,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "매크로 방어/헤지",
+      "status": "약화",
+      "narrativeScore": 13,
+      "rawScore": 13,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "XLE",
+        "TLT",
+        "GLD"
+      ],
+      "supportStocks": [],
+      "representativeEtfs": [
+        "XLE",
+        "TLT",
+        "GLD"
+      ],
+      "representativeStocks": [],
+      "whyMoneyIsFlowing": "매크로 방어/헤지 관련 XLE, TLT, GLD와 관련 종목의 5일(+1.05%)·20일(-1.50%) 흐름을 함께 본다. 평균 상대 거래량은 0.87배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "금리/에너지/방어 헤지를 찾는 매크로 자금",
+      "bestTradingVehicle": "ETF 우선: GLD, TLT, XLE / 개별 종목 우선: 데이터 없음",
+      "breakCondition": "방어 ETF 상대강도 둔화와 위험선호 성장주 재강세",
+      "todayAction": "위험회피가 확인될 때만 헤지성 접근",
+      "summaryReason": "XLE, TLT 중심으로 5일 +1.05%, 20일 -1.50% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 0
+    },
+    {
+      "name": "전력망/원전/인프라 병목",
+      "status": "약화",
+      "narrativeScore": 7,
+      "rawScore": 7,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "PAVE",
+        "GRID",
+        "URA"
+      ],
+      "supportStocks": [
+        "CEG"
+      ],
+      "representativeEtfs": [
+        "PAVE",
+        "GRID",
+        "URA"
+      ],
+      "representativeStocks": [
+        "CEG"
+      ],
+      "whyMoneyIsFlowing": "전력망/원전/인프라 병목 관련 PAVE, GRID, URA와 CEG의 5일(-0.55%)·20일(-2.71%) 흐름을 함께 본다. 평균 상대 거래량은 0.95배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "AI 전력 수요와 인프라 병목을 사는 장기 테마 자금",
+      "bestTradingVehicle": "ETF 우선: GRID, PAVE, URA / 개별 종목 우선: CEG",
+      "breakCondition": "GRID/PAVE 20일선 이탈, 전력/원전 관련 종목 확산도 둔화",
+      "todayAction": "ETF 확산도와 거래량이 같이 살아날 때만 진입",
+      "summaryReason": "PAVE, GRID, CEG 중심으로 5일 -0.55%, 20일 -2.71% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "방산/안보 프리미엄",
+      "status": "약화",
+      "narrativeScore": 5,
+      "rawScore": 5,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "XAR",
+        "ITA",
+        "SHLD"
+      ],
+      "supportStocks": [
+        "PLTR"
+      ],
+      "representativeEtfs": [
+        "XAR",
+        "ITA",
+        "SHLD"
+      ],
+      "representativeStocks": [
+        "PLTR"
+      ],
+      "whyMoneyIsFlowing": "방산/안보 프리미엄 관련 XAR, ITA, SHLD와 PLTR의 5일(-0.61%)·20일(+2.71%) 흐름을 함께 본다. 평균 상대 거래량은 0.93배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "지정학 리스크와 안보 예산 기대를 사는 테마 ETF 자금",
+      "bestTradingVehicle": "ETF 우선: XAR, SHLD, ITA / 개별 종목 우선: PLTR",
+      "breakCondition": "방산 ETF 20일선 이탈 또는 안보 이벤트 프리미엄 둔화",
+      "todayAction": "뉴스 촉매가 직접 확인될 때만 추세 추종",
+      "summaryReason": "XAR, ITA, PLTR 중심으로 5일 -0.61%, 20일 +2.71% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "비트코인/디지털 자산 위험선호",
+      "status": "소멸",
+      "narrativeScore": 0,
+      "rawScore": -11,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "BLOK",
+        "IBIT"
+      ],
+      "supportStocks": [
+        "MSTR"
+      ],
+      "representativeEtfs": [
+        "BLOK",
+        "IBIT"
+      ],
+      "representativeStocks": [
+        "MSTR"
+      ],
+      "whyMoneyIsFlowing": "비트코인/디지털 자산 위험선호 관련 BLOK, IBIT와 MSTR의 5일(-10.35%)·20일(-15.72%) 흐름을 함께 본다. 평균 상대 거래량은 1.51배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "비트코인 현물 ETF와 디지털 자산 베타를 사는 위험선호 자금",
+      "bestTradingVehicle": "ETF 우선: IBIT, BLOK / 개별 종목 우선: MSTR",
+      "breakCondition": "IBIT/BLOK 20일선 이탈 또는 채굴주 상대강도 급락",
+      "todayAction": "비트코인 베타가 살아날 때만 단기 매매",
+      "summaryReason": "BLOK, IBIT, MSTR 중심으로 5일 -10.35%, 20일 -15.72% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 2,
+      "etfRelativeVolumeAvg": 2,
+      "stockRelativeVolumeAvg": 1
+    }
+  ],
+  "topNarratives": [
+    {
+      "name": "AI 인프라 재가속",
+      "status": "지배",
+      "narrativeScore": 80,
+      "rawScore": 80,
+      "reasonConfidence": "MEDIUM",
+      "supportEtfs": [
+        "SOXQ",
+        "DRAM",
+        "SOXX",
+        "SMH"
+      ],
+      "supportStocks": [
+        "AVGO",
+        "MU",
+        "ARM",
+        "AMD",
+        "NVDA"
+      ],
+      "representativeEtfs": [
+        "SOXQ",
+        "DRAM",
+        "SOXX"
+      ],
+      "representativeStocks": [
+        "AVGO",
+        "MU",
+        "ARM",
+        "AMD"
+      ],
+      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 SOXQ, DRAM, SOXX와 AVGO, MU, ARM, AMD의 5일(+10.87%)·20일(+33.52%) 흐름을 함께 본다. 평균 상대 거래량은 1.02배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "AI 인프라 CAPEX를 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, DRAM / 개별 종목 우선: NVDA, AVGO, MU",
+      "breakCondition": "SMH/SOXX 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
+      "todayAction": "추격보다 5일선 지지 후 재상승 확인",
+      "summaryReason": "SOXQ, DRAM, AVGO, MU 중심으로 5일 +10.87%, 20일 +33.52% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 1,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "AI 소프트웨어/사이버보안 확산",
+      "status": "부상",
+      "narrativeScore": 68,
+      "rawScore": 68,
+      "reasonConfidence": "MEDIUM",
+      "supportEtfs": [
+        "AIQ",
+        "HACK",
+        "CIBR",
+        "IGV"
+      ],
+      "supportStocks": [
+        "CRWD",
+        "PANW",
+        "DDOG",
+        "TEAM"
+      ],
+      "representativeEtfs": [
+        "AIQ",
+        "HACK",
+        "CIBR"
+      ],
+      "representativeStocks": [
+        "CRWD",
+        "PANW",
+        "DDOG",
+        "TEAM"
+      ],
+      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 AIQ, HACK, CIBR와 CRWD, PANW, DDOG, TEAM의 5일(+9.77%)·20일(+24.78%) 흐름을 함께 본다. 평균 상대 거래량은 1.09배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "섹터 베타를 사는 ETF 자금, AI/보안 실적 기대를 사는 스윙 트레이더, 신고가 추종 자금",
+      "bestTradingVehicle": "ETF 우선: IGV, CIBR, AIQ / 개별 종목 우선: PANW, CRWD, DDOG",
+      "breakCondition": "IGV/CIBR 20일선 이탈, 관련 개별 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
+      "todayAction": "추격보다 눌림 후 재상승 확인",
+      "summaryReason": "AIQ, HACK, CRWD, PANW 중심으로 5일 +9.77%, 20일 +24.78% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 3,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "위험선호 성장주 재진입",
+      "status": "약화",
+      "narrativeScore": 48,
+      "rawScore": 48,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "QQQ",
+        "IPO",
+        "ARKK"
+      ],
+      "supportStocks": [
+        "ARM",
+        "TSLA"
+      ],
+      "representativeEtfs": [
+        "QQQ",
+        "IPO",
+        "ARKK"
+      ],
+      "representativeStocks": [
+        "ARM",
+        "TSLA"
+      ],
+      "whyMoneyIsFlowing": "위험선호 성장주 재진입 관련 QQQ, IPO, ARKK와 ARM, TSLA의 5일(+5.22%)·20일(+18.86%) 흐름을 함께 본다. 평균 상대 거래량은 1.34배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "위험선호 회복을 사는 성장주 ETF 자금과 고베타 단기 모멘텀 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ, IPO, ARKK / 개별 종목 우선: ARM, TSLA",
+      "breakCondition": "QQQ/IWM 동반 약화, 고베타 성장주 상대 거래량 둔화",
+      "todayAction": "지수 위험선호가 유지될 때만 선별 진입",
+      "summaryReason": "QQQ, IPO, ARM, TSLA 중심으로 5일 +5.22%, 20일 +18.86% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 2,
+      "stockRelativeVolumeAvg": 1
+    }
+  ],
+  "etfActionCandidates": [],
+  "stockActionCandidates": [],
+  "actionCandidates": [],
+  "darkHorseCandidates": [
+    {
+      "ticker": "ADI",
+      "assetType": "STOCK",
+      "name": "Analog Devices Inc.",
+      "actionLabel": "제외",
+      "moneyFlowScore": 89,
+      "moneyFlowScoreInitial": 64,
+      "moneyFlowScoreFinal": 89,
+      "finalRawScore": 89,
+      "finalDisplayScore": 89,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+64 + +12 + 0 + +5 + +8 + 0 + 0 = 89",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: MarketWatch RSS / general_market / under_6h - Only 5% of day traders make money, but the SEC is now making it easier for more people to try it anyway 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Only 5% of day traders make money, but the SEC is now making it easier for more people to try it anyway",
+      "tieBreakerReason": "최종 원점수 89, 리스크 패널티 0, 5일 수익률 +4.99%, 상대 거래량 1.15배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "제외",
+        "status": "매매 금지",
+        "reasons": [
+          "Entry Quality 40 < 45",
+          "진입 품질 부족"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크 / Entry Quality 40 < 45 / 진입 품질 부족"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 80,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 437.67,
+      "recommendationDate": "2026-06-03",
+      "darkHorseRank": 1,
+      "darkHorseScore": 78,
+      "darkHorseLabel": "다크호스 후보",
+      "darkHorseStage": "초기 반전",
+      "darkHorseConfidence": "LOW",
+      "darkHorseReason": "ADI는 AI 인프라 재가속 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 상단 돌파 상태이고, RVOL 1.15x로 거래량 확인은 보통 수준이다. Exhaustion Risk 54로 아직 메인 후보 대비 과열 상한 안에 있다.",
+      "darkHorseConfirmCondition": "돌파 후 고점 위 안착 유지, RVOL 1.20x 이상 재증가, MA5 위 종가 유지, 관련 ETF 동반 강세",
+      "darkHorseInvalidationCondition": "MA20 $415.26 종가 이탈, 최근 스윙 저점 $381.22 이탈, RVOL 0.80x 이하 둔화",
+      "darkHorseWhyNotMain": "Entry Quality 40 < 60, RVOL 1.15x < 1.20x",
+      "darkHorseBreakdown": {
+        "narrativeAlignmentScore": 17,
+        "earlyTrendStructureScore": 30,
+        "baseBreakoutScore": 15,
+        "volumeConfirmationScore": 8,
+        "lowExhaustionScore": 3,
+        "liquidityRiskScore": 5,
+        "riskPenalty": 0,
+        "rawScore": 78
+      }
+    },
+    {
+      "ticker": "CDNS",
+      "assetType": "STOCK",
+      "name": "Cadence Design Systems Inc.",
+      "actionLabel": "관찰",
+      "moneyFlowScore": 91,
+      "moneyFlowScoreInitial": 77,
+      "moneyFlowScoreFinal": 91,
+      "finalRawScore": 91,
+      "finalDisplayScore": 91,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+77 + +2 + 0 + +5 + +7 + 0 + 0 = 91",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Here's Why Cadence Design Systems (CDNS) Fell More Than Broader Market 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Here's Why Cadence Design Systems (CDNS) Fell More Than Broader Market",
+      "tieBreakerReason": "최종 원점수 91, 리스크 패널티 0, 5일 수익률 +9.08%, 상대 거래량 1.24배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "관찰",
+        "status": "관찰",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세"
+      },
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 68,
+      "relatedEtfs": [
+        "IGV",
+        "AIQ",
+        "QQQ"
+      ],
+      "closePriceAtRecommendation": 408,
+      "recommendationDate": "2026-06-03",
+      "darkHorseRank": 2,
+      "darkHorseScore": 76,
+      "darkHorseLabel": "다크호스 후보",
+      "darkHorseStage": "베이스 돌파 직전",
+      "darkHorseConfidence": "LOW",
+      "darkHorseReason": "CDNS는 AI 소프트웨어/사이버보안 확산 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 상단 돌파 직전 상태이고, RVOL 1.24x로 거래량 확인은 충분하다. Exhaustion Risk 33로 아직 메인 후보 대비 과열 상한 안에 있다.",
+      "darkHorseConfirmCondition": "최근 15거래일 고점 $416.69 돌파, MA5 위 종가 유지, 관련 ETF 동반 강세",
+      "darkHorseInvalidationCondition": "MA20 $368.08 종가 이탈, 최근 스윙 저점 $331.56 이탈, RVOL 0.80x 이하 둔화",
+      "darkHorseWhyNotMain": "Entry Quality 50 < 60, 최근 고점 돌파 확인 전",
+      "darkHorseBreakdown": {
+        "narrativeAlignmentScore": 17,
+        "earlyTrendStructureScore": 24,
+        "baseBreakoutScore": 8,
+        "volumeConfirmationScore": 14,
+        "lowExhaustionScore": 8,
+        "liquidityRiskScore": 5,
+        "riskPenalty": 0,
+        "rawScore": 76
+      }
+    },
+    {
+      "ticker": "AMAT",
+      "assetType": "STOCK",
+      "name": "Applied Materials Inc.",
+      "actionLabel": "관찰",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 87,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 112,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 112 capped to displayed score 100",
+      "formulaText": "+87 + +12 + 0 + +5 + +8 + 0 + 0 = 112 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
+      "tieBreakerReason": "최종 원점수 112, 리스크 패널티 0, 5일 수익률 +11.72%, 상대 거래량 1.09배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "관찰",
+        "status": "관찰",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 80,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 500.77,
+      "recommendationDate": "2026-06-03",
+      "darkHorseRank": 3,
+      "darkHorseScore": 73,
+      "darkHorseLabel": "다크호스 후보",
+      "darkHorseStage": "첫 눌림 대기",
+      "darkHorseConfidence": "LOW",
+      "darkHorseReason": "AMAT는 AI 인프라 재가속 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 상단 돌파 상태이고, RVOL 1.09x로 거래량 확인은 보통 수준이다. Exhaustion Risk 54로 아직 메인 후보 대비 과열 상한 안에 있다.",
+      "darkHorseConfirmCondition": "돌파 후 고점 위 안착 유지, RVOL 1.20x 이상 재증가, MA5 위 종가 유지, 관련 ETF 동반 강세",
+      "darkHorseInvalidationCondition": "MA20 $441.10 종가 이탈, 최근 스윙 저점 $415.85 이탈, RVOL 0.80x 이하 둔화",
+      "darkHorseWhyNotMain": "Entry Quality 45 < 60, RVOL 1.09x < 1.20x",
+      "darkHorseBreakdown": {
+        "narrativeAlignmentScore": 17,
+        "earlyTrendStructureScore": 24,
+        "baseBreakoutScore": 13,
+        "volumeConfirmationScore": 11,
+        "lowExhaustionScore": 3,
+        "liquidityRiskScore": 5,
+        "riskPenalty": 0,
+        "rawScore": 73
+      }
+    }
+  ],
+  "stockEntryCandidates": [],
+  "stockPullbackCandidates": [],
+  "stockWatchCandidates": [
+    {
+      "ticker": "AVGO",
+      "assetType": "STOCK",
+      "name": "Broadcom Inc.",
+      "actionLabel": "관찰",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 85,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 100,
+      "finalDisplayScore": 100,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+85 + +2 + 0 + +5 + +8 + 0 + 0 = 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / earnings / under_6h - Broadcom Inc (AVGO) Q2 2026 Earnings Call Highlights: Record Revenue Driven by AI Semiconductor ... 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / earnings / under_6h - Broadcom Inc (AVGO) Q2 2026 Earnings Call Highlights: Record Revenue Driven by AI Semiconductor ...",
+      "tieBreakerReason": "최종 원점수 100, 리스크 패널티 0, 5일 수익률 +13.60%, 상대 거래량 2.10배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "관찰",
+        "status": "관찰",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 80,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 479.23,
+      "recommendationDate": "2026-06-03"
+    },
+    {
+      "ticker": "ASML",
+      "assetType": "STOCK",
+      "name": "ASML Holding N.V.",
+      "actionLabel": "관찰",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 80,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 105,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 105 capped to displayed score 100",
+      "formulaText": "+80 + +12 + 0 + +5 + +8 + 0 + 0 = 105 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Why ASML Stock Rose 13% in May 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Why ASML Stock Rose 13% in May",
+      "tieBreakerReason": "최종 원점수 105, 리스크 패널티 0, 5일 수익률 +8.04%, 상대 거래량 1.12배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "관찰",
+        "status": "관찰",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 80,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 1726.36,
+      "recommendationDate": "2026-06-03"
+    },
+    {
+      "ticker": "AMAT",
+      "assetType": "STOCK",
+      "name": "Applied Materials Inc.",
+      "actionLabel": "관찰",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 87,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 112,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 112 capped to displayed score 100",
+      "formulaText": "+87 + +12 + 0 + +5 + +8 + 0 + 0 = 112 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
+      "tieBreakerReason": "최종 원점수 112, 리스크 패널티 0, 5일 수익률 +11.72%, 상대 거래량 1.09배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "관찰",
+        "status": "관찰",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / 고점 근처 추격 리스크"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 80,
+      "relatedEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ",
+        "AIQ"
+      ],
+      "closePriceAtRecommendation": 500.77,
+      "recommendationDate": "2026-06-03"
+    },
+    {
+      "ticker": "CRWD",
+      "assetType": "STOCK",
+      "name": "CrowdStrike Holdings Inc.",
+      "actionLabel": "관찰",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 90,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 103,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 103 capped to displayed score 100",
+      "formulaText": "+90 + +2 + 0 + +5 + +6 + 0 + 0 = 103 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "HIGH",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / earnings / under_6h - CrowdStrike Holdings Inc (CRWD) Q1 2027 Earnings Call Highlights: Record Growth and Strategic ... 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / earnings / under_6h - CrowdStrike Holdings Inc (CRWD) Q1 2027 Earnings Call Highlights: Record Growth and Strategic ...",
+      "tieBreakerReason": "최종 원점수 103, 리스크 패널티 0, 5일 수익률 +15.84%, 상대 거래량 1.41배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "관찰",
+        "status": "관찰",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세"
+      },
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 68,
+      "relatedEtfs": [
+        "HACK",
+        "CIBR",
+        "IHAK",
+        "IGV"
+      ],
+      "closePriceAtRecommendation": 747.61,
+      "recommendationDate": "2026-06-03"
+    }
+  ],
+  "etfWatchCandidates": [
+    {
+      "ticker": "DRAM",
+      "assetType": "ETF",
+      "name": "Roundhill Memory ETF",
+      "actionLabel": "거래량 확인 전 관찰",
+      "moneyFlowScore": 83,
+      "moneyFlowScoreInitial": 70,
+      "moneyFlowScoreFinal": 83,
+      "finalRawScore": 83,
+      "finalDisplayScore": 83,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+70 + +12 + 0 + +5 + 0 - 4 + 0 = 83",
+      "riskPenalty": -4,
+      "riskPenaltySummary": {
+        "totalPenalty": -4,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "VOLUME_DIVERGENCE",
+            "label": "volume divergence",
+            "penalty": -4,
+            "evidence": "5d price strength is not confirmed by relative volume 0.70x.",
+            "action": "Require relative volume recovery above 1.0x."
+          }
+        ],
+        "watchItems": [
+          "ETF breadth data not connected"
+        ],
+        "summary": "1개 감점 리스크로 총 -4점 반영."
+      },
+      "reasonConfidence": "LOW",
+      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Finland&apos;s president says EU should expand to 40 states — including Canada",
+      "tieBreakerReason": "최종 원점수 83, 리스크 패널티 -4, 5일 수익률 +14.79%, 상대 거래량 0.70배 순으로 정렬",
+      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+      "invalidationCondition": "거래량 회복 실패",
+      "actionGate": {
+        "label": "거래량 확인 전 관찰",
+        "status": "관찰",
+        "reasons": [
+          "Entry Quality 40 < 45",
+          "RVOL 0.70x < 1.00x"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / Entry Quality 40 < 45 / RVOL 0.70x < 1.00x"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 80,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 69.71,
+      "recommendationDate": "2026-06-03"
+    },
+    {
+      "ticker": "SMH",
+      "assetType": "ETF",
+      "name": "VanEck Semiconductor ETF",
+      "actionLabel": "거래량 확인 전 관찰",
+      "moneyFlowScore": 69,
+      "moneyFlowScoreInitial": 56,
+      "moneyFlowScoreFinal": 69,
+      "finalRawScore": 69,
+      "finalDisplayScore": 69,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+56 + +12 + 0 + +5 + 0 - 4 + 0 = 69",
+      "riskPenalty": -4,
+      "riskPenaltySummary": {
+        "totalPenalty": -4,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "VOLUME_DIVERGENCE",
+            "label": "volume divergence",
+            "penalty": -4,
+            "evidence": "5d price strength is not confirmed by relative volume 0.97x.",
+            "action": "Require relative volume recovery above 1.0x."
+          }
+        ],
+        "watchItems": [],
+        "summary": "1개 감점 리스크로 총 -4점 반영."
+      },
+      "reasonConfidence": "LOW",
+      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Finland&apos;s president says EU should expand to 40 states — including Canada",
+      "tieBreakerReason": "최종 원점수 69, 리스크 패널티 -4, 5일 수익률 +7.12%, 상대 거래량 0.97배 순으로 정렬",
+      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+      "invalidationCondition": "거래량 회복 실패",
+      "actionGate": {
+        "label": "거래량 확인 전 관찰",
+        "status": "관찰",
+        "reasons": [
+          "Entry Quality 35 < 45",
+          "RVOL 0.97x < 1.00x"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / Entry Quality 35 < 45 / RVOL 0.97x < 1.00x"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 80,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 637.9,
+      "recommendationDate": "2026-06-03"
+    },
+    {
+      "ticker": "SOXX",
+      "assetType": "ETF",
+      "name": "iShares Semiconductor ETF",
+      "actionLabel": "거래량 확인 전 관찰",
+      "moneyFlowScore": 77,
+      "moneyFlowScoreInitial": 64,
+      "moneyFlowScoreFinal": 77,
+      "finalRawScore": 77,
+      "finalDisplayScore": 77,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+64 + +12 + 0 + +5 + 0 - 4 + 0 = 77",
+      "riskPenalty": -4,
+      "riskPenaltySummary": {
+        "totalPenalty": -4,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "VOLUME_DIVERGENCE",
+            "label": "volume divergence",
+            "penalty": -4,
+            "evidence": "5d price strength is not confirmed by relative volume 0.97x.",
+            "action": "Require relative volume recovery above 1.0x."
+          }
+        ],
+        "watchItems": [],
+        "summary": "1개 감점 리스크로 총 -4점 반영."
+      },
+      "reasonConfidence": "LOW",
+      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Finland&apos;s president says EU should expand to 40 states — including Canada",
+      "tieBreakerReason": "최종 원점수 77, 리스크 패널티 -4, 5일 수익률 +9.17%, 상대 거래량 0.97배 순으로 정렬",
+      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+      "invalidationCondition": "거래량 회복 실패",
+      "actionGate": {
+        "label": "거래량 확인 전 관찰",
+        "status": "관찰",
+        "reasons": [
+          "Entry Quality 38 < 45",
+          "RVOL 0.97x < 1.00x"
+        ]
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / Entry Quality 38 < 45 / RVOL 0.97x < 1.00x"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 80,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 615.68,
+      "recommendationDate": "2026-06-03"
+    },
+    {
+      "ticker": "SOXQ",
+      "assetType": "ETF",
+      "name": "Invesco PHLX Semiconductor ETF",
+      "actionLabel": "관찰",
+      "moneyFlowScore": 100,
+      "moneyFlowScoreInitial": 90,
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 104,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 104 capped to displayed score 100",
+      "formulaText": "+90 + +12 + 0 + +2 + 0 + 0 + 0 = 104 -> 100",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Finland&apos;s president says EU should expand to 40 states — including Canada",
+      "tieBreakerReason": "최종 원점수 104, 리스크 패널티 0, 5일 수익률 +9.57%, 상대 거래량 1.39배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "관찰",
+        "status": "관찰",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호"
+      },
+      "linkedNarrative": "AI 인프라 재가속",
+      "narrativeStatus": "지배",
+      "narrativeScore": 80,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 109.58,
+      "recommendationDate": "2026-06-03"
+    },
+    {
+      "ticker": "AIQ",
+      "assetType": "ETF",
+      "name": "Global X Artificial Intelligence & Technology ETF",
+      "actionLabel": "관찰",
+      "moneyFlowScore": 84,
+      "moneyFlowScoreInitial": 80,
+      "moneyFlowScoreFinal": 84,
+      "finalRawScore": 84,
+      "finalDisplayScore": 84,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+80 + +2 + 0 + +2 + 0 + 0 + 0 = 84",
+      "riskPenalty": 0,
+      "riskPenaltySummary": {
+        "totalPenalty": 0,
+        "riskLevel": "LOW",
+        "items": [],
+        "watchItems": [],
+        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+      },
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Only 5% of day traders make money, but the SEC is now making it easier for more people to try it anyway",
+      "tieBreakerReason": "최종 원점수 84, 리스크 패널티 0, 5일 수익률 +6.24%, 상대 거래량 1.50배 순으로 정렬",
+      "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+      "actionGate": {
+        "label": "관찰",
+        "status": "관찰",
+        "reasons": []
+      },
+      "marketContext": {
+        "marketRegime": "위험선호",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세"
+      },
+      "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+      "narrativeStatus": "부상",
+      "narrativeScore": 68,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 69.16,
+      "recommendationDate": "2026-06-03"
+    }
+  ],
+  "referenceCandidates": {
+    "etfs": [
+      {
+        "ticker": "AIQ",
+        "assetType": "ETF",
+        "name": "Global X Artificial Intelligence & Technology ETF",
+        "actionLabel": "관찰",
+        "moneyFlowScore": 84,
+        "moneyFlowScoreInitial": 80,
+        "moneyFlowScoreFinal": 84,
+        "finalRawScore": 84,
+        "finalDisplayScore": 84,
+        "wasCapped": false,
+        "capReason": "cap not applied",
+        "formulaText": "+80 + +2 + 0 + +2 + 0 + 0 + 0 = 84",
+        "riskPenalty": 0,
+        "riskPenaltySummary": {
+          "totalPenalty": 0,
+          "riskLevel": "LOW",
+          "items": [],
+          "watchItems": [],
+          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+        },
+        "reasonConfidence": "MEDIUM",
+        "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+        "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Only 5% of day traders make money, but the SEC is now making it easier for more people to try it anyway",
+        "tieBreakerReason": "최종 원점수 84, 리스크 패널티 0, 5일 수익률 +6.24%, 상대 거래량 1.50배 순으로 정렬",
+        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+        "actionGate": {
+          "label": "관찰",
+          "status": "관찰",
+          "reasons": []
+        },
+        "marketContext": {
+          "marketRegime": "위험선호",
+          "candidateEnvironment": "관찰",
+          "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세"
+        },
+        "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+        "narrativeStatus": "부상",
+        "narrativeScore": 68,
+        "relatedEtfs": [],
+        "closePriceAtRecommendation": 69.16,
+        "recommendationDate": "2026-06-03"
+      },
+      {
+        "ticker": "SOXQ",
+        "assetType": "ETF",
+        "name": "Invesco PHLX Semiconductor ETF",
+        "actionLabel": "관찰",
+        "moneyFlowScore": 100,
+        "moneyFlowScoreInitial": 90,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 104,
+        "finalDisplayScore": 100,
+        "wasCapped": true,
+        "capReason": "raw score 104 capped to displayed score 100",
+        "formulaText": "+90 + +12 + 0 + +2 + 0 + 0 + 0 = 104 -> 100",
+        "riskPenalty": 0,
+        "riskPenaltySummary": {
+          "totalPenalty": 0,
+          "riskLevel": "LOW",
+          "items": [],
+          "watchItems": [],
+          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+        },
+        "reasonConfidence": "MEDIUM",
+        "reasonConfidenceExplanation": "ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+        "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Finland&apos;s president says EU should expand to 40 states — including Canada",
+        "tieBreakerReason": "최종 원점수 104, 리스크 패널티 0, 5일 수익률 +9.57%, 상대 거래량 1.39배 순으로 정렬",
+        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+        "actionGate": {
+          "label": "관찰",
+          "status": "관찰",
+          "reasons": []
+        },
+        "marketContext": {
+          "marketRegime": "위험선호",
+          "candidateEnvironment": "관찰",
+          "reason": "전체 시장은 위험선호"
+        },
+        "linkedNarrative": "AI 인프라 재가속",
+        "narrativeStatus": "지배",
+        "narrativeScore": 80,
+        "relatedEtfs": [],
+        "closePriceAtRecommendation": 109.58,
+        "recommendationDate": "2026-06-03"
+      },
+      {
+        "ticker": "DRAM",
+        "assetType": "ETF",
+        "name": "Roundhill Memory ETF",
+        "actionLabel": "거래량 확인 전 관찰",
+        "moneyFlowScore": 83,
+        "moneyFlowScoreInitial": 70,
+        "moneyFlowScoreFinal": 83,
+        "finalRawScore": 83,
+        "finalDisplayScore": 83,
+        "wasCapped": false,
+        "capReason": "cap not applied",
+        "formulaText": "+70 + +12 + 0 + +5 + 0 - 4 + 0 = 83",
+        "riskPenalty": -4,
+        "riskPenaltySummary": {
+          "totalPenalty": -4,
+          "riskLevel": "LOW",
+          "items": [
+            {
+              "riskType": "VOLUME_DIVERGENCE",
+              "label": "volume divergence",
+              "penalty": -4,
+              "evidence": "5d price strength is not confirmed by relative volume 0.70x.",
+              "action": "Require relative volume recovery above 1.0x."
+            }
+          ],
+          "watchItems": [
+            "ETF breadth data not connected"
+          ],
+          "summary": "1개 감점 리스크로 총 -4점 반영."
+        },
+        "reasonConfidence": "LOW",
+        "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+        "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Finland&apos;s president says EU should expand to 40 states — including Canada",
+        "tieBreakerReason": "최종 원점수 83, 리스크 패널티 -4, 5일 수익률 +14.79%, 상대 거래량 0.70배 순으로 정렬",
+        "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+        "invalidationCondition": "거래량 회복 실패",
+        "actionGate": {
+          "label": "거래량 확인 전 관찰",
+          "status": "관찰",
+          "reasons": [
+            "Entry Quality 40 < 45",
+            "RVOL 0.70x < 1.00x"
+          ]
+        },
+        "marketContext": {
+          "marketRegime": "위험선호",
+          "candidateEnvironment": "관찰",
+          "reason": "전체 시장은 위험선호 / Entry Quality 40 < 45 / RVOL 0.70x < 1.00x"
+        },
+        "linkedNarrative": "AI 인프라 재가속",
+        "narrativeStatus": "지배",
+        "narrativeScore": 80,
+        "relatedEtfs": [],
+        "closePriceAtRecommendation": 69.71,
+        "recommendationDate": "2026-06-03"
+      }
+    ],
+    "stocks": [
+      {
+        "ticker": "CRWD",
+        "assetType": "STOCK",
+        "name": "CrowdStrike Holdings Inc.",
+        "actionLabel": "관찰",
+        "moneyFlowScore": 100,
+        "moneyFlowScoreInitial": 90,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 103,
+        "finalDisplayScore": 100,
+        "wasCapped": true,
+        "capReason": "raw score 103 capped to displayed score 100",
+        "formulaText": "+90 + +2 + 0 + +5 + +6 + 0 + 0 = 103 -> 100",
+        "riskPenalty": 0,
+        "riskPenaltySummary": {
+          "totalPenalty": 0,
+          "riskLevel": "LOW",
+          "items": [],
+          "watchItems": [],
+          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+        },
+        "reasonConfidence": "HIGH",
+        "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / earnings / under_6h - CrowdStrike Holdings Inc (CRWD) Q1 2027 Earnings Call Highlights: Record Growth and Strategic ... 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+        "directCatalyst": "직접 촉매: Yahoo Finance RSS / earnings / under_6h - CrowdStrike Holdings Inc (CRWD) Q1 2027 Earnings Call Highlights: Record Growth and Strategic ...",
+        "tieBreakerReason": "최종 원점수 103, 리스크 패널티 0, 5일 수익률 +15.84%, 상대 거래량 1.41배 순으로 정렬",
+        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+        "actionGate": {
+          "label": "관찰",
+          "status": "관찰",
+          "reasons": []
+        },
+        "marketContext": {
+          "marketRegime": "위험선호",
+          "candidateEnvironment": "관찰",
+          "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세"
+        },
+        "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+        "narrativeStatus": "부상",
+        "narrativeScore": 68,
+        "relatedEtfs": [
+          "HACK",
+          "CIBR",
+          "IHAK",
+          "IGV"
+        ],
+        "closePriceAtRecommendation": 747.61,
+        "recommendationDate": "2026-06-03"
+      },
+      {
+        "ticker": "FTNT",
+        "assetType": "STOCK",
+        "name": "Fortinet Inc.",
+        "actionLabel": "관찰",
+        "moneyFlowScore": 99,
+        "moneyFlowScoreInitial": 86,
+        "moneyFlowScoreFinal": 99,
+        "finalRawScore": 99,
+        "finalDisplayScore": 99,
+        "wasCapped": false,
+        "capReason": "cap not applied",
+        "formulaText": "+86 + +2 + 0 + +5 + +6 + 0 + 0 = 99",
+        "riskPenalty": 0,
+        "riskPenaltySummary": {
+          "totalPenalty": 0,
+          "riskLevel": "LOW",
+          "items": [],
+          "watchItems": [],
+          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+        },
+        "reasonConfidence": "MEDIUM",
+        "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+        "directCatalyst": "",
+        "tieBreakerReason": "최종 원점수 99, 리스크 패널티 0, 5일 수익률 +14.50%, 상대 거래량 1.12배 순으로 정렬",
+        "entryCondition": "전일 고점 돌파와 5일선 유지 확인",
+        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+        "actionGate": {
+          "label": "관찰",
+          "status": "관찰",
+          "reasons": []
+        },
+        "marketContext": {
+          "marketRegime": "위험선호",
+          "candidateEnvironment": "관찰",
+          "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세"
+        },
+        "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+        "narrativeStatus": "부상",
+        "narrativeScore": 68,
+        "relatedEtfs": [
+          "HACK",
+          "CIBR",
+          "IHAK",
+          "IGV"
+        ],
+        "closePriceAtRecommendation": 146.48,
+        "recommendationDate": "2026-06-03"
+      },
+      {
+        "ticker": "PANW",
+        "assetType": "STOCK",
+        "name": "Palo Alto Networks Inc.",
+        "actionLabel": "관찰",
+        "moneyFlowScore": 87,
+        "moneyFlowScoreInitial": 74,
+        "moneyFlowScoreFinal": 87,
+        "finalRawScore": 87,
+        "finalDisplayScore": 87,
+        "wasCapped": false,
+        "capReason": "cap not applied",
+        "formulaText": "+74 + +2 + 0 + +5 + +6 + 0 + 0 = 87",
+        "riskPenalty": 0,
+        "riskPenaltySummary": {
+          "totalPenalty": 0,
+          "riskLevel": "LOW",
+          "items": [],
+          "watchItems": [],
+          "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
+        },
+        "reasonConfidence": "HIGH",
+        "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h - PANW Price Targets Raised By Citi, Goldman Sachs On AI-Driven Security Demand 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+        "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h - PANW Price Targets Raised By Citi, Goldman Sachs On AI-Driven Security Demand",
+        "tieBreakerReason": "최종 원점수 87, 리스크 패널티 0, 5일 수익률 +12.86%, 상대 거래량 1.44배 순으로 정렬",
+        "entryCondition": "20일선 위 눌림 후 재상승 확인",
+        "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
+        "actionGate": {
+          "label": "관찰",
+          "status": "관찰",
+          "reasons": []
+        },
+        "marketContext": {
+          "marketRegime": "위험선호",
+          "candidateEnvironment": "관찰",
+          "reason": "전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세"
+        },
+        "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
+        "narrativeStatus": "부상",
+        "narrativeScore": 68,
+        "relatedEtfs": [
+          "HACK",
+          "CIBR",
+          "IHAK",
+          "IGV"
+        ],
+        "closePriceAtRecommendation": 280.43,
+        "recommendationDate": "2026-06-03"
+      }
+    ]
+  },
+  "dataReliability": {
+    "priceVolumeStatus": "CONNECTED",
+    "priceAsOfDate": "2026-06-03",
+    "priceAsOfLabel": "2026-06-03 US regular close",
+    "reportGeneratedAtKST": "2026-06-04 14:33",
+    "newsStatus": "PARTIAL",
+    "newsFetchedAt": "2026-06-04T05:33:07.880Z",
+    "newsLastUpdatedAt": "2026-06-04T05:33:07.880Z",
+    "latestNewsPublishedAt": "2026-06-04T05:23:49.000Z",
+    "newsFreshnessStatus": "FRESH",
+    "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
+    "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
+    "newsReliability": "MEDIUM",
+    "etfBreadthStatus": "PARTIAL",
+    "etfBreadthSampleCount": "2~4",
+    "etfBreadthReliability": "LOW",
+    "liquidityStatus": "PARTIAL",
+    "prePostMarketStatus": "UNAVAILABLE",
+    "analysisReliability": "LOW",
+    "executionReliability": "LOW",
+    "reliabilityNotes": [
+      "테마 확산 판단 제한",
+      "거래대금 유동성 낮음 또는 확인 불가",
+      "프리/애프터마켓 확인 불가"
+    ],
+    "providers": "yfinance, Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API, config fallback sample, price-volume dollar-volume fallback",
+    "recommendationSession": "2026-06-04 US regular session",
+    "grade": "LOW",
+    "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 프리마켓/정규장 거래량을 별도 확인해야 한다."
+  },
+  "todayDecision": {
+    "label": "신규 추격 없음 / 관찰",
+    "entryReadyCount": 0,
+    "conditionalCount": 0,
+    "watchCount": 85,
+    "banCount": 53,
+    "actionCandidateCount": 0,
+    "mainLimiters": [
+      "Entry Quality 부족",
+      "뉴스 직접성 부족",
+      "RVOL 미달"
+    ],
+    "orderDecision": "시장가 금지 / 지정가 또는 관찰",
+    "noTradeMessage": "오늘은 추세 후보는 있으나, 왜 돈이 몰리는가와 누가 더 비싸게 사줄 수 있는가를 주문 실행 신뢰도와 거래량이 충분히 뒷받침하지 못해 신규 추격은 보류한다. 기존 관심 종목은 전일 고점 돌파와 RVOL 1.00x 회복을 확인한 뒤 조건부로 본다."
+  },
+  "actionGateSummary": {
+    "total": 138,
+    "items": [
+      {
+        "label": "RVOL < 1.00x",
+        "count": 75
+      },
+      {
+        "label": "거래대금 유동성 낮음",
+        "count": 13
+      },
+      {
+        "label": "Entry Quality < 60",
+        "count": 138
+      },
+      {
+        "label": "Exhaustion Risk >= 70",
+        "count": 0
+      },
+      {
+        "label": "ETF breadth 샘플 부족",
+        "count": 37
+      },
+      {
+        "label": "뉴스 직접성 부족",
+        "count": 81
+      }
+    ],
+    "topLimiters": [
+      "Entry Quality 부족",
+      "뉴스 직접성 부족",
+      "RVOL 미달"
+    ]
+  },
+  "dataMode": "REAL_TEST"
+}
