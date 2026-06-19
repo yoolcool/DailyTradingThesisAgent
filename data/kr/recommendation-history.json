@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-19T02:57:55.141Z",
+  "updatedAt": "2026-06-19T03:02:35.095Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
     {
@@ -18,13 +18,13 @@
       "confidence": "MEDIUM",
       "actionLabel": "강한 자금흐름 조건부",
       "trackingSessionDate": "2026-06-19",
-      "trackingStatus": "pending",
-      "intradayHighAfterRecommendation": null,
-      "trackingClose": null,
-      "highReturnPct": null,
-      "closeReturnPct": null,
-      "resultLabel": "추적 대기",
-      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음"
+      "trackingStatus": "complete",
+      "intradayHighAfterRecommendation": 374500,
+      "trackingClose": 370000,
+      "highReturnPct": 3.31,
+      "closeReturnPct": 2.07,
+      "resultLabel": "성공",
+      "resultComment": "장중 기회와 종가 유지가 모두 확인됨 (일봉 기준)"
     },
     {
       "reportDate": "2026-06-19",
@@ -41,13 +41,13 @@
       "confidence": "MEDIUM",
       "actionLabel": "강한 자금흐름 조건부",
       "trackingSessionDate": "2026-06-19",
-      "trackingStatus": "pending",
-      "intradayHighAfterRecommendation": null,
-      "trackingClose": null,
-      "highReturnPct": null,
-      "closeReturnPct": null,
-      "resultLabel": "추적 대기",
-      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음"
+      "trackingStatus": "complete",
+      "intradayHighAfterRecommendation": 757000,
+      "trackingClose": 747000,
+      "highReturnPct": 10.19,
+      "closeReturnPct": 8.73,
+      "resultLabel": "성공",
+      "resultComment": "장중 기회와 종가 유지가 모두 확인됨 (일봉 기준)"
     },
     {
       "reportDate": "2026-06-19",
@@ -64,13 +64,36 @@
       "confidence": "MEDIUM",
       "actionLabel": "강한 자금흐름 조건부",
       "trackingSessionDate": "2026-06-19",
-      "trackingStatus": "pending",
-      "intradayHighAfterRecommendation": null,
-      "trackingClose": null,
-      "highReturnPct": null,
-      "closeReturnPct": null,
-      "resultLabel": "추적 대기",
-      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음"
+      "trackingStatus": "complete",
+      "intradayHighAfterRecommendation": 516500,
+      "trackingClose": 507000,
+      "highReturnPct": 10.13,
+      "closeReturnPct": 8.1,
+      "resultLabel": "성공",
+      "resultComment": "장중 기회와 종가 유지가 모두 확인됨 (일봉 기준)"
+    },
+    {
+      "reportDate": "2026-06-19",
+      "reportGeneratedAt": "2026-06-19T03:02:35.065Z",
+      "reportGeneratedAtET": "2026-06-18 23:02:35 ET",
+      "ticker": "010120.KS",
+      "assetType": "STOCK",
+      "rank": 1,
+      "recommendationPrice": 259500,
+      "recommendationClosePrice": 259500,
+      "narrative": "전력기기/인프라 투자",
+      "moneyFlowScore": 87,
+      "finalRawScore": 87,
+      "confidence": "MEDIUM",
+      "actionLabel": "자금흐름 예외 조건부",
+      "trackingSessionDate": "2026-06-19",
+      "trackingStatus": "complete",
+      "intradayHighAfterRecommendation": 276500,
+      "trackingClose": 259500,
+      "highReturnPct": 6.55,
+      "closeReturnPct": 0,
+      "resultLabel": "단타 유효",
+      "resultComment": "장중 기회는 있었지만 종가 유지력은 약함 (일봉 기준)"
     },
     {
       "reportDate": "2026-06-18",
