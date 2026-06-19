@@ -300,6 +300,14 @@ function displayTickerList(values) {
     .join(", ");
 }
 
+function displaySector(value) {
+  return NARRATIVE_OVERRIDES.sectorLabels?.[value] || value || "데이터 없음";
+}
+
+function displayIndustry(value) {
+  return NARRATIVE_OVERRIDES.industryLabels?.[value] || value || "데이터 없음";
+}
+
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
@@ -4029,7 +4037,8 @@ function renderStockMarkdown(row) {
 - 자산 유형: STOCK
 - 상태: ${row.status}
 - primaryTheme: ${row.primaryTheme || "데이터 없음"}
-- primarySector: ${row.primarySector || "데이터 없음"}
+- primarySector: ${displaySector(row.primarySector)}
+- industry: ${displayIndustry(row.industry)}
 - relatedEtfs: ${displayTickerList(row.relatedEtfs.map((etf) => etf.ticker)) || "관련 ETF 데이터 부족"}
 - linkedNarrative: ${row.linkedNarrative || "미분류"}
 - narrativeStatus: ${row.narrativeStatus || "관찰"}
@@ -4828,6 +4837,8 @@ function renderStockHtml(row) {
     ${chartImage(row)}
     ${coreMetricGrid(row, "STOCK", [
       ["Theme", row.primaryTheme || "데이터 없음"],
+      ["Sector", displaySector(row.primarySector)],
+      ["Industry", displayIndustry(row.industry)],
       ["Related ETF", displayTickerList(row.relatedEtfs.map((etf) => etf.ticker)) || "관련 ETF 부족"],
       ["Vs ETF", row.relativeStrengthVsEtf]
     ])}

@@ -25,5 +25,21 @@
     "IT": "IT/전자",
     "Industrials": "산업재",
     "Steels & Materials": "철강/소재"
+  },
+  "sectorLabels": {
+    "Communication Services": "커뮤니케이션서비스",
+    "Constructions": "건설",
+    "Consumer Discretionary": "경기소비재",
+    "Consumer Staples": "필수소비재",
+    "Energy & Chemicals": "화학/에너지",
+    "Financials": "금융",
+    "Health Care": "헬스케어",
+    "Heavy Industries": "중공업/조선",
+    "IT": "IT/전자",
+    "Industrials": "산업재",
+    "Steels & Materials": "철강/소재"
+  },
+  "industryLabels": {
+    "Unknown": "세부 업종 미분류"
   }
 }
