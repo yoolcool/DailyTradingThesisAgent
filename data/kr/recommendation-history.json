@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-06-19T03:24:25.857Z",
+  "updatedAt": "2026-06-19T03:30:29.199Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
     {
@@ -20,9 +20,9 @@
       "trackingSessionDate": "2026-06-19",
       "trackingStatus": "complete",
       "intradayHighAfterRecommendation": 374500,
-      "trackingClose": 368750,
+      "trackingClose": 367500,
       "highReturnPct": 3.31,
-      "closeReturnPct": 1.72,
+      "closeReturnPct": 1.38,
       "resultLabel": "성공",
       "resultComment": "장중 기회와 종가 유지가 모두 확인됨 (일봉 기준)"
     },
@@ -43,9 +43,9 @@
       "trackingSessionDate": "2026-06-19",
       "trackingStatus": "complete",
       "intradayHighAfterRecommendation": 757000,
-      "trackingClose": 743000,
+      "trackingClose": 740000,
       "highReturnPct": 10.19,
-      "closeReturnPct": 8.15,
+      "closeReturnPct": 7.71,
       "resultLabel": "성공",
       "resultComment": "장중 기회와 종가 유지가 모두 확인됨 (일봉 기준)"
     },
@@ -75,7 +75,7 @@
     {
       "reportDate": "2026-06-19",
       "reportGeneratedAt": "2026-06-19T03:23:31.382Z",
-      "reportGeneratedAtET": "2026-06-18 23:24:25 ET",
+      "reportGeneratedAtET": "2026-06-18 23:30:29 ET",
       "ticker": "010120.KS",
       "assetType": "STOCK",
       "rank": 1,
@@ -89,9 +89,9 @@
       "trackingSessionDate": "2026-06-19",
       "trackingStatus": "complete",
       "intradayHighAfterRecommendation": 276500,
-      "trackingClose": 255500,
+      "trackingClose": 254500,
       "highReturnPct": 8.22,
-      "closeReturnPct": 0,
+      "closeReturnPct": -0.39,
       "resultLabel": "단타 유효",
       "resultComment": "장중 기회는 있었지만 종가 유지력은 약함 (일봉 기준)"
     },
