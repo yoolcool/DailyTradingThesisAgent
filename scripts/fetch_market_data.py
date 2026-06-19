@@ -34,6 +34,8 @@ DATA_DIR = ROOT / "data" / MARKET_ID
 OUTPUT_PATH = DATA_DIR / "market_data_real.json"
 NASDAQ100_FALLBACK_PATH = CONFIG_DIR / ("nasdaq100Fallback.json" if MARKET_ID == "us" else "kospi200Fallback.json")
 NARRATIVE_STOCKS_PATH = CONFIG_DIR / "narrativeStocks.json"
+ROOT_ETF_HOLDINGS_FALLBACK_PATH = ROOT / "config" / "etfHoldingsFallback.json"
+MARKET_ETF_HOLDINGS_FALLBACK_PATH = CONFIG_DIR / "etfHoldingsFallback.json"
 
 TICKER_ALIASES = {
     "DRAM": "DRAM",
@@ -449,12 +451,37 @@ def load_narrative_stocks():
         return json.load(file)
 
 
+def load_etf_holding_targets(etf_tickers):
+    rows = []
+    seen = set()
+    for file_path in [ROOT_ETF_HOLDINGS_FALLBACK_PATH, MARKET_ETF_HOLDINGS_FALLBACK_PATH]:
+        if not file_path.exists():
+            continue
+        try:
+            with file_path.open("r", encoding="utf-8") as file:
+                data = json.load(file)
+        except (OSError, json.JSONDecodeError):
+            continue
+        for etf in etf_tickers:
+            for ticker in data.get(etf, []):
+                if ticker in seen:
+                    continue
+                seen.add(ticker)
+                rows.append({
+                    "ticker": ticker,
+                    "assetType": "STOCK",
+                    "source": str(file_path),
+                })
+    return rows
+
+
 def main():
     watchlist = load_json("watchlist.json")
     holdings = load_json("holdings.json")
     etfs = load_json("watchlist_etfs.json")
     universe_members, universe_source = load_universe_members()
     narrative_stocks = load_narrative_stocks()
+    etf_holding_targets = load_etf_holding_targets([row["ticker"] for row in etfs])
 
     targets = []
     seen = set()
@@ -469,6 +496,11 @@ def main():
             targets.append((ticker, "STOCK"))
             seen.add(ticker)
     for row in narrative_stocks:
+        ticker = row["ticker"]
+        if ticker not in seen:
+            targets.append((ticker, "STOCK"))
+            seen.add(ticker)
+    for row in etf_holding_targets:
         ticker = row["ticker"]
         if ticker not in seen:
             targets.append((ticker, "STOCK"))

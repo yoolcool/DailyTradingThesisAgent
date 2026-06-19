@@ -33,7 +33,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - name: Setup Python
@@ -50,6 +50,17 @@ jobs:
 
       - name: Install Playwright browser
         run: npx playwright install chromium
+
+      - name: Check DART secret configuration
+        shell: pwsh
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:DART_API_KEY) -and [string]::IsNullOrWhiteSpace($env:OPENDART_API_KEY)) {
+            "### KR data reliability preflight" >> $env:GITHUB_STEP_SUMMARY
+            "- DART_API_KEY / OPENDART_API_KEY is not configured. KR report will mark DART as DISABLED and news reliability as LOW." >> $env:GITHUB_STEP_SUMMARY
+          } else {
+            "### KR data reliability preflight" >> $env:GITHUB_STEP_SUMMARY
+            "- DART secret is configured. KR report will attempt OpenDART disclosure collection." >> $env:GITHUB_STEP_SUMMARY
+          }
 
       - name: Refresh KOSPI200 fallback universe
         shell: pwsh
@@ -68,7 +79,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add config/markets/kr/kospi200Fallback.json data/kr reports/kr docs/kr docs/index.html
+          git add config/markets/kr/kospi200Fallback.json config/markets/kr/etfHoldingsFallback.json data/kr reports/kr docs/kr docs/index.html
           $hasChanges = git diff --cached --quiet; if ($LASTEXITCODE -eq 0) { "No KR report changes to commit."; exit 0 }
           git commit -m "Update KR daily trading report"
           git push

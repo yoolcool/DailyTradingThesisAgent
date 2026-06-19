@@ -2298,7 +2298,7 @@ function buildStockUniverseScanSummary(stockUniverse, stocks) {
   const successCount = results.filter((row) => row.scanStatus === "OK").length;
   const failedCount = results.filter((row) => row.scanStatus !== "OK").length;
   return {
-    universeName: "NASDAQ_100",
+    universeName: stockUniverse.universeName || MARKET_PROFILE.universeName,
     asOfDate: stockUniverse.asOfDate,
     totalCount: stockUniverse.members.length,
     successCount,
@@ -2861,7 +2861,7 @@ async function collectSupplementalData(rawWatchlist, rawHoldings, rawEtfs, marke
     byTicker[ticker].liquidity = fetchLiquidityProfile(ticker, marketItem(marketData, ticker));
   }
   for (const etf of etfTickers) {
-    const holdings = await fetchEtfHoldings(etf);
+    const holdings = await fetchEtfHoldings(etf, { marketId: MARKET_ID, configDir: CONFIG_DIR });
     byTicker[etf].etfBreadth = await calculateEtfBreadth(etf, holdings, marketData);
   }
 

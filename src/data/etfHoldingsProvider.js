@@ -2,22 +2,37 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..", "..");
-const FALLBACK_PATH = path.join(ROOT, "config", "etfHoldingsFallback.json");
+const ROOT_FALLBACK_PATH = path.join(ROOT, "config", "etfHoldingsFallback.json");
 
-function readFallback() {
-  if (!fs.existsSync(FALLBACK_PATH)) return {};
-  return JSON.parse(fs.readFileSync(FALLBACK_PATH, "utf8"));
+function readJsonIfExists(filePath) {
+  if (!filePath || !fs.existsSync(filePath)) return {};
+  return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
-async function fetchEtfHoldings(etf) {
-  const fallback = readFallback();
+function marketFallbackPath(options = {}) {
+  if (options.configDir) return path.join(options.configDir, "etfHoldingsFallback.json");
+  if (options.marketId && options.marketId !== "us") {
+    return path.join(ROOT, "config", "markets", options.marketId, "etfHoldingsFallback.json");
+  }
+  return null;
+}
+
+function readFallback(options = {}) {
+  return {
+    ...readJsonIfExists(ROOT_FALLBACK_PATH),
+    ...readJsonIfExists(marketFallbackPath(options))
+  };
+}
+
+async function fetchEtfHoldings(etf, options = {}) {
+  const fallback = readFallback(options);
   const tickers = fallback[etf] || [];
   return tickers.map((ticker) => ({
     etf,
     ticker,
     name: ticker,
     weight: null,
-    source: "config fallback sample"
+    source: options.marketId ? `${options.marketId} config fallback sample` : "config fallback sample"
   }));
 }
 
