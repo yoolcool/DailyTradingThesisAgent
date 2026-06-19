@@ -294,6 +294,12 @@ function displayRowTicker(row) {
   return displayTicker(row.ticker, row.name);
 }
 
+function reportUrl() {
+  return MARKET_ID === "kr"
+    ? "https://yoolcool.github.io/DailyTradingThesisAgent/kr/"
+    : "https://yoolcool.github.io/DailyTradingThesisAgent/";
+}
+
 function displayTickerList(values) {
   return (values || [])
     .map((value) => typeof value === "string" ? displayTicker(value) : displayRowTicker(value))
@@ -1282,8 +1288,8 @@ function actionGate(row) {
     label = "조건부 진입";
     status = STATUS.ENTRY_CANDIDATE;
     if (entryQuality < 50) {
-      label = "강한 자금흐름 조건부";
-      reasons.push(`Entry Quality ${entryQuality} < 50, but moneyFlow ${moneyFlow} and confidence ${row.reasonConfidence} support conditional watch`);
+      label = "자금흐름 예외 조건부";
+      reasons.push(`Entry Quality ${entryQuality} < 50이나 moneyFlow ${moneyFlow}, confidence ${row.reasonConfidence}, RVOL ${num(rvol, 2)}x로 강한 자금흐름 예외 조건 충족`);
     }
   } else if (entryQuality >= 40) {
     label = "관찰";
@@ -1307,7 +1313,7 @@ function actionGate(row) {
     reasons.push("거래대금 유동성 LOW/UNKNOWN");
   }
   if (label === "제외") reasons.push("진입 품질 부족");
-  return { label, status, reasons };
+  return { label, status, reasons, rescueType: strongMoneyFlowRescue ? "STRONG_MONEY_FLOW" : null };
 }
 
 function candidateMarketContext(row, marketLabel, gate) {
@@ -3642,7 +3648,7 @@ ETF 후보 TOP 5:
 ${report.etfTop5.map((row, index) => `${index + 1}. ${displayRowTicker(row)} - ${row.linkedNarrative || "미분류"} - ${row.todayActionLabel}`).join("\n") || "데이터 없음"}
 
 웹 리포트:
-https://yoolcool.github.io/DailyTradingThesisAgent/`;
+${reportUrl()}`;
 }
 
 function renderScoreGuideMarkdown() {
