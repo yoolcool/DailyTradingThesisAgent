@@ -43,12 +43,14 @@
       "AIQ"
     ],
     "stocks": [
+      "MCHP",
       "MRVL",
-      "AVGO",
       "ARM",
+      "AMD",
+      "TXN",
       "ADI",
       "INTC",
-      "AMD"
+      "TSM"
     ],
     "nextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -57,10 +59,10 @@
       "SOXQ"
     ],
     "preferredStocks": [
+      "MCHP",
       "MRVL",
-      "AVGO",
       "ARM",
-      "ADI"
+      "AMD"
     ],
     "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -74,10 +76,10 @@
       "AIQ"
     ],
     "stocks": [
-      "KLAC",
-      "ASML",
       "AMAT",
-      "LRCX"
+      "LRCX",
+      "KLAC",
+      "ASML"
     ],
     "nextBuyer": "반도체 장비 사이클 재평가을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -86,10 +88,10 @@
       "SOXQ"
     ],
     "preferredStocks": [
-      "KLAC",
-      "ASML",
       "AMAT",
-      "LRCX"
+      "LRCX",
+      "KLAC",
+      "ASML"
     ],
     "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -133,9 +135,9 @@
       "IGV"
     ],
     "stocks": [
+      "FTNT",
       "PANW",
-      "CRWD",
-      "FTNT"
+      "CRWD"
     ],
     "nextBuyer": "사이버보안 지출 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -144,9 +146,9 @@
       "IHAK"
     ],
     "preferredStocks": [
+      "FTNT",
       "PANW",
-      "CRWD",
-      "FTNT"
+      "CRWD"
     ],
     "breakCondition": "HACK 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -325,7 +327,9 @@
   {
     "name": "Data Storage 자금 유입",
     "etfs": [
-      "QQQ"
+      "QQQ",
+      "SPY",
+      "IWM"
     ],
     "stocks": [
       "STX",
@@ -333,11 +337,39 @@
     ],
     "nextBuyer": "Data Storage 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
-      "QQQ"
+      "QQQ",
+      "SPY",
+      "IWM"
     ],
     "preferredStocks": [
       "STX",
       "WDC"
+    ],
+    "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+    "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
+  },
+  {
+    "name": "전력 유틸리티 수요 재평가",
+    "etfs": [
+      "QQQ",
+      "SPY",
+      "IWM"
+    ],
+    "stocks": [
+      "ETN",
+      "GEV",
+      "VRT"
+    ],
+    "nextBuyer": "전력 유틸리티 수요 재평가을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+    "preferredEtfs": [
+      "QQQ",
+      "SPY",
+      "IWM"
+    ],
+    "preferredStocks": [
+      "ETN",
+      "GEV",
+      "VRT"
     ],
     "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
