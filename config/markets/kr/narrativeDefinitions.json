@@ -252,9 +252,8 @@
     "stocks": [
       "032830.KS",
       "000810.KS",
-      "039490.KS",
-      "029780.KS",
-      "138040.KS"
+      "138930.KS",
+      "005830.KS"
     ],
     "nextBuyer": "Financials 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -264,8 +263,8 @@
     "preferredStocks": [
       "032830.KS",
       "000810.KS",
-      "039490.KS",
-      "029780.KS"
+      "138930.KS",
+      "005830.KS"
     ],
     "breakCondition": "069500.KS 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -278,7 +277,7 @@
     ],
     "stocks": [
       "028260.KS",
-      "002380.KS"
+      "006360.KS"
     ],
     "nextBuyer": "Constructions 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -287,7 +286,7 @@
     ],
     "preferredStocks": [
       "028260.KS",
-      "002380.KS"
+      "006360.KS"
     ],
     "breakCondition": "069500.KS 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -303,9 +302,10 @@
       "004170.KS",
       "073240.KS",
       "081660.KS",
+      "111770.KS",
       "180640.KS",
       "383220.KS",
-      "009240.KS"
+      "009970.KS"
     ],
     "nextBuyer": "소비 회복/방어주 선별을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -352,8 +352,7 @@
     "stocks": [
       "093370.KS",
       "014680.KS",
-      "268280.KS",
-      "010950.KS"
+      "078930.KS"
     ],
     "nextBuyer": "Energy & Chemicals 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -363,8 +362,7 @@
     "preferredStocks": [
       "093370.KS",
       "014680.KS",
-      "268280.KS",
-      "010950.KS"
+      "078930.KS"
     ],
     "breakCondition": "069500.KS 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -387,6 +385,28 @@
     "preferredStocks": [
       "402340.KS",
       "007660.KS"
+    ],
+    "breakCondition": "069500.KS 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+    "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
+  },
+  {
+    "name": "Heavy Industries 자금 유입",
+    "etfs": [
+      "069500.KS",
+      "229200.KS"
+    ],
+    "stocks": [
+      "062040.KS",
+      "064350.KS"
+    ],
+    "nextBuyer": "Heavy Industries 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+    "preferredEtfs": [
+      "069500.KS",
+      "229200.KS"
+    ],
+    "preferredStocks": [
+      "062040.KS",
+      "064350.KS"
     ],
     "breakCondition": "069500.KS 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
