@@ -105,6 +105,7 @@ function main() {
   assert(markdown.includes("Federal Reserve RSS"), "Markdown missing Federal Reserve news source");
   assert(markdown.includes("Finnhub API"), "Markdown missing Finnhub API news source status");
   assert(markdown.includes("후보 선정 후 뉴스/동향 재확인"), "Markdown missing candidate post-selection news update");
+  assert(markdown.includes("최근 뉴스/동향 한국어 요약"), "Markdown missing Korean candidate news summary section");
   assert(markdown.includes("general_market") || markdown.includes("earnings") || markdown.includes("guidance") || markdown.includes("macro"), "Markdown missing normalized news event type");
   assert(html.includes("뉴스 수집 시각"), "HTML missing news fetched timestamp");
   assert(html.includes("최근 뉴스 발행"), "HTML missing latest news published timestamp");
@@ -115,6 +116,7 @@ function main() {
   assert(html.includes("Federal Reserve RSS"), "HTML missing Federal Reserve news source");
   assert(html.includes("Finnhub API"), "HTML missing Finnhub API news source status");
   assert(html.includes("후보 선정 후 뉴스/동향 재확인"), "HTML missing candidate post-selection news update");
+  assert(html.includes("최근 뉴스/동향 한국어 요약"), "HTML missing Korean candidate news summary section");
   assert(html.includes("general_market") || html.includes("earnings") || html.includes("guidance") || html.includes("macro"), "HTML missing normalized news event type");
   assert(markdown.includes("이 리포트는 투자판단 보조용이며"), "Markdown missing practical-use warning");
   assert(html.includes("이 리포트는 투자판단 보조용이며"), "HTML missing practical-use warning");
@@ -238,6 +240,7 @@ function main() {
     ...(latestSnapshot.stockEntryCandidates || [])
   ];
   assert(postSelectionNewsItems.every((row) => row.candidateNewsSummary), "Candidate snapshot missing post-selection news summary");
+  assert(postSelectionNewsItems.every((row) => row.candidateNewsSummary?.koreanSummary?.overview), "Candidate snapshot missing Korean post-selection news summary");
   assert(latestSnapshot.dataReliability?.grade, "Snapshot missing data reliability grade");
   assert(latestSnapshot.dataReliability?.analysisReliability, "Snapshot missing analysis reliability");
   assert(latestSnapshot.dataReliability?.executionReliability, "Snapshot missing execution reliability");

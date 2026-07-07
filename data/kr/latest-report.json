@@ -13,7 +13,7 @@
     "sessionLabel": "KRX regular session"
   },
   "reportDate": "2026-07-07",
-  "generatedAt": "2026년 7월 7일 화요일 오전 11:51",
+  "generatedAt": "2026년 7월 7일 화요일 오후 12:26",
   "stockUniverseScan": {
     "universeName": "KOSPI200",
     "asOfDate": "2026-07-07",
@@ -5150,27 +5150,85 @@
       "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "073240.KS",
-        "checkedAt": "2026-07-07T02:51:09.602Z",
-        "status": "DISABLED",
-        "source": "DART",
+        "checkedAt": "2026-07-07T03:26:18.111Z",
+        "status": "CONNECTED",
+        "source": "Google News RSS",
         "sourceStatuses": [
           {
             "source": "DART",
             "status": "DISABLED"
+          },
+          {
+            "source": "Google News RSS",
+            "status": "CONNECTED"
           }
         ],
-        "lastPublishedAt": null,
-        "freshnessStatus": "UNKNOWN",
-        "trendTone": "중립 또는 혼재",
-        "directnessLabel": "직접 뉴스 제한",
-        "headline": "의미 있는 신규 DART 공시 없음",
-        "directCatalyst": null,
-        "items": [],
+        "lastPublishedAt": "2026-07-06T19:55:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
+        "directCatalyst": {
+          "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
+          "source": "디지털데일리",
+          "publishedAt": "2026-07-06T07:18:39.000Z",
+          "eventType": "투자/증설",
+          "direction": "positive",
+          "freshnessBucket": "under_24h",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4zWVAwME9Wb19peFR6NHpPUEk2SVAtel9yRW1keTJnSE93NXYyVlhSVGdMaXh4RHpMU0dMXzBOOGF6T2FydHl5UzVBcEdya3UxMHdReldXWF9rUmVlcVotVTdKSDY?oc=5"
+        },
+        "items": [
+          {
+            "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
+            "koreanSummary": "금호타이어 관련 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "디지털데일리",
+            "publishedAt": "2026-07-06T07:18:39.000Z",
+            "eventType": "투자/증설",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4zWVAwME9Wb19peFR6NHpPUEk2SVAtel9yRW1keTJnSE93NXYyVlhSVGdMaXh4RHpMU0dMXzBOOGF6T2FydHl5UzVBcEdya3UxMHdReldXWF9rUmVlcVotVTdKSDY?oc=5"
+          },
+          {
+            "title": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략 - 씽크풀 AI",
+            "koreanSummary": "금호타이어 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 중립이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "씽크풀 AI",
+            "publishedAt": "2026-07-06T19:55:00.000Z",
+            "eventType": "시장 일반",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_24h",
+            "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE96ZnRZbmhQelVTNlBBUWtQRjhXaUhJem9LajNzbTdSbVpUM0RrdkpyYXNua1pOaC1obkdJY0I3dWNsY2EteEhTUnBhUEd5Njd0SHRqc29sOGNIZlA4?oc=5"
+          },
+          {
+            "title": "금호타이어 투자분석 2026. 07. 06 - 주달",
+            "koreanSummary": "금호타이어 관련 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "주달",
+            "publishedAt": "2026-07-06T17:49:47.000Z",
+            "eventType": "투자/증설",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9ua3FiSTRGbVZyU0RaU25xZzJyb2VPSTJiYWt3RUd0MEZMaGtTZ0w3Y0xfRlk1Wl9oVmFpSG9oT0ZKRGFPM3ZacHdXU0ZsRTg2aEZHcmRMZ3ZWYXAtM3hrY1FGWTBvTzFEMzdyWDk3amZGbXc?oc=5"
+          }
+        ],
+        "koreanSummary": {
+          "title": "최근 뉴스/동향 한국어 요약",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리\"입니다.",
+          "directLine": "금호타이어에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리\"이며, 일반 재료로 봅니다.",
+          "bullets": [
+            "금호타이어 관련 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "금호타이어 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 중립이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "금호타이어 관련 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다."
+          ],
+          "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
+        },
         "notes": [
+          "DART fallback: 의미 있는 신규 DART 공시 없음",
           "DART_API_KEY 또는 OPENDART_API_KEY not configured",
           "해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음"
         ],
-        "oneLine": "직접 뉴스 제한, 흐름은 중립 또는 혼재. 핵심 확인 뉴스: 의미 있는 신규 DART 공시 없음"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: 금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리"
       },
       "tieBreakerReason": "최종 원점수 86, 리스크 패널티 -6, 5일 수익률 +28.28%, 상대 거래량 4.55배 순으로 정렬",
       "entryQualityScore": 38,
@@ -5247,27 +5305,85 @@
       "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "073240.KS",
-        "checkedAt": "2026-07-07T02:51:09.602Z",
-        "status": "DISABLED",
-        "source": "DART",
+        "checkedAt": "2026-07-07T03:26:18.111Z",
+        "status": "CONNECTED",
+        "source": "Google News RSS",
         "sourceStatuses": [
           {
             "source": "DART",
             "status": "DISABLED"
+          },
+          {
+            "source": "Google News RSS",
+            "status": "CONNECTED"
           }
         ],
-        "lastPublishedAt": null,
-        "freshnessStatus": "UNKNOWN",
-        "trendTone": "중립 또는 혼재",
-        "directnessLabel": "직접 뉴스 제한",
-        "headline": "의미 있는 신규 DART 공시 없음",
-        "directCatalyst": null,
-        "items": [],
+        "lastPublishedAt": "2026-07-06T19:55:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
+        "directCatalyst": {
+          "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
+          "source": "디지털데일리",
+          "publishedAt": "2026-07-06T07:18:39.000Z",
+          "eventType": "투자/증설",
+          "direction": "positive",
+          "freshnessBucket": "under_24h",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4zWVAwME9Wb19peFR6NHpPUEk2SVAtel9yRW1keTJnSE93NXYyVlhSVGdMaXh4RHpMU0dMXzBOOGF6T2FydHl5UzVBcEdya3UxMHdReldXWF9rUmVlcVotVTdKSDY?oc=5"
+        },
+        "items": [
+          {
+            "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
+            "koreanSummary": "금호타이어 관련 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "디지털데일리",
+            "publishedAt": "2026-07-06T07:18:39.000Z",
+            "eventType": "투자/증설",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4zWVAwME9Wb19peFR6NHpPUEk2SVAtel9yRW1keTJnSE93NXYyVlhSVGdMaXh4RHpMU0dMXzBOOGF6T2FydHl5UzVBcEdya3UxMHdReldXWF9rUmVlcVotVTdKSDY?oc=5"
+          },
+          {
+            "title": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략 - 씽크풀 AI",
+            "koreanSummary": "금호타이어 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 중립이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "씽크풀 AI",
+            "publishedAt": "2026-07-06T19:55:00.000Z",
+            "eventType": "시장 일반",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_24h",
+            "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE96ZnRZbmhQelVTNlBBUWtQRjhXaUhJem9LajNzbTdSbVpUM0RrdkpyYXNua1pOaC1obkdJY0I3dWNsY2EteEhTUnBhUEd5Njd0SHRqc29sOGNIZlA4?oc=5"
+          },
+          {
+            "title": "금호타이어 투자분석 2026. 07. 06 - 주달",
+            "koreanSummary": "금호타이어 관련 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "주달",
+            "publishedAt": "2026-07-06T17:49:47.000Z",
+            "eventType": "투자/증설",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9ua3FiSTRGbVZyU0RaU25xZzJyb2VPSTJiYWt3RUd0MEZMaGtTZ0w3Y0xfRlk1Wl9oVmFpSG9oT0ZKRGFPM3ZacHdXU0ZsRTg2aEZHcmRMZ3ZWYXAtM3hrY1FGWTBvTzFEMzdyWDk3amZGbXc?oc=5"
+          }
+        ],
+        "koreanSummary": {
+          "title": "최근 뉴스/동향 한국어 요약",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리\"입니다.",
+          "directLine": "금호타이어에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리\"이며, 일반 재료로 봅니다.",
+          "bullets": [
+            "금호타이어 관련 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "금호타이어 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 중립이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "금호타이어 관련 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다."
+          ],
+          "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
+        },
         "notes": [
+          "DART fallback: 의미 있는 신규 DART 공시 없음",
           "DART_API_KEY 또는 OPENDART_API_KEY not configured",
           "해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음"
         ],
-        "oneLine": "직접 뉴스 제한, 흐름은 중립 또는 혼재. 핵심 확인 뉴스: 의미 있는 신규 DART 공시 없음"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: 금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리"
       },
       "tieBreakerReason": "최종 원점수 86, 리스크 패널티 -6, 5일 수익률 +28.28%, 상대 거래량 4.55배 순으로 정렬",
       "entryQualityScore": 38,
@@ -5345,27 +5461,85 @@
       "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "073240.KS",
-        "checkedAt": "2026-07-07T02:51:09.602Z",
-        "status": "DISABLED",
-        "source": "DART",
+        "checkedAt": "2026-07-07T03:26:18.111Z",
+        "status": "CONNECTED",
+        "source": "Google News RSS",
         "sourceStatuses": [
           {
             "source": "DART",
             "status": "DISABLED"
+          },
+          {
+            "source": "Google News RSS",
+            "status": "CONNECTED"
           }
         ],
-        "lastPublishedAt": null,
-        "freshnessStatus": "UNKNOWN",
-        "trendTone": "중립 또는 혼재",
-        "directnessLabel": "직접 뉴스 제한",
-        "headline": "의미 있는 신규 DART 공시 없음",
-        "directCatalyst": null,
-        "items": [],
+        "lastPublishedAt": "2026-07-06T19:55:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
+        "directCatalyst": {
+          "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
+          "source": "디지털데일리",
+          "publishedAt": "2026-07-06T07:18:39.000Z",
+          "eventType": "투자/증설",
+          "direction": "positive",
+          "freshnessBucket": "under_24h",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4zWVAwME9Wb19peFR6NHpPUEk2SVAtel9yRW1keTJnSE93NXYyVlhSVGdMaXh4RHpMU0dMXzBOOGF6T2FydHl5UzVBcEdya3UxMHdReldXWF9rUmVlcVotVTdKSDY?oc=5"
+        },
+        "items": [
+          {
+            "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
+            "koreanSummary": "금호타이어 관련 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "디지털데일리",
+            "publishedAt": "2026-07-06T07:18:39.000Z",
+            "eventType": "투자/증설",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4zWVAwME9Wb19peFR6NHpPUEk2SVAtel9yRW1keTJnSE93NXYyVlhSVGdMaXh4RHpMU0dMXzBOOGF6T2FydHl5UzVBcEdya3UxMHdReldXWF9rUmVlcVotVTdKSDY?oc=5"
+          },
+          {
+            "title": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략 - 씽크풀 AI",
+            "koreanSummary": "금호타이어 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 중립이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "씽크풀 AI",
+            "publishedAt": "2026-07-06T19:55:00.000Z",
+            "eventType": "시장 일반",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_24h",
+            "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE96ZnRZbmhQelVTNlBBUWtQRjhXaUhJem9LajNzbTdSbVpUM0RrdkpyYXNua1pOaC1obkdJY0I3dWNsY2EteEhTUnBhUEd5Njd0SHRqc29sOGNIZlA4?oc=5"
+          },
+          {
+            "title": "금호타이어 투자분석 2026. 07. 06 - 주달",
+            "koreanSummary": "금호타이어 관련 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "주달",
+            "publishedAt": "2026-07-06T17:49:47.000Z",
+            "eventType": "투자/증설",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9ua3FiSTRGbVZyU0RaU25xZzJyb2VPSTJiYWt3RUd0MEZMaGtTZ0w3Y0xfRlk1Wl9oVmFpSG9oT0ZKRGFPM3ZacHdXU0ZsRTg2aEZHcmRMZ3ZWYXAtM3hrY1FGWTBvTzFEMzdyWDk3amZGbXc?oc=5"
+          }
+        ],
+        "koreanSummary": {
+          "title": "최근 뉴스/동향 한국어 요약",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리\"입니다.",
+          "directLine": "금호타이어에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리\"이며, 일반 재료로 봅니다.",
+          "bullets": [
+            "금호타이어 관련 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "금호타이어 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 중립이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "금호타이어 관련 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다."
+          ],
+          "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
+        },
         "notes": [
+          "DART fallback: 의미 있는 신규 DART 공시 없음",
           "DART_API_KEY 또는 OPENDART_API_KEY not configured",
           "해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음"
         ],
-        "oneLine": "직접 뉴스 제한, 흐름은 중립 또는 혼재. 핵심 확인 뉴스: 의미 있는 신규 DART 공시 없음"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: 금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리"
       },
       "tieBreakerReason": "최종 원점수 86, 리스크 패널티 -6, 5일 수익률 +28.28%, 상대 거래량 4.55배 순으로 정렬",
       "entryQualityScore": 38,
@@ -5706,10 +5880,10 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-07",
     "priceAsOfLabel": "2026-07-07 KRX 정규장 종가",
-    "reportGeneratedAtKST": "2026-07-07 11:51",
+    "reportGeneratedAtKST": "2026-07-07 12:26",
     "newsStatus": "DISABLED",
-    "newsFetchedAt": "2026-07-07T02:51:09.574Z",
-    "newsLastUpdatedAt": "2026-07-07T02:51:09.574Z",
+    "newsFetchedAt": "2026-07-07T03:26:17.463Z",
+    "newsLastUpdatedAt": "2026-07-07T03:26:17.463Z",
     "latestNewsPublishedAt": null,
     "newsFreshnessStatus": "UNKNOWN",
     "newsSources": "DART",

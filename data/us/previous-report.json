@@ -14,7 +14,7 @@
     "sessionLabel": "US regular session"
   },
   "reportDate": "2026-07-07",
-  "generatedAt": "2026년 7월 7일 화요일 AM 9:09",
+  "generatedAt": "2026년 7월 7일 화요일 오후 12:20",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -3434,6 +3434,116 @@
       "reasonConfidence": "HIGH",
       "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+      "candidateNewsSummary": {
+        "ticker": "PANW",
+        "checkedAt": "2026-07-07T03:20:27.327Z",
+        "status": "PARTIAL",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "sourceStatuses": [
+          {
+            "source": "Yahoo Finance RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "MarketWatch RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "CNBC Markets RSS",
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
+          },
+          {
+            "source": "SEC EDGAR RSS",
+            "status": "PARTIAL",
+            "notes": [
+              "no matching RSS items"
+            ]
+          },
+          {
+            "source": "Federal Reserve RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "Finnhub API",
+            "status": "DISABLED",
+            "notes": [
+              "FINNHUB_API_KEY not configured"
+            ]
+          }
+        ],
+        "lastPublishedAt": "2026-07-07T00:15:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+        "directCatalyst": {
+          "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-07-06T21:45:02.000Z",
+          "eventType": "general_market",
+          "direction": "neutral",
+          "freshnessBucket": "under_6h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-palo-alto-networks-panw-214502815.html?.tsrc=rss"
+        },
+        "items": [
+          {
+            "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+            "koreanSummary": "Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T21:45:02.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_6h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/why-palo-alto-networks-panw-214502815.html?.tsrc=rss"
+          },
+          {
+            "title": "Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now",
+            "koreanSummary": "Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T10:02:18.000Z",
+            "eventType": "analyst_upgrade",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/technology/articles/why-palo-alto-panw-among-100218783.html?.tsrc=rss"
+          },
+          {
+            "title": "CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
+            "koreanSummary": "Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T15:08:23.000Z",
+            "eventType": "analyst_upgrade",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://247wallst.com/investing/2026/07/06/crowdstrike-surges-5-palo-alto-and-okta-gain-4-as-cybersecurity-stocks-rally-on-analyst-upgrades/?.tsrc=rss"
+          }
+        ],
+        "koreanSummary": {
+          "title": "최근 뉴스/동향 한국어 요약",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Why Palo Alto Networks (PANW) Outpaced the Stock Market Today\"입니다.",
+          "directLine": "Palo Alto Networks Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Why Palo Alto Networks (PANW) Outpaced the Stock Market Today\"이며, 시장 일반 재료로 봅니다.",
+          "bullets": [
+            "Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.",
+            "Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다."
+          ],
+          "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
+        },
+        "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
+          "SEC EDGAR RSS: no matching RSS items",
+          "Finnhub API: FINNHUB_API_KEY not configured"
+        ],
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Why Palo Alto Networks (PANW) Outpaced the Stock Market Today"
+      },
       "tieBreakerReason": "최종 원점수 116, 리스크 패널티 0, 5일 수익률 +17.53%, 상대 거래량 1.12배 순으로 정렬",
       "entryQualityScore": 50,
       "entryQualityLabel": "관찰",
@@ -3500,8 +3610,118 @@
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+      "candidateNewsSummary": {
+        "ticker": "AXON",
+        "checkedAt": "2026-07-07T03:20:27.333Z",
+        "status": "PARTIAL",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "sourceStatuses": [
+          {
+            "source": "Yahoo Finance RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "MarketWatch RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "CNBC Markets RSS",
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
+          },
+          {
+            "source": "SEC EDGAR RSS",
+            "status": "PARTIAL",
+            "notes": [
+              "no matching RSS items"
+            ]
+          },
+          {
+            "source": "Federal Reserve RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "Finnhub API",
+            "status": "DISABLED",
+            "notes": [
+              "FINNHUB_API_KEY not configured"
+            ]
+          }
+        ],
+        "lastPublishedAt": "2026-07-07T00:15:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+        "directCatalyst": {
+          "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-07-06T18:17:36.000Z",
+          "eventType": "analyst_upgrade",
+          "direction": "neutral",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/m/1c08604a-f915-3d58-bcd9-ab154c18b707/axon-extends-win-streak-on.html?.tsrc=rss"
+        },
+        "items": [
+          {
+            "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+            "koreanSummary": "Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T18:17:36.000Z",
+            "eventType": "analyst_upgrade",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/m/1c08604a-f915-3d58-bcd9-ab154c18b707/axon-extends-win-streak-on.html?.tsrc=rss"
+          },
+          {
+            "title": "Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?",
+            "koreanSummary": "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T16:27:00.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/axon-crosses-200-day-sma-162700841.html?.tsrc=rss"
+          },
+          {
+            "title": "Axon and Rocket Lab rallied while chip stocks sank",
+            "koreanSummary": "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-05T03:17:00.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_72h",
+            "url": "https://www.thestreet.com/investing/stocks/sandisk-bank-of-america-bubble-risk-week?.tsrc=rss"
+          }
+        ],
+        "koreanSummary": {
+          "title": "최근 뉴스/동향 한국어 요약",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Axon Extends Win Streak On Target Hike, World Cup Drone Defense\"입니다.",
+          "directLine": "Axon Enterprise Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Axon Extends Win Streak On Target Hike, World Cup Drone Defense\"이며, 애널리스트 상향 재료로 봅니다.",
+          "bullets": [
+            "Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.",
+            "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다."
+          ],
+          "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
+        },
+        "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
+          "SEC EDGAR RSS: no matching RSS items",
+          "Finnhub API: FINNHUB_API_KEY not configured"
+        ],
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Axon Extends Win Streak On Target Hike, World Cup Drone Defense"
+      },
       "tieBreakerReason": "최종 원점수 91, 리스크 패널티 -6, 5일 수익률 +33.89%, 상대 거래량 1.00배 순으로 정렬",
       "entryQualityScore": 40,
       "entryQualityLabel": "관찰",
@@ -3565,6 +3785,116 @@
       "reasonConfidence": "HIGH",
       "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+      "candidateNewsSummary": {
+        "ticker": "PANW",
+        "checkedAt": "2026-07-07T03:20:27.327Z",
+        "status": "PARTIAL",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "sourceStatuses": [
+          {
+            "source": "Yahoo Finance RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "MarketWatch RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "CNBC Markets RSS",
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
+          },
+          {
+            "source": "SEC EDGAR RSS",
+            "status": "PARTIAL",
+            "notes": [
+              "no matching RSS items"
+            ]
+          },
+          {
+            "source": "Federal Reserve RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "Finnhub API",
+            "status": "DISABLED",
+            "notes": [
+              "FINNHUB_API_KEY not configured"
+            ]
+          }
+        ],
+        "lastPublishedAt": "2026-07-07T00:15:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+        "directCatalyst": {
+          "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-07-06T21:45:02.000Z",
+          "eventType": "general_market",
+          "direction": "neutral",
+          "freshnessBucket": "under_6h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-palo-alto-networks-panw-214502815.html?.tsrc=rss"
+        },
+        "items": [
+          {
+            "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+            "koreanSummary": "Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T21:45:02.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_6h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/why-palo-alto-networks-panw-214502815.html?.tsrc=rss"
+          },
+          {
+            "title": "Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now",
+            "koreanSummary": "Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T10:02:18.000Z",
+            "eventType": "analyst_upgrade",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/technology/articles/why-palo-alto-panw-among-100218783.html?.tsrc=rss"
+          },
+          {
+            "title": "CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
+            "koreanSummary": "Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T15:08:23.000Z",
+            "eventType": "analyst_upgrade",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://247wallst.com/investing/2026/07/06/crowdstrike-surges-5-palo-alto-and-okta-gain-4-as-cybersecurity-stocks-rally-on-analyst-upgrades/?.tsrc=rss"
+          }
+        ],
+        "koreanSummary": {
+          "title": "최근 뉴스/동향 한국어 요약",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Why Palo Alto Networks (PANW) Outpaced the Stock Market Today\"입니다.",
+          "directLine": "Palo Alto Networks Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Why Palo Alto Networks (PANW) Outpaced the Stock Market Today\"이며, 시장 일반 재료로 봅니다.",
+          "bullets": [
+            "Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.",
+            "Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다."
+          ],
+          "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
+        },
+        "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
+          "SEC EDGAR RSS: no matching RSS items",
+          "Finnhub API: FINNHUB_API_KEY not configured"
+        ],
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Why Palo Alto Networks (PANW) Outpaced the Stock Market Today"
+      },
       "tieBreakerReason": "최종 원점수 116, 리스크 패널티 0, 5일 수익률 +17.53%, 상대 거래량 1.12배 순으로 정렬",
       "entryQualityScore": 50,
       "entryQualityLabel": "관찰",
@@ -3631,8 +3961,118 @@
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+      "candidateNewsSummary": {
+        "ticker": "AXON",
+        "checkedAt": "2026-07-07T03:20:27.333Z",
+        "status": "PARTIAL",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "sourceStatuses": [
+          {
+            "source": "Yahoo Finance RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "MarketWatch RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "CNBC Markets RSS",
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
+          },
+          {
+            "source": "SEC EDGAR RSS",
+            "status": "PARTIAL",
+            "notes": [
+              "no matching RSS items"
+            ]
+          },
+          {
+            "source": "Federal Reserve RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "Finnhub API",
+            "status": "DISABLED",
+            "notes": [
+              "FINNHUB_API_KEY not configured"
+            ]
+          }
+        ],
+        "lastPublishedAt": "2026-07-07T00:15:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+        "directCatalyst": {
+          "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-07-06T18:17:36.000Z",
+          "eventType": "analyst_upgrade",
+          "direction": "neutral",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/m/1c08604a-f915-3d58-bcd9-ab154c18b707/axon-extends-win-streak-on.html?.tsrc=rss"
+        },
+        "items": [
+          {
+            "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+            "koreanSummary": "Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T18:17:36.000Z",
+            "eventType": "analyst_upgrade",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/m/1c08604a-f915-3d58-bcd9-ab154c18b707/axon-extends-win-streak-on.html?.tsrc=rss"
+          },
+          {
+            "title": "Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?",
+            "koreanSummary": "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T16:27:00.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/axon-crosses-200-day-sma-162700841.html?.tsrc=rss"
+          },
+          {
+            "title": "Axon and Rocket Lab rallied while chip stocks sank",
+            "koreanSummary": "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-05T03:17:00.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_72h",
+            "url": "https://www.thestreet.com/investing/stocks/sandisk-bank-of-america-bubble-risk-week?.tsrc=rss"
+          }
+        ],
+        "koreanSummary": {
+          "title": "최근 뉴스/동향 한국어 요약",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Axon Extends Win Streak On Target Hike, World Cup Drone Defense\"입니다.",
+          "directLine": "Axon Enterprise Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Axon Extends Win Streak On Target Hike, World Cup Drone Defense\"이며, 애널리스트 상향 재료로 봅니다.",
+          "bullets": [
+            "Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.",
+            "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다."
+          ],
+          "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
+        },
+        "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
+          "SEC EDGAR RSS: no matching RSS items",
+          "Finnhub API: FINNHUB_API_KEY not configured"
+        ],
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Axon Extends Win Streak On Target Hike, World Cup Drone Defense"
+      },
       "tieBreakerReason": "최종 원점수 91, 리스크 패널티 -6, 5일 수익률 +33.89%, 상대 거래량 1.00배 순으로 정렬",
       "entryQualityScore": 40,
       "entryQualityLabel": "관찰",
@@ -3697,6 +4137,116 @@
       "reasonConfidence": "HIGH",
       "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+      "candidateNewsSummary": {
+        "ticker": "PANW",
+        "checkedAt": "2026-07-07T03:20:27.327Z",
+        "status": "PARTIAL",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "sourceStatuses": [
+          {
+            "source": "Yahoo Finance RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "MarketWatch RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "CNBC Markets RSS",
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
+          },
+          {
+            "source": "SEC EDGAR RSS",
+            "status": "PARTIAL",
+            "notes": [
+              "no matching RSS items"
+            ]
+          },
+          {
+            "source": "Federal Reserve RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "Finnhub API",
+            "status": "DISABLED",
+            "notes": [
+              "FINNHUB_API_KEY not configured"
+            ]
+          }
+        ],
+        "lastPublishedAt": "2026-07-07T00:15:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+        "directCatalyst": {
+          "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-07-06T21:45:02.000Z",
+          "eventType": "general_market",
+          "direction": "neutral",
+          "freshnessBucket": "under_6h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-palo-alto-networks-panw-214502815.html?.tsrc=rss"
+        },
+        "items": [
+          {
+            "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+            "koreanSummary": "Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T21:45:02.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_6h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/why-palo-alto-networks-panw-214502815.html?.tsrc=rss"
+          },
+          {
+            "title": "Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now",
+            "koreanSummary": "Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T10:02:18.000Z",
+            "eventType": "analyst_upgrade",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/technology/articles/why-palo-alto-panw-among-100218783.html?.tsrc=rss"
+          },
+          {
+            "title": "CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
+            "koreanSummary": "Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T15:08:23.000Z",
+            "eventType": "analyst_upgrade",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://247wallst.com/investing/2026/07/06/crowdstrike-surges-5-palo-alto-and-okta-gain-4-as-cybersecurity-stocks-rally-on-analyst-upgrades/?.tsrc=rss"
+          }
+        ],
+        "koreanSummary": {
+          "title": "최근 뉴스/동향 한국어 요약",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Why Palo Alto Networks (PANW) Outpaced the Stock Market Today\"입니다.",
+          "directLine": "Palo Alto Networks Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Why Palo Alto Networks (PANW) Outpaced the Stock Market Today\"이며, 시장 일반 재료로 봅니다.",
+          "bullets": [
+            "Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.",
+            "Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다."
+          ],
+          "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
+        },
+        "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
+          "SEC EDGAR RSS: no matching RSS items",
+          "Finnhub API: FINNHUB_API_KEY not configured"
+        ],
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Why Palo Alto Networks (PANW) Outpaced the Stock Market Today"
+      },
       "tieBreakerReason": "최종 원점수 116, 리스크 패널티 0, 5일 수익률 +17.53%, 상대 거래량 1.12배 순으로 정렬",
       "entryQualityScore": 50,
       "entryQualityLabel": "관찰",
@@ -3763,8 +4313,118 @@
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+      "candidateNewsSummary": {
+        "ticker": "AXON",
+        "checkedAt": "2026-07-07T03:20:27.333Z",
+        "status": "PARTIAL",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "sourceStatuses": [
+          {
+            "source": "Yahoo Finance RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "MarketWatch RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "CNBC Markets RSS",
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
+          },
+          {
+            "source": "SEC EDGAR RSS",
+            "status": "PARTIAL",
+            "notes": [
+              "no matching RSS items"
+            ]
+          },
+          {
+            "source": "Federal Reserve RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "Finnhub API",
+            "status": "DISABLED",
+            "notes": [
+              "FINNHUB_API_KEY not configured"
+            ]
+          }
+        ],
+        "lastPublishedAt": "2026-07-07T00:15:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+        "directCatalyst": {
+          "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-07-06T18:17:36.000Z",
+          "eventType": "analyst_upgrade",
+          "direction": "neutral",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/m/1c08604a-f915-3d58-bcd9-ab154c18b707/axon-extends-win-streak-on.html?.tsrc=rss"
+        },
+        "items": [
+          {
+            "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+            "koreanSummary": "Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T18:17:36.000Z",
+            "eventType": "analyst_upgrade",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/m/1c08604a-f915-3d58-bcd9-ab154c18b707/axon-extends-win-streak-on.html?.tsrc=rss"
+          },
+          {
+            "title": "Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?",
+            "koreanSummary": "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T16:27:00.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/axon-crosses-200-day-sma-162700841.html?.tsrc=rss"
+          },
+          {
+            "title": "Axon and Rocket Lab rallied while chip stocks sank",
+            "koreanSummary": "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-05T03:17:00.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_72h",
+            "url": "https://www.thestreet.com/investing/stocks/sandisk-bank-of-america-bubble-risk-week?.tsrc=rss"
+          }
+        ],
+        "koreanSummary": {
+          "title": "최근 뉴스/동향 한국어 요약",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Axon Extends Win Streak On Target Hike, World Cup Drone Defense\"입니다.",
+          "directLine": "Axon Enterprise Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Axon Extends Win Streak On Target Hike, World Cup Drone Defense\"이며, 애널리스트 상향 재료로 봅니다.",
+          "bullets": [
+            "Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.",
+            "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다."
+          ],
+          "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
+        },
+        "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
+          "SEC EDGAR RSS: no matching RSS items",
+          "Finnhub API: FINNHUB_API_KEY not configured"
+        ],
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Axon Extends Win Streak On Target Hike, World Cup Drone Defense"
+      },
       "tieBreakerReason": "최종 원점수 91, 리스크 패널티 -6, 5일 수익률 +33.89%, 상대 거래량 1.00배 순으로 정렬",
       "entryQualityScore": 40,
       "entryQualityLabel": "관찰",
@@ -3987,7 +4647,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Trump heads to Turkey as NATO is strained by Russian attacks, U.S. impatience",
       "tieBreakerReason": "최종 원점수 -9, 리스크 패널티 -10, 5일 수익률 -9.91%, 상대 거래량 0.70배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -4053,7 +4713,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - VanEck Semiconductor ETF Is Up 64% This Year and Doesn’t Own a Single Share of Apple",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - VanEck Semiconductor ETF Is Up 64% This Year and Doesn’t Own a Single Share of Apple",
       "tieBreakerReason": "최종 원점수 -1, 리스크 패널티 -6, 5일 수익률 -1.20%, 상대 거래량 0.73배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -4119,7 +4779,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Trump heads to Turkey as NATO is strained by Russian attacks, U.S. impatience",
       "tieBreakerReason": "최종 원점수 0, 리스크 패널티 -6, 5일 수익률 -1.43%, 상대 거래량 0.65배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -4251,7 +4911,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - AI Crushed Software Stocks. IGV Is Betting the ‘SaaSpocalypse’ Is Overblown",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AI Crushed Software Stocks. IGV Is Betting the ‘SaaSpocalypse’ Is Overblown",
       "tieBreakerReason": "최종 원점수 29, 리스크 패널티 -4, 5일 수익률 +7.47%, 상대 거래량 0.86배 순으로 정렬",
       "entryQualityScore": 19,
       "entryQualityLabel": "낮음",
@@ -4358,11 +5018,11 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-06",
     "priceAsOfLabel": "2026-07-06 US regular close",
-    "reportGeneratedAtKST": "2026-07-07 09:09",
+    "reportGeneratedAtKST": "2026-07-07 12:20",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-07-07T00:09:40.681Z",
-    "newsLastUpdatedAt": "2026-07-07T00:09:40.681Z",
-    "latestNewsPublishedAt": "2026-07-06T23:48:01.000Z",
+    "newsFetchedAt": "2026-07-07T03:20:26.994Z",
+    "newsLastUpdatedAt": "2026-07-07T03:20:26.994Z",
+    "latestNewsPublishedAt": "2026-07-07T02:18:31.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
     "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",

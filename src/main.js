@@ -3,6 +3,7 @@ const path = require("path");
 const zlib = require("zlib");
 const { calculateEtfBreadth, fetchEtfHoldings } = require("./data/etfHoldingsProvider");
 const { fetchDartDisclosuresForTicker } = require("./data/dartProvider");
+const { fetchKoreanNewsForTicker } = require("./data/koreanNewsProvider");
 const { fetchLiquidityProfile } = require("./data/liquidityProvider");
 const { fetchNasdaq100Universe } = require("./data/nasdaq100Universe");
 const { fetchNewsForTicker } = require("./data/newsProvider");
@@ -2895,7 +2896,7 @@ async function attachCandidateNewsUpdates({ actionCandidates = [], etfActionCand
   if (!rows.length) return;
   const uniqueRows = uniqueRowsByTicker(rows);
   const summaries = await Promise.all(uniqueRows.map(async (row) => {
-    const refreshed = await fetchCandidateNews(row.ticker);
+    const refreshed = await fetchCandidateNews(row);
     return [row.ticker, buildCandidateNewsSummary(row, refreshed)];
   }));
   const byTicker = new Map(summaries);
@@ -2913,9 +2914,39 @@ function uniqueRowsByTicker(rows) {
   });
 }
 
-async function fetchCandidateNews(ticker) {
+async function fetchCandidateNews(row) {
+  const ticker = row?.ticker || row;
   try {
-    return MARKET_ID === "kr" ? fetchDartDisclosuresForTicker(ticker) : fetchNewsForTicker(ticker);
+    if (MARKET_ID !== "kr") return fetchNewsForTicker(ticker);
+    const dartSummary = await fetchDartDisclosuresForTicker(ticker);
+    if ((dartSummary.itemCount || 0) > 0 && dartSummary.directCatalyst) return dartSummary;
+    const companyName = localizedName(ticker, row?.name || ticker);
+    const newsSummary = await fetchKoreanNewsForTicker(ticker, companyName);
+    if ((newsSummary.itemCount || 0) > 0) {
+      return {
+        ...newsSummary,
+        sourceStatuses: [
+          ...(dartSummary.sourceStatuses || [{ source: "DART", status: dartSummary.status }]),
+          ...(newsSummary.sourceStatuses || [])
+        ],
+        notes: [
+          `DART fallback: ${dartSummary.headlineSummary || "신규 공시 없음"}`,
+          ...(dartSummary.notes || []),
+          ...(newsSummary.notes || [])
+        ]
+      };
+    }
+    return {
+      ...dartSummary,
+      sourceStatuses: [
+        ...(dartSummary.sourceStatuses || [{ source: "DART", status: dartSummary.status }]),
+        ...(newsSummary.sourceStatuses || [])
+      ],
+      notes: [
+        ...(dartSummary.notes || []),
+        ...(newsSummary.notes || [])
+      ]
+    };
   } catch (error) {
     const previous = null;
     return {
@@ -2932,11 +2963,19 @@ async function fetchCandidateNews(ticker) {
 }
 
 function buildCandidateNewsSummary(row, summary) {
-  const items = (summary?.items || [])
-    .filter((item) => item?.title)
-    .slice(0, 3)
+  const directCatalyst = summary?.directCatalyst;
+  const dedupedItems = (summary?.items || [])
+    .filter((item) => item?.title && item.title !== directCatalyst?.title && item.id !== directCatalyst?.id)
+    .sort((a, b) => candidateNewsItemRank(b, row) - candidateNewsItemRank(a, row))
+    .slice(0, directCatalyst?.title ? 2 : 3);
+  const sourceItems = [
+    directCatalyst,
+    ...dedupedItems
+  ].filter((item) => item?.title);
+  const items = sourceItems
     .map((item) => ({
       title: item.title,
+      koreanSummary: summarizeCandidateNewsItemKorean(item, row),
       source: item.source,
       publishedAt: item.publishedAt,
       eventType: item.eventLabel || item.eventType,
@@ -2946,7 +2985,6 @@ function buildCandidateNewsSummary(row, summary) {
       url: item.url
     }));
   const counts = summary?.sentimentCounts || {};
-  const directCatalyst = summary?.directCatalyst;
   const headline = directCatalyst?.title || summary?.headlineSummary || items[0]?.title || "의미 있는 신규 뉴스 없음";
   const trendTone = (counts.positive || 0) > (counts.negative || 0)
     ? "긍정 우위"
@@ -2979,9 +3017,115 @@ function buildCandidateNewsSummary(row, summary) {
       url: directCatalyst.url
     } : null,
     items,
+    koreanSummary: buildCandidateNewsKoreanSummary(row, summary, items, directnessLabel, trendTone, headline),
     notes: summary?.notes || [],
     oneLine: `${directnessLabel}, 흐름은 ${trendTone}. 핵심 확인 뉴스: ${headline}`
   };
+}
+
+function candidateNewsItemRank(item, row) {
+  const title = `${item?.title || ""} ${item?.summary || ""}`.toLowerCase();
+  const ticker = String(row?.ticker || "").replace(/\.(KS|KQ)$/i, "").toLowerCase();
+  const nameTokens = String(row?.name || "")
+    .toLowerCase()
+    .split(/[^a-z0-9가-힣]+/)
+    .filter((token) => token.length >= 3 && !["inc", "corp", "corporation", "ltd", "class", "ordinary", "shares", "common", "stock"].includes(token));
+  const mentionsTicker = ticker && title.includes(ticker);
+  const mentionsName = nameTokens.some((token) => title.includes(token));
+  const directness = item?.directness === "direct_ticker" ? 40 : item?.directness === "sector_theme" ? 15 : 0;
+  const catalyst = item?.strongCatalyst ? 15 : 0;
+  const relevance = Number(item?.relevanceScore || 0) * 3;
+  const freshness = Number(item?.freshnessScore || 0);
+  const source = item?.sourceTier === "official" ? 12 : item?.sourceTier === "tier1" ? 8 : 3;
+  return directness + catalyst + relevance + freshness + source + (mentionsTicker ? 35 : 0) + (mentionsName ? 25 : 0);
+}
+
+function summarizeCandidateNewsItemKorean(item, row) {
+  const title = String(item?.title || "").trim();
+  const lower = title.toLowerCase();
+  const name = localizedName(row?.ticker, row?.name || row?.ticker || "해당 종목");
+  const event = koreanEventType(item?.eventType || item?.eventLabel);
+  const tone = koreanDirection(item?.direction);
+  if (!title) return `${name} 관련 뉴스 제목이 비어 있어 내용 판단이 제한적입니다.`;
+  if (lower.includes("outpaced the stock market")) {
+    return `${name} 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.`;
+  }
+  if (lower.includes("target hike") || lower.includes("price target")) {
+    return `${name}에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.`;
+  }
+  if (lower.includes("win streak")) {
+    return `${name}의 주가 상승 흐름이 이어지고 있다는 내용입니다. 추세 지속 신호로 볼 수 있지만 연속 상승 뒤 과열 여부를 함께 봐야 합니다.`;
+  }
+  if (lower.includes("drone defense")) {
+    return `${name} 관련 방산/드론 방어 수요가 부각된 뉴스입니다. 테마성 수요가 강해질 수 있어 관련 수주나 정책 뉴스의 후속 확인이 중요합니다.`;
+  }
+  if (lower.includes("shares skyrocket") || lower.includes("surge") || lower.includes("rally")) {
+    return `${name} 주가 급등 또는 강한 반등을 다룬 뉴스입니다. ${event} 성격의 재료가 ${tone}으로 해석되고 있어 거래량 동반 여부가 중요합니다.`;
+  }
+  if (lower.includes("upgrade") || lower.includes("initiates")) {
+    return `${name}에 대한 증권사 투자의견 상향 또는 신규 커버리지 뉴스입니다. 수급에는 긍정적일 수 있지만 단독 매수 근거보다는 가격 반응 확인용으로 봅니다.`;
+  }
+  if (lower.includes("downgrade")) {
+    return `${name} 관련 투자의견 하향 뉴스입니다. 후보 유지에는 부담 요인이라 가격이 지지선을 지키는지 확인해야 합니다.`;
+  }
+  if (lower.includes("earnings") || lower.includes("guidance")) {
+    return `${name}의 실적 또는 가이던스 관련 뉴스입니다. ${tone} 재료로 분류되며, 실적 후 주가 반응이 유지되는지가 핵심입니다.`;
+  }
+  if (lower.includes("contract") || lower.includes("award") || lower.includes("order")) {
+    return `${name}의 계약, 수주, 주문 관련 뉴스입니다. 실적 가시성을 높일 수 있는 촉매이므로 후속 규모와 마진 영향을 확인합니다.`;
+  }
+  if (item?.sourceType === "official_filing" || lower.includes("8-k") || lower.includes("10-q") || lower.includes("10-k")) {
+    return `${name}의 공식 공시성 뉴스입니다. 제목만으로는 세부 영향이 제한적이므로 공시 본문에서 매출, 비용, 지분, 소송 등 핵심 변화를 확인해야 합니다.`;
+  }
+  return `${name} 관련 ${event} 뉴스로 분류됩니다. 현재 방향성은 ${tone}이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.`;
+}
+
+function buildCandidateNewsKoreanSummary(row, summary, items, directnessLabel, trendTone, headline) {
+  const name = localizedName(row?.ticker, row?.name || row?.ticker || "해당 종목");
+  const hasItems = items.length > 0;
+  const directLine = summary?.directCatalyst
+    ? `${name}에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "${summary.directCatalyst.title}"이며, ${koreanEventType(summary.directCatalyst.eventLabel || summary.directCatalyst.eventType)} 재료로 봅니다.`
+    : `${name}에 대해 강한 직접 촉매는 확인되지 않았습니다.`;
+  const overview = hasItems
+    ? `${directnessLabel} 상태이며 뉴스 흐름은 ${trendTone}입니다. 후보 선정 후 재확인한 핵심 이슈는 "${headline}"입니다.`
+    : `${name} 후보 선정 후 재확인했지만 의미 있는 신규 뉴스나 공시는 확인되지 않았습니다.`;
+  const implication = hasItems
+    ? `매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.`
+    : `뉴스 공백 상태에서는 가격/거래량 조건이 더 중요하며, 새 공시나 직접 뉴스가 나오기 전까지 신뢰도는 제한적으로 봅니다.`;
+  return {
+    title: "최근 뉴스/동향 한국어 요약",
+    overview,
+    directLine,
+    bullets: hasItems ? items.map((item) => item.koreanSummary) : ["후보 선정 후 재검색 기준으로 요약할 만한 신규 뉴스가 없습니다."],
+    tradingImplication: implication
+  };
+}
+
+function koreanEventType(value) {
+  return {
+    earnings: "실적",
+    guidance: "가이던스",
+    contract: "계약/수주",
+    product: "제품/서비스",
+    regulation: "정책/규제",
+    mna: "M&A",
+    analyst_upgrade: "애널리스트 상향",
+    analyst_downgrade: "애널리스트 하향",
+    offering: "증자/오퍼링",
+    insider_buy: "내부자 매수",
+    insider_sell: "내부자 매도",
+    macro: "매크로",
+    general_market: "시장 일반"
+  }[value] || "일반";
+}
+
+function koreanDirection(value) {
+  return {
+    positive: "긍정",
+    negative: "부정",
+    mixed: "혼재",
+    neutral: "중립"
+  }[value] || "중립";
 }
 
 function priceVolumeStatus(marketData) {
@@ -3512,7 +3656,7 @@ ${row.reasonConfidence === "HIGH" ? `- ${row.directCatalyst}` : ""}
 - 진입 조건: ${row.entryCondition}
 - 무효화 조건: ${row.invalidationCondition}
 - todayActionLabel: ${row.todayActionLabel}
-- 후보 선정 후 뉴스/동향 재확인: ${candidateNewsOneLine(row)}
+${candidateNewsSectionMarkdown(row.candidateNewsSummary)}
 - 차트: ${chartMarkdown(row)}`;
 }
 
@@ -3574,7 +3718,7 @@ function renderDarkHorseCandidateMarkdown(row) {
 - 확인 조건: ${d.confirmCondition || "데이터 없음"}
 - 무효화 조건: ${d.invalidationCondition || "데이터 없음"}
 - 왜 아직 메인이 아닌가: ${d.whyNotMain || "메인 후보 조건 확인 전"}
-- 후보 선정 후 뉴스/동향 재확인: ${candidateNewsOneLine(row)}
+${candidateNewsSectionMarkdown(row.candidateNewsSummary)}
 
 <details>
 <summary>darkHorseScore 상세 근거 보기</summary>
@@ -3604,7 +3748,7 @@ function renderReferenceCandidateMarkdown(row) {
 - RVOL: ${num(row.market?.relativeVolume, 2)}x
 - 진입 전 확인: ${row.entryCondition}
 - 무효화: ${row.invalidationCondition}
-- 후보 선정 후 뉴스/동향 재확인: ${candidateNewsOneLine(row)}`;
+${candidateNewsSectionMarkdown(row.candidateNewsSummary)}`;
 }
 
 function renderNarrativesMarkdown(report) {
@@ -3987,14 +4131,29 @@ function newsMarkdown(summary) {
 }
 
 function candidateNewsOneLine(row) {
-  return row?.candidateNewsSummary?.oneLine || "후보 선정 후 재확인 뉴스 데이터 없음";
+  const summary = row?.candidateNewsSummary;
+  return summary?.koreanSummary?.overview || summary?.oneLine || "후보 선정 후 재확인 뉴스 데이터 없음";
+}
+
+function candidateNewsSectionMarkdown(summary) {
+  if (!summary) return `#### 최근 뉴스/동향 한국어 요약
+
+- 요약: 후보 선정 후 재확인 뉴스 데이터 없음`;
+  const korean = summary.koreanSummary || {};
+  const bullets = korean.bullets || [];
+  return `#### 최근 뉴스/동향 한국어 요약
+
+- 요약: ${korean.overview || summary.oneLine || "의미 있는 신규 뉴스 없음"}
+- 직접 촉매 판단: ${korean.directLine || "직접 촉매 없음"}
+${bullets.map((line, index) => `- 뉴스 ${index + 1}: ${line}`).join("\n") || "- 뉴스: 요약할 만한 신규 뉴스 없음"}
+- 매매 해석: ${korean.tradingImplication || "가격/거래량 조건 확인 전까지 보수적으로 본다."}`;
 }
 
 function candidateNewsMarkdown(summary) {
   if (!summary) return "  - 재확인 상태: 데이터 없음";
   const sourceStatus = (summary.sourceStatuses || []).map((row) => `${row.source} ${row.status}`).join("; ") || "데이터 없음";
   const headlineRows = (summary.items || []).map((item, index) =>
-    `  - 주요 뉴스 ${index + 1}: ${item.source || "뉴스"} / ${item.eventType || "general"} / ${item.freshnessBucket || "stale"} / ${item.direction || "neutral"} - ${item.title}`
+    `  - 원문 헤드라인 ${index + 1}: ${item.source || "뉴스"} / ${item.eventType || "general"} / ${item.freshnessBucket || "stale"} / ${item.direction || "neutral"} - ${item.title}`
   );
   return [
     `  - 재확인 상태: ${statusLabel(summary.status)}`,
@@ -4003,15 +4162,30 @@ function candidateNewsMarkdown(summary) {
     `  - 신선도: ${summary.freshnessStatus || "UNKNOWN"}`,
     `  - 출처: ${summary.source || "데이터 없음"}`,
     `  - 소스별 상태: ${sourceStatus}`,
-    `  - 한 줄 요약: ${summary.oneLine || "의미 있는 신규 뉴스 없음"}`,
+    `  - 한국어 요약: ${summary.koreanSummary?.overview || summary.oneLine || "의미 있는 신규 뉴스 없음"}`,
     `  - 직접 촉매: ${summary.directCatalyst ? `${summary.directCatalyst.source} / ${summary.directCatalyst.eventType || "general"} / ${summary.directCatalyst.freshnessBucket || "stale"} - ${summary.directCatalyst.title}` : "없음"}`,
-    ...(headlineRows.length ? headlineRows : ["  - 주요 뉴스: 없음"]),
+    ...(summary.koreanSummary?.bullets || []).map((line, index) => `  - 한국어 뉴스 요약 ${index + 1}: ${line}`),
+    ...(headlineRows.length ? headlineRows : ["  - 원문 헤드라인: 없음"]),
     `  - 주의: ${(summary.notes || []).join("; ") || "특이사항 없음"}`
   ].join("\n");
 }
 
 function candidateNewsHtmlItems(summary) {
   return candidateNewsMarkdown(summary).split("\n").map((line) => escapeHtml(line.replace(/^\s*-\s*/, "")));
+}
+
+function candidateNewsSectionHtml(summary) {
+  if (!summary) {
+    return `<section class="candidate-news-summary"><h4>최근 뉴스/동향 한국어 요약</h4>${htmlList(["후보 선정 후 재확인 뉴스 데이터 없음"])}</section>`;
+  }
+  const korean = summary.koreanSummary || {};
+  const items = [
+    `<strong>요약</strong> ${escapeHtml(korean.overview || summary.oneLine || "의미 있는 신규 뉴스 없음")}`,
+    `<strong>직접 촉매 판단</strong> ${escapeHtml(korean.directLine || "직접 촉매 없음")}`,
+    ...(korean.bullets || []).map((line, index) => `<strong>뉴스 ${index + 1}</strong> ${escapeHtml(line)}`),
+    `<strong>매매 해석</strong> ${escapeHtml(korean.tradingImplication || "가격/거래량 조건 확인 전까지 보수적으로 본다.")}`
+  ];
+  return `<section class="candidate-news-summary"><h4>최근 뉴스/동향 한국어 요약</h4>${htmlList(items)}</section>`;
 }
 
 function etfBreadthMarkdown(summary) {
@@ -4152,7 +4326,7 @@ ${row.reasonConfidence === "HIGH" ? `- ${row.directCatalyst}` : ""}
 - whyMoneyIsFlowing: ${row.whyMoneyIsFlowing}
 - likelyNextBuyer: ${row.likelyNextBuyer}
 - whyThisCouldTradeHigher: ${row.whyThisCouldTradeHigher}
-- 후보 선정 후 뉴스/동향 재확인: ${candidateNewsOneLine(row)}
+${candidateNewsSectionMarkdown(row.candidateNewsSummary)}
 - 진입 조건: ${row.entryCondition}
 - 무효화 조건: ${row.invalidationCondition}
 - 차트: ${chartMarkdown(row)}
@@ -4212,7 +4386,7 @@ ${row.reasonConfidence === "HIGH" ? `- ${row.directCatalyst}` : ""}
 - whyThisCouldTradeHigher: ${row.whyThisCouldTradeHigher}
 - 왜 ETF가 아니라 이 종목인가: ${row.whyStockOverEtf}
 - ETF가 더 나은 경우: ${row.whenEtfIsBetter}
-- 후보 선정 후 뉴스/동향 재확인: ${candidateNewsOneLine(row)}
+${candidateNewsSectionMarkdown(row.candidateNewsSummary)}
 - 진입 조건: ${row.entryCondition}
 - 무효화 조건: ${row.invalidationCondition}
 ${row.holdingInfo ? `- 보유 정보: ${row.holdingInfo}\n` : ""}- 차트: ${chartMarkdown(row)}
@@ -4937,6 +5111,7 @@ function renderActionHtml(row) {
       ${coreMetricGrid(row, row.assetType)}
       ${marketMetricGrid(row)}
       ${insightGrid(row)}
+      ${candidateNewsSectionHtml(row.candidateNewsSummary)}
       ${scoreBreakdownHtml(row)}
       ${supplementalDetailsHtml(row)}
     </div>
@@ -4945,6 +5120,7 @@ function renderActionHtml(row) {
       ${coreMetricGrid(row, row.assetType)}
       ${marketMetricGrid(row)}
       ${insightGrid(row)}
+      ${candidateNewsSectionHtml(row.candidateNewsSummary)}
       ${scoreBreakdownHtml(row)}
       ${supplementalDetailsHtml(row)}
     </details>
@@ -4960,7 +5136,7 @@ function mobileActionSummaryHtml(row) {
       ${metricChip("주문 실행", orderExecutionLabel(row))}
     </div>
     ${fieldLine("왜 돈이 몰리는가", escapeHtml(row.whyMoneyIsFlowing || "데이터 없음"))}
-    ${fieldLine("뉴스/동향 재확인", escapeHtml(candidateNewsOneLine(row)))}
+    ${candidateNewsSectionHtml(row.candidateNewsSummary)}
     ${fieldLine("진입 조건", escapeHtml(row.entryCondition || "데이터 없음"))}
     ${fieldLine("무효화 조건", escapeHtml(row.invalidationCondition || "데이터 없음"))}`;
 }
@@ -4976,6 +5152,7 @@ function renderEtfHtml(row) {
     ])}
     ${marketMetricGrid(row)}
     ${insightGrid(row)}
+    ${candidateNewsSectionHtml(row.candidateNewsSummary)}
     ${scoreBreakdownHtml(row)}
     ${supplementalDetailsHtml(row)}
     <p class="muted">${escapeHtml(marketLine(row.market))}</p>
@@ -4998,6 +5175,7 @@ function renderStockHtml(row) {
       ["왜 ETF가 아니라 이 종목인가", row.whyStockOverEtf],
       ["ETF가 더 나은 경우", row.whenEtfIsBetter]
     ])}
+    ${candidateNewsSectionHtml(row.candidateNewsSummary)}
     ${scoreBreakdownHtml(row)}
     ${supplementalDetailsHtml(row)}
     ${row.holdingInfo ? `<p class="muted">${escapeHtml(row.holdingInfo)}</p>` : ""}
