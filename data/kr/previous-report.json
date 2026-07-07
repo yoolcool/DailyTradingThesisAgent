@@ -13,7 +13,7 @@
     "sessionLabel": "KRX regular session"
   },
   "reportDate": "2026-07-07",
-  "generatedAt": "2026년 7월 7일 화요일 오후 12:36",
+  "generatedAt": "2026년 7월 7일 화요일 오후 12:37",
   "stockUniverseScan": {
     "universeName": "KOSPI200",
     "asOfDate": "2026-07-07",
@@ -5150,7 +5150,7 @@
       "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "073240.KS",
-        "checkedAt": "2026-07-07T03:36:11.718Z",
+        "checkedAt": "2026-07-07T03:37:13.725Z",
         "status": "CONNECTED",
         "source": "Google News RSS",
         "sourceStatuses": [
@@ -5181,10 +5181,9 @@
           {
             "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
             "summary": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대&nbsp;&nbsp;디지털데일리",
-            "contentSummary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
             "koreanSummary": {
               "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
-              "content": "금호타이어 관련 투자/증설 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어가 지난해 보안 투자에 16억원을 집행했고, 제목 기준으로 타이어 3사 중 가장 큰 규모였다는 내용입니다.",
               "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
               "check": "투자/증설의 금액, 기간, 실적 반영 시점"
             },
@@ -5199,10 +5198,9 @@
           {
             "title": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략 - 씽크풀 AI",
             "summary": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략&nbsp;&nbsp;씽크풀 AI",
-            "contentSummary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
             "koreanSummary": {
               "title": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략 - 씽크풀 AI",
-              "content": "금호타이어 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어에 대한 기술적 분석 또는 투자전략성 기사입니다. 기업의 신규 공시보다는 가격 위치, 저점 매수 관점, 향후 대응전략을 다룬 내용으로 봅니다.",
               "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
@@ -5217,10 +5215,9 @@
           {
             "title": "금호타이어 투자분석 2026. 07. 06 - 주달",
             "summary": "금호타이어 투자분석 2026. 07. 06&nbsp;&nbsp;주달",
-            "contentSummary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
             "koreanSummary": {
               "title": "금호타이어 투자분석 2026. 07. 06 - 주달",
-              "content": "금호타이어 관련 투자/증설 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어에 대한 기술적 분석 또는 투자전략성 기사입니다. 기업의 신규 공시보다는 가격 위치, 저점 매수 관점, 향후 대응전략을 다룬 내용으로 봅니다.",
               "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
               "check": "투자/증설의 금액, 기간, 실적 반영 시점"
             },
@@ -5240,19 +5237,19 @@
           "bullets": [
             {
               "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
-              "content": "금호타이어 관련 투자/증설 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어가 지난해 보안 투자에 16억원을 집행했고, 제목 기준으로 타이어 3사 중 가장 큰 규모였다는 내용입니다.",
               "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
               "check": "투자/증설의 금액, 기간, 실적 반영 시점"
             },
             {
               "title": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략 - 씽크풀 AI",
-              "content": "금호타이어 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어에 대한 기술적 분석 또는 투자전략성 기사입니다. 기업의 신규 공시보다는 가격 위치, 저점 매수 관점, 향후 대응전략을 다룬 내용으로 봅니다.",
               "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
               "title": "금호타이어 투자분석 2026. 07. 06 - 주달",
-              "content": "금호타이어 관련 투자/증설 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어에 대한 기술적 분석 또는 투자전략성 기사입니다. 기업의 신규 공시보다는 가격 위치, 저점 매수 관점, 향후 대응전략을 다룬 내용으로 봅니다.",
               "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
               "check": "투자/증설의 금액, 기간, 실적 반영 시점"
             }
@@ -5341,7 +5338,7 @@
       "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "073240.KS",
-        "checkedAt": "2026-07-07T03:36:11.718Z",
+        "checkedAt": "2026-07-07T03:37:13.725Z",
         "status": "CONNECTED",
         "source": "Google News RSS",
         "sourceStatuses": [
@@ -5372,10 +5369,9 @@
           {
             "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
             "summary": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대&nbsp;&nbsp;디지털데일리",
-            "contentSummary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
             "koreanSummary": {
               "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
-              "content": "금호타이어 관련 투자/증설 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어가 지난해 보안 투자에 16억원을 집행했고, 제목 기준으로 타이어 3사 중 가장 큰 규모였다는 내용입니다.",
               "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
               "check": "투자/증설의 금액, 기간, 실적 반영 시점"
             },
@@ -5390,10 +5386,9 @@
           {
             "title": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략 - 씽크풀 AI",
             "summary": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략&nbsp;&nbsp;씽크풀 AI",
-            "contentSummary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
             "koreanSummary": {
               "title": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략 - 씽크풀 AI",
-              "content": "금호타이어 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어에 대한 기술적 분석 또는 투자전략성 기사입니다. 기업의 신규 공시보다는 가격 위치, 저점 매수 관점, 향후 대응전략을 다룬 내용으로 봅니다.",
               "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
@@ -5408,10 +5403,9 @@
           {
             "title": "금호타이어 투자분석 2026. 07. 06 - 주달",
             "summary": "금호타이어 투자분석 2026. 07. 06&nbsp;&nbsp;주달",
-            "contentSummary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
             "koreanSummary": {
               "title": "금호타이어 투자분석 2026. 07. 06 - 주달",
-              "content": "금호타이어 관련 투자/증설 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어에 대한 기술적 분석 또는 투자전략성 기사입니다. 기업의 신규 공시보다는 가격 위치, 저점 매수 관점, 향후 대응전략을 다룬 내용으로 봅니다.",
               "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
               "check": "투자/증설의 금액, 기간, 실적 반영 시점"
             },
@@ -5431,19 +5425,19 @@
           "bullets": [
             {
               "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
-              "content": "금호타이어 관련 투자/증설 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어가 지난해 보안 투자에 16억원을 집행했고, 제목 기준으로 타이어 3사 중 가장 큰 규모였다는 내용입니다.",
               "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
               "check": "투자/증설의 금액, 기간, 실적 반영 시점"
             },
             {
               "title": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략 - 씽크풀 AI",
-              "content": "금호타이어 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어에 대한 기술적 분석 또는 투자전략성 기사입니다. 기업의 신규 공시보다는 가격 위치, 저점 매수 관점, 향후 대응전략을 다룬 내용으로 봅니다.",
               "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
               "title": "금호타이어 투자분석 2026. 07. 06 - 주달",
-              "content": "금호타이어 관련 투자/증설 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어에 대한 기술적 분석 또는 투자전략성 기사입니다. 기업의 신규 공시보다는 가격 위치, 저점 매수 관점, 향후 대응전략을 다룬 내용으로 봅니다.",
               "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
               "check": "투자/증설의 금액, 기간, 실적 반영 시점"
             }
@@ -5533,7 +5527,7 @@
       "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "073240.KS",
-        "checkedAt": "2026-07-07T03:36:11.718Z",
+        "checkedAt": "2026-07-07T03:37:13.725Z",
         "status": "CONNECTED",
         "source": "Google News RSS",
         "sourceStatuses": [
@@ -5564,10 +5558,9 @@
           {
             "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
             "summary": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대&nbsp;&nbsp;디지털데일리",
-            "contentSummary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
             "koreanSummary": {
               "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
-              "content": "금호타이어 관련 투자/증설 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어가 지난해 보안 투자에 16억원을 집행했고, 제목 기준으로 타이어 3사 중 가장 큰 규모였다는 내용입니다.",
               "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
               "check": "투자/증설의 금액, 기간, 실적 반영 시점"
             },
@@ -5582,10 +5575,9 @@
           {
             "title": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략 - 씽크풀 AI",
             "summary": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략&nbsp;&nbsp;씽크풀 AI",
-            "contentSummary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
             "koreanSummary": {
               "title": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략 - 씽크풀 AI",
-              "content": "금호타이어 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어에 대한 기술적 분석 또는 투자전략성 기사입니다. 기업의 신규 공시보다는 가격 위치, 저점 매수 관점, 향후 대응전략을 다룬 내용으로 봅니다.",
               "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
@@ -5600,10 +5592,9 @@
           {
             "title": "금호타이어 투자분석 2026. 07. 06 - 주달",
             "summary": "금호타이어 투자분석 2026. 07. 06&nbsp;&nbsp;주달",
-            "contentSummary": "Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.",
             "koreanSummary": {
               "title": "금호타이어 투자분석 2026. 07. 06 - 주달",
-              "content": "금호타이어 관련 투자/증설 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어에 대한 기술적 분석 또는 투자전략성 기사입니다. 기업의 신규 공시보다는 가격 위치, 저점 매수 관점, 향후 대응전략을 다룬 내용으로 봅니다.",
               "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
               "check": "투자/증설의 금액, 기간, 실적 반영 시점"
             },
@@ -5623,19 +5614,19 @@
           "bullets": [
             {
               "title": "금호타이어, 지난해 보안 투자 16억원…타이어 3사 중 최대 - 디지털데일리",
-              "content": "금호타이어 관련 투자/증설 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어가 지난해 보안 투자에 16억원을 집행했고, 제목 기준으로 타이어 3사 중 가장 큰 규모였다는 내용입니다.",
               "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
               "check": "투자/증설의 금액, 기간, 실적 반영 시점"
             },
             {
               "title": "금호타이어(073240)저점에선 물량 모아둘 기회로 보이며, 이후 전망 및 대응전략 - 씽크풀 AI",
-              "content": "금호타이어 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어에 대한 기술적 분석 또는 투자전략성 기사입니다. 기업의 신규 공시보다는 가격 위치, 저점 매수 관점, 향후 대응전략을 다룬 내용으로 봅니다.",
               "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
               "title": "금호타이어 투자분석 2026. 07. 06 - 주달",
-              "content": "금호타이어 관련 투자/증설 뉴스입니다. 기사 스니펫상 핵심 내용은 Comprehensive up-to-date news coverage, aggregated from sources all over the world by Google News.입니다.",
+              "content": "금호타이어에 대한 기술적 분석 또는 투자전략성 기사입니다. 기업의 신규 공시보다는 가격 위치, 저점 매수 관점, 향후 대응전략을 다룬 내용으로 봅니다.",
               "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
               "check": "투자/증설의 금액, 기간, 실적 반영 시점"
             }
@@ -5988,10 +5979,10 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-07",
     "priceAsOfLabel": "2026-07-07 KRX 정규장 종가",
-    "reportGeneratedAtKST": "2026-07-07 12:36",
+    "reportGeneratedAtKST": "2026-07-07 12:37",
     "newsStatus": "DISABLED",
-    "newsFetchedAt": "2026-07-07T03:36:10.529Z",
-    "newsLastUpdatedAt": "2026-07-07T03:36:10.529Z",
+    "newsFetchedAt": "2026-07-07T03:37:12.891Z",
+    "newsLastUpdatedAt": "2026-07-07T03:37:12.891Z",
     "latestNewsPublishedAt": null,
     "newsFreshnessStatus": "UNKNOWN",
     "newsSources": "DART",
