@@ -13,7 +13,7 @@
     "sessionLabel": "KRX regular session"
   },
   "reportDate": "2026-07-07",
-  "generatedAt": "2026년 7월 7일 화요일 오전 11:32",
+  "generatedAt": "2026년 7월 7일 화요일 오전 11:51",
   "stockUniverseScan": {
     "universeName": "KOSPI200",
     "asOfDate": "2026-07-07",
@@ -77,8 +77,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 82,
         "moneyFlowScoreInitial": 82,
-        "moneyFlowScoreFinal": 83,
-        "finalRawScore": 83,
+        "moneyFlowScoreFinal": 77,
+        "finalRawScore": 77,
         "todayActionLabel": "제외",
         "reasonConfidence": "MEDIUM",
         "oneDayReturn": 8.73,
@@ -99,8 +99,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 73,
         "moneyFlowScoreInitial": 73,
-        "moneyFlowScoreFinal": 74,
-        "finalRawScore": 74,
+        "moneyFlowScoreFinal": 68,
+        "finalRawScore": 68,
         "todayActionLabel": "거래량 확인 전 관찰",
         "reasonConfidence": "LOW",
         "oneDayReturn": 2.15,
@@ -143,8 +143,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 50,
         "moneyFlowScoreInitial": 50,
-        "moneyFlowScoreFinal": 50,
-        "finalRawScore": 50,
+        "moneyFlowScoreFinal": 45,
+        "finalRawScore": 45,
         "todayActionLabel": "거래량 확인 전 관찰",
         "reasonConfidence": "LOW",
         "oneDayReturn": 3.71,
@@ -250,8 +250,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 47,
         "moneyFlowScoreInitial": 47,
-        "moneyFlowScoreFinal": 48,
-        "finalRawScore": 48,
+        "moneyFlowScoreFinal": 42,
+        "finalRawScore": 42,
         "todayActionLabel": "거래량 확인 전 관찰",
         "reasonConfidence": "LOW",
         "oneDayReturn": 3.38,
@@ -338,8 +338,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 41,
         "moneyFlowScoreInitial": 41,
-        "moneyFlowScoreFinal": 50,
-        "finalRawScore": 50,
+        "moneyFlowScoreFinal": 42,
+        "finalRawScore": 42,
         "todayActionLabel": "거래량 확인 전 관찰",
         "reasonConfidence": "LOW",
         "oneDayReturn": 0.7,
@@ -4388,8 +4388,8 @@
     {
       "name": "화장품/음식료 수출 소비재",
       "status": "약화",
-      "narrativeScore": 31,
-      "rawScore": 31,
+      "narrativeScore": 28,
+      "rawScore": 28,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS"
@@ -4681,7 +4681,7 @@
       "name": "Energy & Chemicals 자금 유입",
       "status": "약화",
       "narrativeScore": 0,
-      "rawScore": -11,
+      "rawScore": -12,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS",
@@ -5002,8 +5002,8 @@
     {
       "name": "화장품/음식료 수출 소비재",
       "status": "약화",
-      "narrativeScore": 31,
-      "rawScore": 31,
+      "narrativeScore": 28,
+      "rawScore": 28,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS"
@@ -5140,6 +5140,7 @@
           }
         ],
         "watchItems": [
+          "news data not connected or unavailable",
           "related ETF relative strength mapping needs confirmation"
         ],
         "summary": "1개 감점 리스크로 총 -6점 반영."
@@ -5147,6 +5148,30 @@
       "reasonConfidence": "MEDIUM",
       "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
+      "candidateNewsSummary": {
+        "ticker": "073240.KS",
+        "checkedAt": "2026-07-07T02:51:09.602Z",
+        "status": "DISABLED",
+        "source": "DART",
+        "sourceStatuses": [
+          {
+            "source": "DART",
+            "status": "DISABLED"
+          }
+        ],
+        "lastPublishedAt": null,
+        "freshnessStatus": "UNKNOWN",
+        "trendTone": "중립 또는 혼재",
+        "directnessLabel": "직접 뉴스 제한",
+        "headline": "의미 있는 신규 DART 공시 없음",
+        "directCatalyst": null,
+        "items": [],
+        "notes": [
+          "DART_API_KEY 또는 OPENDART_API_KEY not configured",
+          "해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음"
+        ],
+        "oneLine": "직접 뉴스 제한, 흐름은 중립 또는 혼재. 핵심 확인 뉴스: 의미 있는 신규 DART 공시 없음"
+      },
       "tieBreakerReason": "최종 원점수 86, 리스크 패널티 -6, 5일 수익률 +28.28%, 상대 거래량 4.55배 순으로 정렬",
       "entryQualityScore": 38,
       "entryQualityLabel": "낮음",
@@ -5212,6 +5237,7 @@
           }
         ],
         "watchItems": [
+          "news data not connected or unavailable",
           "related ETF relative strength mapping needs confirmation"
         ],
         "summary": "1개 감점 리스크로 총 -6점 반영."
@@ -5219,6 +5245,30 @@
       "reasonConfidence": "MEDIUM",
       "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
+      "candidateNewsSummary": {
+        "ticker": "073240.KS",
+        "checkedAt": "2026-07-07T02:51:09.602Z",
+        "status": "DISABLED",
+        "source": "DART",
+        "sourceStatuses": [
+          {
+            "source": "DART",
+            "status": "DISABLED"
+          }
+        ],
+        "lastPublishedAt": null,
+        "freshnessStatus": "UNKNOWN",
+        "trendTone": "중립 또는 혼재",
+        "directnessLabel": "직접 뉴스 제한",
+        "headline": "의미 있는 신규 DART 공시 없음",
+        "directCatalyst": null,
+        "items": [],
+        "notes": [
+          "DART_API_KEY 또는 OPENDART_API_KEY not configured",
+          "해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음"
+        ],
+        "oneLine": "직접 뉴스 제한, 흐름은 중립 또는 혼재. 핵심 확인 뉴스: 의미 있는 신규 DART 공시 없음"
+      },
       "tieBreakerReason": "최종 원점수 86, 리스크 패널티 -6, 5일 수익률 +28.28%, 상대 거래량 4.55배 순으로 정렬",
       "entryQualityScore": 38,
       "entryQualityLabel": "낮음",
@@ -5285,6 +5335,7 @@
           }
         ],
         "watchItems": [
+          "news data not connected or unavailable",
           "related ETF relative strength mapping needs confirmation"
         ],
         "summary": "1개 감점 리스크로 총 -6점 반영."
@@ -5292,6 +5343,30 @@
       "reasonConfidence": "MEDIUM",
       "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
+      "candidateNewsSummary": {
+        "ticker": "073240.KS",
+        "checkedAt": "2026-07-07T02:51:09.602Z",
+        "status": "DISABLED",
+        "source": "DART",
+        "sourceStatuses": [
+          {
+            "source": "DART",
+            "status": "DISABLED"
+          }
+        ],
+        "lastPublishedAt": null,
+        "freshnessStatus": "UNKNOWN",
+        "trendTone": "중립 또는 혼재",
+        "directnessLabel": "직접 뉴스 제한",
+        "headline": "의미 있는 신규 DART 공시 없음",
+        "directCatalyst": null,
+        "items": [],
+        "notes": [
+          "DART_API_KEY 또는 OPENDART_API_KEY not configured",
+          "해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음"
+        ],
+        "oneLine": "직접 뉴스 제한, 흐름은 중립 또는 혼재. 핵심 확인 뉴스: 의미 있는 신규 DART 공시 없음"
+      },
       "tieBreakerReason": "최종 원점수 86, 리스크 패널티 -6, 5일 수익률 +28.28%, 상대 거래량 4.55배 순으로 정렬",
       "entryQualityScore": 38,
       "entryQualityLabel": "낮음",
@@ -5336,14 +5411,14 @@
       "name": "한국콜마",
       "actionLabel": "거래량 확인 전 관찰",
       "status": "관찰",
-      "moneyFlowScore": 74,
+      "moneyFlowScore": 68,
       "moneyFlowScoreInitial": 73,
-      "moneyFlowScoreFinal": 74,
-      "finalRawScore": 74,
-      "finalDisplayScore": 74,
+      "moneyFlowScoreFinal": 68,
+      "finalRawScore": 68,
+      "finalDisplayScore": 68,
       "wasCapped": false,
       "capReason": "cap not applied",
-      "formulaText": "+73 + +6 + 0 + +5 + 0 - 10 + 0 = 74",
+      "formulaText": "+73 + 0 + 0 + +5 + 0 - 10 + 0 = 68",
       "riskPenalty": -10,
       "riskPenaltySummary": {
         "totalPenalty": -10,
@@ -5365,20 +5440,21 @@
           }
         ],
         "watchItems": [
+          "news data not connected or unavailable",
           "related ETF relative strength mapping needs confirmation"
         ],
         "summary": "2개 감점 리스크로 총 -10점 반영."
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: DART / 최대주주/지분변동 / under_72h / mixed / 중요도 3 - 최대주주등소유주식변동신고서              ",
-      "tieBreakerReason": "최종 원점수 74, 리스크 패널티 -10, 5일 수익률 +19.40%, 상대 거래량 0.71배 순으로 정렬",
-      "entryQualityScore": 25,
+      "directCatalyst": "",
+      "tieBreakerReason": "최종 원점수 68, 리스크 패널티 -10, 5일 수익률 +19.40%, 상대 거래량 0.71배 순으로 정렬",
+      "entryQualityScore": 27,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 31,
+      "trendStrengthIndex": 34,
       "trendStateLabel": "잠복",
-      "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
-      "exhaustionRisk": 43,
+      "trendDecisionLine": "ETF 동조성이 약해 테마 자금 확인이 부족하다.",
+      "exhaustionRisk": 34,
       "exhaustionRiskLabel": "보통",
       "relativeVolume": 0.71,
       "marketDataStatus": "ok",
@@ -5388,7 +5464,7 @@
         "label": "거래량 확인 전 관찰",
         "status": "관찰",
         "reasons": [
-          "Entry Quality 25 < 40",
+          "Entry Quality 27 < 40",
           "RVOL 0.71x < 1.00x"
         ],
         "rescueType": null
@@ -5396,11 +5472,11 @@
       "marketContext": {
         "marketRegime": "위험회피",
         "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험회피 / 고점 근처 추격 리스크 / Entry Quality 25 < 40 / RVOL 0.71x < 1.00x"
+        "reason": "전체 시장은 위험회피 / 고점 근처 추격 리스크 / Entry Quality 27 < 40 / RVOL 0.71x < 1.00x"
       },
       "linkedNarrative": "화장품/음식료 수출 소비재",
       "narrativeStatus": "약화",
-      "narrativeScore": 31,
+      "narrativeScore": 28,
       "relatedEtfs": [
         "069500.KS",
         "229200.KS"
@@ -5437,19 +5513,21 @@
             "action": "Hold off until 20-day moving average is recovered."
           }
         ],
-        "watchItems": [],
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
       "directCatalyst": "",
       "tieBreakerReason": "최종 원점수 -35, 리스크 패널티 -6, 5일 수익률 -11.18%, 상대 거래량 0.31배 순으로 정렬",
-      "entryQualityScore": 0,
+      "entryQualityScore": 4,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 31,
+      "trendStrengthIndex": 34,
       "trendStateLabel": "잠복",
-      "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
-      "exhaustionRisk": 43,
+      "trendDecisionLine": "ETF 동조성이 약해 테마 자금 확인이 부족하다.",
+      "exhaustionRisk": 34,
       "exhaustionRiskLabel": "보통",
       "relativeVolume": 0.31,
       "marketDataStatus": "ok",
@@ -5459,7 +5537,7 @@
         "label": "거래량 확인 전 관찰",
         "status": "관찰",
         "reasons": [
-          "Entry Quality 0 < 40",
+          "Entry Quality 4 < 40",
           "RVOL 0.31x < 1.00x"
         ],
         "rescueType": null
@@ -5467,11 +5545,11 @@
       "marketContext": {
         "marketRegime": "위험회피",
         "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험회피 / 후보는 당일 음봉 또는 약세 / Entry Quality 0 < 40 / RVOL 0.31x < 1.00x"
+        "reason": "전체 시장은 위험회피 / 후보는 당일 음봉 또는 약세 / Entry Quality 4 < 40 / RVOL 0.31x < 1.00x"
       },
       "linkedNarrative": "화장품/음식료 수출 소비재",
       "narrativeStatus": "약화",
-      "narrativeScore": 31,
+      "narrativeScore": 28,
       "relatedEtfs": [],
       "closePriceAtRecommendation": 123090,
       "recommendationDate": "2026-07-07"
@@ -5503,7 +5581,9 @@
             "action": "Hold off until 20-day moving average is recovered."
           }
         ],
-        "watchItems": [],
+        "watchItems": [
+          "news data not connected or unavailable"
+        ],
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "LOW",
@@ -5575,6 +5655,7 @@
         }
       ],
       "watchItems": [
+        "news data not connected or unavailable",
         "related ETF relative strength mapping needs confirmation"
       ],
       "summary": "1개 감점 리스크로 총 -6점 반영."
@@ -5625,28 +5706,28 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-07",
     "priceAsOfLabel": "2026-07-07 KRX 정규장 종가",
-    "reportGeneratedAtKST": "2026-07-07 11:32",
-    "newsStatus": "CONNECTED",
-    "newsFetchedAt": "2026-07-07T02:32:59.053Z",
-    "newsLastUpdatedAt": "2026-07-07T02:32:59.053Z",
-    "latestNewsPublishedAt": "2026-07-05T15:00:00.000Z",
-    "newsFreshnessStatus": "STALE",
+    "reportGeneratedAtKST": "2026-07-07 11:51",
+    "newsStatus": "DISABLED",
+    "newsFetchedAt": "2026-07-07T02:51:09.574Z",
+    "newsLastUpdatedAt": "2026-07-07T02:51:09.574Z",
+    "latestNewsPublishedAt": null,
+    "newsFreshnessStatus": "UNKNOWN",
     "newsSources": "DART",
-    "newsSourceStatus": "DART CONNECTED",
-    "newsReliability": "HIGH",
+    "newsSourceStatus": "DART DISABLED",
+    "newsReliability": "LOW",
     "etfBreadthStatus": "PARTIAL",
     "etfBreadthSampleCount": "20~30",
     "etfBreadthReliability": "HIGH",
     "liquidityStatus": "PARTIAL",
     "prePostMarketStatus": "NOT_APPLICABLE",
-    "analysisReliability": "MEDIUM",
+    "analysisReliability": "LOW",
     "executionReliability": "MEDIUM",
     "reliabilityNotes": [
       "장전/시간외 데이터 확인 불가"
     ],
     "providers": "yfinance, DART, config fallback sample, price-volume dollar-volume fallback",
     "recommendationSession": "2026-07-07 KRX 정규장",
-    "grade": "MEDIUM",
+    "grade": "LOW",
     "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 장전/시간외 가격과 정규장 거래대금을 별도 확인해야 한다."
   },
   "todayDecision": {
@@ -5698,7 +5779,7 @@
       },
       {
         "label": "뉴스 직접성 부족",
-        "count": 197
+        "count": 202
       }
     ],
     "topLimiters": [

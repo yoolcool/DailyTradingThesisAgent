@@ -2166,6 +2166,12 @@ async function buildReport() {
   const darkHorseCandidates = buildDarkHorseCandidates(stocks, actionCandidates, marketLabel);
   const referenceCandidates = actionCandidates.length ? { etfs: [], stocks: [] } : buildReferenceCandidates(stocks, validEtfs);
   const topExecutionCandidate = chooseTopExecutionCandidate(etfActionCandidates, stockActionCandidates);
+  await attachCandidateNewsUpdates({
+    actionCandidates,
+    etfActionCandidates,
+    stockActionCandidates,
+    referenceCandidates
+  });
   const previousSnapshot = loadPreviousRecommendationSnapshot();
   const previousRecommendationReviews = buildPreviousRecommendationReviews(previousSnapshot, stocks, etfs);
   const stockScanSummary = buildStockScanSummary(stockUniverse, stocks, detailedScanTickers);
@@ -2449,6 +2455,7 @@ function snapshotItem(row) {
     reasonConfidence: row.reasonConfidence,
     reasonConfidenceExplanation: row.reasonConfidenceExplanation,
     directCatalyst: row.directCatalyst,
+    candidateNewsSummary: row.candidateNewsSummary,
     tieBreakerReason: row.tieBreakerReason,
     entryQualityScore: row.entryQualityScore,
     entryQualityLabel: row.entryQualityLabel,
@@ -2875,6 +2882,106 @@ async function collectSupplementalData(rawWatchlist, rawHoldings, rawEtfs, marke
     notes: supplementalNotes(byTicker)
   };
   return { byTicker, connectionStatus };
+}
+
+async function attachCandidateNewsUpdates({ actionCandidates = [], etfActionCandidates = [], stockActionCandidates = [], referenceCandidates = {} }) {
+  const rows = [
+    ...actionCandidates,
+    ...etfActionCandidates,
+    ...stockActionCandidates,
+    ...(referenceCandidates.etfs || []),
+    ...(referenceCandidates.stocks || [])
+  ].filter((row) => row?.ticker);
+  if (!rows.length) return;
+  const uniqueRows = uniqueRowsByTicker(rows);
+  const summaries = await Promise.all(uniqueRows.map(async (row) => {
+    const refreshed = await fetchCandidateNews(row.ticker);
+    return [row.ticker, buildCandidateNewsSummary(row, refreshed)];
+  }));
+  const byTicker = new Map(summaries);
+  for (const row of rows) {
+    row.candidateNewsSummary = byTicker.get(row.ticker);
+  }
+}
+
+function uniqueRowsByTicker(rows) {
+  const seen = new Set();
+  return rows.filter((row) => {
+    if (!row?.ticker || seen.has(row.ticker)) return false;
+    seen.add(row.ticker);
+    return true;
+  });
+}
+
+async function fetchCandidateNews(ticker) {
+  try {
+    return MARKET_ID === "kr" ? fetchDartDisclosuresForTicker(ticker) : fetchNewsForTicker(ticker);
+  } catch (error) {
+    const previous = null;
+    return {
+      ticker,
+      status: "FAILED",
+      source: MARKET_ID === "kr" ? "DART/OpenDART" : "Multi-source News",
+      fetchedAt: new Date().toISOString(),
+      items: [],
+      itemCount: 0,
+      headlineSummary: "후보 선정 후 뉴스 재검색 실패",
+      notes: [error.message || String(error), previous].filter(Boolean)
+    };
+  }
+}
+
+function buildCandidateNewsSummary(row, summary) {
+  const items = (summary?.items || [])
+    .filter((item) => item?.title)
+    .slice(0, 3)
+    .map((item) => ({
+      title: item.title,
+      source: item.source,
+      publishedAt: item.publishedAt,
+      eventType: item.eventLabel || item.eventType,
+      directness: item.directness,
+      direction: item.direction,
+      freshnessBucket: item.freshnessBucket,
+      url: item.url
+    }));
+  const counts = summary?.sentimentCounts || {};
+  const directCatalyst = summary?.directCatalyst;
+  const headline = directCatalyst?.title || summary?.headlineSummary || items[0]?.title || "의미 있는 신규 뉴스 없음";
+  const trendTone = (counts.positive || 0) > (counts.negative || 0)
+    ? "긍정 우위"
+    : (counts.negative || 0) > (counts.positive || 0)
+      ? "부정 우위"
+      : "중립 또는 혼재";
+  const directnessLabel = Number(summary?.directnessScore || 0) >= 4
+    ? "종목 직접 뉴스 확인"
+    : Number(summary?.directnessScore || 0) >= 2
+      ? "섹터/테마 뉴스 중심"
+      : "직접 뉴스 제한";
+  return {
+    ticker: row.ticker,
+    checkedAt: summary?.fetchedAt || new Date().toISOString(),
+    status: summary?.status || "FAILED",
+    source: summary?.source || "데이터 없음",
+    sourceStatuses: summary?.sourceStatuses || [],
+    lastPublishedAt: summary?.lastPublishedAt || null,
+    freshnessStatus: summary?.newsFreshnessStatus || newsFreshnessLabel(summary?.lastPublishedAt),
+    trendTone,
+    directnessLabel,
+    headline,
+    directCatalyst: directCatalyst ? {
+      title: directCatalyst.title,
+      source: directCatalyst.source,
+      publishedAt: directCatalyst.publishedAt,
+      eventType: directCatalyst.eventLabel || directCatalyst.eventType,
+      direction: directCatalyst.direction,
+      freshnessBucket: directCatalyst.freshnessBucket,
+      url: directCatalyst.url
+    } : null,
+    items,
+    notes: summary?.notes || [],
+    oneLine: `${directnessLabel}, 흐름은 ${trendTone}. 핵심 확인 뉴스: ${headline}`
+  };
 }
 
 function priceVolumeStatus(marketData) {
@@ -3405,6 +3512,7 @@ ${row.reasonConfidence === "HIGH" ? `- ${row.directCatalyst}` : ""}
 - 진입 조건: ${row.entryCondition}
 - 무효화 조건: ${row.invalidationCondition}
 - todayActionLabel: ${row.todayActionLabel}
+- 후보 선정 후 뉴스/동향 재확인: ${candidateNewsOneLine(row)}
 - 차트: ${chartMarkdown(row)}`;
 }
 
@@ -3466,6 +3574,7 @@ function renderDarkHorseCandidateMarkdown(row) {
 - 확인 조건: ${d.confirmCondition || "데이터 없음"}
 - 무효화 조건: ${d.invalidationCondition || "데이터 없음"}
 - 왜 아직 메인이 아닌가: ${d.whyNotMain || "메인 후보 조건 확인 전"}
+- 후보 선정 후 뉴스/동향 재확인: ${candidateNewsOneLine(row)}
 
 <details>
 <summary>darkHorseScore 상세 근거 보기</summary>
@@ -3494,7 +3603,8 @@ function renderReferenceCandidateMarkdown(row) {
 - Entry Quality: ${row.entryQualityScore ?? "데이터 없음"} (${row.entryQualityLabel || "데이터 없음"})
 - RVOL: ${num(row.market?.relativeVolume, 2)}x
 - 진입 전 확인: ${row.entryCondition}
-- 무효화: ${row.invalidationCondition}`;
+- 무효화: ${row.invalidationCondition}
+- 후보 선정 후 뉴스/동향 재확인: ${candidateNewsOneLine(row)}`;
 }
 
 function renderNarrativesMarkdown(report) {
@@ -3876,6 +3986,34 @@ function newsMarkdown(summary) {
   - 주의: ${(summary.notes || []).join("; ") || "특이사항 없음"}`;
 }
 
+function candidateNewsOneLine(row) {
+  return row?.candidateNewsSummary?.oneLine || "후보 선정 후 재확인 뉴스 데이터 없음";
+}
+
+function candidateNewsMarkdown(summary) {
+  if (!summary) return "  - 재확인 상태: 데이터 없음";
+  const sourceStatus = (summary.sourceStatuses || []).map((row) => `${row.source} ${row.status}`).join("; ") || "데이터 없음";
+  const headlineRows = (summary.items || []).map((item, index) =>
+    `  - 주요 뉴스 ${index + 1}: ${item.source || "뉴스"} / ${item.eventType || "general"} / ${item.freshnessBucket || "stale"} / ${item.direction || "neutral"} - ${item.title}`
+  );
+  return [
+    `  - 재확인 상태: ${statusLabel(summary.status)}`,
+    `  - 재확인 시각: ${formatTimestampKst(summary.checkedAt)}`,
+    `  - 최근 발행 시각: ${formatTimestampKst(summary.lastPublishedAt)}`,
+    `  - 신선도: ${summary.freshnessStatus || "UNKNOWN"}`,
+    `  - 출처: ${summary.source || "데이터 없음"}`,
+    `  - 소스별 상태: ${sourceStatus}`,
+    `  - 한 줄 요약: ${summary.oneLine || "의미 있는 신규 뉴스 없음"}`,
+    `  - 직접 촉매: ${summary.directCatalyst ? `${summary.directCatalyst.source} / ${summary.directCatalyst.eventType || "general"} / ${summary.directCatalyst.freshnessBucket || "stale"} - ${summary.directCatalyst.title}` : "없음"}`,
+    ...(headlineRows.length ? headlineRows : ["  - 주요 뉴스: 없음"]),
+    `  - 주의: ${(summary.notes || []).join("; ") || "특이사항 없음"}`
+  ].join("\n");
+}
+
+function candidateNewsHtmlItems(summary) {
+  return candidateNewsMarkdown(summary).split("\n").map((line) => escapeHtml(line.replace(/^\s*-\s*/, "")));
+}
+
 function etfBreadthMarkdown(summary) {
   if (!summary) return "  - 구성종목 데이터 상태: 데이터 없음";
   return `  - 구성종목 데이터 상태: ${statusLabel(summary.status)}
@@ -4014,6 +4152,7 @@ ${row.reasonConfidence === "HIGH" ? `- ${row.directCatalyst}` : ""}
 - whyMoneyIsFlowing: ${row.whyMoneyIsFlowing}
 - likelyNextBuyer: ${row.likelyNextBuyer}
 - whyThisCouldTradeHigher: ${row.whyThisCouldTradeHigher}
+- 후보 선정 후 뉴스/동향 재확인: ${candidateNewsOneLine(row)}
 - 진입 조건: ${row.entryCondition}
 - 무효화 조건: ${row.invalidationCondition}
 - 차트: ${chartMarkdown(row)}
@@ -4032,6 +4171,8 @@ ${etfBreadthMarkdown(row.etfBreadthSummary)}
 - 거래대금 유동성:
 ${liquidityMarkdown(row.liquiditySummary)}
 - reasonConfidence 근거: ${confidenceReason(row)}
+- 후보 선정 후 뉴스/동향 재확인:
+${candidateNewsMarkdown(row.candidateNewsSummary)}
 - 차트 요약: ${row.chartSummary}
 - ${marketLine(row.market)}
 
@@ -4071,6 +4212,7 @@ ${row.reasonConfidence === "HIGH" ? `- ${row.directCatalyst}` : ""}
 - whyThisCouldTradeHigher: ${row.whyThisCouldTradeHigher}
 - 왜 ETF가 아니라 이 종목인가: ${row.whyStockOverEtf}
 - ETF가 더 나은 경우: ${row.whenEtfIsBetter}
+- 후보 선정 후 뉴스/동향 재확인: ${candidateNewsOneLine(row)}
 - 진입 조건: ${row.entryCondition}
 - 무효화 조건: ${row.invalidationCondition}
 ${row.holdingInfo ? `- 보유 정보: ${row.holdingInfo}\n` : ""}- 차트: ${chartMarkdown(row)}
@@ -4088,6 +4230,8 @@ ${newsMarkdown(row.newsSummary)}
 - 거래대금 유동성:
 ${liquidityMarkdown(row.liquiditySummary)}
 - reasonConfidence 근거: ${confidenceReason(row)}
+- 후보 선정 후 뉴스/동향 재확인:
+${candidateNewsMarkdown(row.candidateNewsSummary)}
 - 차트 요약: ${row.chartSummary}
 - ${marketLine(row.market)}
 
@@ -4816,6 +4960,7 @@ function mobileActionSummaryHtml(row) {
       ${metricChip("주문 실행", orderExecutionLabel(row))}
     </div>
     ${fieldLine("왜 돈이 몰리는가", escapeHtml(row.whyMoneyIsFlowing || "데이터 없음"))}
+    ${fieldLine("뉴스/동향 재확인", escapeHtml(candidateNewsOneLine(row)))}
     ${fieldLine("진입 조건", escapeHtml(row.entryCondition || "데이터 없음"))}
     ${fieldLine("무효화 조건", escapeHtml(row.invalidationCondition || "데이터 없음"))}`;
 }
@@ -4931,6 +5076,7 @@ function supplementalDetailsHtml(row) {
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4>${htmlList(dataUsageHtmlItems(row))}
     <h4>뉴스 확인</h4>${htmlList(newsHtmlItems(row.newsSummary))}
+    <h4>후보 선정 후 뉴스/동향 재확인</h4>${htmlList(candidateNewsHtmlItems(row.candidateNewsSummary))}
     <h4>ETF 구성종목 확산도</h4>${row.assetType === "ETF" ? htmlList(etfBreadthHtmlItems(row.etfBreadthSummary)) : htmlList(["관련 ETF에서 확인"])}
     <h4>거래대금 유동성</h4>${htmlList(liquidityHtmlItems(row.liquiditySummary))}
     <h4>reasonConfidence 근거</h4><p class="muted">${escapeHtml(confidenceReason(row))}</p>

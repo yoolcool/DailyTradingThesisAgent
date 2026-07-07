@@ -75,10 +75,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 주문 실행 신뢰도: LOW
 - ETF breadth 신뢰도: LOW
 - 신뢰도 해석: 테마 확산 판단 제한, 거래대금 유동성 낮음 또는 확인 불가, 프리/애프터마켓 확인 불가
-- 리포트 생성 시각: 2026-07-07 09:09 KST
+- 리포트 생성 시각: 2026-07-07 11:50 KST
 - 가격 기준 거래일: 2026-07-06 US regular close
-- 뉴스 수집 시각: 2026-07-07 09:09 KST
-- 가장 최근 뉴스 발행 시각: 2026-07-07 08:48 KST
+- 뉴스 수집 시각: 2026-07-07 11:50 KST
+- 가장 최근 뉴스 발행 시각: 2026-07-07 11:18 KST
 - 뉴스 신선도 상태: FRESH
 - 뉴스 소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API
 - 뉴스 소스 상태: Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED
@@ -100,7 +100,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스: 일부 연결
 - ETF 구성종목 확산도: 일부 연결
 - 거래대금 유동성: 일부 연결
-- 생성 시각: 2026년 7월 7일 화요일 AM 9:09
+- 생성 시각: 2026년 7월 7일 화요일 오전 11:50
 - 시장 상태: 중립
 - 오늘 돈의 방향: 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 강한 테마 TOP 3: 사이버보안(75), 사이버보안 ETF(69), 방산 ETF(50)
@@ -409,6 +409,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - todayActionLabel: 조건부 진입
+- 후보 선정 후 뉴스/동향 재확인: 종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Why Palo Alto Networks (PANW) Outpaced the Stock Market Today
 - 차트: ![PANW chart](charts/PANW.png)
 
 ### 2. Axon Enterprise Inc.(AXON)
@@ -423,17 +424,18 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - moneyFlowScore: 91
 - finalRawScore: 91
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
 - tieBreakerReason: 최종 원점수 91, 리스크 패널티 -6, 5일 수익률 +33.89%, 상대 거래량 1.00배 순으로 정렬
 - 후보별 시장 해석: 중립 / 제한적 - Entry Quality 40 < 50이나 moneyFlow 91, confidence HIGH, RVOL 1.00x로 강한 자금흐름 예외 조건 충족
 - 게이트 사유: Entry Quality 40 < 50이나 moneyFlow 91, confidence HIGH, RVOL 1.00x로 강한 자금흐름 예외 조건 충족
 - 주문 실행: 지정가 권장
-- 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense
-- 왜 돈이 몰리는가: 20일 +21.27%, 5일 +33.89%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS analyst_upgrade/under_6h / 유동성: ACCEPTABLE
+- 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense
+- 왜 돈이 몰리는가: 20일 +21.27%, 5일 +33.89%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS analyst_upgrade/under_24h / 유동성: ACCEPTABLE
 - 누가 더 비싸게 사줄 수 있는지: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - 진입 조건: 20일선 위 눌림 후 재상승 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - todayActionLabel: 자금흐름 예외 조건부
+- 후보 선정 후 뉴스/동향 재확인: 종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Axon Extends Win Streak On Target Hike, World Cup Drone Defense
 - 차트: ![AXON chart](charts/AXON.png)
 
 ## 다크호스 후보
@@ -501,9 +503,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +8.30%
 - 상대 거래량: 1.29배
 - 52주 고점 대비 위치: -0.09%
-- whyMoneyIsFlowing: 20일 +8.30%, 5일 +5.91%, 상대 거래량 1.29배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: ACCEPTABLE
+- whyMoneyIsFlowing: 20일 +8.30%, 5일 +5.91%, 상대 거래량 1.29배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
+- 후보 선정 후 뉴스/동향 재확인: 후보 선정 후 재확인 뉴스 데이터 없음
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - 차트: ![ITA chart](charts/ITA.png)
@@ -553,23 +556,23 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 14/1/1
+  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 6/10/0
   - 직접성/방향성/신선도: 4/1/4
   - 강한 촉매 수: 1
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - ITA Just Ripped Higher, but America’s Rearmament Cycle May Still Be in the First Inning
+  - 직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - ITA Just Ripped Higher, but America’s Rearmament Cycle May Still Be in the First Inning
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 09:09 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-07 08:27 KST
+  - 뉴스 수집 시각: 2026-07-07 11:50 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-07 09:15 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
   - 핵심 뉴스 요약: Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune
-  - 원점수/상한 점수: +25 / +12
+  - 원점수/상한 점수: +19 / +12
   - 점수 반영: +12
-  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 미연결
   - 샘플 수: 0/0
@@ -589,6 +592,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 주문 영향: 지정가 권장
   - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
 - reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 데이터 없음
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-07-06 | 종가 $250.78 | 1일 +1.04% | 5일 +5.91% | 20일 +8.30% | 상대 거래량 1.29배 | 52주 고점 대비 -0.09% | 데이터 소스: yfinance
 
@@ -618,9 +623,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +2.44%
 - 상대 거래량: 1.10배
 - 52주 고점 대비 위치: -1.57%
-- whyMoneyIsFlowing: 20일 +2.44%, 5일 +8.84%, 상대 거래량 1.10배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE
+- whyMoneyIsFlowing: 20일 +2.44%, 5일 +8.84%, 상대 거래량 1.10배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
+- 후보 선정 후 뉴스/동향 재확인: 후보 선정 후 재확인 뉴스 데이터 없음
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - 차트: ![CIBR chart](charts/CIBR.png)
@@ -670,23 +676,23 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 6/10/0
-  - 직접성/방향성/신선도: 4/1/4
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 14/1/1
+  - 직접성/방향성/신선도: 2/1/4
   - 강한 촉매 수: 1
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / general_market / stale / positive - Forget CrowdStrike. For 0.59% This Fund Owns It Plus 30 Cybersecurity Rivals
-  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 09:09 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-07 08:27 KST
+  - 직접 촉매: 없음
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-07 11:50 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-07 11:18 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune
-  - 원점수/상한 점수: +19 / +12
+  - 핵심 뉴스 요약: Trump heads to Turkey as NATO is strained by Russian attacks, U.S. impatience
+  - 원점수/상한 점수: +23 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 2/2
@@ -706,6 +712,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 주문 영향: 지정가 권장
   - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
 - reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 데이터 없음
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-07-06 | 종가 $92.91 | 1일 +2.47% | 5일 +8.84% | 20일 +2.44% | 상대 거래량 1.10배 | 52주 고점 대비 -1.57% | 데이터 소스: yfinance
 
@@ -738,6 +746,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - whyMoneyIsFlowing: 20일 +9.03%, 5일 +11.78%, 상대 거래량 1.18배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS analyst_upgrade/under_24h
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
+- 후보 선정 후 뉴스/동향 재확인: 후보 선정 후 재확인 뉴스 데이터 없음
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - 차트: ![HACK chart](charts/HACK.png)
@@ -788,23 +797,23 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 14/1/1
+  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 5/11/0
   - 직접성/방향성/신선도: 4/1/4
   - 강한 촉매 수: 1
   - 중요 공시 수: 0
   - 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / positive - CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 09:09 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-07 08:27 KST
+  - 뉴스 수집 시각: 2026-07-07 11:50 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-07 09:15 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
   - 핵심 뉴스 요약: Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune
-  - 원점수/상한 점수: +25 / +12
+  - 원점수/상한 점수: +18 / +12
   - 점수 반영: +12
-  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 2/2
@@ -824,6 +833,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 주문 영향: 추격 금지
   - 매매 영향: 유동성 부족으로 추격 금지 또는 우선순위 하향
 - reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 데이터 없음
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-07-06 | 종가 $110.27 | 1일 +3.08% | 5일 +11.78% | 20일 +9.03% | 상대 거래량 1.18배 | 52주 고점 대비 -0.77% | 데이터 소스: yfinance
 
@@ -853,9 +864,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +5.13%
 - 상대 거래량: 1.01배
 - 52주 고점 대비 위치: -2.07%
-- whyMoneyIsFlowing: 20일 +5.13%, 5일 +6.35%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h
+- whyMoneyIsFlowing: 20일 +5.13%, 5일 +6.35%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
+- 후보 선정 후 뉴스/동향 재확인: 후보 선정 후 재확인 뉴스 데이터 없음
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - 차트: ![PPA chart](charts/PPA.png)
@@ -906,23 +918,23 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 6/10/0
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 14/1/1
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 2
+  - 강한 촉매 수: 1
   - 중요 공시 수: 0
   - 직접 촉매: 없음
-  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 09:09 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-07 08:27 KST
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-07 11:50 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-07 11:18 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune
-  - 원점수/상한 점수: +19 / +12
+  - 핵심 뉴스 요약: Trump heads to Turkey as NATO is strained by Russian attacks, U.S. impatience
+  - 원점수/상한 점수: +23 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 미연결
   - 샘플 수: 0/0
@@ -942,6 +954,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 주문 영향: 추격 금지
   - 매매 영향: 유동성 부족으로 추격 금지 또는 우선순위 하향
 - reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 데이터 없음
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-07-06 | 종가 $182.44 | 1일 +0.75% | 5일 +6.35% | 20일 +5.13% | 상대 거래량 1.01배 | 52주 고점 대비 -2.07% | 데이터 소스: yfinance
 
@@ -974,6 +988,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.61배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
+- 후보 선정 후 뉴스/동향 재확인: 후보 선정 후 재확인 뉴스 데이터 없음
 - 진입 조건: 상대 거래량 1.0배 회복 후 관찰
 - 무효화 조건: 거래량 회복 실패
 - 차트: ![ARKK chart](charts/ARKK.png)
@@ -1026,19 +1041,19 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 최근 뉴스 상태: 일부 연결
   - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 7/9/0
+  - 긍정/중립/부정: 6/10/0
   - 직접성/방향성/신선도: 4/1/4
   - 강한 촉매 수: 1
   - 중요 공시 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / stale / positive - Cathie Wood’s Palantir Buy Might Be a Signal to Buy the Dip
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 09:09 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-07 08:27 KST
+  - 뉴스 수집 시각: 2026-07-07 11:50 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-07 09:15 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
   - 핵심 뉴스 요약: Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune
-  - 원점수/상한 점수: +20 / +12
+  - 원점수/상한 점수: +19 / +12
   - 점수 반영: +12
   - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
@@ -1060,6 +1075,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 주문 영향: 지정가 권장
   - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
 - reasonConfidence 근거: 가격/거래량이 약하거나 주요 데이터가 부족해 낮음.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 데이터 없음
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-07-06 | 종가 $83.61 | 1일 +2.90% | 5일 +7.01% | 20일 +4.42% | 상대 거래량 0.61배 | 52주 고점 대비 -9.76% | 데이터 소스: yfinance
 
@@ -1188,6 +1205,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: PANW가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
 - ETF가 더 나은 경우: PANW가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
+- 후보 선정 후 뉴스/동향 재확인: 종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Why Palo Alto Networks (PANW) Outpaced the Stock Market Today
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - 차트: ![PANW chart](charts/PANW.png)
@@ -1238,20 +1256,20 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
   - 긍정/중립/부정: 13/2/1
   - 직접성/방향성/신선도: 4/1/4
   - 강한 촉매 수: 1
   - 중요 공시 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today
-  - 보조 뉴스: Yahoo Finance RSS sector_theme / analyst_upgrade / under_6h
-  - 뉴스 수집 시각: 2026-07-07 09:09 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-07 08:48 KST
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-07 11:50 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-07 11:18 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Varonis Systems (VRNS) Shares Skyrocket, What You Need To Know
+  - 핵심 뉴스 요약: Trump heads to Turkey as NATO is strained by Russian attacks, U.S. impatience
   - 원점수/상한 점수: +24 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
@@ -1264,6 +1282,19 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 주문 영향: 시장가 가능
   - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
 - reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 일부 연결
+  - 재확인 시각: 2026-07-07 11:50 KST
+  - 최근 발행 시각: 2026-07-07 09:15 KST
+  - 신선도: FRESH
+  - 출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 한 줄 요약: 종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Why Palo Alto Networks (PANW) Outpaced the Stock Market Today
+  - 직접 촉매: Yahoo Finance RSS / general_market / under_6h - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today
+  - 주요 뉴스 1: MarketWatch RSS / general_market / under_6h / mixed - Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune
+  - 주요 뉴스 2: Yahoo Finance RSS / analyst_upgrade / under_6h / positive - Varonis Systems (VRNS) Shares Skyrocket, What You Need To Know
+  - 주요 뉴스 3: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today
+  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-07-06 | 종가 $357.53 | 1일 +2.72% | 5일 +17.53% | 20일 +28.03% | 상대 거래량 1.12배 | 52주 고점 대비 -2.89% | 데이터 소스: yfinance
 
@@ -1284,8 +1315,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - tieBreakerReason: 최종 원점수 91, 리스크 패널티 -6, 5일 수익률 +33.89%, 상대 거래량 1.00배 순으로 정렬
 - 과열 리스크: 낮음
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense
+- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense
 - todayActionLabel: 자금흐름 예외 조건부
 - 주문 실행: 지정가 권장
 - 기준일: 2026-07-06
@@ -1296,11 +1327,12 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 1.00배
 - 52주 고점 대비 위치: -29.75%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +33.89% vs ETF 평균 +1.69%, 주식 20일 +21.27% vs ETF 평균 -0.27%, 상대 거래량 1.00배 vs ETF 평균 0.61배
-- whyMoneyIsFlowing: 20일 +21.27%, 5일 +33.89%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS analyst_upgrade/under_6h / 유동성: ACCEPTABLE
+- whyMoneyIsFlowing: 20일 +21.27%, 5일 +33.89%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS analyst_upgrade/under_24h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
 - 왜 ETF가 아니라 이 종목인가: AXON가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
 - ETF가 더 나은 경우: AXON가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
+- 후보 선정 후 뉴스/동향 재확인: 종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Axon Extends Win Streak On Target Hike, World Cup Drone Defense
 - 진입 조건: 20일선 위 눌림 후 재상승 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - 차트: ![AXON chart](charts/AXON.png)
@@ -1352,20 +1384,20 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS, Yahoo Finance RSS
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
   - 긍정/중립/부정: 13/2/1
   - 직접성/방향성/신선도: 4/1/4
   - 강한 촉매 수: 1
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense
-  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 09:09 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-07 08:27 KST
+  - 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-07 11:50 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-07 11:18 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune
+  - 핵심 뉴스 요약: Trump heads to Turkey as NATO is strained by Russian attacks, U.S. impatience
   - 원점수/상한 점수: +24 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
@@ -1378,6 +1410,19 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 주문 영향: 지정가 권장
   - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
 - reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 일부 연결
+  - 재확인 시각: 2026-07-07 11:50 KST
+  - 최근 발행 시각: 2026-07-07 09:15 KST
+  - 신선도: FRESH
+  - 출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 한 줄 요약: 종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Axon Extends Win Streak On Target Hike, World Cup Drone Defense
+  - 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h - Axon Extends Win Streak On Target Hike, World Cup Drone Defense
+  - 주요 뉴스 1: MarketWatch RSS / general_market / under_6h / mixed - Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune
+  - 주요 뉴스 2: MarketWatch RSS / general_market / under_6h / positive - Your data built the AI boom &#x2014; but Big Tech is pocketing 100% of the equity
+  - 주요 뉴스 3: MarketWatch RSS / general_market / under_6h / positive - Stocks rally when Congress goes on summer break. Here&#x2019;s why.
+  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-07-06 | 종가 $622.35 | 1일 +4.24% | 5일 +33.89% | 20일 +21.27% | 상대 거래량 1.00배 | 52주 고점 대비 -29.75% | 데이터 소스: yfinance
 
@@ -1415,6 +1460,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: CRWD가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
 - ETF가 더 나은 경우: CRWD가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
+- 후보 선정 후 뉴스/동향 재확인: 후보 선정 후 재확인 뉴스 데이터 없음
 - 진입 조건: 상대 거래량 1.0배 회복 후 관찰
 - 무효화 조건: 거래량 회복 실패
 - 차트: ![CRWD chart](charts/CRWD.png)
@@ -1466,20 +1512,20 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
   - 긍정/중립/부정: 14/1/1
   - 직접성/방향성/신선도: 4/1/4
   - 강한 촉매 수: 1
   - 중요 공시 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - CrowdStrike (CRWD) Stock Trades Up, Here Is Why
-  - 보조 뉴스: Yahoo Finance RSS sector_theme / analyst_upgrade / under_6h
-  - 뉴스 수집 시각: 2026-07-07 09:09 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-07 08:48 KST
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-07 11:50 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-07 11:18 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Varonis Systems (VRNS) Shares Skyrocket, What You Need To Know
+  - 핵심 뉴스 요약: Trump heads to Turkey as NATO is strained by Russian attacks, U.S. impatience
   - 원점수/상한 점수: +25 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
@@ -1492,6 +1538,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 주문 영향: 시장가 가능
   - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
 - reasonConfidence 근거: 가격/거래량이 약하거나 주요 데이터가 부족해 낮음.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 데이터 없음
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-07-06 | 종가 $199.38 | 1일 +2.78% | 5일 +13.75% | 20일 +10.91% | 상대 거래량 0.80배 | 52주 고점 대비 -4.83% | 데이터 소스: yfinance
 
@@ -1524,11 +1572,12 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 0.79배
 - 52주 고점 대비 위치: -3.67%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +10.23% vs ETF 평균 +1.69%, 주식 20일 +19.59% vs ETF 평균 -0.27%, 상대 거래량 0.79배 vs ETF 평균 0.61배
-- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.79배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID
+- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.79배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: GEV가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
 - ETF가 더 나은 경우: GEV가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
+- 후보 선정 후 뉴스/동향 재확인: 후보 선정 후 재확인 뉴스 데이터 없음
 - 진입 조건: 상대 거래량 1.0배 회복 후 관찰
 - 무효화 조건: 거래량 회복 실패
 - 차트: ![GEV chart](charts/GEV.png)
@@ -1580,21 +1629,21 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS, Yahoo Finance RSS
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
   - 긍정/중립/부정: 14/1/1
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 2
+  - 강한 촉매 수: 1
   - 중요 공시 수: 0
   - 직접 촉매: 없음
-  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 09:09 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-07 08:27 KST
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-07 11:50 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-07 11:18 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune
-  - 원점수/상한 점수: +25 / +12
+  - 핵심 뉴스 요약: Trump heads to Turkey as NATO is strained by Russian attacks, U.S. impatience
+  - 원점수/상한 점수: +23 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
@@ -1606,6 +1655,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 주문 영향: 시장가 가능
   - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
 - reasonConfidence 근거: 가격/거래량이 약하거나 주요 데이터가 부족해 낮음.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 데이터 없음
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-07-06 | 종가 $1,152.04 | 1일 +3.50% | 5일 +10.23% | 20일 +19.59% | 상대 거래량 0.79배 | 52주 고점 대비 -3.67% | 데이터 소스: yfinance
 
@@ -1626,8 +1677,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - tieBreakerReason: 최종 원점수 73, 리스크 패널티 -4, 5일 수익률 +10.55%, 상대 거래량 1.03배 순으로 정렬
 - 과열 리스크: 낮음
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - BYD’s Tesla win comes with a hidden warning 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - BYD’s Tesla win comes with a hidden warning
+- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Tesla (TSLA) Shares Skyrocket, What You Need To Know 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- 직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Tesla (TSLA) Shares Skyrocket, What You Need To Know
 - todayActionLabel: 제외
 - 주문 실행: 시장가 가능
 - 기준일: 2026-07-06
@@ -1643,6 +1694,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
 - 왜 ETF가 아니라 이 종목인가: TSLA가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
 - ETF가 더 나은 경우: TSLA가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
+- 후보 선정 후 뉴스/동향 재확인: 후보 선정 후 재확인 뉴스 데이터 없음
 - 진입 조건: 20일선 위 눌림 후 재상승 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - 차트: ![TSLA chart](charts/TSLA.png)
@@ -1694,20 +1746,20 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS, Yahoo Finance RSS
+  - 뉴스 소스: CNBC Markets RSS, Yahoo Finance RSS, MarketWatch RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 13/2/1
+  - 긍정/중립/부정: 11/4/1
   - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 1
+  - 강한 촉매 수: 2
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - BYD’s Tesla win comes with a hidden warning
-  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 09:09 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-07 08:27 KST
+  - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Tesla (TSLA) Shares Skyrocket, What You Need To Know
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-07 11:50 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-07 11:18 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune
+  - 핵심 뉴스 요약: Trump heads to Turkey as NATO is strained by Russian attacks, U.S. impatience
   - 원점수/상한 점수: +24 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
@@ -1720,6 +1772,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 주문 영향: 시장가 가능
   - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
 - reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 데이터 없음
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-07-06 | 종가 $419.77 | 1일 +6.69% | 5일 +10.55% | 20일 +0.32% | 상대 거래량 1.03배 | 52주 고점 대비 -15.85% | 데이터 소스: yfinance
 
@@ -1729,10 +1783,24 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 이 섹션은 실제 계좌 보유 종목이 아니라 전일 리포트에서 제시된 개별 종목 후보의 사후 점검이다.
 실제 보유 수량/평단이 입력되지 않았으므로 계좌 수익률이 아니라 추천 기준일 이후 가격 변화를 추적한다.
 
+#### Palo Alto Networks Inc.(PANW)
+- 전일 추천일: 2026-07-02
+- 전일 actionLabel: 자금흐름 예외 조건부
+- 전일 moneyFlowScore: 95
+- 전일 종가 또는 추천 기준가: $348.06
+- 오늘 종가: $357.53
+- 추천 이후 수익률: +2.72%
+- 진입 조건 충족 여부: 충족 또는 유지
+- 무효화 조건 발생 여부: 미발생
+- 관련 ETF 대비 상대강도 유지 여부: 유지
+- 오늘 상태: 눌림 대기
+- 오늘 판단 근거: PANW는 전일 추천 이후 +2.72% 변화. 관련 ETF보다 강함 | 주식 5일 +17.53% vs ETF 평균 +9.97%, 주식 20일 +28.03% vs ETF 평균 +3.58%, 상대 거래량 1.12배 vs ETF 평균 1.01배
+- 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+
 #### Coca-Cola Europacific Partners PLC(CCEP)
 - 전일 추천일: 2026-07-02
 - 전일 actionLabel: 자금흐름 예외 조건부
-- 전일 moneyFlowScore: 86
+- 전일 moneyFlowScore: 90
 - 전일 종가 또는 추천 기준가: $106.61
 - 오늘 종가: $106.97
 - 추천 이후 수익률: +0.34%
@@ -1957,42 +2025,42 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 티커 | 카테고리 | moneyFlowScore | 상태 | reasonConfidence | 주요 이유 |
 | --- | --- | ---: | --- | --- | --- |
-| Roundhill Memory ETF(DRAM) | 메모리/HBM ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
-| VanEck Semiconductor ETF(SMH) | AI 반도체 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.73배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID |
-| iShares Semiconductor ETF(SOXX) | AI 반도체 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.65배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
+| Roundhill Memory ETF(DRAM) | 메모리/HBM ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
+| VanEck Semiconductor ETF(SMH) | AI 반도체 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.73배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
+| iShares Semiconductor ETF(SOXX) | AI 반도체 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.65배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
 | Invesco PHLX Semiconductor ETF(SOXQ) | AI 반도체 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.43배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: ACCEPTABLE |
-| iShares Expanded Tech-Software Sector ETF(IGV) | 클라우드/엔터프라이즈 소프트웨어 ETF | 29 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.86배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID |
+| iShares Expanded Tech-Software Sector ETF(IGV) | 클라우드/엔터프라이즈 소프트웨어 ETF | 29 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.86배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
 | Global X Artificial Intelligence & Technology ETF(AIQ) | AI 소프트웨어 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.42배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
-| Global X Robotics & Artificial Intelligence ETF(BOTZ) | 로봇/자동화 ETF | 15 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.85배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h |
-| ROBO Global Robotics and Automation Index ETF(ROBO) | 로봇/자동화 ETF | 48 | 매매 금지 | MEDIUM | 20일 -2.70%, 5일 +5.11%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_6h |
-| First Trust NASDAQ Cybersecurity ETF(CIBR) | 사이버보안 ETF | 78 | 관찰 | MEDIUM | 20일 +2.44%, 5일 +8.84%, 상대 거래량 1.10배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
+| Global X Robotics & Artificial Intelligence ETF(BOTZ) | 로봇/자동화 ETF | 15 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.85배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h |
+| ROBO Global Robotics and Automation Index ETF(ROBO) | 로봇/자동화 ETF | 48 | 매매 금지 | MEDIUM | 20일 -2.70%, 5일 +5.11%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_24h |
+| First Trust NASDAQ Cybersecurity ETF(CIBR) | 사이버보안 ETF | 78 | 관찰 | MEDIUM | 20일 +2.44%, 5일 +8.84%, 상대 거래량 1.10배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
 | Amplify Cybersecurity ETF(HACK) | 사이버보안 ETF | 79 | 매매 금지 | MEDIUM | 20일 +9.03%, 5일 +11.78%, 상대 거래량 1.18배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS analyst_upgrade/under_24h |
 | iShares Cybersecurity and Tech ETF(IHAK) | 사이버보안 ETF | 49 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.91배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
-| iShares U.S. Aerospace & Defense ETF(ITA) | 방산 ETF | 81 | 관찰 | MEDIUM | 20일 +8.30%, 5일 +5.91%, 상대 거래량 1.29배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| SPDR S&P Aerospace & Defense ETF(XAR) | 방산 ETF | 30 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.80배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
-| Global X Defense Tech ETF(SHLD) | 방산 ETF | 26 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.53배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
-| Invesco Aerospace & Defense ETF(PPA) | 방산 ETF | 62 | 매매 금지 | MEDIUM | 20일 +5.13%, 5일 +6.35%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h |
+| iShares U.S. Aerospace & Defense ETF(ITA) | 방산 ETF | 81 | 관찰 | MEDIUM | 20일 +8.30%, 5일 +5.91%, 상대 거래량 1.29배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: ACCEPTABLE |
+| SPDR S&P Aerospace & Defense ETF(XAR) | 방산 ETF | 30 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.80배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| Global X Defense Tech ETF(SHLD) | 방산 ETF | 26 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.53배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| Invesco Aerospace & Defense ETF(PPA) | 방산 ETF | 62 | 매매 금지 | MEDIUM | 20일 +5.13%, 5일 +6.35%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
 | Global X U.S. Infrastructure Development ETF(PAVE) | 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.60배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
-| First Trust NASDAQ Clean Edge Smart Grid Infrastructure ETF(GRID) | 전력망 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.50배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| First Trust NASDAQ Clean Edge Smart Grid Infrastructure ETF(GRID) | 전력망 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.50배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
 | iShares U.S. Infrastructure ETF(IFRA) | 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.45배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
 | Utilities Select Sector SPDR Fund(XLU) | 전력/유틸리티 ETF | 10 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.77배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
-| Global X Uranium ETF(URA) | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.41배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h |
+| Global X Uranium ETF(URA) | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.41배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h |
 | VanEck Uranium and Nuclear ETF(NLR) | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.90배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS regulation/stale |
 | Global X Lithium & Battery Tech ETF(LIT) | 배터리/리튬 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.34배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
-| Global X Copper Miners ETF(COPX) | 구리/금속 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.59배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| Global X Copper Miners ETF(COPX) | 구리/금속 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.59배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: ACCEPTABLE |
 | SPDR S&P Metals & Mining ETF(XME) | 금속/광산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.83배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
 | Energy Select Sector SPDR Fund(XLE) | 전통 에너지 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.73배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
-| VanEck Oil Services ETF(OIH) | 전통 에너지 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.43배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h |
+| VanEck Oil Services ETF(OIH) | 전통 에너지 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.43배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h |
 | ARK Innovation ETF(ARKK) | 혁신 성장 ETF | 43 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.61배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
 | Renaissance IPO ETF(IPO) | IPO/신규상장 ETF | 32 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.46배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
 | KraneShares CSI China Internet ETF(KWEB) | 중국 인터넷 ETF | 20 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.80배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
 | Roundhill Magnificent Seven ETF(MAGS) | 메가캡 플랫폼 ETF | 29 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.67배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| Invesco QQQ Trust(QQQ) | 시장 기준 ETF | 34 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.55배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID |
-| SPDR S&P 500 ETF Trust(SPY) | 시장 기준 ETF | 40 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.66배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
-| iShares Russell 2000 ETF(IWM) | 시장 기준 ETF | 34 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.62배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID |
+| Invesco QQQ Trust(QQQ) | 시장 기준 ETF | 34 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.55배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
+| SPDR S&P 500 ETF Trust(SPY) | 시장 기준 ETF | 40 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.66배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
+| iShares Russell 2000 ETF(IWM) | 시장 기준 ETF | 34 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.62배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
 | iShares 20+ Year Treasury Bond ETF(TLT) | 채권 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.69배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS macro/stale / 유동성: LIQUID |
 | SPDR Gold Shares(GLD) | 금 ETF | 16 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.44배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
-| iShares Bitcoin Trust ETF(IBIT) | 비트코인 ETF | 28 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.97배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID |
+| iShares Bitcoin Trust ETF(IBIT) | 비트코인 ETF | 28 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.97배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
 | Amplify Transformational Data Sharing ETF(BLOK) | 비트코인 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.43배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
 
 ## 3. 최종 실행 판단
@@ -2036,7 +2104,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 - 전일 추천 snapshot:
   - 상태: 연결됨
-  - 점검 대상: 1
+  - 점검 대상: 2
   - 저장 위치: data/latest-report.json, data/previous-report.json, data/dailyReports/
 
 - 거래대금 유동성:

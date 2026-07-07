@@ -14,6 +14,10 @@ except Exception:
 
 
 ROOT = Path(__file__).resolve().parents[1]
+CACHE_DIR = ROOT / ".cache" / "yfinance"
+CACHE_DIR.mkdir(parents=True, exist_ok=True)
+if hasattr(yf, "set_tz_cache_location"):
+    yf.set_tz_cache_location(str(CACHE_DIR))
 BATCH_SIZE = 25
 MAX_RETRIES = 3
 RETRY_BASE_SECONDS = 2

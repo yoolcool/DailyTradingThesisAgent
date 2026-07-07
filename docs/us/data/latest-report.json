@@ -14,7 +14,7 @@
     "sessionLabel": "US regular session"
   },
   "reportDate": "2026-07-07",
-  "generatedAt": "2026년 7월 7일 화요일 AM 9:09",
+  "generatedAt": "2026년 7월 7일 화요일 오전 11:50",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -3434,6 +3434,102 @@
       "reasonConfidence": "HIGH",
       "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+      "candidateNewsSummary": {
+        "ticker": "PANW",
+        "checkedAt": "2026-07-07T02:50:47.300Z",
+        "status": "PARTIAL",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "sourceStatuses": [
+          {
+            "source": "Yahoo Finance RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "MarketWatch RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "CNBC Markets RSS",
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
+          },
+          {
+            "source": "SEC EDGAR RSS",
+            "status": "PARTIAL",
+            "notes": [
+              "no matching RSS items"
+            ]
+          },
+          {
+            "source": "Federal Reserve RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "Finnhub API",
+            "status": "DISABLED",
+            "notes": [
+              "FINNHUB_API_KEY not configured"
+            ]
+          }
+        ],
+        "lastPublishedAt": "2026-07-07T00:15:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+        "directCatalyst": {
+          "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-07-06T21:45:02.000Z",
+          "eventType": "general_market",
+          "direction": "neutral",
+          "freshnessBucket": "under_6h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-palo-alto-networks-panw-214502815.html?.tsrc=rss"
+        },
+        "items": [
+          {
+            "title": "Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune",
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-07-07T00:15:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "mixed",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/trump-calls-walmart-patriotic-for-cutting-beef-prices-in-a-stark-change-of-tune-96c32712?mod=mw_rss_topstories"
+          },
+          {
+            "title": "Varonis Systems (VRNS) Shares Skyrocket, What You Need To Know",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T23:48:01.000Z",
+            "eventType": "analyst_upgrade",
+            "directness": "sector_theme",
+            "direction": "positive",
+            "freshnessBucket": "under_6h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/varonis-systems-vrns-shares-skyrocket-234801776.html?.tsrc=rss"
+          },
+          {
+            "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T21:45:02.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_6h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/why-palo-alto-networks-panw-214502815.html?.tsrc=rss"
+          }
+        ],
+        "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
+          "SEC EDGAR RSS: no matching RSS items",
+          "Finnhub API: FINNHUB_API_KEY not configured"
+        ],
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Why Palo Alto Networks (PANW) Outpaced the Stock Market Today"
+      },
       "tieBreakerReason": "최종 원점수 116, 리스크 패널티 0, 5일 수익률 +17.53%, 상대 거래량 1.12배 순으로 정렬",
       "entryQualityScore": 50,
       "entryQualityLabel": "관찰",
@@ -3500,8 +3596,104 @@
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+      "candidateNewsSummary": {
+        "ticker": "AXON",
+        "checkedAt": "2026-07-07T02:50:47.362Z",
+        "status": "PARTIAL",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "sourceStatuses": [
+          {
+            "source": "Yahoo Finance RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "MarketWatch RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "CNBC Markets RSS",
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
+          },
+          {
+            "source": "SEC EDGAR RSS",
+            "status": "PARTIAL",
+            "notes": [
+              "no matching RSS items"
+            ]
+          },
+          {
+            "source": "Federal Reserve RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "Finnhub API",
+            "status": "DISABLED",
+            "notes": [
+              "FINNHUB_API_KEY not configured"
+            ]
+          }
+        ],
+        "lastPublishedAt": "2026-07-07T00:15:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+        "directCatalyst": {
+          "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-07-06T18:17:36.000Z",
+          "eventType": "analyst_upgrade",
+          "direction": "neutral",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/m/1c08604a-f915-3d58-bcd9-ab154c18b707/axon-extends-win-streak-on.html?.tsrc=rss"
+        },
+        "items": [
+          {
+            "title": "Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune",
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-07-07T00:15:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "mixed",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/trump-calls-walmart-patriotic-for-cutting-beef-prices-in-a-stark-change-of-tune-96c32712?mod=mw_rss_topstories"
+          },
+          {
+            "title": "Your data built the AI boom &#x2014; but Big Tech is pocketing 100% of the equity",
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-07-06T21:36:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "positive",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/your-share-of-the-ai-wealth-is-a-right-not-a-handout-here-is-how-we-claw-back-our-money-7454b0e0?mod=mw_rss_topstories"
+          },
+          {
+            "title": "Stocks rally when Congress goes on summer break. Here&#x2019;s why.",
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-07-06T21:18:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "positive",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/stocks-rally-when-congress-goes-on-summer-break-here-is-the-hidden-reason-e70a6be3?mod=mw_rss_topstories"
+          }
+        ],
+        "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
+          "SEC EDGAR RSS: no matching RSS items",
+          "Finnhub API: FINNHUB_API_KEY not configured"
+        ],
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Axon Extends Win Streak On Target Hike, World Cup Drone Defense"
+      },
       "tieBreakerReason": "최종 원점수 91, 리스크 패널티 -6, 5일 수익률 +33.89%, 상대 거래량 1.00배 순으로 정렬",
       "entryQualityScore": 40,
       "entryQualityLabel": "관찰",
@@ -3565,6 +3757,102 @@
       "reasonConfidence": "HIGH",
       "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+      "candidateNewsSummary": {
+        "ticker": "PANW",
+        "checkedAt": "2026-07-07T02:50:47.300Z",
+        "status": "PARTIAL",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "sourceStatuses": [
+          {
+            "source": "Yahoo Finance RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "MarketWatch RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "CNBC Markets RSS",
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
+          },
+          {
+            "source": "SEC EDGAR RSS",
+            "status": "PARTIAL",
+            "notes": [
+              "no matching RSS items"
+            ]
+          },
+          {
+            "source": "Federal Reserve RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "Finnhub API",
+            "status": "DISABLED",
+            "notes": [
+              "FINNHUB_API_KEY not configured"
+            ]
+          }
+        ],
+        "lastPublishedAt": "2026-07-07T00:15:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+        "directCatalyst": {
+          "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-07-06T21:45:02.000Z",
+          "eventType": "general_market",
+          "direction": "neutral",
+          "freshnessBucket": "under_6h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-palo-alto-networks-panw-214502815.html?.tsrc=rss"
+        },
+        "items": [
+          {
+            "title": "Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune",
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-07-07T00:15:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "mixed",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/trump-calls-walmart-patriotic-for-cutting-beef-prices-in-a-stark-change-of-tune-96c32712?mod=mw_rss_topstories"
+          },
+          {
+            "title": "Varonis Systems (VRNS) Shares Skyrocket, What You Need To Know",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T23:48:01.000Z",
+            "eventType": "analyst_upgrade",
+            "directness": "sector_theme",
+            "direction": "positive",
+            "freshnessBucket": "under_6h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/varonis-systems-vrns-shares-skyrocket-234801776.html?.tsrc=rss"
+          },
+          {
+            "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T21:45:02.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_6h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/why-palo-alto-networks-panw-214502815.html?.tsrc=rss"
+          }
+        ],
+        "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
+          "SEC EDGAR RSS: no matching RSS items",
+          "Finnhub API: FINNHUB_API_KEY not configured"
+        ],
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Why Palo Alto Networks (PANW) Outpaced the Stock Market Today"
+      },
       "tieBreakerReason": "최종 원점수 116, 리스크 패널티 0, 5일 수익률 +17.53%, 상대 거래량 1.12배 순으로 정렬",
       "entryQualityScore": 50,
       "entryQualityLabel": "관찰",
@@ -3631,8 +3919,104 @@
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+      "candidateNewsSummary": {
+        "ticker": "AXON",
+        "checkedAt": "2026-07-07T02:50:47.362Z",
+        "status": "PARTIAL",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "sourceStatuses": [
+          {
+            "source": "Yahoo Finance RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "MarketWatch RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "CNBC Markets RSS",
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
+          },
+          {
+            "source": "SEC EDGAR RSS",
+            "status": "PARTIAL",
+            "notes": [
+              "no matching RSS items"
+            ]
+          },
+          {
+            "source": "Federal Reserve RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "Finnhub API",
+            "status": "DISABLED",
+            "notes": [
+              "FINNHUB_API_KEY not configured"
+            ]
+          }
+        ],
+        "lastPublishedAt": "2026-07-07T00:15:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+        "directCatalyst": {
+          "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-07-06T18:17:36.000Z",
+          "eventType": "analyst_upgrade",
+          "direction": "neutral",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/m/1c08604a-f915-3d58-bcd9-ab154c18b707/axon-extends-win-streak-on.html?.tsrc=rss"
+        },
+        "items": [
+          {
+            "title": "Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune",
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-07-07T00:15:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "mixed",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/trump-calls-walmart-patriotic-for-cutting-beef-prices-in-a-stark-change-of-tune-96c32712?mod=mw_rss_topstories"
+          },
+          {
+            "title": "Your data built the AI boom &#x2014; but Big Tech is pocketing 100% of the equity",
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-07-06T21:36:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "positive",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/your-share-of-the-ai-wealth-is-a-right-not-a-handout-here-is-how-we-claw-back-our-money-7454b0e0?mod=mw_rss_topstories"
+          },
+          {
+            "title": "Stocks rally when Congress goes on summer break. Here&#x2019;s why.",
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-07-06T21:18:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "positive",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/stocks-rally-when-congress-goes-on-summer-break-here-is-the-hidden-reason-e70a6be3?mod=mw_rss_topstories"
+          }
+        ],
+        "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
+          "SEC EDGAR RSS: no matching RSS items",
+          "Finnhub API: FINNHUB_API_KEY not configured"
+        ],
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Axon Extends Win Streak On Target Hike, World Cup Drone Defense"
+      },
       "tieBreakerReason": "최종 원점수 91, 리스크 패널티 -6, 5일 수익률 +33.89%, 상대 거래량 1.00배 순으로 정렬",
       "entryQualityScore": 40,
       "entryQualityLabel": "관찰",
@@ -3697,6 +4081,102 @@
       "reasonConfidence": "HIGH",
       "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+      "candidateNewsSummary": {
+        "ticker": "PANW",
+        "checkedAt": "2026-07-07T02:50:47.300Z",
+        "status": "PARTIAL",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "sourceStatuses": [
+          {
+            "source": "Yahoo Finance RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "MarketWatch RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "CNBC Markets RSS",
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
+          },
+          {
+            "source": "SEC EDGAR RSS",
+            "status": "PARTIAL",
+            "notes": [
+              "no matching RSS items"
+            ]
+          },
+          {
+            "source": "Federal Reserve RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "Finnhub API",
+            "status": "DISABLED",
+            "notes": [
+              "FINNHUB_API_KEY not configured"
+            ]
+          }
+        ],
+        "lastPublishedAt": "2026-07-07T00:15:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+        "directCatalyst": {
+          "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-07-06T21:45:02.000Z",
+          "eventType": "general_market",
+          "direction": "neutral",
+          "freshnessBucket": "under_6h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-palo-alto-networks-panw-214502815.html?.tsrc=rss"
+        },
+        "items": [
+          {
+            "title": "Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune",
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-07-07T00:15:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "mixed",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/trump-calls-walmart-patriotic-for-cutting-beef-prices-in-a-stark-change-of-tune-96c32712?mod=mw_rss_topstories"
+          },
+          {
+            "title": "Varonis Systems (VRNS) Shares Skyrocket, What You Need To Know",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T23:48:01.000Z",
+            "eventType": "analyst_upgrade",
+            "directness": "sector_theme",
+            "direction": "positive",
+            "freshnessBucket": "under_6h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/varonis-systems-vrns-shares-skyrocket-234801776.html?.tsrc=rss"
+          },
+          {
+            "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-06T21:45:02.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_6h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/why-palo-alto-networks-panw-214502815.html?.tsrc=rss"
+          }
+        ],
+        "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
+          "SEC EDGAR RSS: no matching RSS items",
+          "Finnhub API: FINNHUB_API_KEY not configured"
+        ],
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Why Palo Alto Networks (PANW) Outpaced the Stock Market Today"
+      },
       "tieBreakerReason": "최종 원점수 116, 리스크 패널티 0, 5일 수익률 +17.53%, 상대 거래량 1.12배 순으로 정렬",
       "entryQualityScore": 50,
       "entryQualityLabel": "관찰",
@@ -3763,8 +4243,104 @@
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+      "candidateNewsSummary": {
+        "ticker": "AXON",
+        "checkedAt": "2026-07-07T02:50:47.362Z",
+        "status": "PARTIAL",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "sourceStatuses": [
+          {
+            "source": "Yahoo Finance RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "MarketWatch RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "CNBC Markets RSS",
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
+          },
+          {
+            "source": "SEC EDGAR RSS",
+            "status": "PARTIAL",
+            "notes": [
+              "no matching RSS items"
+            ]
+          },
+          {
+            "source": "Federal Reserve RSS",
+            "status": "CONNECTED",
+            "notes": []
+          },
+          {
+            "source": "Finnhub API",
+            "status": "DISABLED",
+            "notes": [
+              "FINNHUB_API_KEY not configured"
+            ]
+          }
+        ],
+        "lastPublishedAt": "2026-07-07T00:15:00.000Z",
+        "freshnessStatus": "FRESH",
+        "trendTone": "긍정 우위",
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+        "directCatalyst": {
+          "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-07-06T18:17:36.000Z",
+          "eventType": "analyst_upgrade",
+          "direction": "neutral",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/m/1c08604a-f915-3d58-bcd9-ab154c18b707/axon-extends-win-streak-on.html?.tsrc=rss"
+        },
+        "items": [
+          {
+            "title": "Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune",
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-07-07T00:15:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "mixed",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/trump-calls-walmart-patriotic-for-cutting-beef-prices-in-a-stark-change-of-tune-96c32712?mod=mw_rss_topstories"
+          },
+          {
+            "title": "Your data built the AI boom &#x2014; but Big Tech is pocketing 100% of the equity",
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-07-06T21:36:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "positive",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/your-share-of-the-ai-wealth-is-a-right-not-a-handout-here-is-how-we-claw-back-our-money-7454b0e0?mod=mw_rss_topstories"
+          },
+          {
+            "title": "Stocks rally when Congress goes on summer break. Here&#x2019;s why.",
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-07-06T21:18:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "positive",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/stocks-rally-when-congress-goes-on-summer-break-here-is-the-hidden-reason-e70a6be3?mod=mw_rss_topstories"
+          }
+        ],
+        "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
+          "SEC EDGAR RSS: no matching RSS items",
+          "Finnhub API: FINNHUB_API_KEY not configured"
+        ],
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Axon Extends Win Streak On Target Hike, World Cup Drone Defense"
+      },
       "tieBreakerReason": "최종 원점수 91, 리스크 패널티 -6, 5일 수익률 +33.89%, 상대 거래량 1.00배 순으로 정렬",
       "entryQualityScore": 40,
       "entryQualityLabel": "관찰",
@@ -3987,7 +4563,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Trump heads to Turkey as NATO is strained by Russian attacks, U.S. impatience",
       "tieBreakerReason": "최종 원점수 -9, 리스크 패널티 -10, 5일 수익률 -9.91%, 상대 거래량 0.70배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -4053,7 +4629,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - VanEck Semiconductor ETF Is Up 64% This Year and Doesn’t Own a Single Share of Apple",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - VanEck Semiconductor ETF Is Up 64% This Year and Doesn’t Own a Single Share of Apple",
       "tieBreakerReason": "최종 원점수 -1, 리스크 패널티 -6, 5일 수익률 -1.20%, 상대 거래량 0.73배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -4119,7 +4695,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Trump calls Walmart &#x2018;patriotic&#x2019; for cutting beef prices &#x2014; in a stark change of tune",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Trump heads to Turkey as NATO is strained by Russian attacks, U.S. impatience",
       "tieBreakerReason": "최종 원점수 0, 리스크 패널티 -6, 5일 수익률 -1.43%, 상대 거래량 0.65배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -4251,7 +4827,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - AI Crushed Software Stocks. IGV Is Betting the ‘SaaSpocalypse’ Is Overblown",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AI Crushed Software Stocks. IGV Is Betting the ‘SaaSpocalypse’ Is Overblown",
       "tieBreakerReason": "최종 원점수 29, 리스크 패널티 -4, 5일 수익률 +7.47%, 상대 거래량 0.86배 순으로 정렬",
       "entryQualityScore": 19,
       "entryQualityLabel": "낮음",
@@ -4358,11 +4934,11 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-06",
     "priceAsOfLabel": "2026-07-06 US regular close",
-    "reportGeneratedAtKST": "2026-07-07 09:09",
+    "reportGeneratedAtKST": "2026-07-07 11:50",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-07-07T00:09:40.681Z",
-    "newsLastUpdatedAt": "2026-07-07T00:09:40.681Z",
-    "latestNewsPublishedAt": "2026-07-06T23:48:01.000Z",
+    "newsFetchedAt": "2026-07-07T02:50:47.128Z",
+    "newsLastUpdatedAt": "2026-07-07T02:50:47.128Z",
+    "latestNewsPublishedAt": "2026-07-07T02:18:31.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
     "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
