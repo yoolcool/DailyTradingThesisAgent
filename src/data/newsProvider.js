@@ -47,7 +47,7 @@ const RSS_SOURCES = [
 ];
 
 function stripTags(value) {
-  return decodeEntities(String(value || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim());
+  return decodeEntities(String(value || "")).replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
 }
 
 function decodeEntities(value) {
@@ -330,12 +330,49 @@ async function fetchNewsForTicker(ticker) {
     fetchFinnhubNews(ticker)
   ]);
   const sourceStatuses = rows.map((row) => ({ source: row.source, status: row.status, notes: row.notes || [] }));
-  const items = dedupeNewsItems(rows.flatMap((row) => row.items || []))
+  const candidateItems = dedupeNewsItems(rows.flatMap((row) => row.items || []))
     .filter((item) => item.directness !== "indirect" || item.sourceType === "macro_policy")
     .slice(0, 16);
+  const items = await enrichNewsItemContent(candidateItems);
   const providerStatus = aggregateStatus(rows.map((row) => row.status));
   const notes = rows.flatMap((row) => (row.notes || []).map((note) => `${row.source}: ${note}`));
   return summarizeNews(ticker, items, providerStatus, notes, sourceStatuses);
+}
+
+async function enrichNewsItemContent(items) {
+  const topItems = items.slice(0, 6);
+  const enrichedTop = await Promise.all(topItems.map(async (item) => {
+    if (item.summary && item.summary.length > 80) return item;
+    const contentSummary = await fetchArticlePreview(item.url);
+    return contentSummary ? { ...item, contentSummary } : item;
+  }));
+  return [...enrichedTop, ...items.slice(topItems.length)];
+}
+
+async function fetchArticlePreview(url) {
+  if (!url || !/^https?:\/\//i.test(url)) return "";
+  try {
+    const html = await fetchText(url, {
+      timeoutMs: 5000,
+      headers: { "User-Agent": "DailyTradingThesisAgent/1.0" }
+    });
+    return extractArticlePreview(html);
+  } catch {
+    return "";
+  }
+}
+
+function extractArticlePreview(html) {
+  const meta = html.match(/<meta[^>]+(?:name|property)=["'](?:description|og:description|twitter:description)["'][^>]+content=["']([^"']+)["'][^>]*>/i)?.[1]
+    || html.match(/<meta[^>]+content=["']([^"']+)["'][^>]+(?:name|property)=["'](?:description|og:description|twitter:description)["'][^>]*>/i)?.[1];
+  if (meta) return stripTags(meta).slice(0, 420);
+  const cleaned = html
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ");
+  const paragraphs = [...cleaned.matchAll(/<p[^>]*>([\s\S]*?)<\/p>/gi)]
+    .map((match) => stripTags(match[1]))
+    .filter((text) => text.length >= 80 && !/cookie|subscribe|newsletter|advertisement/i.test(text));
+  return paragraphs[0]?.slice(0, 420) || "";
 }
 
 function unique(values) {

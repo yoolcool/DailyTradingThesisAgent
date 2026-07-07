@@ -14,7 +14,7 @@
     "sessionLabel": "US regular session"
   },
   "reportDate": "2026-07-07",
-  "generatedAt": "2026년 7월 7일 화요일 오후 12:26",
+  "generatedAt": "2026년 7월 7일 화요일 오후 12:37",
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -3436,7 +3436,7 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
       "candidateNewsSummary": {
         "ticker": "PANW",
-        "checkedAt": "2026-07-07T03:26:11.776Z",
+        "checkedAt": "2026-07-07T03:37:29.176Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -3494,7 +3494,13 @@
         "items": [
           {
             "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
-            "koreanSummary": "Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.",
+            "summary": "In the latest trading session, Palo Alto Networks (PANW) closed at $357.35, marking a +2.67% move from the previous day.",
+            "koreanSummary": {
+              "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+              "content": "Palo Alto Networks Inc. 관련 기사는 Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 이슈를 다루며, 종가 $357.35, 주가 변동률 +2.67%를 핵심 내용으로 봅니다.",
+              "implication": "Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T21:45:02.000Z",
             "eventType": "general_market",
@@ -3505,7 +3511,13 @@
           },
           {
             "title": "Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now",
-            "koreanSummary": "Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "summary": "Palo Alto Networks, Inc. (NASDAQ:PANW) is one of the 8 High Growth Cybersecurity Stocks to Buy Now. Also on July 1, BTIG raised the firm’s price target on Palo Alto Networks to $380 from $333, kept a Buy rating on the shares, and reiterated Palo Alto as the “top pick” across its coverage. BTIG cited […]",
+            "koreanSummary": {
+              "title": "Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now",
+              "content": "Palo Alto Networks Inc.가 고성장 사이버보안주 또는 매수 후보군으로 언급됐다는 내용입니다. 회사 고유 공시보다는 사이버보안 섹터 선호와 성장주 수급을 확인하는 뉴스입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T10:02:18.000Z",
             "eventType": "analyst_upgrade",
@@ -3516,7 +3528,13 @@
           },
           {
             "title": "CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
-            "koreanSummary": "Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다.",
+            "summary": "Shares of major cybersecurity names are rallying in Monday’s midday session. CrowdStrike Holdings (NASDAQ:CRWD) stock is up 5% to $204 and change, leading the group higher. Palo Alto Networks (NASDAQ:PANW) shares are climbing 4% to $363, and Okta (NASDAQ:OKTA) stock is up 4% to $147. The Amplify Cybersecurity ETF (NYSE ARCA:HACK) is also higher, with ... CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
+            "koreanSummary": {
+              "title": "CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
+              "content": "Palo Alto Networks Inc. 관련 기사는 CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades 이슈를 다루며, 주가 변동률 +4.00%, 동반 비교 수치 +5.00%를 핵심 내용으로 봅니다.",
+              "implication": "Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T15:08:23.000Z",
             "eventType": "analyst_upgrade",
@@ -3531,9 +3549,24 @@
           "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Why Palo Alto Networks (PANW) Outpaced the Stock Market Today\"입니다.",
           "directLine": "Palo Alto Networks Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Why Palo Alto Networks (PANW) Outpaced the Stock Market Today\"이며, 시장 일반 재료로 봅니다.",
           "bullets": [
-            "Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.",
-            "Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
-            "Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다."
+            {
+              "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+              "content": "Palo Alto Networks Inc. 관련 기사는 Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 이슈를 다루며, 종가 $357.35, 주가 변동률 +2.67%를 핵심 내용으로 봅니다.",
+              "implication": "Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
+            {
+              "title": "Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now",
+              "content": "Palo Alto Networks Inc.가 고성장 사이버보안주 또는 매수 후보군으로 언급됐다는 내용입니다. 회사 고유 공시보다는 사이버보안 섹터 선호와 성장주 수급을 확인하는 뉴스입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+            },
+            {
+              "title": "CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
+              "content": "Palo Alto Networks Inc. 관련 기사는 CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades 이슈를 다루며, 주가 변동률 +4.00%, 동반 비교 수치 +5.00%를 핵심 내용으로 봅니다.",
+              "implication": "Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
@@ -3614,7 +3647,7 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
       "candidateNewsSummary": {
         "ticker": "AXON",
-        "checkedAt": "2026-07-07T03:26:11.778Z",
+        "checkedAt": "2026-07-07T03:37:29.179Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -3672,7 +3705,13 @@
         "items": [
           {
             "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
-            "koreanSummary": "Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.",
+            "summary": "Axon Enterprise — the maker of Tasers, body cameras and software for law enforcement — continued its resurgence on the stock market Monday. Needham hiked its Axon stock price target to 750 from 600, keeping a buy rating, according to The Fly investment news site. Axon Enterprise cited an expansion of the Los Angeles Police Department pact with Axon, which will more than double annual spending to $22 million.",
+            "koreanSummary": {
+              "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+              "content": "Axon Enterprise Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Axon Enterprise — the maker of Tasers, body cameras and software for law enforcement — continued its resurgence on the stock market Monday.입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T18:17:36.000Z",
             "eventType": "analyst_upgrade",
@@ -3683,7 +3722,13 @@
           },
           {
             "title": "Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?",
-            "koreanSummary": "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "summary": "AXON crosses its 200-day SMA as strong TASER, software and counter-drone demand support growth, despite an elevated valuation.",
+            "koreanSummary": {
+              "title": "Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?",
+              "content": "Axon Enterprise Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AXON crosses its 200-day SMA as strong TASER, software and counter-drone demand support growth, despite an elevated valuation.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T16:27:00.000Z",
             "eventType": "general_market",
@@ -3694,7 +3739,13 @@
           },
           {
             "title": "Axon and Rocket Lab rallied while chip stocks sank",
-            "koreanSummary": "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "summary": "SanDisk Corp. (SNDK) closed out the holiday-shortened week as the Nasdaq’s biggest loser, ending Thursday at $1,745 a share, down 26% for the week, according to Seeking Alpha. Micron (MU), Western Digital (WDC), Seagate (STX) and Teradyne (TER) fell alongside it, each posting double-digit weekly ...",
+            "koreanSummary": {
+              "title": "Axon and Rocket Lab rallied while chip stocks sank",
+              "content": "Axon Enterprise Inc. 관련 기사는 Axon and Rocket Lab rallied while chip stocks sank 이슈를 다루며, 주가 변동률 +26.00%를 핵심 내용으로 봅니다.",
+              "implication": "Axon Enterprise Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-05T03:17:00.000Z",
             "eventType": "general_market",
@@ -3709,9 +3760,24 @@
           "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Axon Extends Win Streak On Target Hike, World Cup Drone Defense\"입니다.",
           "directLine": "Axon Enterprise Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Axon Extends Win Streak On Target Hike, World Cup Drone Defense\"이며, 애널리스트 상향 재료로 봅니다.",
           "bullets": [
-            "Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.",
-            "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
-            "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다."
+            {
+              "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+              "content": "Axon Enterprise Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Axon Enterprise — the maker of Tasers, body cameras and software for law enforcement — continued its resurgence on the stock market Monday.입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+            },
+            {
+              "title": "Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?",
+              "content": "Axon Enterprise Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AXON crosses its 200-day SMA as strong TASER, software and counter-drone demand support growth, despite an elevated valuation.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+            },
+            {
+              "title": "Axon and Rocket Lab rallied while chip stocks sank",
+              "content": "Axon Enterprise Inc. 관련 기사는 Axon and Rocket Lab rallied while chip stocks sank 이슈를 다루며, 주가 변동률 +26.00%를 핵심 내용으로 봅니다.",
+              "implication": "Axon Enterprise Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
@@ -3787,7 +3853,7 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
       "candidateNewsSummary": {
         "ticker": "PANW",
-        "checkedAt": "2026-07-07T03:26:11.776Z",
+        "checkedAt": "2026-07-07T03:37:29.176Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -3845,7 +3911,13 @@
         "items": [
           {
             "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
-            "koreanSummary": "Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.",
+            "summary": "In the latest trading session, Palo Alto Networks (PANW) closed at $357.35, marking a +2.67% move from the previous day.",
+            "koreanSummary": {
+              "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+              "content": "Palo Alto Networks Inc. 관련 기사는 Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 이슈를 다루며, 종가 $357.35, 주가 변동률 +2.67%를 핵심 내용으로 봅니다.",
+              "implication": "Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T21:45:02.000Z",
             "eventType": "general_market",
@@ -3856,7 +3928,13 @@
           },
           {
             "title": "Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now",
-            "koreanSummary": "Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "summary": "Palo Alto Networks, Inc. (NASDAQ:PANW) is one of the 8 High Growth Cybersecurity Stocks to Buy Now. Also on July 1, BTIG raised the firm’s price target on Palo Alto Networks to $380 from $333, kept a Buy rating on the shares, and reiterated Palo Alto as the “top pick” across its coverage. BTIG cited […]",
+            "koreanSummary": {
+              "title": "Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now",
+              "content": "Palo Alto Networks Inc.가 고성장 사이버보안주 또는 매수 후보군으로 언급됐다는 내용입니다. 회사 고유 공시보다는 사이버보안 섹터 선호와 성장주 수급을 확인하는 뉴스입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T10:02:18.000Z",
             "eventType": "analyst_upgrade",
@@ -3867,7 +3945,13 @@
           },
           {
             "title": "CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
-            "koreanSummary": "Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다.",
+            "summary": "Shares of major cybersecurity names are rallying in Monday’s midday session. CrowdStrike Holdings (NASDAQ:CRWD) stock is up 5% to $204 and change, leading the group higher. Palo Alto Networks (NASDAQ:PANW) shares are climbing 4% to $363, and Okta (NASDAQ:OKTA) stock is up 4% to $147. The Amplify Cybersecurity ETF (NYSE ARCA:HACK) is also higher, with ... CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
+            "koreanSummary": {
+              "title": "CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
+              "content": "Palo Alto Networks Inc. 관련 기사는 CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades 이슈를 다루며, 주가 변동률 +4.00%, 동반 비교 수치 +5.00%를 핵심 내용으로 봅니다.",
+              "implication": "Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T15:08:23.000Z",
             "eventType": "analyst_upgrade",
@@ -3882,9 +3966,24 @@
           "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Why Palo Alto Networks (PANW) Outpaced the Stock Market Today\"입니다.",
           "directLine": "Palo Alto Networks Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Why Palo Alto Networks (PANW) Outpaced the Stock Market Today\"이며, 시장 일반 재료로 봅니다.",
           "bullets": [
-            "Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.",
-            "Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
-            "Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다."
+            {
+              "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+              "content": "Palo Alto Networks Inc. 관련 기사는 Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 이슈를 다루며, 종가 $357.35, 주가 변동률 +2.67%를 핵심 내용으로 봅니다.",
+              "implication": "Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
+            {
+              "title": "Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now",
+              "content": "Palo Alto Networks Inc.가 고성장 사이버보안주 또는 매수 후보군으로 언급됐다는 내용입니다. 회사 고유 공시보다는 사이버보안 섹터 선호와 성장주 수급을 확인하는 뉴스입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+            },
+            {
+              "title": "CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
+              "content": "Palo Alto Networks Inc. 관련 기사는 CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades 이슈를 다루며, 주가 변동률 +4.00%, 동반 비교 수치 +5.00%를 핵심 내용으로 봅니다.",
+              "implication": "Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
@@ -3965,7 +4064,7 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
       "candidateNewsSummary": {
         "ticker": "AXON",
-        "checkedAt": "2026-07-07T03:26:11.778Z",
+        "checkedAt": "2026-07-07T03:37:29.179Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -4023,7 +4122,13 @@
         "items": [
           {
             "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
-            "koreanSummary": "Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.",
+            "summary": "Axon Enterprise — the maker of Tasers, body cameras and software for law enforcement — continued its resurgence on the stock market Monday. Needham hiked its Axon stock price target to 750 from 600, keeping a buy rating, according to The Fly investment news site. Axon Enterprise cited an expansion of the Los Angeles Police Department pact with Axon, which will more than double annual spending to $22 million.",
+            "koreanSummary": {
+              "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+              "content": "Axon Enterprise Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Axon Enterprise — the maker of Tasers, body cameras and software for law enforcement — continued its resurgence on the stock market Monday.입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T18:17:36.000Z",
             "eventType": "analyst_upgrade",
@@ -4034,7 +4139,13 @@
           },
           {
             "title": "Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?",
-            "koreanSummary": "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "summary": "AXON crosses its 200-day SMA as strong TASER, software and counter-drone demand support growth, despite an elevated valuation.",
+            "koreanSummary": {
+              "title": "Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?",
+              "content": "Axon Enterprise Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AXON crosses its 200-day SMA as strong TASER, software and counter-drone demand support growth, despite an elevated valuation.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T16:27:00.000Z",
             "eventType": "general_market",
@@ -4045,7 +4156,13 @@
           },
           {
             "title": "Axon and Rocket Lab rallied while chip stocks sank",
-            "koreanSummary": "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "summary": "SanDisk Corp. (SNDK) closed out the holiday-shortened week as the Nasdaq’s biggest loser, ending Thursday at $1,745 a share, down 26% for the week, according to Seeking Alpha. Micron (MU), Western Digital (WDC), Seagate (STX) and Teradyne (TER) fell alongside it, each posting double-digit weekly ...",
+            "koreanSummary": {
+              "title": "Axon and Rocket Lab rallied while chip stocks sank",
+              "content": "Axon Enterprise Inc. 관련 기사는 Axon and Rocket Lab rallied while chip stocks sank 이슈를 다루며, 주가 변동률 +26.00%를 핵심 내용으로 봅니다.",
+              "implication": "Axon Enterprise Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-05T03:17:00.000Z",
             "eventType": "general_market",
@@ -4060,9 +4177,24 @@
           "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Axon Extends Win Streak On Target Hike, World Cup Drone Defense\"입니다.",
           "directLine": "Axon Enterprise Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Axon Extends Win Streak On Target Hike, World Cup Drone Defense\"이며, 애널리스트 상향 재료로 봅니다.",
           "bullets": [
-            "Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.",
-            "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
-            "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다."
+            {
+              "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+              "content": "Axon Enterprise Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Axon Enterprise — the maker of Tasers, body cameras and software for law enforcement — continued its resurgence on the stock market Monday.입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+            },
+            {
+              "title": "Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?",
+              "content": "Axon Enterprise Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AXON crosses its 200-day SMA as strong TASER, software and counter-drone demand support growth, despite an elevated valuation.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+            },
+            {
+              "title": "Axon and Rocket Lab rallied while chip stocks sank",
+              "content": "Axon Enterprise Inc. 관련 기사는 Axon and Rocket Lab rallied while chip stocks sank 이슈를 다루며, 주가 변동률 +26.00%를 핵심 내용으로 봅니다.",
+              "implication": "Axon Enterprise Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
@@ -4139,7 +4271,7 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
       "candidateNewsSummary": {
         "ticker": "PANW",
-        "checkedAt": "2026-07-07T03:26:11.776Z",
+        "checkedAt": "2026-07-07T03:37:29.176Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -4197,7 +4329,13 @@
         "items": [
           {
             "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
-            "koreanSummary": "Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.",
+            "summary": "In the latest trading session, Palo Alto Networks (PANW) closed at $357.35, marking a +2.67% move from the previous day.",
+            "koreanSummary": {
+              "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+              "content": "Palo Alto Networks Inc. 관련 기사는 Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 이슈를 다루며, 종가 $357.35, 주가 변동률 +2.67%를 핵심 내용으로 봅니다.",
+              "implication": "Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T21:45:02.000Z",
             "eventType": "general_market",
@@ -4208,7 +4346,13 @@
           },
           {
             "title": "Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now",
-            "koreanSummary": "Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "summary": "Palo Alto Networks, Inc. (NASDAQ:PANW) is one of the 8 High Growth Cybersecurity Stocks to Buy Now. Also on July 1, BTIG raised the firm’s price target on Palo Alto Networks to $380 from $333, kept a Buy rating on the shares, and reiterated Palo Alto as the “top pick” across its coverage. BTIG cited […]",
+            "koreanSummary": {
+              "title": "Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now",
+              "content": "Palo Alto Networks Inc.가 고성장 사이버보안주 또는 매수 후보군으로 언급됐다는 내용입니다. 회사 고유 공시보다는 사이버보안 섹터 선호와 성장주 수급을 확인하는 뉴스입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T10:02:18.000Z",
             "eventType": "analyst_upgrade",
@@ -4219,7 +4363,13 @@
           },
           {
             "title": "CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
-            "koreanSummary": "Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다.",
+            "summary": "Shares of major cybersecurity names are rallying in Monday’s midday session. CrowdStrike Holdings (NASDAQ:CRWD) stock is up 5% to $204 and change, leading the group higher. Palo Alto Networks (NASDAQ:PANW) shares are climbing 4% to $363, and Okta (NASDAQ:OKTA) stock is up 4% to $147. The Amplify Cybersecurity ETF (NYSE ARCA:HACK) is also higher, with ... CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
+            "koreanSummary": {
+              "title": "CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
+              "content": "Palo Alto Networks Inc. 관련 기사는 CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades 이슈를 다루며, 주가 변동률 +4.00%, 동반 비교 수치 +5.00%를 핵심 내용으로 봅니다.",
+              "implication": "Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T15:08:23.000Z",
             "eventType": "analyst_upgrade",
@@ -4234,9 +4384,24 @@
           "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Why Palo Alto Networks (PANW) Outpaced the Stock Market Today\"입니다.",
           "directLine": "Palo Alto Networks Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Why Palo Alto Networks (PANW) Outpaced the Stock Market Today\"이며, 시장 일반 재료로 봅니다.",
           "bullets": [
-            "Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.",
-            "Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
-            "Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다."
+            {
+              "title": "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today",
+              "content": "Palo Alto Networks Inc. 관련 기사는 Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 이슈를 다루며, 종가 $357.35, 주가 변동률 +2.67%를 핵심 내용으로 봅니다.",
+              "implication": "Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
+            {
+              "title": "Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now",
+              "content": "Palo Alto Networks Inc.가 고성장 사이버보안주 또는 매수 후보군으로 언급됐다는 내용입니다. 회사 고유 공시보다는 사이버보안 섹터 선호와 성장주 수급을 확인하는 뉴스입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+            },
+            {
+              "title": "CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades",
+              "content": "Palo Alto Networks Inc. 관련 기사는 CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades 이슈를 다루며, 주가 변동률 +4.00%, 동반 비교 수치 +5.00%를 핵심 내용으로 봅니다.",
+              "implication": "Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
@@ -4317,7 +4482,7 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
       "candidateNewsSummary": {
         "ticker": "AXON",
-        "checkedAt": "2026-07-07T03:26:11.778Z",
+        "checkedAt": "2026-07-07T03:37:29.179Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -4375,7 +4540,13 @@
         "items": [
           {
             "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
-            "koreanSummary": "Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.",
+            "summary": "Axon Enterprise — the maker of Tasers, body cameras and software for law enforcement — continued its resurgence on the stock market Monday. Needham hiked its Axon stock price target to 750 from 600, keeping a buy rating, according to The Fly investment news site. Axon Enterprise cited an expansion of the Los Angeles Police Department pact with Axon, which will more than double annual spending to $22 million.",
+            "koreanSummary": {
+              "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+              "content": "Axon Enterprise Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Axon Enterprise — the maker of Tasers, body cameras and software for law enforcement — continued its resurgence on the stock market Monday.입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T18:17:36.000Z",
             "eventType": "analyst_upgrade",
@@ -4386,7 +4557,13 @@
           },
           {
             "title": "Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?",
-            "koreanSummary": "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "summary": "AXON crosses its 200-day SMA as strong TASER, software and counter-drone demand support growth, despite an elevated valuation.",
+            "koreanSummary": {
+              "title": "Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?",
+              "content": "Axon Enterprise Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AXON crosses its 200-day SMA as strong TASER, software and counter-drone demand support growth, despite an elevated valuation.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-06T16:27:00.000Z",
             "eventType": "general_market",
@@ -4397,7 +4574,13 @@
           },
           {
             "title": "Axon and Rocket Lab rallied while chip stocks sank",
-            "koreanSummary": "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
+            "summary": "SanDisk Corp. (SNDK) closed out the holiday-shortened week as the Nasdaq’s biggest loser, ending Thursday at $1,745 a share, down 26% for the week, according to Seeking Alpha. Micron (MU), Western Digital (WDC), Seagate (STX) and Teradyne (TER) fell alongside it, each posting double-digit weekly ...",
+            "koreanSummary": {
+              "title": "Axon and Rocket Lab rallied while chip stocks sank",
+              "content": "Axon Enterprise Inc. 관련 기사는 Axon and Rocket Lab rallied while chip stocks sank 이슈를 다루며, 주가 변동률 +26.00%를 핵심 내용으로 봅니다.",
+              "implication": "Axon Enterprise Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             "source": "Yahoo Finance RSS",
             "publishedAt": "2026-07-05T03:17:00.000Z",
             "eventType": "general_market",
@@ -4412,9 +4595,24 @@
           "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Axon Extends Win Streak On Target Hike, World Cup Drone Defense\"입니다.",
           "directLine": "Axon Enterprise Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Axon Extends Win Streak On Target Hike, World Cup Drone Defense\"이며, 애널리스트 상향 재료로 봅니다.",
           "bullets": [
-            "Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.",
-            "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.",
-            "Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다."
+            {
+              "title": "Axon Extends Win Streak On Target Hike, World Cup Drone Defense",
+              "content": "Axon Enterprise Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Axon Enterprise — the maker of Tasers, body cameras and software for law enforcement — continued its resurgence on the stock market Monday.입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+            },
+            {
+              "title": "Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?",
+              "content": "Axon Enterprise Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AXON crosses its 200-day SMA as strong TASER, software and counter-drone demand support growth, despite an elevated valuation.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+            },
+            {
+              "title": "Axon and Rocket Lab rallied while chip stocks sank",
+              "content": "Axon Enterprise Inc. 관련 기사는 Axon and Rocket Lab rallied while chip stocks sank 이슈를 다루며, 주가 변동률 +26.00%를 핵심 내용으로 봅니다.",
+              "implication": "Axon Enterprise Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
@@ -5018,10 +5216,10 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-06",
     "priceAsOfLabel": "2026-07-06 US regular close",
-    "reportGeneratedAtKST": "2026-07-07 12:26",
+    "reportGeneratedAtKST": "2026-07-07 12:37",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-07-07T03:26:11.529Z",
-    "newsLastUpdatedAt": "2026-07-07T03:26:11.529Z",
+    "newsFetchedAt": "2026-07-07T03:37:28.830Z",
+    "newsLastUpdatedAt": "2026-07-07T03:37:28.830Z",
     "latestNewsPublishedAt": "2026-07-07T01:54:18.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",

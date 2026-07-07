@@ -2975,6 +2975,8 @@ function buildCandidateNewsSummary(row, summary) {
   const items = sourceItems
     .map((item) => ({
       title: item.title,
+      summary: item.summary,
+      contentSummary: item.contentSummary,
       koreanSummary: summarizeCandidateNewsItemKorean(item, row),
       source: item.source,
       publishedAt: item.publishedAt,
@@ -3042,42 +3044,230 @@ function candidateNewsItemRank(item, row) {
 
 function summarizeCandidateNewsItemKorean(item, row) {
   const title = String(item?.title || "").trim();
-  const lower = title.toLowerCase();
+  const detailText = cleanNewsText(item?.contentSummary || item?.summary || "");
+  const fullText = `${title} ${detailText}`;
+  const lower = fullText.toLowerCase();
   const name = localizedName(row?.ticker, row?.name || row?.ticker || "해당 종목");
   const event = koreanEventType(item?.eventType || item?.eventLabel);
   const tone = koreanDirection(item?.direction);
-  if (!title) return `${name} 관련 뉴스 제목이 비어 있어 내용 판단이 제한적입니다.`;
+  const facts = extractNewsFacts(fullText, name, row?.ticker);
+  if (!title) {
+    return {
+      title: "제목 없음",
+      content: `${name} 관련 뉴스 제목이 비어 있어 내용 판단이 제한적입니다.`,
+      implication: "뉴스 신뢰도가 낮아 가격/거래량 조건을 우선합니다.",
+      check: "원문 확인 필요"
+    };
+  }
+  const content = detailText && !sameNormalizedText(detailText, title) && !isWeakNewsDetail(detailText, name)
+    ? contentLineFromText(name, title, detailText, item, facts)
+    : contentLineFromTitle(name, title, item, facts, event, tone);
+  const implication = investmentImplicationLine(name, item, facts, event, tone);
+  const check = newsCheckLine(item, facts, event);
+  return { title, content, implication, check };
+}
+
+function contentLineFromText(name, title, detailText, item, facts) {
+  const event = koreanEventType(item?.eventType || item?.eventLabel);
+  const lowerTitle = title.toLowerCase();
+  if (isGenericGoogleNewsSnippet(detailText)) {
+    return contentLineFromTitle(name, title, item, facts, event, koreanDirection(item?.direction));
+  }
+  if (lowerTitle.includes("high growth cybersecurity stocks") || lowerTitle.includes("cybersecurity stocks to buy")) {
+    return `${name}가 고성장 사이버보안주 또는 매수 후보군으로 언급됐다는 내용입니다. 회사 고유 공시보다는 사이버보안 섹터 선호와 성장주 수급을 확인하는 뉴스입니다.`;
+  }
+  if (facts.movePct || facts.closePrice || facts.indexMovePct) {
+    return `${name} 관련 기사는 ${titleForKorean(title)} 이슈를 다루며, ${marketMoveFactLine(facts)}를 핵심 내용으로 봅니다.`;
+  }
+  if (facts.analystAction) {
+    return `${name} 관련 기사는 ${analystActionKorean(facts.analystAction)}를 다룹니다. 기사 스니펫상 핵심은 ${shortKoreanReadableSnippet(detailText)}입니다.`;
+  }
+  return `${name} 관련 ${event} 뉴스입니다. 기사 스니펫상 핵심 내용은 ${shortKoreanReadableSnippet(detailText)}입니다.`;
+}
+
+function contentLineFromTitle(name, title, item, facts, event, tone) {
+  const lower = title.toLowerCase();
+  const koreanTitleSummary = summarizeKoreanTitleContent(name, title, event, tone);
+  if (koreanTitleSummary) return koreanTitleSummary;
   if (lower.includes("outpaced the stock market")) {
-    return `${name} 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.`;
+    return facts.movePct || facts.indexMovePct
+      ? `${name} 주가가 시장 대비 강하게 움직였다는 내용입니다. ${marketMoveFactLine(facts)}가 핵심입니다.`
+      : `${name} 주가가 당일 시장 수익률을 앞섰다는 내용입니다. 새 펀더멘털 공시라기보다 단기 상대강도와 수급 모멘텀 확인 성격이 큽니다.`;
   }
   if (lower.includes("target hike") || lower.includes("price target")) {
-    return `${name}에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.`;
+    return `${name}에 대한 목표주가 상향 또는 애널리스트 평가 변화가 핵심입니다.`;
+  }
+  if (lower.includes("high growth cybersecurity stocks") || lower.includes("cybersecurity stocks to buy")) {
+    return `${name}가 고성장 사이버보안주 또는 매수 후보군으로 언급됐다는 내용입니다. 회사 고유 공시보다는 섹터 선호와 성장주 수급을 확인하는 뉴스입니다.`;
   }
   if (lower.includes("win streak")) {
-    return `${name}의 주가 상승 흐름이 이어지고 있다는 내용입니다. 추세 지속 신호로 볼 수 있지만 연속 상승 뒤 과열 여부를 함께 봐야 합니다.`;
+    return `${name}의 주가 상승 흐름이 이어지고 있다는 내용입니다.`;
   }
   if (lower.includes("drone defense")) {
-    return `${name} 관련 방산/드론 방어 수요가 부각된 뉴스입니다. 테마성 수요가 강해질 수 있어 관련 수주나 정책 뉴스의 후속 확인이 중요합니다.`;
+    return `${name} 관련 방산/드론 방어 수요가 부각된 뉴스입니다.`;
   }
   if (lower.includes("shares skyrocket") || lower.includes("surge") || lower.includes("rally")) {
-    return `${name} 주가 급등 또는 강한 반등을 다룬 뉴스입니다. ${event} 성격의 재료가 ${tone}으로 해석되고 있어 거래량 동반 여부가 중요합니다.`;
+    return `${name} 주가 급등 또는 강한 반등을 다룬 뉴스입니다. ${event} 성격의 재료가 ${tone}으로 해석되고 있습니다.`;
   }
   if (lower.includes("upgrade") || lower.includes("initiates")) {
-    return `${name}에 대한 증권사 투자의견 상향 또는 신규 커버리지 뉴스입니다. 수급에는 긍정적일 수 있지만 단독 매수 근거보다는 가격 반응 확인용으로 봅니다.`;
+    return `${name}에 대한 증권사 투자의견 상향 또는 신규 커버리지 뉴스입니다.`;
   }
   if (lower.includes("downgrade")) {
-    return `${name} 관련 투자의견 하향 뉴스입니다. 후보 유지에는 부담 요인이라 가격이 지지선을 지키는지 확인해야 합니다.`;
+    return `${name} 관련 투자의견 하향 뉴스입니다.`;
   }
   if (lower.includes("earnings") || lower.includes("guidance")) {
-    return `${name}의 실적 또는 가이던스 관련 뉴스입니다. ${tone} 재료로 분류되며, 실적 후 주가 반응이 유지되는지가 핵심입니다.`;
+    return `${name}의 실적 또는 가이던스 관련 뉴스입니다. ${tone} 재료로 분류됩니다.`;
   }
   if (lower.includes("contract") || lower.includes("award") || lower.includes("order")) {
-    return `${name}의 계약, 수주, 주문 관련 뉴스입니다. 실적 가시성을 높일 수 있는 촉매이므로 후속 규모와 마진 영향을 확인합니다.`;
+    return `${name}의 계약, 수주, 주문 관련 뉴스입니다.`;
   }
   if (item?.sourceType === "official_filing" || lower.includes("8-k") || lower.includes("10-q") || lower.includes("10-k")) {
-    return `${name}의 공식 공시성 뉴스입니다. 제목만으로는 세부 영향이 제한적이므로 공시 본문에서 매출, 비용, 지분, 소송 등 핵심 변화를 확인해야 합니다.`;
+    return `${name}의 공식 공시성 뉴스입니다.`;
   }
-  return `${name} 관련 ${event} 뉴스로 분류됩니다. 현재 방향성은 ${tone}이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.`;
+  return `${name} 관련 ${event} 뉴스입니다. 현재 방향성은 ${tone}으로 분류됩니다.`;
+}
+
+function investmentImplicationLine(name, item, facts, event, tone) {
+  if (facts.movePct || facts.indexMovePct) {
+    return `${name}의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.`;
+  }
+  if ((item?.eventType || item?.eventLabel) === "analyst_upgrade" || facts.analystAction) {
+    return "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.";
+  }
+  if ((item?.eventType || item?.eventLabel) === "analyst_downgrade") {
+    return "투자의견 하향은 후보 신뢰도를 낮추는 요인이므로 지지선 이탈 여부를 엄격히 봐야 합니다.";
+  }
+  if (["earnings", "guidance"].includes(item?.eventType || item?.eventLabel)) {
+    return "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.";
+  }
+  if (["contract", "capex", "mna", "regulation"].includes(item?.eventType || item?.eventLabel)) {
+    return `${event} 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.`;
+  }
+  return `단기 ${tone} 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.`;
+}
+
+function newsCheckLine(item, facts, event) {
+  if (facts.movePct || facts.indexMovePct) return "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세";
+  if ((item?.eventType || item?.eventLabel) === "analyst_upgrade") return "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응";
+  if ((item?.eventType || item?.eventLabel) === "analyst_downgrade") return "하향 사유, 추가 하향 가능성, 주요 지지선 방어";
+  if (["earnings", "guidance"].includes(item?.eventType || item?.eventLabel)) return "매출/마진/가이던스 수치, 컨센서스 대비 차이";
+  if (["contract", "capex", "mna", "regulation"].includes(item?.eventType || item?.eventLabel)) return `${event}의 금액, 기간, 실적 반영 시점`;
+  return "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지";
+}
+
+function summarizeKoreanTitleContent(name, title, event, tone) {
+  if (!/[가-힣]/.test(title)) return "";
+  const coreTitle = titleForKorean(title);
+  const amount = coreTitle.match(/([0-9,.]+)\s*억?\s*원/)?.[0];
+  if (coreTitle.includes("보안 투자")) {
+    return amount
+      ? `${name}가 지난해 보안 투자에 ${amount}을 집행했고, 제목 기준으로 타이어 3사 중 가장 큰 규모였다는 내용입니다.`
+      : `${name}의 보안 투자 규모가 업계 내에서 부각됐다는 내용입니다.`;
+  }
+  if (coreTitle.includes("저점") || coreTitle.includes("대응전략") || coreTitle.includes("투자분석")) {
+    return `${name}에 대한 기술적 분석 또는 투자전략성 기사입니다. 기업의 신규 공시보다는 가격 위치, 저점 매수 관점, 향후 대응전략을 다룬 내용으로 봅니다.`;
+  }
+  if (coreTitle.includes("수주") || coreTitle.includes("계약") || coreTitle.includes("공급")) {
+    return `${name}의 수주·계약·공급 관련 뉴스입니다. 제목 기준으로 실적 가시성에 영향을 줄 수 있는 직접 재료입니다.`;
+  }
+  if (coreTitle.includes("실적") || coreTitle.includes("영업이익") || coreTitle.includes("매출")) {
+    return `${name}의 실적 관련 뉴스입니다. 제목 기준 방향성은 ${tone}이며, 매출·이익 수치와 컨센서스 대비 차이를 확인해야 합니다.`;
+  }
+  if (coreTitle.includes("목표가") || coreTitle.includes("상향") || coreTitle.includes("하향")) {
+    return `${name}에 대한 증권사 목표가 또는 투자의견 변화 뉴스입니다.`;
+  }
+  return `${name} 관련 ${event} 뉴스입니다. 제목상 핵심은 "${coreTitle}"입니다.`;
+}
+
+function extractNewsFacts(text, companyName, ticker) {
+  const value = String(text || "");
+  const closePrice = value.match(/closed at \$([0-9]+(?:\.[0-9]+)?)/i)?.[1];
+  const pctMatches = [...value.matchAll(/([+-]?\d+(?:\.\d+)?)%/g)].map((match) => Number(match[1])).filter(Number.isFinite);
+  const companyPct = extractCompanyPct(value, companyName, ticker);
+  const analystAction = value.match(/\b(upgrade|upgraded|price target|initiated|downgrade|downgraded|raised|lowered)\b/i)?.[0];
+  return {
+    closePrice,
+    movePct: Number.isFinite(companyPct) ? companyPct : pctMatches[0],
+    indexMovePct: Number.isFinite(companyPct) ? pctMatches.find((value) => value !== companyPct) : pctMatches[1],
+    analystAction
+  };
+}
+
+function extractCompanyPct(text, companyName, ticker) {
+  const patterns = [];
+  const nameParts = String(companyName || "").split(/\s+/).filter((part) => part.length >= 4).slice(0, 2);
+  if (ticker) patterns.push(escapeRegExp(String(ticker).replace(/\.(KS|KQ)$/i, "")));
+  for (const part of nameParts) patterns.push(escapeRegExp(part));
+  for (const pattern of patterns) {
+    const matchAfter = text.match(new RegExp(`${pattern}[^.%]{0,80}?([+-]?\\d+(?:\\.\\d+)?)%`, "i"));
+    if (matchAfter) return Number(matchAfter[1]);
+    const matchBefore = text.match(new RegExp(`([+-]?\\d+(?:\\.\\d+)?)%[^.]{0,80}?${pattern}`, "i"));
+    if (matchBefore) return Number(matchBefore[1]);
+  }
+  return null;
+}
+
+function escapeRegExp(value) {
+  return String(value || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function marketMoveFactLine(facts) {
+  const pieces = [];
+  if (facts.closePrice) pieces.push(`종가 $${facts.closePrice}`);
+  if (Number.isFinite(facts.movePct)) pieces.push(`주가 변동률 ${signedPct(facts.movePct)}`);
+  if (Number.isFinite(facts.indexMovePct)) pieces.push(`동반 비교 수치 ${signedPct(facts.indexMovePct)}`);
+  return pieces.length ? pieces.join(", ") : "시장 대비 상대강도";
+}
+
+function signedPct(value) {
+  return `${value > 0 ? "+" : ""}${value.toFixed(2)}%`;
+}
+
+function cleanNewsText(value) {
+  return String(value || "")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ")
+    .replace(/\s+-\s+Yahoo Finance$/i, "")
+    .trim();
+}
+
+function sameNormalizedText(a, b) {
+  const normalize = (value) => String(value || "").toLowerCase().replace(/[^a-z0-9가-힣]+/g, " ").trim();
+  return normalize(a) === normalize(b);
+}
+
+function titleForKorean(title) {
+  return String(title || "").replace(/\s+-\s+[^-]+$/, "").trim();
+}
+
+function shortKoreanReadableSnippet(text) {
+  const clean = cleanNewsText(text);
+  if (!clean) return "원문 스니펫이 부족해 제목 중심으로만 판단됩니다";
+  const firstSentence = clean.split(/(?<=[.!?。])\s+/)[0] || clean;
+  return firstSentence.length > 180 ? `${firstSentence.slice(0, 177)}...` : firstSentence;
+}
+
+function isWeakNewsDetail(text, companyName) {
+  const clean = cleanNewsText(text);
+  if (isGenericGoogleNewsSnippet(clean)) return true;
+  if (clean.length < 70) return true;
+  const normalized = clean.toLowerCase().replace(/[^a-z0-9가-힣]+/g, " ").trim();
+  const name = String(companyName || "").toLowerCase().replace(/[^a-z0-9가-힣]+/g, " ").trim();
+  if (name && normalized === name) return true;
+  if (/^[A-Z][A-Za-z\s.,&-]+$/.test(clean) && clean.length < 90) return true;
+  return false;
+}
+
+function isGenericGoogleNewsSnippet(text) {
+  return /comprehensive up-to-date news coverage, aggregated from sources all over the world by google news/i.test(String(text || ""));
+}
+
+function analystActionKorean(value) {
+  const lower = String(value || "").toLowerCase();
+  if (lower.includes("downgrade") || lower.includes("lowered")) return "투자의견 또는 목표가 하향";
+  if (lower.includes("price target") || lower.includes("raised")) return "목표가 변화";
+  if (lower.includes("initiated")) return "신규 커버리지";
+  return "투자의견 상향";
 }
 
 function buildCandidateNewsKoreanSummary(row, summary, items, directnessLabel, trendTone, headline) {
@@ -3106,9 +3296,11 @@ function koreanEventType(value) {
     earnings: "실적",
     guidance: "가이던스",
     contract: "계약/수주",
+    capex: "투자/증설",
     product: "제품/서비스",
     regulation: "정책/규제",
     mna: "M&A",
+    risk: "리스크",
     analyst_upgrade: "애널리스트 상향",
     analyst_downgrade: "애널리스트 하향",
     offering: "증자/오퍼링",
@@ -4145,8 +4337,18 @@ function candidateNewsSectionMarkdown(summary) {
 
 - 요약: ${korean.overview || summary.oneLine || "의미 있는 신규 뉴스 없음"}
 - 직접 촉매 판단: ${korean.directLine || "직접 촉매 없음"}
-${bullets.map((line, index) => `- 뉴스 ${index + 1}: ${line}`).join("\n") || "- 뉴스: 요약할 만한 신규 뉴스 없음"}
+${bullets.map((line, index) => candidateNewsBulletMarkdown(line, index)).join("\n") || "- 뉴스: 요약할 만한 신규 뉴스 없음"}
 - 매매 해석: ${korean.tradingImplication || "가격/거래량 조건 확인 전까지 보수적으로 본다."}`;
+}
+
+function candidateNewsBulletMarkdown(item, index) {
+  if (typeof item === "string") return `- 뉴스 ${index + 1}: ${item}`;
+  return [
+    `- 뉴스 ${index + 1}: ${item.title || "제목 없음"}`,
+    `  - 내용: ${item.content || "요약 데이터 부족"}`,
+    `  - 투자 의미: ${item.implication || "가격/거래량 조건 확인 필요"}`,
+    `  - 확인할 점: ${item.check || "원문 수치와 후속 보도"}`
+  ].join("\n");
 }
 
 function candidateNewsMarkdown(summary) {
@@ -4164,10 +4366,20 @@ function candidateNewsMarkdown(summary) {
     `  - 소스별 상태: ${sourceStatus}`,
     `  - 한국어 요약: ${summary.koreanSummary?.overview || summary.oneLine || "의미 있는 신규 뉴스 없음"}`,
     `  - 직접 촉매: ${summary.directCatalyst ? `${summary.directCatalyst.source} / ${summary.directCatalyst.eventType || "general"} / ${summary.directCatalyst.freshnessBucket || "stale"} - ${summary.directCatalyst.title}` : "없음"}`,
-    ...(summary.koreanSummary?.bullets || []).map((line, index) => `  - 한국어 뉴스 요약 ${index + 1}: ${line}`),
+    ...(summary.koreanSummary?.bullets || []).flatMap((line, index) => candidateNewsDetailMarkdown(line, index)),
     ...(headlineRows.length ? headlineRows : ["  - 원문 헤드라인: 없음"]),
     `  - 주의: ${(summary.notes || []).join("; ") || "특이사항 없음"}`
   ].join("\n");
+}
+
+function candidateNewsDetailMarkdown(item, index) {
+  if (typeof item === "string") return [`  - 한국어 뉴스 요약 ${index + 1}: ${item}`];
+  return [
+    `  - 한국어 뉴스 요약 ${index + 1}: ${item.title || "제목 없음"}`,
+    `    - 내용: ${item.content || "요약 데이터 부족"}`,
+    `    - 투자 의미: ${item.implication || "가격/거래량 조건 확인 필요"}`,
+    `    - 확인할 점: ${item.check || "원문 수치와 후속 보도"}`
+  ];
 }
 
 function candidateNewsHtmlItems(summary) {
@@ -4182,10 +4394,15 @@ function candidateNewsSectionHtml(summary) {
   const items = [
     `<strong>요약</strong> ${escapeHtml(korean.overview || summary.oneLine || "의미 있는 신규 뉴스 없음")}`,
     `<strong>직접 촉매 판단</strong> ${escapeHtml(korean.directLine || "직접 촉매 없음")}`,
-    ...(korean.bullets || []).map((line, index) => `<strong>뉴스 ${index + 1}</strong> ${escapeHtml(line)}`),
+    ...(korean.bullets || []).map((line, index) => candidateNewsBulletHtml(line, index)),
     `<strong>매매 해석</strong> ${escapeHtml(korean.tradingImplication || "가격/거래량 조건 확인 전까지 보수적으로 본다.")}`
   ];
   return `<section class="candidate-news-summary"><h4>최근 뉴스/동향 한국어 요약</h4>${htmlList(items)}</section>`;
+}
+
+function candidateNewsBulletHtml(item, index) {
+  if (typeof item === "string") return `<strong>뉴스 ${index + 1}</strong> ${escapeHtml(item)}`;
+  return `<strong>뉴스 ${index + 1}</strong> ${escapeHtml(item.title || "제목 없음")}<br><span class="muted">내용: ${escapeHtml(item.content || "요약 데이터 부족")}</span><br><span class="muted">투자 의미: ${escapeHtml(item.implication || "가격/거래량 조건 확인 필요")}</span><br><span class="muted">확인할 점: ${escapeHtml(item.check || "원문 수치와 후속 보도")}</span>`;
 }
 
 function etfBreadthMarkdown(summary) {

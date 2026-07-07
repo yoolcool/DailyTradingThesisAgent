@@ -75,9 +75,9 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 주문 실행 신뢰도: LOW
 - ETF breadth 신뢰도: LOW
 - 신뢰도 해석: 테마 확산 판단 제한, 거래대금 유동성 낮음 또는 확인 불가, 프리/애프터마켓 확인 불가
-- 리포트 생성 시각: 2026-07-07 12:26 KST
+- 리포트 생성 시각: 2026-07-07 12:37 KST
 - 가격 기준 거래일: 2026-07-06 US regular close
-- 뉴스 수집 시각: 2026-07-07 12:26 KST
+- 뉴스 수집 시각: 2026-07-07 12:37 KST
 - 가장 최근 뉴스 발행 시각: 2026-07-07 10:54 KST
 - 뉴스 신선도 상태: FRESH
 - 뉴스 소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API
@@ -100,7 +100,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스: 일부 연결
 - ETF 구성종목 확산도: 일부 연결
 - 거래대금 유동성: 일부 연결
-- 생성 시각: 2026년 7월 7일 화요일 오후 12:26
+- 생성 시각: 2026년 7월 7일 화요일 오후 12:37
 - 시장 상태: 중립
 - 오늘 돈의 방향: 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 강한 테마 TOP 3: 사이버보안(75), 사이버보안 ETF(69), 방산 ETF(50)
@@ -413,9 +413,18 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 - 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today"입니다.
 - 직접 촉매 판단: Palo Alto Networks Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today"이며, 시장 일반 재료로 봅니다.
-- 뉴스 1: Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.
-- 뉴스 2: Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.
-- 뉴스 3: Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다.
+- 뉴스 1: Why Palo Alto Networks (PANW) Outpaced the Stock Market Today
+  - 내용: Palo Alto Networks Inc. 관련 기사는 Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 이슈를 다루며, 종가 $357.35, 주가 변동률 +2.67%를 핵심 내용으로 봅니다.
+  - 투자 의미: Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
+  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
+- 뉴스 2: Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now
+  - 내용: Palo Alto Networks Inc.가 고성장 사이버보안주 또는 매수 후보군으로 언급됐다는 내용입니다. 회사 고유 공시보다는 사이버보안 섹터 선호와 성장주 수급을 확인하는 뉴스입니다.
+  - 투자 의미: 애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.
+  - 확인할 점: 상향 기관, 목표가 변화폭, 같은 섹터 동반 반응
+- 뉴스 3: CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades
+  - 내용: Palo Alto Networks Inc. 관련 기사는 CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades 이슈를 다루며, 주가 변동률 +4.00%, 동반 비교 수치 +5.00%를 핵심 내용으로 봅니다.
+  - 투자 의미: Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
+  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
 - 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
 - 차트: ![PANW chart](charts/PANW.png)
 
@@ -446,9 +455,18 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 - 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Axon Extends Win Streak On Target Hike, World Cup Drone Defense"입니다.
 - 직접 촉매 판단: Axon Enterprise Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "Axon Extends Win Streak On Target Hike, World Cup Drone Defense"이며, 애널리스트 상향 재료로 봅니다.
-- 뉴스 1: Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.
-- 뉴스 2: Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.
-- 뉴스 3: Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.
+- 뉴스 1: Axon Extends Win Streak On Target Hike, World Cup Drone Defense
+  - 내용: Axon Enterprise Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Axon Enterprise — the maker of Tasers, body cameras and software for law enforcement — continued its resurgence on the stock market Monday.입니다.
+  - 투자 의미: 애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.
+  - 확인할 점: 상향 기관, 목표가 변화폭, 같은 섹터 동반 반응
+- 뉴스 2: Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?
+  - 내용: Axon Enterprise Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AXON crosses its 200-day SMA as strong TASER, software and counter-drone demand support growth, despite an elevated valuation.입니다.
+  - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
+  - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
+- 뉴스 3: Axon and Rocket Lab rallied while chip stocks sank
+  - 내용: Axon Enterprise Inc. 관련 기사는 Axon and Rocket Lab rallied while chip stocks sank 이슈를 다루며, 주가 변동률 +26.00%를 핵심 내용으로 봅니다.
+  - 투자 의미: Axon Enterprise Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
+  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
 - 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
 - 차트: ![AXON chart](charts/AXON.png)
 
@@ -580,7 +598,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 중요 공시 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - ITA Just Ripped Higher, but America’s Rearmament Cycle May Still Be in the First Inning
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 12:26 KST
+  - 뉴스 수집 시각: 2026-07-07 12:37 KST
   - 가장 최근 뉴스 발행 시각: 2026-07-07 09:15 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -702,7 +720,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 중요 공시 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / stale / positive - Forget CrowdStrike. For 0.59% This Fund Owns It Plus 30 Cybersecurity Rivals
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 12:26 KST
+  - 뉴스 수집 시각: 2026-07-07 12:37 KST
   - 가장 최근 뉴스 발행 시각: 2026-07-07 09:15 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -825,7 +843,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 중요 공시 수: 0
   - 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / positive - CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 12:26 KST
+  - 뉴스 수집 시각: 2026-07-07 12:37 KST
   - 가장 최근 뉴스 발행 시각: 2026-07-07 09:15 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -948,7 +966,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 중요 공시 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 12:26 KST
+  - 뉴스 수집 시각: 2026-07-07 12:37 KST
   - 가장 최근 뉴스 발행 시각: 2026-07-07 09:15 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1071,7 +1089,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 중요 공시 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / stale / positive - Cathie Wood’s Palantir Buy Might Be a Signal to Buy the Dip
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 12:26 KST
+  - 뉴스 수집 시각: 2026-07-07 12:37 KST
   - 가장 최근 뉴스 발행 시각: 2026-07-07 09:15 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1233,9 +1251,18 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 - 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today"입니다.
 - 직접 촉매 판단: Palo Alto Networks Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today"이며, 시장 일반 재료로 봅니다.
-- 뉴스 1: Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.
-- 뉴스 2: Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.
-- 뉴스 3: Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다.
+- 뉴스 1: Why Palo Alto Networks (PANW) Outpaced the Stock Market Today
+  - 내용: Palo Alto Networks Inc. 관련 기사는 Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 이슈를 다루며, 종가 $357.35, 주가 변동률 +2.67%를 핵심 내용으로 봅니다.
+  - 투자 의미: Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
+  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
+- 뉴스 2: Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now
+  - 내용: Palo Alto Networks Inc.가 고성장 사이버보안주 또는 매수 후보군으로 언급됐다는 내용입니다. 회사 고유 공시보다는 사이버보안 섹터 선호와 성장주 수급을 확인하는 뉴스입니다.
+  - 투자 의미: 애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.
+  - 확인할 점: 상향 기관, 목표가 변화폭, 같은 섹터 동반 반응
+- 뉴스 3: CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades
+  - 내용: Palo Alto Networks Inc. 관련 기사는 CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades 이슈를 다루며, 주가 변동률 +4.00%, 동반 비교 수치 +5.00%를 핵심 내용으로 봅니다.
+  - 투자 의미: Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
+  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
 - 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
@@ -1295,7 +1322,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 중요 공시 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 12:26 KST
+  - 뉴스 수집 시각: 2026-07-07 12:37 KST
   - 가장 최근 뉴스 발행 시각: 2026-07-07 09:15 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1315,16 +1342,25 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
 - 후보 선정 후 뉴스/동향 재확인:
   - 재확인 상태: 일부 연결
-  - 재확인 시각: 2026-07-07 12:26 KST
+  - 재확인 시각: 2026-07-07 12:37 KST
   - 최근 발행 시각: 2026-07-07 09:15 KST
   - 신선도: FRESH
   - 출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
   - 한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Why Palo Alto Networks (PANW) Outpaced the Stock Market Today"입니다.
   - 직접 촉매: Yahoo Finance RSS / general_market / under_6h - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today
-  - 한국어 뉴스 요약 1: Palo Alto Networks Inc. 주가가 시장 대비 강하게 움직였다는 보도입니다. 새 펀더멘털 공시보다는 단기 상대강도와 모멘텀 확인 성격이 큽니다.
-  - 한국어 뉴스 요약 2: Palo Alto Networks Inc. 관련 애널리스트 상향 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.
-  - 한국어 뉴스 요약 3: Palo Alto Networks Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 애널리스트 상향 성격의 재료가 긍정으로 해석되고 있어 거래량 동반 여부가 중요합니다.
+  - 한국어 뉴스 요약 1: Why Palo Alto Networks (PANW) Outpaced the Stock Market Today
+    - 내용: Palo Alto Networks Inc. 관련 기사는 Why Palo Alto Networks (PANW) Outpaced the Stock Market Today 이슈를 다루며, 종가 $357.35, 주가 변동률 +2.67%를 핵심 내용으로 봅니다.
+    - 투자 의미: Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
+    - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
+  - 한국어 뉴스 요약 2: Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now
+    - 내용: Palo Alto Networks Inc.가 고성장 사이버보안주 또는 매수 후보군으로 언급됐다는 내용입니다. 회사 고유 공시보다는 사이버보안 섹터 선호와 성장주 수급을 확인하는 뉴스입니다.
+    - 투자 의미: 애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.
+    - 확인할 점: 상향 기관, 목표가 변화폭, 같은 섹터 동반 반응
+  - 한국어 뉴스 요약 3: CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades
+    - 내용: Palo Alto Networks Inc. 관련 기사는 CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades 이슈를 다루며, 주가 변동률 +4.00%, 동반 비교 수치 +5.00%를 핵심 내용으로 봅니다.
+    - 투자 의미: Palo Alto Networks Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
+    - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
   - 원문 헤드라인 1: Yahoo Finance RSS / general_market / under_6h / neutral - Why Palo Alto Networks (PANW) Outpaced the Stock Market Today
   - 원문 헤드라인 2: Yahoo Finance RSS / analyst_upgrade / under_24h / positive - Here’s Why Palo Alto (PANW) is Among the 8 High Growth Cybersecurity Stocks to Buy Now
   - 원문 헤드라인 3: Yahoo Finance RSS / analyst_upgrade / under_24h / positive - CrowdStrike Surges 5%, Palo Alto and Okta Gain 4% as Cybersecurity Stocks Rally on Analyst Upgrades
@@ -1370,9 +1406,18 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 - 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Axon Extends Win Streak On Target Hike, World Cup Drone Defense"입니다.
 - 직접 촉매 판단: Axon Enterprise Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "Axon Extends Win Streak On Target Hike, World Cup Drone Defense"이며, 애널리스트 상향 재료로 봅니다.
-- 뉴스 1: Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.
-- 뉴스 2: Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.
-- 뉴스 3: Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.
+- 뉴스 1: Axon Extends Win Streak On Target Hike, World Cup Drone Defense
+  - 내용: Axon Enterprise Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Axon Enterprise — the maker of Tasers, body cameras and software for law enforcement — continued its resurgence on the stock market Monday.입니다.
+  - 투자 의미: 애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.
+  - 확인할 점: 상향 기관, 목표가 변화폭, 같은 섹터 동반 반응
+- 뉴스 2: Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?
+  - 내용: Axon Enterprise Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AXON crosses its 200-day SMA as strong TASER, software and counter-drone demand support growth, despite an elevated valuation.입니다.
+  - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
+  - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
+- 뉴스 3: Axon and Rocket Lab rallied while chip stocks sank
+  - 내용: Axon Enterprise Inc. 관련 기사는 Axon and Rocket Lab rallied while chip stocks sank 이슈를 다루며, 주가 변동률 +26.00%를 핵심 내용으로 봅니다.
+  - 투자 의미: Axon Enterprise Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
+  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
 - 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
 - 진입 조건: 20일선 위 눌림 후 재상승 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
@@ -1433,7 +1478,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 중요 공시 수: 0
   - 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 12:26 KST
+  - 뉴스 수집 시각: 2026-07-07 12:37 KST
   - 가장 최근 뉴스 발행 시각: 2026-07-07 09:15 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1453,16 +1498,25 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
 - 후보 선정 후 뉴스/동향 재확인:
   - 재확인 상태: 일부 연결
-  - 재확인 시각: 2026-07-07 12:26 KST
+  - 재확인 시각: 2026-07-07 12:37 KST
   - 최근 발행 시각: 2026-07-07 09:15 KST
   - 신선도: FRESH
   - 출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
   - 한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Axon Extends Win Streak On Target Hike, World Cup Drone Defense"입니다.
   - 직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_24h - Axon Extends Win Streak On Target Hike, World Cup Drone Defense
-  - 한국어 뉴스 요약 1: Axon Enterprise Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 언급됐습니다. 단기 매수세에는 우호적일 수 있지만, 가격에 이미 반영됐는지 확인이 필요합니다.
-  - 한국어 뉴스 요약 2: Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.
-  - 한국어 뉴스 요약 3: Axon Enterprise Inc. 관련 시장 일반 뉴스로 분류됩니다. 현재 방향성은 긍정이며, 제목 기준 요약이므로 실제 매매 전 원문에서 수치와 맥락 확인이 필요합니다.
+  - 한국어 뉴스 요약 1: Axon Extends Win Streak On Target Hike, World Cup Drone Defense
+    - 내용: Axon Enterprise Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Axon Enterprise — the maker of Tasers, body cameras and software for law enforcement — continued its resurgence on the stock market Monday.입니다.
+    - 투자 의미: 애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.
+    - 확인할 점: 상향 기관, 목표가 변화폭, 같은 섹터 동반 반응
+  - 한국어 뉴스 요약 2: Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?
+    - 내용: Axon Enterprise Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AXON crosses its 200-day SMA as strong TASER, software and counter-drone demand support growth, despite an elevated valuation.입니다.
+    - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
+    - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
+  - 한국어 뉴스 요약 3: Axon and Rocket Lab rallied while chip stocks sank
+    - 내용: Axon Enterprise Inc. 관련 기사는 Axon and Rocket Lab rallied while chip stocks sank 이슈를 다루며, 주가 변동률 +26.00%를 핵심 내용으로 봅니다.
+    - 투자 의미: Axon Enterprise Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
+    - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
   - 원문 헤드라인 1: Yahoo Finance RSS / analyst_upgrade / under_24h / neutral - Axon Extends Win Streak On Target Hike, World Cup Drone Defense
   - 원문 헤드라인 2: Yahoo Finance RSS / general_market / under_24h / positive - Axon Crosses Its 200-Day SMA: Should You Buy the Stock Now?
   - 원문 헤드라인 3: Yahoo Finance RSS / general_market / under_72h / positive - Axon and Rocket Lab rallied while chip stocks sank
@@ -1566,7 +1620,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 중요 공시 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - CrowdStrike (CRWD) Stock Trades Up, Here Is Why
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 12:26 KST
+  - 뉴스 수집 시각: 2026-07-07 12:37 KST
   - 가장 최근 뉴스 발행 시각: 2026-07-07 09:15 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1685,7 +1739,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 중요 공시 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / under_72h / neutral - Jim Cramer makes bold buy call on one booming energy stock
   - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-07 12:26 KST
+  - 뉴스 수집 시각: 2026-07-07 12:37 KST
   - 가장 최근 뉴스 발행 시각: 2026-07-07 09:15 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
@@ -1804,7 +1858,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 중요 공시 수: 0
   - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Tesla (TSLA) Shares Skyrocket, What You Need To Know
   - 보조 뉴스: Yahoo Finance RSS sector_theme / earnings / under_6h
-  - 뉴스 수집 시각: 2026-07-07 12:26 KST
+  - 뉴스 수집 시각: 2026-07-07 12:37 KST
   - 가장 최근 뉴스 발행 시각: 2026-07-07 10:54 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
