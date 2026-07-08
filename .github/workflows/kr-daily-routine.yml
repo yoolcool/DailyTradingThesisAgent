@@ -2,9 +2,9 @@ name: KR Daily Routine
 
 on:
   schedule:
-    # 16:30 Asia/Seoul, Monday-Friday.
-    # GitHub Actions schedules use UTC, so this runs 07:30 UTC Monday-Friday.
-    - cron: "30 7 * * 1-5"
+    # 08:10 Asia/Seoul, Monday-Friday.
+    # GitHub Actions schedules use UTC, so this runs 23:10 UTC Sunday-Thursday.
+    - cron: "10 23 * * 0-4"
   workflow_dispatch:
 
 permissions:
