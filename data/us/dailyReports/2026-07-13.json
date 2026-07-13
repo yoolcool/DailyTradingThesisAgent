@@ -14,12 +14,37 @@
     "sessionLabel": "US regular session"
   },
   "reportDate": "2026-07-13",
-  "generatedAt": "2026년 7월 13일 월요일 오후 12:21",
+  "generatedAt": "2026년 7월 13일 월요일 오후 12:32",
   "marketRegimeAssessment": {
     "label": "강세장",
     "score": 82,
     "actionBias": "선별 매수 우위, 과열 추격만 제한",
     "conclusion": "기술적 추세가 강세장 조건에 가깝다. 매크로도 큰 부담은 제한적이다.",
+    "reliability": {
+      "grade": "HIGH",
+      "score": 100,
+      "label": "높음",
+      "summary": "핵심 지수와 매크로 데이터가 대부분 직접 수집되어 판정 신뢰도가 높다.",
+      "directCount": 2,
+      "fallbackCount": 0,
+      "staleCount": 0,
+      "missingCount": 0,
+      "items": [
+        "직접 지수 데이터: S&P 500, Nasdaq 100",
+        "대체 지수 데이터 없음",
+        "매크로 데이터: 3/3",
+        "누락 데이터 없음",
+        "stale 데이터 없음"
+      ]
+    },
+    "change": {
+      "status": "FIRMER",
+      "label": "강화",
+      "previousLabel": "강세장",
+      "previousScore": 75,
+      "scoreDelta": 7,
+      "summary": "강세장은 유지됐지만 점수는 전일보다 강화됐다(+7점)."
+    },
     "technical": {
       "score": 100,
       "label": "상승 추세 우위",
@@ -32,6 +57,7 @@
           "usingFallback": false,
           "weight": 0.5,
           "dataStatus": "ok",
+          "dataFreshness": "FRESH",
           "score": 100,
           "lastClose": 7575.3901,
           "dataDate": "2026-07-10",
@@ -54,6 +80,7 @@
           "usingFallback": false,
           "weight": 0.5,
           "dataStatus": "ok",
+          "dataFreshness": "FRESH",
           "score": 100,
           "lastClose": 29825.1094,
           "dataDate": "2026-07-10",
@@ -80,6 +107,7 @@
           "type": "rates",
           "riskOnWhen": "up",
           "dataStatus": "ok",
+          "dataFreshness": "FRESH",
           "score": 48,
           "dataDate": "2026-07-10",
           "return5dPct": -1.22,
@@ -92,6 +120,7 @@
           "type": "dollar",
           "riskOnWhen": "down",
           "dataStatus": "ok",
+          "dataFreshness": "FRESH",
           "score": 48,
           "dataDate": "2026-07-10",
           "return5dPct": 0.18,
@@ -104,6 +133,7 @@
           "type": "credit",
           "riskOnWhen": "up",
           "dataStatus": "ok",
+          "dataFreshness": "FRESH",
           "score": 50,
           "dataDate": "2026-07-10",
           "return5dPct": 0,
@@ -2930,33 +2960,35 @@
       "stockRelativeVolumeAvg": 1
     },
     {
-      "name": "바이오/헬스케어 촉매",
+      "name": "Aerospace & Defense 자금 유입",
       "status": "약화",
-      "narrativeScore": 24,
-      "rawScore": 24,
+      "narrativeScore": 26,
+      "rawScore": 26,
       "reasonConfidence": "LOW",
       "supportEtfs": [
-        "QQQ"
+        "QQQ",
+        "SPY",
+        "IWM"
       ],
       "supportStocks": [
-        "INSM",
-        "VRTX",
-        "GILD"
+        "AXON",
+        "RTX"
       ],
       "representativeEtfs": [
-        "QQQ"
+        "QQQ",
+        "SPY",
+        "IWM"
       ],
       "representativeStocks": [
-        "INSM",
-        "VRTX",
-        "GILD"
+        "AXON",
+        "RTX"
       ],
-      "whyMoneyIsFlowing": "바이오/헬스케어 촉매 관련 Invesco QQQ Trust(QQQ)와 Insmed Incorporated(INSM), Vertex Pharmaceuticals Incorporated(VRTX), Gilead Sciences Inc.(GILD)의 5일(-0.94%)·20일(+12.17%) 흐름을 함께 본다. 평균 상대 거래량은 0.65배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "바이오/헬스케어 촉매을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: VRTX, GILD, INSM",
+      "whyMoneyIsFlowing": "Aerospace & Defense 자금 유입 관련 Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM)와 Axon Enterprise Inc.(AXON), RTX의 5일(-0.85%)·20일(+10.09%) 흐름을 함께 본다. 평균 상대 거래량은 0.62배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "Aerospace & Defense 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: AXON, RTX",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "Invesco QQQ Trust(QQQ), Insmed Incorporated(INSM), Vertex Pharmaceuticals Incorporated(VRTX) 중심으로 5일 -0.94%, 20일 +12.17% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), Axon Enterprise Inc.(AXON), RTX 중심으로 5일 -0.85%, 20일 +10.09% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -3000,6 +3032,42 @@
       "summaryReason": "Roundhill Memory ETF(DRAM), VanEck Semiconductor ETF(SMH), NVIDIA Corporation(NVDA), Advanced Micro Devices Inc.(AMD) 중심으로 5일 +2.57%, 20일 +8.97% 흐름이 형성됨. 직접 촉매 일부 확인.",
       "directNewsCount": 1,
       "etfBreadthScore": -2,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "바이오/헬스케어 촉매",
+      "status": "약화",
+      "narrativeScore": 22,
+      "rawScore": 22,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "QQQ"
+      ],
+      "supportStocks": [
+        "INSM",
+        "REGN",
+        "ALNY",
+        "VRTX"
+      ],
+      "representativeEtfs": [
+        "QQQ"
+      ],
+      "representativeStocks": [
+        "INSM",
+        "REGN",
+        "ALNY",
+        "VRTX"
+      ],
+      "whyMoneyIsFlowing": "바이오/헬스케어 촉매 관련 Invesco QQQ Trust(QQQ)와 Insmed Incorporated(INSM), Regeneron Pharmaceuticals Inc.(REGN), Alnylam Pharmaceuticals Inc.(ALNY), Vertex Pharmaceuticals Incorporated(VRTX)의 5일(-1.11%)·20일(+10.29%) 흐름을 함께 본다. 평균 상대 거래량은 0.80배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "바이오/헬스케어 촉매을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: VRTX, INSM, ALNY",
+      "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
+      "summaryReason": "Invesco QQQ Trust(QQQ), Insmed Incorporated(INSM), Regeneron Pharmaceuticals Inc.(REGN) 중심으로 5일 -1.11%, 20일 +10.29% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
       "stockRelativeVolumeAvg": 1
@@ -3071,44 +3139,6 @@
       "breakCondition": "QQQ/IWM 동반 약화, 고베타 성장주 상대 거래량 둔화",
       "todayAction": "지수 위험선호가 유지될 때만 선별 진입",
       "summaryReason": "Roundhill Magnificent Seven ETF(MAGS), Invesco QQQ Trust(QQQ), Tesla Inc.(TSLA), Arm Holdings plc(ARM) 중심으로 5일 +0.81%, 20일 +6.14% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": 0,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 1
-    },
-    {
-      "name": "Aerospace & Defense 자금 유입",
-      "status": "약화",
-      "narrativeScore": 16,
-      "rawScore": 16,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "QQQ",
-        "SPY",
-        "IWM"
-      ],
-      "supportStocks": [
-        "AXON",
-        "RTX",
-        "AVAV"
-      ],
-      "representativeEtfs": [
-        "QQQ",
-        "SPY",
-        "IWM"
-      ],
-      "representativeStocks": [
-        "AXON",
-        "RTX",
-        "AVAV"
-      ],
-      "whyMoneyIsFlowing": "Aerospace & Defense 자금 유입 관련 Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM)와 Axon Enterprise Inc.(AXON), RTX, AeroVironment(AVAV)의 5일(-4.75%)·20일(+5.68%) 흐름을 함께 본다. 평균 상대 거래량은 0.61배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "Aerospace & Defense 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: AXON, RTX, AVAV",
-      "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), Axon Enterprise Inc.(AXON), RTX 중심으로 5일 -4.75%, 20일 +5.68% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -3273,6 +3303,44 @@
       "stockRelativeVolumeAvg": 1
     },
     {
+      "name": "반도체 장비 사이클 재평가",
+      "status": "약화",
+      "narrativeScore": 8,
+      "rawScore": 8,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "SMH",
+        "SOXQ",
+        "SOXX"
+      ],
+      "supportStocks": [
+        "AMAT",
+        "ASML",
+        "LRCX"
+      ],
+      "representativeEtfs": [
+        "SMH",
+        "SOXQ",
+        "SOXX"
+      ],
+      "representativeStocks": [
+        "AMAT",
+        "ASML",
+        "LRCX"
+      ],
+      "whyMoneyIsFlowing": "반도체 장비 사이클 재평가 관련 VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ), iShares Semiconductor ETF(SOXX)와 Applied Materials Inc.(AMAT), ASML Holding N.V.(ASML), Lam Research Corporation(LRCX)의 5일(+1.76%)·20일(+8.25%) 흐름을 함께 본다. 평균 상대 거래량은 0.48배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "반도체 장비 사이클 재평가을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: AMAT, LRCX, ASML",
+      "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
+      "summaryReason": "VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ), Applied Materials Inc.(AMAT), ASML Holding N.V.(ASML) 중심으로 5일 +1.76%, 20일 +8.25% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": -3,
+      "relativeVolumeAvg": 0,
+      "etfRelativeVolumeAvg": 0,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
       "name": "AI 소프트웨어/사이버보안 확산",
       "status": "약화",
       "narrativeScore": 7,
@@ -3311,46 +3379,6 @@
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
       "stockRelativeVolumeAvg": 1
-    },
-    {
-      "name": "반도체 장비 사이클 재평가",
-      "status": "약화",
-      "narrativeScore": 6,
-      "rawScore": 6,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "SMH",
-        "SOXQ",
-        "SOXX"
-      ],
-      "supportStocks": [
-        "AMAT",
-        "ASML",
-        "KLAC",
-        "LRCX"
-      ],
-      "representativeEtfs": [
-        "SMH",
-        "SOXQ",
-        "SOXX"
-      ],
-      "representativeStocks": [
-        "AMAT",
-        "ASML",
-        "KLAC",
-        "LRCX"
-      ],
-      "whyMoneyIsFlowing": "반도체 장비 사이클 재평가 관련 VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ), iShares Semiconductor ETF(SOXX)와 Applied Materials Inc.(AMAT), ASML Holding N.V.(ASML), KLA Corporation(KLAC), Lam Research Corporation(LRCX)의 5일(+1.33%)·20일(+8.27%) 흐름을 함께 본다. 평균 상대 거래량은 0.48배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "반도체 장비 사이클 재평가을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: AMAT, KLAC, LRCX",
-      "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ), Applied Materials Inc.(AMAT), ASML Holding N.V.(ASML) 중심으로 5일 +1.33%, 20일 +8.27% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": -3,
-      "relativeVolumeAvg": 0,
-      "etfRelativeVolumeAvg": 0,
-      "stockRelativeVolumeAvg": 0
     },
     {
       "name": "매크로 방어/헤지",
@@ -3539,33 +3567,35 @@
       "stockRelativeVolumeAvg": 1
     },
     {
-      "name": "바이오/헬스케어 촉매",
+      "name": "Aerospace & Defense 자금 유입",
       "status": "약화",
-      "narrativeScore": 24,
-      "rawScore": 24,
+      "narrativeScore": 26,
+      "rawScore": 26,
       "reasonConfidence": "LOW",
       "supportEtfs": [
-        "QQQ"
+        "QQQ",
+        "SPY",
+        "IWM"
       ],
       "supportStocks": [
-        "INSM",
-        "VRTX",
-        "GILD"
+        "AXON",
+        "RTX"
       ],
       "representativeEtfs": [
-        "QQQ"
+        "QQQ",
+        "SPY",
+        "IWM"
       ],
       "representativeStocks": [
-        "INSM",
-        "VRTX",
-        "GILD"
+        "AXON",
+        "RTX"
       ],
-      "whyMoneyIsFlowing": "바이오/헬스케어 촉매 관련 Invesco QQQ Trust(QQQ)와 Insmed Incorporated(INSM), Vertex Pharmaceuticals Incorporated(VRTX), Gilead Sciences Inc.(GILD)의 5일(-0.94%)·20일(+12.17%) 흐름을 함께 본다. 평균 상대 거래량은 0.65배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "바이오/헬스케어 촉매을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: VRTX, GILD, INSM",
+      "whyMoneyIsFlowing": "Aerospace & Defense 자금 유입 관련 Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM)와 Axon Enterprise Inc.(AXON), RTX의 5일(-0.85%)·20일(+10.09%) 흐름을 함께 본다. 평균 상대 거래량은 0.62배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "Aerospace & Defense 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: AXON, RTX",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "Invesco QQQ Trust(QQQ), Insmed Incorporated(INSM), Vertex Pharmaceuticals Incorporated(VRTX) 중심으로 5일 -0.94%, 20일 +12.17% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), Axon Enterprise Inc.(AXON), RTX 중심으로 5일 -0.85%, 20일 +10.09% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -3602,7 +3632,7 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-13T03:21:23.279Z",
+        "checkedAt": "2026-07-13T03:32:47.657Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -3807,7 +3837,7 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-13T03:21:23.279Z",
+        "checkedAt": "2026-07-13T03:32:47.657Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -4013,7 +4043,7 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-13T03:21:23.279Z",
+        "checkedAt": "2026-07-13T03:32:47.657Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -4406,7 +4436,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / macro / under_72h / positive - GE Vernova (GEV) Is Sold Out On Turbines Through 2030 As Power Demand Builds",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Does Chevron's Joint Venture With GE Vernova Make the Stock a Buy Ahead of 2027?",
       "tieBreakerReason": "최종 원점수 55, 리스크 패널티 0, 5일 수익률 -1.94%, 상대 거래량 0.55배 순으로 정렬",
       "entryQualityScore": 33,
       "entryQualityLabel": "낮음",
@@ -4728,7 +4758,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / stale / positive - AI Crushed Software Stocks. IGV Is Betting the ‘SaaSpocalypse’ Is Overblown",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 10% in Seoul after stellar Nasdaq debut",
       "tieBreakerReason": "최종 원점수 -1, 리스크 패널티 0, 5일 수익률 -1.24%, 상대 거래량 0.59배 순으로 정렬",
       "entryQualityScore": 5,
       "entryQualityLabel": "낮음",
@@ -4908,10 +4938,10 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-10",
     "priceAsOfLabel": "2026-07-10 US regular close",
-    "reportGeneratedAtKST": "2026-07-13 12:21",
+    "reportGeneratedAtKST": "2026-07-13 12:32",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-07-13T03:21:16.766Z",
-    "newsLastUpdatedAt": "2026-07-13T03:21:16.766Z",
+    "newsFetchedAt": "2026-07-13T03:32:41.158Z",
+    "newsLastUpdatedAt": "2026-07-13T03:32:41.158Z",
     "latestNewsPublishedAt": "2026-07-13T03:11:41.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",

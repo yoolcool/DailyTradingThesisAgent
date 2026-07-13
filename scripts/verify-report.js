@@ -75,10 +75,14 @@ function main() {
   assert(markdown.includes("시장 국면 판단"), "Markdown missing market regime assessment");
   assert(markdown.includes("기술적 지표"), "Markdown missing market regime technical section");
   assert(markdown.includes("매크로 시황"), "Markdown missing market regime macro section");
+  assert(markdown.includes("전일 대비"), "Markdown missing market regime day-over-day change");
+  assert(markdown.includes("판정 신뢰도"), "Markdown missing market regime reliability");
   assert(html.includes("data-market-regime"), "HTML missing market regime assessment");
   assert(latestSnapshotForRegime.marketRegimeAssessment?.label, "Snapshot missing market regime label");
   assert(latestSnapshotForRegime.marketRegimeAssessment?.technical?.benchmarks?.length, "Snapshot missing market regime benchmarks");
   assert(latestSnapshotForRegime.marketRegimeAssessment?.macro?.signals?.length, "Snapshot missing market regime macro signals");
+  assert(latestSnapshotForRegime.marketRegimeAssessment?.reliability?.grade, "Snapshot missing market regime reliability");
+  assert(latestSnapshotForRegime.marketRegimeAssessment?.change?.status, "Snapshot missing market regime change");
 
   if (IS_KR) {
     verifyKrReport(markdown, html, docsHtml);

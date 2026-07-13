@@ -1122,7 +1122,7 @@ function marketStatus(etfs) {
   return "중립";
 }
 
-function buildMarketRegimeAssessment(marketData, etfs = []) {
+function buildMarketRegimeAssessment(marketData, etfs = [], previousRegime = null) {
   const benchmarks = (MARKET_PROFILE.regimeBenchmarks || defaultRegimeBenchmarks())
     .map((config) => buildRegimeBenchmark(config, marketData, etfs))
     .filter(Boolean);
@@ -1141,11 +1141,15 @@ function buildMarketRegimeAssessment(marketData, etfs = []) {
   const label = marketRegimeLabel(finalScore);
   const actionBias = marketRegimeActionBias(label, technicalScore, macroScore);
   const conclusion = marketRegimeConclusion(label, technicalScore, macroScore, benchmarks, macroSignals);
+  const reliability = marketRegimeReliability(benchmarks, macroSignals);
+  const change = marketRegimeChange({ label, score: finalScore }, previousRegime);
   return {
     label,
     score: finalScore,
     actionBias,
     conclusion,
+    reliability,
+    change,
     technical: {
       score: rounded(technicalScore),
       label: technicalRegimeLabel(technicalScore),
@@ -1201,6 +1205,7 @@ function buildRegimeBenchmark(config, marketData, etfs) {
       weight: Number(config.weight || 1),
       dataStatus: "missing",
       score: 50,
+      dataFreshness: "MISSING",
       reason: "지수 데이터 없음"
     };
   }
@@ -1221,6 +1226,7 @@ function buildRegimeBenchmark(config, marketData, etfs) {
     usingFallback: market.ticker === config.fallbackTicker || primary?.dataStatus !== "ok",
     weight: Number(config.weight || 1),
     dataStatus: "ok",
+    dataFreshness: market.dataFreshness || "UNKNOWN",
     score,
     lastClose: market.lastClose,
     dataDate: market.dataDate,
@@ -1246,6 +1252,7 @@ function buildMacroSignal(config, marketData) {
       type: config.type || "macro",
       riskOnWhen: config.riskOnWhen || "up",
       dataStatus: "missing",
+      dataFreshness: "MISSING",
       score: 50,
       reason: "매크로 데이터 없음"
     };
@@ -1260,6 +1267,7 @@ function buildMacroSignal(config, marketData) {
     type: config.type || "macro",
     riskOnWhen: config.riskOnWhen || "up",
     dataStatus: "ok",
+    dataFreshness: market.dataFreshness || "UNKNOWN",
     score,
     dataDate: market.dataDate,
     return5dPct: market.return5dPct,
@@ -1313,6 +1321,106 @@ function macroRegimeLabel(score) {
   if (score >= 45) return "매크로 중립";
   if (score >= 35) return "매크로 부담";
   return "매크로 위험";
+}
+
+function marketRegimeReliability(benchmarks, macroSignals) {
+  const technicalOk = benchmarks.filter((row) => row.dataStatus === "ok").length;
+  const macroOk = macroSignals.filter((row) => row.dataStatus === "ok").length;
+  const technicalTotal = benchmarks.length || 1;
+  const macroTotal = macroSignals.length || 1;
+  const fallbackCount = benchmarks.filter((row) => row.usingFallback).length;
+  const staleCount = [...benchmarks, ...macroSignals].filter((row) => row.dataFreshness === "STALE").length;
+  const missing = [...benchmarks, ...macroSignals].filter((row) => row.dataStatus !== "ok");
+  const coverageScore = (technicalOk / technicalTotal) * 55 + (macroOk / macroTotal) * 35;
+  const penalty = fallbackCount * 8 + staleCount * 10 + missing.length * 5;
+  const score = rounded(clamp(coverageScore + 10 - penalty, 0, 100));
+  const grade = score >= 80 ? "HIGH" : score >= 55 ? "MEDIUM" : "LOW";
+  const directLabels = benchmarks.filter((row) => row.dataStatus === "ok" && !row.usingFallback).map((row) => row.label);
+  const fallbackLabels = benchmarks.filter((row) => row.usingFallback).map((row) => `${row.label}->${row.fallbackTicker}`);
+  const missingLabels = missing.map((row) => row.label);
+  const items = [
+    directLabels.length ? `직접 지수 데이터: ${directLabels.join(", ")}` : "직접 지수 데이터 없음",
+    fallbackLabels.length ? `대체 지수 데이터: ${fallbackLabels.join(", ")}` : "대체 지수 데이터 없음",
+    `매크로 데이터: ${macroOk}/${macroSignals.length}`,
+    missingLabels.length ? `누락: ${missingLabels.join(", ")}` : "누락 데이터 없음",
+    staleCount ? `stale 데이터: ${staleCount}개` : "stale 데이터 없음"
+  ];
+  return {
+    grade,
+    score,
+    label: grade === "HIGH" ? "높음" : grade === "MEDIUM" ? "보통" : "낮음",
+    summary: marketRegimeReliabilitySummary(grade, directLabels, fallbackLabels, missingLabels),
+    directCount: directLabels.length,
+    fallbackCount,
+    staleCount,
+    missingCount: missing.length,
+    items
+  };
+}
+
+function marketRegimeReliabilitySummary(grade, directLabels, fallbackLabels, missingLabels) {
+  if (grade === "HIGH") return "핵심 지수와 매크로 데이터가 대부분 직접 수집되어 판정 신뢰도가 높다.";
+  if (grade === "MEDIUM") {
+    if (fallbackLabels.length) return `일부 지수는 ${fallbackLabels.join(", ")} 대체 데이터를 사용해 판정 신뢰도는 보통이다.`;
+    return "일부 매크로 데이터가 제한적이라 판정 신뢰도는 보통이다.";
+  }
+  if (missingLabels.length) return `누락 데이터(${missingLabels.join(", ")})가 있어 판정 신뢰도가 낮다.`;
+  return "데이터 커버리지가 낮아 판정 신뢰도가 낮다.";
+}
+
+function marketRegimeChange(current, previousRegime) {
+  if (!previousRegime?.label || !Number.isFinite(Number(previousRegime.score))) {
+    return {
+      status: "NO_PREVIOUS",
+      label: "전일 비교 없음",
+      previousLabel: previousRegime?.label || null,
+      previousScore: Number.isFinite(Number(previousRegime?.score)) ? Number(previousRegime.score) : null,
+      scoreDelta: null,
+      summary: "전일 시장 국면 데이터가 없어 오늘 판정만 확인한다."
+    };
+  }
+  const previousScore = Number(previousRegime.score);
+  const scoreDelta = rounded(Number(current.score) - previousScore);
+  const rankDelta = marketRegimeRank(current.label) - marketRegimeRank(previousRegime.label);
+  const status = rankDelta > 0 ? "IMPROVED" : rankDelta < 0 ? "DETERIORATED" : Math.abs(scoreDelta) >= 5 ? (scoreDelta > 0 ? "FIRMER" : "SOFTER") : "UNCHANGED";
+  const label = marketRegimeChangeLabel(status);
+  return {
+    status,
+    label,
+    previousLabel: previousRegime.label,
+    previousScore,
+    scoreDelta,
+    summary: marketRegimeChangeSummary(status, current, previousRegime, scoreDelta)
+  };
+}
+
+function marketRegimeRank(label) {
+  const ranks = {
+    "약세장": 0,
+    "중립-하락": 1,
+    "중립": 2,
+    "중립-상승": 3,
+    "강세장": 4
+  };
+  return ranks[label] ?? 2;
+}
+
+function marketRegimeChangeLabel(status) {
+  if (status === "IMPROVED") return "개선";
+  if (status === "DETERIORATED") return "악화";
+  if (status === "FIRMER") return "강화";
+  if (status === "SOFTER") return "약화";
+  if (status === "UNCHANGED") return "유지";
+  return "전일 비교 없음";
+}
+
+function marketRegimeChangeSummary(status, current, previousRegime, scoreDelta) {
+  const deltaText = `${scoreDelta > 0 ? "+" : ""}${scoreDelta}점`;
+  if (status === "IMPROVED") return `${previousRegime.label}에서 ${current.label}으로 개선됐다(${deltaText}).`;
+  if (status === "DETERIORATED") return `${previousRegime.label}에서 ${current.label}으로 악화됐다(${deltaText}).`;
+  if (status === "FIRMER") return `${current.label}은 유지됐지만 점수는 전일보다 강화됐다(${deltaText}).`;
+  if (status === "SOFTER") return `${current.label}은 유지됐지만 점수는 전일보다 약화됐다(${deltaText}).`;
+  return `${current.label} 유지, 점수 변화는 제한적이다(${deltaText}).`;
 }
 
 function marketRegimeActionBias(label, technicalScore, macroScore) {
@@ -2379,7 +2487,8 @@ async function buildReport() {
   const narratives = buildNarratives(stocks, validEtfs);
   applyNarrativeLinks([...stocks, ...etfs], narratives);
   const marketLabel = marketStatus(etfs);
-  const marketRegimeAssessment = buildMarketRegimeAssessment(marketData, validEtfs);
+  const previousSnapshot = loadPreviousRecommendationSnapshot();
+  const marketRegimeAssessment = buildMarketRegimeAssessment(marketData, validEtfs, previousSnapshot?.marketRegimeAssessment);
   applyActionLabelGates([...stocks, ...etfs], marketLabel);
   const etfTop5 = [...validEtfs].sort(compareActionCandidateScore).slice(0, 5);
   const stockTop5 = [...stocks].sort(compareActionCandidateScore).slice(0, 5);
@@ -2401,7 +2510,6 @@ async function buildReport() {
     stockActionCandidates,
     referenceCandidates
   });
-  const previousSnapshot = loadPreviousRecommendationSnapshot();
   const previousRecommendationReviews = buildPreviousRecommendationReviews(previousSnapshot, stocks, etfs);
   const stockScanSummary = buildStockScanSummary(stockUniverse, stocks, detailedScanTickers);
   const stockUniverseScan = buildStockUniverseScanSummary(stockUniverse, stocks);
@@ -4047,6 +4155,8 @@ function renderMarketRegimeMarkdown(report) {
   return `## 시장 국면 판단
 
 - 최종 판정: ${regime.label} (${regime.score}점)
+- 전일 대비: ${regime.change?.summary || "전일 비교 없음"}
+- 판정 신뢰도: ${regime.reliability?.label || "데이터 없음"} (${regime.reliability?.score ?? "데이터 없음"}점) - ${regime.reliability?.summary || "데이터 없음"}
 - 행동 바이어스: ${regime.actionBias}
 - 한 줄 결론: ${regime.conclusion}
 - 기술적 지표: ${regime.technical.label} (${regime.technical.score}점, 가중치 65%)
@@ -4054,6 +4164,8 @@ ${technicalLines.join("\n") || "- 기술 지표 데이터 없음"}
 - 매크로 시황: ${regime.macro.label} (${regime.macro.score}점, 가중치 35%)
 ${macroLines.join("\n") || "- 매크로 데이터 없음"}
 - 데이터 커버리지: 기술 ${regime.coverage.technical}/${regime.coverage.technicalTotal}, 매크로 ${regime.coverage.macro}/${regime.coverage.macroTotal}
+- 데이터 신뢰도 근거:
+${(regime.reliability?.items || []).map((item) => `  - ${item}`).join("\n") || "  - 데이터 없음"}
 `;
 }
 
@@ -5301,6 +5413,8 @@ function renderMarketRegimeHtml(report) {
   return `<section data-market-regime><h2>시장 국면 판단</h2>
     <div class="grid">
       ${tile("최종 판정", `${regime.label} (${regime.score}점)`)}
+      ${tile("전일 대비", regime.change?.label ? `${regime.change.label}${Number.isFinite(Number(regime.change.scoreDelta)) ? ` (${regime.change.scoreDelta > 0 ? "+" : ""}${regime.change.scoreDelta}점)` : ""}` : "전일 비교 없음")}
+      ${tile("판정 신뢰도", `${regime.reliability?.label || "데이터 없음"} (${regime.reliability?.score ?? "데이터 없음"}점)`)}
       ${tile("행동 바이어스", regime.actionBias)}
       ${tile("기술적 지표", `${regime.technical.label} (${regime.technical.score}점)`)}
       ${tile("매크로 시황", `${regime.macro.label} (${regime.macro.score}점)`)}
@@ -5308,6 +5422,9 @@ function renderMarketRegimeHtml(report) {
       ${tile("데이터 커버리지", `기술 ${regime.coverage.technical}/${regime.coverage.technicalTotal}, 매크로 ${regime.coverage.macro}/${regime.coverage.macroTotal}`)}
     </div>
     <p class="purpose">${escapeHtml(regime.conclusion)}</p>
+    <p class="muted"><strong>전일 대비:</strong> ${escapeHtml(regime.change?.summary || "전일 비교 없음")}</p>
+    <p class="muted"><strong>판정 신뢰도:</strong> ${escapeHtml(regime.reliability?.summary || "데이터 없음")}</p>
+    <h3>데이터 신뢰도 근거</h3>${htmlList((regime.reliability?.items || []).map(escapeHtml))}
     <h3>기술적 지표</h3>${htmlList(technicalItems)}
     <h3>매크로 시황</h3>${htmlList(macroItems)}
   </section>`;
