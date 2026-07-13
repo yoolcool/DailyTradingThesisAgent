@@ -56,6 +56,17 @@ def load_json(name):
         return json.load(file)
 
 
+def load_market_config():
+    config_path = ROOT / "config" / "markets" / MARKET_ID / "market.json"
+    if not config_path.exists():
+        return {}
+    try:
+        with config_path.open("r", encoding="utf-8") as file:
+            return json.load(file)
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
 def normalize_ticker(ticker):
     return TICKER_ALIASES.get(ticker, ticker)
 
@@ -483,6 +494,7 @@ def main():
     watchlist = load_json("watchlist.json")
     holdings = load_json("holdings.json")
     etfs = load_json("watchlist_etfs.json")
+    market_config = load_market_config()
     universe_members, universe_source = load_universe_members()
     narrative_stocks = load_narrative_stocks()
     etf_holding_targets = load_etf_holding_targets([row["ticker"] for row in etfs])
@@ -513,6 +525,20 @@ def main():
         ticker = row["ticker"]
         if ticker not in seen:
             targets.append((ticker, "ETF"))
+            seen.add(ticker)
+    for row in market_config.get("regimeBenchmarks", []):
+        ticker = row.get("ticker")
+        if ticker and ticker not in seen:
+            targets.append((ticker, "INDEX"))
+            seen.add(ticker)
+        fallback_ticker = row.get("fallbackTicker")
+        if fallback_ticker and fallback_ticker not in seen:
+            targets.append((fallback_ticker, "ETF"))
+            seen.add(fallback_ticker)
+    for row in market_config.get("macroSignals", []):
+        ticker = row.get("ticker")
+        if ticker and ticker not in seen:
+            targets.append((ticker, "MACRO"))
             seen.add(ticker)
 
     previous_data = load_previous_market_data()

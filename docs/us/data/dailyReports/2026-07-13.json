@@ -14,7 +14,115 @@
     "sessionLabel": "US regular session"
   },
   "reportDate": "2026-07-13",
-  "generatedAt": "2026년 7월 13일 월요일 AM 8:55",
+  "generatedAt": "2026년 7월 13일 월요일 오후 12:21",
+  "marketRegimeAssessment": {
+    "label": "강세장",
+    "score": 82,
+    "actionBias": "선별 매수 우위, 과열 추격만 제한",
+    "conclusion": "기술적 추세가 강세장 조건에 가깝다. 매크로도 큰 부담은 제한적이다.",
+    "technical": {
+      "score": 100,
+      "label": "상승 추세 우위",
+      "benchmarks": [
+        {
+          "ticker": "^GSPC",
+          "sourceTicker": "^GSPC",
+          "label": "S&P 500",
+          "fallbackTicker": "SPY",
+          "usingFallback": false,
+          "weight": 0.5,
+          "dataStatus": "ok",
+          "score": 100,
+          "lastClose": 7575.3901,
+          "dataDate": "2026-07-10",
+          "dailyChangePct": 0.42,
+          "return5dPct": 1.23,
+          "return20dPct": 4.24,
+          "return60dPct": 9,
+          "drawdownFrom52wHighPct": -0.6,
+          "ma50": 7433.12,
+          "ma200": null,
+          "aboveMa50": true,
+          "aboveMa200": true,
+          "reason": "50일선 위, 200일선 위, 20일 +4.24%, 60일 +9.00%, 52주 고점 대비 -0.60% -> 기술 점수 100"
+        },
+        {
+          "ticker": "^NDX",
+          "sourceTicker": "^NDX",
+          "label": "Nasdaq 100",
+          "fallbackTicker": "QQQ",
+          "usingFallback": false,
+          "weight": 0.5,
+          "dataStatus": "ok",
+          "score": 100,
+          "lastClose": 29825.1094,
+          "dataDate": "2026-07-10",
+          "dailyChangePct": 0.33,
+          "return5dPct": 1.69,
+          "return20dPct": 4.62,
+          "return60dPct": 15,
+          "drawdownFrom52wHighPct": -3.05,
+          "ma50": 29389.63,
+          "ma200": null,
+          "aboveMa50": true,
+          "aboveMa200": true,
+          "reason": "50일선 위, 200일선 위, 20일 +4.62%, 60일 +15.00%, 52주 고점 대비 -3.05% -> 기술 점수 100"
+        }
+      ]
+    },
+    "macro": {
+      "score": 49,
+      "label": "매크로 중립",
+      "signals": [
+        {
+          "ticker": "TLT",
+          "label": "US long-duration bonds",
+          "type": "rates",
+          "riskOnWhen": "up",
+          "dataStatus": "ok",
+          "score": 48,
+          "dataDate": "2026-07-10",
+          "return5dPct": -1.22,
+          "return20dPct": -0.48,
+          "reason": "상승 시 주식 우호; 5일 -1.22%, 20일 -0.48% -> 매크로 점수 48"
+        },
+        {
+          "ticker": "UUP",
+          "label": "US dollar",
+          "type": "dollar",
+          "riskOnWhen": "down",
+          "dataStatus": "ok",
+          "score": 48,
+          "dataDate": "2026-07-10",
+          "return5dPct": 0.18,
+          "return20dPct": 1.21,
+          "reason": "하락 시 주식 우호; 5일 +0.18%, 20일 +1.21% -> 매크로 점수 48"
+        },
+        {
+          "ticker": "HYG",
+          "label": "High yield credit",
+          "type": "credit",
+          "riskOnWhen": "up",
+          "dataStatus": "ok",
+          "score": 50,
+          "dataDate": "2026-07-10",
+          "return5dPct": 0,
+          "return20dPct": 0.3,
+          "reason": "상승 시 주식 우호; 5일 0.00%, 20일 +0.30% -> 매크로 점수 50"
+        }
+      ]
+    },
+    "coverage": {
+      "technical": 2,
+      "technicalTotal": 2,
+      "macro": 3,
+      "macroTotal": 3
+    },
+    "weights": {
+      "technical": 0.65,
+      "macro": 0.35
+    }
+  },
   "stockUniverseScan": {
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
@@ -2822,35 +2930,33 @@
       "stockRelativeVolumeAvg": 1
     },
     {
-      "name": "Aerospace & Defense 자금 유입",
+      "name": "바이오/헬스케어 촉매",
       "status": "약화",
-      "narrativeScore": 26,
-      "rawScore": 26,
+      "narrativeScore": 24,
+      "rawScore": 24,
       "reasonConfidence": "LOW",
       "supportEtfs": [
-        "QQQ",
-        "SPY",
-        "IWM"
+        "QQQ"
       ],
       "supportStocks": [
-        "AXON",
-        "RTX"
+        "INSM",
+        "VRTX",
+        "GILD"
       ],
       "representativeEtfs": [
-        "QQQ",
-        "SPY",
-        "IWM"
+        "QQQ"
       ],
       "representativeStocks": [
-        "AXON",
-        "RTX"
+        "INSM",
+        "VRTX",
+        "GILD"
       ],
-      "whyMoneyIsFlowing": "Aerospace & Defense 자금 유입 관련 Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM)와 Axon Enterprise Inc.(AXON), RTX의 5일(-0.85%)·20일(+10.09%) 흐름을 함께 본다. 평균 상대 거래량은 0.62배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "Aerospace & Defense 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: AXON, RTX",
+      "whyMoneyIsFlowing": "바이오/헬스케어 촉매 관련 Invesco QQQ Trust(QQQ)와 Insmed Incorporated(INSM), Vertex Pharmaceuticals Incorporated(VRTX), Gilead Sciences Inc.(GILD)의 5일(-0.94%)·20일(+12.17%) 흐름을 함께 본다. 평균 상대 거래량은 0.65배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "바이오/헬스케어 촉매을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: VRTX, GILD, INSM",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), Axon Enterprise Inc.(AXON), RTX 중심으로 5일 -0.85%, 20일 +10.09% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "Invesco QQQ Trust(QQQ), Insmed Incorporated(INSM), Vertex Pharmaceuticals Incorporated(VRTX) 중심으로 5일 -0.94%, 20일 +12.17% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -2894,42 +3000,6 @@
       "summaryReason": "Roundhill Memory ETF(DRAM), VanEck Semiconductor ETF(SMH), NVIDIA Corporation(NVDA), Advanced Micro Devices Inc.(AMD) 중심으로 5일 +2.57%, 20일 +8.97% 흐름이 형성됨. 직접 촉매 일부 확인.",
       "directNewsCount": 1,
       "etfBreadthScore": -2,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 1
-    },
-    {
-      "name": "바이오/헬스케어 촉매",
-      "status": "약화",
-      "narrativeScore": 22,
-      "rawScore": 22,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "QQQ"
-      ],
-      "supportStocks": [
-        "INSM",
-        "REGN",
-        "ALNY",
-        "VRTX"
-      ],
-      "representativeEtfs": [
-        "QQQ"
-      ],
-      "representativeStocks": [
-        "INSM",
-        "REGN",
-        "ALNY",
-        "VRTX"
-      ],
-      "whyMoneyIsFlowing": "바이오/헬스케어 촉매 관련 Invesco QQQ Trust(QQQ)와 Insmed Incorporated(INSM), Regeneron Pharmaceuticals Inc.(REGN), Alnylam Pharmaceuticals Inc.(ALNY), Vertex Pharmaceuticals Incorporated(VRTX)의 5일(-1.11%)·20일(+10.29%) 흐름을 함께 본다. 평균 상대 거래량은 0.80배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "바이오/헬스케어 촉매을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: VRTX, INSM, ALNY",
-      "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "Invesco QQQ Trust(QQQ), Insmed Incorporated(INSM), Regeneron Pharmaceuticals Inc.(REGN) 중심으로 5일 -1.11%, 20일 +10.29% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
       "stockRelativeVolumeAvg": 1
@@ -3001,6 +3071,44 @@
       "breakCondition": "QQQ/IWM 동반 약화, 고베타 성장주 상대 거래량 둔화",
       "todayAction": "지수 위험선호가 유지될 때만 선별 진입",
       "summaryReason": "Roundhill Magnificent Seven ETF(MAGS), Invesco QQQ Trust(QQQ), Tesla Inc.(TSLA), Arm Holdings plc(ARM) 중심으로 5일 +0.81%, 20일 +6.14% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "Aerospace & Defense 자금 유입",
+      "status": "약화",
+      "narrativeScore": 16,
+      "rawScore": 16,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "QQQ",
+        "SPY",
+        "IWM"
+      ],
+      "supportStocks": [
+        "AXON",
+        "RTX",
+        "AVAV"
+      ],
+      "representativeEtfs": [
+        "QQQ",
+        "SPY",
+        "IWM"
+      ],
+      "representativeStocks": [
+        "AXON",
+        "RTX",
+        "AVAV"
+      ],
+      "whyMoneyIsFlowing": "Aerospace & Defense 자금 유입 관련 Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM)와 Axon Enterprise Inc.(AXON), RTX, AeroVironment(AVAV)의 5일(-4.75%)·20일(+5.68%) 흐름을 함께 본다. 평균 상대 거래량은 0.61배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "Aerospace & Defense 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: AXON, RTX, AVAV",
+      "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
+      "summaryReason": "Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), Axon Enterprise Inc.(AXON), RTX 중심으로 5일 -4.75%, 20일 +5.68% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -3165,44 +3273,6 @@
       "stockRelativeVolumeAvg": 1
     },
     {
-      "name": "반도체 장비 사이클 재평가",
-      "status": "약화",
-      "narrativeScore": 8,
-      "rawScore": 8,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "SMH",
-        "SOXQ",
-        "SOXX"
-      ],
-      "supportStocks": [
-        "AMAT",
-        "ASML",
-        "LRCX"
-      ],
-      "representativeEtfs": [
-        "SMH",
-        "SOXQ",
-        "SOXX"
-      ],
-      "representativeStocks": [
-        "AMAT",
-        "ASML",
-        "LRCX"
-      ],
-      "whyMoneyIsFlowing": "반도체 장비 사이클 재평가 관련 VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ), iShares Semiconductor ETF(SOXX)와 Applied Materials Inc.(AMAT), ASML Holding N.V.(ASML), Lam Research Corporation(LRCX)의 5일(+1.76%)·20일(+8.25%) 흐름을 함께 본다. 평균 상대 거래량은 0.48배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "반도체 장비 사이클 재평가을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: AMAT, LRCX, ASML",
-      "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ), Applied Materials Inc.(AMAT), ASML Holding N.V.(ASML) 중심으로 5일 +1.76%, 20일 +8.25% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": -3,
-      "relativeVolumeAvg": 0,
-      "etfRelativeVolumeAvg": 0,
-      "stockRelativeVolumeAvg": 1
-    },
-    {
       "name": "AI 소프트웨어/사이버보안 확산",
       "status": "약화",
       "narrativeScore": 7,
@@ -3241,6 +3311,46 @@
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
       "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "반도체 장비 사이클 재평가",
+      "status": "약화",
+      "narrativeScore": 6,
+      "rawScore": 6,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "SMH",
+        "SOXQ",
+        "SOXX"
+      ],
+      "supportStocks": [
+        "AMAT",
+        "ASML",
+        "KLAC",
+        "LRCX"
+      ],
+      "representativeEtfs": [
+        "SMH",
+        "SOXQ",
+        "SOXX"
+      ],
+      "representativeStocks": [
+        "AMAT",
+        "ASML",
+        "KLAC",
+        "LRCX"
+      ],
+      "whyMoneyIsFlowing": "반도체 장비 사이클 재평가 관련 VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ), iShares Semiconductor ETF(SOXX)와 Applied Materials Inc.(AMAT), ASML Holding N.V.(ASML), KLA Corporation(KLAC), Lam Research Corporation(LRCX)의 5일(+1.33%)·20일(+8.27%) 흐름을 함께 본다. 평균 상대 거래량은 0.48배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "반도체 장비 사이클 재평가을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: AMAT, KLAC, LRCX",
+      "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
+      "summaryReason": "VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ), Applied Materials Inc.(AMAT), ASML Holding N.V.(ASML) 중심으로 5일 +1.33%, 20일 +8.27% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": -3,
+      "relativeVolumeAvg": 0,
+      "etfRelativeVolumeAvg": 0,
+      "stockRelativeVolumeAvg": 0
     },
     {
       "name": "매크로 방어/헤지",
@@ -3429,35 +3539,33 @@
       "stockRelativeVolumeAvg": 1
     },
     {
-      "name": "Aerospace & Defense 자금 유입",
+      "name": "바이오/헬스케어 촉매",
       "status": "약화",
-      "narrativeScore": 26,
-      "rawScore": 26,
+      "narrativeScore": 24,
+      "rawScore": 24,
       "reasonConfidence": "LOW",
       "supportEtfs": [
-        "QQQ",
-        "SPY",
-        "IWM"
+        "QQQ"
       ],
       "supportStocks": [
-        "AXON",
-        "RTX"
+        "INSM",
+        "VRTX",
+        "GILD"
       ],
       "representativeEtfs": [
-        "QQQ",
-        "SPY",
-        "IWM"
+        "QQQ"
       ],
       "representativeStocks": [
-        "AXON",
-        "RTX"
+        "INSM",
+        "VRTX",
+        "GILD"
       ],
-      "whyMoneyIsFlowing": "Aerospace & Defense 자금 유입 관련 Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM)와 Axon Enterprise Inc.(AXON), RTX의 5일(-0.85%)·20일(+10.09%) 흐름을 함께 본다. 평균 상대 거래량은 0.62배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "Aerospace & Defense 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: AXON, RTX",
+      "whyMoneyIsFlowing": "바이오/헬스케어 촉매 관련 Invesco QQQ Trust(QQQ)와 Insmed Incorporated(INSM), Vertex Pharmaceuticals Incorporated(VRTX), Gilead Sciences Inc.(GILD)의 5일(-0.94%)·20일(+12.17%) 흐름을 함께 본다. 평균 상대 거래량은 0.65배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "바이오/헬스케어 촉매을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: VRTX, GILD, INSM",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), Axon Enterprise Inc.(AXON), RTX 중심으로 5일 -0.85%, 20일 +10.09% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "Invesco QQQ Trust(QQQ), Insmed Incorporated(INSM), Vertex Pharmaceuticals Incorporated(VRTX) 중심으로 5일 -0.94%, 20일 +12.17% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -3490,11 +3598,11 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_6h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_6h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-12T23:55:30.263Z",
+        "checkedAt": "2026-07-13T03:21:23.279Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -3517,9 +3625,9 @@
           },
           {
             "source": "SEC EDGAR RSS",
-            "status": "PARTIAL",
+            "status": "FAILED",
             "notes": [
-              "no matching RSS items"
+              "This operation was aborted"
             ]
           },
           {
@@ -3535,7 +3643,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-07-12T23:52:00.000Z",
+        "lastPublishedAt": "2026-07-13T03:03:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -3546,7 +3654,7 @@
           "publishedAt": "2026-07-12T21:08:01.000Z",
           "eventType": "mna",
           "direction": "mixed",
-          "freshnessBucket": "under_6h",
+          "freshnessBucket": "under_24h",
           "url": "https://finance.yahoo.com/technology/ai/articles/meta-meta-faces-2-billion-210801965.html?.tsrc=rss"
         },
         "items": [
@@ -3564,7 +3672,7 @@
             "eventType": "mna",
             "directness": "direct_ticker",
             "direction": "mixed",
-            "freshnessBucket": "under_6h",
+            "freshnessBucket": "under_24h",
             "url": "https://finance.yahoo.com/technology/ai/articles/meta-meta-faces-2-billion-210801965.html?.tsrc=rss"
           },
           {
@@ -3585,21 +3693,22 @@
             "url": "https://www.barchart.com/story/news/3244746/meta-has-raised-its-ai-game-the-stock-should-continue-to-rise-in-2026?.tsrc=rss"
           },
           {
-            "title": "$10,000 Invested in Mark Zuckerberg's Meta a Decade Ago Is Worth This Much Today",
-            "summary": "A look at what a decade of patience in the social media giant actually paid.",
+            "title": "Why Meta Platforms Stock Surged This Week",
+            "summary": "New AI innovations are piquing investors' interest.",
+            "contentSummary": "New AI innovations are piquing investors&#x27; interest.",
             "koreanSummary": {
-              "title": "$10,000 Invested in Mark Zuckerberg's Meta a Decade Ago Is Worth This Much Today",
-              "content": "Meta Platforms Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 긍정으로 분류됩니다.",
+              "title": "Why Meta Platforms Stock Surged This Week",
+              "content": "Meta Platforms Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 시장 일반 성격의 재료가 긍정으로 해석되고 있습니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-07-12T16:33:00.000Z",
+            "publishedAt": "2026-07-13T02:11:48.000Z",
             "eventType": "general_market",
             "directness": "direct_ticker",
             "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://www.fool.com/investing/2026/07/12/10000-invested-in-mark-zuckerbergs-meta-a-decade-a/?.tsrc=rss"
+            "freshnessBucket": "under_6h",
+            "url": "https://www.fool.com/investing/2026/07/12/why-meta-platforms-stock-surged-this-week/?.tsrc=rss"
           }
         ],
         "koreanSummary": {
@@ -3620,8 +3729,8 @@
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "$10,000 Invested in Mark Zuckerberg's Meta a Decade Ago Is Worth This Much Today",
-              "content": "Meta Platforms Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 긍정으로 분류됩니다.",
+              "title": "Why Meta Platforms Stock Surged This Week",
+              "content": "Meta Platforms Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 시장 일반 성격의 재료가 긍정으로 해석되고 있습니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             }
@@ -3630,7 +3739,7 @@
         },
         "notes": [
           "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
-          "SEC EDGAR RSS: no matching RSS items",
+          "SEC EDGAR RSS: This operation was aborted",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
         "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe"
@@ -3694,11 +3803,11 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_6h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_6h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-12T23:55:30.263Z",
+        "checkedAt": "2026-07-13T03:21:23.279Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -3721,9 +3830,9 @@
           },
           {
             "source": "SEC EDGAR RSS",
-            "status": "PARTIAL",
+            "status": "FAILED",
             "notes": [
-              "no matching RSS items"
+              "This operation was aborted"
             ]
           },
           {
@@ -3739,7 +3848,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-07-12T23:52:00.000Z",
+        "lastPublishedAt": "2026-07-13T03:03:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -3750,7 +3859,7 @@
           "publishedAt": "2026-07-12T21:08:01.000Z",
           "eventType": "mna",
           "direction": "mixed",
-          "freshnessBucket": "under_6h",
+          "freshnessBucket": "under_24h",
           "url": "https://finance.yahoo.com/technology/ai/articles/meta-meta-faces-2-billion-210801965.html?.tsrc=rss"
         },
         "items": [
@@ -3768,7 +3877,7 @@
             "eventType": "mna",
             "directness": "direct_ticker",
             "direction": "mixed",
-            "freshnessBucket": "under_6h",
+            "freshnessBucket": "under_24h",
             "url": "https://finance.yahoo.com/technology/ai/articles/meta-meta-faces-2-billion-210801965.html?.tsrc=rss"
           },
           {
@@ -3789,21 +3898,22 @@
             "url": "https://www.barchart.com/story/news/3244746/meta-has-raised-its-ai-game-the-stock-should-continue-to-rise-in-2026?.tsrc=rss"
           },
           {
-            "title": "$10,000 Invested in Mark Zuckerberg's Meta a Decade Ago Is Worth This Much Today",
-            "summary": "A look at what a decade of patience in the social media giant actually paid.",
+            "title": "Why Meta Platforms Stock Surged This Week",
+            "summary": "New AI innovations are piquing investors' interest.",
+            "contentSummary": "New AI innovations are piquing investors&#x27; interest.",
             "koreanSummary": {
-              "title": "$10,000 Invested in Mark Zuckerberg's Meta a Decade Ago Is Worth This Much Today",
-              "content": "Meta Platforms Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 긍정으로 분류됩니다.",
+              "title": "Why Meta Platforms Stock Surged This Week",
+              "content": "Meta Platforms Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 시장 일반 성격의 재료가 긍정으로 해석되고 있습니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-07-12T16:33:00.000Z",
+            "publishedAt": "2026-07-13T02:11:48.000Z",
             "eventType": "general_market",
             "directness": "direct_ticker",
             "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://www.fool.com/investing/2026/07/12/10000-invested-in-mark-zuckerbergs-meta-a-decade-a/?.tsrc=rss"
+            "freshnessBucket": "under_6h",
+            "url": "https://www.fool.com/investing/2026/07/12/why-meta-platforms-stock-surged-this-week/?.tsrc=rss"
           }
         ],
         "koreanSummary": {
@@ -3824,8 +3934,8 @@
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "$10,000 Invested in Mark Zuckerberg's Meta a Decade Ago Is Worth This Much Today",
-              "content": "Meta Platforms Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 긍정으로 분류됩니다.",
+              "title": "Why Meta Platforms Stock Surged This Week",
+              "content": "Meta Platforms Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 시장 일반 성격의 재료가 긍정으로 해석되고 있습니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             }
@@ -3834,7 +3944,7 @@
         },
         "notes": [
           "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
-          "SEC EDGAR RSS: no matching RSS items",
+          "SEC EDGAR RSS: This operation was aborted",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
         "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe"
@@ -3899,11 +4009,11 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_6h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_6h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-12T23:55:30.263Z",
+        "checkedAt": "2026-07-13T03:21:23.279Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -3926,9 +4036,9 @@
           },
           {
             "source": "SEC EDGAR RSS",
-            "status": "PARTIAL",
+            "status": "FAILED",
             "notes": [
-              "no matching RSS items"
+              "This operation was aborted"
             ]
           },
           {
@@ -3944,7 +4054,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-07-12T23:52:00.000Z",
+        "lastPublishedAt": "2026-07-13T03:03:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -3955,7 +4065,7 @@
           "publishedAt": "2026-07-12T21:08:01.000Z",
           "eventType": "mna",
           "direction": "mixed",
-          "freshnessBucket": "under_6h",
+          "freshnessBucket": "under_24h",
           "url": "https://finance.yahoo.com/technology/ai/articles/meta-meta-faces-2-billion-210801965.html?.tsrc=rss"
         },
         "items": [
@@ -3973,7 +4083,7 @@
             "eventType": "mna",
             "directness": "direct_ticker",
             "direction": "mixed",
-            "freshnessBucket": "under_6h",
+            "freshnessBucket": "under_24h",
             "url": "https://finance.yahoo.com/technology/ai/articles/meta-meta-faces-2-billion-210801965.html?.tsrc=rss"
           },
           {
@@ -3994,21 +4104,22 @@
             "url": "https://www.barchart.com/story/news/3244746/meta-has-raised-its-ai-game-the-stock-should-continue-to-rise-in-2026?.tsrc=rss"
           },
           {
-            "title": "$10,000 Invested in Mark Zuckerberg's Meta a Decade Ago Is Worth This Much Today",
-            "summary": "A look at what a decade of patience in the social media giant actually paid.",
+            "title": "Why Meta Platforms Stock Surged This Week",
+            "summary": "New AI innovations are piquing investors' interest.",
+            "contentSummary": "New AI innovations are piquing investors&#x27; interest.",
             "koreanSummary": {
-              "title": "$10,000 Invested in Mark Zuckerberg's Meta a Decade Ago Is Worth This Much Today",
-              "content": "Meta Platforms Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 긍정으로 분류됩니다.",
+              "title": "Why Meta Platforms Stock Surged This Week",
+              "content": "Meta Platforms Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 시장 일반 성격의 재료가 긍정으로 해석되고 있습니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-07-12T16:33:00.000Z",
+            "publishedAt": "2026-07-13T02:11:48.000Z",
             "eventType": "general_market",
             "directness": "direct_ticker",
             "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://www.fool.com/investing/2026/07/12/10000-invested-in-mark-zuckerbergs-meta-a-decade-a/?.tsrc=rss"
+            "freshnessBucket": "under_6h",
+            "url": "https://www.fool.com/investing/2026/07/12/why-meta-platforms-stock-surged-this-week/?.tsrc=rss"
           }
         ],
         "koreanSummary": {
@@ -4029,8 +4140,8 @@
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "$10,000 Invested in Mark Zuckerberg's Meta a Decade Ago Is Worth This Much Today",
-              "content": "Meta Platforms Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 긍정으로 분류됩니다.",
+              "title": "Why Meta Platforms Stock Surged This Week",
+              "content": "Meta Platforms Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 시장 일반 성격의 재료가 긍정으로 해석되고 있습니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             }
@@ -4039,7 +4150,7 @@
         },
         "notes": [
           "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
-          "SEC EDGAR RSS: no matching RSS items",
+          "SEC EDGAR RSS: This operation was aborted",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
         "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe"
@@ -4104,8 +4215,8 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - Nvidia (NVDA) Faces Class Action Over Meal Break And Expense Claims 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - Nvidia (NVDA) Faces Class Action Over Meal Break And Expense Claims",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / product / under_6h / positive - Nasdaq, S&P 500, Dow Futures Fall After Trump Directs Strikes ‘To Hold Iranian Forces Accountable’: NVDA, SLS, MRK, SKHYV, QS Stocks In Focus 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_6h / positive - Nasdaq, S&P 500, Dow Futures Fall After Trump Directs Strikes ‘To Hold Iranian Forces Accountable’: NVDA, SLS, MRK, SKHYV, QS Stocks In Focus",
       "tieBreakerReason": "최종 원점수 82, 리스크 패널티 0, 5일 수익률 +8.28%, 상대 거래량 1.01배 순으로 정렬",
       "entryQualityScore": 40,
       "entryQualityLabel": "관찰",
@@ -4295,7 +4406,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - Does Chevron's Joint Venture With GE Vernova Make the Stock a Buy Ahead of 2027?",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / macro / under_72h / positive - GE Vernova (GEV) Is Sold Out On Turbines Through 2030 As Power Demand Builds",
       "tieBreakerReason": "최종 원점수 55, 리스크 패널티 0, 5일 수익률 -1.94%, 상대 거래량 0.55배 순으로 정렬",
       "entryQualityScore": 33,
       "entryQualityLabel": "낮음",
@@ -4357,7 +4468,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_72h / positive - Airbnb (ABNB) Could Be 39% Undervalued Following Its New York Building Purchase",
+      "directCatalyst": "",
       "tieBreakerReason": "최종 원점수 54, 리스크 패널티 0, 5일 수익률 -0.21%, 상대 거래량 0.70배 순으로 정렬",
       "entryQualityScore": 34,
       "entryQualityLabel": "낮음",
@@ -4427,7 +4538,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - McConnell provides health update after long unexplained absence; says he suffered fall, pneumonia",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 10% in Seoul after stellar Nasdaq debut",
       "tieBreakerReason": "최종 원점수 21, 리스크 패널티 -6, 5일 수익률 +3.16%, 상대 거래량 0.56배 순으로 정렬",
       "entryQualityScore": 23,
       "entryQualityLabel": "낮음",
@@ -4493,7 +4604,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - McConnell provides health update after long unexplained absence; says he suffered fall, pneumonia",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 10% in Seoul after stellar Nasdaq debut",
       "tieBreakerReason": "최종 원점수 10, 리스크 패널티 -6, 5일 수익률 +2.65%, 상대 거래량 0.57배 순으로 정렬",
       "entryQualityScore": 19,
       "entryQualityLabel": "낮음",
@@ -4559,7 +4670,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - McConnell provides health update after long unexplained absence; says he suffered fall, pneumonia",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 10% in Seoul after stellar Nasdaq debut",
       "tieBreakerReason": "최종 원점수 16, 리스크 패널티 -6, 5일 수익률 +2.79%, 상대 거래량 0.33배 순으로 정렬",
       "entryQualityScore": 11,
       "entryQualityLabel": "낮음",
@@ -4617,7 +4728,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - McConnell provides health update after long unexplained absence; says he suffered fall, pneumonia",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / stale / positive - AI Crushed Software Stocks. IGV Is Betting the ‘SaaSpocalypse’ Is Overblown",
       "tieBreakerReason": "최종 원점수 -1, 리스크 패널티 0, 5일 수익률 -1.24%, 상대 거래량 0.59배 순으로 정렬",
       "entryQualityScore": 5,
       "entryQualityLabel": "낮음",
@@ -4690,7 +4801,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_72h - My insurance company said my roof lost a few tiles. Loss adjusters found $10,000 in storm damage. How could this happen?",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 10% in Seoul after stellar Nasdaq debut",
       "tieBreakerReason": "최종 원점수 -7, 리스크 패널티 -11, 5일 수익률 +2.57%, 상대 거래량 0.40배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -4753,8 +4864,8 @@
       "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
     },
     "reasonConfidence": "HIGH",
-    "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_6h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-    "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_6h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
+    "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+    "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
     "tieBreakerReason": "최종 원점수 108, 리스크 패널티 0, 5일 수익률 +14.81%, 상대 거래량 2.00배 순으로 정렬",
     "entryQualityScore": 38,
     "entryQualityLabel": "낮음",
@@ -4791,17 +4902,17 @@
   },
   "dataReliability": {
     "priceVolumeStatus": "CONNECTED",
-    "priceVolumeFreshOkCount": 157,
+    "priceVolumeFreshOkCount": 161,
     "priceVolumeStaleFallbackCount": 0,
     "priceVolumeExpiredFallbackCount": 0,
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-10",
     "priceAsOfLabel": "2026-07-10 US regular close",
-    "reportGeneratedAtKST": "2026-07-13 08:55",
+    "reportGeneratedAtKST": "2026-07-13 12:21",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-07-12T23:55:30.114Z",
-    "newsLastUpdatedAt": "2026-07-12T23:55:30.114Z",
-    "latestNewsPublishedAt": "2026-07-12T23:52:00.000Z",
+    "newsFetchedAt": "2026-07-13T03:21:16.766Z",
+    "newsLastUpdatedAt": "2026-07-13T03:21:16.766Z",
+    "latestNewsPublishedAt": "2026-07-13T03:11:41.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
     "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",

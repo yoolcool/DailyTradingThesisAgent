@@ -70,6 +70,15 @@ function main() {
   const html = readText(path.join(REPORTS_DIR, "latest.html"));
   const docsHtml = readText(path.join(DOCS_DIR, "index.html"));
   const chartsDir = path.join(REPORTS_DIR, "charts");
+  const latestSnapshotForRegime = readJson("latest-report.json");
+
+  assert(markdown.includes("시장 국면 판단"), "Markdown missing market regime assessment");
+  assert(markdown.includes("기술적 지표"), "Markdown missing market regime technical section");
+  assert(markdown.includes("매크로 시황"), "Markdown missing market regime macro section");
+  assert(html.includes("data-market-regime"), "HTML missing market regime assessment");
+  assert(latestSnapshotForRegime.marketRegimeAssessment?.label, "Snapshot missing market regime label");
+  assert(latestSnapshotForRegime.marketRegimeAssessment?.technical?.benchmarks?.length, "Snapshot missing market regime benchmarks");
+  assert(latestSnapshotForRegime.marketRegimeAssessment?.macro?.signals?.length, "Snapshot missing market regime macro signals");
 
   if (IS_KR) {
     verifyKrReport(markdown, html, docsHtml);

@@ -6,6 +6,40 @@
   "universeName": "NASDAQ_100",
   "universeLabel": "Nasdaq-100",
   "benchmarkTickers": ["QQQ", "SPY", "IWM"],
+  "regimeBenchmarks": [
+    {
+      "ticker": "^GSPC",
+      "label": "S&P 500",
+      "fallbackTicker": "SPY",
+      "weight": 0.5
+    },
+    {
+      "ticker": "^NDX",
+      "label": "Nasdaq 100",
+      "fallbackTicker": "QQQ",
+      "weight": 0.5
+    }
+  ],
+  "macroSignals": [
+    {
+      "ticker": "TLT",
+      "label": "US long-duration bonds",
+      "type": "rates",
+      "riskOnWhen": "up"
+    },
+    {
+      "ticker": "UUP",
+      "label": "US dollar",
+      "type": "dollar",
+      "riskOnWhen": "down"
+    },
+    {
+      "ticker": "HYG",
+      "label": "High yield credit",
+      "type": "credit",
+      "riskOnWhen": "up"
+    }
+  ],
   "sessionLabel": "US regular session",
   "closeLabel": "US regular close",
   "nextSessionTimezone": "America/New_York",

@@ -1122,6 +1122,233 @@ function marketStatus(etfs) {
   return "중립";
 }
 
+function buildMarketRegimeAssessment(marketData, etfs = []) {
+  const benchmarks = (MARKET_PROFILE.regimeBenchmarks || defaultRegimeBenchmarks())
+    .map((config) => buildRegimeBenchmark(config, marketData, etfs))
+    .filter(Boolean);
+  const macroSignals = (MARKET_PROFILE.macroSignals || defaultMacroSignals())
+    .map((config) => buildMacroSignal(config, marketData, etfs))
+    .filter(Boolean);
+  const technicalScore = weightedAverage(benchmarks.map((row) => ({ value: row.score, weight: row.weight })), 50);
+  const macroScore = averageNonEmpty(macroSignals.map((row) => row.score)) || 50;
+  const coverage = {
+    technical: benchmarks.filter((row) => row.dataStatus === "ok").length,
+    technicalTotal: benchmarks.length,
+    macro: macroSignals.filter((row) => row.dataStatus === "ok").length,
+    macroTotal: macroSignals.length
+  };
+  const finalScore = rounded(technicalScore * 0.65 + macroScore * 0.35);
+  const label = marketRegimeLabel(finalScore);
+  const actionBias = marketRegimeActionBias(label, technicalScore, macroScore);
+  const conclusion = marketRegimeConclusion(label, technicalScore, macroScore, benchmarks, macroSignals);
+  return {
+    label,
+    score: finalScore,
+    actionBias,
+    conclusion,
+    technical: {
+      score: rounded(technicalScore),
+      label: technicalRegimeLabel(technicalScore),
+      benchmarks
+    },
+    macro: {
+      score: rounded(macroScore),
+      label: macroRegimeLabel(macroScore),
+      signals: macroSignals
+    },
+    coverage,
+    weights: { technical: 0.65, macro: 0.35 }
+  };
+}
+
+function defaultRegimeBenchmarks() {
+  return MARKET_ID === "kr"
+    ? [
+        { ticker: "^KS11", label: "KOSPI", fallbackTicker: "069500.KS", weight: 0.55 },
+        { ticker: "^KQ11", label: "KOSDAQ", fallbackTicker: "229200.KS", weight: 0.45 }
+      ]
+    : [
+        { ticker: "^GSPC", label: "S&P 500", fallbackTicker: "SPY", weight: 0.5 },
+        { ticker: "^NDX", label: "Nasdaq 100", fallbackTicker: "QQQ", weight: 0.5 }
+      ];
+}
+
+function defaultMacroSignals() {
+  return MARKET_ID === "kr"
+    ? [
+        { ticker: "USDKRW=X", label: "USD/KRW", type: "fx", riskOnWhen: "down" },
+        { ticker: "TLT", label: "US long-duration bonds", type: "rates", riskOnWhen: "up" },
+        { ticker: "EWY", label: "Korea equity ETF", type: "foreign-risk", riskOnWhen: "up" }
+      ]
+    : [
+        { ticker: "TLT", label: "US long-duration bonds", type: "rates", riskOnWhen: "up" },
+        { ticker: "UUP", label: "US dollar", type: "dollar", riskOnWhen: "down" },
+        { ticker: "HYG", label: "High yield credit", type: "credit", riskOnWhen: "up" }
+      ];
+}
+
+function buildRegimeBenchmark(config, marketData, etfs) {
+  const primary = marketItem(marketData, config.ticker);
+  const fallback = config.fallbackTicker
+    ? marketItem(marketData, config.fallbackTicker)
+    : etfs.find((row) => row.ticker === config.ticker)?.market;
+  const market = primary?.dataStatus === "ok" ? primary : fallback;
+  if (!market || market.dataStatus !== "ok") {
+    return {
+      ticker: config.ticker,
+      label: config.label || config.ticker,
+      fallbackTicker: config.fallbackTicker,
+      weight: Number(config.weight || 1),
+      dataStatus: "missing",
+      score: 50,
+      reason: "지수 데이터 없음"
+    };
+  }
+  const stats = regimeMarketStats(market);
+  const trendScore =
+    (stats.aboveMa50 ? 16 : -10) +
+    (stats.aboveMa200 ? 20 : -18) +
+    clamp(Number(market.return20dPct || 0) * 1.1, -12, 14) +
+    clamp(Number(stats.return60dPct || 0) * 0.65, -14, 16) +
+    clamp((Number(market.drawdownFrom52wHighPct || -20) + 12) * 1.4, -14, 14) +
+    (Number(market.return5dPct || 0) > 0 ? 5 : -4);
+  const score = rounded(clamp(50 + trendScore, 0, 100));
+  return {
+    ticker: market.ticker || config.ticker,
+    sourceTicker: config.ticker,
+    label: config.label || config.ticker,
+    fallbackTicker: config.fallbackTicker,
+    usingFallback: market.ticker === config.fallbackTicker || primary?.dataStatus !== "ok",
+    weight: Number(config.weight || 1),
+    dataStatus: "ok",
+    score,
+    lastClose: market.lastClose,
+    dataDate: market.dataDate,
+    dailyChangePct: market.dailyChangePct,
+    return5dPct: market.return5dPct,
+    return20dPct: market.return20dPct,
+    return60dPct: stats.return60dPct,
+    drawdownFrom52wHighPct: market.drawdownFrom52wHighPct,
+    ma50: stats.ma50,
+    ma200: stats.ma200,
+    aboveMa50: stats.aboveMa50,
+    aboveMa200: stats.aboveMa200,
+    reason: benchmarkRegimeReason(market, stats, score)
+  };
+}
+
+function buildMacroSignal(config, marketData) {
+  const market = marketItem(marketData, config.ticker);
+  if (!market || market.dataStatus !== "ok") {
+    return {
+      ticker: config.ticker,
+      label: config.label || config.ticker,
+      type: config.type || "macro",
+      riskOnWhen: config.riskOnWhen || "up",
+      dataStatus: "missing",
+      score: 50,
+      reason: "매크로 데이터 없음"
+    };
+  }
+  const direction = config.riskOnWhen === "down" ? -1 : 1;
+  const return20 = Number(market.return20dPct || 0);
+  const return5 = Number(market.return5dPct || 0);
+  const score = rounded(clamp(50 + direction * return20 * 1.6 + direction * return5 * 0.8, 0, 100));
+  return {
+    ticker: market.ticker || config.ticker,
+    label: config.label || config.ticker,
+    type: config.type || "macro",
+    riskOnWhen: config.riskOnWhen || "up",
+    dataStatus: "ok",
+    score,
+    dataDate: market.dataDate,
+    return5dPct: market.return5dPct,
+    return20dPct: market.return20dPct,
+    reason: macroSignalReason(config, market, score)
+  };
+}
+
+function regimeMarketStats(market) {
+  const closes = (market?.history || []).map((bar) => Number(bar.close)).filter(Number.isFinite);
+  const last = Number(market?.lastClose ?? closes.at(-1));
+  const close60 = closes.length >= 61 ? closes.at(-61) : null;
+  const return60dPct = close60 ? rounded(((last - close60) / close60) * 100) : null;
+  const ma50 = closes.length >= 50 ? average(closes.slice(-50)) : null;
+  const ma200 = closes.length >= 200 ? average(closes.slice(-200)) : null;
+  return {
+    return60dPct,
+    ma50: ma50 === null ? null : Number(ma50.toFixed(2)),
+    ma200: ma200 === null ? null : Number(ma200.toFixed(2)),
+    aboveMa50: ma50 !== null ? last >= ma50 : Number(market.return20dPct || 0) >= 0,
+    aboveMa200: ma200 !== null ? last >= ma200 : Number(market.drawdownFrom52wHighPct || -100) >= -12
+  };
+}
+
+function weightedAverage(items, fallback = 0) {
+  const valid = items.filter((row) => Number.isFinite(Number(row.value)));
+  const totalWeight = valid.reduce((sum, row) => sum + Number(row.weight || 1), 0);
+  if (!valid.length || totalWeight <= 0) return fallback;
+  return valid.reduce((sum, row) => sum + Number(row.value) * Number(row.weight || 1), 0) / totalWeight;
+}
+
+function marketRegimeLabel(score) {
+  if (score >= 70) return "강세장";
+  if (score >= 55) return "중립-상승";
+  if (score >= 40) return "중립";
+  if (score >= 25) return "중립-하락";
+  return "약세장";
+}
+
+function technicalRegimeLabel(score) {
+  if (score >= 70) return "상승 추세 우위";
+  if (score >= 55) return "상승 추세 유지";
+  if (score >= 40) return "방향성 중립";
+  if (score >= 25) return "하락 압력 우위";
+  return "하락 추세";
+}
+
+function macroRegimeLabel(score) {
+  if (score >= 65) return "매크로 우호";
+  if (score >= 52) return "매크로 중립-우호";
+  if (score >= 45) return "매크로 중립";
+  if (score >= 35) return "매크로 부담";
+  return "매크로 위험";
+}
+
+function marketRegimeActionBias(label, technicalScore, macroScore) {
+  if (label === "강세장") return macroScore >= 45 ? "선별 매수 우위, 과열 추격만 제한" : "추세는 강하지만 매크로 부담으로 진입 속도 조절";
+  if (label === "중립-상승") return "눌림 매수와 돌파 확인 병행";
+  if (label === "중립") return "강한 테마만 선별, 신규 추격 제한";
+  if (label === "중립-하락") return technicalScore >= macroScore ? "반등 확인 전까지 방어적 관찰" : "매크로 부담 우선, 현금 비중과 손절 기준 강화";
+  return "신규 매수 보류, 리스크 축소 우선";
+}
+
+function marketRegimeConclusion(label, technicalScore, macroScore, benchmarks, macroSignals) {
+  const strongBenchmarks = benchmarks.filter((row) => row.score >= 60).map((row) => row.label);
+  const weakMacro = macroSignals.filter((row) => row.score < 45).map((row) => row.label);
+  if (label === "강세장") return `기술적 추세가 강세장 조건에 가깝다. ${weakMacro.length ? `${weakMacro.join(", ")} 부담은 확인 필요.` : "매크로도 큰 부담은 제한적이다."}`;
+  if (label === "중립-상승") return `${strongBenchmarks.join(", ") || "주요 지수"} 중심으로 상승 우위지만, 매크로 점수 ${rounded(macroScore)}라 추격보다 확인 매수가 낫다.`;
+  if (label === "중립") return `기술 점수 ${rounded(technicalScore)}, 매크로 점수 ${rounded(macroScore)}로 방향성이 엇갈린다. 후보별 게이트를 더 엄격히 본다.`;
+  if (label === "중립-하락") return `주요 지수 또는 매크로 중 하나가 약세장 쪽으로 기울었다. 반등 확인 전까지 진입 크기를 줄인다.`;
+  return "기술적 추세와 매크로 환경이 모두 방어적이다. 신규 매수보다 손실 제한과 현금화가 우선이다.";
+}
+
+function benchmarkRegimeReason(market, stats, score) {
+  const parts = [
+    stats.aboveMa50 ? "50일선 위" : "50일선 아래",
+    stats.aboveMa200 ? "200일선 위" : "200일선 아래",
+    `20일 ${pct(market.return20dPct)}`,
+    `60일 ${pct(stats.return60dPct)}`,
+    `52주 고점 대비 ${pct(market.drawdownFrom52wHighPct)}`
+  ];
+  return `${parts.join(", ")} -> 기술 점수 ${score}`;
+}
+
+function macroSignalReason(config, market, score) {
+  const directionText = config.riskOnWhen === "down" ? "하락 시 주식 우호" : "상승 시 주식 우호";
+  return `${directionText}; 5일 ${pct(market.return5dPct)}, 20일 ${pct(market.return20dPct)} -> 매크로 점수 ${score}`;
+}
+
 function groupThemes(stocks, etfs) {
   const rows = new Map();
   for (const stock of stocks) {
@@ -2152,6 +2379,7 @@ async function buildReport() {
   const narratives = buildNarratives(stocks, validEtfs);
   applyNarrativeLinks([...stocks, ...etfs], narratives);
   const marketLabel = marketStatus(etfs);
+  const marketRegimeAssessment = buildMarketRegimeAssessment(marketData, validEtfs);
   applyActionLabelGates([...stocks, ...etfs], marketLabel);
   const etfTop5 = [...validEtfs].sort(compareActionCandidateScore).slice(0, 5);
   const stockTop5 = [...stocks].sort(compareActionCandidateScore).slice(0, 5);
@@ -2220,6 +2448,7 @@ async function buildReport() {
     dataConnectionStatus: supplementalData.connectionStatus,
     supplementalData,
     dataReliability,
+    marketRegimeAssessment,
     todayDecision,
     actionGateSummary,
     marketData,
@@ -2397,6 +2626,7 @@ function createRecommendationSnapshot(report) {
     marketProfile: report.marketProfile,
     reportDate: report.reportDate,
     generatedAt: report.generatedAt,
+    marketRegimeAssessment: report.marketRegimeAssessment,
     stockUniverseScan: report.stockUniverseScan,
     narratives: report.narratives.map(snapshotNarrative),
     topNarratives: report.topNarratives.map(snapshotNarrative),
@@ -3620,6 +3850,8 @@ function renderMarkdown(report) {
 
 > 핵심 질문: 현재 가격에서 누가 사고 있고, 누가 앞으로 더 비싸게 사줄 수 있는가?
 
+${renderMarketRegimeMarkdown(report)}
+
 ${renderMobileSummaryMarkdown(report)}
 
 ${renderTodayDecisionMarkdown(report)}
@@ -3801,6 +4033,28 @@ function renderDataReliabilityMarkdown(report) {
 - ${MARKET_PROFILE.prePostMarketLabel || "프리/애프터마켓"} 데이터 상태: ${r.prePostMarketStatus || "UNAVAILABLE"}
 - 데이터 provider: ${r.providers || "데이터 없음"}
 - 실전 사용 경고: ${r.warning || REAL_WARNING}`;
+}
+
+function renderMarketRegimeMarkdown(report) {
+  const regime = report.marketRegimeAssessment;
+  if (!regime) return "";
+  const technicalLines = (regime.technical?.benchmarks || []).map((row) =>
+    `- ${row.label}: ${row.dataStatus === "ok" ? `${row.score}점 | ${row.reason}${row.usingFallback ? ` | 대체 데이터 ${row.fallbackTicker} 사용` : ""}` : row.reason}`
+  );
+  const macroLines = (regime.macro?.signals || []).map((row) =>
+    `- ${row.label}: ${row.dataStatus === "ok" ? `${row.score}점 | ${row.reason}` : row.reason}`
+  );
+  return `## 시장 국면 판단
+
+- 최종 판정: ${regime.label} (${regime.score}점)
+- 행동 바이어스: ${regime.actionBias}
+- 한 줄 결론: ${regime.conclusion}
+- 기술적 지표: ${regime.technical.label} (${regime.technical.score}점, 가중치 65%)
+${technicalLines.join("\n") || "- 기술 지표 데이터 없음"}
+- 매크로 시황: ${regime.macro.label} (${regime.macro.score}점, 가중치 35%)
+${macroLines.join("\n") || "- 매크로 데이터 없음"}
+- 데이터 커버리지: 기술 ${regime.coverage.technical}/${regime.coverage.technicalTotal}, 매크로 ${regime.coverage.macro}/${regime.coverage.macroTotal}
+`;
 }
 
 function renderTodayDecisionMarkdown(report) {
@@ -4845,6 +5099,7 @@ function renderHtml(report) {
       <p><strong>핵심 질문:</strong> 현재 가격에서 누가 사고 있고, 누가 앞으로 더 비싸게 사줄 수 있는가?</p>
       <p class="muted">보조 데이터는 연결 상태에 따라 점수 반영 범위가 달라진다.</p>
     </div>
+    ${renderMarketRegimeHtml(report)}
     ${renderTodayDecisionHtml(report)}
     ${renderDataReliabilityHtml(report)}
     ${renderMarketStatusHtml(report)}
@@ -5028,6 +5283,34 @@ function renderMarketStatusHtml(report) {
     ${tile("오늘 돈의 방향", moneyDirection(report))}
     ${tile("강한 테마 TOP 3", report.themes.slice(0, 3).map((row) => `${row.theme}(${row.avgScore.toFixed(0)})`).join(", ") || "데이터 없음")}
   </div>${htmlList(["전체 시장 상태와 후보별 진입 환경은 분리한다.", "종목은 강해도 당일 음봉, 고점 이탈, 거래량 둔화, 실적 후 매물 출회가 있으면 후보별 환경은 제한적일 수 있다.", "수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한한다."])}</section>`;
+}
+
+function renderMarketRegimeHtml(report) {
+  const regime = report.marketRegimeAssessment;
+  if (!regime) return "";
+  const technicalItems = (regime.technical?.benchmarks || []).map((row) =>
+    row.dataStatus === "ok"
+      ? `<strong>${escapeHtml(row.label)}</strong> ${row.score}점 | ${escapeHtml(row.reason)}${row.usingFallback ? ` | 대체 데이터 ${escapeHtml(row.fallbackTicker)} 사용` : ""}`
+      : `<strong>${escapeHtml(row.label)}</strong> ${escapeHtml(row.reason)}`
+  );
+  const macroItems = (regime.macro?.signals || []).map((row) =>
+    row.dataStatus === "ok"
+      ? `<strong>${escapeHtml(row.label)}</strong> ${row.score}점 | ${escapeHtml(row.reason)}`
+      : `<strong>${escapeHtml(row.label)}</strong> ${escapeHtml(row.reason)}`
+  );
+  return `<section data-market-regime><h2>시장 국면 판단</h2>
+    <div class="grid">
+      ${tile("최종 판정", `${regime.label} (${regime.score}점)`)}
+      ${tile("행동 바이어스", regime.actionBias)}
+      ${tile("기술적 지표", `${regime.technical.label} (${regime.technical.score}점)`)}
+      ${tile("매크로 시황", `${regime.macro.label} (${regime.macro.score}점)`)}
+      ${tile("기술/매크로 가중치", "65% / 35%")}
+      ${tile("데이터 커버리지", `기술 ${regime.coverage.technical}/${regime.coverage.technicalTotal}, 매크로 ${regime.coverage.macro}/${regime.coverage.macroTotal}`)}
+    </div>
+    <p class="purpose">${escapeHtml(regime.conclusion)}</p>
+    <h3>기술적 지표</h3>${htmlList(technicalItems)}
+    <h3>매크로 시황</h3>${htmlList(macroItems)}
+  </section>`;
 }
 
 function renderNarrativesHtml(report) {
