@@ -3833,7 +3833,7 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-13T04:08:07.249Z",
+        "checkedAt": "2026-07-13T04:08:49.591Z",
         "status": "PARTIAL",
         "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -3856,9 +3856,9 @@
           },
           {
             "source": "SEC EDGAR RSS",
-            "status": "PARTIAL",
+            "status": "FAILED",
             "notes": [
-              "no matching RSS items"
+              "This operation was aborted"
             ]
           },
           {
@@ -3970,7 +3970,7 @@
         },
         "notes": [
           "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
-          "SEC EDGAR RSS: no matching RSS items",
+          "SEC EDGAR RSS: This operation was aborted",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
         "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe"
@@ -4038,7 +4038,7 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-13T04:08:07.249Z",
+        "checkedAt": "2026-07-13T04:08:49.591Z",
         "status": "PARTIAL",
         "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -4061,9 +4061,9 @@
           },
           {
             "source": "SEC EDGAR RSS",
-            "status": "PARTIAL",
+            "status": "FAILED",
             "notes": [
-              "no matching RSS items"
+              "This operation was aborted"
             ]
           },
           {
@@ -4175,7 +4175,7 @@
         },
         "notes": [
           "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
-          "SEC EDGAR RSS: no matching RSS items",
+          "SEC EDGAR RSS: This operation was aborted",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
         "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe"
@@ -4244,7 +4244,7 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-13T04:08:07.249Z",
+        "checkedAt": "2026-07-13T04:08:49.591Z",
         "status": "PARTIAL",
         "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -4267,9 +4267,9 @@
           },
           {
             "source": "SEC EDGAR RSS",
-            "status": "PARTIAL",
+            "status": "FAILED",
             "notes": [
-              "no matching RSS items"
+              "This operation was aborted"
             ]
           },
           {
@@ -4381,7 +4381,7 @@
         },
         "notes": [
           "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
-          "SEC EDGAR RSS: no matching RSS items",
+          "SEC EDGAR RSS: This operation was aborted",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
         "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe"
@@ -4835,7 +4835,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_72h / negative - Missed MU’s Monster Rally? SOXX Holders Cashed In Too",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut",
       "tieBreakerReason": "최종 원점수 10, 리스크 패널티 -6, 5일 수익률 +2.65%, 상대 거래량 0.57배 순으로 정렬",
       "entryQualityScore": 19,
       "entryQualityLabel": "낮음",
@@ -5141,12 +5141,12 @@
     "priceAsOfLabel": "2026-07-10 US regular close",
     "reportGeneratedAtKST": "2026-07-13 13:08",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-07-13T04:08:06.329Z",
-    "newsLastUpdatedAt": "2026-07-13T04:08:06.329Z",
+    "newsFetchedAt": "2026-07-13T04:08:43.093Z",
+    "newsLastUpdatedAt": "2026-07-13T04:08:43.093Z",
     "latestNewsPublishedAt": "2026-07-13T04:05:26.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
-    "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
+    "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS CONNECTED, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
     "newsReliability": "MEDIUM",
     "etfBreadthStatus": "PARTIAL",
     "etfBreadthSampleCount": "1~4",

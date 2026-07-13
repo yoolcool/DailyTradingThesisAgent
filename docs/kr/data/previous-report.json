@@ -13,10 +13,10 @@
     "sessionLabel": "KRX regular session"
   },
   "reportDate": "2026-07-13",
-  "generatedAt": "2026년 7월 13일 월요일 오후 1:07",
+  "generatedAt": "2026년 7월 13일 월요일 오후 1:08",
   "marketRegimeAssessment": {
     "label": "약세장",
-    "score": 20,
+    "score": 21,
     "actionBias": "신규 매수 보류, 리스크 축소 우선",
     "conclusion": "기술적 추세와 매크로 환경이 모두 방어적이다. 신규 매수보다 손실 제한과 현금화가 우선이다.",
     "reliability": {
@@ -41,8 +41,8 @@
       "label": "유지",
       "previousLabel": "약세장",
       "previousScore": 20,
-      "scoreDelta": 0,
-      "summary": "약세장 유지, 점수 변화는 제한적이다(0점)."
+      "scoreDelta": 1,
+      "summary": "약세장 유지, 점수 변화는 제한적이다(+1점)."
     },
     "technical": {
       "score": 2,
@@ -97,7 +97,7 @@
       ]
     },
     "macro": {
-      "score": 55,
+      "score": 57,
       "label": "매크로 중립-우호",
       "summary": "물가, 신용/유동성 중심으로 매크로가 위험자산에 우호적이다.",
       "components": {
@@ -119,13 +119,12 @@
         "inflation": {
           "key": "inflation",
           "title": "물가",
-          "score": 58,
-          "label": "중립-우호",
-          "stance": "물가 중립",
-          "confidence": "HIGH",
+          "score": 74,
+          "label": "우호",
+          "stance": "물가 우호",
+          "confidence": "MEDIUM",
           "reasons": [
-            "Oil ETF 20일 -19.06%, 유가 기반 물가 압력 확인",
-            "Oil ETF 20일 -19.06%, 물가연동채 흐름은 보조 근거"
+            "Oil ETF 20일 -19.06%, 유가 기반 물가 압력 확인"
           ],
           "watchItems": [
             "추가 확인 이벤트 없음"
@@ -169,7 +168,6 @@
           "confidence": "HIGH",
           "reasons": [
             "USD/KRW 20일 -0.15%, 원화 안정/불안 확인",
-            "USD/KRW 20일 -0.15%, 달러 강세/약세 확인",
             "Korea equity ETF 20일 +2.84%, 한국 외국인 위험선호 프록시",
             "KOSDAQ-KOSPI 20일 상대강도 -3.26%, 성장 위험선호 확인"
           ],
@@ -5572,7 +5570,7 @@
         "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "229200.KS",
-          "checkedAt": "2026-07-13T04:07:56.966Z",
+          "checkedAt": "2026-07-13T04:08:36.152Z",
           "status": "CONNECTED",
           "source": "Google News RSS",
           "sourceStatuses": [
@@ -5709,7 +5707,7 @@
         "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "069500.KS",
-          "checkedAt": "2026-07-13T04:07:57.151Z",
+          "checkedAt": "2026-07-13T04:08:36.157Z",
           "status": "CONNECTED",
           "source": "Google News RSS",
           "sourceStatuses": [
@@ -5887,7 +5885,7 @@
         "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "073240.KS",
-          "checkedAt": "2026-07-13T04:07:57.161Z",
+          "checkedAt": "2026-07-13T04:08:36.158Z",
           "status": "CONNECTED",
           "source": "Google News RSS",
           "sourceStatuses": [
@@ -6066,7 +6064,7 @@
         "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "180640.KS",
-          "checkedAt": "2026-07-13T04:07:57.259Z",
+          "checkedAt": "2026-07-13T04:08:36.160Z",
           "status": "CONNECTED",
           "source": "Google News RSS",
           "sourceStatuses": [
@@ -6260,7 +6258,7 @@
         "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "010950.KS",
-          "checkedAt": "2026-07-13T04:07:57.145Z",
+          "checkedAt": "2026-07-13T04:08:36.161Z",
           "status": "CONNECTED",
           "source": "Google News RSS",
           "sourceStatuses": [
@@ -6412,10 +6410,10 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-13",
     "priceAsOfLabel": "2026-07-13 KRX 정규장 종가",
-    "reportGeneratedAtKST": "2026-07-13 13:07",
+    "reportGeneratedAtKST": "2026-07-13 13:08",
     "newsStatus": "DISABLED",
-    "newsFetchedAt": "2026-07-13T04:07:56.514Z",
-    "newsLastUpdatedAt": "2026-07-13T04:07:56.514Z",
+    "newsFetchedAt": "2026-07-13T04:08:35.905Z",
+    "newsLastUpdatedAt": "2026-07-13T04:08:35.905Z",
     "latestNewsPublishedAt": null,
     "newsFreshnessStatus": "UNKNOWN",
     "newsSources": "DART",

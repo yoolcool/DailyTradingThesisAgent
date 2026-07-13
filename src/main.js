@@ -5315,6 +5315,19 @@ function renderHtml(report) {
     .action-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; align-items: start; }
     .tile { border: 1px solid #d9dee3; border-radius: 8px; padding: 9px; background: #fbfcfd; }
     .tile strong { display: block; color: #5d6670; font-size: 12px; margin-bottom: 4px; }
+    .tile-value { display: block; color: #172026; font-size: 15px; font-weight: 900; line-height: 1.25; }
+    .tone-positive { border-color: #93c5fd; background: #eff6ff; }
+    .tone-positive .tile-value, .tone-positive strong { color: #1d4ed8; }
+    .tone-negative { border-color: #fca5a5; background: #fef2f2; }
+    .tone-negative .tile-value, .tone-negative strong { color: #b91c1c; }
+    .tone-warning { border-color: #fbbf24; background: #fffbeb; }
+    .tone-warning .tile-value, .tone-warning strong { color: #92400e; }
+    .tone-neutral { border-color: #cbd5e1; background: #f8fafc; }
+    .tone-neutral .tile-value { color: #334155; }
+    .emphasis-blue { color: #1d4ed8; font-weight: 900; }
+    .emphasis-red { color: #b91c1c; font-weight: 900; }
+    .emphasis-amber { color: #92400e; font-weight: 900; }
+    .emphasis-line { border-left: 4px solid #2563eb; background: #eff6ff; padding: 8px 10px; border-radius: 6px; font-weight: 900; }
     .compact-card { display: flex; flex-direction: column; gap: 7px; padding: 11px; }
     .card-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: start; min-height: 40px; }
     .card-head h3 { margin: 0; font-size: 16px; line-height: 1.25; }
@@ -5324,6 +5337,10 @@ function renderHtml(report) {
     .metric-chip { min-width: 0; border: 1px solid #d9dee3; border-radius: 6px; padding: 5px 6px; background: #fbfcfd; }
     .metric-chip strong { display: block; color: #172026; font-size: 15px; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .metric-chip span { display: block; color: #5d6670; font-size: 10px; font-weight: 800; line-height: 1.2; margin-top: 2px; text-transform: uppercase; }
+    .macro-component-card { padding: 8px; }
+    .macro-component-card.tone-positive strong { color: #1d4ed8; }
+    .macro-component-card.tone-negative strong { color: #b91c1c; }
+    .macro-component-card.tone-warning strong { color: #92400e; }
     .insight-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
     .insight { min-width: 0; border-top: 1px solid #edf0f2; padding-top: 6px; }
     .insight strong { display: block; color: #4b5563; font-size: 11px; margin-bottom: 3px; }
@@ -5574,7 +5591,7 @@ function renderTodayDecisionHtml(report) {
       ${tile("주문 판단", d.orderDecision || "시장가 금지 / 지정가 또는 관찰")}
       ${tile("주요 제한 요인", d.screeningUnavailable ? "평가 대상 없음" : (d.mainLimiters || []).join(", ") || "특이 제한 없음")}
     </div>
-    <p><strong>실전 판단:</strong> ${escapeHtml(d.noTradeMessage || "후보 조건이 충분히 충족될 때까지 관찰한다.")}</p>
+    <p class="emphasis-line"><strong>실전 판단:</strong> ${escapeHtml(d.noTradeMessage || "후보 조건이 충분히 충족될 때까지 관찰한다.")}</p>
     <div data-action-gate-summary>
       <h3>후보 제한 요인 집계</h3>
       <div class="limiter-list">${gateSummaryHtml}</div>
@@ -5653,7 +5670,7 @@ function renderMarketRegimeHtml(report) {
       ${tile("기술/매크로 가중치", "65% / 35%")}
       ${tile("데이터 커버리지", `기술 ${regime.coverage.technical}/${regime.coverage.technicalTotal}, 매크로 ${regime.coverage.macro}/${regime.coverage.macroTotal}`)}
     </div>
-    <p class="purpose">${escapeHtml(regime.conclusion)}</p>
+    <p class="emphasis-line">${escapeHtml(regime.conclusion)}</p>
     <p class="muted"><strong>전일 대비:</strong> ${escapeHtml(regime.change?.summary || "전일 비교 없음")}</p>
     <p class="muted"><strong>판정 신뢰도:</strong> ${escapeHtml(regime.reliability?.summary || "데이터 없음")}</p>
     <h3>데이터 신뢰도 근거</h3>${htmlList((regime.reliability?.items || []).map(escapeHtml))}
@@ -5673,7 +5690,7 @@ function macroComponents(regime) {
 }
 
 function renderMacroComponentHtml(row) {
-  return `<article class="metric-chip macro-component-card">
+  return `<article class="metric-chip macro-component-card ${toneClass(row.label || row.stance || row.score)}">
     <strong>${escapeHtml(row.title)} ${escapeHtml(row.label)} ${row.score}점</strong>
     <span>${escapeHtml(row.stance || "데이터 없음")} / ${escapeHtml(row.confidence || "LOW")}</span>
     <p class="field-line">${escapeHtml((row.reasons || []).join(" / ") || "근거 없음")}</p>
@@ -6317,7 +6334,23 @@ function renderEtfTable(etfs) {
 }
 
 function tile(label, value) {
-  return `<div class="tile"><strong>${escapeHtml(label)}</strong>${escapeHtml(value)}</div>`;
+  return `<div class="tile ${toneClass(`${label} ${value}`)}"><strong>${escapeHtml(label)}</strong><span class="tile-value">${highlightValue(value)}</span></div>`;
+}
+
+function toneClass(value) {
+  const text = String(value || "");
+  if (/(강세장|우호|높음|HIGH|진입 가능|진입 후보|충족|개선|강화|\+\d|수익률 \+|위험선호)/i.test(text)) return "tone-positive";
+  if (/(약세장|위험|낮음|LOW|매매 금지|시장가 금지|청산|미충족|발생|악화|약화|부담|금지|신규 매수 보류|리스크 축소|-\d)/i.test(text)) return "tone-negative";
+  if (/(중립-하락|주의|MEDIUM|보통|관찰|보류|제한|확인 전|조건부)/i.test(text)) return "tone-warning";
+  return "tone-neutral";
+}
+
+function highlightValue(value) {
+  const escaped = escapeHtml(value);
+  return escaped
+    .replace(/(강세장|우호|높음|HIGH|진입 가능|진입 후보|개선|강화)/g, '<span class="emphasis-blue">$1</span>')
+    .replace(/(약세장|위험|낮음|LOW|매매 금지|시장가 금지|악화|약화|부담|신규 매수 보류|리스크 축소)/g, '<span class="emphasis-red">$1</span>')
+    .replace(/(중립-하락|주의|MEDIUM|보통|관찰|보류|제한|조건부)/g, '<span class="emphasis-amber">$1</span>');
 }
 
 function badge(value) {

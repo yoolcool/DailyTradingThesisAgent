@@ -14,7 +14,7 @@
     "sessionLabel": "US regular session"
   },
   "reportDate": "2026-07-13",
-  "generatedAt": "2026년 7월 13일 월요일 오후 1:08",
+  "generatedAt": "2026년 7월 13일 월요일 오후 2:25",
   "marketRegimeAssessment": {
     "label": "강세장",
     "score": 84,
@@ -41,9 +41,9 @@
       "status": "UNCHANGED",
       "label": "유지",
       "previousLabel": "강세장",
-      "previousScore": 82,
-      "scoreDelta": 2,
-      "summary": "강세장 유지, 점수 변화는 제한적이다(+2점)."
+      "previousScore": 84,
+      "scoreDelta": 0,
+      "summary": "강세장 유지, 점수 변화는 제한적이다(0점)."
     },
     "technical": {
       "score": 100,
@@ -3833,9 +3833,9 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-13T04:08:49.591Z",
+        "checkedAt": "2026-07-13T05:25:34.170Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -3856,9 +3856,9 @@
           },
           {
             "source": "SEC EDGAR RSS",
-            "status": "FAILED",
+            "status": "PARTIAL",
             "notes": [
-              "This operation was aborted"
+              "no matching RSS items"
             ]
           },
           {
@@ -3874,7 +3874,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-07-13T04:05:26.000Z",
+        "lastPublishedAt": "2026-07-13T03:03:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -3970,7 +3970,7 @@
         },
         "notes": [
           "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
-          "SEC EDGAR RSS: This operation was aborted",
+          "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
         "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe"
@@ -4038,9 +4038,9 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-13T04:08:49.591Z",
+        "checkedAt": "2026-07-13T05:25:34.170Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4061,9 +4061,9 @@
           },
           {
             "source": "SEC EDGAR RSS",
-            "status": "FAILED",
+            "status": "PARTIAL",
             "notes": [
-              "This operation was aborted"
+              "no matching RSS items"
             ]
           },
           {
@@ -4079,7 +4079,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-07-13T04:05:26.000Z",
+        "lastPublishedAt": "2026-07-13T03:03:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -4175,7 +4175,7 @@
         },
         "notes": [
           "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
-          "SEC EDGAR RSS: This operation was aborted",
+          "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
         "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe"
@@ -4244,9 +4244,9 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-13T04:08:49.591Z",
+        "checkedAt": "2026-07-13T05:25:34.170Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4267,9 +4267,9 @@
           },
           {
             "source": "SEC EDGAR RSS",
-            "status": "FAILED",
+            "status": "PARTIAL",
             "notes": [
-              "This operation was aborted"
+              "no matching RSS items"
             ]
           },
           {
@@ -4285,7 +4285,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-07-13T04:05:26.000Z",
+        "lastPublishedAt": "2026-07-13T03:03:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -4381,7 +4381,7 @@
         },
         "notes": [
           "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
-          "SEC EDGAR RSS: This operation was aborted",
+          "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
         "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe"
@@ -4446,8 +4446,8 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Did Nvidia's 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Did Nvidia's 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google?",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_6h / positive - INTC, AMD, NVDA, AVGO: Chip Stocks Slide As Fresh US-Iran Strikes Test Peace Deal 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_6h / positive - INTC, AMD, NVDA, AVGO: Chip Stocks Slide As Fresh US-Iran Strikes Test Peace Deal",
       "tieBreakerReason": "최종 원점수 82, 리스크 패널티 0, 5일 수익률 +8.28%, 상대 거래량 1.01배 순으로 정렬",
       "entryQualityScore": 40,
       "entryQualityLabel": "관찰",
@@ -4575,7 +4575,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - Did Nvidia's 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google?",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_6h / positive - INTC, AMD, NVDA, AVGO: Chip Stocks Slide As Fresh US-Iran Strikes Test Peace Deal",
       "tieBreakerReason": "최종 원점수 75, 리스크 패널티 -4, 5일 수익률 +7.74%, 상대 거래량 0.68배 순으로 정렬",
       "entryQualityScore": 41,
       "entryQualityLabel": "관찰",
@@ -4769,7 +4769,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_72h / mixed - Missed Nvidia’s Run? SMH Holders Made 113% Over 12 Months Anyway",
       "tieBreakerReason": "최종 원점수 21, 리스크 패널티 -6, 5일 수익률 +3.16%, 상대 거래량 0.56배 순으로 정렬",
       "entryQualityScore": 23,
       "entryQualityLabel": "낮음",
@@ -5032,7 +5032,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut",
+      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_72h - My insurance company said my roof lost a few tiles. Loss adjusters found $10,000 in storm damage. How could this happen?",
       "tieBreakerReason": "최종 원점수 -7, 리스크 패널티 -11, 5일 수익률 +2.57%, 상대 거래량 0.40배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -5139,14 +5139,14 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-10",
     "priceAsOfLabel": "2026-07-10 US regular close",
-    "reportGeneratedAtKST": "2026-07-13 13:08",
+    "reportGeneratedAtKST": "2026-07-13 14:25",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-07-13T04:08:43.093Z",
-    "newsLastUpdatedAt": "2026-07-13T04:08:43.093Z",
-    "latestNewsPublishedAt": "2026-07-13T04:05:26.000Z",
+    "newsFetchedAt": "2026-07-13T05:25:32.693Z",
+    "newsLastUpdatedAt": "2026-07-13T05:25:32.693Z",
+    "latestNewsPublishedAt": "2026-07-13T04:58:19.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
-    "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS CONNECTED, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
+    "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
     "newsReliability": "MEDIUM",
     "etfBreadthStatus": "PARTIAL",
     "etfBreadthSampleCount": "1~4",

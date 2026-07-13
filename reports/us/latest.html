@@ -20,6 +20,19 @@
     .action-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; align-items: start; }
     .tile { border: 1px solid #d9dee3; border-radius: 8px; padding: 9px; background: #fbfcfd; }
     .tile strong { display: block; color: #5d6670; font-size: 12px; margin-bottom: 4px; }
+    .tile-value { display: block; color: #172026; font-size: 15px; font-weight: 900; line-height: 1.25; }
+    .tone-positive { border-color: #93c5fd; background: #eff6ff; }
+    .tone-positive .tile-value, .tone-positive strong { color: #1d4ed8; }
+    .tone-negative { border-color: #fca5a5; background: #fef2f2; }
+    .tone-negative .tile-value, .tone-negative strong { color: #b91c1c; }
+    .tone-warning { border-color: #fbbf24; background: #fffbeb; }
+    .tone-warning .tile-value, .tone-warning strong { color: #92400e; }
+    .tone-neutral { border-color: #cbd5e1; background: #f8fafc; }
+    .tone-neutral .tile-value { color: #334155; }
+    .emphasis-blue { color: #1d4ed8; font-weight: 900; }
+    .emphasis-red { color: #b91c1c; font-weight: 900; }
+    .emphasis-amber { color: #92400e; font-weight: 900; }
+    .emphasis-line { border-left: 4px solid #2563eb; background: #eff6ff; padding: 8px 10px; border-radius: 6px; font-weight: 900; }
     .compact-card { display: flex; flex-direction: column; gap: 7px; padding: 11px; }
     .card-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: start; min-height: 40px; }
     .card-head h3 { margin: 0; font-size: 16px; line-height: 1.25; }
@@ -29,6 +42,10 @@
     .metric-chip { min-width: 0; border: 1px solid #d9dee3; border-radius: 6px; padding: 5px 6px; background: #fbfcfd; }
     .metric-chip strong { display: block; color: #172026; font-size: 15px; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .metric-chip span { display: block; color: #5d6670; font-size: 10px; font-weight: 800; line-height: 1.2; margin-top: 2px; text-transform: uppercase; }
+    .macro-component-card { padding: 8px; }
+    .macro-component-card.tone-positive strong { color: #1d4ed8; }
+    .macro-component-card.tone-negative strong { color: #b91c1c; }
+    .macro-component-card.tone-warning strong { color: #92400e; }
     .insight-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
     .insight { min-width: 0; border-top: 1px solid #edf0f2; padding-top: 6px; }
     .insight strong { display: block; color: #4b5563; font-size: 11px; margin-bottom: 3px; }
@@ -153,49 +170,49 @@
     <div class="hero">
       <h1>오늘의 데일리 트레이딩 요약</h1>
       <p class="purpose">이 리포트는 최근 오른 자산을 나열하는 것이 아니라, 돈이 몰리는 근거와 다음 매수 주체가 확인할 트레이딩 후보를 찾기 위한 보고서다.</p>
-      <p class="muted">생성 시각: 2026년 7월 13일 월요일 오후 1:08</p>
+      <p class="muted">생성 시각: 2026년 7월 13일 월요일 오후 2:25</p>
       <p><strong>핵심 질문:</strong> 현재 가격에서 누가 사고 있고, 누가 앞으로 더 비싸게 사줄 수 있는가?</p>
       <p class="muted">보조 데이터는 연결 상태에 따라 점수 반영 범위가 달라진다.</p>
     </div>
     <section data-market-regime><h2>시장 국면 판단</h2>
     <div class="grid">
-      <div class="tile"><strong>최종 판정</strong>강세장 (84점)</div>
-      <div class="tile"><strong>전일 대비</strong>유지 (+2점)</div>
-      <div class="tile"><strong>판정 신뢰도</strong>높음 (100점)</div>
-      <div class="tile"><strong>행동 바이어스</strong>선별 매수 우위, 과열 추격만 제한</div>
-      <div class="tile"><strong>기술적 지표</strong>상승 추세 우위 (100점)</div>
-      <div class="tile"><strong>매크로 시황</strong>매크로 중립-우호 (54점)</div>
-      <div class="tile"><strong>기술/매크로 가중치</strong>65% / 35%</div>
-      <div class="tile"><strong>데이터 커버리지</strong>기술 2/2, 매크로 10/10</div>
+      <div class="tile tone-positive"><strong>최종 판정</strong><span class="tile-value"><span class="emphasis-blue">강세장</span> (84점)</span></div>
+      <div class="tile tone-neutral"><strong>전일 대비</strong><span class="tile-value">유지 (0점)</span></div>
+      <div class="tile tone-positive"><strong>판정 신뢰도</strong><span class="tile-value"><span class="emphasis-blue">높음</span> (100점)</span></div>
+      <div class="tile tone-warning"><strong>행동 바이어스</strong><span class="tile-value">선별 매수 우위, 과열 추격만 <span class="emphasis-amber">제한</span></span></div>
+      <div class="tile tone-neutral"><strong>기술적 지표</strong><span class="tile-value">상승 추세 우위 (100점)</span></div>
+      <div class="tile tone-positive"><strong>매크로 시황</strong><span class="tile-value">매크로 중립-<span class="emphasis-blue">우호</span> (54점)</span></div>
+      <div class="tile tone-neutral"><strong>기술/매크로 가중치</strong><span class="tile-value">65% / 35%</span></div>
+      <div class="tile tone-neutral"><strong>데이터 커버리지</strong><span class="tile-value">기술 2/2, 매크로 10/10</span></div>
     </div>
-    <p class="purpose">기술적 추세가 강세장 조건에 가깝다. 매크로도 큰 부담은 제한적이다.</p>
-    <p class="muted"><strong>전일 대비:</strong> 강세장 유지, 점수 변화는 제한적이다(+2점).</p>
+    <p class="emphasis-line">기술적 추세가 강세장 조건에 가깝다. 매크로도 큰 부담은 제한적이다.</p>
+    <p class="muted"><strong>전일 대비:</strong> 강세장 유지, 점수 변화는 제한적이다(0점).</p>
     <p class="muted"><strong>판정 신뢰도:</strong> 핵심 지수와 매크로 데이터가 대부분 직접 수집되어 판정 신뢰도가 높다.</p>
     <h3>데이터 신뢰도 근거</h3><ul><li>직접 지수 데이터: S&amp;P 500, Nasdaq 100</li><li>대체 지수 데이터 없음</li><li>매크로 데이터: 10/10</li><li>누락 데이터 없음</li><li>stale 데이터 없음</li></ul>
     <h3>기술적 지표</h3><ul><li><strong>S&amp;P 500</strong> 100점 | 50일선 위, 200일선 위, 20일 +4.24%, 60일 +9.00%, 52주 고점 대비 -0.60% -&gt; 기술 점수 100</li><li><strong>Nasdaq 100</strong> 100점 | 50일선 위, 200일선 위, 20일 +4.62%, 60일 +15.00%, 52주 고점 대비 -3.05% -&gt; 기술 점수 100</li></ul>
     <h3>매크로 시황</h3>
     <p class="muted">물가, 신용/유동성 중심으로 매크로가 위험자산에 우호적이다.</p>
-    <div class="metric-grid" data-macro-components><article class="metric-chip macro-component-card">
+    <div class="metric-grid" data-macro-components><article class="metric-chip macro-component-card tone-neutral">
     <strong>금리 중립 48점</strong>
     <span>금리 중립 / HIGH</span>
     <p class="field-line">US 10Y yield 20일 +0.59%, 5일 +1.87% / US 3M yield 20일 +1.65%, 단기금리 방향 확인 / US long-duration bonds 20일 -0.48%, 장기채 가격 기준 할인율 부담 확인</p>
     <p class="field-line muted">추가 확인 이벤트 없음</p>
-  </article><article class="metric-chip macro-component-card">
+  </article><article class="metric-chip macro-component-card tone-positive">
     <strong>물가 중립-우호 58점</strong>
     <span>물가 중립 / HIGH</span>
     <p class="field-line">Oil ETF 20일 -19.06%, 유가 기반 물가 압력 확인 / TIPS ETF 20일 -0.99%, 물가연동채 흐름은 보조 근거 / Gold 20일 +0.65%, 금 강세는 방어 수요 여부 확인</p>
     <p class="field-line muted">추가 확인 이벤트 없음</p>
-  </article><article class="metric-chip macro-component-card">
+  </article><article class="metric-chip macro-component-card tone-neutral">
     <strong>정책 중립 50점</strong>
     <span>정책 이벤트 확인 전 중립 / LOW</span>
     <p class="field-line">정책 톤은 1차 버전에서 일정/이벤트 리스크 기반 중립값으로 반영한다.</p>
     <p class="field-line muted">FOMC, CPI, PCE, 고용지표 발표 전후에는 매크로 confidence를 보수적으로 해석한다.</p>
-  </article><article class="metric-chip macro-component-card">
+  </article><article class="metric-chip macro-component-card tone-positive">
     <strong>신용/유동성 우호 67점</strong>
     <span>신용/유동성 우호 / HIGH</span>
     <p class="field-line">High yield credit 20일 +0.30%, 하이일드 위험선호 확인 / HYG-LQD 20일 상대강도 +0.95%, 신용위험 선호/회피 확인 / VIX 20일 -32.36%, 변동성 부담 확인</p>
     <p class="field-line muted">추가 확인 이벤트 없음</p>
-  </article><article class="metric-chip macro-component-card">
+  </article><article class="metric-chip macro-component-card tone-neutral">
     <strong>환율/글로벌 중립 48점</strong>
     <span>환율/글로벌 중립 / MEDIUM</span>
     <p class="field-line">US dollar 20일 +1.21%, 달러 강세/약세 확인</p>
@@ -207,14 +224,14 @@
     <h2>오늘 결론</h2>
     <p><span class="decision-label">조건부 진입</span></p>
     <div class="grid">
-      <div class="tile"><strong>신규 진입 후보</strong>0개</div>
-      <div class="tile"><strong>조건부 진입 후보</strong>1개</div>
-      <div class="tile"><strong>관찰 후보</strong>146개</div>
-      <div class="tile"><strong>오늘 행동 후보</strong>1개</div>
-      <div class="tile"><strong>주문 판단</strong>시장가 금지 / 지정가 또는 관찰</div>
-      <div class="tile"><strong>주요 제한 요인</strong>Entry Quality &lt; 40, RVOL 미달, 뉴스 직접성 부족</div>
+      <div class="tile tone-positive"><strong>신규 진입 후보</strong><span class="tile-value">0개</span></div>
+      <div class="tile tone-positive"><strong>조건부 진입 후보</strong><span class="tile-value">1개</span></div>
+      <div class="tile tone-warning"><strong>관찰 후보</strong><span class="tile-value">146개</span></div>
+      <div class="tile tone-neutral"><strong>오늘 행동 후보</strong><span class="tile-value">1개</span></div>
+      <div class="tile tone-negative"><strong>주문 판단</strong><span class="tile-value"><span class="emphasis-red">시장가 금지</span> / 지정가 또는 <span class="emphasis-amber">관찰</span></span></div>
+      <div class="tile tone-warning"><strong>주요 제한 요인</strong><span class="tile-value">Entry Quality &lt; 40, RVOL 미달, 뉴스 직접성 부족</span></div>
     </div>
-    <p><strong>실전 판단:</strong> 진입 후보는 있으나, 전일 고점 돌파와 거래량 확인 후 선별적으로 접근한다.</p>
+    <p class="emphasis-line"><strong>실전 판단:</strong> 진입 후보는 있으나, 전일 고점 돌파와 거래량 확인 후 선별적으로 접근한다.</p>
     <div data-action-gate-summary>
       <h3>후보 제한 요인 집계</h3>
       <div class="limiter-list"><span class="limiter-pill">RVOL &lt; 1.00x: 144개</span><span class="limiter-pill">거래대금 유동성 낮음: 17개</span><span class="limiter-pill">Entry Quality 50~54 near miss: 0개</span><span class="limiter-pill">Entry Quality 40~49 관찰: 3개</span><span class="limiter-pill">Entry Quality &lt; 40: 154개</span><span class="limiter-pill">Exhaustion Risk &gt;= 70: 0개</span><span class="limiter-pill">ETF breadth 샘플 부족: 37개</span><span class="limiter-pill">뉴스 직접성 부족: 100개</span></div>
@@ -223,41 +240,41 @@
     <section id="reliability" data-data-reliability>
     <h2>데이터 신뢰도</h2>
     <div class="grid">
-      <div class="tile"><strong>전체 신뢰도</strong>LOW</div>
-      <div class="tile"><strong>분석 신뢰도</strong>LOW</div>
-      <div class="tile"><strong>주문 실행 신뢰도</strong>LOW</div>
-      <div class="tile"><strong>ETF breadth 신뢰도</strong>LOW</div>
-      <div class="tile"><strong>리포트 생성 시각</strong>2026-07-13 13:08 KST</div>
-      <div class="tile"><strong>가격 기준 거래일</strong>2026-07-10 US regular close</div>
-      <div class="tile"><strong>뉴스 수집 시각</strong>2026-07-13 13:08 KST</div>
-      <div class="tile"><strong>최근 뉴스 발행</strong>2026-07-13 13:05 KST</div>
-      <div class="tile"><strong>뉴스 신선도</strong>FRESH</div>
-      <div class="tile"><strong>뉴스 소스</strong>Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API</div>
-      <div class="tile"><strong>뉴스 소스 상태</strong>Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS CONNECTED, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED</div>
-      <div class="tile"><strong>뉴스 신뢰도</strong>MEDIUM</div>
-      <div class="tile"><strong>추천 적용 거래일</strong>2026-07-13 US regular session</div>
-      <div class="tile"><strong>가격/거래량</strong>연결됨</div>
-      <div class="tile"><strong>뉴스</strong>일부 연결</div>
-      <div class="tile"><strong>ETF 확산도</strong>일부 연결</div>
-      <div class="tile"><strong>ETF 샘플 수</strong>1~4</div>
-      <div class="tile"><strong>거래대금 유동성</strong>일부 연결</div>
-      <div class="tile"><strong>프리/애프터마켓</strong>UNAVAILABLE</div>
-      <div class="tile"><strong>Provider</strong>yfinance, Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API, config fallback sample, price-volume dollar-volume fallback</div>
+      <div class="tile tone-negative"><strong>전체 신뢰도</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
+      <div class="tile tone-negative"><strong>분석 신뢰도</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
+      <div class="tile tone-negative"><strong>주문 실행 신뢰도</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
+      <div class="tile tone-negative"><strong>ETF breadth 신뢰도</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
+      <div class="tile tone-negative"><strong>리포트 생성 시각</strong><span class="tile-value">2026-07-13 14:25 KST</span></div>
+      <div class="tile tone-negative"><strong>가격 기준 거래일</strong><span class="tile-value">2026-07-10 US regular close</span></div>
+      <div class="tile tone-negative"><strong>뉴스 수집 시각</strong><span class="tile-value">2026-07-13 14:25 KST</span></div>
+      <div class="tile tone-negative"><strong>최근 뉴스 발행</strong><span class="tile-value">2026-07-13 13:58 KST</span></div>
+      <div class="tile tone-neutral"><strong>뉴스 신선도</strong><span class="tile-value">FRESH</span></div>
+      <div class="tile tone-neutral"><strong>뉴스 소스</strong><span class="tile-value">Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API</span></div>
+      <div class="tile tone-neutral"><strong>뉴스 소스 상태</strong><span class="tile-value">Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED</span></div>
+      <div class="tile tone-warning"><strong>뉴스 신뢰도</strong><span class="tile-value"><span class="emphasis-amber">MEDIUM</span></span></div>
+      <div class="tile tone-negative"><strong>추천 적용 거래일</strong><span class="tile-value">2026-07-13 US regular session</span></div>
+      <div class="tile tone-neutral"><strong>가격/거래량</strong><span class="tile-value">연결됨</span></div>
+      <div class="tile tone-neutral"><strong>뉴스</strong><span class="tile-value">일부 연결</span></div>
+      <div class="tile tone-neutral"><strong>ETF 확산도</strong><span class="tile-value">일부 연결</span></div>
+      <div class="tile tone-neutral"><strong>ETF 샘플 수</strong><span class="tile-value">1~4</span></div>
+      <div class="tile tone-neutral"><strong>거래대금 유동성</strong><span class="tile-value">일부 연결</span></div>
+      <div class="tile tone-neutral"><strong>프리/애프터마켓</strong><span class="tile-value">UNAVAILABLE</span></div>
+      <div class="tile tone-neutral"><strong>Provider</strong><span class="tile-value">yfinance, Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API, config fallback sample, price-volume dollar-volume fallback</span></div>
     </div>
     <p class="muted"><strong>신뢰도 해석:</strong> 테마 확산 판단 제한, 거래대금 유동성 낮음 또는 확인 불가, 프리/애프터마켓 확인 불가</p>
     <p class="warning-note">이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 프리마켓/정규장 거래량을 별도 확인해야 한다.</p>
   </section>
     <section id="market"><h2>0. 시장 상태</h2><div class="grid">
-    <div class="tile"><strong>데이터 모드</strong>REAL_TEST</div>
-    <div class="tile"><strong>가격/거래량</strong>연결됨</div>
-    <div class="tile"><strong>뉴스</strong>일부 연결</div>
-    <div class="tile"><strong>ETF 구성종목 확산도</strong>일부 연결</div>
-    <div class="tile"><strong>거래대금 유동성</strong>일부 연결</div>
-    <div class="tile"><strong>생성 시각</strong>2026년 7월 13일 월요일 오후 1:08</div>
-    <div class="tile"><strong>시장 상태</strong>위험선호</div>
-    <div class="tile"><strong>후보별 진입 환경</strong>개별 게이트로 별도 판단</div>
-    <div class="tile"><strong>오늘 돈의 방향</strong>메가캡 플랫폼 개별 종목 흐름이 ETF 대비 강한지 확인 필요</div>
-    <div class="tile"><strong>강한 테마 TOP 3</strong>메가캡 플랫폼 ETF(71), Financial Services(45), 이커머스/여행 플랫폼(36)</div>
+    <div class="tile tone-neutral"><strong>데이터 모드</strong><span class="tile-value">REAL_TEST</span></div>
+    <div class="tile tone-neutral"><strong>가격/거래량</strong><span class="tile-value">연결됨</span></div>
+    <div class="tile tone-neutral"><strong>뉴스</strong><span class="tile-value">일부 연결</span></div>
+    <div class="tile tone-neutral"><strong>ETF 구성종목 확산도</strong><span class="tile-value">일부 연결</span></div>
+    <div class="tile tone-neutral"><strong>거래대금 유동성</strong><span class="tile-value">일부 연결</span></div>
+    <div class="tile tone-neutral"><strong>생성 시각</strong><span class="tile-value">2026년 7월 13일 월요일 오후 2:25</span></div>
+    <div class="tile tone-positive"><strong>시장 상태</strong><span class="tile-value"><span class="emphasis-red">위험</span>선호</span></div>
+    <div class="tile tone-neutral"><strong>후보별 진입 환경</strong><span class="tile-value">개별 게이트로 별도 판단</span></div>
+    <div class="tile tone-neutral"><strong>오늘 돈의 방향</strong><span class="tile-value">메가캡 플랫폼 개별 종목 흐름이 ETF 대비 강한지 확인 필요</span></div>
+    <div class="tile tone-neutral"><strong>강한 테마 TOP 3</strong><span class="tile-value">메가캡 플랫폼 ETF(71), Financial Services(45), 이커머스/여행 플랫폼(36)</span></div>
   </div><ul><li>전체 시장 상태와 후보별 진입 환경은 분리한다.</li><li>종목은 강해도 당일 음봉, 고점 이탈, 거래량 둔화, 실적 후 매물 출회가 있으면 후보별 환경은 제한적일 수 있다.</li><li>수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한한다.</li></ul></section>
     <section data-narrative-section><h2>오늘 시장을 지배하는 서사</h2>
     <h3>오늘 시장을 지배하는 서사 TOP 3</h3>
@@ -2903,23 +2920,23 @@
       <details class="score-details">
     <summary><strong>moneyFlowScore(최종) 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>moneyFlowScore(1차)</strong>87</div>
-      <div class="tile"><strong>최종 원점수</strong>108</div>
-      <div class="tile"><strong>최종 표시 점수</strong>100</div>
-      <div class="tile"><strong>cap 적용</strong>raw score 108 capped to displayed score 100</div>
-      <div class="tile"><strong>가격/거래량 1차 점수</strong>+87</div>
-      <div class="tile"><strong>추세</strong>+25</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+19</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+11</div>
-      <div class="tile"><strong>거래량</strong>+18</div>
-      <div class="tile"><strong>신고가 근접</strong>0</div>
-      <div class="tile"><strong>이동평균</strong>+14</div>
-      <div class="tile"><strong>하위 점수 cap</strong>1개 적용</div>
-      <div class="tile"><strong>뉴스</strong>+12</div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차)</strong><span class="tile-value">87</span></div>
+      <div class="tile tone-neutral"><strong>최종 원점수</strong><span class="tile-value">108</span></div>
+      <div class="tile tone-neutral"><strong>최종 표시 점수</strong><span class="tile-value">100</span></div>
+      <div class="tile tone-neutral"><strong>cap 적용</strong><span class="tile-value">raw score 108 capped to displayed score 100</span></div>
+      <div class="tile tone-positive"><strong>가격/거래량 1차 점수</strong><span class="tile-value">+87</span></div>
+      <div class="tile tone-positive"><strong>추세</strong><span class="tile-value">+25</span></div>
+      <div class="tile tone-positive"><strong>단기 모멘텀</strong><span class="tile-value">+19</span></div>
+      <div class="tile tone-positive"><strong>중기 모멘텀</strong><span class="tile-value">+11</span></div>
+      <div class="tile tone-positive"><strong>거래량</strong><span class="tile-value">+18</span></div>
+      <div class="tile tone-neutral"><strong>신고가 근접</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-positive"><strong>이동평균</strong><span class="tile-value">+14</span></div>
+      <div class="tile tone-neutral"><strong>하위 점수 cap</strong><span class="tile-value">1개 적용</span></div>
+      <div class="tile tone-positive"><strong>뉴스</strong><span class="tile-value">+12</span></div>
       
-      <div class="tile"><strong>유동성</strong>+5</div>
-      <div class="tile"><strong>ETF 대비 상대강도</strong>+4</div>
-      <div class="tile"><strong>리스크 패널티</strong>0</div>
+      <div class="tile tone-positive"><strong>유동성</strong><span class="tile-value">+5</span></div>
+      <div class="tile tone-positive"><strong>ETF 대비 상대강도</strong><span class="tile-value">+4</span></div>
+      <div class="tile tone-neutral"><strong>리스크 패널티</strong><span class="tile-value">0</span></div>
     </div>
     <p class="muted"><strong>계산식:</strong> +87 + +12 + 0 + +5 + +4 + 0 + 0 = 108 -&gt; 100</p>
     <ul><li>가격 모멘텀: 원점수 +26, 상한 적용 +25 / 최대 25 (cap 적용)</li><li>단기 모멘텀: 원점수 +19, 상한 적용 +19 / 최대 20</li><li>중기 모멘텀: 원점수 +11, 상한 적용 +11 / 최대 16</li><li>거래량: 원점수 +18, 상한 적용 +18 / 최대 20</li><li>신고가 근접: 원점수 0, 상한 적용 0 / 최대 12</li><li>이동평균: 원점수 +14, 상한 적용 +14 / 최대 14</li><li>관련 ETF 상대강도: 원점수 +4, 상한 적용 +4 / 최대 8</li></ul>
@@ -2927,8 +2944,8 @@
     <details>
     <summary><strong>리스크 패널티 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총 리스크 패널티</strong>0</div>
-      <div class="tile"><strong>리스크 등급</strong>LOW</div>
+      <div class="tile tone-neutral"><strong>총 리스크 패널티</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-negative"><strong>리스크 등급</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
     </div>
     <h4>감점된 리스크</h4><ul><li>감점된 리스크 없음</li></ul>
     <h4>관찰 리스크</h4><ul><li>주요 관찰 리스크 없음</li></ul>
@@ -2938,8 +2955,8 @@
       <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>ETF 확산도: 관련 ETF에서 확인</li><li>거래대금 유동성: 사용</li><li>관련 ETF 상대강도: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: Yahoo Finance RSS, CNBC Markets RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 13/3/0</li><li>직접성/방향성/신선도: 4/1/4</li><li>강한 촉매 수: 2</li><li>중요 공시 수: 0</li><li>직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>보조 뉴스: Yahoo Finance RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 13:08 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 13:05 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: Jim Cramer Says Comparing the Mag 7 Is a Mistake: Here Are 5 Reasons Each Stock Is Different</li><li>원점수/상한 점수: +26 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
-    <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 일부 연결</li><li>재확인 시각: 2026-07-13 13:08 KST</li><li>최근 발행 시각: 2026-07-13 13:05 KST</li><li>신선도: FRESH</li><li>출처: Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 &quot;Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe&quot;입니다.</li><li>직접 촉매: Yahoo Finance RSS / mna / under_24h - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>한국어 뉴스 요약 1: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>내용: Meta Platforms Inc. 관련 M&amp;A 뉴스입니다. 기사 스니펫상 핵심 내용은 Chinese regulators have required Meta Platforms to unwind its planned $2b acquisition of AI start up Manus, clearing the way for Tencent to become the largest shareholder.입니다.</li><li>투자 의미: M&amp;A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.</li><li>확인할 점: M&amp;A의 금액, 기간, 실적 반영 시점</li><li>한국어 뉴스 요약 2: Meta Has Raised Its AI Game. The Stock Should Continue to Rise In 2026.</li><li>내용: Meta Platforms Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Meta Platforms has been announcing a flurry of AI initiatives that would help it monetize its capex.입니다.</li><li>투자 의미: 애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.</li><li>확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지</li><li>한국어 뉴스 요약 3: Why Meta Platforms Stock Surged This Week</li><li>내용: Meta Platforms Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 시장 일반 성격의 재료가 긍정으로 해석되고 있습니다.</li><li>투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.</li><li>확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지</li><li>원문 헤드라인 1: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>원문 헤드라인 2: Yahoo Finance RSS / general_market / under_24h / positive - Meta Has Raised Its AI Game. The Stock Should Continue to Rise In 2026.</li><li>원문 헤드라인 3: Yahoo Finance RSS / general_market / under_6h / positive - Why Meta Platforms Stock Surged This Week</li><li>주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/4/0</li><li>직접성/방향성/신선도: 4/1/4</li><li>강한 촉매 수: 2</li><li>중요 공시 수: 0</li><li>직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 14:25 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:33 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li>원점수/상한 점수: +25 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 일부 연결</li><li>재확인 시각: 2026-07-13 14:25 KST</li><li>최근 발행 시각: 2026-07-13 12:03 KST</li><li>신선도: FRESH</li><li>출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 &quot;Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe&quot;입니다.</li><li>직접 촉매: Yahoo Finance RSS / mna / under_24h - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>한국어 뉴스 요약 1: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>내용: Meta Platforms Inc. 관련 M&amp;A 뉴스입니다. 기사 스니펫상 핵심 내용은 Chinese regulators have required Meta Platforms to unwind its planned $2b acquisition of AI start up Manus, clearing the way for Tencent to become the largest shareholder.입니다.</li><li>투자 의미: M&amp;A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.</li><li>확인할 점: M&amp;A의 금액, 기간, 실적 반영 시점</li><li>한국어 뉴스 요약 2: Meta Has Raised Its AI Game. The Stock Should Continue to Rise In 2026.</li><li>내용: Meta Platforms Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Meta Platforms has been announcing a flurry of AI initiatives that would help it monetize its capex.입니다.</li><li>투자 의미: 애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.</li><li>확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지</li><li>한국어 뉴스 요약 3: Why Meta Platforms Stock Surged This Week</li><li>내용: Meta Platforms Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 시장 일반 성격의 재료가 긍정으로 해석되고 있습니다.</li><li>투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.</li><li>확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지</li><li>원문 헤드라인 1: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>원문 헤드라인 2: Yahoo Finance RSS / general_market / under_24h / positive - Meta Has Raised Its AI Game. The Stock Should Continue to Rise In 2026.</li><li>원문 헤드라인 3: Yahoo Finance RSS / general_market / under_6h / positive - Why Meta Platforms Stock Surged This Week</li><li>주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>관련 ETF에서 확인</li></ul>
     <h4>거래대금 유동성</h4><ul><li>데이터 상태: 일부 연결</li><li>거래대금 기준 유동성: LIQUID</li><li>거래대금: $27,145,232,151</li><li>평균 거래대금: $13,582,038,552</li><li>주문 영향: 시장가 가능</li><li>매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다</li></ul>
     <h4>reasonConfidence 근거</h4><p class="muted">가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.</p>
@@ -2958,23 +2975,23 @@
       <details class="score-details">
     <summary><strong>moneyFlowScore(최종) 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>moneyFlowScore(1차)</strong>87</div>
-      <div class="tile"><strong>최종 원점수</strong>108</div>
-      <div class="tile"><strong>최종 표시 점수</strong>100</div>
-      <div class="tile"><strong>cap 적용</strong>raw score 108 capped to displayed score 100</div>
-      <div class="tile"><strong>가격/거래량 1차 점수</strong>+87</div>
-      <div class="tile"><strong>추세</strong>+25</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+19</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+11</div>
-      <div class="tile"><strong>거래량</strong>+18</div>
-      <div class="tile"><strong>신고가 근접</strong>0</div>
-      <div class="tile"><strong>이동평균</strong>+14</div>
-      <div class="tile"><strong>하위 점수 cap</strong>1개 적용</div>
-      <div class="tile"><strong>뉴스</strong>+12</div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차)</strong><span class="tile-value">87</span></div>
+      <div class="tile tone-neutral"><strong>최종 원점수</strong><span class="tile-value">108</span></div>
+      <div class="tile tone-neutral"><strong>최종 표시 점수</strong><span class="tile-value">100</span></div>
+      <div class="tile tone-neutral"><strong>cap 적용</strong><span class="tile-value">raw score 108 capped to displayed score 100</span></div>
+      <div class="tile tone-positive"><strong>가격/거래량 1차 점수</strong><span class="tile-value">+87</span></div>
+      <div class="tile tone-positive"><strong>추세</strong><span class="tile-value">+25</span></div>
+      <div class="tile tone-positive"><strong>단기 모멘텀</strong><span class="tile-value">+19</span></div>
+      <div class="tile tone-positive"><strong>중기 모멘텀</strong><span class="tile-value">+11</span></div>
+      <div class="tile tone-positive"><strong>거래량</strong><span class="tile-value">+18</span></div>
+      <div class="tile tone-neutral"><strong>신고가 근접</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-positive"><strong>이동평균</strong><span class="tile-value">+14</span></div>
+      <div class="tile tone-neutral"><strong>하위 점수 cap</strong><span class="tile-value">1개 적용</span></div>
+      <div class="tile tone-positive"><strong>뉴스</strong><span class="tile-value">+12</span></div>
       
-      <div class="tile"><strong>유동성</strong>+5</div>
-      <div class="tile"><strong>ETF 대비 상대강도</strong>+4</div>
-      <div class="tile"><strong>리스크 패널티</strong>0</div>
+      <div class="tile tone-positive"><strong>유동성</strong><span class="tile-value">+5</span></div>
+      <div class="tile tone-positive"><strong>ETF 대비 상대강도</strong><span class="tile-value">+4</span></div>
+      <div class="tile tone-neutral"><strong>리스크 패널티</strong><span class="tile-value">0</span></div>
     </div>
     <p class="muted"><strong>계산식:</strong> +87 + +12 + 0 + +5 + +4 + 0 + 0 = 108 -&gt; 100</p>
     <ul><li>가격 모멘텀: 원점수 +26, 상한 적용 +25 / 최대 25 (cap 적용)</li><li>단기 모멘텀: 원점수 +19, 상한 적용 +19 / 최대 20</li><li>중기 모멘텀: 원점수 +11, 상한 적용 +11 / 최대 16</li><li>거래량: 원점수 +18, 상한 적용 +18 / 최대 20</li><li>신고가 근접: 원점수 0, 상한 적용 0 / 최대 12</li><li>이동평균: 원점수 +14, 상한 적용 +14 / 최대 14</li><li>관련 ETF 상대강도: 원점수 +4, 상한 적용 +4 / 최대 8</li></ul>
@@ -2982,8 +2999,8 @@
     <details>
     <summary><strong>리스크 패널티 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총 리스크 패널티</strong>0</div>
-      <div class="tile"><strong>리스크 등급</strong>LOW</div>
+      <div class="tile tone-neutral"><strong>총 리스크 패널티</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-negative"><strong>리스크 등급</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
     </div>
     <h4>감점된 리스크</h4><ul><li>감점된 리스크 없음</li></ul>
     <h4>관찰 리스크</h4><ul><li>주요 관찰 리스크 없음</li></ul>
@@ -2993,8 +3010,8 @@
       <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>ETF 확산도: 관련 ETF에서 확인</li><li>거래대금 유동성: 사용</li><li>관련 ETF 상대강도: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: Yahoo Finance RSS, CNBC Markets RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 13/3/0</li><li>직접성/방향성/신선도: 4/1/4</li><li>강한 촉매 수: 2</li><li>중요 공시 수: 0</li><li>직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>보조 뉴스: Yahoo Finance RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 13:08 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 13:05 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: Jim Cramer Says Comparing the Mag 7 Is a Mistake: Here Are 5 Reasons Each Stock Is Different</li><li>원점수/상한 점수: +26 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
-    <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 일부 연결</li><li>재확인 시각: 2026-07-13 13:08 KST</li><li>최근 발행 시각: 2026-07-13 13:05 KST</li><li>신선도: FRESH</li><li>출처: Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 &quot;Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe&quot;입니다.</li><li>직접 촉매: Yahoo Finance RSS / mna / under_24h - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>한국어 뉴스 요약 1: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>내용: Meta Platforms Inc. 관련 M&amp;A 뉴스입니다. 기사 스니펫상 핵심 내용은 Chinese regulators have required Meta Platforms to unwind its planned $2b acquisition of AI start up Manus, clearing the way for Tencent to become the largest shareholder.입니다.</li><li>투자 의미: M&amp;A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.</li><li>확인할 점: M&amp;A의 금액, 기간, 실적 반영 시점</li><li>한국어 뉴스 요약 2: Meta Has Raised Its AI Game. The Stock Should Continue to Rise In 2026.</li><li>내용: Meta Platforms Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Meta Platforms has been announcing a flurry of AI initiatives that would help it monetize its capex.입니다.</li><li>투자 의미: 애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.</li><li>확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지</li><li>한국어 뉴스 요약 3: Why Meta Platforms Stock Surged This Week</li><li>내용: Meta Platforms Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 시장 일반 성격의 재료가 긍정으로 해석되고 있습니다.</li><li>투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.</li><li>확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지</li><li>원문 헤드라인 1: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>원문 헤드라인 2: Yahoo Finance RSS / general_market / under_24h / positive - Meta Has Raised Its AI Game. The Stock Should Continue to Rise In 2026.</li><li>원문 헤드라인 3: Yahoo Finance RSS / general_market / under_6h / positive - Why Meta Platforms Stock Surged This Week</li><li>주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/4/0</li><li>직접성/방향성/신선도: 4/1/4</li><li>강한 촉매 수: 2</li><li>중요 공시 수: 0</li><li>직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 14:25 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:33 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li>원점수/상한 점수: +25 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 일부 연결</li><li>재확인 시각: 2026-07-13 14:25 KST</li><li>최근 발행 시각: 2026-07-13 12:03 KST</li><li>신선도: FRESH</li><li>출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 &quot;Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe&quot;입니다.</li><li>직접 촉매: Yahoo Finance RSS / mna / under_24h - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>한국어 뉴스 요약 1: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>내용: Meta Platforms Inc. 관련 M&amp;A 뉴스입니다. 기사 스니펫상 핵심 내용은 Chinese regulators have required Meta Platforms to unwind its planned $2b acquisition of AI start up Manus, clearing the way for Tencent to become the largest shareholder.입니다.</li><li>투자 의미: M&amp;A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.</li><li>확인할 점: M&amp;A의 금액, 기간, 실적 반영 시점</li><li>한국어 뉴스 요약 2: Meta Has Raised Its AI Game. The Stock Should Continue to Rise In 2026.</li><li>내용: Meta Platforms Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Meta Platforms has been announcing a flurry of AI initiatives that would help it monetize its capex.입니다.</li><li>투자 의미: 애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.</li><li>확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지</li><li>한국어 뉴스 요약 3: Why Meta Platforms Stock Surged This Week</li><li>내용: Meta Platforms Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 시장 일반 성격의 재료가 긍정으로 해석되고 있습니다.</li><li>투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.</li><li>확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지</li><li>원문 헤드라인 1: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>원문 헤드라인 2: Yahoo Finance RSS / general_market / under_24h / positive - Meta Has Raised Its AI Game. The Stock Should Continue to Rise In 2026.</li><li>원문 헤드라인 3: Yahoo Finance RSS / general_market / under_6h / positive - Why Meta Platforms Stock Surged This Week</li><li>주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>관련 ETF에서 확인</li></ul>
     <h4>거래대금 유동성</h4><ul><li>데이터 상태: 일부 연결</li><li>거래대금 기준 유동성: LIQUID</li><li>거래대금: $27,145,232,151</li><li>평균 거래대금: $13,582,038,552</li><li>주문 영향: 시장가 가능</li><li>매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다</li></ul>
     <h4>reasonConfidence 근거</h4><p class="muted">가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.</p>
@@ -3007,24 +3024,24 @@
     <p class="warning-note">메인 행동 후보를 대체하지 않는 보조 관찰 섹션이다. 상위 서사 안에서 초기 추세 전환, 베이스 돌파, 거래량 회복이 시작되는 개별주만 표시한다.</p>
     <p>다크호스 후보 없음. 상위 서사 정렬, MA20 위 안착, MA5/MA20 구조 개선, RVOL 0.90x 이상 조건을 동시에 충족한 개별주가 없다.</p>
     <div class="grid">
-      <div class="tile"><strong>darkHorseScore</strong>조건 충족 후보 없음</div>
-      <div class="tile"><strong>아직 메인이 아닌 이유</strong>확인 조건을 통과한 보조 관찰 후보가 없다.</div>
+      <div class="tile tone-positive"><strong>darkHorseScore</strong><span class="tile-value">조건 충족 후보 없음</span></div>
+      <div class="tile tone-warning"><strong>아직 메인이 아닌 이유</strong><span class="tile-value">확인 조건을 통과한 보조 <span class="emphasis-amber">관찰</span> 후보가 없다.</span></div>
     </div>
     <details>
       <summary><strong>darkHorseScore 상세 근거 보기</strong></summary>
       <div class="grid">
-        <div class="tile"><strong>서사 정렬</strong>조건 미충족</div>
-        <div class="tile"><strong>초기 추세 구조</strong>조건 미충족</div>
-        <div class="tile"><strong>베이스 돌파</strong>조건 미충족</div>
-        <div class="tile"><strong>거래량 확인</strong>조건 미충족</div>
-        <div class="tile"><strong>rawScore</strong>데이터 없음</div>
+        <div class="tile tone-positive"><strong>서사 정렬</strong><span class="tile-value">조건 미충족</span></div>
+        <div class="tile tone-positive"><strong>초기 추세 구조</strong><span class="tile-value">조건 미충족</span></div>
+        <div class="tile tone-positive"><strong>베이스 돌파</strong><span class="tile-value">조건 미충족</span></div>
+        <div class="tile tone-positive"><strong>거래량 확인</strong><span class="tile-value">조건 미충족</span></div>
+        <div class="tile tone-neutral"><strong>rawScore</strong><span class="tile-value">데이터 없음</span></div>
       </div>
     </details>
   </section>
     
     <section><h2>오늘의 분리 결론</h2><div class="grid">
-    <div class="tile"><strong>ETF 행동 후보</strong>없음</div>
-    <div class="tile"><strong>개별 종목 행동 후보</strong>Meta Platforms Inc.(META)</div>
+    <div class="tile tone-neutral"><strong>ETF 행동 후보</strong><span class="tile-value">없음</span></div>
+    <div class="tile tone-neutral"><strong>개별 종목 행동 후보</strong><span class="tile-value">Meta Platforms Inc.(META)</span></div>
   </div></section>
     <section class="mobile-only" data-mobile-narrative-summary-section>
     <h2>전체 narrative 요약</h2>
@@ -4456,32 +4473,32 @@
   </div>
     <div class="metric-grid"><div class="metric-chip"><strong>ETF</strong><span>Asset</span></div><div class="metric-chip"><strong>위험선호 성장주 재진입</strong><span>Narrative</span></div><div class="metric-chip"><strong>약화</strong><span>Narrative Status</span></div><div class="metric-chip"><strong>20</strong><span>Narrative Score</span></div><div class="metric-chip"><strong>30</strong><span>Trend Strength</span></div><div class="metric-chip"><strong>낮음 9</strong><span>Exhaustion</span></div><div class="metric-chip"><strong>낮음 34</strong><span>Entry Quality</span></div><div class="metric-chip"><strong>71</strong><span>moneyFlowScore</span></div><div class="metric-chip"><strong>71</strong><span>finalRawScore</span></div><div class="metric-chip"><strong>MEDIUM</strong><span>Confidence</span></div><div class="metric-chip"><strong>관찰</strong><span>후보 환경</span></div><div class="metric-chip"><strong>제외</strong><span>Action</span></div><div class="metric-chip"><strong>지정가 권장</strong><span>주문 실행</span></div><div class="metric-chip"><strong>메가캡 플랫폼 ETF</strong><span>ETF Category</span></div><div class="metric-chip"><strong>테마 베타 매수</strong><span>ETF Role</span></div><div class="metric-chip"><strong>ok</strong><span>Data</span></div></div>
     <div class="market-grid"><div class="metric-chip"><strong>+1.38%</strong><span>1D</span></div><div class="metric-chip"><strong>+3.96%</strong><span>5D</span></div><div class="metric-chip"><strong>+5.39%</strong><span>20D</span></div><div class="metric-chip"><strong>1.17x</strong><span>RVOL</span></div><div class="metric-chip"><strong>-4.89%</strong><span>52W Gap</span></div><div class="metric-chip"><strong>ACCEPTABLE</strong><span>Liquidity</span></div><div class="metric-chip"><strong>DISABLED</strong><span>ETF Breadth</span></div><div class="metric-chip"><strong>낮음</strong><span>Overheat</span></div></div>
-    <div class="insight-grid"><div class="insight"><strong>트렌드 판단</strong><p>테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.</p></div><div class="insight"><strong>왜 돈이 몰리는가</strong><p>20일 +5.39%, 5일 +3.96%, 상대 거래량 1.17배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</p></div><div class="insight"><strong>다음 매수 주체</strong><p>섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금</p></div><div class="insight"><strong>직접 촉매</strong><p>직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</p></div><div class="insight"><strong>시장 해석</strong><p>위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / Entry Quality 34 &lt; 40 / 진입 품질 부족</p></div><div class="insight"><strong>게이트</strong><p>Entry Quality 34 &lt; 40 / 진입 품질 부족</p></div><div class="insight"><strong>더 비싸게 갈 수 있는 이유</strong><p>52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</p></div><div class="insight"><strong>진입 조건</strong><p>전일 고점 돌파와 5일선 유지 확인</p></div><div class="insight"><strong>무효화 조건</strong><p>20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</p></div><div class="insight"><strong>tieBreakerReason</strong><p>최종 원점수 71, 리스크 패널티 0, 5일 수익률 +3.96%, 상대 거래량 1.17배 순으로 정렬</p></div><div class="insight"><strong>reasonConfidenceExplanation</strong><p>ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.</p></div></div>
+    <div class="insight-grid"><div class="insight"><strong>트렌드 판단</strong><p>테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.</p></div><div class="insight"><strong>왜 돈이 몰리는가</strong><p>20일 +5.39%, 5일 +3.96%, 상대 거래량 1.17배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE</p></div><div class="insight"><strong>다음 매수 주체</strong><p>섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금</p></div><div class="insight"><strong>직접 촉매</strong><p>직접 촉매: MarketWatch RSS / general_market / under_72h - My insurance company said my roof lost a few tiles. Loss adjusters found $10,000 in storm damage. How could this happen?</p></div><div class="insight"><strong>시장 해석</strong><p>위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / Entry Quality 34 &lt; 40 / 진입 품질 부족</p></div><div class="insight"><strong>게이트</strong><p>Entry Quality 34 &lt; 40 / 진입 품질 부족</p></div><div class="insight"><strong>더 비싸게 갈 수 있는 이유</strong><p>52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</p></div><div class="insight"><strong>진입 조건</strong><p>전일 고점 돌파와 5일선 유지 확인</p></div><div class="insight"><strong>무효화 조건</strong><p>20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</p></div><div class="insight"><strong>tieBreakerReason</strong><p>최종 원점수 71, 리스크 패널티 0, 5일 수익률 +3.96%, 상대 거래량 1.17배 순으로 정렬</p></div><div class="insight"><strong>reasonConfidenceExplanation</strong><p>ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.</p></div></div>
     <details>
       <summary><strong>핵심 판단 문장 전체 보기</strong></summary>
-      <ul><li><strong>트렌드 판단</strong> 테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.</li><li><strong>왜 돈이 몰리는가</strong> 20일 +5.39%, 5일 +3.96%, 상대 거래량 1.17배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</li><li><strong>다음 매수 주체</strong> 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금</li><li><strong>직접 촉매</strong> 직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li><strong>시장 해석</strong> 위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / Entry Quality 34 &lt; 40 / 진입 품질 부족</li><li><strong>게이트</strong> Entry Quality 34 &lt; 40 / 진입 품질 부족</li><li><strong>더 비싸게 갈 수 있는 이유</strong> 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</li><li><strong>진입 조건</strong> 전일 고점 돌파와 5일선 유지 확인</li><li><strong>무효화 조건</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>tieBreakerReason</strong> 최종 원점수 71, 리스크 패널티 0, 5일 수익률 +3.96%, 상대 거래량 1.17배 순으로 정렬</li><li><strong>reasonConfidenceExplanation</strong> ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.</li></ul>
+      <ul><li><strong>트렌드 판단</strong> 테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.</li><li><strong>왜 돈이 몰리는가</strong> 20일 +5.39%, 5일 +3.96%, 상대 거래량 1.17배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE</li><li><strong>다음 매수 주체</strong> 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금</li><li><strong>직접 촉매</strong> 직접 촉매: MarketWatch RSS / general_market / under_72h - My insurance company said my roof lost a few tiles. Loss adjusters found $10,000 in storm damage. How could this happen?</li><li><strong>시장 해석</strong> 위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / Entry Quality 34 &lt; 40 / 진입 품질 부족</li><li><strong>게이트</strong> Entry Quality 34 &lt; 40 / 진입 품질 부족</li><li><strong>더 비싸게 갈 수 있는 이유</strong> 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</li><li><strong>진입 조건</strong> 전일 고점 돌파와 5일선 유지 확인</li><li><strong>무효화 조건</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>tieBreakerReason</strong> 최종 원점수 71, 리스크 패널티 0, 5일 수익률 +3.96%, 상대 거래량 1.17배 순으로 정렬</li><li><strong>reasonConfidenceExplanation</strong> ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.</li></ul>
     </details>
     <section class="candidate-news-summary"><h4>최근 뉴스/동향 한국어 요약</h4><ul><li>후보 선정 후 재확인 뉴스 데이터 없음</li></ul></section>
     <details class="score-details">
     <summary><strong>moneyFlowScore(최종) 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>moneyFlowScore(1차)</strong>57</div>
-      <div class="tile"><strong>최종 원점수</strong>71</div>
-      <div class="tile"><strong>최종 표시 점수</strong>71</div>
-      <div class="tile"><strong>cap 적용</strong>cap 미적용</div>
-      <div class="tile"><strong>가격/거래량 1차 점수</strong>+57</div>
-      <div class="tile"><strong>추세</strong>+12</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+5</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+4</div>
-      <div class="tile"><strong>거래량</strong>+10</div>
-      <div class="tile"><strong>신고가 근접</strong>+12</div>
-      <div class="tile"><strong>이동평균</strong>+14</div>
-      <div class="tile"><strong>하위 점수 cap</strong>초과 없음</div>
-      <div class="tile"><strong>뉴스</strong>+12</div>
-      <div class="tile"><strong>ETF 확산도</strong>0</div>
-      <div class="tile"><strong>유동성</strong>+2</div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차)</strong><span class="tile-value">57</span></div>
+      <div class="tile tone-neutral"><strong>최종 원점수</strong><span class="tile-value">71</span></div>
+      <div class="tile tone-neutral"><strong>최종 표시 점수</strong><span class="tile-value">71</span></div>
+      <div class="tile tone-neutral"><strong>cap 적용</strong><span class="tile-value">cap 미적용</span></div>
+      <div class="tile tone-positive"><strong>가격/거래량 1차 점수</strong><span class="tile-value">+57</span></div>
+      <div class="tile tone-positive"><strong>추세</strong><span class="tile-value">+12</span></div>
+      <div class="tile tone-positive"><strong>단기 모멘텀</strong><span class="tile-value">+5</span></div>
+      <div class="tile tone-positive"><strong>중기 모멘텀</strong><span class="tile-value">+4</span></div>
+      <div class="tile tone-positive"><strong>거래량</strong><span class="tile-value">+10</span></div>
+      <div class="tile tone-positive"><strong>신고가 근접</strong><span class="tile-value">+12</span></div>
+      <div class="tile tone-positive"><strong>이동평균</strong><span class="tile-value">+14</span></div>
+      <div class="tile tone-neutral"><strong>하위 점수 cap</strong><span class="tile-value">초과 없음</span></div>
+      <div class="tile tone-positive"><strong>뉴스</strong><span class="tile-value">+12</span></div>
+      <div class="tile tone-neutral"><strong>ETF 확산도</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-positive"><strong>유동성</strong><span class="tile-value">+2</span></div>
       
-      <div class="tile"><strong>리스크 패널티</strong>0</div>
+      <div class="tile tone-neutral"><strong>리스크 패널티</strong><span class="tile-value">0</span></div>
     </div>
     <p class="muted"><strong>계산식:</strong> +57 + +12 + 0 + +2 + 0 + 0 + 0 = 71</p>
     <ul><li>가격 모멘텀: 원점수 +12, 상한 적용 +12 / 최대 25</li><li>단기 모멘텀: 원점수 +5, 상한 적용 +5 / 최대 20</li><li>중기 모멘텀: 원점수 +4, 상한 적용 +4 / 최대 16</li><li>거래량: 원점수 +10, 상한 적용 +10 / 최대 20</li><li>신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12</li><li>이동평균: 원점수 +14, 상한 적용 +14 / 최대 14</li></ul>
@@ -4489,8 +4506,8 @@
     <details>
     <summary><strong>리스크 패널티 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총 리스크 패널티</strong>0</div>
-      <div class="tile"><strong>리스크 등급</strong>LOW</div>
+      <div class="tile tone-neutral"><strong>총 리스크 패널티</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-negative"><strong>리스크 등급</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
     </div>
     <h4>감점된 리스크</h4><ul><li>감점된 리스크 없음</li></ul>
     <h4>관찰 리스크</h4><ul><li>ETF breadth data not connected</li></ul>
@@ -4500,7 +4517,7 @@
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>ETF 확산도: 미연결</li><li>거래대금 유동성: 사용</li><li>관련 ETF 상대강도: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: CNBC Markets RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/3/1</li><li>직접성/방향성/신선도: 2/1/4</li><li>강한 촉매 수: 1</li><li>중요 공시 수: 0</li><li>직접 촉매: 없음</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 13:08 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:33 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li>원점수/상한 점수: +21 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/4/0</li><li>직접성/방향성/신선도: 2/1/4</li><li>강한 촉매 수: 1</li><li>중요 공시 수: 0</li><li>직접 촉매: 없음</li><li>보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 14:25 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:03 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: Oil prices rise, stock futures dip after latest flare-up of strikes between U.S. and Iran</li><li>원점수/상한 점수: +23 / +12</li><li>점수 반영: +12</li><li>주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
     <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 데이터 없음</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>구성종목 데이터 상태: 미연결</li><li>샘플 수: 0/0</li><li>샘플 신뢰도: UNKNOWN</li><li>상승 종목 비율: 데이터 없음</li><li>20일선 위 비율: 데이터 없음</li><li>50일선 위 비율: 데이터 없음</li><li>상위 기여 종목: 데이터 없음</li><li>확산도 판단: UNKNOWN</li><li>원점수/샘플 상한/반영 점수: 0 / N/A / 0</li><li>점수 반영: 0</li></ul>
     <h4>거래대금 유동성</h4><ul><li>데이터 상태: 일부 연결</li><li>거래대금 기준 유동성: ACCEPTABLE</li><li>거래대금: $434,180,736</li><li>평균 거래대금: $369,876,614</li><li>주문 영향: 지정가 권장</li><li>매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다</li></ul>
@@ -5749,32 +5766,32 @@
   </div>
     <div class="metric-grid"><div class="metric-chip"><strong>ETF</strong><span>Asset</span></div><div class="metric-chip"><strong>Data Storage 자금 유입</strong><span>Narrative</span></div><div class="metric-chip"><strong>약화</strong><span>Narrative Status</span></div><div class="metric-chip"><strong>41</strong><span>Narrative Score</span></div><div class="metric-chip"><strong>41</strong><span>Trend Strength</span></div><div class="metric-chip"><strong>낮음 4</strong><span>Exhaustion</span></div><div class="metric-chip"><strong>낮음 31</strong><span>Entry Quality</span></div><div class="metric-chip"><strong>43</strong><span>moneyFlowScore</span></div><div class="metric-chip"><strong>43</strong><span>finalRawScore</span></div><div class="metric-chip"><strong>LOW</strong><span>Confidence</span></div><div class="metric-chip"><strong>관찰</strong><span>후보 환경</span></div><div class="metric-chip"><strong>거래량 확인 전 관찰</strong><span>Action</span></div><div class="metric-chip"><strong>시장가 가능</strong><span>주문 실행</span></div><div class="metric-chip"><strong>시장 기준 ETF</strong><span>ETF Category</span></div><div class="metric-chip"><strong>시장 기준 확인</strong><span>ETF Role</span></div><div class="metric-chip"><strong>ok</strong><span>Data</span></div></div>
     <div class="market-grid"><div class="metric-chip"><strong>+0.43%</strong><span>1D</span></div><div class="metric-chip"><strong>+1.37%</strong><span>5D</span></div><div class="metric-chip"><strong>+4.07%</strong><span>20D</span></div><div class="metric-chip"><strong>0.72x</strong><span>RVOL</span></div><div class="metric-chip"><strong>-0.72%</strong><span>52W Gap</span></div><div class="metric-chip"><strong>LIQUID</strong><span>Liquidity</span></div><div class="metric-chip"><strong>PARTIAL</strong><span>ETF Breadth</span></div><div class="metric-chip"><strong>낮음</strong><span>Overheat</span></div></div>
-    <div class="insight-grid"><div class="insight"><strong>트렌드 판단</strong><p>시장 위험선호가 약해 시장 환경 비우호 구간이다.</p></div><div class="insight"><strong>왜 돈이 몰리는가</strong><p>최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</p></div><div class="insight"><strong>다음 매수 주체</strong><p>섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금</p></div><div class="insight"><strong>직접 촉매</strong><p>직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</p></div><div class="insight"><strong>시장 해석</strong><p>위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / Entry Quality 31 &lt; 40 / RVOL 0.72x &lt; 1.00x</p></div><div class="insight"><strong>게이트</strong><p>Entry Quality 31 &lt; 40 / RVOL 0.72x &lt; 1.00x</p></div><div class="insight"><strong>더 비싸게 갈 수 있는 이유</strong><p>52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</p></div><div class="insight"><strong>진입 조건</strong><p>상대 거래량 1.0배 회복 후 관찰</p></div><div class="insight"><strong>무효화 조건</strong><p>거래량 회복 실패</p></div><div class="insight"><strong>tieBreakerReason</strong><p>최종 원점수 43, 리스크 패널티 0, 5일 수익률 +1.37%, 상대 거래량 0.72배 순으로 정렬</p></div><div class="insight"><strong>reasonConfidenceExplanation</strong><p>가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.</p></div></div>
+    <div class="insight-grid"><div class="insight"><strong>트렌드 판단</strong><p>시장 위험선호가 약해 시장 환경 비우호 구간이다.</p></div><div class="insight"><strong>왜 돈이 몰리는가</strong><p>최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID</p></div><div class="insight"><strong>다음 매수 주체</strong><p>섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금</p></div><div class="insight"><strong>직접 촉매</strong><p>직접 촉매: Yahoo Finance RSS / general_market / under_24h - Stop Settling for VYM. This Fund Yields More, Costs 0.06%, and Beat the S&amp;P</p></div><div class="insight"><strong>시장 해석</strong><p>위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / Entry Quality 31 &lt; 40 / RVOL 0.72x &lt; 1.00x</p></div><div class="insight"><strong>게이트</strong><p>Entry Quality 31 &lt; 40 / RVOL 0.72x &lt; 1.00x</p></div><div class="insight"><strong>더 비싸게 갈 수 있는 이유</strong><p>52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</p></div><div class="insight"><strong>진입 조건</strong><p>상대 거래량 1.0배 회복 후 관찰</p></div><div class="insight"><strong>무효화 조건</strong><p>거래량 회복 실패</p></div><div class="insight"><strong>tieBreakerReason</strong><p>최종 원점수 43, 리스크 패널티 0, 5일 수익률 +1.37%, 상대 거래량 0.72배 순으로 정렬</p></div><div class="insight"><strong>reasonConfidenceExplanation</strong><p>가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.</p></div></div>
     <details>
       <summary><strong>핵심 판단 문장 전체 보기</strong></summary>
-      <ul><li><strong>트렌드 판단</strong> 시장 위험선호가 약해 시장 환경 비우호 구간이다.</li><li><strong>왜 돈이 몰리는가</strong> 최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</li><li><strong>다음 매수 주체</strong> 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금</li><li><strong>직접 촉매</strong> 직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li><strong>시장 해석</strong> 위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / Entry Quality 31 &lt; 40 / RVOL 0.72x &lt; 1.00x</li><li><strong>게이트</strong> Entry Quality 31 &lt; 40 / RVOL 0.72x &lt; 1.00x</li><li><strong>더 비싸게 갈 수 있는 이유</strong> 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</li><li><strong>진입 조건</strong> 상대 거래량 1.0배 회복 후 관찰</li><li><strong>무효화 조건</strong> 거래량 회복 실패</li><li><strong>tieBreakerReason</strong> 최종 원점수 43, 리스크 패널티 0, 5일 수익률 +1.37%, 상대 거래량 0.72배 순으로 정렬</li><li><strong>reasonConfidenceExplanation</strong> 가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.</li></ul>
+      <ul><li><strong>트렌드 판단</strong> 시장 위험선호가 약해 시장 환경 비우호 구간이다.</li><li><strong>왜 돈이 몰리는가</strong> 최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID</li><li><strong>다음 매수 주체</strong> 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금</li><li><strong>직접 촉매</strong> 직접 촉매: Yahoo Finance RSS / general_market / under_24h - Stop Settling for VYM. This Fund Yields More, Costs 0.06%, and Beat the S&amp;P</li><li><strong>시장 해석</strong> 위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / Entry Quality 31 &lt; 40 / RVOL 0.72x &lt; 1.00x</li><li><strong>게이트</strong> Entry Quality 31 &lt; 40 / RVOL 0.72x &lt; 1.00x</li><li><strong>더 비싸게 갈 수 있는 이유</strong> 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</li><li><strong>진입 조건</strong> 상대 거래량 1.0배 회복 후 관찰</li><li><strong>무효화 조건</strong> 거래량 회복 실패</li><li><strong>tieBreakerReason</strong> 최종 원점수 43, 리스크 패널티 0, 5일 수익률 +1.37%, 상대 거래량 0.72배 순으로 정렬</li><li><strong>reasonConfidenceExplanation</strong> 가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.</li></ul>
     </details>
     <section class="candidate-news-summary"><h4>최근 뉴스/동향 한국어 요약</h4><ul><li>후보 선정 후 재확인 뉴스 데이터 없음</li></ul></section>
     <details class="score-details">
     <summary><strong>moneyFlowScore(최종) 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>moneyFlowScore(1차)</strong>26</div>
-      <div class="tile"><strong>최종 원점수</strong>43</div>
-      <div class="tile"><strong>최종 표시 점수</strong>43</div>
-      <div class="tile"><strong>cap 적용</strong>cap 미적용</div>
-      <div class="tile"><strong>가격/거래량 1차 점수</strong>+26</div>
-      <div class="tile"><strong>추세</strong>+3</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+2</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+3</div>
-      <div class="tile"><strong>거래량</strong>-8</div>
-      <div class="tile"><strong>신고가 근접</strong>+12</div>
-      <div class="tile"><strong>이동평균</strong>+14</div>
-      <div class="tile"><strong>하위 점수 cap</strong>초과 없음</div>
-      <div class="tile"><strong>뉴스</strong>+12</div>
-      <div class="tile"><strong>ETF 확산도</strong>0</div>
-      <div class="tile"><strong>유동성</strong>+5</div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차)</strong><span class="tile-value">26</span></div>
+      <div class="tile tone-neutral"><strong>최종 원점수</strong><span class="tile-value">43</span></div>
+      <div class="tile tone-neutral"><strong>최종 표시 점수</strong><span class="tile-value">43</span></div>
+      <div class="tile tone-neutral"><strong>cap 적용</strong><span class="tile-value">cap 미적용</span></div>
+      <div class="tile tone-positive"><strong>가격/거래량 1차 점수</strong><span class="tile-value">+26</span></div>
+      <div class="tile tone-positive"><strong>추세</strong><span class="tile-value">+3</span></div>
+      <div class="tile tone-positive"><strong>단기 모멘텀</strong><span class="tile-value">+2</span></div>
+      <div class="tile tone-positive"><strong>중기 모멘텀</strong><span class="tile-value">+3</span></div>
+      <div class="tile tone-negative"><strong>거래량</strong><span class="tile-value">-8</span></div>
+      <div class="tile tone-positive"><strong>신고가 근접</strong><span class="tile-value">+12</span></div>
+      <div class="tile tone-positive"><strong>이동평균</strong><span class="tile-value">+14</span></div>
+      <div class="tile tone-neutral"><strong>하위 점수 cap</strong><span class="tile-value">초과 없음</span></div>
+      <div class="tile tone-positive"><strong>뉴스</strong><span class="tile-value">+12</span></div>
+      <div class="tile tone-neutral"><strong>ETF 확산도</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-positive"><strong>유동성</strong><span class="tile-value">+5</span></div>
       
-      <div class="tile"><strong>리스크 패널티</strong>0</div>
+      <div class="tile tone-neutral"><strong>리스크 패널티</strong><span class="tile-value">0</span></div>
     </div>
     <p class="muted"><strong>계산식:</strong> +26 + +12 + 0 + +5 + 0 + 0 + 0 = 43</p>
     <ul><li>가격 모멘텀: 원점수 +3, 상한 적용 +3 / 최대 25</li><li>단기 모멘텀: 원점수 +2, 상한 적용 +2 / 최대 20</li><li>중기 모멘텀: 원점수 +3, 상한 적용 +3 / 최대 16</li><li>거래량: 원점수 -8, 상한 적용 -8 / 최대 20</li><li>신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12</li><li>이동평균: 원점수 +14, 상한 적용 +14 / 최대 14</li></ul>
@@ -5782,8 +5799,8 @@
     <details>
     <summary><strong>리스크 패널티 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총 리스크 패널티</strong>0</div>
-      <div class="tile"><strong>리스크 등급</strong>LOW</div>
+      <div class="tile tone-neutral"><strong>총 리스크 패널티</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-negative"><strong>리스크 등급</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
     </div>
     <h4>감점된 리스크</h4><ul><li>감점된 리스크 없음</li></ul>
     <h4>관찰 리스크</h4><ul><li>주요 관찰 리스크 없음</li></ul>
@@ -5793,7 +5810,7 @@
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>ETF 확산도: 일부 연결</li><li>거래대금 유동성: 사용</li><li>관련 ETF 상대강도: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/3/1</li><li>직접성/방향성/신선도: 2/1/4</li><li>강한 촉매 수: 1</li><li>중요 공시 수: 0</li><li>직접 촉매: 없음</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 13:08 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:33 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li>원점수/상한 점수: +21 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/4/0</li><li>직접성/방향성/신선도: 2/1/4</li><li>강한 촉매 수: 1</li><li>중요 공시 수: 0</li><li>직접 촉매: 없음</li><li>보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 14:25 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:03 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: Oil prices rise, stock futures dip after latest flare-up of strikes between U.S. and Iran</li><li>원점수/상한 점수: +23 / +12</li><li>점수 반영: +12</li><li>주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
     <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 데이터 없음</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>구성종목 데이터 상태: 일부 연결</li><li>샘플 수: 4/4</li><li>샘플 신뢰도: INSUFFICIENT</li><li>상승 종목 비율: 75%</li><li>20일선 위 비율: 75%</li><li>50일선 위 비율: 50%</li><li>상위 기여 종목: NVDA, AAPL, XOM, MSFT</li><li>확산도 판단: SAMPLE_TOO_SMALL</li><li>원점수/샘플 상한/반영 점수: 0 / 0 / 0</li><li>점수 반영: 0</li></ul>
     <h4>거래대금 유동성</h4><ul><li>데이터 상태: 일부 연결</li><li>거래대금 기준 유동성: LIQUID</li><li>거래대금: $31,794,190,785</li><li>평균 거래대금: $44,289,568,297</li><li>주문 영향: 시장가 가능</li><li>매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다</li></ul>
@@ -7031,23 +7048,23 @@
     <details class="score-details">
     <summary><strong>moneyFlowScore(최종) 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>moneyFlowScore(1차)</strong>27</div>
-      <div class="tile"><strong>최종 원점수</strong>44</div>
-      <div class="tile"><strong>최종 표시 점수</strong>44</div>
-      <div class="tile"><strong>cap 적용</strong>cap 미적용</div>
-      <div class="tile"><strong>가격/거래량 1차 점수</strong>+27</div>
-      <div class="tile"><strong>추세</strong>+4</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+2</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+3</div>
-      <div class="tile"><strong>거래량</strong>-8</div>
-      <div class="tile"><strong>신고가 근접</strong>+12</div>
-      <div class="tile"><strong>이동평균</strong>+14</div>
-      <div class="tile"><strong>하위 점수 cap</strong>초과 없음</div>
-      <div class="tile"><strong>뉴스</strong>+12</div>
-      <div class="tile"><strong>ETF 확산도</strong>0</div>
-      <div class="tile"><strong>유동성</strong>+5</div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차)</strong><span class="tile-value">27</span></div>
+      <div class="tile tone-neutral"><strong>최종 원점수</strong><span class="tile-value">44</span></div>
+      <div class="tile tone-neutral"><strong>최종 표시 점수</strong><span class="tile-value">44</span></div>
+      <div class="tile tone-neutral"><strong>cap 적용</strong><span class="tile-value">cap 미적용</span></div>
+      <div class="tile tone-positive"><strong>가격/거래량 1차 점수</strong><span class="tile-value">+27</span></div>
+      <div class="tile tone-positive"><strong>추세</strong><span class="tile-value">+4</span></div>
+      <div class="tile tone-positive"><strong>단기 모멘텀</strong><span class="tile-value">+2</span></div>
+      <div class="tile tone-positive"><strong>중기 모멘텀</strong><span class="tile-value">+3</span></div>
+      <div class="tile tone-negative"><strong>거래량</strong><span class="tile-value">-8</span></div>
+      <div class="tile tone-positive"><strong>신고가 근접</strong><span class="tile-value">+12</span></div>
+      <div class="tile tone-positive"><strong>이동평균</strong><span class="tile-value">+14</span></div>
+      <div class="tile tone-neutral"><strong>하위 점수 cap</strong><span class="tile-value">초과 없음</span></div>
+      <div class="tile tone-positive"><strong>뉴스</strong><span class="tile-value">+12</span></div>
+      <div class="tile tone-neutral"><strong>ETF 확산도</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-positive"><strong>유동성</strong><span class="tile-value">+5</span></div>
       
-      <div class="tile"><strong>리스크 패널티</strong>0</div>
+      <div class="tile tone-neutral"><strong>리스크 패널티</strong><span class="tile-value">0</span></div>
     </div>
     <p class="muted"><strong>계산식:</strong> +27 + +12 + 0 + +5 + 0 + 0 + 0 = 44</p>
     <ul><li>가격 모멘텀: 원점수 +4, 상한 적용 +4 / 최대 25</li><li>단기 모멘텀: 원점수 +2, 상한 적용 +2 / 최대 20</li><li>중기 모멘텀: 원점수 +3, 상한 적용 +3 / 최대 16</li><li>거래량: 원점수 -8, 상한 적용 -8 / 최대 20</li><li>신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12</li><li>이동평균: 원점수 +14, 상한 적용 +14 / 최대 14</li></ul>
@@ -7055,8 +7072,8 @@
     <details>
     <summary><strong>리스크 패널티 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총 리스크 패널티</strong>0</div>
-      <div class="tile"><strong>리스크 등급</strong>LOW</div>
+      <div class="tile tone-neutral"><strong>총 리스크 패널티</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-negative"><strong>리스크 등급</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
     </div>
     <h4>감점된 리스크</h4><ul><li>감점된 리스크 없음</li></ul>
     <h4>관찰 리스크</h4><ul><li>주요 관찰 리스크 없음</li></ul>
@@ -7066,7 +7083,7 @@
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>ETF 확산도: 일부 연결</li><li>거래대금 유동성: 사용</li><li>관련 ETF 상대강도: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 11/4/1</li><li>직접성/방향성/신선도: 4/1/4</li><li>강한 촉매 수: 1</li><li>중요 공시 수: 0</li><li>직접 촉매: Yahoo Finance RSS / general_market / under_24h / neutral - If I Could Tell Every QQQ Investor 1 Thing About SpaceX&#39;s Nasdaq-100 Entry, It&#39;s This</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 13:08 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:33 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li>원점수/상한 점수: +22 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 10/5/1</li><li>직접성/방향성/신선도: 4/1/4</li><li>강한 촉매 수: 1</li><li>중요 공시 수: 0</li><li>직접 촉매: Yahoo Finance RSS / general_market / under_24h / neutral - If I Could Tell Every QQQ Investor 1 Thing About SpaceX&#39;s Nasdaq-100 Entry, It&#39;s This</li><li>보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 14:25 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:03 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: Oil prices rise, stock futures dip after latest flare-up of strikes between U.S. and Iran</li><li>원점수/상한 점수: +23 / +12</li><li>점수 반영: +12</li><li>주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
     <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 데이터 없음</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>구성종목 데이터 상태: 일부 연결</li><li>샘플 수: 3/3</li><li>샘플 신뢰도: INSUFFICIENT</li><li>상승 종목 비율: 67%</li><li>20일선 위 비율: 100%</li><li>50일선 위 비율: 67%</li><li>상위 기여 종목: NVDA, AAPL, MSFT</li><li>확산도 판단: SAMPLE_TOO_SMALL</li><li>원점수/샘플 상한/반영 점수: 0 / 0 / 0</li><li>점수 반영: 0</li></ul>
     <h4>거래대금 유동성</h4><ul><li>데이터 상태: 일부 연결</li><li>거래대금 기준 유동성: LIQUID</li><li>거래대금: $19,135,036,046</li><li>평균 거래대금: $33,014,825,897</li><li>주문 영향: 시장가 가능</li><li>매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다</li></ul>
@@ -8005,32 +8022,32 @@
   </div>
     <div class="metric-grid"><div class="metric-chip"><strong>ETF</strong><span>Asset</span></div><div class="metric-chip"><strong>AI 인프라 재가속</strong><span>Narrative</span></div><div class="metric-chip"><strong>약화</strong><span>Narrative Status</span></div><div class="metric-chip"><strong>22</strong><span>Narrative Score</span></div><div class="metric-chip"><strong>37</strong><span>Trend Strength</span></div><div class="metric-chip"><strong>낮음 1</strong><span>Exhaustion</span></div><div class="metric-chip"><strong>낮음 27</strong><span>Entry Quality</span></div><div class="metric-chip"><strong>34</strong><span>moneyFlowScore</span></div><div class="metric-chip"><strong>34</strong><span>finalRawScore</span></div><div class="metric-chip"><strong>LOW</strong><span>Confidence</span></div><div class="metric-chip"><strong>관찰</strong><span>후보 환경</span></div><div class="metric-chip"><strong>제외</strong><span>Action</span></div><div class="metric-chip"><strong>시장가 가능</strong><span>주문 실행</span></div><div class="metric-chip"><strong>메모리/HBM ETF</strong><span>ETF Category</span></div><div class="metric-chip"><strong>테마 베타 매수</strong><span>ETF Role</span></div><div class="metric-chip"><strong>ok</strong><span>Data</span></div></div>
     <div class="market-grid"><div class="metric-chip"><strong>-2.05%</strong><span>1D</span></div><div class="metric-chip"><strong>+3.97%</strong><span>5D</span></div><div class="metric-chip"><strong>+9.88%</strong><span>20D</span></div><div class="metric-chip"><strong>1.04x</strong><span>RVOL</span></div><div class="metric-chip"><strong>-22.50%</strong><span>52W Gap</span></div><div class="metric-chip"><strong>LIQUID</strong><span>Liquidity</span></div><div class="metric-chip"><strong>DISABLED</strong><span>ETF Breadth</span></div><div class="metric-chip"><strong>낮음</strong><span>Overheat</span></div></div>
-    <div class="insight-grid"><div class="insight"><strong>트렌드 판단</strong><p>시장 위험선호가 약해 시장 환경 비우호 구간이다.</p></div><div class="insight"><strong>왜 돈이 몰리는가</strong><p>20일 +9.88%, 5일 +3.97%, 상대 거래량 1.04배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</p></div><div class="insight"><strong>다음 매수 주체</strong><p>섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금</p></div><div class="insight"><strong>직접 촉매</strong><p>직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</p></div><div class="insight"><strong>시장 해석</strong><p>위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 27 &lt; 40 / 진입 품질 부족</p></div><div class="insight"><strong>게이트</strong><p>Entry Quality 27 &lt; 40 / 진입 품질 부족</p></div><div class="insight"><strong>더 비싸게 갈 수 있는 이유</strong><p>단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음</p></div><div class="insight"><strong>진입 조건</strong><p>20일선 위 눌림 후 재상승 확인</p></div><div class="insight"><strong>무효화 조건</strong><p>20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</p></div><div class="insight"><strong>tieBreakerReason</strong><p>최종 원점수 34, 리스크 패널티 -6, 5일 수익률 +3.97%, 상대 거래량 1.04배 순으로 정렬</p></div><div class="insight"><strong>reasonConfidenceExplanation</strong><p>가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.</p></div></div>
+    <div class="insight-grid"><div class="insight"><strong>트렌드 판단</strong><p>시장 위험선호가 약해 시장 환경 비우호 구간이다.</p></div><div class="insight"><strong>왜 돈이 몰리는가</strong><p>20일 +9.88%, 5일 +3.97%, 상대 거래량 1.04배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: LIQUID</p></div><div class="insight"><strong>다음 매수 주체</strong><p>섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금</p></div><div class="insight"><strong>직접 촉매</strong><p>직접 촉매: Yahoo Finance RSS / general_market / stale / neutral - New Memory ETFs Line Up to Challenge Runaway DRAM</p></div><div class="insight"><strong>시장 해석</strong><p>위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 27 &lt; 40 / 진입 품질 부족</p></div><div class="insight"><strong>게이트</strong><p>Entry Quality 27 &lt; 40 / 진입 품질 부족</p></div><div class="insight"><strong>더 비싸게 갈 수 있는 이유</strong><p>단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음</p></div><div class="insight"><strong>진입 조건</strong><p>20일선 위 눌림 후 재상승 확인</p></div><div class="insight"><strong>무효화 조건</strong><p>20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</p></div><div class="insight"><strong>tieBreakerReason</strong><p>최종 원점수 34, 리스크 패널티 -6, 5일 수익률 +3.97%, 상대 거래량 1.04배 순으로 정렬</p></div><div class="insight"><strong>reasonConfidenceExplanation</strong><p>가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.</p></div></div>
     <details>
       <summary><strong>핵심 판단 문장 전체 보기</strong></summary>
-      <ul><li><strong>트렌드 판단</strong> 시장 위험선호가 약해 시장 환경 비우호 구간이다.</li><li><strong>왜 돈이 몰리는가</strong> 20일 +9.88%, 5일 +3.97%, 상대 거래량 1.04배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</li><li><strong>다음 매수 주체</strong> 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금</li><li><strong>직접 촉매</strong> 직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li><strong>시장 해석</strong> 위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 27 &lt; 40 / 진입 품질 부족</li><li><strong>게이트</strong> Entry Quality 27 &lt; 40 / 진입 품질 부족</li><li><strong>더 비싸게 갈 수 있는 이유</strong> 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음</li><li><strong>진입 조건</strong> 20일선 위 눌림 후 재상승 확인</li><li><strong>무효화 조건</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>tieBreakerReason</strong> 최종 원점수 34, 리스크 패널티 -6, 5일 수익률 +3.97%, 상대 거래량 1.04배 순으로 정렬</li><li><strong>reasonConfidenceExplanation</strong> 가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.</li></ul>
+      <ul><li><strong>트렌드 판단</strong> 시장 위험선호가 약해 시장 환경 비우호 구간이다.</li><li><strong>왜 돈이 몰리는가</strong> 20일 +9.88%, 5일 +3.97%, 상대 거래량 1.04배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: LIQUID</li><li><strong>다음 매수 주체</strong> 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금</li><li><strong>직접 촉매</strong> 직접 촉매: Yahoo Finance RSS / general_market / stale / neutral - New Memory ETFs Line Up to Challenge Runaway DRAM</li><li><strong>시장 해석</strong> 위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / 후보는 당일 음봉 또는 약세 / Entry Quality 27 &lt; 40 / 진입 품질 부족</li><li><strong>게이트</strong> Entry Quality 27 &lt; 40 / 진입 품질 부족</li><li><strong>더 비싸게 갈 수 있는 이유</strong> 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음</li><li><strong>진입 조건</strong> 20일선 위 눌림 후 재상승 확인</li><li><strong>무효화 조건</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>tieBreakerReason</strong> 최종 원점수 34, 리스크 패널티 -6, 5일 수익률 +3.97%, 상대 거래량 1.04배 순으로 정렬</li><li><strong>reasonConfidenceExplanation</strong> 가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.</li></ul>
     </details>
     <section class="candidate-news-summary"><h4>최근 뉴스/동향 한국어 요약</h4><ul><li>후보 선정 후 재확인 뉴스 데이터 없음</li></ul></section>
     <details class="score-details">
     <summary><strong>moneyFlowScore(최종) 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>moneyFlowScore(1차)</strong>33</div>
-      <div class="tile"><strong>최종 원점수</strong>34</div>
-      <div class="tile"><strong>최종 표시 점수</strong>34</div>
-      <div class="tile"><strong>cap 적용</strong>cap 미적용</div>
-      <div class="tile"><strong>가격/거래량 1차 점수</strong>+33</div>
-      <div class="tile"><strong>추세</strong>+14</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+1</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+6</div>
-      <div class="tile"><strong>거래량</strong>+10</div>
-      <div class="tile"><strong>신고가 근접</strong>0</div>
-      <div class="tile"><strong>이동평균</strong>+2</div>
-      <div class="tile"><strong>하위 점수 cap</strong>초과 없음</div>
-      <div class="tile"><strong>뉴스</strong>+2</div>
-      <div class="tile"><strong>ETF 확산도</strong>0</div>
-      <div class="tile"><strong>유동성</strong>+5</div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차)</strong><span class="tile-value">33</span></div>
+      <div class="tile tone-neutral"><strong>최종 원점수</strong><span class="tile-value">34</span></div>
+      <div class="tile tone-neutral"><strong>최종 표시 점수</strong><span class="tile-value">34</span></div>
+      <div class="tile tone-neutral"><strong>cap 적용</strong><span class="tile-value">cap 미적용</span></div>
+      <div class="tile tone-positive"><strong>가격/거래량 1차 점수</strong><span class="tile-value">+33</span></div>
+      <div class="tile tone-positive"><strong>추세</strong><span class="tile-value">+14</span></div>
+      <div class="tile tone-positive"><strong>단기 모멘텀</strong><span class="tile-value">+1</span></div>
+      <div class="tile tone-positive"><strong>중기 모멘텀</strong><span class="tile-value">+6</span></div>
+      <div class="tile tone-positive"><strong>거래량</strong><span class="tile-value">+10</span></div>
+      <div class="tile tone-neutral"><strong>신고가 근접</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-positive"><strong>이동평균</strong><span class="tile-value">+2</span></div>
+      <div class="tile tone-neutral"><strong>하위 점수 cap</strong><span class="tile-value">초과 없음</span></div>
+      <div class="tile tone-positive"><strong>뉴스</strong><span class="tile-value">+2</span></div>
+      <div class="tile tone-neutral"><strong>ETF 확산도</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-positive"><strong>유동성</strong><span class="tile-value">+5</span></div>
       
-      <div class="tile"><strong>리스크 패널티</strong>-6</div>
+      <div class="tile tone-negative"><strong>리스크 패널티</strong><span class="tile-value">-6</span></div>
     </div>
     <p class="muted"><strong>계산식:</strong> +33 + +2 + 0 + +5 + 0 - 6 + 0 = 34</p>
     <ul><li>가격 모멘텀: 원점수 +14, 상한 적용 +14 / 최대 25</li><li>단기 모멘텀: 원점수 +1, 상한 적용 +1 / 최대 20</li><li>중기 모멘텀: 원점수 +6, 상한 적용 +6 / 최대 16</li><li>거래량: 원점수 +10, 상한 적용 +10 / 최대 20</li><li>신고가 근접: 원점수 0, 상한 적용 0 / 최대 12</li><li>이동평균: 원점수 +2, 상한 적용 +2 / 최대 14</li></ul>
@@ -8038,8 +8055,8 @@
     <details>
     <summary><strong>리스크 패널티 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총 리스크 패널티</strong>-6</div>
-      <div class="tile"><strong>리스크 등급</strong>LOW</div>
+      <div class="tile tone-negative"><strong>총 리스크 패널티</strong><span class="tile-value">-6</span></div>
+      <div class="tile tone-negative"><strong>리스크 등급</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
     </div>
     <h4>감점된 리스크</h4><ul><li><strong>20d moving average break risk</strong> -6<br><span class="muted">근거: Close is below the 20-day moving average. / 대응: Hold off until 20-day moving average is recovered.</span></li></ul>
     <h4>관찰 리스크</h4><ul><li>ETF breadth data not connected</li></ul>
@@ -8049,7 +8066,7 @@
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>ETF 확산도: 미연결</li><li>거래대금 유동성: 사용</li><li>관련 ETF 상대강도: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: CNBC Markets RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/3/1</li><li>직접성/방향성/신선도: 2/1/4</li><li>강한 촉매 수: 1</li><li>중요 공시 수: 0</li><li>직접 촉매: 없음</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 13:08 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:33 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 부정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -&gt; 긍정 점수 제한</li><li>핵심 뉴스 요약: SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li>원점수/상한 점수: +21 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 10/6/0</li><li>직접성/방향성/신선도: 4/1/4</li><li>강한 촉매 수: 1</li><li>중요 공시 수: 0</li><li>직접 촉매: Yahoo Finance RSS / general_market / stale / neutral - New Memory ETFs Line Up to Challenge Runaway DRAM</li><li>보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 14:25 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:03 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 부정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -&gt; 긍정 점수 제한</li><li>핵심 뉴스 요약: Oil prices rise, stock futures dip after latest flare-up of strikes between U.S. and Iran</li><li>원점수/상한 점수: +23 / +12</li><li>점수 반영: +12</li><li>주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
     <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 데이터 없음</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>구성종목 데이터 상태: 미연결</li><li>샘플 수: 0/0</li><li>샘플 신뢰도: UNKNOWN</li><li>상승 종목 비율: 데이터 없음</li><li>20일선 위 비율: 데이터 없음</li><li>50일선 위 비율: 데이터 없음</li><li>상위 기여 종목: 데이터 없음</li><li>확산도 판단: UNKNOWN</li><li>원점수/샘플 상한/반영 점수: 0 / N/A / 0</li><li>점수 반영: 0</li></ul>
     <h4>거래대금 유동성</h4><ul><li>데이터 상태: 일부 연결</li><li>거래대금 기준 유동성: LIQUID</li><li>거래대금: $4,059,359,936</li><li>평균 거래대금: $3,905,183,008</li><li>주문 영향: 시장가 가능</li><li>매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다</li></ul>
@@ -9317,23 +9334,23 @@
     <details class="score-details">
     <summary><strong>moneyFlowScore(최종) 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>moneyFlowScore(1차)</strong>43</div>
-      <div class="tile"><strong>최종 원점수</strong>43</div>
-      <div class="tile"><strong>최종 표시 점수</strong>43</div>
-      <div class="tile"><strong>cap 적용</strong>cap 미적용</div>
-      <div class="tile"><strong>가격/거래량 1차 점수</strong>+43</div>
-      <div class="tile"><strong>추세</strong>+6</div>
-      <div class="tile"><strong>단기 모멘텀</strong>-2</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+7</div>
-      <div class="tile"><strong>거래량</strong>+10</div>
-      <div class="tile"><strong>신고가 근접</strong>+12</div>
-      <div class="tile"><strong>이동평균</strong>+10</div>
-      <div class="tile"><strong>하위 점수 cap</strong>초과 없음</div>
-      <div class="tile"><strong>뉴스</strong>+2</div>
-      <div class="tile"><strong>ETF 확산도</strong>-4</div>
-      <div class="tile"><strong>유동성</strong>+2</div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차)</strong><span class="tile-value">43</span></div>
+      <div class="tile tone-neutral"><strong>최종 원점수</strong><span class="tile-value">43</span></div>
+      <div class="tile tone-neutral"><strong>최종 표시 점수</strong><span class="tile-value">43</span></div>
+      <div class="tile tone-neutral"><strong>cap 적용</strong><span class="tile-value">cap 미적용</span></div>
+      <div class="tile tone-positive"><strong>가격/거래량 1차 점수</strong><span class="tile-value">+43</span></div>
+      <div class="tile tone-positive"><strong>추세</strong><span class="tile-value">+6</span></div>
+      <div class="tile tone-negative"><strong>단기 모멘텀</strong><span class="tile-value">-2</span></div>
+      <div class="tile tone-positive"><strong>중기 모멘텀</strong><span class="tile-value">+7</span></div>
+      <div class="tile tone-positive"><strong>거래량</strong><span class="tile-value">+10</span></div>
+      <div class="tile tone-positive"><strong>신고가 근접</strong><span class="tile-value">+12</span></div>
+      <div class="tile tone-positive"><strong>이동평균</strong><span class="tile-value">+10</span></div>
+      <div class="tile tone-neutral"><strong>하위 점수 cap</strong><span class="tile-value">초과 없음</span></div>
+      <div class="tile tone-positive"><strong>뉴스</strong><span class="tile-value">+2</span></div>
+      <div class="tile tone-negative"><strong>ETF 확산도</strong><span class="tile-value">-4</span></div>
+      <div class="tile tone-positive"><strong>유동성</strong><span class="tile-value">+2</span></div>
       
-      <div class="tile"><strong>리스크 패널티</strong>0</div>
+      <div class="tile tone-neutral"><strong>리스크 패널티</strong><span class="tile-value">0</span></div>
     </div>
     <p class="muted"><strong>계산식:</strong> +43 + +2 - 4 + +2 + 0 + 0 + 0 = 43</p>
     <ul><li>가격 모멘텀: 원점수 +6, 상한 적용 +6 / 최대 25</li><li>단기 모멘텀: 원점수 -2, 상한 적용 -2 / 최대 20</li><li>중기 모멘텀: 원점수 +7, 상한 적용 +7 / 최대 16</li><li>거래량: 원점수 +10, 상한 적용 +10 / 최대 20</li><li>신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12</li><li>이동평균: 원점수 +10, 상한 적용 +10 / 최대 14</li></ul>
@@ -9341,8 +9358,8 @@
     <details>
     <summary><strong>리스크 패널티 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총 리스크 패널티</strong>0</div>
-      <div class="tile"><strong>리스크 등급</strong>LOW</div>
+      <div class="tile tone-neutral"><strong>총 리스크 패널티</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-negative"><strong>리스크 등급</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
     </div>
     <h4>감점된 리스크</h4><ul><li>감점된 리스크 없음</li></ul>
     <h4>관찰 리스크</h4><ul><li>주요 관찰 리스크 없음</li></ul>
@@ -9352,7 +9369,7 @@
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>ETF 확산도: 일부 연결</li><li>거래대금 유동성: 사용</li><li>관련 ETF 상대강도: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: CNBC Markets RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/3/1</li><li>직접성/방향성/신선도: 2/1/4</li><li>강한 촉매 수: 1</li><li>중요 공시 수: 0</li><li>직접 촉매: 없음</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 13:08 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:33 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 부정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -&gt; 긍정 점수 제한</li><li>핵심 뉴스 요약: SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li>원점수/상한 점수: +21 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: CNBC Markets RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/3/1</li><li>직접성/방향성/신선도: 2/1/4</li><li>강한 촉매 수: 1</li><li>중요 공시 수: 0</li><li>직접 촉매: 없음</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 14:25 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:33 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 부정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -&gt; 긍정 점수 제한</li><li>핵심 뉴스 요약: SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li>원점수/상한 점수: +21 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
     <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 데이터 없음</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>구성종목 데이터 상태: 일부 연결</li><li>샘플 수: 2/2</li><li>샘플 신뢰도: INSUFFICIENT</li><li>상승 종목 비율: 0%</li><li>20일선 위 비율: 100%</li><li>50일선 위 비율: 0%</li><li>상위 기여 종목: MSFT, PLTR</li><li>확산도 판단: WEAK_BREADTH</li><li>원점수/샘플 상한/반영 점수: -4 / 0 / -4</li><li>점수 반영: -4</li></ul>
     <h4>거래대금 유동성</h4><ul><li>데이터 상태: 일부 연결</li><li>거래대금 기준 유동성: ACCEPTABLE</li><li>거래대금: $154,661,604</li><li>평균 거래대금: $145,094,140</li><li>주문 영향: 지정가 권장</li><li>매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다</li></ul>
@@ -10627,23 +10644,23 @@
     <details class="score-details">
     <summary><strong>moneyFlowScore(최종) 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>moneyFlowScore(1차)</strong>87</div>
-      <div class="tile"><strong>최종 원점수</strong>108</div>
-      <div class="tile"><strong>최종 표시 점수</strong>100</div>
-      <div class="tile"><strong>cap 적용</strong>raw score 108 capped to displayed score 100</div>
-      <div class="tile"><strong>가격/거래량 1차 점수</strong>+87</div>
-      <div class="tile"><strong>추세</strong>+25</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+19</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+11</div>
-      <div class="tile"><strong>거래량</strong>+18</div>
-      <div class="tile"><strong>신고가 근접</strong>0</div>
-      <div class="tile"><strong>이동평균</strong>+14</div>
-      <div class="tile"><strong>하위 점수 cap</strong>1개 적용</div>
-      <div class="tile"><strong>뉴스</strong>+12</div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차)</strong><span class="tile-value">87</span></div>
+      <div class="tile tone-neutral"><strong>최종 원점수</strong><span class="tile-value">108</span></div>
+      <div class="tile tone-neutral"><strong>최종 표시 점수</strong><span class="tile-value">100</span></div>
+      <div class="tile tone-neutral"><strong>cap 적용</strong><span class="tile-value">raw score 108 capped to displayed score 100</span></div>
+      <div class="tile tone-positive"><strong>가격/거래량 1차 점수</strong><span class="tile-value">+87</span></div>
+      <div class="tile tone-positive"><strong>추세</strong><span class="tile-value">+25</span></div>
+      <div class="tile tone-positive"><strong>단기 모멘텀</strong><span class="tile-value">+19</span></div>
+      <div class="tile tone-positive"><strong>중기 모멘텀</strong><span class="tile-value">+11</span></div>
+      <div class="tile tone-positive"><strong>거래량</strong><span class="tile-value">+18</span></div>
+      <div class="tile tone-neutral"><strong>신고가 근접</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-positive"><strong>이동평균</strong><span class="tile-value">+14</span></div>
+      <div class="tile tone-neutral"><strong>하위 점수 cap</strong><span class="tile-value">1개 적용</span></div>
+      <div class="tile tone-positive"><strong>뉴스</strong><span class="tile-value">+12</span></div>
       
-      <div class="tile"><strong>유동성</strong>+5</div>
-      <div class="tile"><strong>ETF 대비 상대강도</strong>+4</div>
-      <div class="tile"><strong>리스크 패널티</strong>0</div>
+      <div class="tile tone-positive"><strong>유동성</strong><span class="tile-value">+5</span></div>
+      <div class="tile tone-positive"><strong>ETF 대비 상대강도</strong><span class="tile-value">+4</span></div>
+      <div class="tile tone-neutral"><strong>리스크 패널티</strong><span class="tile-value">0</span></div>
     </div>
     <p class="muted"><strong>계산식:</strong> +87 + +12 + 0 + +5 + +4 + 0 + 0 = 108 -&gt; 100</p>
     <ul><li>가격 모멘텀: 원점수 +26, 상한 적용 +25 / 최대 25 (cap 적용)</li><li>단기 모멘텀: 원점수 +19, 상한 적용 +19 / 최대 20</li><li>중기 모멘텀: 원점수 +11, 상한 적용 +11 / 최대 16</li><li>거래량: 원점수 +18, 상한 적용 +18 / 최대 20</li><li>신고가 근접: 원점수 0, 상한 적용 0 / 최대 12</li><li>이동평균: 원점수 +14, 상한 적용 +14 / 최대 14</li><li>관련 ETF 상대강도: 원점수 +4, 상한 적용 +4 / 최대 8</li></ul>
@@ -10651,8 +10668,8 @@
     <details>
     <summary><strong>리스크 패널티 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총 리스크 패널티</strong>0</div>
-      <div class="tile"><strong>리스크 등급</strong>LOW</div>
+      <div class="tile tone-neutral"><strong>총 리스크 패널티</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-negative"><strong>리스크 등급</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
     </div>
     <h4>감점된 리스크</h4><ul><li>감점된 리스크 없음</li></ul>
     <h4>관찰 리스크</h4><ul><li>주요 관찰 리스크 없음</li></ul>
@@ -10662,8 +10679,8 @@
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>ETF 확산도: 관련 ETF에서 확인</li><li>거래대금 유동성: 사용</li><li>관련 ETF 상대강도: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: Yahoo Finance RSS, CNBC Markets RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 13/3/0</li><li>직접성/방향성/신선도: 4/1/4</li><li>강한 촉매 수: 2</li><li>중요 공시 수: 0</li><li>직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>보조 뉴스: Yahoo Finance RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 13:08 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 13:05 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: Jim Cramer Says Comparing the Mag 7 Is a Mistake: Here Are 5 Reasons Each Stock Is Different</li><li>원점수/상한 점수: +26 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
-    <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 일부 연결</li><li>재확인 시각: 2026-07-13 13:08 KST</li><li>최근 발행 시각: 2026-07-13 13:05 KST</li><li>신선도: FRESH</li><li>출처: Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 &quot;Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe&quot;입니다.</li><li>직접 촉매: Yahoo Finance RSS / mna / under_24h - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>한국어 뉴스 요약 1: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>내용: Meta Platforms Inc. 관련 M&amp;A 뉴스입니다. 기사 스니펫상 핵심 내용은 Chinese regulators have required Meta Platforms to unwind its planned $2b acquisition of AI start up Manus, clearing the way for Tencent to become the largest shareholder.입니다.</li><li>투자 의미: M&amp;A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.</li><li>확인할 점: M&amp;A의 금액, 기간, 실적 반영 시점</li><li>한국어 뉴스 요약 2: Meta Has Raised Its AI Game. The Stock Should Continue to Rise In 2026.</li><li>내용: Meta Platforms Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Meta Platforms has been announcing a flurry of AI initiatives that would help it monetize its capex.입니다.</li><li>투자 의미: 애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.</li><li>확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지</li><li>한국어 뉴스 요약 3: Why Meta Platforms Stock Surged This Week</li><li>내용: Meta Platforms Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 시장 일반 성격의 재료가 긍정으로 해석되고 있습니다.</li><li>투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.</li><li>확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지</li><li>원문 헤드라인 1: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>원문 헤드라인 2: Yahoo Finance RSS / general_market / under_24h / positive - Meta Has Raised Its AI Game. The Stock Should Continue to Rise In 2026.</li><li>원문 헤드라인 3: Yahoo Finance RSS / general_market / under_6h / positive - Why Meta Platforms Stock Surged This Week</li><li>주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/4/0</li><li>직접성/방향성/신선도: 4/1/4</li><li>강한 촉매 수: 2</li><li>중요 공시 수: 0</li><li>직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 14:25 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:33 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li>원점수/상한 점수: +25 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 일부 연결</li><li>재확인 시각: 2026-07-13 14:25 KST</li><li>최근 발행 시각: 2026-07-13 12:03 KST</li><li>신선도: FRESH</li><li>출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 &quot;Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe&quot;입니다.</li><li>직접 촉매: Yahoo Finance RSS / mna / under_24h - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>한국어 뉴스 요약 1: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>내용: Meta Platforms Inc. 관련 M&amp;A 뉴스입니다. 기사 스니펫상 핵심 내용은 Chinese regulators have required Meta Platforms to unwind its planned $2b acquisition of AI start up Manus, clearing the way for Tencent to become the largest shareholder.입니다.</li><li>투자 의미: M&amp;A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.</li><li>확인할 점: M&amp;A의 금액, 기간, 실적 반영 시점</li><li>한국어 뉴스 요약 2: Meta Has Raised Its AI Game. The Stock Should Continue to Rise In 2026.</li><li>내용: Meta Platforms Inc. 관련 기사는 목표가 변화를 다룹니다. 기사 스니펫상 핵심은 Meta Platforms has been announcing a flurry of AI initiatives that would help it monetize its capex.입니다.</li><li>투자 의미: 애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.</li><li>확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지</li><li>한국어 뉴스 요약 3: Why Meta Platforms Stock Surged This Week</li><li>내용: Meta Platforms Inc. 주가 급등 또는 강한 반등을 다룬 뉴스입니다. 시장 일반 성격의 재료가 긍정으로 해석되고 있습니다.</li><li>투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.</li><li>확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지</li><li>원문 헤드라인 1: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe</li><li>원문 헤드라인 2: Yahoo Finance RSS / general_market / under_24h / positive - Meta Has Raised Its AI Game. The Stock Should Continue to Rise In 2026.</li><li>원문 헤드라인 3: Yahoo Finance RSS / general_market / under_6h / positive - Why Meta Platforms Stock Surged This Week</li><li>주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>관련 ETF에서 확인</li></ul>
     <h4>거래대금 유동성</h4><ul><li>데이터 상태: 일부 연결</li><li>거래대금 기준 유동성: LIQUID</li><li>거래대금: $27,145,232,151</li><li>평균 거래대금: $13,582,038,552</li><li>주문 영향: 시장가 가능</li><li>매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다</li></ul>
     <h4>reasonConfidence 근거</h4><p class="muted">가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.</p>
@@ -11917,32 +11934,32 @@
   </div>
     <div class="metric-grid"><div class="metric-chip"><strong>STOCK</strong><span>Asset</span></div><div class="metric-chip"><strong>AI 인프라 재가속</strong><span>Narrative</span></div><div class="metric-chip"><strong>약화</strong><span>Narrative Status</span></div><div class="metric-chip"><strong>22</strong><span>Narrative Score</span></div><div class="metric-chip"><strong>37</strong><span>Trend Strength</span></div><div class="metric-chip"><strong>낮음 1</strong><span>Exhaustion</span></div><div class="metric-chip"><strong>관찰 40</strong><span>Entry Quality</span></div><div class="metric-chip"><strong>82</strong><span>moneyFlowScore</span></div><div class="metric-chip"><strong>82</strong><span>finalRawScore</span></div><div class="metric-chip"><strong>HIGH</strong><span>Confidence</span></div><div class="metric-chip"><strong>관찰</strong><span>후보 환경</span></div><div class="metric-chip"><strong>관찰</strong><span>Action</span></div><div class="metric-chip"><strong>시장가 가능</strong><span>주문 실행</span></div><div class="metric-chip"><strong>AI 반도체</strong><span>Theme</span></div><div class="metric-chip"><strong>Technology</strong><span>Sector</span></div><div class="metric-chip"><strong>Semiconductors</strong><span>Industry</span></div><div class="metric-chip"><strong>SMH, SOXX, SOXQ, AIQ, QQQ</strong><span>Related ETF</span></div><div class="metric-chip"><strong>관련 ETF보다 강함 | 주식 5일 +8.28% vs ETF 평균 +2.60%, 주식 20일 +5.26% vs ETF 평균 +5.72%, 상대 거래량 1.01배 vs ETF 평균 0.49배</strong><span>Vs ETF</span></div></div>
     <div class="market-grid"><div class="metric-chip"><strong>+4.03%</strong><span>1D</span></div><div class="metric-chip"><strong>+8.28%</strong><span>5D</span></div><div class="metric-chip"><strong>+5.26%</strong><span>20D</span></div><div class="metric-chip"><strong>1.01x</strong><span>RVOL</span></div><div class="metric-chip"><strong>-10.81%</strong><span>52W Gap</span></div><div class="metric-chip"><strong>LIQUID</strong><span>Liquidity</span></div><div class="metric-chip"><strong>SMH, SOXX, SOXQ, AIQ, QQQ</strong><span>ETF Breadth</span></div><div class="metric-chip"><strong>낮음</strong><span>Overheat</span></div></div>
-    <div class="insight-grid"><div class="insight"><strong>트렌드 판단</strong><p>시장 위험선호가 약해 시장 환경 비우호 구간이다.</p></div><div class="insight"><strong>왜 돈이 몰리는가</strong><p>20일 +5.26%, 5일 +8.28%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID</p></div><div class="insight"><strong>다음 매수 주체</strong><p>개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더</p></div><div class="insight"><strong>직접 촉매</strong><p>직접 촉매: Yahoo Finance RSS / general_market / under_6h - Did Nvidia&#39;s 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google?</p></div><div class="insight"><strong>시장 해석</strong><p>위험선호 / 후보 환경 관찰: 전체 시장은 위험선호</p></div><div class="insight"><strong>게이트</strong><p>통과</p></div><div class="insight"><strong>더 비싸게 갈 수 있는 이유</strong><p>단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음</p></div><div class="insight"><strong>진입 조건</strong><p>20일선 위 눌림 후 재상승 확인</p></div><div class="insight"><strong>무효화 조건</strong><p>20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</p></div><div class="insight"><strong>tieBreakerReason</strong><p>최종 원점수 82, 리스크 패널티 0, 5일 수익률 +8.28%, 상대 거래량 1.01배 순으로 정렬</p></div><div class="insight"><strong>reasonConfidenceExplanation</strong><p>직접 촉매: Yahoo Finance RSS / general_market / under_6h - Did Nvidia&#39;s 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.</p></div><div class="insight"><strong>왜 ETF가 아니라 이 종목인가</strong><p>NVDA가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.</p></div><div class="insight"><strong>ETF가 더 나은 경우</strong><p>NVDA가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.</p></div></div>
+    <div class="insight-grid"><div class="insight"><strong>트렌드 판단</strong><p>시장 위험선호가 약해 시장 환경 비우호 구간이다.</p></div><div class="insight"><strong>왜 돈이 몰리는가</strong><p>20일 +5.26%, 5일 +8.28%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS mna/under_6h / 유동성: LIQUID</p></div><div class="insight"><strong>다음 매수 주체</strong><p>개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더</p></div><div class="insight"><strong>직접 촉매</strong><p>직접 촉매: Yahoo Finance RSS / mna / under_6h / positive - INTC, AMD, NVDA, AVGO: Chip Stocks Slide As Fresh US-Iran Strikes Test Peace Deal</p></div><div class="insight"><strong>시장 해석</strong><p>위험선호 / 후보 환경 관찰: 전체 시장은 위험선호</p></div><div class="insight"><strong>게이트</strong><p>통과</p></div><div class="insight"><strong>더 비싸게 갈 수 있는 이유</strong><p>단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음</p></div><div class="insight"><strong>진입 조건</strong><p>20일선 위 눌림 후 재상승 확인</p></div><div class="insight"><strong>무효화 조건</strong><p>20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</p></div><div class="insight"><strong>tieBreakerReason</strong><p>최종 원점수 82, 리스크 패널티 0, 5일 수익률 +8.28%, 상대 거래량 1.01배 순으로 정렬</p></div><div class="insight"><strong>reasonConfidenceExplanation</strong><p>직접 촉매: Yahoo Finance RSS / mna / under_6h / positive - INTC, AMD, NVDA, AVGO: Chip Stocks Slide As Fresh US-Iran Strikes Test Peace Deal 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.</p></div><div class="insight"><strong>왜 ETF가 아니라 이 종목인가</strong><p>NVDA가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.</p></div><div class="insight"><strong>ETF가 더 나은 경우</strong><p>NVDA가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.</p></div></div>
     <details>
       <summary><strong>핵심 판단 문장 전체 보기</strong></summary>
-      <ul><li><strong>트렌드 판단</strong> 시장 위험선호가 약해 시장 환경 비우호 구간이다.</li><li><strong>왜 돈이 몰리는가</strong> 20일 +5.26%, 5일 +8.28%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID</li><li><strong>다음 매수 주체</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더</li><li><strong>직접 촉매</strong> 직접 촉매: Yahoo Finance RSS / general_market / under_6h - Did Nvidia&#39;s 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google?</li><li><strong>시장 해석</strong> 위험선호 / 후보 환경 관찰: 전체 시장은 위험선호</li><li><strong>게이트</strong> 통과</li><li><strong>더 비싸게 갈 수 있는 이유</strong> 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음</li><li><strong>진입 조건</strong> 20일선 위 눌림 후 재상승 확인</li><li><strong>무효화 조건</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>tieBreakerReason</strong> 최종 원점수 82, 리스크 패널티 0, 5일 수익률 +8.28%, 상대 거래량 1.01배 순으로 정렬</li><li><strong>reasonConfidenceExplanation</strong> 직접 촉매: Yahoo Finance RSS / general_market / under_6h - Did Nvidia&#39;s 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.</li><li><strong>왜 ETF가 아니라 이 종목인가</strong> NVDA가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.</li><li><strong>ETF가 더 나은 경우</strong> NVDA가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.</li></ul>
+      <ul><li><strong>트렌드 판단</strong> 시장 위험선호가 약해 시장 환경 비우호 구간이다.</li><li><strong>왜 돈이 몰리는가</strong> 20일 +5.26%, 5일 +8.28%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS mna/under_6h / 유동성: LIQUID</li><li><strong>다음 매수 주체</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더</li><li><strong>직접 촉매</strong> 직접 촉매: Yahoo Finance RSS / mna / under_6h / positive - INTC, AMD, NVDA, AVGO: Chip Stocks Slide As Fresh US-Iran Strikes Test Peace Deal</li><li><strong>시장 해석</strong> 위험선호 / 후보 환경 관찰: 전체 시장은 위험선호</li><li><strong>게이트</strong> 통과</li><li><strong>더 비싸게 갈 수 있는 이유</strong> 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음</li><li><strong>진입 조건</strong> 20일선 위 눌림 후 재상승 확인</li><li><strong>무효화 조건</strong> 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li><li><strong>tieBreakerReason</strong> 최종 원점수 82, 리스크 패널티 0, 5일 수익률 +8.28%, 상대 거래량 1.01배 순으로 정렬</li><li><strong>reasonConfidenceExplanation</strong> 직접 촉매: Yahoo Finance RSS / mna / under_6h / positive - INTC, AMD, NVDA, AVGO: Chip Stocks Slide As Fresh US-Iran Strikes Test Peace Deal 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.</li><li><strong>왜 ETF가 아니라 이 종목인가</strong> NVDA가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.</li><li><strong>ETF가 더 나은 경우</strong> NVDA가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.</li></ul>
     </details>
     <section class="candidate-news-summary"><h4>최근 뉴스/동향 한국어 요약</h4><ul><li>후보 선정 후 재확인 뉴스 데이터 없음</li></ul></section>
     <details class="score-details">
     <summary><strong>moneyFlowScore(최종) 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>moneyFlowScore(1차)</strong>61</div>
-      <div class="tile"><strong>최종 원점수</strong>82</div>
-      <div class="tile"><strong>최종 표시 점수</strong>82</div>
-      <div class="tile"><strong>cap 적용</strong>cap 미적용</div>
-      <div class="tile"><strong>가격/거래량 1차 점수</strong>+61</div>
-      <div class="tile"><strong>추세</strong>+17</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+11</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+3</div>
-      <div class="tile"><strong>거래량</strong>+10</div>
-      <div class="tile"><strong>신고가 근접</strong>+6</div>
-      <div class="tile"><strong>이동평균</strong>+14</div>
-      <div class="tile"><strong>하위 점수 cap</strong>초과 없음</div>
-      <div class="tile"><strong>뉴스</strong>+12</div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차)</strong><span class="tile-value">61</span></div>
+      <div class="tile tone-neutral"><strong>최종 원점수</strong><span class="tile-value">82</span></div>
+      <div class="tile tone-neutral"><strong>최종 표시 점수</strong><span class="tile-value">82</span></div>
+      <div class="tile tone-neutral"><strong>cap 적용</strong><span class="tile-value">cap 미적용</span></div>
+      <div class="tile tone-positive"><strong>가격/거래량 1차 점수</strong><span class="tile-value">+61</span></div>
+      <div class="tile tone-positive"><strong>추세</strong><span class="tile-value">+17</span></div>
+      <div class="tile tone-positive"><strong>단기 모멘텀</strong><span class="tile-value">+11</span></div>
+      <div class="tile tone-positive"><strong>중기 모멘텀</strong><span class="tile-value">+3</span></div>
+      <div class="tile tone-positive"><strong>거래량</strong><span class="tile-value">+10</span></div>
+      <div class="tile tone-positive"><strong>신고가 근접</strong><span class="tile-value">+6</span></div>
+      <div class="tile tone-positive"><strong>이동평균</strong><span class="tile-value">+14</span></div>
+      <div class="tile tone-neutral"><strong>하위 점수 cap</strong><span class="tile-value">초과 없음</span></div>
+      <div class="tile tone-positive"><strong>뉴스</strong><span class="tile-value">+12</span></div>
       
-      <div class="tile"><strong>유동성</strong>+5</div>
-      <div class="tile"><strong>ETF 대비 상대강도</strong>+4</div>
-      <div class="tile"><strong>리스크 패널티</strong>0</div>
+      <div class="tile tone-positive"><strong>유동성</strong><span class="tile-value">+5</span></div>
+      <div class="tile tone-positive"><strong>ETF 대비 상대강도</strong><span class="tile-value">+4</span></div>
+      <div class="tile tone-neutral"><strong>리스크 패널티</strong><span class="tile-value">0</span></div>
     </div>
     <p class="muted"><strong>계산식:</strong> +61 + +12 + 0 + +5 + +4 + 0 + 0 = 82</p>
     <ul><li>가격 모멘텀: 원점수 +17, 상한 적용 +17 / 최대 25</li><li>단기 모멘텀: 원점수 +11, 상한 적용 +11 / 최대 20</li><li>중기 모멘텀: 원점수 +3, 상한 적용 +3 / 최대 16</li><li>거래량: 원점수 +10, 상한 적용 +10 / 최대 20</li><li>신고가 근접: 원점수 +6, 상한 적용 +6 / 최대 12</li><li>이동평균: 원점수 +14, 상한 적용 +14 / 최대 14</li><li>관련 ETF 상대강도: 원점수 +4, 상한 적용 +4 / 최대 8</li></ul>
@@ -11950,8 +11967,8 @@
     <details>
     <summary><strong>리스크 패널티 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총 리스크 패널티</strong>0</div>
-      <div class="tile"><strong>리스크 등급</strong>LOW</div>
+      <div class="tile tone-neutral"><strong>총 리스크 패널티</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-negative"><strong>리스크 등급</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
     </div>
     <h4>감점된 리스크</h4><ul><li>감점된 리스크 없음</li></ul>
     <h4>관찰 리스크</h4><ul><li>주요 관찰 리스크 없음</li></ul>
@@ -11961,7 +11978,7 @@
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>ETF 확산도: 관련 ETF에서 확인</li><li>거래대금 유동성: 사용</li><li>관련 ETF 상대강도: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: Yahoo Finance RSS, CNBC Markets RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/4/0</li><li>직접성/방향성/신선도: 2/1/4</li><li>강한 촉매 수: 2</li><li>중요 공시 수: 0</li><li>직접 촉매: 없음</li><li>보조 뉴스: Yahoo Finance RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 13:08 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 13:05 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: Jim Cramer Says Comparing the Mag 7 Is a Mistake: Here Are 5 Reasons Each Stock Is Different</li><li>원점수/상한 점수: +23 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: Yahoo Finance RSS, CNBC Markets RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 11/5/0</li><li>직접성/방향성/신선도: 4/1/4</li><li>강한 촉매 수: 3</li><li>중요 공시 수: 0</li><li>직접 촉매: Yahoo Finance RSS / mna / under_6h / positive - INTC, AMD, NVDA, AVGO: Chip Stocks Slide As Fresh US-Iran Strikes Test Peace Deal</li><li>보조 뉴스: Yahoo Finance RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 14:25 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 13:58 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: INTC, AMD, NVDA, AVGO: Chip Stocks Slide As Fresh US-Iran Strikes Test Peace Deal</li><li>원점수/상한 점수: +26 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
     <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 데이터 없음</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>관련 ETF에서 확인</li></ul>
     <h4>거래대금 유동성</h4><ul><li>데이터 상태: 일부 연결</li><li>거래대금 기준 유동성: LIQUID</li><li>거래대금: $31,248,239,040</li><li>평균 거래대금: $30,972,899,322</li><li>주문 영향: 시장가 가능</li><li>매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다</li></ul>
@@ -13220,23 +13237,23 @@
     <details class="score-details">
     <summary><strong>moneyFlowScore(최종) 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>moneyFlowScore(1차)</strong>55</div>
-      <div class="tile"><strong>최종 원점수</strong>76</div>
-      <div class="tile"><strong>최종 표시 점수</strong>76</div>
-      <div class="tile"><strong>cap 적용</strong>cap 미적용</div>
-      <div class="tile"><strong>가격/거래량 1차 점수</strong>+55</div>
-      <div class="tile"><strong>추세</strong>+15</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+9</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+1</div>
-      <div class="tile"><strong>거래량</strong>+10</div>
-      <div class="tile"><strong>신고가 근접</strong>+6</div>
-      <div class="tile"><strong>이동평균</strong>+14</div>
-      <div class="tile"><strong>하위 점수 cap</strong>초과 없음</div>
-      <div class="tile"><strong>뉴스</strong>+12</div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차)</strong><span class="tile-value">55</span></div>
+      <div class="tile tone-neutral"><strong>최종 원점수</strong><span class="tile-value">76</span></div>
+      <div class="tile tone-neutral"><strong>최종 표시 점수</strong><span class="tile-value">76</span></div>
+      <div class="tile tone-neutral"><strong>cap 적용</strong><span class="tile-value">cap 미적용</span></div>
+      <div class="tile tone-positive"><strong>가격/거래량 1차 점수</strong><span class="tile-value">+55</span></div>
+      <div class="tile tone-positive"><strong>추세</strong><span class="tile-value">+15</span></div>
+      <div class="tile tone-positive"><strong>단기 모멘텀</strong><span class="tile-value">+9</span></div>
+      <div class="tile tone-positive"><strong>중기 모멘텀</strong><span class="tile-value">+1</span></div>
+      <div class="tile tone-positive"><strong>거래량</strong><span class="tile-value">+10</span></div>
+      <div class="tile tone-positive"><strong>신고가 근접</strong><span class="tile-value">+6</span></div>
+      <div class="tile tone-positive"><strong>이동평균</strong><span class="tile-value">+14</span></div>
+      <div class="tile tone-neutral"><strong>하위 점수 cap</strong><span class="tile-value">초과 없음</span></div>
+      <div class="tile tone-positive"><strong>뉴스</strong><span class="tile-value">+12</span></div>
       
-      <div class="tile"><strong>유동성</strong>+5</div>
-      <div class="tile"><strong>ETF 대비 상대강도</strong>+4</div>
-      <div class="tile"><strong>리스크 패널티</strong>0</div>
+      <div class="tile tone-positive"><strong>유동성</strong><span class="tile-value">+5</span></div>
+      <div class="tile tone-positive"><strong>ETF 대비 상대강도</strong><span class="tile-value">+4</span></div>
+      <div class="tile tone-neutral"><strong>리스크 패널티</strong><span class="tile-value">0</span></div>
     </div>
     <p class="muted"><strong>계산식:</strong> +55 + +12 + 0 + +5 + +4 + 0 + 0 = 76</p>
     <ul><li>가격 모멘텀: 원점수 +15, 상한 적용 +15 / 최대 25</li><li>단기 모멘텀: 원점수 +9, 상한 적용 +9 / 최대 20</li><li>중기 모멘텀: 원점수 +1, 상한 적용 +1 / 최대 16</li><li>거래량: 원점수 +10, 상한 적용 +10 / 최대 20</li><li>신고가 근접: 원점수 +6, 상한 적용 +6 / 최대 12</li><li>이동평균: 원점수 +14, 상한 적용 +14 / 최대 14</li><li>관련 ETF 상대강도: 원점수 +4, 상한 적용 +4 / 최대 8</li></ul>
@@ -13244,8 +13261,8 @@
     <details>
     <summary><strong>리스크 패널티 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총 리스크 패널티</strong>0</div>
-      <div class="tile"><strong>리스크 등급</strong>LOW</div>
+      <div class="tile tone-neutral"><strong>총 리스크 패널티</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-negative"><strong>리스크 등급</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
     </div>
     <h4>감점된 리스크</h4><ul><li>감점된 리스크 없음</li></ul>
     <h4>관찰 리스크</h4><ul><li>주요 관찰 리스크 없음</li></ul>
@@ -13255,7 +13272,7 @@
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>ETF 확산도: 관련 ETF에서 확인</li><li>거래대금 유동성: 사용</li><li>관련 ETF 상대강도: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: CNBC Markets RSS, Yahoo Finance RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/3/1</li><li>직접성/방향성/신선도: 2/1/4</li><li>강한 촉매 수: 2</li><li>중요 공시 수: 0</li><li>직접 촉매: 없음</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 13:08 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:33 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li>원점수/상한 점수: +23 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: CNBC Markets RSS, Yahoo Finance RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/3/1</li><li>직접성/방향성/신선도: 2/1/4</li><li>강한 촉매 수: 2</li><li>중요 공시 수: 0</li><li>직접 촉매: 없음</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 14:25 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:33 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li>원점수/상한 점수: +23 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
     <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 데이터 없음</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>관련 ETF에서 확인</li></ul>
     <h4>거래대금 유동성</h4><ul><li>데이터 상태: 일부 연결</li><li>거래대금 기준 유동성: LIQUID</li><li>거래대금: $3,175,422,691</li><li>평균 거래대금: $3,112,042,462</li><li>주문 영향: 시장가 가능</li><li>매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다</li></ul>
@@ -14500,32 +14517,32 @@
   </div>
     <div class="metric-grid"><div class="metric-chip"><strong>STOCK</strong><span>Asset</span></div><div class="metric-chip"><strong>AI 인프라 재가속</strong><span>Narrative</span></div><div class="metric-chip"><strong>약화</strong><span>Narrative Status</span></div><div class="metric-chip"><strong>22</strong><span>Narrative Score</span></div><div class="metric-chip"><strong>37</strong><span>Trend Strength</span></div><div class="metric-chip"><strong>낮음 1</strong><span>Exhaustion</span></div><div class="metric-chip"><strong>관찰 41</strong><span>Entry Quality</span></div><div class="metric-chip"><strong>75</strong><span>moneyFlowScore</span></div><div class="metric-chip"><strong>75</strong><span>finalRawScore</span></div><div class="metric-chip"><strong>LOW</strong><span>Confidence</span></div><div class="metric-chip"><strong>관찰</strong><span>후보 환경</span></div><div class="metric-chip"><strong>거래량 확인 전 관찰</strong><span>Action</span></div><div class="metric-chip"><strong>시장가 가능</strong><span>주문 실행</span></div><div class="metric-chip"><strong>AI 반도체</strong><span>Theme</span></div><div class="metric-chip"><strong>Technology</strong><span>Sector</span></div><div class="metric-chip"><strong>Semiconductors</strong><span>Industry</span></div><div class="metric-chip"><strong>SMH, SOXX, SOXQ, AIQ</strong><span>Related ETF</span></div><div class="metric-chip"><strong>관련 ETF보다 강함 | 주식 5일 +7.74% vs ETF 평균 +2.79%, 주식 20일 +23.32% vs ETF 평균 +6.00%, 상대 거래량 0.68배 vs ETF 평균 0.46배</strong><span>Vs ETF</span></div></div>
     <div class="market-grid"><div class="metric-chip"><strong>+2.04%</strong><span>1D</span></div><div class="metric-chip"><strong>+7.74%</strong><span>5D</span></div><div class="metric-chip"><strong>+23.32%</strong><span>20D</span></div><div class="metric-chip"><strong>0.68x</strong><span>RVOL</span></div><div class="metric-chip"><strong>-4.59%</strong><span>52W Gap</span></div><div class="metric-chip"><strong>LIQUID</strong><span>Liquidity</span></div><div class="metric-chip"><strong>SMH, SOXX, SOXQ, AIQ</strong><span>ETF Breadth</span></div><div class="metric-chip"><strong>낮음~중간</strong><span>Overheat</span></div></div>
-    <div class="insight-grid"><div class="insight"><strong>트렌드 판단</strong><p>시장 위험선호가 약해 시장 환경 비우호 구간이다.</p></div><div class="insight"><strong>왜 돈이 몰리는가</strong><p>최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID</p></div><div class="insight"><strong>다음 매수 주체</strong><p>개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더</p></div><div class="insight"><strong>직접 촉매</strong><p>직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - Did Nvidia&#39;s 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google?</p></div><div class="insight"><strong>시장 해석</strong><p>위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / 고점 근처 추격 리스크 / RVOL 0.68x &lt; 1.00x</p></div><div class="insight"><strong>게이트</strong><p>RVOL 0.68x &lt; 1.00x</p></div><div class="insight"><strong>더 비싸게 갈 수 있는 이유</strong><p>52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</p></div><div class="insight"><strong>진입 조건</strong><p>상대 거래량 1.0배 회복 후 관찰</p></div><div class="insight"><strong>무효화 조건</strong><p>거래량 회복 실패</p></div><div class="insight"><strong>tieBreakerReason</strong><p>최종 원점수 75, 리스크 패널티 -4, 5일 수익률 +7.74%, 상대 거래량 0.68배 순으로 정렬</p></div><div class="insight"><strong>reasonConfidenceExplanation</strong><p>가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.</p></div><div class="insight"><strong>왜 ETF가 아니라 이 종목인가</strong><p>AMD가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.</p></div><div class="insight"><strong>ETF가 더 나은 경우</strong><p>AMD가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.</p></div></div>
+    <div class="insight-grid"><div class="insight"><strong>트렌드 판단</strong><p>시장 위험선호가 약해 시장 환경 비우호 구간이다.</p></div><div class="insight"><strong>왜 돈이 몰리는가</strong><p>최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS mna/under_6h / 유동성: LIQUID</p></div><div class="insight"><strong>다음 매수 주체</strong><p>개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더</p></div><div class="insight"><strong>직접 촉매</strong><p>직접 촉매: Yahoo Finance RSS / mna / under_6h / positive - INTC, AMD, NVDA, AVGO: Chip Stocks Slide As Fresh US-Iran Strikes Test Peace Deal</p></div><div class="insight"><strong>시장 해석</strong><p>위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / 고점 근처 추격 리스크 / RVOL 0.68x &lt; 1.00x</p></div><div class="insight"><strong>게이트</strong><p>RVOL 0.68x &lt; 1.00x</p></div><div class="insight"><strong>더 비싸게 갈 수 있는 이유</strong><p>52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</p></div><div class="insight"><strong>진입 조건</strong><p>상대 거래량 1.0배 회복 후 관찰</p></div><div class="insight"><strong>무효화 조건</strong><p>거래량 회복 실패</p></div><div class="insight"><strong>tieBreakerReason</strong><p>최종 원점수 75, 리스크 패널티 -4, 5일 수익률 +7.74%, 상대 거래량 0.68배 순으로 정렬</p></div><div class="insight"><strong>reasonConfidenceExplanation</strong><p>가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.</p></div><div class="insight"><strong>왜 ETF가 아니라 이 종목인가</strong><p>AMD가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.</p></div><div class="insight"><strong>ETF가 더 나은 경우</strong><p>AMD가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.</p></div></div>
     <details>
       <summary><strong>핵심 판단 문장 전체 보기</strong></summary>
-      <ul><li><strong>트렌드 판단</strong> 시장 위험선호가 약해 시장 환경 비우호 구간이다.</li><li><strong>왜 돈이 몰리는가</strong> 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID</li><li><strong>다음 매수 주체</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더</li><li><strong>직접 촉매</strong> 직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - Did Nvidia&#39;s 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google?</li><li><strong>시장 해석</strong> 위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / 고점 근처 추격 리스크 / RVOL 0.68x &lt; 1.00x</li><li><strong>게이트</strong> RVOL 0.68x &lt; 1.00x</li><li><strong>더 비싸게 갈 수 있는 이유</strong> 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</li><li><strong>진입 조건</strong> 상대 거래량 1.0배 회복 후 관찰</li><li><strong>무효화 조건</strong> 거래량 회복 실패</li><li><strong>tieBreakerReason</strong> 최종 원점수 75, 리스크 패널티 -4, 5일 수익률 +7.74%, 상대 거래량 0.68배 순으로 정렬</li><li><strong>reasonConfidenceExplanation</strong> 가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.</li><li><strong>왜 ETF가 아니라 이 종목인가</strong> AMD가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.</li><li><strong>ETF가 더 나은 경우</strong> AMD가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.</li></ul>
+      <ul><li><strong>트렌드 판단</strong> 시장 위험선호가 약해 시장 환경 비우호 구간이다.</li><li><strong>왜 돈이 몰리는가</strong> 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS mna/under_6h / 유동성: LIQUID</li><li><strong>다음 매수 주체</strong> 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더</li><li><strong>직접 촉매</strong> 직접 촉매: Yahoo Finance RSS / mna / under_6h / positive - INTC, AMD, NVDA, AVGO: Chip Stocks Slide As Fresh US-Iran Strikes Test Peace Deal</li><li><strong>시장 해석</strong> 위험선호 / 후보 환경 관찰: 전체 시장은 위험선호 / 고점 근처 추격 리스크 / RVOL 0.68x &lt; 1.00x</li><li><strong>게이트</strong> RVOL 0.68x &lt; 1.00x</li><li><strong>더 비싸게 갈 수 있는 이유</strong> 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음</li><li><strong>진입 조건</strong> 상대 거래량 1.0배 회복 후 관찰</li><li><strong>무효화 조건</strong> 거래량 회복 실패</li><li><strong>tieBreakerReason</strong> 최종 원점수 75, 리스크 패널티 -4, 5일 수익률 +7.74%, 상대 거래량 0.68배 순으로 정렬</li><li><strong>reasonConfidenceExplanation</strong> 가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.</li><li><strong>왜 ETF가 아니라 이 종목인가</strong> AMD가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.</li><li><strong>ETF가 더 나은 경우</strong> AMD가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.</li></ul>
     </details>
     <section class="candidate-news-summary"><h4>최근 뉴스/동향 한국어 요약</h4><ul><li>후보 선정 후 재확인 뉴스 데이터 없음</li></ul></section>
     <details class="score-details">
     <summary><strong>moneyFlowScore(최종) 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>moneyFlowScore(1차)</strong>60</div>
-      <div class="tile"><strong>최종 원점수</strong>75</div>
-      <div class="tile"><strong>최종 표시 점수</strong>75</div>
-      <div class="tile"><strong>cap 적용</strong>cap 미적용</div>
-      <div class="tile"><strong>가격/거래량 1차 점수</strong>+60</div>
-      <div class="tile"><strong>추세</strong>+18</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+9</div>
-      <div class="tile"><strong>중기 모멘텀</strong>+15</div>
-      <div class="tile"><strong>거래량</strong>-8</div>
-      <div class="tile"><strong>신고가 근접</strong>+12</div>
-      <div class="tile"><strong>이동평균</strong>+14</div>
-      <div class="tile"><strong>하위 점수 cap</strong>초과 없음</div>
-      <div class="tile"><strong>뉴스</strong>+12</div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차)</strong><span class="tile-value">60</span></div>
+      <div class="tile tone-neutral"><strong>최종 원점수</strong><span class="tile-value">75</span></div>
+      <div class="tile tone-neutral"><strong>최종 표시 점수</strong><span class="tile-value">75</span></div>
+      <div class="tile tone-neutral"><strong>cap 적용</strong><span class="tile-value">cap 미적용</span></div>
+      <div class="tile tone-positive"><strong>가격/거래량 1차 점수</strong><span class="tile-value">+60</span></div>
+      <div class="tile tone-positive"><strong>추세</strong><span class="tile-value">+18</span></div>
+      <div class="tile tone-positive"><strong>단기 모멘텀</strong><span class="tile-value">+9</span></div>
+      <div class="tile tone-positive"><strong>중기 모멘텀</strong><span class="tile-value">+15</span></div>
+      <div class="tile tone-negative"><strong>거래량</strong><span class="tile-value">-8</span></div>
+      <div class="tile tone-positive"><strong>신고가 근접</strong><span class="tile-value">+12</span></div>
+      <div class="tile tone-positive"><strong>이동평균</strong><span class="tile-value">+14</span></div>
+      <div class="tile tone-neutral"><strong>하위 점수 cap</strong><span class="tile-value">초과 없음</span></div>
+      <div class="tile tone-positive"><strong>뉴스</strong><span class="tile-value">+12</span></div>
       
-      <div class="tile"><strong>유동성</strong>+5</div>
-      <div class="tile"><strong>ETF 대비 상대강도</strong>+2</div>
-      <div class="tile"><strong>리스크 패널티</strong>-4</div>
+      <div class="tile tone-positive"><strong>유동성</strong><span class="tile-value">+5</span></div>
+      <div class="tile tone-positive"><strong>ETF 대비 상대강도</strong><span class="tile-value">+2</span></div>
+      <div class="tile tone-negative"><strong>리스크 패널티</strong><span class="tile-value">-4</span></div>
     </div>
     <p class="muted"><strong>계산식:</strong> +60 + +12 + 0 + +5 + +2 - 4 + 0 = 75</p>
     <ul><li>가격 모멘텀: 원점수 +18, 상한 적용 +18 / 최대 25</li><li>단기 모멘텀: 원점수 +9, 상한 적용 +9 / 최대 20</li><li>중기 모멘텀: 원점수 +15, 상한 적용 +15 / 최대 16</li><li>거래량: 원점수 -8, 상한 적용 -8 / 최대 20</li><li>신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12</li><li>이동평균: 원점수 +14, 상한 적용 +14 / 최대 14</li><li>관련 ETF 상대강도: 원점수 +2, 상한 적용 +2 / 최대 8</li></ul>
@@ -14533,8 +14550,8 @@
     <details>
     <summary><strong>리스크 패널티 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총 리스크 패널티</strong>-4</div>
-      <div class="tile"><strong>리스크 등급</strong>LOW</div>
+      <div class="tile tone-negative"><strong>총 리스크 패널티</strong><span class="tile-value">-4</span></div>
+      <div class="tile tone-negative"><strong>리스크 등급</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
     </div>
     <h4>감점된 리스크</h4><ul><li><strong>volume divergence</strong> -4<br><span class="muted">근거: 5d price strength is not confirmed by relative volume 0.68x. / 대응: Require relative volume recovery above 1.0x.</span></li></ul>
     <h4>관찰 리스크</h4><ul><li>주요 관찰 리스크 없음</li></ul>
@@ -14544,7 +14561,7 @@
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>ETF 확산도: 관련 ETF에서 확인</li><li>거래대금 유동성: 사용</li><li>관련 ETF 상대강도: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: Yahoo Finance RSS, CNBC Markets RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/4/0</li><li>직접성/방향성/신선도: 4/1/4</li><li>강한 촉매 수: 2</li><li>중요 공시 수: 0</li><li>직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - Did Nvidia&#39;s 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google?</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 13:08 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:35 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: Did Nvidia&#39;s 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google?</li><li>원점수/상한 점수: +25 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: Yahoo Finance RSS, CNBC Markets RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/4/0</li><li>직접성/방향성/신선도: 4/1/4</li><li>강한 촉매 수: 3</li><li>중요 공시 수: 0</li><li>직접 촉매: Yahoo Finance RSS / mna / under_6h / positive - INTC, AMD, NVDA, AVGO: Chip Stocks Slide As Fresh US-Iran Strikes Test Peace Deal</li><li>보조 뉴스: Yahoo Finance RSS direct_ticker / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 14:25 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 13:58 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: INTC, AMD, NVDA, AVGO: Chip Stocks Slide As Fresh US-Iran Strikes Test Peace Deal</li><li>원점수/상한 점수: +27 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
     <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 데이터 없음</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>관련 ETF에서 확인</li></ul>
     <h4>거래대금 유동성</h4><ul><li>데이터 상태: 일부 연결</li><li>거래대금 기준 유동성: LIQUID</li><li>거래대금: $11,522,827,427</li><li>평균 거래대금: $16,906,000,089</li><li>주문 영향: 시장가 가능</li><li>매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다</li></ul>
@@ -15798,23 +15815,23 @@
     <details class="score-details">
     <summary><strong>moneyFlowScore(최종) 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>moneyFlowScore(1차)</strong>36</div>
-      <div class="tile"><strong>최종 원점수</strong>54</div>
-      <div class="tile"><strong>최종 표시 점수</strong>54</div>
-      <div class="tile"><strong>cap 적용</strong>cap 미적용</div>
-      <div class="tile"><strong>가격/거래량 1차 점수</strong>+36</div>
-      <div class="tile"><strong>추세</strong>+3</div>
-      <div class="tile"><strong>단기 모멘텀</strong>+5</div>
-      <div class="tile"><strong>중기 모멘텀</strong>-2</div>
-      <div class="tile"><strong>거래량</strong>+10</div>
-      <div class="tile"><strong>신고가 근접</strong>+6</div>
-      <div class="tile"><strong>이동평균</strong>+14</div>
-      <div class="tile"><strong>하위 점수 cap</strong>초과 없음</div>
-      <div class="tile"><strong>뉴스</strong>+12</div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차)</strong><span class="tile-value">36</span></div>
+      <div class="tile tone-neutral"><strong>최종 원점수</strong><span class="tile-value">54</span></div>
+      <div class="tile tone-neutral"><strong>최종 표시 점수</strong><span class="tile-value">54</span></div>
+      <div class="tile tone-neutral"><strong>cap 적용</strong><span class="tile-value">cap 미적용</span></div>
+      <div class="tile tone-positive"><strong>가격/거래량 1차 점수</strong><span class="tile-value">+36</span></div>
+      <div class="tile tone-positive"><strong>추세</strong><span class="tile-value">+3</span></div>
+      <div class="tile tone-positive"><strong>단기 모멘텀</strong><span class="tile-value">+5</span></div>
+      <div class="tile tone-negative"><strong>중기 모멘텀</strong><span class="tile-value">-2</span></div>
+      <div class="tile tone-positive"><strong>거래량</strong><span class="tile-value">+10</span></div>
+      <div class="tile tone-positive"><strong>신고가 근접</strong><span class="tile-value">+6</span></div>
+      <div class="tile tone-positive"><strong>이동평균</strong><span class="tile-value">+14</span></div>
+      <div class="tile tone-neutral"><strong>하위 점수 cap</strong><span class="tile-value">초과 없음</span></div>
+      <div class="tile tone-positive"><strong>뉴스</strong><span class="tile-value">+12</span></div>
       
-      <div class="tile"><strong>유동성</strong>+2</div>
-      <div class="tile"><strong>ETF 대비 상대강도</strong>+4</div>
-      <div class="tile"><strong>리스크 패널티</strong>0</div>
+      <div class="tile tone-positive"><strong>유동성</strong><span class="tile-value">+2</span></div>
+      <div class="tile tone-positive"><strong>ETF 대비 상대강도</strong><span class="tile-value">+4</span></div>
+      <div class="tile tone-neutral"><strong>리스크 패널티</strong><span class="tile-value">0</span></div>
     </div>
     <p class="muted"><strong>계산식:</strong> +36 + +12 + 0 + +2 + +4 + 0 + 0 = 54</p>
     <ul><li>가격 모멘텀: 원점수 +3, 상한 적용 +3 / 최대 25</li><li>단기 모멘텀: 원점수 +5, 상한 적용 +5 / 최대 20</li><li>중기 모멘텀: 원점수 -2, 상한 적용 -2 / 최대 16</li><li>거래량: 원점수 +10, 상한 적용 +10 / 최대 20</li><li>신고가 근접: 원점수 +6, 상한 적용 +6 / 최대 12</li><li>이동평균: 원점수 +14, 상한 적용 +14 / 최대 14</li><li>관련 ETF 상대강도: 원점수 +4, 상한 적용 +4 / 최대 8</li></ul>
@@ -15822,8 +15839,8 @@
     <details>
     <summary><strong>리스크 패널티 산정 근거 보기</strong></summary>
     <div class="grid">
-      <div class="tile"><strong>총 리스크 패널티</strong>0</div>
-      <div class="tile"><strong>리스크 등급</strong>LOW</div>
+      <div class="tile tone-neutral"><strong>총 리스크 패널티</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-negative"><strong>리스크 등급</strong><span class="tile-value"><span class="emphasis-red">LOW</span></span></div>
     </div>
     <h4>감점된 리스크</h4><ul><li>감점된 리스크 없음</li></ul>
     <h4>관찰 리스크</h4><ul><li>주요 관찰 리스크 없음</li></ul>
@@ -15833,7 +15850,7 @@
     <details>
     <summary><strong>데이터 사용 현황과 보조 데이터</strong></summary>
     <h4>데이터 사용 현황</h4><ul><li>가격/거래량: 사용</li><li>뉴스: 사용</li><li>ETF 확산도: 관련 ETF에서 확인</li><li>거래대금 유동성: 사용</li><li>관련 ETF 상대강도: 사용</li></ul>
-    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: CNBC Markets RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/3/1</li><li>직접성/방향성/신선도: 2/1/4</li><li>강한 촉매 수: 1</li><li>중요 공시 수: 0</li><li>직접 촉매: 없음</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 13:08 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:33 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li>원점수/상한 점수: +21 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
+    <h4>뉴스 확인</h4><ul><li>최근 뉴스 상태: 일부 연결</li><li>뉴스 소스: CNBC Markets RSS, MarketWatch RSS</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>긍정/중립/부정: 12/3/1</li><li>직접성/방향성/신선도: 2/1/4</li><li>강한 촉매 수: 1</li><li>중요 공시 수: 0</li><li>직접 촉매: 없음</li><li>보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h</li><li>뉴스 수집 시각: 2026-07-13 14:25 KST</li><li>가장 최근 뉴스 발행 시각: 2026-07-13 12:33 KST</li><li>뉴스 신선도 상태: FRESH</li><li>뉴스 이후 가격 반응: 긍정</li><li>가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음</li><li>핵심 뉴스 요약: SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut</li><li>원점수/상한 점수: +21 / +12</li><li>점수 반영: +12</li><li>주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured</li></ul>
     <h4>후보 선정 후 뉴스/동향 재확인</h4><ul><li>재확인 상태: 데이터 없음</li></ul>
     <h4>ETF 구성종목 확산도</h4><ul><li>관련 ETF에서 확인</li></ul>
     <h4>거래대금 유동성</h4><ul><li>데이터 상태: 일부 연결</li><li>거래대금 기준 유동성: ACCEPTABLE</li><li>거래대금: $504,359,791</li><li>평균 거래대금: $425,732,975</li><li>주문 영향: 지정가 권장</li><li>매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다</li></ul>
@@ -15846,15 +15863,15 @@
       <p class="muted">이 섹션은 실제 계좌 보유 종목이 아니라 전일 리포트에서 제시된 개별 종목 후보의 사후 점검이다. 실제 보유 수량/평단이 입력되지 않았으므로 계좌 수익률이 아니라 추천 기준일 이후 가격 변화를 추적한다.</p>
       <article data-previous-review-card="META"><h3>Meta Platforms Inc.(META) <span class="badge watch">눌림 대기</span></h3>
     <div class="grid">
-      <div class="tile"><strong>전일 추천일</strong>2026-07-10</div>
-      <div class="tile"><strong>전일 actionLabel</strong>자금흐름 예외 조건부</div>
-      <div class="tile"><strong>전일 moneyFlowScore</strong>100</div>
-      <div class="tile"><strong>전일 기준가</strong>$669.21</div>
-      <div class="tile"><strong>오늘 종가</strong>$669.21</div>
-      <div class="tile"><strong>추천 이후 수익률</strong>0.00%</div>
-      <div class="tile"><strong>진입 조건</strong>충족 또는 유지</div>
-      <div class="tile"><strong>무효화 조건</strong>미발생</div>
-      <div class="tile"><strong>ETF 대비 상대강도</strong>유지</div>
+      <div class="tile tone-negative"><strong>전일 추천일</strong><span class="tile-value">2026-07-10</span></div>
+      <div class="tile tone-warning"><strong>전일 actionLabel</strong><span class="tile-value">자금흐름 예외 <span class="emphasis-amber">조건부</span></span></div>
+      <div class="tile tone-negative"><strong>전일 moneyFlowScore</strong><span class="tile-value">100</span></div>
+      <div class="tile tone-neutral"><strong>전일 기준가</strong><span class="tile-value">$669.21</span></div>
+      <div class="tile tone-neutral"><strong>오늘 종가</strong><span class="tile-value">$669.21</span></div>
+      <div class="tile tone-neutral"><strong>추천 이후 수익률</strong><span class="tile-value">0.00%</span></div>
+      <div class="tile tone-positive"><strong>진입 조건</strong><span class="tile-value">충족 또는 유지</span></div>
+      <div class="tile tone-negative"><strong>무효화 조건</strong><span class="tile-value">미발생</span></div>
+      <div class="tile tone-neutral"><strong>ETF 대비 상대강도</strong><span class="tile-value">유지</span></div>
     </div>
     <ul><li>오늘 판단 근거: META는 전일 추천 이후 0.00% 변화. 관련 ETF보다 강함 | 주식 5일 +14.81% vs ETF 평균 +1.81%, 주식 20일 +17.20% vs ETF 평균 +4.59%, 상대 거래량 2.00배 vs ETF 평균 0.58배</li><li>다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화</li></ul>
   </article>
@@ -15863,13 +15880,13 @@
       <h3 id="score-table">Nasdaq-100 전체 moneyFlowScore(1차) 표</h3><p>이 표는 NASDAQ_100 전체 구성종목을 가격/거래량/추세 중심으로 빠르게 스캔한 moneyFlowScore(1차) 결과다. 뉴스, 유동성, 관련 ETF 대비 상대강도, 리스크 패널티를 반영한 최종 추천 점수는 Top5 카드의 moneyFlowScore(최종)에서 확인한다.</p>
     <p class="muted">Top5 카드의 moneyFlowScore(최종)는 1차 점수에 상세 데이터 가감점과 리스크 패널티를 더한 값이다. 따라서 아래 전체 표의 1차 순위와 Top5 최종 순위는 다를 수 있다.</p>
     <div class="grid">
-      <div class="tile"><strong>총 스캔 종목 수</strong>101</div>
-      <div class="tile"><strong>점수 계산 성공</strong>120</div>
-      <div class="tile"><strong>점수 계산 실패</strong>0</div>
-      <div class="tile"><strong>moneyFlowScore(1차) 80점 이상</strong>1</div>
-      <div class="tile"><strong>moneyFlowScore(1차) 65~79점</strong>0</div>
-      <div class="tile"><strong>moneyFlowScore(1차) 50~64점</strong>3</div>
-      <div class="tile"><strong>moneyFlowScore(1차) 50점 미만</strong>116</div>
+      <div class="tile tone-neutral"><strong>총 스캔 종목 수</strong><span class="tile-value">101</span></div>
+      <div class="tile tone-neutral"><strong>점수 계산 성공</strong><span class="tile-value">120</span></div>
+      <div class="tile tone-neutral"><strong>점수 계산 실패</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차) 80점 이상</strong><span class="tile-value">1</span></div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차) 65~79점</strong><span class="tile-value">0</span></div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차) 50~64점</strong><span class="tile-value">3</span></div>
+      <div class="tile tone-negative"><strong>moneyFlowScore(1차) 50점 미만</strong><span class="tile-value">116</span></div>
     </div>
     <h4>상위 20개 요약</h4>
     <div class="table-scroll desktop-table"><table data-stock-universe-table><thead><tr><th class="num">순위</th><th>티커</th><th>이름</th><th class="num">moneyFlowScore(1차)</th><th class="num">최종 표시 점수</th><th class="num">최종 원점수</th><th>점수 구간</th><th>오늘 판단</th><th>신뢰도</th><th class="num">1일</th><th class="num">5일</th><th class="num">20일</th><th class="num">상대 거래량</th><th>관련 ETF</th></tr></thead><tbody><tr><td class="num">1</td><td class="ticker">META</td><td>Meta Platforms Inc.</td><td class="num">87</td><td class="num">100</td><td class="num">108</td><td>강한 자금 유입 후보</td><td>자금흐름 예외 조건부</td><td>HIGH</td><td class="num">+5.97%</td><td class="num">+14.81%</td><td class="num">+17.20%</td><td class="num">2.00</td><td>QQQ</td></tr><tr><td class="num">2</td><td class="ticker">NVDA</td><td>NVIDIA Corporation</td><td class="num">61</td><td class="num">82</td><td class="num">82</td><td>관찰 후보</td><td>관찰</td><td>HIGH</td><td class="num">+4.03%</td><td class="num">+8.28%</td><td class="num">+5.26%</td><td class="num">1.01</td><td>SMH, SOXX, SOXQ, AIQ, QQQ</td></tr><tr><td class="num">3</td><td class="ticker">AMD</td><td>Advanced Micro Devices Inc.</td><td class="num">60</td><td class="num">75</td><td class="num">75</td><td>관찰 후보</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">+2.04%</td><td class="num">+7.74%</td><td class="num">+23.32%</td><td class="num">0.68</td><td>SMH, SOXX, SOXQ, AIQ</td></tr><tr><td class="num">4</td><td class="ticker">CSCO</td><td>Cisco Systems Inc.</td><td class="num">55</td><td class="num">76</td><td class="num">76</td><td>관찰 후보</td><td>관찰</td><td>MEDIUM</td><td class="num">+2.54%</td><td class="num">+7.65%</td><td class="num">+2.11%</td><td class="num">1.02</td><td>QQQ, SPY, IWM</td></tr><tr><td class="num">5</td><td class="ticker">MELI</td><td>MercadoLibre Inc.</td><td class="num">37</td><td class="num">51</td><td class="num">51</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">+2.46%</td><td class="num">+5.04%</td><td class="num">+16.62%</td><td class="num">0.89</td><td>QQQ</td></tr><tr><td class="num">6</td><td class="ticker">INSM</td><td>Insmed Incorporated</td><td class="num">37</td><td class="num">45</td><td class="num">45</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">-2.24%</td><td class="num">+3.59%</td><td class="num">+25.83%</td><td class="num">0.65</td><td>QQQ</td></tr><tr><td class="num">7</td><td class="ticker">TXN</td><td>Texas Instruments Incorporated</td><td class="num">36</td><td class="num">51</td><td class="num">51</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">+0.95%</td><td class="num">+6.27%</td><td class="num">+10.44%</td><td class="num">0.41</td><td>SMH, SOXX, SOXQ, AIQ</td></tr><tr><td class="num">8</td><td class="ticker">ODFL</td><td>Old Dominion Freight Line Inc.</td><td class="num">36</td><td class="num">54</td><td class="num">54</td><td>우선순위 낮음/매매 금지</td><td>제외</td><td>MEDIUM</td><td class="num">+0.79%</td><td class="num">+4.59%</td><td class="num">-3.53%</td><td class="num">1.18</td><td>QQQ, SPY, IWM</td></tr><tr><td class="num">9</td><td class="ticker">ABNB</td><td>Airbnb Inc.</td><td class="num">36</td><td class="num">54</td><td class="num">54</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">+1.18%</td><td class="num">-0.21%</td><td class="num">+15.12%</td><td class="num">0.70</td><td>QQQ</td></tr><tr><td class="num">10</td><td class="ticker">DASH</td><td>DoorDash Inc.</td><td class="num">34</td><td class="num">42</td><td class="num">42</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">-0.28%</td><td class="num">-0.10%</td><td class="num">+27.03%</td><td class="num">0.51</td><td>QQQ</td></tr><tr><td class="num">11</td><td class="ticker">DDOG</td><td>Datadog Inc.</td><td class="num">34</td><td class="num">45</td><td class="num">45</td><td>우선순위 낮음/매매 금지</td><td>제외</td><td>MEDIUM</td><td class="num">-4.26%</td><td class="num">-1.08%</td><td class="num">+13.14%</td><td class="num">1.05</td><td>IGV, AIQ, QQQ</td></tr><tr><td class="num">12</td><td class="ticker">GEV</td><td>GE Vernova</td><td class="num">34</td><td class="num">55</td><td class="num">55</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">+1.52%</td><td class="num">-1.94%</td><td class="num">+25.89%</td><td class="num">0.55</td><td>QQQ, SPY, IWM</td></tr><tr><td class="num">13</td><td class="ticker">PCAR</td><td>PACCAR Inc.</td><td class="num">31</td><td class="num">49</td><td class="num">49</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">+1.05%</td><td class="num">+4.24%</td><td class="num">+9.28%</td><td class="num">0.56</td><td>QQQ, SPY, IWM</td></tr><tr><td class="num">14</td><td class="ticker">STX</td><td>Seagate Technology Holdings plc</td><td class="num">30</td><td class="num">41</td><td class="num">41</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">+2.28%</td><td class="num">+11.00%</td><td class="num">+11.56%</td><td class="num">0.79</td><td>QQQ, SPY, IWM</td></tr><tr><td class="num">15</td><td class="ticker">WDC</td><td>Western Digital Corporation</td><td class="num">30</td><td class="num">41</td><td class="num">41</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">+0.79%</td><td class="num">+8.09%</td><td class="num">+18.87%</td><td class="num">0.45</td><td>QQQ, SPY, IWM</td></tr><tr><td class="num">16</td><td class="ticker">AAPL</td><td>Apple Inc.</td><td class="num">30</td><td class="num">43</td><td class="num">43</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">-0.28%</td><td class="num">+2.17%</td><td class="num">+8.14%</td><td class="num">0.53</td><td>QQQ, MAGS, SPY</td></tr><tr><td class="num">17</td><td class="ticker">AVGO</td><td>Broadcom Inc.</td><td class="num">29</td><td class="num">34</td><td class="num">34</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">-0.28%</td><td class="num">+10.96%</td><td class="num">+7.49%</td><td class="num">0.50</td><td>SMH, SOXX, SOXQ, AIQ</td></tr><tr><td class="num">18</td><td class="ticker">SBUX</td><td>Starbucks Corporation</td><td class="num">29</td><td class="num">37</td><td class="num">37</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">-0.38%</td><td class="num">+1.67%</td><td class="num">+7.34%</td><td class="num">0.62</td><td>QQQ, SPY, IWM</td></tr><tr><td class="num">19</td><td class="ticker">PYPL</td><td>PayPal Holdings Inc.</td><td class="num">27</td><td class="num">45</td><td class="num">45</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">+2.21%</td><td class="num">+1.87%</td><td class="num">+13.81%</td><td class="num">0.66</td><td>QQQ, SPY, IWM</td></tr><tr><td class="num">20</td><td class="ticker">CSX</td><td>CSX Corporation</td><td class="num">27</td><td class="num">45</td><td class="num">45</td><td>우선순위 낮음/매매 금지</td><td>거래량 확인 전 관찰</td><td>LOW</td><td class="num">+0.12%</td><td class="num">+1.06%</td><td class="num">+6.46%</td><td class="num">0.63</td><td>QQQ, SPY, IWM</td></tr></tbody></table></div>
@@ -17425,7 +17442,7 @@
     <h4>데이터 수집 실패 종목</h4>
     <ul><li>데이터 수집 실패 종목 없음</li></ul>
     </section>
-    <section><h2>감시 ETF 목록</h2><div class="desktop-table"><table><thead><tr><th>티커</th><th>카테고리</th><th>moneyFlowScore</th><th>finalRawScore</th><th>상태</th><th>reasonConfidence</th><th>주요 이유</th></tr></thead><tbody><tr><td>Roundhill Memory ETF(DRAM)</td><td>메모리/HBM ETF</td><td>34</td><td>34</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>20일 +9.88%, 5일 +3.97%, 상대 거래량 1.04배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</td></tr><tr><td>VanEck Semiconductor ETF(SMH)</td><td>AI 반도체 ETF</td><td>21</td><td>21</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.56배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</td></tr><tr><td>iShares Semiconductor ETF(SOXX)</td><td>AI 반도체 ETF</td><td>10</td><td>10</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.57배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</td></tr><tr><td>Invesco PHLX Semiconductor ETF(SOXQ)</td><td>AI 반도체 ETF</td><td>16</td><td>16</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.33배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>iShares Expanded Tech-Software Sector ETF(IGV)</td><td>클라우드/엔터프라이즈 소프트웨어 ETF</td><td>0</td><td>-1</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.59배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>Global X Artificial Intelligence &amp; Technology ETF(AIQ)</td><td>AI 소프트웨어 ETF</td><td>0</td><td>-7</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.40배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>Global X Robotics &amp; Artificial Intelligence ETF(BOTZ)</td><td>로봇/자동화 ETF</td><td>0</td><td>-7</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>ROBO Global Robotics and Automation Index ETF(ROBO)</td><td>로봇/자동화 ETF</td><td>0</td><td>-4</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.87배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>First Trust NASDAQ Cybersecurity ETF(CIBR)</td><td>사이버보안 ETF</td><td>43</td><td>43</td><td><span class="badge ban">매매 금지</span></td><td>MEDIUM</td><td>20일 +10.37%, 5일 +1.33%, 상대 거래량 1.07배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>Amplify Cybersecurity ETF(HACK)</td><td>사이버보안 ETF</td><td>37</td><td>37</td><td><span class="badge ban">매매 금지</span></td><td>MEDIUM</td><td>20일 +15.81%, 5일 +1.88%, 상대 거래량 1.08배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>iShares Cybersecurity and Tech ETF(IHAK)</td><td>사이버보안 ETF</td><td>19</td><td>19</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.46배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>iShares U.S. Aerospace &amp; Defense ETF(ITA)</td><td>방산 ETF</td><td>0</td><td>0</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>SPDR S&amp;P Aerospace &amp; Defense ETF(XAR)</td><td>방산 ETF</td><td>0</td><td>-10</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>20일 +1.77%, 5일 -5.60%, 상대 거래량 1.36배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>Global X Defense Tech ETF(SHLD)</td><td>방산 ETF</td><td>0</td><td>-38</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.37배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>Invesco Aerospace &amp; Defense ETF(PPA)</td><td>방산 ETF</td><td>0</td><td>-20</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.64배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>Global X U.S. Infrastructure Development ETF(PAVE)</td><td>인프라 ETF</td><td>0</td><td>-6</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.53배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>First Trust NASDAQ Clean Edge Smart Grid Infrastructure ETF(GRID)</td><td>전력망 인프라 ETF</td><td>0</td><td>-5</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.60배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>iShares U.S. Infrastructure ETF(IFRA)</td><td>인프라 ETF</td><td>5</td><td>5</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.66배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>Utilities Select Sector SPDR Fund(XLU)</td><td>전력/유틸리티 ETF</td><td>35</td><td>35</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.69배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>Global X Uranium ETF(URA)</td><td>원전/우라늄 ETF</td><td>0</td><td>-12</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>VanEck Uranium and Nuclear ETF(NLR)</td><td>원전/우라늄 ETF</td><td>0</td><td>-15</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.74배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>Global X Lithium &amp; Battery Tech ETF(LIT)</td><td>배터리/리튬 ETF</td><td>0</td><td>-45</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>Global X Copper Miners ETF(COPX)</td><td>구리/금속 ETF</td><td>0</td><td>-14</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.37배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>SPDR S&amp;P Metals &amp; Mining ETF(XME)</td><td>금속/광산 ETF</td><td>0</td><td>-13</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.81배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>Energy Select Sector SPDR Fund(XLE)</td><td>전통 에너지 ETF</td><td>15</td><td>15</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.69배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</td></tr><tr><td>VanEck Oil Services ETF(OIH)</td><td>전통 에너지 ETF</td><td>0</td><td>-9</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>ARK Innovation ETF(ARKK)</td><td>혁신 성장 ETF</td><td>12</td><td>12</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>Renaissance IPO ETF(IPO)</td><td>IPO/신규상장 ETF</td><td>19</td><td>19</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.15배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>KraneShares CSI China Internet ETF(KWEB)</td><td>중국 인터넷 ETF</td><td>11</td><td>11</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.46배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>Roundhill Magnificent Seven ETF(MAGS)</td><td>메가캡 플랫폼 ETF</td><td>71</td><td>71</td><td><span class="badge ban">매매 금지</span></td><td>MEDIUM</td><td>20일 +5.39%, 5일 +3.96%, 상대 거래량 1.17배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>Invesco QQQ Trust(QQQ)</td><td>시장 기준 ETF</td><td>44</td><td>44</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.58배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID</td></tr><tr><td>SPDR S&amp;P 500 ETF Trust(SPY)</td><td>시장 기준 ETF</td><td>43</td><td>43</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</td></tr><tr><td>iShares Russell 2000 ETF(IWM)</td><td>시장 기준 ETF</td><td>7</td><td>7</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.61배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</td></tr><tr><td>iShares 20+ Year Treasury Bond ETF(TLT)</td><td>채권 ETF</td><td>0</td><td>-9</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.57배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID</td></tr><tr><td>SPDR Gold Shares(GLD)</td><td>금 ETF</td><td>0</td><td>-14</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.71배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</td></tr><tr><td>iShares Bitcoin Trust ETF(IBIT)</td><td>비트코인 ETF</td><td>27</td><td>27</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.66배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</td></tr><tr><td>Amplify Transformational Data Sharing ETF(BLOK)</td><td>비트코인 ETF</td><td>0</td><td>-25</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.45배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr></tbody></table></div>
+    <section><h2>감시 ETF 목록</h2><div class="desktop-table"><table><thead><tr><th>티커</th><th>카테고리</th><th>moneyFlowScore</th><th>finalRawScore</th><th>상태</th><th>reasonConfidence</th><th>주요 이유</th></tr></thead><tbody><tr><td>Roundhill Memory ETF(DRAM)</td><td>메모리/HBM ETF</td><td>34</td><td>34</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>20일 +9.88%, 5일 +3.97%, 상대 거래량 1.04배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: LIQUID</td></tr><tr><td>VanEck Semiconductor ETF(SMH)</td><td>AI 반도체 ETF</td><td>21</td><td>21</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.56배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: LIQUID</td></tr><tr><td>iShares Semiconductor ETF(SOXX)</td><td>AI 반도체 ETF</td><td>10</td><td>10</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.57배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</td></tr><tr><td>Invesco PHLX Semiconductor ETF(SOXQ)</td><td>AI 반도체 ETF</td><td>16</td><td>16</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.33배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>iShares Expanded Tech-Software Sector ETF(IGV)</td><td>클라우드/엔터프라이즈 소프트웨어 ETF</td><td>0</td><td>-1</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.59배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>Global X Artificial Intelligence &amp; Technology ETF(AIQ)</td><td>AI 소프트웨어 ETF</td><td>0</td><td>-7</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.40배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h</td></tr><tr><td>Global X Robotics &amp; Artificial Intelligence ETF(BOTZ)</td><td>로봇/자동화 ETF</td><td>0</td><td>-7</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>ROBO Global Robotics and Automation Index ETF(ROBO)</td><td>로봇/자동화 ETF</td><td>0</td><td>-4</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.87배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>First Trust NASDAQ Cybersecurity ETF(CIBR)</td><td>사이버보안 ETF</td><td>43</td><td>43</td><td><span class="badge ban">매매 금지</span></td><td>MEDIUM</td><td>20일 +10.37%, 5일 +1.33%, 상대 거래량 1.07배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>Amplify Cybersecurity ETF(HACK)</td><td>사이버보안 ETF</td><td>37</td><td>37</td><td><span class="badge ban">매매 금지</span></td><td>MEDIUM</td><td>20일 +15.81%, 5일 +1.88%, 상대 거래량 1.08배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_72h</td></tr><tr><td>iShares Cybersecurity and Tech ETF(IHAK)</td><td>사이버보안 ETF</td><td>19</td><td>19</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.46배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>iShares U.S. Aerospace &amp; Defense ETF(ITA)</td><td>방산 ETF</td><td>0</td><td>0</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>SPDR S&amp;P Aerospace &amp; Defense ETF(XAR)</td><td>방산 ETF</td><td>0</td><td>-10</td><td><span class="badge ban">매매 금지</span></td><td>LOW</td><td>20일 +1.77%, 5일 -5.60%, 상대 거래량 1.36배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>Global X Defense Tech ETF(SHLD)</td><td>방산 ETF</td><td>0</td><td>-38</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.37배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale</td></tr><tr><td>Invesco Aerospace &amp; Defense ETF(PPA)</td><td>방산 ETF</td><td>0</td><td>-20</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.64배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</td></tr><tr><td>Global X U.S. Infrastructure Development ETF(PAVE)</td><td>인프라 ETF</td><td>0</td><td>-6</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.53배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h</td></tr><tr><td>First Trust NASDAQ Clean Edge Smart Grid Infrastructure ETF(GRID)</td><td>전력망 인프라 ETF</td><td>0</td><td>-5</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.60배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale</td></tr><tr><td>iShares U.S. Infrastructure ETF(IFRA)</td><td>인프라 ETF</td><td>5</td><td>5</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.66배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h</td></tr><tr><td>Utilities Select Sector SPDR Fund(XLU)</td><td>전력/유틸리티 ETF</td><td>35</td><td>35</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.69배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE</td></tr><tr><td>Global X Uranium ETF(URA)</td><td>원전/우라늄 ETF</td><td>0</td><td>-12</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale</td></tr><tr><td>VanEck Uranium and Nuclear ETF(NLR)</td><td>원전/우라늄 ETF</td><td>0</td><td>-15</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.74배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS regulation/stale</td></tr><tr><td>Global X Lithium &amp; Battery Tech ETF(LIT)</td><td>배터리/리튬 ETF</td><td>0</td><td>-45</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h</td></tr><tr><td>Global X Copper Miners ETF(COPX)</td><td>구리/금속 ETF</td><td>0</td><td>-14</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.37배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h</td></tr><tr><td>SPDR S&amp;P Metals &amp; Mining ETF(XME)</td><td>금속/광산 ETF</td><td>0</td><td>-13</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.81배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE</td></tr><tr><td>Energy Select Sector SPDR Fund(XLE)</td><td>전통 에너지 ETF</td><td>15</td><td>15</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.69배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: LIQUID</td></tr><tr><td>VanEck Oil Services ETF(OIH)</td><td>전통 에너지 ETF</td><td>0</td><td>-9</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE</td></tr><tr><td>ARK Innovation ETF(ARKK)</td><td>혁신 성장 ETF</td><td>12</td><td>12</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: ACCEPTABLE</td></tr><tr><td>Renaissance IPO ETF(IPO)</td><td>IPO/신규상장 ETF</td><td>19</td><td>19</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.15배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale</td></tr><tr><td>KraneShares CSI China Internet ETF(KWEB)</td><td>중국 인터넷 ETF</td><td>11</td><td>11</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.46배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>Roundhill Magnificent Seven ETF(MAGS)</td><td>메가캡 플랫폼 ETF</td><td>71</td><td>71</td><td><span class="badge ban">매매 금지</span></td><td>MEDIUM</td><td>20일 +5.39%, 5일 +3.96%, 상대 거래량 1.17배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE</td></tr><tr><td>Invesco QQQ Trust(QQQ)</td><td>시장 기준 ETF</td><td>44</td><td>44</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.58배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID</td></tr><tr><td>SPDR S&amp;P 500 ETF Trust(SPY)</td><td>시장 기준 ETF</td><td>43</td><td>43</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID</td></tr><tr><td>iShares Russell 2000 ETF(IWM)</td><td>시장 기준 ETF</td><td>7</td><td>7</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.61배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID</td></tr><tr><td>iShares 20+ Year Treasury Bond ETF(TLT)</td><td>채권 ETF</td><td>0</td><td>-9</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.57배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID</td></tr><tr><td>SPDR Gold Shares(GLD)</td><td>금 ETF</td><td>0</td><td>-14</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.71배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: LIQUID</td></tr><tr><td>iShares Bitcoin Trust ETF(IBIT)</td><td>비트코인 ETF</td><td>27</td><td>27</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.66배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: LIQUID</td></tr><tr><td>Amplify Transformational Data Sharing ETF(BLOK)</td><td>비트코인 ETF</td><td>0</td><td>-25</td><td><span class="badge watch">관찰</span></td><td>LOW</td><td>최근 수익률은 확인되지만 상대 거래량 0.45배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h</td></tr></tbody></table></div>
   <div class="mobile-card-list" data-mobile-etf-summary-cards><article class="summary-card" data-mobile-etf-summary-card="DRAM">
     <h3>Roundhill Memory ETF(DRAM) 메모리/HBM ETF</h3>
     <div class="chip-row">
@@ -17434,7 +17451,7 @@
       <span class="chip">원점수 34</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 20일 +9.88%, 5일 +3.97%, 상대 거래량 1.04배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</p>
+    <p class="field-line"><strong>주요 이유:</strong> 20일 +9.88%, 5일 +3.97%, 상대 거래량 1.04배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: LIQUID</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="SMH">
     <h3>VanEck Semiconductor ETF(SMH) AI 반도체 ETF</h3>
     <div class="chip-row">
@@ -17443,7 +17460,7 @@
       <span class="chip">원점수 21</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.56배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.56배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: LIQUID</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="SOXX">
     <h3>iShares Semiconductor ETF(SOXX) AI 반도체 ETF</h3>
     <div class="chip-row">
@@ -17479,7 +17496,7 @@
       <span class="chip">원점수 -7</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.40배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.40배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="BOTZ">
     <h3>Global X Robotics &amp; Artificial Intelligence ETF(BOTZ) 로봇/자동화 ETF</h3>
     <div class="chip-row">
@@ -17515,7 +17532,7 @@
       <span class="chip">원점수 37</span>
       <span class="chip">MEDIUM</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 20일 +15.81%, 5일 +1.88%, 상대 거래량 1.08배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h</p>
+    <p class="field-line"><strong>주요 이유:</strong> 20일 +15.81%, 5일 +1.88%, 상대 거래량 1.08배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_72h</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="IHAK">
     <h3>iShares Cybersecurity and Tech ETF(IHAK) 사이버보안 ETF</h3>
     <div class="chip-row">
@@ -17551,7 +17568,7 @@
       <span class="chip">원점수 -38</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.37배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.37배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="PPA">
     <h3>Invesco Aerospace &amp; Defense ETF(PPA) 방산 ETF</h3>
     <div class="chip-row">
@@ -17569,7 +17586,7 @@
       <span class="chip">원점수 -6</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.53배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.53배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="GRID">
     <h3>First Trust NASDAQ Clean Edge Smart Grid Infrastructure ETF(GRID) 전력망 인프라 ETF</h3>
     <div class="chip-row">
@@ -17578,7 +17595,7 @@
       <span class="chip">원점수 -5</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.60배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.60배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="IFRA">
     <h3>iShares U.S. Infrastructure ETF(IFRA) 인프라 ETF</h3>
     <div class="chip-row">
@@ -17587,7 +17604,7 @@
       <span class="chip">원점수 5</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.66배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.66배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="XLU">
     <h3>Utilities Select Sector SPDR Fund(XLU) 전력/유틸리티 ETF</h3>
     <div class="chip-row">
@@ -17596,7 +17613,7 @@
       <span class="chip">원점수 35</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.69배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.69배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="URA">
     <h3>Global X Uranium ETF(URA) 원전/우라늄 ETF</h3>
     <div class="chip-row">
@@ -17605,7 +17622,7 @@
       <span class="chip">원점수 -12</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="NLR">
     <h3>VanEck Uranium and Nuclear ETF(NLR) 원전/우라늄 ETF</h3>
     <div class="chip-row">
@@ -17614,7 +17631,7 @@
       <span class="chip">원점수 -15</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.74배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.74배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS regulation/stale</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="LIT">
     <h3>Global X Lithium &amp; Battery Tech ETF(LIT) 배터리/리튬 ETF</h3>
     <div class="chip-row">
@@ -17623,7 +17640,7 @@
       <span class="chip">원점수 -45</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="COPX">
     <h3>Global X Copper Miners ETF(COPX) 구리/금속 ETF</h3>
     <div class="chip-row">
@@ -17632,7 +17649,7 @@
       <span class="chip">원점수 -14</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.37배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.37배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="XME">
     <h3>SPDR S&amp;P Metals &amp; Mining ETF(XME) 금속/광산 ETF</h3>
     <div class="chip-row">
@@ -17641,7 +17658,7 @@
       <span class="chip">원점수 -13</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.81배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.81배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="XLE">
     <h3>Energy Select Sector SPDR Fund(XLE) 전통 에너지 ETF</h3>
     <div class="chip-row">
@@ -17650,7 +17667,7 @@
       <span class="chip">원점수 15</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.69배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.69배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: LIQUID</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="OIH">
     <h3>VanEck Oil Services ETF(OIH) 전통 에너지 ETF</h3>
     <div class="chip-row">
@@ -17659,7 +17676,7 @@
       <span class="chip">원점수 -9</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="ARKK">
     <h3>ARK Innovation ETF(ARKK) 혁신 성장 ETF</h3>
     <div class="chip-row">
@@ -17668,7 +17685,7 @@
       <span class="chip">원점수 12</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: ACCEPTABLE</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="IPO">
     <h3>Renaissance IPO ETF(IPO) IPO/신규상장 ETF</h3>
     <div class="chip-row">
@@ -17677,7 +17694,7 @@
       <span class="chip">원점수 19</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.15배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.15배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="KWEB">
     <h3>KraneShares CSI China Internet ETF(KWEB) 중국 인터넷 ETF</h3>
     <div class="chip-row">
@@ -17686,7 +17703,7 @@
       <span class="chip">원점수 11</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.46배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.46배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="MAGS">
     <h3>Roundhill Magnificent Seven ETF(MAGS) 메가캡 플랫폼 ETF</h3>
     <div class="chip-row">
@@ -17695,7 +17712,7 @@
       <span class="chip">원점수 71</span>
       <span class="chip">MEDIUM</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 20일 +5.39%, 5일 +3.96%, 상대 거래량 1.17배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE</p>
+    <p class="field-line"><strong>주요 이유:</strong> 20일 +5.39%, 5일 +3.96%, 상대 거래량 1.17배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="QQQ">
     <h3>Invesco QQQ Trust(QQQ) 시장 기준 ETF</h3>
     <div class="chip-row">
@@ -17713,7 +17730,7 @@
       <span class="chip">원점수 43</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="IWM">
     <h3>iShares Russell 2000 ETF(IWM) 시장 기준 ETF</h3>
     <div class="chip-row">
@@ -17722,7 +17739,7 @@
       <span class="chip">원점수 7</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.61배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.61배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="TLT">
     <h3>iShares 20+ Year Treasury Bond ETF(TLT) 채권 ETF</h3>
     <div class="chip-row">
@@ -17740,7 +17757,7 @@
       <span class="chip">원점수 -14</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.71배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.71배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: LIQUID</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="IBIT">
     <h3>iShares Bitcoin Trust ETF(IBIT) 비트코인 ETF</h3>
     <div class="chip-row">
@@ -17749,7 +17766,7 @@
       <span class="chip">원점수 27</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.66배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.66배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: LIQUID</p>
   </article><article class="summary-card" data-mobile-etf-summary-card="BLOK">
     <h3>Amplify Transformational Data Sharing ETF(BLOK) 비트코인 ETF</h3>
     <div class="chip-row">
@@ -17758,7 +17775,7 @@
       <span class="chip">원점수 -25</span>
       <span class="chip">LOW</span>
     </div>
-    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.45배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h</p>
+    <p class="field-line"><strong>주요 이유:</strong> 최근 수익률은 확인되지만 상대 거래량 0.45배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h</p>
   </article></div></section>
     <section><h2>3. 최종 실행 판단</h2>
       <h3>3-1. 오늘 실제로 할 일</h3>
@@ -17767,10 +17784,10 @@
       <ul><li>ETF 확인 조건: ETF 후보 TOP 5가 20일선 위에서 유지되는지 확인</li><li>개별 종목 확인 조건: 관련 ETF 대비 5일/20일 상대강도와 상대 거래량 유지 확인</li><li>시장 상태 확인 조건: QQQ/SPY/IWM의 5일/20일 추세와 위험선호 유지 여부 확인</li><li>데이터 보강 필요 항목: 뉴스, ETF 구성종목 확산도, 프리마켓/정규장 거래량, 실제 보유 진입가</li></ul>
     </section>
     <section><h2>데이터 수집 상태</h2>
-      <div class="desktop-table"><ul><li>가격/거래량:</li><li>상태: 연결됨</li><li>소스: yfinance</li><li>비고: REAL_TEST 가격/거래량 및 차트 생성 사용</li><li>뉴스:</li><li>상태: 일부 연결</li><li>소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>수집 뉴스 수: 912</li><li>실패/제한 사유: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured; SEC EDGAR RSS: no matching RSS items</li><li>ETF 구성종목 확산도:</li><li>상태: 일부 연결</li><li>소스: config/etfHoldingsFallback.json 샘플</li><li>수집 가능 ETF 수: 13</li><li>fallback 사용 여부: 사용</li><li>Nasdaq-100 구성종목:</li><li>상태: FALLBACK</li><li>소스: fallback from StockAnalysis Nasdaq-100 list checked 2026-06-02</li><li>총 구성종목 수: 101</li><li>비고: remote source returned too few members: 0</li><li>전일 추천 snapshot:</li><li>상태: 연결됨</li><li>점검 대상: 1</li><li>저장 위치: data/latest-report.json, data/previous-report.json, data/dailyReports/</li><li>거래대금 유동성:</li><li>상태: 일부 연결</li><li>소스: 가격/거래량 기반 거래대금 fallback</li><li>거래대금 fallback 사용 여부: 사용</li><li>전체 비고:</li><li>ETF 구성종목 확산도 fallback sample 13개 사용</li><li>거래대금 기반 유동성 fallback 57개 사용</li></ul></div>
+      <div class="desktop-table"><ul><li>가격/거래량:</li><li>상태: 연결됨</li><li>소스: yfinance</li><li>비고: REAL_TEST 가격/거래량 및 차트 생성 사용</li><li>뉴스:</li><li>상태: 일부 연결</li><li>소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS PARTIAL; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>수집 뉴스 수: 912</li><li>실패/제한 사유: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured; CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html</li><li>ETF 구성종목 확산도:</li><li>상태: 일부 연결</li><li>소스: config/etfHoldingsFallback.json 샘플</li><li>수집 가능 ETF 수: 13</li><li>fallback 사용 여부: 사용</li><li>Nasdaq-100 구성종목:</li><li>상태: FALLBACK</li><li>소스: fallback from StockAnalysis Nasdaq-100 list checked 2026-06-02</li><li>총 구성종목 수: 101</li><li>비고: remote source returned too few members: 0</li><li>전일 추천 snapshot:</li><li>상태: 연결됨</li><li>점검 대상: 1</li><li>저장 위치: data/latest-report.json, data/previous-report.json, data/dailyReports/</li><li>거래대금 유동성:</li><li>상태: 일부 연결</li><li>소스: 가격/거래량 기반 거래대금 fallback</li><li>거래대금 fallback 사용 여부: 사용</li><li>전체 비고:</li><li>ETF 구성종목 확산도 fallback sample 13개 사용</li><li>거래대금 기반 유동성 fallback 57개 사용</li></ul></div>
       <details class="mobile-card-list">
         <summary><strong>데이터 사용 현황과 보조 데이터 보기</strong></summary>
-        <ul><li>가격/거래량:</li><li>상태: 연결됨</li><li>소스: yfinance</li><li>비고: REAL_TEST 가격/거래량 및 차트 생성 사용</li><li>뉴스:</li><li>상태: 일부 연결</li><li>소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>수집 뉴스 수: 912</li><li>실패/제한 사유: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured; SEC EDGAR RSS: no matching RSS items</li><li>ETF 구성종목 확산도:</li><li>상태: 일부 연결</li><li>소스: config/etfHoldingsFallback.json 샘플</li><li>수집 가능 ETF 수: 13</li><li>fallback 사용 여부: 사용</li><li>Nasdaq-100 구성종목:</li><li>상태: FALLBACK</li><li>소스: fallback from StockAnalysis Nasdaq-100 list checked 2026-06-02</li><li>총 구성종목 수: 101</li><li>비고: remote source returned too few members: 0</li><li>전일 추천 snapshot:</li><li>상태: 연결됨</li><li>점검 대상: 1</li><li>저장 위치: data/latest-report.json, data/previous-report.json, data/dailyReports/</li><li>거래대금 유동성:</li><li>상태: 일부 연결</li><li>소스: 가격/거래량 기반 거래대금 fallback</li><li>거래대금 fallback 사용 여부: 사용</li><li>전체 비고:</li><li>ETF 구성종목 확산도 fallback sample 13개 사용</li><li>거래대금 기반 유동성 fallback 57개 사용</li></ul>
+        <ul><li>가격/거래량:</li><li>상태: 연결됨</li><li>소스: yfinance</li><li>비고: REAL_TEST 가격/거래량 및 차트 생성 사용</li><li>뉴스:</li><li>상태: 일부 연결</li><li>소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API</li><li>소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS PARTIAL; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED</li><li>수집 뉴스 수: 912</li><li>실패/제한 사유: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured; CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html</li><li>ETF 구성종목 확산도:</li><li>상태: 일부 연결</li><li>소스: config/etfHoldingsFallback.json 샘플</li><li>수집 가능 ETF 수: 13</li><li>fallback 사용 여부: 사용</li><li>Nasdaq-100 구성종목:</li><li>상태: FALLBACK</li><li>소스: fallback from StockAnalysis Nasdaq-100 list checked 2026-06-02</li><li>총 구성종목 수: 101</li><li>비고: remote source returned too few members: 0</li><li>전일 추천 snapshot:</li><li>상태: 연결됨</li><li>점검 대상: 1</li><li>저장 위치: data/latest-report.json, data/previous-report.json, data/dailyReports/</li><li>거래대금 유동성:</li><li>상태: 일부 연결</li><li>소스: 가격/거래량 기반 거래대금 fallback</li><li>거래대금 fallback 사용 여부: 사용</li><li>전체 비고:</li><li>ETF 구성종목 확산도 fallback sample 13개 사용</li><li>거래대금 기반 유동성 fallback 57개 사용</li></ul>
       </details>
     </section>
     <section><h2>참고: moneyFlowScore 산정 방식과 트렌드 강도</h2>
