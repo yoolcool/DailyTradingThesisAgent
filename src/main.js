@@ -1130,7 +1130,8 @@ function buildMarketRegimeAssessment(marketData, etfs = [], previousRegime = nul
     .map((config) => buildMacroSignal(config, marketData, etfs))
     .filter(Boolean);
   const technicalScore = weightedAverage(benchmarks.map((row) => ({ value: row.score, weight: row.weight })), 50);
-  const macroScore = averageNonEmpty(macroSignals.map((row) => row.score)) || 50;
+  const macroAssessment = buildMacroAssessment(macroSignals, benchmarks);
+  const macroScore = macroAssessment.score;
   const coverage = {
     technical: benchmarks.filter((row) => row.dataStatus === "ok").length,
     technicalTotal: benchmarks.length,
@@ -1156,8 +1157,7 @@ function buildMarketRegimeAssessment(marketData, etfs = [], previousRegime = nul
       benchmarks
     },
     macro: {
-      score: rounded(macroScore),
-      label: macroRegimeLabel(macroScore),
+      ...macroAssessment,
       signals: macroSignals
     },
     coverage,
@@ -1181,13 +1181,24 @@ function defaultMacroSignals() {
   return MARKET_ID === "kr"
     ? [
         { ticker: "USDKRW=X", label: "USD/KRW", type: "fx", riskOnWhen: "down" },
+        { ticker: "^TNX", label: "US 10Y yield", type: "rates", riskOnWhen: "down" },
         { ticker: "TLT", label: "US long-duration bonds", type: "rates", riskOnWhen: "up" },
+        { ticker: "USO", label: "Oil ETF", type: "inflation", riskOnWhen: "down" },
+        { ticker: "HYG", label: "High yield credit", type: "credit", riskOnWhen: "up" },
+        { ticker: "^VIX", label: "VIX", type: "volatility", riskOnWhen: "down" },
         { ticker: "EWY", label: "Korea equity ETF", type: "foreign-risk", riskOnWhen: "up" }
       ]
     : [
+        { ticker: "^TNX", label: "US 10Y yield", type: "rates", riskOnWhen: "down" },
+        { ticker: "^IRX", label: "US 3M yield", type: "short-rates", riskOnWhen: "down" },
         { ticker: "TLT", label: "US long-duration bonds", type: "rates", riskOnWhen: "up" },
-        { ticker: "UUP", label: "US dollar", type: "dollar", riskOnWhen: "down" },
-        { ticker: "HYG", label: "High yield credit", type: "credit", riskOnWhen: "up" }
+        { ticker: "TIP", label: "TIPS ETF", type: "inflation", riskOnWhen: "neutral" },
+        { ticker: "USO", label: "Oil ETF", type: "inflation", riskOnWhen: "down" },
+        { ticker: "GLD", label: "Gold", type: "safe-haven", riskOnWhen: "neutral" },
+        { ticker: "HYG", label: "High yield credit", type: "credit", riskOnWhen: "up" },
+        { ticker: "LQD", label: "Investment grade credit", type: "credit-quality", riskOnWhen: "neutral" },
+        { ticker: "UUP", label: "US dollar", type: "fx", riskOnWhen: "down" },
+        { ticker: "^VIX", label: "VIX", type: "volatility", riskOnWhen: "down" }
       ];
 }
 
@@ -1257,7 +1268,7 @@ function buildMacroSignal(config, marketData) {
       reason: "매크로 데이터 없음"
     };
   }
-  const direction = config.riskOnWhen === "down" ? -1 : 1;
+  const direction = config.riskOnWhen === "neutral" ? 0 : config.riskOnWhen === "down" ? -1 : 1;
   const return20 = Number(market.return20dPct || 0);
   const return5 = Number(market.return5dPct || 0);
   const score = rounded(clamp(50 + direction * return20 * 1.6 + direction * return5 * 0.8, 0, 100));
@@ -1321,6 +1332,219 @@ function macroRegimeLabel(score) {
   if (score >= 45) return "매크로 중립";
   if (score >= 35) return "매크로 부담";
   return "매크로 위험";
+}
+
+function buildMacroAssessment(signals, benchmarks) {
+  const components = {
+    rates: buildRatesComponent(signals),
+    inflation: buildInflationComponent(signals),
+    policy: buildPolicyComponent(signals),
+    creditLiquidity: buildCreditLiquidityComponent(signals),
+    fxGlobalRisk: buildFxGlobalRiskComponent(signals, benchmarks)
+  };
+  const weights = macroComponentWeights();
+  const score = rounded(weightedAverage(Object.entries(components).map(([key, component]) => ({
+    value: component.score,
+    weight: weights[key] || 1
+  })), 50));
+  return {
+    score,
+    label: macroRegimeLabel(score),
+    summary: macroAssessmentSummary(score, components),
+    components,
+    weights
+  };
+}
+
+function macroComponentWeights() {
+  return MARKET_ID === "kr"
+    ? { rates: 0.2, inflation: 0.15, policy: 0.2, creditLiquidity: 0.15, fxGlobalRisk: 0.3 }
+    : { rates: 0.3, inflation: 0.2, policy: 0.2, creditLiquidity: 0.2, fxGlobalRisk: 0.1 };
+}
+
+function buildRatesComponent(signals) {
+  const tnx = findMacroSignal(signals, "^TNX", "rates");
+  const irx = findMacroSignal(signals, "^IRX", "short-rates");
+  const tlt = findMacroSignal(signals, "TLT", "rates");
+  const reasons = [];
+  const watchItems = [];
+  const scores = [];
+  if (tnx?.dataStatus === "ok") {
+    scores.push(scoreDownIsGood(tnx, 1.8, 0.8));
+    reasons.push(`${tnx.label} 20일 ${pct(tnx.return20dPct)}, 5일 ${pct(tnx.return5dPct)}`);
+  }
+  if (irx?.dataStatus === "ok") {
+    scores.push(scoreDownIsGood(irx, 1.0, 0.5));
+    reasons.push(`${irx.label} 20일 ${pct(irx.return20dPct)}, 단기금리 방향 확인`);
+  }
+  if (tlt?.dataStatus === "ok") {
+    scores.push(scoreUpIsGood(tlt, 1.4, 0.6));
+    reasons.push(`${tlt.label} 20일 ${pct(tlt.return20dPct)}, 장기채 가격 기준 할인율 부담 확인`);
+  }
+  const tnxUp = Number(tnx?.return20dPct || 0) > 3;
+  const tltDown = Number(tlt?.return20dPct || 0) < -3;
+  if (tnxUp && tltDown) watchItems.push("장기금리 상승과 장기채 약세가 겹쳐 성장주 할인율 부담이 커질 수 있다.");
+  if (Number(tnx?.return20dPct || 0) < -6 && findMacroSignal(signals, "^VIX", "volatility")?.return20dPct > 8) {
+    watchItems.push("금리 하락이 경기 둔화형 안전자산 선호일 수 있어 단순 우호로 보기 어렵다.");
+  }
+  return macroComponent("rates", "금리", scores, reasons, watchItems, "금리 데이터 부족으로 중립 처리");
+}
+
+function buildInflationComponent(signals) {
+  const uso = findMacroSignal(signals, "USO", "inflation");
+  const tip = findMacroSignal(signals, "TIP", "inflation");
+  const gld = findMacroSignal(signals, "GLD", "safe-haven");
+  const reasons = [];
+  const watchItems = [];
+  const scores = [];
+  if (uso?.dataStatus === "ok") {
+    scores.push(scoreDownIsGood(uso, 1.4, 0.6));
+    reasons.push(`${uso.label} 20일 ${pct(uso.return20dPct)}, 유가 기반 물가 압력 확인`);
+  }
+  if (tip?.dataStatus === "ok") {
+    const tipScore = 50 + clamp(Number(tip.return20dPct || 0) * 0.6, -8, 8);
+    scores.push(tipScore);
+    reasons.push(`${tip.label} 20일 ${pct(tip.return20dPct)}, 물가연동채 흐름은 보조 근거`);
+  }
+  if (gld?.dataStatus === "ok") {
+    const gldReturn = Number(gld.return20dPct || 0);
+    scores.push(50 - clamp(gldReturn * 0.5, -6, 6));
+    reasons.push(`${gld.label} 20일 ${pct(gld.return20dPct)}, 금 강세는 방어 수요 여부 확인`);
+    if (gldReturn > 5) watchItems.push("금 강세가 인플레 헤지 또는 방어 수요일 수 있어 위험자산 해석을 제한한다.");
+  }
+  return macroComponent("inflation", "물가", scores, reasons, watchItems, "물가 프록시 데이터 부족으로 중립 처리");
+}
+
+function buildPolicyComponent(signals) {
+  const reasons = ["정책 톤은 1차 버전에서 일정/이벤트 리스크 기반 중립값으로 반영한다."];
+  const watchItems = MARKET_ID === "kr"
+    ? ["FOMC, BOK 금통위, CPI/PCE 발표 전후에는 매크로 confidence를 보수적으로 해석한다."]
+    : ["FOMC, CPI, PCE, 고용지표 발표 전후에는 매크로 confidence를 보수적으로 해석한다."];
+  const missingKeySignals = signals.filter((row) => row.dataStatus !== "ok").length;
+  const score = missingKeySignals >= 3 ? 46 : 50;
+  return {
+    key: "policy",
+    title: "정책",
+    score,
+    label: macroComponentLabel(score),
+    stance: score >= 50 ? "정책 이벤트 확인 전 중립" : "정책/지표 확인 전 보수",
+    confidence: "LOW",
+    reasons,
+    watchItems
+  };
+}
+
+function buildCreditLiquidityComponent(signals) {
+  const hyg = findMacroSignal(signals, "HYG", "credit");
+  const lqd = findMacroSignal(signals, "LQD", "credit-quality");
+  const vix = findMacroSignal(signals, "^VIX", "volatility");
+  const reasons = [];
+  const watchItems = [];
+  const scores = [];
+  if (hyg?.dataStatus === "ok") {
+    scores.push(scoreUpIsGood(hyg, 1.6, 0.7));
+    reasons.push(`${hyg.label} 20일 ${pct(hyg.return20dPct)}, 하이일드 위험선호 확인`);
+  }
+  if (hyg?.dataStatus === "ok" && lqd?.dataStatus === "ok") {
+    const relative = Number(hyg.return20dPct || 0) - Number(lqd.return20dPct || 0);
+    scores.push(clamp(50 + relative * 2.0, 0, 100));
+    reasons.push(`HYG-LQD 20일 상대강도 ${pct(relative)}, 신용위험 선호/회피 확인`);
+  } else if (lqd?.dataStatus === "ok") {
+    reasons.push(`${lqd.label} 20일 ${pct(lqd.return20dPct)}, 투자등급 크레딧 흐름 확인`);
+  }
+  if (vix?.dataStatus === "ok") {
+    scores.push(scoreDownIsGood(vix, 1.5, 0.7));
+    reasons.push(`${vix.label} 20일 ${pct(vix.return20dPct)}, 변동성 부담 확인`);
+    if (Number(vix.return20dPct || 0) > 10) watchItems.push("VIX 상승은 유동성/리스크 프리미엄 부담으로 해석한다.");
+  }
+  return macroComponent("creditLiquidity", "신용/유동성", scores, reasons, watchItems, "신용/변동성 데이터 부족으로 중립 처리");
+}
+
+function buildFxGlobalRiskComponent(signals, benchmarks) {
+  const usdkrw = findMacroSignal(signals, "USDKRW=X", "fx");
+  const uup = findMacroSignal(signals, "UUP", "fx");
+  const ewy = findMacroSignal(signals, "EWY", "foreign-risk");
+  const kospi = benchmarks.find((row) => row.label === "KOSPI");
+  const kosdaq = benchmarks.find((row) => row.label === "KOSDAQ");
+  const reasons = [];
+  const watchItems = [];
+  const scores = [];
+  if (MARKET_ID === "kr" && usdkrw?.dataStatus === "ok") {
+    scores.push(scoreDownIsGood(usdkrw, 1.7, 0.8));
+    reasons.push(`${usdkrw.label} 20일 ${pct(usdkrw.return20dPct)}, 원화 안정/불안 확인`);
+    if (Number(usdkrw.return20dPct || 0) > 2) watchItems.push("원달러 상승은 외국인 수급과 멀티플에 부담이다.");
+  }
+  if (uup?.dataStatus === "ok") {
+    scores.push(scoreDownIsGood(uup, 1.5, 0.7));
+    reasons.push(`${uup.label} 20일 ${pct(uup.return20dPct)}, 달러 강세/약세 확인`);
+  }
+  if (ewy?.dataStatus === "ok") {
+    scores.push(scoreUpIsGood(ewy, 1.5, 0.7));
+    reasons.push(`${ewy.label} 20일 ${pct(ewy.return20dPct)}, 한국 외국인 위험선호 프록시`);
+  }
+  if (kospi?.dataStatus === "ok" && kosdaq?.dataStatus === "ok") {
+    const relative = Number(kosdaq.return20dPct || 0) - Number(kospi.return20dPct || 0);
+    scores.push(clamp(50 + relative * 1.2, 0, 100));
+    reasons.push(`KOSDAQ-KOSPI 20일 상대강도 ${pct(relative)}, 성장 위험선호 확인`);
+  }
+  return macroComponent("fxGlobalRisk", "환율/글로벌", scores, reasons, watchItems, "환율/글로벌 위험선호 데이터 부족으로 중립 처리");
+}
+
+function macroComponent(key, title, scores, reasons, watchItems, fallbackReason) {
+  const cleanScores = scores.map(Number).filter(Number.isFinite);
+  const score = rounded(cleanScores.length ? averageNonEmpty(cleanScores) : 50);
+  return {
+    key,
+    title,
+    score,
+    label: macroComponentLabel(score),
+    stance: macroComponentStance(title, score),
+    confidence: macroComponentConfidence(cleanScores.length, reasons.length),
+    reasons: reasons.length ? reasons : [fallbackReason],
+    watchItems: watchItems.length ? watchItems : ["추가 확인 이벤트 없음"]
+  };
+}
+
+function macroComponentLabel(score) {
+  if (score >= 65) return "우호";
+  if (score >= 55) return "중립-우호";
+  if (score >= 45) return "중립";
+  if (score >= 35) return "부담";
+  return "위험";
+}
+
+function macroComponentStance(title, score) {
+  const direction = score >= 60 ? "우호" : score >= 45 ? "중립" : "부담";
+  return `${title} ${direction}`;
+}
+
+function macroComponentConfidence(scoreCount, reasonCount) {
+  if (scoreCount >= 2 && reasonCount >= 2) return "HIGH";
+  if (scoreCount >= 1) return "MEDIUM";
+  return "LOW";
+}
+
+function macroAssessmentSummary(score, components) {
+  const componentList = Object.values(components);
+  const supportive = componentList.filter((row) => row.score >= 55).map((row) => row.title);
+  const burdens = componentList.filter((row) => row.score < 45).map((row) => row.title);
+  if (supportive.length && burdens.length) return `${supportive.join(", ")}은 우호적이나 ${burdens.join(", ")} 부담이 남아 있다.`;
+  if (supportive.length) return `${supportive.join(", ")} 중심으로 매크로가 위험자산에 우호적이다.`;
+  if (burdens.length) return `${burdens.join(", ")} 부담으로 매크로 환경은 방어적이다.`;
+  return `매크로 점수 ${rounded(score)}로 뚜렷한 방향성보다 확인 대기 성격이 강하다.`;
+}
+
+function findMacroSignal(signals, ticker, type = null) {
+  if (ticker) return signals.find((row) => row.ticker === ticker) || null;
+  return type ? signals.find((row) => row.type === type) || null : null;
+}
+
+function scoreUpIsGood(signal, return20Weight = 1.5, return5Weight = 0.7) {
+  return clamp(50 + Number(signal?.return20dPct || 0) * return20Weight + Number(signal?.return5dPct || 0) * return5Weight, 0, 100);
+}
+
+function scoreDownIsGood(signal, return20Weight = 1.5, return5Weight = 0.7) {
+  return clamp(50 - Number(signal?.return20dPct || 0) * return20Weight - Number(signal?.return5dPct || 0) * return5Weight, 0, 100);
 }
 
 function marketRegimeReliability(benchmarks, macroSignals) {
@@ -4152,6 +4376,11 @@ function renderMarketRegimeMarkdown(report) {
   const macroLines = (regime.macro?.signals || []).map((row) =>
     `- ${row.label}: ${row.dataStatus === "ok" ? `${row.score}점 | ${row.reason}` : row.reason}`
   );
+  const macroComponentLines = macroComponents(regime).map((row) =>
+    `- ${row.title}: ${row.label} ${row.score}점 / ${row.stance} / confidence ${row.confidence}
+  - 주요 근거: ${(row.reasons || []).join("; ")}
+  - 확인 사항: ${(row.watchItems || []).join("; ")}`
+  );
   return `## 시장 국면 판단
 
 - 최종 판정: ${regime.label} (${regime.score}점)
@@ -4162,6 +4391,8 @@ function renderMarketRegimeMarkdown(report) {
 - 기술적 지표: ${regime.technical.label} (${regime.technical.score}점, 가중치 65%)
 ${technicalLines.join("\n") || "- 기술 지표 데이터 없음"}
 - 매크로 시황: ${regime.macro.label} (${regime.macro.score}점, 가중치 35%)
+- 매크로 요약: ${regime.macro.summary || "데이터 없음"}
+${macroComponentLines.join("\n") || "- 매크로 컴포넌트 데이터 없음"}
 ${macroLines.join("\n") || "- 매크로 데이터 없음"}
 - 데이터 커버리지: 기술 ${regime.coverage.technical}/${regime.coverage.technicalTotal}, 매크로 ${regime.coverage.macro}/${regime.coverage.macroTotal}
 - 데이터 신뢰도 근거:
@@ -5410,6 +5641,7 @@ function renderMarketRegimeHtml(report) {
       ? `<strong>${escapeHtml(row.label)}</strong> ${row.score}점 | ${escapeHtml(row.reason)}`
       : `<strong>${escapeHtml(row.label)}</strong> ${escapeHtml(row.reason)}`
   );
+  const macroComponentItems = macroComponents(regime).map(renderMacroComponentHtml);
   return `<section data-market-regime><h2>시장 국면 판단</h2>
     <div class="grid">
       ${tile("최종 판정", `${regime.label} (${regime.score}점)`)}
@@ -5426,8 +5658,27 @@ function renderMarketRegimeHtml(report) {
     <p class="muted"><strong>판정 신뢰도:</strong> ${escapeHtml(regime.reliability?.summary || "데이터 없음")}</p>
     <h3>데이터 신뢰도 근거</h3>${htmlList((regime.reliability?.items || []).map(escapeHtml))}
     <h3>기술적 지표</h3>${htmlList(technicalItems)}
-    <h3>매크로 시황</h3>${htmlList(macroItems)}
+    <h3>매크로 시황</h3>
+    <p class="muted">${escapeHtml(regime.macro.summary || "데이터 없음")}</p>
+    <div class="metric-grid" data-macro-components>${macroComponentItems.join("")}</div>
+    <h3>매크로 원천 신호</h3>${htmlList(macroItems)}
   </section>`;
+}
+
+function macroComponents(regime) {
+  const components = regime?.macro?.components || {};
+  return ["rates", "inflation", "policy", "creditLiquidity", "fxGlobalRisk"]
+    .map((key) => components[key])
+    .filter(Boolean);
+}
+
+function renderMacroComponentHtml(row) {
+  return `<article class="metric-chip macro-component-card">
+    <strong>${escapeHtml(row.title)} ${escapeHtml(row.label)} ${row.score}점</strong>
+    <span>${escapeHtml(row.stance || "데이터 없음")} / ${escapeHtml(row.confidence || "LOW")}</span>
+    <p class="field-line">${escapeHtml((row.reasons || []).join(" / ") || "근거 없음")}</p>
+    <p class="field-line muted">${escapeHtml((row.watchItems || []).join(" / ") || "확인 사항 없음")}</p>
+  </article>`;
 }
 
 function renderNarrativesHtml(report) {

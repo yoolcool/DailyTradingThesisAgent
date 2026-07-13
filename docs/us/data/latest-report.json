@@ -14,10 +14,10 @@
     "sessionLabel": "US regular session"
   },
   "reportDate": "2026-07-13",
-  "generatedAt": "2026년 7월 13일 월요일 오후 12:32",
+  "generatedAt": "2026년 7월 13일 월요일 오후 1:08",
   "marketRegimeAssessment": {
     "label": "강세장",
-    "score": 82,
+    "score": 84,
     "actionBias": "선별 매수 우위, 과열 추격만 제한",
     "conclusion": "기술적 추세가 강세장 조건에 가깝다. 매크로도 큰 부담은 제한적이다.",
     "reliability": {
@@ -32,18 +32,18 @@
       "items": [
         "직접 지수 데이터: S&P 500, Nasdaq 100",
         "대체 지수 데이터 없음",
-        "매크로 데이터: 3/3",
+        "매크로 데이터: 10/10",
         "누락 데이터 없음",
         "stale 데이터 없음"
       ]
     },
     "change": {
-      "status": "FIRMER",
-      "label": "강화",
+      "status": "UNCHANGED",
+      "label": "유지",
       "previousLabel": "강세장",
-      "previousScore": 75,
-      "scoreDelta": 7,
-      "summary": "강세장은 유지됐지만 점수는 전일보다 강화됐다(+7점)."
+      "previousScore": 82,
+      "scoreDelta": 2,
+      "summary": "강세장 유지, 점수 변화는 제한적이다(+2점)."
     },
     "technical": {
       "score": 100,
@@ -98,9 +98,121 @@
       ]
     },
     "macro": {
-      "score": 49,
-      "label": "매크로 중립",
+      "score": 54,
+      "label": "매크로 중립-우호",
+      "summary": "물가, 신용/유동성 중심으로 매크로가 위험자산에 우호적이다.",
+      "components": {
+        "rates": {
+          "key": "rates",
+          "title": "금리",
+          "score": 48,
+          "label": "중립",
+          "stance": "금리 중립",
+          "confidence": "HIGH",
+          "reasons": [
+            "US 10Y yield 20일 +0.59%, 5일 +1.87%",
+            "US 3M yield 20일 +1.65%, 단기금리 방향 확인",
+            "US long-duration bonds 20일 -0.48%, 장기채 가격 기준 할인율 부담 확인"
+          ],
+          "watchItems": [
+            "추가 확인 이벤트 없음"
+          ]
+        },
+        "inflation": {
+          "key": "inflation",
+          "title": "물가",
+          "score": 58,
+          "label": "중립-우호",
+          "stance": "물가 중립",
+          "confidence": "HIGH",
+          "reasons": [
+            "Oil ETF 20일 -19.06%, 유가 기반 물가 압력 확인",
+            "TIPS ETF 20일 -0.99%, 물가연동채 흐름은 보조 근거",
+            "Gold 20일 +0.65%, 금 강세는 방어 수요 여부 확인"
+          ],
+          "watchItems": [
+            "추가 확인 이벤트 없음"
+          ]
+        },
+        "policy": {
+          "key": "policy",
+          "title": "정책",
+          "score": 50,
+          "label": "중립",
+          "stance": "정책 이벤트 확인 전 중립",
+          "confidence": "LOW",
+          "reasons": [
+            "정책 톤은 1차 버전에서 일정/이벤트 리스크 기반 중립값으로 반영한다."
+          ],
+          "watchItems": [
+            "FOMC, CPI, PCE, 고용지표 발표 전후에는 매크로 confidence를 보수적으로 해석한다."
+          ]
+        },
+        "creditLiquidity": {
+          "key": "creditLiquidity",
+          "title": "신용/유동성",
+          "score": 67,
+          "label": "우호",
+          "stance": "신용/유동성 우호",
+          "confidence": "HIGH",
+          "reasons": [
+            "High yield credit 20일 +0.30%, 하이일드 위험선호 확인",
+            "HYG-LQD 20일 상대강도 +0.95%, 신용위험 선호/회피 확인",
+            "VIX 20일 -32.36%, 변동성 부담 확인"
+          ],
+          "watchItems": [
+            "추가 확인 이벤트 없음"
+          ]
+        },
+        "fxGlobalRisk": {
+          "key": "fxGlobalRisk",
+          "title": "환율/글로벌",
+          "score": 48,
+          "label": "중립",
+          "stance": "환율/글로벌 중립",
+          "confidence": "MEDIUM",
+          "reasons": [
+            "US dollar 20일 +1.21%, 달러 강세/약세 확인"
+          ],
+          "watchItems": [
+            "추가 확인 이벤트 없음"
+          ]
+        }
+      },
+      "weights": {
+        "rates": 0.3,
+        "inflation": 0.2,
+        "policy": 0.2,
+        "creditLiquidity": 0.2,
+        "fxGlobalRisk": 0.1
+      },
       "signals": [
+        {
+          "ticker": "^TNX",
+          "label": "US 10Y yield",
+          "type": "rates",
+          "riskOnWhen": "down",
+          "dataStatus": "ok",
+          "dataFreshness": "FRESH",
+          "score": 48,
+          "dataDate": "2026-07-10",
+          "return5dPct": 1.87,
+          "return20dPct": 0.59,
+          "reason": "하락 시 주식 우호; 5일 +1.87%, 20일 +0.59% -> 매크로 점수 48"
+        },
+        {
+          "ticker": "^IRX",
+          "label": "US 3M yield",
+          "type": "short-rates",
+          "riskOnWhen": "down",
+          "dataStatus": "ok",
+          "dataFreshness": "FRESH",
+          "score": 47,
+          "dataDate": "2026-07-10",
+          "return5dPct": 0.74,
+          "return20dPct": 1.65,
+          "reason": "하락 시 주식 우호; 5일 +0.74%, 20일 +1.65% -> 매크로 점수 47"
+        },
         {
           "ticker": "TLT",
           "label": "US long-duration bonds",
@@ -115,9 +227,48 @@
           "reason": "상승 시 주식 우호; 5일 -1.22%, 20일 -0.48% -> 매크로 점수 48"
         },
         {
+          "ticker": "TIP",
+          "label": "TIPS ETF",
+          "type": "inflation",
+          "riskOnWhen": "neutral",
+          "dataStatus": "ok",
+          "dataFreshness": "FRESH",
+          "score": 50,
+          "dataDate": "2026-07-10",
+          "return5dPct": -0.18,
+          "return20dPct": -0.99,
+          "reason": "상승 시 주식 우호; 5일 -0.18%, 20일 -0.99% -> 매크로 점수 50"
+        },
+        {
+          "ticker": "USO",
+          "label": "Oil ETF",
+          "type": "inflation",
+          "riskOnWhen": "down",
+          "dataStatus": "ok",
+          "dataFreshness": "FRESH",
+          "score": 77,
+          "dataDate": "2026-07-10",
+          "return5dPct": 4.54,
+          "return20dPct": -19.06,
+          "reason": "하락 시 주식 우호; 5일 +4.54%, 20일 -19.06% -> 매크로 점수 77"
+        },
+        {
+          "ticker": "GLD",
+          "label": "Gold",
+          "type": "safe-haven",
+          "riskOnWhen": "neutral",
+          "dataStatus": "ok",
+          "dataFreshness": "FRESH",
+          "score": 50,
+          "dataDate": "2026-07-10",
+          "return5dPct": -0.3,
+          "return20dPct": 0.65,
+          "reason": "상승 시 주식 우호; 5일 -0.30%, 20일 +0.65% -> 매크로 점수 50"
+        },
+        {
           "ticker": "UUP",
           "label": "US dollar",
-          "type": "dollar",
+          "type": "fx",
           "riskOnWhen": "down",
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
@@ -139,14 +290,40 @@
           "return5dPct": 0,
           "return20dPct": 0.3,
           "reason": "상승 시 주식 우호; 5일 0.00%, 20일 +0.30% -> 매크로 점수 50"
+        },
+        {
+          "ticker": "LQD",
+          "label": "Investment grade credit",
+          "type": "credit-quality",
+          "riskOnWhen": "neutral",
+          "dataStatus": "ok",
+          "dataFreshness": "FRESH",
+          "score": 50,
+          "dataDate": "2026-07-10",
+          "return5dPct": -1.09,
+          "return20dPct": -0.65,
+          "reason": "상승 시 주식 우호; 5일 -1.09%, 20일 -0.65% -> 매크로 점수 50"
+        },
+        {
+          "ticker": "^VIX",
+          "label": "VIX",
+          "type": "volatility",
+          "riskOnWhen": "down",
+          "dataStatus": "ok",
+          "dataFreshness": "FRESH",
+          "score": 100,
+          "dataDate": "2026-07-10",
+          "return5dPct": -6.93,
+          "return20dPct": -32.36,
+          "reason": "하락 시 주식 우호; 5일 -6.93%, 20일 -32.36% -> 매크로 점수 100"
         }
       ]
     },
     "coverage": {
       "technical": 2,
       "technicalTotal": 2,
-      "macro": 3,
-      "macroTotal": 3
+      "macro": 10,
+      "macroTotal": 10
     },
     "weights": {
       "technical": 0.65,
@@ -2886,6 +3063,38 @@
   },
   "narratives": [
     {
+      "name": "Internet Content 자금 유입",
+      "status": "관찰",
+      "narrativeScore": 60,
+      "rawScore": 60,
+      "reasonConfidence": "MEDIUM",
+      "supportEtfs": [
+        "QQQ"
+      ],
+      "supportStocks": [
+        "META",
+        "DASH"
+      ],
+      "representativeEtfs": [
+        "QQQ"
+      ],
+      "representativeStocks": [
+        "META",
+        "DASH"
+      ],
+      "whyMoneyIsFlowing": "Internet Content 자금 유입 관련 Invesco QQQ Trust(QQQ)와 Meta Platforms Inc.(META), DoorDash Inc.(DASH)의 5일(+5.51%)·20일(+16.27%) 흐름을 함께 본다. 평균 상대 거래량은 1.03배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "Internet Content 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: META, DASH",
+      "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
+      "summaryReason": "Invesco QQQ Trust(QQQ), Meta Platforms Inc.(META), DoorDash Inc.(DASH) 중심으로 5일 +5.51%, 20일 +16.27% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 1,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
       "name": "Data Storage 자금 유입",
       "status": "약화",
       "narrativeScore": 41,
@@ -2953,6 +3162,38 @@
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
       "summaryReason": "Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), GE Vernova(GEV), Vertiv(VRT) 중심으로 5일 +1.50%, 20일 +10.24% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "필수소비재 음료 방어 성장",
+      "status": "약화",
+      "narrativeScore": 29,
+      "rawScore": 29,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "QQQ"
+      ],
+      "supportStocks": [
+        "MNST",
+        "CCEP"
+      ],
+      "representativeEtfs": [
+        "QQQ"
+      ],
+      "representativeStocks": [
+        "MNST",
+        "CCEP"
+      ],
+      "whyMoneyIsFlowing": "필수소비재 음료 방어 성장 관련 Invesco QQQ Trust(QQQ)와 Monster Beverage Corporation(MNST), Coca-Cola Europacific Partners PLC(CCEP)의 5일(+0.29%)·20일(+6.64%) 흐름을 함께 본다. 평균 상대 거래량은 0.61배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "필수소비재 음료 방어 성장을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: CCEP, MNST",
+      "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
+      "summaryReason": "Invesco QQQ Trust(QQQ), Monster Beverage Corporation(MNST), Coca-Cola Europacific Partners PLC(CCEP) 중심으로 5일 +0.29%, 20일 +6.64% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -3073,40 +3314,6 @@
       "stockRelativeVolumeAvg": 1
     },
     {
-      "name": "필수소비재 음료 방어 성장",
-      "status": "약화",
-      "narrativeScore": 21,
-      "rawScore": 21,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "QQQ"
-      ],
-      "supportStocks": [
-        "MNST",
-        "CCEP",
-        "KDP"
-      ],
-      "representativeEtfs": [
-        "QQQ"
-      ],
-      "representativeStocks": [
-        "MNST",
-        "CCEP",
-        "KDP"
-      ],
-      "whyMoneyIsFlowing": "필수소비재 음료 방어 성장 관련 Invesco QQQ Trust(QQQ)와 Monster Beverage Corporation(MNST), Coca-Cola Europacific Partners PLC(CCEP), Keurig Dr Pepper Inc.(KDP)의 5일(-1.00%)·20일(+4.96%) 흐름을 함께 본다. 평균 상대 거래량은 0.57배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "필수소비재 음료 방어 성장을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: KDP, CCEP, MNST",
-      "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "Invesco QQQ Trust(QQQ), Monster Beverage Corporation(MNST), Coca-Cola Europacific Partners PLC(CCEP) 중심으로 5일 -1.00%, 20일 +4.96% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": 0,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 1
-    },
-    {
       "name": "위험선호 성장주 재진입",
       "status": "약화",
       "narrativeScore": 20,
@@ -3148,8 +3355,8 @@
     {
       "name": "사이버보안 지출 재가속",
       "status": "약화",
-      "narrativeScore": 15,
-      "rawScore": 15,
+      "narrativeScore": 17,
+      "rawScore": 17,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "CIBR",
@@ -3159,8 +3366,7 @@
       "supportStocks": [
         "FTNT",
         "PANW",
-        "CRWD",
-        "ZS"
+        "CRWD"
       ],
       "representativeEtfs": [
         "CIBR",
@@ -3170,15 +3376,14 @@
       "representativeStocks": [
         "FTNT",
         "PANW",
-        "CRWD",
-        "ZS"
+        "CRWD"
       ],
-      "whyMoneyIsFlowing": "사이버보안 지출 재가속 관련 First Trust NASDAQ Cybersecurity ETF(CIBR), Amplify Cybersecurity ETF(HACK), iShares Cybersecurity and Tech ETF(IHAK)와 Fortinet Inc.(FTNT), Palo Alto Networks Inc.(PANW), CrowdStrike Holdings Inc.(CRWD), Zscaler Inc.(ZS)의 5일(-1.49%)·20일(+13.11%) 흐름을 함께 본다. 평균 상대 거래량은 0.77배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "사이버보안 지출 재가속 관련 First Trust NASDAQ Cybersecurity ETF(CIBR), Amplify Cybersecurity ETF(HACK), iShares Cybersecurity and Tech ETF(IHAK)와 Fortinet Inc.(FTNT), Palo Alto Networks Inc.(PANW), CrowdStrike Holdings Inc.(CRWD)의 5일(-0.92%)·20일(+13.32%) 흐름을 함께 본다. 평균 상대 거래량은 0.74배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "사이버보안 지출 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: HACK, CIBR, IHAK / 개별 종목 우선: FTNT, PANW, CRWD",
+      "bestTradingVehicle": "ETF 우선: HACK, CIBR, IHAK / 개별 종목 우선: PANW, CRWD, FTNT",
       "breakCondition": "HACK 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "First Trust NASDAQ Cybersecurity ETF(CIBR), Amplify Cybersecurity ETF(HACK), Fortinet Inc.(FTNT), Palo Alto Networks Inc.(PANW) 중심으로 5일 -1.49%, 20일 +13.11% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "First Trust NASDAQ Cybersecurity ETF(CIBR), Amplify Cybersecurity ETF(HACK), Fortinet Inc.(FTNT), Palo Alto Networks Inc.(PANW) 중심으로 5일 -0.92%, 20일 +13.32% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": -3,
       "relativeVolumeAvg": 1,
@@ -3493,6 +3698,38 @@
   ],
   "topNarratives": [
     {
+      "name": "Internet Content 자금 유입",
+      "status": "관찰",
+      "narrativeScore": 60,
+      "rawScore": 60,
+      "reasonConfidence": "MEDIUM",
+      "supportEtfs": [
+        "QQQ"
+      ],
+      "supportStocks": [
+        "META",
+        "DASH"
+      ],
+      "representativeEtfs": [
+        "QQQ"
+      ],
+      "representativeStocks": [
+        "META",
+        "DASH"
+      ],
+      "whyMoneyIsFlowing": "Internet Content 자금 유입 관련 Invesco QQQ Trust(QQQ)와 Meta Platforms Inc.(META), DoorDash Inc.(DASH)의 5일(+5.51%)·20일(+16.27%) 흐름을 함께 본다. 평균 상대 거래량은 1.03배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "Internet Content 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: META, DASH",
+      "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
+      "summaryReason": "Invesco QQQ Trust(QQQ), Meta Platforms Inc.(META), DoorDash Inc.(DASH) 중심으로 5일 +5.51%, 20일 +16.27% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 1,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
       "name": "Data Storage 자금 유입",
       "status": "약화",
       "narrativeScore": 41,
@@ -3565,42 +3802,6 @@
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
       "stockRelativeVolumeAvg": 1
-    },
-    {
-      "name": "Aerospace & Defense 자금 유입",
-      "status": "약화",
-      "narrativeScore": 26,
-      "rawScore": 26,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "QQQ",
-        "SPY",
-        "IWM"
-      ],
-      "supportStocks": [
-        "AXON",
-        "RTX"
-      ],
-      "representativeEtfs": [
-        "QQQ",
-        "SPY",
-        "IWM"
-      ],
-      "representativeStocks": [
-        "AXON",
-        "RTX"
-      ],
-      "whyMoneyIsFlowing": "Aerospace & Defense 자금 유입 관련 Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM)와 Axon Enterprise Inc.(AXON), RTX의 5일(-0.85%)·20일(+10.09%) 흐름을 함께 본다. 평균 상대 거래량은 0.62배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "Aerospace & Defense 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: AXON, RTX",
-      "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), Axon Enterprise Inc.(AXON), RTX 중심으로 5일 -0.85%, 20일 +10.09% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": 0,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 1
     }
   ],
   "etfActionCandidates": [],
@@ -3632,9 +3833,9 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-13T03:32:47.657Z",
+        "checkedAt": "2026-07-13T04:08:49.591Z",
         "status": "PARTIAL",
-        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -3673,7 +3874,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-07-13T03:03:00.000Z",
+        "lastPublishedAt": "2026-07-13T04:05:26.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -3775,13 +3976,13 @@
         "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe"
       },
       "tieBreakerReason": "최종 원점수 108, 리스크 패널티 0, 5일 수익률 +14.81%, 상대 거래량 2.00배 순으로 정렬",
-      "entryQualityScore": 38,
+      "entryQualityScore": 35,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 41,
-      "trendStateLabel": "잠복",
-      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-      "exhaustionRisk": 4,
-      "exhaustionRiskLabel": "낮음",
+      "trendStrengthIndex": 52,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
+      "exhaustionRisk": 27,
+      "exhaustionRiskLabel": "보통",
       "relativeVolume": 2,
       "marketDataStatus": "ok",
       "entryCondition": "20일선 위 눌림 후 재상승 확인",
@@ -3790,18 +3991,18 @@
         "label": "자금흐름 예외 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 38 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
+          "Entry Quality 35 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
         ],
         "rescueType": "STRONG_MONEY_FLOW"
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / Entry Quality 38 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
+        "reason": "전체 시장은 위험선호 / Entry Quality 35 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
       },
-      "linkedNarrative": "Data Storage 자금 유입",
-      "narrativeStatus": "약화",
-      "narrativeScore": 41,
+      "linkedNarrative": "Internet Content 자금 유입",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 60,
       "relatedEtfs": [
         "QQQ"
       ],
@@ -3837,9 +4038,9 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-13T03:32:47.657Z",
+        "checkedAt": "2026-07-13T04:08:49.591Z",
         "status": "PARTIAL",
-        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -3878,7 +4079,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-07-13T03:03:00.000Z",
+        "lastPublishedAt": "2026-07-13T04:05:26.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -3980,13 +4181,13 @@
         "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe"
       },
       "tieBreakerReason": "최종 원점수 108, 리스크 패널티 0, 5일 수익률 +14.81%, 상대 거래량 2.00배 순으로 정렬",
-      "entryQualityScore": 38,
+      "entryQualityScore": 35,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 41,
-      "trendStateLabel": "잠복",
-      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-      "exhaustionRisk": 4,
-      "exhaustionRiskLabel": "낮음",
+      "trendStrengthIndex": 52,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
+      "exhaustionRisk": 27,
+      "exhaustionRiskLabel": "보통",
       "relativeVolume": 2,
       "marketDataStatus": "ok",
       "entryCondition": "20일선 위 눌림 후 재상승 확인",
@@ -3995,18 +4196,18 @@
         "label": "자금흐름 예외 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 38 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
+          "Entry Quality 35 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
         ],
         "rescueType": "STRONG_MONEY_FLOW"
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / Entry Quality 38 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
+        "reason": "전체 시장은 위험선호 / Entry Quality 35 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
       },
-      "linkedNarrative": "Data Storage 자금 유입",
-      "narrativeStatus": "약화",
-      "narrativeScore": 41,
+      "linkedNarrative": "Internet Content 자금 유입",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 60,
       "relatedEtfs": [
         "QQQ"
       ],
@@ -4043,9 +4244,9 @@
       "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
       "candidateNewsSummary": {
         "ticker": "META",
-        "checkedAt": "2026-07-13T03:32:47.657Z",
+        "checkedAt": "2026-07-13T04:08:49.591Z",
         "status": "PARTIAL",
-        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
+        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4084,7 +4285,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-07-13T03:03:00.000Z",
+        "lastPublishedAt": "2026-07-13T04:05:26.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -4186,13 +4387,13 @@
         "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe"
       },
       "tieBreakerReason": "최종 원점수 108, 리스크 패널티 0, 5일 수익률 +14.81%, 상대 거래량 2.00배 순으로 정렬",
-      "entryQualityScore": 38,
+      "entryQualityScore": 35,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 41,
-      "trendStateLabel": "잠복",
-      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-      "exhaustionRisk": 4,
-      "exhaustionRiskLabel": "낮음",
+      "trendStrengthIndex": 52,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
+      "exhaustionRisk": 27,
+      "exhaustionRiskLabel": "보통",
       "relativeVolume": 2,
       "marketDataStatus": "ok",
       "entryCondition": "20일선 위 눌림 후 재상승 확인",
@@ -4201,18 +4402,18 @@
         "label": "자금흐름 예외 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 38 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
+          "Entry Quality 35 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
         ],
         "rescueType": "STRONG_MONEY_FLOW"
       },
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험선호 / Entry Quality 38 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
+        "reason": "전체 시장은 위험선호 / Entry Quality 35 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
       },
-      "linkedNarrative": "Data Storage 자금 유입",
-      "narrativeStatus": "약화",
-      "narrativeScore": 41,
+      "linkedNarrative": "Internet Content 자금 유입",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 60,
       "relatedEtfs": [
         "QQQ"
       ],
@@ -4245,8 +4446,8 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / product / under_6h / positive - Nasdaq, S&P 500, Dow Futures Fall After Trump Directs Strikes ‘To Hold Iranian Forces Accountable’: NVDA, SLS, MRK, SKHYV, QS Stocks In Focus 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_6h / positive - Nasdaq, S&P 500, Dow Futures Fall After Trump Directs Strikes ‘To Hold Iranian Forces Accountable’: NVDA, SLS, MRK, SKHYV, QS Stocks In Focus",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Did Nvidia's 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Did Nvidia's 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google?",
       "tieBreakerReason": "최종 원점수 82, 리스크 패널티 0, 5일 수익률 +8.28%, 상대 거래량 1.01배 순으로 정렬",
       "entryQualityScore": 40,
       "entryQualityLabel": "관찰",
@@ -4374,7 +4575,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Nvidia Vs. AMD: Perplexity Choosing Nvidia Over AMD Tells a Deeper Story About Chip Dominance",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - Did Nvidia's 2028 Rack Delay Under Jensen Huang Open a Door for AMD and Google?",
       "tieBreakerReason": "최종 원점수 75, 리스크 패널티 -4, 5일 수익률 +7.74%, 상대 거래량 0.68배 순으로 정렬",
       "entryQualityScore": 41,
       "entryQualityLabel": "관찰",
@@ -4500,13 +4701,13 @@
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
       "directCatalyst": "",
       "tieBreakerReason": "최종 원점수 54, 리스크 패널티 0, 5일 수익률 -0.21%, 상대 거래량 0.70배 순으로 정렬",
-      "entryQualityScore": 34,
+      "entryQualityScore": 30,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 41,
-      "trendStateLabel": "잠복",
-      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-      "exhaustionRisk": 4,
-      "exhaustionRiskLabel": "낮음",
+      "trendStrengthIndex": 52,
+      "trendStateLabel": "부상",
+      "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
+      "exhaustionRisk": 27,
+      "exhaustionRiskLabel": "보통",
       "relativeVolume": 0.7,
       "marketDataStatus": "ok",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
@@ -4515,7 +4716,7 @@
         "label": "거래량 확인 전 관찰",
         "status": "관찰",
         "reasons": [
-          "Entry Quality 34 < 40",
+          "Entry Quality 30 < 40",
           "RVOL 0.70x < 1.00x"
         ],
         "rescueType": null
@@ -4523,11 +4724,11 @@
       "marketContext": {
         "marketRegime": "위험선호",
         "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험선호 / Entry Quality 34 < 40 / RVOL 0.70x < 1.00x"
+        "reason": "전체 시장은 위험선호 / Entry Quality 30 < 40 / RVOL 0.70x < 1.00x"
       },
-      "linkedNarrative": "Data Storage 자금 유입",
-      "narrativeStatus": "약화",
-      "narrativeScore": 41,
+      "linkedNarrative": "Internet Content 자금 유입",
+      "narrativeStatus": "관찰",
+      "narrativeScore": 60,
       "relatedEtfs": [
         "QQQ"
       ],
@@ -4568,7 +4769,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 10% in Seoul after stellar Nasdaq debut",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut",
       "tieBreakerReason": "최종 원점수 21, 리스크 패널티 -6, 5일 수익률 +3.16%, 상대 거래량 0.56배 순으로 정렬",
       "entryQualityScore": 23,
       "entryQualityLabel": "낮음",
@@ -4634,7 +4835,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 10% in Seoul after stellar Nasdaq debut",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut",
       "tieBreakerReason": "최종 원점수 10, 리스크 패널티 -6, 5일 수익률 +2.65%, 상대 거래량 0.57배 순으로 정렬",
       "entryQualityScore": 19,
       "entryQualityLabel": "낮음",
@@ -4700,7 +4901,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 10% in Seoul after stellar Nasdaq debut",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut",
       "tieBreakerReason": "최종 원점수 16, 리스크 패널티 -6, 5일 수익률 +2.79%, 상대 거래량 0.33배 순으로 정렬",
       "entryQualityScore": 11,
       "entryQualityLabel": "낮음",
@@ -4758,7 +4959,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 10% in Seoul after stellar Nasdaq debut",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut",
       "tieBreakerReason": "최종 원점수 -1, 리스크 패널티 0, 5일 수익률 -1.24%, 상대 거래량 0.59배 순으로 정렬",
       "entryQualityScore": 5,
       "entryQualityLabel": "낮음",
@@ -4831,7 +5032,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 10% in Seoul after stellar Nasdaq debut",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SK Hynix shares slide 12% in Seoul after stellar Nasdaq debut",
       "tieBreakerReason": "최종 원점수 -7, 리스크 패널티 -11, 5일 수익률 +2.57%, 상대 거래량 0.40배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -4897,13 +5098,13 @@
     "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
     "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / mixed - Meta (META) Faces $2 Billion AI Deal Reversal And EU App Design Probe",
     "tieBreakerReason": "최종 원점수 108, 리스크 패널티 0, 5일 수익률 +14.81%, 상대 거래량 2.00배 순으로 정렬",
-    "entryQualityScore": 38,
+    "entryQualityScore": 35,
     "entryQualityLabel": "낮음",
-    "trendStrengthIndex": 41,
-    "trendStateLabel": "잠복",
-    "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-    "exhaustionRisk": 4,
-    "exhaustionRiskLabel": "낮음",
+    "trendStrengthIndex": 52,
+    "trendStateLabel": "부상",
+    "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
+    "exhaustionRisk": 27,
+    "exhaustionRiskLabel": "보통",
     "relativeVolume": 2,
     "marketDataStatus": "ok",
     "entryCondition": "20일선 위 눌림 후 재상승 확인",
@@ -4912,18 +5113,18 @@
       "label": "자금흐름 예외 조건부",
       "status": "진입 후보",
       "reasons": [
-        "Entry Quality 38 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
+        "Entry Quality 35 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
       ],
       "rescueType": "STRONG_MONEY_FLOW"
     },
     "marketContext": {
       "marketRegime": "위험선호",
       "candidateEnvironment": "제한적",
-      "reason": "전체 시장은 위험선호 / Entry Quality 38 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
+      "reason": "전체 시장은 위험선호 / Entry Quality 35 < 50이나 moneyFlow 100, confidence HIGH, RVOL 2.00x로 강한 자금흐름 예외 조건 충족"
     },
-    "linkedNarrative": "Data Storage 자금 유입",
-    "narrativeStatus": "약화",
-    "narrativeScore": 41,
+    "linkedNarrative": "Internet Content 자금 유입",
+    "narrativeStatus": "관찰",
+    "narrativeScore": 60,
     "relatedEtfs": [
       "QQQ"
     ],
@@ -4932,20 +5133,20 @@
   },
   "dataReliability": {
     "priceVolumeStatus": "CONNECTED",
-    "priceVolumeFreshOkCount": 161,
+    "priceVolumeFreshOkCount": 167,
     "priceVolumeStaleFallbackCount": 0,
     "priceVolumeExpiredFallbackCount": 0,
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-10",
     "priceAsOfLabel": "2026-07-10 US regular close",
-    "reportGeneratedAtKST": "2026-07-13 12:32",
+    "reportGeneratedAtKST": "2026-07-13 13:08",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-07-13T03:32:41.158Z",
-    "newsLastUpdatedAt": "2026-07-13T03:32:41.158Z",
-    "latestNewsPublishedAt": "2026-07-13T03:11:41.000Z",
+    "newsFetchedAt": "2026-07-13T04:08:43.093Z",
+    "newsLastUpdatedAt": "2026-07-13T04:08:43.093Z",
+    "latestNewsPublishedAt": "2026-07-13T04:05:26.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
-    "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
+    "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS CONNECTED, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
     "newsReliability": "MEDIUM",
     "etfBreadthStatus": "PARTIAL",
     "etfBreadthSampleCount": "1~4",
@@ -4960,7 +5161,7 @@
       "프리/애프터마켓 확인 불가"
     ],
     "providers": "yfinance, Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API, config fallback sample, price-volume dollar-volume fallback",
-    "recommendationSession": "2026-07-12 US regular session",
+    "recommendationSession": "2026-07-13 US regular session",
     "grade": "LOW",
     "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 프리마켓/정규장 거래량을 별도 확인해야 한다."
   },

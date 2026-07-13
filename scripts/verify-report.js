@@ -75,12 +75,22 @@ function main() {
   assert(markdown.includes("시장 국면 판단"), "Markdown missing market regime assessment");
   assert(markdown.includes("기술적 지표"), "Markdown missing market regime technical section");
   assert(markdown.includes("매크로 시황"), "Markdown missing market regime macro section");
+  for (const macroSnippet of ["금리", "물가", "정책", "신용/유동성", "환율/글로벌"]) {
+    assert(markdown.includes(macroSnippet), `Markdown missing macro component: ${macroSnippet}`);
+    assert(html.includes(macroSnippet), `HTML missing macro component: ${macroSnippet}`);
+  }
   assert(markdown.includes("전일 대비"), "Markdown missing market regime day-over-day change");
   assert(markdown.includes("판정 신뢰도"), "Markdown missing market regime reliability");
   assert(html.includes("data-market-regime"), "HTML missing market regime assessment");
+  assert(html.includes("data-macro-components"), "HTML missing macro component cards");
   assert(latestSnapshotForRegime.marketRegimeAssessment?.label, "Snapshot missing market regime label");
   assert(latestSnapshotForRegime.marketRegimeAssessment?.technical?.benchmarks?.length, "Snapshot missing market regime benchmarks");
   assert(latestSnapshotForRegime.marketRegimeAssessment?.macro?.signals?.length, "Snapshot missing market regime macro signals");
+  assert(latestSnapshotForRegime.marketRegimeAssessment?.macro?.components?.rates, "Snapshot missing rates macro component");
+  assert(latestSnapshotForRegime.marketRegimeAssessment?.macro?.components?.inflation, "Snapshot missing inflation macro component");
+  assert(latestSnapshotForRegime.marketRegimeAssessment?.macro?.components?.policy, "Snapshot missing policy macro component");
+  assert(latestSnapshotForRegime.marketRegimeAssessment?.macro?.components?.creditLiquidity, "Snapshot missing credit/liquidity macro component");
+  assert(latestSnapshotForRegime.marketRegimeAssessment?.macro?.components?.fxGlobalRisk, "Snapshot missing FX/global risk macro component");
   assert(latestSnapshotForRegime.marketRegimeAssessment?.reliability?.grade, "Snapshot missing market regime reliability");
   assert(latestSnapshotForRegime.marketRegimeAssessment?.change?.status, "Snapshot missing market regime change");
 

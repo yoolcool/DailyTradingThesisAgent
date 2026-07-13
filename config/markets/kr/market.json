@@ -28,10 +28,34 @@
       "riskOnWhen": "down"
     },
     {
+      "ticker": "^TNX",
+      "label": "US 10Y yield",
+      "type": "rates",
+      "riskOnWhen": "down"
+    },
+    {
       "ticker": "TLT",
       "label": "US long-duration bonds",
       "type": "rates",
       "riskOnWhen": "up"
+    },
+    {
+      "ticker": "USO",
+      "label": "Oil ETF",
+      "type": "inflation",
+      "riskOnWhen": "down"
+    },
+    {
+      "ticker": "HYG",
+      "label": "High yield credit",
+      "type": "credit",
+      "riskOnWhen": "up"
+    },
+    {
+      "ticker": "^VIX",
+      "label": "VIX",
+      "type": "volatility",
+      "riskOnWhen": "down"
     },
     {
       "ticker": "EWY",
