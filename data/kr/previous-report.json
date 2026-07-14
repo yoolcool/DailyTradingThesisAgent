@@ -13,7 +13,7 @@
     "sessionLabel": "KRX regular session"
   },
   "reportDate": "2026-07-13",
-  "generatedAt": "2026년 7월 13일 월요일 오후 1:08",
+  "generatedAt": "2026년 7월 13일 월요일 오후 2:25",
   "marketRegimeAssessment": {
     "label": "약세장",
     "score": 21,
@@ -5570,7 +5570,7 @@
         "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "229200.KS",
-          "checkedAt": "2026-07-13T04:08:36.152Z",
+          "checkedAt": "2026-07-13T05:25:28.807Z",
           "status": "CONNECTED",
           "source": "Google News RSS",
           "sourceStatuses": [
@@ -5707,7 +5707,7 @@
         "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "069500.KS",
-          "checkedAt": "2026-07-13T04:08:36.157Z",
+          "checkedAt": "2026-07-13T05:25:28.741Z",
           "status": "CONNECTED",
           "source": "Google News RSS",
           "sourceStatuses": [
@@ -5885,7 +5885,7 @@
         "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "073240.KS",
-          "checkedAt": "2026-07-13T04:08:36.158Z",
+          "checkedAt": "2026-07-13T05:25:29.053Z",
           "status": "CONNECTED",
           "source": "Google News RSS",
           "sourceStatuses": [
@@ -6064,7 +6064,7 @@
         "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "180640.KS",
-          "checkedAt": "2026-07-13T04:08:36.160Z",
+          "checkedAt": "2026-07-13T05:25:28.997Z",
           "status": "CONNECTED",
           "source": "Google News RSS",
           "sourceStatuses": [
@@ -6258,7 +6258,7 @@
         "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "010950.KS",
-          "checkedAt": "2026-07-13T04:08:36.161Z",
+          "checkedAt": "2026-07-13T05:25:28.918Z",
           "status": "CONNECTED",
           "source": "Google News RSS",
           "sourceStatuses": [
@@ -6275,34 +6275,17 @@
           "freshnessStatus": "FRESH",
           "trendTone": "긍정 우위",
           "directnessLabel": "종목 직접 뉴스 확인",
-          "headline": "신한투자증권 S-Oil, 유가 하락에도 정제마진 강세…목표가 18만원 - 아주경제",
+          "headline": "신한證 “S-Oil, 유가 하락에도 정제마진 견고… 목표가 18만원으로 상향” - 조선비즈 - Chosunbiz",
           "directCatalyst": {
-            "title": "신한투자증권 S-Oil, 유가 하락에도 정제마진 강세…목표가 18만원 - 아주경제",
-            "source": "아주경제",
-            "publishedAt": "2026-07-12T23:17:28.000Z",
-            "eventType": "투자/증설",
+            "title": "신한證 “S-Oil, 유가 하락에도 정제마진 견고… 목표가 18만원으로 상향” - 조선비즈 - Chosunbiz",
+            "source": "Chosunbiz",
+            "publishedAt": "2026-07-12T23:35:00.000Z",
+            "eventType": "목표가/의견 상향",
             "direction": "mixed",
             "freshnessBucket": "under_6h",
-            "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9kRC0yblJtVldqTmRMNXFuMlBYd3dtNVBsM2gtRWZneWN0bUN3NEQ2djU4QWRwNUo5WGdjUVc1clBUVHhtdE1pR1lHX0Fhbk56VEtzY1I2ZlhJQdIBWEFVX3lxTE5GVG41NlJhSXdhYURZMjI3OExpbWZHTnJFZXFZSkdtRXVFVUsyTU5kcnY2VnU1QzlqdGViYnlVcmFSX05lVklKQTlwTTMtS2ZQY2h0Tlk2Tzk?oc=5"
+            "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcEVfYnJaU3NKdmRpTkRlQWRWU012aV84V2t5TXlHQVBDMFBCZEJxclMyZUxvY0xrUzNVOVI2RWdEN2VSaTVjQjVESEpJS2dtcjMwYmw0UFRlZkhnSlhhM09iSkl4SmZWUmsyTHhKY3hLbldvRTlBa1lPQS1JemxpS2hVT2JiZlFx0gGcAUFVX3lxTFBlSFpaR2FUcUxzVllXRzVqUjJRNGFWNDJQRHVnYzY2X19JMHZMVWJTZWM2NDl6Zk9PX2pOcExLM3pqN1BMcUxXSmU0NG1jbk91bkhlazBZN2Nqb05hWDRadEJ6cGtKaUlyTVlpUW51Zm9SaW5SbFBMOFFQd0VMOURSenhYNVBFcnNvNzNnYkRRUU1WYjBHT2hZd1V5eA?oc=5"
           },
           "items": [
-            {
-              "title": "신한투자증권 S-Oil, 유가 하락에도 정제마진 강세…목표가 18만원 - 아주경제",
-              "summary": "신한투자증권 S-Oil, 유가 하락에도 정제마진 강세…목표가 18만원&nbsp;&nbsp;아주경제",
-              "koreanSummary": {
-                "title": "신한투자증권 S-Oil, 유가 하락에도 정제마진 강세…목표가 18만원 - 아주경제",
-                "content": "S-Oil에 대한 증권사 목표가 또는 투자의견 변화 뉴스입니다.",
-                "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
-                "check": "투자/증설의 금액, 기간, 실적 반영 시점"
-              },
-              "source": "아주경제",
-              "publishedAt": "2026-07-12T23:17:28.000Z",
-              "eventType": "투자/증설",
-              "directness": "direct_ticker",
-              "direction": "mixed",
-              "freshnessBucket": "under_6h",
-              "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9kRC0yblJtVldqTmRMNXFuMlBYd3dtNVBsM2gtRWZneWN0bUN3NEQ2djU4QWRwNUo5WGdjUVc1clBUVHhtdE1pR1lHX0Fhbk56VEtzY1I2ZlhJQdIBWEFVX3lxTE5GVG41NlJhSXdhYURZMjI3OExpbWZHTnJFZXFZSkdtRXVFVUsyTU5kcnY2VnU1QzlqdGViYnlVcmFSX05lVklKQTlwTTMtS2ZQY2h0Tlk2Tzk?oc=5"
-            },
             {
               "title": "신한證 “S-Oil, 유가 하락에도 정제마진 견고… 목표가 18만원으로 상향” - 조선비즈 - Chosunbiz",
               "summary": "신한證 “S-Oil, 유가 하락에도 정제마진 견고… 목표가 18만원으로 상향” - 조선비즈&nbsp;&nbsp;Chosunbiz",
@@ -6319,6 +6302,23 @@
               "direction": "mixed",
               "freshnessBucket": "under_6h",
               "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNcEVfYnJaU3NKdmRpTkRlQWRWU012aV84V2t5TXlHQVBDMFBCZEJxclMyZUxvY0xrUzNVOVI2RWdEN2VSaTVjQjVESEpJS2dtcjMwYmw0UFRlZkhnSlhhM09iSkl4SmZWUmsyTHhKY3hLbldvRTlBa1lPQS1JemxpS2hVT2JiZlFx0gGcAUFVX3lxTFBlSFpaR2FUcUxzVllXRzVqUjJRNGFWNDJQRHVnYzY2X19JMHZMVWJTZWM2NDl6Zk9PX2pOcExLM3pqN1BMcUxXSmU0NG1jbk91bkhlazBZN2Nqb05hWDRadEJ6cGtKaUlyTVlpUW51Zm9SaW5SbFBMOFFQd0VMOURSenhYNVBFcnNvNzNnYkRRUU1WYjBHT2hZd1V5eA?oc=5"
+            },
+            {
+              "title": "신한투자증권 S-Oil, 유가 하락에도 정제마진 강세…목표가 18만원 - 아주경제",
+              "summary": "신한투자증권 S-Oil, 유가 하락에도 정제마진 강세…목표가 18만원&nbsp;&nbsp;아주경제",
+              "koreanSummary": {
+                "title": "신한투자증권 S-Oil, 유가 하락에도 정제마진 강세…목표가 18만원 - 아주경제",
+                "content": "S-Oil에 대한 증권사 목표가 또는 투자의견 변화 뉴스입니다.",
+                "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+                "check": "투자/증설의 금액, 기간, 실적 반영 시점"
+              },
+              "source": "아주경제",
+              "publishedAt": "2026-07-12T23:17:28.000Z",
+              "eventType": "투자/증설",
+              "directness": "direct_ticker",
+              "direction": "mixed",
+              "freshnessBucket": "under_24h",
+              "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9kRC0yblJtVldqTmRMNXFuMlBYd3dtNVBsM2gtRWZneWN0bUN3NEQ2djU4QWRwNUo5WGdjUVc1clBUVHhtdE1pR1lHX0Fhbk56VEtzY1I2ZlhJQdIBWEFVX3lxTE5GVG41NlJhSXdhYURZMjI3OExpbWZHTnJFZXFZSkdtRXVFVUsyTU5kcnY2VnU1QzlqdGViYnlVcmFSX05lVklKQTlwTTMtS2ZQY2h0Tlk2Tzk?oc=5"
             },
             {
               "title": "\"S-Oil, 유가 하락에도 윤활기유 호조에 호실적 예상…목표가↑\"-하나 - 한국경제",
@@ -6340,20 +6340,20 @@
           ],
           "koreanSummary": {
             "title": "최근 뉴스/동향 한국어 요약",
-            "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"신한투자증권 S-Oil, 유가 하락에도 정제마진 강세…목표가 18만원 - 아주경제\"입니다.",
-            "directLine": "S-Oil에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"신한투자증권 S-Oil, 유가 하락에도 정제마진 강세…목표가 18만원 - 아주경제\"이며, 일반 재료로 봅니다.",
+            "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"신한證 “S-Oil, 유가 하락에도 정제마진 견고… 목표가 18만원으로 상향” - 조선비즈 - Chosunbiz\"입니다.",
+            "directLine": "S-Oil에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"신한證 “S-Oil, 유가 하락에도 정제마진 견고… 목표가 18만원으로 상향” - 조선비즈 - Chosunbiz\"이며, 일반 재료로 봅니다.",
             "bullets": [
-              {
-                "title": "신한투자증권 S-Oil, 유가 하락에도 정제마진 강세…목표가 18만원 - 아주경제",
-                "content": "S-Oil에 대한 증권사 목표가 또는 투자의견 변화 뉴스입니다.",
-                "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
-                "check": "투자/증설의 금액, 기간, 실적 반영 시점"
-              },
               {
                 "title": "신한證 “S-Oil, 유가 하락에도 정제마진 견고… 목표가 18만원으로 상향” - 조선비즈 - Chosunbiz",
                 "content": "S-Oil에 대한 증권사 목표가 또는 투자의견 변화 뉴스입니다.",
                 "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
                 "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+              },
+              {
+                "title": "신한투자증권 S-Oil, 유가 하락에도 정제마진 강세…목표가 18만원 - 아주경제",
+                "content": "S-Oil에 대한 증권사 목표가 또는 투자의견 변화 뉴스입니다.",
+                "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+                "check": "투자/증설의 금액, 기간, 실적 반영 시점"
               },
               {
                 "title": "\"S-Oil, 유가 하락에도 윤활기유 호조에 호실적 예상…목표가↑\"-하나 - 한국경제",
@@ -6369,7 +6369,7 @@
             "DART_API_KEY 또는 OPENDART_API_KEY not configured",
             "해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음"
           ],
-          "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: 신한투자증권 S-Oil, 유가 하락에도 정제마진 강세…목표가 18만원 - 아주경제"
+          "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: 신한證 “S-Oil, 유가 하락에도 정제마진 견고… 목표가 18만원으로 상향” - 조선비즈 - Chosunbiz"
         },
         "tieBreakerReason": "최종 원점수 83, 리스크 패널티 -10, 5일 수익률 +20.10%, 상대 거래량 1.43배 순으로 정렬",
         "relativeVolume": 1.43,
@@ -6410,10 +6410,10 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-13",
     "priceAsOfLabel": "2026-07-13 KRX 정규장 종가",
-    "reportGeneratedAtKST": "2026-07-13 13:08",
+    "reportGeneratedAtKST": "2026-07-13 14:25",
     "newsStatus": "DISABLED",
-    "newsFetchedAt": "2026-07-13T04:08:35.905Z",
-    "newsLastUpdatedAt": "2026-07-13T04:08:35.905Z",
+    "newsFetchedAt": "2026-07-13T05:25:28.138Z",
+    "newsLastUpdatedAt": "2026-07-13T05:25:28.138Z",
     "latestNewsPublishedAt": null,
     "newsFreshnessStatus": "UNKNOWN",
     "newsSources": "DART",
