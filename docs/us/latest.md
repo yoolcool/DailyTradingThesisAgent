@@ -8,11 +8,11 @@
 
 ## 시장 국면 판단
 
-- 최종 판정: 강세장 (83점)
-- 전일 대비: 강세장 유지, 점수 변화는 제한적이다(-1점).
+- 최종 판정: 기간 조정 (83점)
+- 전일 대비: 강세장에서 기간 조정으로 악화됐다(+10점).
 - 판정 신뢰도: 높음 (100점) - 핵심 지수와 매크로 데이터가 대부분 직접 수집되어 판정 신뢰도가 높다.
-- 행동 바이어스: 선별 매수 우위, 과열 추격만 제한
-- 한 줄 결론: 기술적 추세가 강세장 조건에 가깝다. 매크로도 큰 부담은 제한적이다.
+- 행동 바이어스: 추격 보류, 돌파 확인
+- 한 줄 결론: 장기 추세는 유지되지만 단기 추세가 둔화되어 기간 조정으로 본다. 기술 100점, 매크로 50점.
 - 기술적 지표: 상승 추세 우위 (100점, 가중치 65%)
 - S&P 500: 100점 | 50일선 위, 200일선 위, 20일 +1.51%, 60일 +7.00%, 52주 고점 대비 -1.01% -> 기술 점수 100
 - Nasdaq 100: 100점 | 50일선 위, 200일선 위, 20일 -0.17%, 60일 +12.00%, 52주 고점 대비 -3.82% -> 기술 점수 100
@@ -120,15 +120,15 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 주문 실행 신뢰도: LOW
 - ETF breadth 신뢰도: LOW
 - 신뢰도 해석: 가격/거래량 stale fallback 1개 사용, 테마 확산 판단 제한, 거래대금 유동성 낮음 또는 확인 불가, 프리/애프터마켓 확인 불가
-- 리포트 생성 시각: 2026-07-15 08:55 KST
+- 리포트 생성 시각: 2026-07-16 00:35 KST
 - 가격 기준 거래일: 2026-07-14 US regular close
-- 뉴스 수집 시각: 2026-07-15 08:55 KST
-- 가장 최근 뉴스 발행 시각: 2026-07-15 08:47 KST
+- 뉴스 수집 시각: 2026-07-16 00:35 KST
+- 가장 최근 뉴스 발행 시각: 2026-07-16 00:32 KST
 - 뉴스 신선도 상태: FRESH
 - 뉴스 소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API
 - 뉴스 소스 상태: Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED
 - 뉴스 신뢰도: MEDIUM
-- 추천 적용 거래일: 2026-07-14 US regular session
+- 추천 적용 거래일: 2026-07-15 US regular session
 - 가격/거래량 데이터 상태: 일부 연결
 - 뉴스 데이터 상태: 일부 연결
 - ETF 구성종목 확산도 상태: 일부 연결
@@ -145,10 +145,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스: 일부 연결
 - ETF 구성종목 확산도: 일부 연결
 - 거래대금 유동성: 일부 연결
-- 생성 시각: 2026년 7월 15일 수요일 AM 8:55
+- 생성 시각: 2026년 7월 16일 목요일 오전 12:35
 - 시장 상태: 중립
 - 오늘 돈의 방향: 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
-- 강한 테마 TOP 3: 사이버보안(77), 사이버보안 ETF(67), 클라우드/엔터프라이즈 소프트웨어 ETF(41)
+- 강한 테마 TOP 3: 사이버보안(78), 사이버보안 ETF(67), 클라우드/엔터프라이즈 소프트웨어 ETF(41)
 - 데이터 한계:
   - API 또는 provider 상태에 따라 뉴스/ETF 확산도/거래대금 유동성 반영 범위가 달라질 수 있다.
   - 수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한한다.
@@ -160,7 +160,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 #### 1. 사이버보안 지출 재가속
 - 상태: 부상
-- narrativeScore: 69
+- narrativeScore: 70
 - reasonConfidence: MEDIUM
 - 근거 ETF: HACK, IHAK, CIBR
 - 근거 개별 종목: CRWD, PANW, FTNT
@@ -173,9 +173,9 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 <details>
 <summary>상세 narrativeScore 근거 보기</summary>
 
-- rawScore: 69
+- rawScore: 70
 - ETF 평균 moneyFlowScore: 61
-- 개별 종목 평균 moneyFlowScore: 79
+- 개별 종목 평균 moneyFlowScore: 80
 - ETF 후보 비율: 50%
 - 개별 종목 후보 비율: 0%
 - 5일 평균 수익률: +4.00%
@@ -261,7 +261,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 서사명 | 상태 | narrativeScore | reasonConfidence | 대표 ETF | 대표 종목 | 오늘 행동 |
 | --- | --- | ---: | --- | --- | --- | --- |
-| 사이버보안 지출 재가속 | 부상 | 69 | MEDIUM | HACK, IHAK, CIBR | CRWD, PANW, FTNT | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| 사이버보안 지출 재가속 | 부상 | 70 | MEDIUM | HACK, IHAK, CIBR | CRWD, PANW, FTNT | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
 | Internet Content 자금 유입 | 약화 | 33 | LOW | QQQ | META, DASH | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
 | 필수소비재 음료 방어 성장 | 약화 | 29 | LOW | QQQ | MNST, CCEP | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
 | AI 소프트웨어/사이버보안 확산 | 약화 | 28 | LOW | IGV, QQQ, AIQ | ZS, DDOG, PLTR, TEAM | 추격보다 눌림 후 재상승 확인 |
@@ -358,11 +358,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 개별주는 데이트레이딩 관점으로 추천 이후 첫 정규장의 장중 최고가와 종가를 추적한다. ETF는 테마/스윙 관점으로 추천 이후 1주일 동안의 최고가와 현재 종가를 추적한다.
 
 ### 개별주 Top 3 추천 성과 요약
-- 최근 5개 리포트 표본: 7개 (초기 검증 단계)
-- 장중 최고가 기준 성공률: +16.67%
-- 종가 기준 성공률: +16.67%
-- 평균 장중 최고 수익률: -0.40%
-- 평균 종가 수익률: -4.72%
+- 최근 5개 리포트 표본: 6개 (초기 검증 단계)
+- 장중 최고가 기준 성공률: 0.00%
+- 종가 기준 성공률: 0.00%
+- 평균 장중 최고 수익률: -2.70%
+- 평균 종가 수익률: -6.38%
 
 ### ETF 추천 성과 요약
 - 최근 5개 리포트 표본: 0개 (초기 검증 단계)
@@ -376,6 +376,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 추천일 | 유형 | 순위 | 티커 | 기준가 | 추적 기간 | 상태 | High 수익률 | Close 수익률 | 결과 | 코멘트 |
 | --- | --- | ---: | --- | ---: | --- | --- | ---: | ---: | --- | --- |
+| 2026-07-16 | STOCK | 1 | CRWD | $210.73 | 2026-07-15 | pending | 데이터 없음 | 데이터 없음 | 추적 대기 | 아직 추적 거래일 데이터가 완성되지 않음 |
 | 2026-07-15 | STOCK | 1 | CRWD | $210.73 | 2026-07-15 | pending | 데이터 없음 | 데이터 없음 | 추적 대기 | 아직 추적 거래일 데이터가 완성되지 않음 |
 | 2026-07-14 | STOCK | 1 | TRI | $94.29 | 2026-07-14 | complete | -0.66% | -2.70% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
 | 2026-07-13 | STOCK | 1 | AXON | $640.46 | 2026-07-13 | complete | -9.75% | -14.59% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
@@ -443,41 +444,41 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 자산 유형: STOCK
 - linkedNarrative: 사이버보안 지출 재가속
 - narrativeStatus: 부상
-- narrativeScore: 69
+- narrativeScore: 70
 - Trend Strength Index: 72
 - Exhaustion Risk: 26 (보통)
-- Entry Quality Score: 17 (낮음)
+- Entry Quality Score: 18 (낮음)
 - 트렌드 판단: 시장 위험선호가 약해 시장 환경 비우호 구간이다.
-- moneyFlowScore: 98
-- finalRawScore: 98
+- moneyFlowScore: 100
+- finalRawScore: 106
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- tieBreakerReason: 최종 원점수 98, 리스크 패널티 -8, 5일 수익률 +8.28%, 상대 거래량 1.07배 순으로 정렬
-- 후보별 시장 해석: 중립 / 제한적 - 고점 근처 추격 리스크 / Entry Quality 17 < 50이나 moneyFlow 98, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족
-- 게이트 사유: Entry Quality 17 < 50이나 moneyFlow 98, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족
+- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- tieBreakerReason: 최종 원점수 106, 리스크 패널티 -8, 5일 수익률 +8.28%, 상대 거래량 1.07배 순으로 정렬
+- 후보별 시장 해석: 중립 / 제한적 - 고점 근처 추격 리스크 / Entry Quality 18 < 50이나 moneyFlow 100, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족
+- 게이트 사유: Entry Quality 18 < 50이나 moneyFlow 100, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족
 - 주문 실행: 시장가 가능
-- 직접 촉매: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning
-- 왜 돈이 몰리는가: 20일 +23.45%, 5일 +8.28%, 상대 거래량 1.07배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS macro/under_6h / 유동성: LIQUID
+- 직접 촉매: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer
+- 왜 돈이 몰리는가: 20일 +23.45%, 5일 +8.28%, 상대 거래량 1.07배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS product/under_6h / 유동성: LIQUID
 - 누가 더 비싸게 사줄 수 있는지: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - todayActionLabel: 자금흐름 예외 조건부
 #### 최근 뉴스/동향 한국어 요약
 
-- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 부정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning"입니다.
-- 직접 촉매 판단: CrowdStrike Holdings Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning"이며, 매크로 재료로 봅니다.
-- 뉴스 1: CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning
-  - 내용: CrowdStrike Holdings Inc. 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 US and international security agencies issued a joint advisory on Russian state-sponsored cyber threats targeting critical infrastructure.입니다.
+- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "CrowdStrike Appoints AJ Shipley as Chief Product Officer"입니다.
+- 직접 촉매 판단: CrowdStrike Holdings Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "CrowdStrike Appoints AJ Shipley as Chief Product Officer"이며, 제품/서비스 재료로 봅니다.
+- 뉴스 1: CrowdStrike Appoints AJ Shipley as Chief Product Officer
+  - 내용: CrowdStrike Holdings Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 AUSTIN, Texas, July 15, 2026--CrowdStrike (NASDAQ: CRWD) today announced the appointment of AJ Shipley as Chief Product Officer.입니다.
   - 투자 의미: 단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
   - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-- 뉴스 2: Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months
-  - 내용: CrowdStrike Holdings Inc. 관련 기사는 Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months 이슈를 다루며, 주가 변동률 +29.00%를 핵심 내용으로 봅니다.
-  - 투자 의미: CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 뉴스 3: Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)
-  - 내용: CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Stock Market Today: The Dow Jones index creeps up Tuesday even as IBM stock tanks.입니다.
-  - 투자 의미: 단기 부정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
+- 뉴스 2: CRWD, PANW, NET, ZS: One Cybersecurity Stock Won Over Retail Investors – But Another Tops Wall Street’s List
+  - 내용: CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 In a Stocktwits poll that sought to gauge which names would post the best performance over the next 12 months, nearly half the users polled picked CrowdStrike as the clear winner.입니다.
+  - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
   - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
+- 뉴스 3: Dow Jones Futures: Techs Rise, Oil Hits $80 On Iran News, ASML, Morgan Stanley Lead Earnings Movers
+  - 내용: CrowdStrike Holdings Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Chip-gear giant ASML rose with the Nasdaq and AI stocks at key levels.입니다.
+  - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
+  - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
 - 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
 - 차트: ![CRWD chart](charts/CRWD.png)
 
@@ -503,7 +504,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 ## 오늘 돈이 몰리는 테마
 
-- 사이버보안: PANW, CRWD, FTNT, ZS | 평균 moneyFlowScore 77 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
+- 사이버보안: PANW, CRWD, FTNT, ZS | 평균 moneyFlowScore 78 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
 - 사이버보안 ETF: CIBR, HACK, IHAK | 평균 moneyFlowScore 67 | 추세는 확인되지만 선별 진입이 필요한 중간 강도의 테마로 본다.
 - 클라우드/엔터프라이즈 소프트웨어 ETF: IGV | 평균 moneyFlowScore 41 | 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
 - 메가캡 플랫폼 ETF: MAGS | 평균 moneyFlowScore 35 | 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
@@ -529,7 +530,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상태: 매매 금지
 - linkedNarrative: 사이버보안 지출 재가속
 - narrativeStatus: 부상
-- narrativeScore: 69
+- narrativeScore: 70
 - moneyFlowScore: 76
 - finalRawScore: 76
 - tieBreakerReason: 최종 원점수 76, 리스크 패널티 -5, 5일 수익률 +3.19%, 상대 거래량 4.18배 순으로 정렬
@@ -546,7 +547,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +16.72%
 - 상대 거래량: 4.18배
 - 52주 고점 대비 위치: -0.45%
-- whyMoneyIsFlowing: 20일 +16.72%, 5일 +3.19%, 상대 거래량 4.18배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h
+- whyMoneyIsFlowing: 20일 +16.72%, 5일 +3.19%, 상대 거래량 4.18배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 #### 최근 뉴스/동향 한국어 요약
@@ -602,23 +603,23 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 7/8/1
+  - 뉴스 소스: MarketWatch RSS, Federal Reserve RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 4/12/0
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 2
+  - 강한 촉매 수: 0
   - 중요 공시 수: 0
   - 직접 촉매: 없음
-  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-15 08:55 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-15 07:20 KST
+  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-16 00:35 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-16 00:32 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer says concerns about AI market froth are overblown. Here&apos;s why
-  - 원점수/상한 점수: +18 / +12
+  - 핵심 뉴스 요약: Copper is shadowing the hyperscaler stocks &#x2014; but wait for a dip before buying
+  - 원점수/상한 점수: +13 / +12
   - 점수 반영: +12
-  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 미연결
   - 샘플 수: 0/0
@@ -652,7 +653,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상태: 매매 금지
 - linkedNarrative: 사이버보안 지출 재가속
 - narrativeStatus: 부상
-- narrativeScore: 69
+- narrativeScore: 70
 - moneyFlowScore: 76
 - finalRawScore: 76
 - tieBreakerReason: 최종 원점수 76, 리스크 패널티 -5, 5일 수익률 +4.17%, 상대 거래량 1.71배 순으로 정렬
@@ -669,7 +670,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +18.99%
 - 상대 거래량: 1.71배
 - 52주 고점 대비 위치: -0.33%
-- whyMoneyIsFlowing: 20일 +18.99%, 5일 +4.17%, 상대 거래량 1.71배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h
+- whyMoneyIsFlowing: 20일 +18.99%, 5일 +4.17%, 상대 거래량 1.71배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 #### 최근 뉴스/동향 한국어 요약
@@ -725,23 +726,23 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 7/8/1
-  - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 2
+  - 뉴스 소스: MarketWatch RSS, Federal Reserve RSS, Yahoo Finance RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 6/10/0
+  - 직접성/방향성/신선도: 4/1/4
+  - 강한 촉매 수: 0
   - 중요 공시 수: 0
-  - 직접 촉매: 없음
-  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-15 08:55 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-15 07:20 KST
+  - 직접 촉매: Yahoo Finance RSS / general_market / stale / positive - CIBR vs. HACK: Which Cybersecurity ETF Is the Smarter Way to Play Digital Defense?
+  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-16 00:35 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-16 00:32 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer says concerns about AI market froth are overblown. Here&apos;s why
-  - 원점수/상한 점수: +18 / +12
+  - 핵심 뉴스 요약: Copper is shadowing the hyperscaler stocks &#x2014; but wait for a dip before buying
+  - 원점수/상한 점수: +17 / +12
   - 점수 반영: +12
-  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 2/2
@@ -775,7 +776,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상태: 관찰
 - linkedNarrative: 사이버보안 지출 재가속
 - narrativeStatus: 부상
-- narrativeScore: 69
+- narrativeScore: 70
 - moneyFlowScore: 49
 - finalRawScore: 49
 - tieBreakerReason: 최종 원점수 49, 리스크 패널티 0, 5일 수익률 +2.73%, 상대 거래량 0.88배 순으로 정렬
@@ -792,7 +793,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +11.02%
 - 상대 거래량: 0.88배
 - 52주 고점 대비 위치: -0.38%
-- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE
+- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 #### 최근 뉴스/동향 한국어 요약
@@ -847,21 +848,21 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
+  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 7/8/1
+  - 긍정/중립/부정: 12/4/0
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 2
+  - 강한 촉매 수: 1
   - 중요 공시 수: 0
   - 직접 촉매: 없음
-  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-15 08:55 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-15 07:20 KST
+  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-16 00:35 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-16 00:32 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer says concerns about AI market froth are overblown. Here&apos;s why
-  - 원점수/상한 점수: +18 / +12
+  - 핵심 뉴스 요약: Copper is shadowing the hyperscaler stocks &#x2014; but wait for a dip before buying
+  - 원점수/상한 점수: +21 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
@@ -914,7 +915,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +3.23%
 - 상대 거래량: 1.01배
 - 52주 고점 대비 위치: -20.65%
-- whyMoneyIsFlowing: 20일 +3.23%, 5일 -0.53%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID
+- whyMoneyIsFlowing: 20일 +3.23%, 5일 -0.53%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
 #### 최근 뉴스/동향 한국어 요약
@@ -969,21 +970,21 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
+  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 7/8/1
+  - 긍정/중립/부정: 12/4/0
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 2
+  - 강한 촉매 수: 1
   - 중요 공시 수: 0
   - 직접 촉매: 없음
-  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-15 08:55 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-15 07:20 KST
+  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-16 00:35 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-16 00:32 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer says concerns about AI market froth are overblown. Here&apos;s why
-  - 원점수/상한 점수: +18 / +12
+  - 핵심 뉴스 요약: Copper is shadowing the hyperscaler stocks &#x2014; but wait for a dip before buying
+  - 원점수/상한 점수: +21 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
@@ -1036,7 +1037,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +1.36%
 - 상대 거래량: 0.62배
 - 52주 고점 대비 위치: -1.13%
-- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.62배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID
+- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.62배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 #### 최근 뉴스/동향 한국어 요약
@@ -1091,23 +1092,23 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 9/7/0
-  - 직접성/방향성/신선도: 2/1/4
+  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 6/9/1
+  - 직접성/방향성/신선도: 4/1/4
   - 강한 촉매 수: 1
   - 중요 공시 수: 0
-  - 직접 촉매: 없음
-  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-15 08:55 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-15 07:20 KST
+  - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Exchange-Traded Funds, Equity Futures Higher Pre-Bell Wednesday Amid Economic Reports
+  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-16 00:35 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-16 00:32 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer says concerns about AI market froth are overblown. Here&apos;s why
-  - 원점수/상한 점수: +18 / +12
+  - 핵심 뉴스 요약: Copper is shadowing the hyperscaler stocks &#x2014; but wait for a dip before buying
+  - 원점수/상한 점수: +19 / +12
   - 점수 반영: +12
-  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 4/4
@@ -1227,14 +1228,14 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - relatedEtfs: HACK, CIBR, IHAK, IGV
 - linkedNarrative: 사이버보안 지출 재가속
 - narrativeStatus: 부상
-- narrativeScore: 69
-- moneyFlowScore: 98
-- finalRawScore: 98
-- tieBreakerReason: 최종 원점수 98, 리스크 패널티 -8, 5일 수익률 +8.28%, 상대 거래량 1.07배 순으로 정렬
+- narrativeScore: 70
+- moneyFlowScore: 100
+- finalRawScore: 106
+- tieBreakerReason: 최종 원점수 106, 리스크 패널티 -8, 5일 수익률 +8.28%, 상대 거래량 1.07배 순으로 정렬
 - 과열 리스크: 중간
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning
+- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- 직접 촉매: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer
 - todayActionLabel: 자금흐름 예외 조건부
 - 주문 실행: 시장가 가능
 - 기준일: 2026-07-14
@@ -1245,27 +1246,27 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 1.07배
 - 52주 고점 대비 위치: -0.10%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +8.28% vs ETF 평균 +2.39%, 주식 20일 +23.45% vs ETF 평균 +12.49%, 상대 거래량 1.07배 vs ETF 평균 1.94배
-- whyMoneyIsFlowing: 20일 +23.45%, 5일 +8.28%, 상대 거래량 1.07배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS macro/under_6h / 유동성: LIQUID
+- whyMoneyIsFlowing: 20일 +23.45%, 5일 +8.28%, 상대 거래량 1.07배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS product/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: CRWD가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
 - ETF가 더 나은 경우: CRWD가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
 #### 최근 뉴스/동향 한국어 요약
 
-- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 부정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning"입니다.
-- 직접 촉매 판단: CrowdStrike Holdings Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning"이며, 매크로 재료로 봅니다.
-- 뉴스 1: CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning
-  - 내용: CrowdStrike Holdings Inc. 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 US and international security agencies issued a joint advisory on Russian state-sponsored cyber threats targeting critical infrastructure.입니다.
+- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "CrowdStrike Appoints AJ Shipley as Chief Product Officer"입니다.
+- 직접 촉매 판단: CrowdStrike Holdings Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "CrowdStrike Appoints AJ Shipley as Chief Product Officer"이며, 제품/서비스 재료로 봅니다.
+- 뉴스 1: CrowdStrike Appoints AJ Shipley as Chief Product Officer
+  - 내용: CrowdStrike Holdings Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 AUSTIN, Texas, July 15, 2026--CrowdStrike (NASDAQ: CRWD) today announced the appointment of AJ Shipley as Chief Product Officer.입니다.
   - 투자 의미: 단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
   - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-- 뉴스 2: Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months
-  - 내용: CrowdStrike Holdings Inc. 관련 기사는 Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months 이슈를 다루며, 주가 변동률 +29.00%를 핵심 내용으로 봅니다.
-  - 투자 의미: CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 뉴스 3: Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)
-  - 내용: CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Stock Market Today: The Dow Jones index creeps up Tuesday even as IBM stock tanks.입니다.
-  - 투자 의미: 단기 부정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
+- 뉴스 2: CRWD, PANW, NET, ZS: One Cybersecurity Stock Won Over Retail Investors – But Another Tops Wall Street’s List
+  - 내용: CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 In a Stocktwits poll that sought to gauge which names would post the best performance over the next 12 months, nearly half the users polled picked CrowdStrike as the clear winner.입니다.
+  - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
   - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
+- 뉴스 3: Dow Jones Futures: Techs Rise, Oil Hits $80 On Iran News, ASML, Morgan Stanley Lead Earnings Movers
+  - 내용: CrowdStrike Holdings Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Chip-gear giant ASML rose with the Nasdaq and AI stocks at key levels.입니다.
+  - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
+  - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
 - 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
@@ -1277,10 +1278,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 - moneyFlowScore(최종) 산정 근거:
   - moneyFlowScore(1차): 91
-  - 최종 원점수: 98
-  - 최종 표시 점수: 98
-  - cap 적용: cap 미적용
-  - 계산식: +91 + +4 + 0 + +5 + +6 - 8 + 0 = 98
+  - 최종 원점수: 106
+  - 최종 표시 점수: 100
+  - cap 적용: raw score 106 capped to displayed score 100
+  - 계산식: +91 + +12 + 0 + +5 + +6 - 8 + 0 = 106 -> 100
   - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
   - 가격/거래량 1차 점수: +91
     - 추세: +25
@@ -1298,11 +1299,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
     - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
     - 관련 ETF 상대강도: 원점수 +6, 상한 적용 +6 / 최대 8
   - 추가 데이터 가감점:
-    - 뉴스: +4
+    - 뉴스: +12
     - 유동성: +5
   - ETF 대비 상대강도: +6
   - 리스크 패널티: -8
-  - 주요 근거: 1차 91, 최종 원점수 98, 표시 98. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
+  - 주요 근거: 1차 91, 최종 원점수 106, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: -8
     - 리스크 등급: MEDIUM
@@ -1319,22 +1320,22 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: Yahoo Finance RSS, CNBC Markets RSS, MarketWatch RSS
+  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS, Yahoo Finance RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 5/6/5
-  - 직접성/방향성/신선도: 4/0/4
-  - 강한 촉매 수: 5
+  - 긍정/중립/부정: 12/4/0
+  - 직접성/방향성/신선도: 4/1/4
+  - 강한 촉매 수: 1
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning
-  - 보조 뉴스: Yahoo Finance RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-15 08:55 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-15 08:47 KST
+  - 직접 촉매: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer
+  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-16 00:35 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-16 00:32 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Dow Jones Futures Rise; Goldman, CrowdStrike Jump, But AI Stocks Need To Do This
-  - 원점수/상한 점수: +4 / +4
-  - 점수 반영: +4
+  - 핵심 뉴스 요약: Copper is shadowing the hyperscaler stocks &#x2014; but wait for a dip before buying
+  - 원점수/상한 점수: +23 / +12
+  - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
@@ -1347,28 +1348,28 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
 - 후보 선정 후 뉴스/동향 재확인:
   - 재확인 상태: 일부 연결
-  - 재확인 시각: 2026-07-15 08:55 KST
-  - 최근 발행 시각: 2026-07-15 08:47 KST
+  - 재확인 시각: 2026-07-16 00:35 KST
+  - 최근 발행 시각: 2026-07-16 00:32 KST
   - 신선도: FRESH
-  - 출처: Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS
+  - 출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 부정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning"입니다.
-  - 직접 촉매: Yahoo Finance RSS / macro / under_6h - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning
-  - 한국어 뉴스 요약 1: CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning
-    - 내용: CrowdStrike Holdings Inc. 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 US and international security agencies issued a joint advisory on Russian state-sponsored cyber threats targeting critical infrastructure.입니다.
+  - 한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "CrowdStrike Appoints AJ Shipley as Chief Product Officer"입니다.
+  - 직접 촉매: Yahoo Finance RSS / product / under_6h - CrowdStrike Appoints AJ Shipley as Chief Product Officer
+  - 한국어 뉴스 요약 1: CrowdStrike Appoints AJ Shipley as Chief Product Officer
+    - 내용: CrowdStrike Holdings Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 AUSTIN, Texas, July 15, 2026--CrowdStrike (NASDAQ: CRWD) today announced the appointment of AJ Shipley as Chief Product Officer.입니다.
     - 투자 의미: 단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
     - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-  - 한국어 뉴스 요약 2: Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months
-    - 내용: CrowdStrike Holdings Inc. 관련 기사는 Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months 이슈를 다루며, 주가 변동률 +29.00%를 핵심 내용으로 봅니다.
-    - 투자 의미: CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-    - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-  - 한국어 뉴스 요약 3: Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)
-    - 내용: CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Stock Market Today: The Dow Jones index creeps up Tuesday even as IBM stock tanks.입니다.
-    - 투자 의미: 단기 부정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
+  - 한국어 뉴스 요약 2: CRWD, PANW, NET, ZS: One Cybersecurity Stock Won Over Retail Investors – But Another Tops Wall Street’s List
+    - 내용: CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 In a Stocktwits poll that sought to gauge which names would post the best performance over the next 12 months, nearly half the users polled picked CrowdStrike as the clear winner.입니다.
+    - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
     - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-  - 원문 헤드라인 1: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning
-  - 원문 헤드라인 2: Yahoo Finance RSS / general_market / under_6h / mixed - Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months
-  - 원문 헤드라인 3: Yahoo Finance RSS / general_market / under_6h / negative - Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)
+  - 한국어 뉴스 요약 3: Dow Jones Futures: Techs Rise, Oil Hits $80 On Iran News, ASML, Morgan Stanley Lead Earnings Movers
+    - 내용: CrowdStrike Holdings Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Chip-gear giant ASML rose with the Nasdaq and AI stocks at key levels.입니다.
+    - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
+    - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
+  - 원문 헤드라인 1: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer
+  - 원문 헤드라인 2: Yahoo Finance RSS / general_market / under_24h / positive - CRWD, PANW, NET, ZS: One Cybersecurity Stock Won Over Retail Investors – But Another Tops Wall Street’s List
+  - 원문 헤드라인 3: Yahoo Finance RSS / earnings / under_6h / positive - Dow Jones Futures: Techs Rise, Oil Hits $80 On Iran News, ASML, Morgan Stanley Lead Earnings Movers
   - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-07-14 | 종가 $210.73 | 1일 +12.14% | 5일 +8.28% | 20일 +23.45% | 상대 거래량 1.07배 | 52주 고점 대비 -0.10% | 데이터 소스: yfinance
@@ -1384,7 +1385,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - relatedEtfs: HACK, CIBR, IHAK, IGV
 - linkedNarrative: 사이버보안 지출 재가속
 - narrativeStatus: 부상
-- narrativeScore: 69
+- narrativeScore: 70
 - moneyFlowScore: 77
 - finalRawScore: 77
 - tieBreakerReason: 최종 원점수 77, 리스크 패널티 -8, 5일 수익률 +4.70%, 상대 거래량 0.78배 순으로 정렬
@@ -1402,7 +1403,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 0.78배
 - 52주 고점 대비 위치: -4.15%
 - 관련 ETF 대비 상대강도: 관련 ETF와 비슷함 | 주식 5일 +4.70% vs ETF 평균 +2.39%, 주식 20일 +26.20% vs ETF 평균 +12.49%, 상대 거래량 0.78배 vs ETF 평균 1.94배
-- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.78배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID
+- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.78배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: 관련 ETF와 비슷함 | 주식 5일 +4.70% vs ETF 평균 +2.39%, 주식 20일 +26.20% vs ETF 평균 +12.49%, 상대 거래량 0.78배 vs ETF 평균 1.94배. 개별 종목 우선으로 격상하려면 관련 ETF 대비 상대강도 유지가 더 필요하다.
@@ -1462,21 +1463,21 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
+  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS, Yahoo Finance RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 8/7/1
-  - 직접성/방향성/신선도: 4/1/4
+  - 긍정/중립/부정: 13/3/0
+  - 직접성/방향성/신선도: 2/1/4
   - 강한 촉매 수: 1
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - CRWD, PANW, ZS, OKTA In Focus — Cybersecurity Stocks Get Boost As IBM CEO Flags Rising Concerns
-  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-15 08:55 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-15 07:20 KST
+  - 직접 촉매: 없음
+  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-16 00:35 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-16 00:32 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer says concerns about AI market froth are overblown. Here&apos;s why
-  - 원점수/상한 점수: +19 / +12
+  - 핵심 뉴스 요약: Copper is shadowing the hyperscaler stocks &#x2014; but wait for a dip before buying
+  - 원점수/상한 점수: +22 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
@@ -1504,7 +1505,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - relatedEtfs: HACK, CIBR, IHAK, IGV
 - linkedNarrative: 사이버보안 지출 재가속
 - narrativeStatus: 부상
-- narrativeScore: 69
+- narrativeScore: 70
 - moneyFlowScore: 63
 - finalRawScore: 63
 - tieBreakerReason: 최종 원점수 63, 리스크 패널티 -4, 5일 수익률 +5.14%, 상대 거래량 0.76배 순으로 정렬
@@ -1522,7 +1523,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 0.76배
 - 52주 고점 대비 위치: -0.26%
 - 관련 ETF 대비 상대강도: 관련 ETF와 비슷함 | 주식 5일 +5.14% vs ETF 평균 +2.39%, 주식 20일 +14.03% vs ETF 평균 +12.49%, 상대 거래량 0.76배 vs ETF 평균 1.94배
-- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE
+- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: 관련 ETF와 비슷함 | 주식 5일 +5.14% vs ETF 평균 +2.39%, 주식 20일 +14.03% vs ETF 평균 +12.49%, 상대 거래량 0.76배 vs ETF 평균 1.94배. 개별 종목 우선으로 격상하려면 관련 ETF 대비 상대강도 유지가 더 필요하다.
@@ -1581,23 +1582,23 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 8/8/0
-  - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 1
+  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 10/6/0
+  - 직접성/방향성/신선도: 4/1/4
+  - 강한 촉매 수: 0
   - 중요 공시 수: 0
-  - 직접 촉매: 없음
-  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-15 08:55 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-15 07:20 KST
+  - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Cybersecurity Space is Buzzing on Recent Catalysts: 3 Top Picks
+  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-16 00:35 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-16 00:32 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer says concerns about AI market froth are overblown. Here&apos;s why
-  - 원점수/상한 점수: +17 / +12
+  - 핵심 뉴스 요약: Copper is shadowing the hyperscaler stocks &#x2014; but wait for a dip before buying
+  - 원점수/상한 점수: +21 / +12
   - 점수 반영: +12
-  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
@@ -1641,7 +1642,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 0.76배
 - 52주 고점 대비 위치: -2.86%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +5.42% vs ETF 평균 +0.24%, 주식 20일 +17.76% vs ETF 평균 -0.06%, 상대 거래량 0.76배 vs ETF 평균 0.70배
-- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE
+- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 - 왜 ETF가 아니라 이 종목인가: DDOG가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
@@ -1701,21 +1702,21 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
+  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS, Yahoo Finance RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 8/8/0
+  - 긍정/중립/부정: 12/4/0
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 2
+  - 강한 촉매 수: 1
   - 중요 공시 수: 0
   - 직접 촉매: 없음
-  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-07-15 08:55 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-15 07:20 KST
+  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-16 00:35 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-16 00:32 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer says concerns about AI market froth are overblown. Here&apos;s why
-  - 원점수/상한 점수: +19 / +12
+  - 핵심 뉴스 요약: Copper is shadowing the hyperscaler stocks &#x2014; but wait for a dip before buying
+  - 원점수/상한 점수: +21 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
@@ -1748,9 +1749,9 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - finalRawScore: 70
 - tieBreakerReason: 최종 원점수 70, 리스크 패널티 -4, 5일 수익률 +1.73%, 상대 거래량 1.00배 순으로 정렬
 - 과열 리스크: 낮음
-- reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - Is Zscaler (ZS) Undervalued After The Cyber Threat Warning Put Security Stocks Back In Focus? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - Is Zscaler (ZS) Undervalued After The Cyber Threat Warning Put Security Stocks Back In Focus?
+- reasonConfidence: MEDIUM
+- reasonConfidenceExplanation: 직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
+
 - todayActionLabel: 제외
 - 주문 실행: 지정가 권장
 - 기준일: 2026-07-14
@@ -1761,7 +1762,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 1.00배
 - 52주 고점 대비 위치: -54.87%
 - 관련 ETF 대비 상대강도: 관련 ETF와 비슷함 | 주식 5일 +1.73% vs ETF 평균 +2.39%, 주식 20일 +17.43% vs ETF 평균 +12.49%, 상대 거래량 1.00배 vs ETF 평균 1.94배
-- whyMoneyIsFlowing: 20일 +17.43%, 5일 +1.73%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: ACCEPTABLE
+- whyMoneyIsFlowing: 20일 +17.43%, 5일 +1.73%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
 - 왜 ETF가 아니라 이 종목인가: 관련 ETF와 비슷함 | 주식 5일 +1.73% vs ETF 평균 +2.39%, 주식 20일 +17.43% vs ETF 평균 +12.49%, 상대 거래량 1.00배 vs ETF 평균 1.94배. 개별 종목 우선으로 격상하려면 관련 ETF 대비 상대강도 유지가 더 필요하다.
@@ -1820,21 +1821,21 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: Yahoo Finance RSS, CNBC Markets RSS, MarketWatch RSS
+  - 뉴스 소스: MarketWatch RSS, CNBC Markets RSS, Yahoo Finance RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 5/7/4
-  - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 5
+  - 긍정/중립/부정: 13/3/0
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 1
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - Is Zscaler (ZS) Undervalued After The Cyber Threat Warning Put Security Stocks Back In Focus?
-  - 보조 뉴스: Yahoo Finance RSS sector_theme / earnings / under_6h
-  - 뉴스 수집 시각: 2026-07-15 08:55 KST
-  - 가장 최근 뉴스 발행 시각: 2026-07-15 07:23 KST
+  - 직접 촉매: 없음
+  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-07-16 00:35 KST
+  - 가장 최근 뉴스 발행 시각: 2026-07-16 00:32 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Why The Trade Desk (TTD) Shares Are Sliding Today
-  - 원점수/상한 점수: +24 / +12
+  - 핵심 뉴스 요약: Copper is shadowing the hyperscaler stocks &#x2014; but wait for a dip before buying
+  - 원점수/상한 점수: +22 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
@@ -1845,7 +1846,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 평균 거래대금: $558,833,108
   - 주문 영향: 지정가 권장
   - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
-- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
+- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
 - 후보 선정 후 뉴스/동향 재확인:
   - 재확인 상태: 데이터 없음
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
@@ -1857,18 +1858,18 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 이 섹션은 실제 계좌 보유 종목이 아니라 전일 리포트에서 제시된 개별 종목 후보의 사후 점검이다.
 실제 보유 수량/평단이 입력되지 않았으므로 계좌 수익률이 아니라 추천 기준일 이후 가격 변화를 추적한다.
 
-#### Meta Platforms Inc.(META)
-- 전일 추천일: 2026-07-10
+#### Thomson Reuters Corporation(TRI)
+- 전일 추천일: 2026-07-13
 - 전일 actionLabel: 자금흐름 예외 조건부
-- 전일 moneyFlowScore: 100
-- 전일 종가 또는 추천 기준가: $669.21
-- 오늘 종가: $661.04
-- 추천 이후 수익률: -1.22%
+- 전일 moneyFlowScore: 88
+- 전일 종가 또는 추천 기준가: $94.29
+- 오늘 종가: $91.74
+- 추천 이후 수익률: -2.70%
 - 진입 조건 충족 여부: 미충족
-- 무효화 조건 발생 여부: 미발생
+- 무효화 조건 발생 여부: 발생
 - 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 유지
-- 오늘 판단 근거: META는 전일 추천 이후 -1.22% 변화. 관련 ETF보다 강함 | 주식 5일 +7.38% vs ETF 평균 +1.45%, 주식 20일 +16.59% vs ETF 평균 -0.23%, 상대 거래량 0.65배 vs ETF 평균 0.65배
+- 오늘 상태: 무효화
+- 오늘 판단 근거: TRI는 전일 추천 이후 -2.70% 변화. 관련 ETF보다 강함 | 주식 5일 +1.08% vs ETF 평균 +0.48%, 주식 20일 +12.69% vs ETF 평균 +0.55%, 상대 거래량 0.91배 vs ETF 평균 0.67배
 - 다음 확인 조건: 거래량 회복 실패
 
 ### 2-4. ETF 대비 개별 종목 판단 로직
@@ -1929,12 +1930,12 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 순위 | 티커 | 이름 | moneyFlowScore(1차) | 최종 표시 점수 | 최종 원점수 | 점수 구간 | 오늘 판단 | 신뢰도 | 1일 | 5일 | 20일 | 상대 거래량 | 관련 ETF |
 |---:|---|---|---:|---:|---:|---|---|---|---:|---:|---:|---:|---|
-| 1 | CRWD | CrowdStrike Holdings Inc. | 91 | 98 | 98 | 강한 자금 유입 후보 | 자금흐름 예외 조건부 | HIGH | +12.14% | +8.28% | +23.45% | 1.07 | HACK, CIBR, IHAK, IGV |
+| 1 | CRWD | CrowdStrike Holdings Inc. | 91 | 100 | 106 | 강한 자금 유입 후보 | 자금흐름 예외 조건부 | HIGH | +12.14% | +8.28% | +23.45% | 1.07 | HACK, CIBR, IHAK, IGV |
 | 2 | PANW | Palo Alto Networks Inc. | 62 | 77 | 77 | 관찰 후보 | 거래량 확인 전 관찰 | LOW | +6.84% | +4.70% | +26.20% | 0.78 | HACK, CIBR, IHAK, IGV |
-| 3 | ZS | Zscaler Inc. | 54 | 70 | 70 | 관찰 후보 | 제외 | HIGH | +7.24% | +1.73% | +17.43% | 1.00 | HACK, CIBR, IHAK, IGV |
+| 3 | ZS | Zscaler Inc. | 54 | 70 | 70 | 관찰 후보 | 제외 | MEDIUM | +7.24% | +1.73% | +17.43% | 1.00 | HACK, CIBR, IHAK, IGV |
 | 4 | DDOG | Datadog Inc. | 52 | 61 | 61 | 관찰 후보 | 거래량 확인 전 관찰 | LOW | +4.03% | +5.42% | +17.76% | 0.76 | IGV, AIQ, QQQ |
 | 5 | FTNT | Fortinet Inc. | 47 | 63 | 63 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +3.87% | +5.14% | +14.03% | 0.76 | HACK, CIBR, IHAK, IGV |
-| 6 | CTAS | Cintas Corporation | 41 | 58 | 58 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | +0.32% | +1.37% | +4.57% | 1.37 | QQQ, SPY, IWM |
+| 6 | CTAS | Cintas Corporation | 41 | 58 | 58 | 우선순위 낮음/매매 금지 | 제외 | HIGH | +0.32% | +1.37% | +4.57% | 1.37 | QQQ, SPY, IWM |
 | 7 | META | Meta Platforms Inc. | 39 | 54 | 54 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.66% | +7.38% | +16.59% | 0.65 | QQQ |
 | 8 | ETN | Eaton | 38 | 51 | 51 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +3.15% | +5.01% | +6.17% | 0.82 | QQQ, SPY, IWM |
 | 9 | NVDA | NVIDIA Corporation | 34 | 49 | 49 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +4.06% | +7.55% | +3.22% | 0.81 | SMH, SOXX, SOXQ, AIQ, QQQ |
@@ -1955,12 +1956,12 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 순위 | 티커 | 이름 | moneyFlowScore(1차) | 최종 표시 점수 | 최종 원점수 | 점수 구간 | 오늘 판단 | 신뢰도 | 1일 | 5일 | 20일 | 상대 거래량 | 관련 ETF |
 |---:|---|---|---:|---:|---:|---|---|---|---:|---:|---:|---:|---|
-| 1 | CRWD | CrowdStrike Holdings Inc. | 91 | 98 | 98 | 강한 자금 유입 후보 | 자금흐름 예외 조건부 | HIGH | +12.14% | +8.28% | +23.45% | 1.07 | HACK, CIBR, IHAK, IGV |
+| 1 | CRWD | CrowdStrike Holdings Inc. | 91 | 100 | 106 | 강한 자금 유입 후보 | 자금흐름 예외 조건부 | HIGH | +12.14% | +8.28% | +23.45% | 1.07 | HACK, CIBR, IHAK, IGV |
 | 2 | PANW | Palo Alto Networks Inc. | 62 | 77 | 77 | 관찰 후보 | 거래량 확인 전 관찰 | LOW | +6.84% | +4.70% | +26.20% | 0.78 | HACK, CIBR, IHAK, IGV |
-| 3 | ZS | Zscaler Inc. | 54 | 70 | 70 | 관찰 후보 | 제외 | HIGH | +7.24% | +1.73% | +17.43% | 1.00 | HACK, CIBR, IHAK, IGV |
+| 3 | ZS | Zscaler Inc. | 54 | 70 | 70 | 관찰 후보 | 제외 | MEDIUM | +7.24% | +1.73% | +17.43% | 1.00 | HACK, CIBR, IHAK, IGV |
 | 4 | DDOG | Datadog Inc. | 52 | 61 | 61 | 관찰 후보 | 거래량 확인 전 관찰 | LOW | +4.03% | +5.42% | +17.76% | 0.76 | IGV, AIQ, QQQ |
 | 5 | FTNT | Fortinet Inc. | 47 | 63 | 63 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +3.87% | +5.14% | +14.03% | 0.76 | HACK, CIBR, IHAK, IGV |
-| 6 | CTAS | Cintas Corporation | 41 | 58 | 58 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | +0.32% | +1.37% | +4.57% | 1.37 | QQQ, SPY, IWM |
+| 6 | CTAS | Cintas Corporation | 41 | 58 | 58 | 우선순위 낮음/매매 금지 | 제외 | HIGH | +0.32% | +1.37% | +4.57% | 1.37 | QQQ, SPY, IWM |
 | 7 | META | Meta Platforms Inc. | 39 | 54 | 54 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.66% | +7.38% | +16.59% | 0.65 | QQQ |
 | 8 | ETN | Eaton | 38 | 51 | 51 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +3.15% | +5.01% | +6.17% | 0.82 | QQQ, SPY, IWM |
 | 9 | NVDA | NVIDIA Corporation | 34 | 49 | 49 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +4.06% | +7.55% | +3.22% | 0.81 | SMH, SOXX, SOXQ, AIQ, QQQ |
@@ -2085,43 +2086,43 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 티커 | 카테고리 | moneyFlowScore | 상태 | reasonConfidence | 주요 이유 |
 | --- | --- | ---: | --- | --- | --- |
-| Roundhill Memory ETF(DRAM) | 메모리/HBM ETF | 22 | 매매 금지 | LOW | 20일 -5.81%, 5일 +1.06%, 상대 거래량 1.30배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
-| VanEck Semiconductor ETF(SMH) | AI 반도체 ETF | 13 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.60배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
-| iShares Semiconductor ETF(SOXX) | AI 반도체 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.73배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
-| Invesco PHLX Semiconductor ETF(SOXQ) | AI 반도체 ETF | 12 | 매매 금지 | LOW | 20일 -5.36%, 5일 +2.97%, 상대 거래량 1.06배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| iShares Expanded Tech-Software Sector ETF(IGV) | 클라우드/엔터프라이즈 소프트웨어 ETF | 41 | 매매 금지 | MEDIUM | 20일 +3.23%, 5일 -0.53%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
-| Global X Artificial Intelligence & Technology ETF(AIQ) | AI 소프트웨어 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.44배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| Global X Robotics & Artificial Intelligence ETF(BOTZ) | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.52배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| ROBO Global Robotics and Automation Index ETF(ROBO) | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.52배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| First Trust NASDAQ Cybersecurity ETF(CIBR) | 사이버보안 ETF | 49 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| Amplify Cybersecurity ETF(HACK) | 사이버보안 ETF | 76 | 매매 금지 | MEDIUM | 20일 +18.99%, 5일 +4.17%, 상대 거래량 1.71배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
-| iShares Cybersecurity and Tech ETF(IHAK) | 사이버보안 ETF | 76 | 매매 금지 | MEDIUM | 20일 +16.72%, 5일 +3.19%, 상대 거래량 4.18배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
-| iShares U.S. Aerospace & Defense ETF(ITA) | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.62배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| SPDR S&P Aerospace & Defense ETF(XAR) | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.73배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| Global X Defense Tech ETF(SHLD) | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.53배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| Invesco Aerospace & Defense ETF(PPA) | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| Global X U.S. Infrastructure Development ETF(PAVE) | 인프라 ETF | 30 | 매매 금지 | LOW | 20일 -1.82%, 5일 +0.48%, 상대 거래량 4.03배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| First Trust NASDAQ Clean Edge Smart Grid Infrastructure ETF(GRID) | 전력망 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| iShares U.S. Infrastructure ETF(IFRA) | 인프라 ETF | 3 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.52배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| Utilities Select Sector SPDR Fund(XLU) | 전력/유틸리티 ETF | 25 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.85배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| Global X Uranium ETF(URA) | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.64배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| VanEck Uranium and Nuclear ETF(NLR) | 원전/우라늄 ETF | 0 | 매매 금지 | LOW | 20일 -8.68%, 5일 +0.54%, 상대 거래량 1.12배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
-| Global X Lithium & Battery Tech ETF(LIT) | 배터리/리튬 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.84배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| Global X Copper Miners ETF(COPX) | 구리/금속 ETF | 32 | 매매 금지 | LOW | 20일 -8.43%, 5일 +5.48%, 상대 거래량 1.51배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
-| SPDR S&P Metals & Mining ETF(XME) | 금속/광산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.58배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| Energy Select Sector SPDR Fund(XLE) | 전통 에너지 ETF | 36 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.98배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
-| VanEck Oil Services ETF(OIH) | 전통 에너지 ETF | 12 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.90배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| ARK Innovation ETF(ARKK) | 혁신 성장 ETF | 1 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.48배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| Renaissance IPO ETF(IPO) | IPO/신규상장 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.22배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| KraneShares CSI China Internet ETF(KWEB) | 중국 인터넷 ETF | 5 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.50배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| Roundhill Magnificent Seven ETF(MAGS) | 메가캡 플랫폼 ETF | 35 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.55배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| Invesco QQQ Trust(QQQ) | 시장 기준 ETF | 21 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.65배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
-| SPDR S&P 500 ETF Trust(SPY) | 시장 기준 ETF | 38 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.62배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
-| iShares Russell 2000 ETF(IWM) | 시장 기준 ETF | 13 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.75배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
-| iShares 20+ Year Treasury Bond ETF(TLT) | 채권 ETF | 1 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.96배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID |
-| SPDR Gold Shares(GLD) | 금 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.78배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID |
-| iShares Bitcoin Trust ETF(IBIT) | 비트코인 ETF | 48 | 매매 금지 | MEDIUM | 20일 +1.50%, 5일 +1.19%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
-| Amplify Transformational Data Sharing ETF(BLOK) | 비트코인 ETF | 0 | 매매 금지 | LOW | 20일 -4.34%, 5일 -0.58%, 상대 거래량 1.59배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
+| Roundhill Memory ETF(DRAM) | 메모리/HBM ETF | 22 | 매매 금지 | LOW | 20일 -5.81%, 5일 +1.06%, 상대 거래량 1.30배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
+| VanEck Semiconductor ETF(SMH) | AI 반도체 ETF | 13 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.60배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID |
+| iShares Semiconductor ETF(SOXX) | AI 반도체 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.73배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
+| Invesco PHLX Semiconductor ETF(SOXQ) | AI 반도체 ETF | 12 | 매매 금지 | LOW | 20일 -5.36%, 5일 +2.97%, 상대 거래량 1.06배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| iShares Expanded Tech-Software Sector ETF(IGV) | 클라우드/엔터프라이즈 소프트웨어 ETF | 41 | 매매 금지 | MEDIUM | 20일 +3.23%, 5일 -0.53%, 상대 거래량 1.01배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
+| Global X Artificial Intelligence & Technology ETF(AIQ) | AI 소프트웨어 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.44배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h |
+| Global X Robotics & Artificial Intelligence ETF(BOTZ) | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.52배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| ROBO Global Robotics and Automation Index ETF(ROBO) | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.52배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
+| First Trust NASDAQ Cybersecurity ETF(CIBR) | 사이버보안 ETF | 49 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| Amplify Cybersecurity ETF(HACK) | 사이버보안 ETF | 76 | 매매 금지 | MEDIUM | 20일 +18.99%, 5일 +4.17%, 상대 거래량 1.71배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale |
+| iShares Cybersecurity and Tech ETF(IHAK) | 사이버보안 ETF | 76 | 매매 금지 | MEDIUM | 20일 +16.72%, 5일 +3.19%, 상대 거래량 4.18배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h |
+| iShares U.S. Aerospace & Defense ETF(ITA) | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.62배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| SPDR S&P Aerospace & Defense ETF(XAR) | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.73배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| Global X Defense Tech ETF(SHLD) | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.53배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| Invesco Aerospace & Defense ETF(PPA) | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.70배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h |
+| Global X U.S. Infrastructure Development ETF(PAVE) | 인프라 ETF | 30 | 매매 금지 | LOW | 20일 -1.82%, 5일 +0.48%, 상대 거래량 4.03배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| First Trust NASDAQ Clean Edge Smart Grid Infrastructure ETF(GRID) | 전력망 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.76배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| iShares U.S. Infrastructure ETF(IFRA) | 인프라 ETF | 3 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.52배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
+| Utilities Select Sector SPDR Fund(XLU) | 전력/유틸리티 ETF | 25 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.85배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| Global X Uranium ETF(URA) | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.64배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| VanEck Uranium and Nuclear ETF(NLR) | 원전/우라늄 ETF | 0 | 매매 금지 | LOW | 20일 -8.68%, 5일 +0.54%, 상대 거래량 1.12배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS regulation/stale |
+| Global X Lithium & Battery Tech ETF(LIT) | 배터리/리튬 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.84배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
+| Global X Copper Miners ETF(COPX) | 구리/금속 ETF | 32 | 매매 금지 | LOW | 20일 -8.43%, 5일 +5.48%, 상대 거래량 1.51배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| SPDR S&P Metals & Mining ETF(XME) | 금속/광산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.58배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
+| Energy Select Sector SPDR Fund(XLE) | 전통 에너지 ETF | 36 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.98배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
+| VanEck Oil Services ETF(OIH) | 전통 에너지 ETF | 12 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.90배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| ARK Innovation ETF(ARKK) | 혁신 성장 ETF | 1 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.48배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: ACCEPTABLE |
+| Renaissance IPO ETF(IPO) | IPO/신규상장 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.22배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h |
+| KraneShares CSI China Internet ETF(KWEB) | 중국 인터넷 ETF | 5 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.50배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| Roundhill Magnificent Seven ETF(MAGS) | 메가캡 플랫폼 ETF | 35 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.55배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| Invesco QQQ Trust(QQQ) | 시장 기준 ETF | 21 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.65배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
+| SPDR S&P 500 ETF Trust(SPY) | 시장 기준 ETF | 38 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.62배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID |
+| iShares Russell 2000 ETF(IWM) | 시장 기준 ETF | 13 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.75배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
+| iShares 20+ Year Treasury Bond ETF(TLT) | 채권 ETF | 1 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.96배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
+| SPDR Gold Shares(GLD) | 금 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.78배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
+| iShares Bitcoin Trust ETF(IBIT) | 비트코인 ETF | 48 | 매매 금지 | MEDIUM | 20일 +1.50%, 5일 +1.19%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
+| Amplify Transformational Data Sharing ETF(BLOK) | 비트코인 ETF | 0 | 매매 금지 | LOW | 20일 -4.34%, 5일 -0.58%, 상대 거래량 1.59배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h |
 
 ## 3. 최종 실행 판단
 

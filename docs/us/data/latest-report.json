@@ -13,13 +13,13 @@
     ],
     "sessionLabel": "US regular session"
   },
-  "reportDate": "2026-07-15",
-  "generatedAt": "2026년 7월 15일 수요일 AM 8:55",
+  "reportDate": "2026-07-16",
+  "generatedAt": "2026년 7월 16일 목요일 오전 12:35",
   "marketRegimeAssessment": {
-    "label": "강세장",
+    "label": "기간 조정",
     "score": 83,
-    "actionBias": "선별 매수 우위, 과열 추격만 제한",
-    "conclusion": "기술적 추세가 강세장 조건에 가깝다. 매크로도 큰 부담은 제한적이다.",
+    "actionBias": "추격 보류, 돌파 확인",
+    "conclusion": "장기 추세는 유지되지만 단기 추세가 둔화되어 기간 조정으로 본다. 기술 100점, 매크로 50점.",
     "reliability": {
       "grade": "HIGH",
       "score": 100,
@@ -38,12 +38,12 @@
       ]
     },
     "change": {
-      "status": "UNCHANGED",
-      "label": "유지",
+      "status": "DETERIORATED",
+      "label": "악화",
       "previousLabel": "강세장",
-      "previousScore": 84,
-      "scoreDelta": -1,
-      "summary": "강세장 유지, 점수 변화는 제한적이다(-1점)."
+      "previousScore": 73,
+      "scoreDelta": 10,
+      "summary": "강세장에서 기간 조정으로 악화됐다(+10점)."
     },
     "technical": {
       "score": 100,
@@ -349,8 +349,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 91,
         "moneyFlowScoreInitial": 91,
-        "moneyFlowScoreFinal": 98,
-        "finalRawScore": 98,
+        "moneyFlowScoreFinal": 100,
+        "finalRawScore": 106,
         "todayActionLabel": "자금흐름 예외 조건부",
         "reasonConfidence": "HIGH",
         "oneDayReturn": 12.14,
@@ -400,7 +400,7 @@
         "moneyFlowScoreFinal": 70,
         "finalRawScore": 70,
         "todayActionLabel": "제외",
-        "reasonConfidence": "HIGH",
+        "reasonConfidence": "MEDIUM",
         "oneDayReturn": 7.24,
         "fiveDayReturn": 1.73,
         "twentyDayReturn": 17.43,
@@ -471,7 +471,7 @@
         "moneyFlowScoreFinal": 58,
         "finalRawScore": 58,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": 0.32,
         "fiveDayReturn": 1.37,
         "twentyDayReturn": 4.57,
@@ -3065,8 +3065,8 @@
     {
       "name": "사이버보안 지출 재가속",
       "status": "부상",
-      "narrativeScore": 69,
-      "rawScore": 69,
+      "narrativeScore": 70,
+      "rawScore": 70,
       "reasonConfidence": "MEDIUM",
       "supportEtfs": [
         "HACK",
@@ -3193,13 +3193,13 @@
         "PLTR",
         "TEAM"
       ],
-      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 iShares Expanded Tech-Software Sector ETF(IGV), Invesco QQQ Trust(QQQ), Global X Artificial Intelligence & Technology ETF(AIQ)와 Zscaler Inc.(ZS), Datadog Inc.(DDOG), Palantir Technologies Inc.(PLTR), Atlassian Corporation(TEAM)의 5일(+0.90%)·20일(+4.83%) 흐름을 함께 본다. 평균 상대 거래량은 0.82배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 iShares Expanded Tech-Software Sector ETF(IGV), Invesco QQQ Trust(QQQ), Global X Artificial Intelligence & Technology ETF(AIQ)와 Zscaler Inc.(ZS), Datadog Inc.(DDOG), Palantir Technologies Inc.(PLTR), Atlassian Corporation(TEAM)의 5일(+0.90%)·20일(+4.83%) 흐름을 함께 본다. 평균 상대 거래량은 0.82배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "AI 소프트웨어 실적 기대를 사는 ETF 자금, 엔터프라이즈 소프트웨어 스윙 트레이더, 신고가 추종 자금",
       "bestTradingVehicle": "ETF 우선: IGV, AIQ, QQQ / 개별 종목 우선: PLTR, DDOG, TEAM",
       "breakCondition": "IGV/AIQ 20일선 이탈, 관련 소프트웨어 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
       "todayAction": "추격보다 눌림 후 재상승 확인",
-      "summaryReason": "iShares Expanded Tech-Software Sector ETF(IGV), Invesco QQQ Trust(QQQ), Zscaler Inc.(ZS), Datadog Inc.(DDOG) 중심으로 5일 +0.90%, 20일 +4.83% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 1,
+      "summaryReason": "iShares Expanded Tech-Software Sector ETF(IGV), Invesco QQQ Trust(QQQ), Zscaler Inc.(ZS), Datadog Inc.(DDOG) 중심으로 5일 +0.90%, 20일 +4.83% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
       "etfBreadthScore": -1,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
@@ -3702,8 +3702,8 @@
     {
       "name": "사이버보안 지출 재가속",
       "status": "부상",
-      "narrativeScore": 69,
-      "rawScore": 69,
+      "narrativeScore": 70,
+      "rawScore": 70,
       "reasonConfidence": "MEDIUM",
       "supportEtfs": [
         "HACK",
@@ -3810,14 +3810,14 @@
       "name": "CrowdStrike Holdings Inc.",
       "actionLabel": "자금흐름 예외 조건부",
       "status": "진입 후보",
-      "moneyFlowScore": 98,
+      "moneyFlowScore": 100,
       "moneyFlowScoreInitial": 91,
-      "moneyFlowScoreFinal": 98,
-      "finalRawScore": 98,
-      "finalDisplayScore": 98,
-      "wasCapped": false,
-      "capReason": "cap not applied",
-      "formulaText": "+91 + +4 + 0 + +5 + +6 - 8 + 0 = 98",
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 106,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 106 capped to displayed score 100",
+      "formulaText": "+91 + +12 + 0 + +5 + +6 - 8 + 0 = 106 -> 100",
       "riskPenalty": -8,
       "riskPenaltySummary": {
         "totalPenalty": -8,
@@ -3842,13 +3842,13 @@
         "summary": "2개 감점 리스크로 총 -8점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer",
       "candidateNewsSummary": {
         "ticker": "CRWD",
-        "checkedAt": "2026-07-14T23:55:20.174Z",
+        "checkedAt": "2026-07-15T15:35:59.379Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -3887,95 +3887,95 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-07-14T23:47:50.000Z",
+        "lastPublishedAt": "2026-07-15T15:32:00.000Z",
         "freshnessStatus": "FRESH",
-        "trendTone": "부정 우위",
+        "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
+        "headline": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
         "directCatalyst": {
-          "title": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
+          "title": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-07-14T22:14:55.000Z",
-          "eventType": "macro",
+          "publishedAt": "2026-07-15T12:04:00.000Z",
+          "eventType": "product",
           "direction": "mixed",
           "freshnessBucket": "under_6h",
-          "url": "https://finance.yahoo.com/technology/ai/articles/crowdstrike-crwd-stock-gets-fresh-221455933.html?.tsrc=rss"
+          "url": "https://finance.yahoo.com/technology/ai/articles/crowdstrike-appoints-aj-shipley-chief-120400732.html?.tsrc=rss"
         },
         "items": [
           {
-            "title": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
-            "summary": "US and international security agencies issued a joint advisory on Russian state-sponsored cyber threats targeting critical infrastructure. The alert highlights cyber actors focusing on sectors such as energy, transportation and government services. The warning has renewed attention on cybersecurity providers like CrowdStrike Holdings (NasdaqGS:CRWD) and their role in defending critical systems. CrowdStrike operates as a cybersecurity company, offering cloud based protection for endpoints,...",
+            "title": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
+            "summary": "AUSTIN, Texas, July 15, 2026--CrowdStrike (NASDAQ: CRWD) today announced the appointment of AJ Shipley as Chief Product Officer. Shipley now leads CrowdStrike's product organization, accelerating innovation across the CrowdStrike Falcon® platform to advance the company’s mission of stopping breaches and securing the world’s adoption of AI.",
             "koreanSummary": {
-              "title": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
-              "content": "CrowdStrike Holdings Inc. 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 US and international security agencies issued a joint advisory on Russian state-sponsored cyber threats targeting critical infrastructure.입니다.",
+              "title": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
+              "content": "CrowdStrike Holdings Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 AUSTIN, Texas, July 15, 2026--CrowdStrike (NASDAQ: CRWD) today announced the appointment of AJ Shipley as Chief Product Officer.입니다.",
               "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-07-14T22:14:55.000Z",
-            "eventType": "macro",
+            "publishedAt": "2026-07-15T12:04:00.000Z",
+            "eventType": "product",
             "directness": "direct_ticker",
             "direction": "mixed",
             "freshnessBucket": "under_6h",
-            "url": "https://finance.yahoo.com/technology/ai/articles/crowdstrike-crwd-stock-gets-fresh-221455933.html?.tsrc=rss"
+            "url": "https://finance.yahoo.com/technology/ai/articles/crowdstrike-appoints-aj-shipley-chief-120400732.html?.tsrc=rss"
           },
           {
-            "title": "Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months",
-            "summary": "CrowdStrike's split-adjusted run looked great in everyone's group chat, but there was a quieter position in the same theme that still turned heads at dinner parties without requiring a single correct prediction about which AI-security vendor wins.",
+            "title": "CRWD, PANW, NET, ZS: One Cybersecurity Stock Won Over Retail Investors – But Another Tops Wall Street’s List",
+            "summary": "In a Stocktwits poll that sought to gauge which names would post the best performance over the next 12 months, nearly half the users polled picked CrowdStrike as the clear winner.",
             "koreanSummary": {
-              "title": "Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months",
-              "content": "CrowdStrike Holdings Inc. 관련 기사는 Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months 이슈를 다루며, 주가 변동률 +29.00%를 핵심 내용으로 봅니다.",
-              "implication": "CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
-            },
-            "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-07-14T21:53:12.000Z",
-            "eventType": "general_market",
-            "directness": "direct_ticker",
-            "direction": "mixed",
-            "freshnessBucket": "under_6h",
-            "url": "https://247wallst.com/investing/etf/2026/07/14/missed-crwds-rally-this-etf-paid-29-in-the-same-six-months/?.tsrc=rss"
-          },
-          {
-            "title": "Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)",
-            "summary": "Stock Market Today: The Dow Jones index creeps up Tuesday even as IBM stock tanks. CrowdStrike tops the S&P 500.",
-            "koreanSummary": {
-              "title": "Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)",
-              "content": "CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Stock Market Today: The Dow Jones index creeps up Tuesday even as IBM stock tanks.입니다.",
-              "implication": "단기 부정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "title": "CRWD, PANW, NET, ZS: One Cybersecurity Stock Won Over Retail Investors – But Another Tops Wall Street’s List",
+              "content": "CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 In a Stocktwits poll that sought to gauge which names would post the best performance over the next 12 months, nearly half the users polled picked CrowdStrike as the clear winner.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-07-14T21:06:33.000Z",
+            "publishedAt": "2026-07-15T06:02:06.000Z",
             "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://stocktwits.com/news-articles/markets/equity/crwd-panw-net-zs-one-cybersecurity-stock-won-over-retail-investors-but-another-tops-wall-street-s-list/cZZ2uR7R7Ad?.tsrc=rss"
+          },
+          {
+            "title": "Dow Jones Futures: Techs Rise, Oil Hits $80 On Iran News, ASML, Morgan Stanley Lead Earnings Movers",
+            "summary": "Chip-gear giant ASML rose with the Nasdaq and AI stocks at key levels. Oil prices topped $80 a barrel on new U.S. attacks vs. Iran.",
+            "koreanSummary": {
+              "title": "Dow Jones Futures: Techs Rise, Oil Hits $80 On Iran News, ASML, Morgan Stanley Lead Earnings Movers",
+              "content": "CrowdStrike Holdings Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Chip-gear giant ASML rose with the Nasdaq and AI stocks at key levels.입니다.",
+              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+            },
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-15T12:05:08.000Z",
+            "eventType": "earnings",
             "directness": "sector_theme",
-            "direction": "negative",
+            "direction": "positive",
             "freshnessBucket": "under_6h",
-            "url": "https://finance.yahoo.com/m/5d020334-7a7d-3075-adc2-c428ddde2504/stock-market-today%3A-nasdaq.html?.tsrc=rss"
+            "url": "https://finance.yahoo.com/m/ff2fea6d-f6fc-389f-b0c6-62b745afe36d/dow-jones-futures%3A-techs.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 부정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning\"입니다.",
-          "directLine": "CrowdStrike Holdings Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning\"이며, 매크로 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"CrowdStrike Appoints AJ Shipley as Chief Product Officer\"입니다.",
+          "directLine": "CrowdStrike Holdings Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"CrowdStrike Appoints AJ Shipley as Chief Product Officer\"이며, 제품/서비스 재료로 봅니다.",
           "bullets": [
             {
-              "title": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
-              "content": "CrowdStrike Holdings Inc. 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 US and international security agencies issued a joint advisory on Russian state-sponsored cyber threats targeting critical infrastructure.입니다.",
+              "title": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
+              "content": "CrowdStrike Holdings Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 AUSTIN, Texas, July 15, 2026--CrowdStrike (NASDAQ: CRWD) today announced the appointment of AJ Shipley as Chief Product Officer.입니다.",
               "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months",
-              "content": "CrowdStrike Holdings Inc. 관련 기사는 Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months 이슈를 다루며, 주가 변동률 +29.00%를 핵심 내용으로 봅니다.",
-              "implication": "CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "CRWD, PANW, NET, ZS: One Cybersecurity Stock Won Over Retail Investors – But Another Tops Wall Street’s List",
+              "content": "CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 In a Stocktwits poll that sought to gauge which names would post the best performance over the next 12 months, nearly half the users polled picked CrowdStrike as the clear winner.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)",
-              "content": "CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Stock Market Today: The Dow Jones index creeps up Tuesday even as IBM stock tanks.입니다.",
-              "implication": "단기 부정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
-              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+              "title": "Dow Jones Futures: Techs Rise, Oil Hits $80 On Iran News, ASML, Morgan Stanley Lead Earnings Movers",
+              "content": "CrowdStrike Holdings Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Chip-gear giant ASML rose with the Nasdaq and AI stocks at key levels.입니다.",
+              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
@@ -3985,10 +3985,10 @@
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 부정 우위. 핵심 확인 뉴스: CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: CrowdStrike Appoints AJ Shipley as Chief Product Officer"
       },
-      "tieBreakerReason": "최종 원점수 98, 리스크 패널티 -8, 5일 수익률 +8.28%, 상대 거래량 1.07배 순으로 정렬",
-      "entryQualityScore": 17,
+      "tieBreakerReason": "최종 원점수 106, 리스크 패널티 -8, 5일 수익률 +8.28%, 상대 거래량 1.07배 순으로 정렬",
+      "entryQualityScore": 18,
       "entryQualityLabel": "낮음",
       "trendStrengthIndex": 72,
       "trendStateLabel": "확인",
@@ -4003,18 +4003,18 @@
         "label": "자금흐름 예외 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 17 < 50이나 moneyFlow 98, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
+          "Entry Quality 18 < 50이나 moneyFlow 100, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
         ],
         "rescueType": "STRONG_MONEY_FLOW"
       },
       "marketContext": {
         "marketRegime": "중립",
         "candidateEnvironment": "제한적",
-        "reason": "고점 근처 추격 리스크 / Entry Quality 17 < 50이나 moneyFlow 98, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
+        "reason": "고점 근처 추격 리스크 / Entry Quality 18 < 50이나 moneyFlow 100, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
       },
       "linkedNarrative": "사이버보안 지출 재가속",
       "narrativeStatus": "부상",
-      "narrativeScore": 69,
+      "narrativeScore": 70,
       "relatedEtfs": [
         "HACK",
         "CIBR",
@@ -4032,14 +4032,14 @@
       "name": "CrowdStrike Holdings Inc.",
       "actionLabel": "자금흐름 예외 조건부",
       "status": "진입 후보",
-      "moneyFlowScore": 98,
+      "moneyFlowScore": 100,
       "moneyFlowScoreInitial": 91,
-      "moneyFlowScoreFinal": 98,
-      "finalRawScore": 98,
-      "finalDisplayScore": 98,
-      "wasCapped": false,
-      "capReason": "cap not applied",
-      "formulaText": "+91 + +4 + 0 + +5 + +6 - 8 + 0 = 98",
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 106,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 106 capped to displayed score 100",
+      "formulaText": "+91 + +12 + 0 + +5 + +6 - 8 + 0 = 106 -> 100",
       "riskPenalty": -8,
       "riskPenaltySummary": {
         "totalPenalty": -8,
@@ -4064,13 +4064,13 @@
         "summary": "2개 감점 리스크로 총 -8점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer",
       "candidateNewsSummary": {
         "ticker": "CRWD",
-        "checkedAt": "2026-07-14T23:55:20.174Z",
+        "checkedAt": "2026-07-15T15:35:59.379Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4109,95 +4109,95 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-07-14T23:47:50.000Z",
+        "lastPublishedAt": "2026-07-15T15:32:00.000Z",
         "freshnessStatus": "FRESH",
-        "trendTone": "부정 우위",
+        "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
+        "headline": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
         "directCatalyst": {
-          "title": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
+          "title": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-07-14T22:14:55.000Z",
-          "eventType": "macro",
+          "publishedAt": "2026-07-15T12:04:00.000Z",
+          "eventType": "product",
           "direction": "mixed",
           "freshnessBucket": "under_6h",
-          "url": "https://finance.yahoo.com/technology/ai/articles/crowdstrike-crwd-stock-gets-fresh-221455933.html?.tsrc=rss"
+          "url": "https://finance.yahoo.com/technology/ai/articles/crowdstrike-appoints-aj-shipley-chief-120400732.html?.tsrc=rss"
         },
         "items": [
           {
-            "title": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
-            "summary": "US and international security agencies issued a joint advisory on Russian state-sponsored cyber threats targeting critical infrastructure. The alert highlights cyber actors focusing on sectors such as energy, transportation and government services. The warning has renewed attention on cybersecurity providers like CrowdStrike Holdings (NasdaqGS:CRWD) and their role in defending critical systems. CrowdStrike operates as a cybersecurity company, offering cloud based protection for endpoints,...",
+            "title": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
+            "summary": "AUSTIN, Texas, July 15, 2026--CrowdStrike (NASDAQ: CRWD) today announced the appointment of AJ Shipley as Chief Product Officer. Shipley now leads CrowdStrike's product organization, accelerating innovation across the CrowdStrike Falcon® platform to advance the company’s mission of stopping breaches and securing the world’s adoption of AI.",
             "koreanSummary": {
-              "title": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
-              "content": "CrowdStrike Holdings Inc. 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 US and international security agencies issued a joint advisory on Russian state-sponsored cyber threats targeting critical infrastructure.입니다.",
+              "title": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
+              "content": "CrowdStrike Holdings Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 AUSTIN, Texas, July 15, 2026--CrowdStrike (NASDAQ: CRWD) today announced the appointment of AJ Shipley as Chief Product Officer.입니다.",
               "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-07-14T22:14:55.000Z",
-            "eventType": "macro",
+            "publishedAt": "2026-07-15T12:04:00.000Z",
+            "eventType": "product",
             "directness": "direct_ticker",
             "direction": "mixed",
             "freshnessBucket": "under_6h",
-            "url": "https://finance.yahoo.com/technology/ai/articles/crowdstrike-crwd-stock-gets-fresh-221455933.html?.tsrc=rss"
+            "url": "https://finance.yahoo.com/technology/ai/articles/crowdstrike-appoints-aj-shipley-chief-120400732.html?.tsrc=rss"
           },
           {
-            "title": "Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months",
-            "summary": "CrowdStrike's split-adjusted run looked great in everyone's group chat, but there was a quieter position in the same theme that still turned heads at dinner parties without requiring a single correct prediction about which AI-security vendor wins.",
+            "title": "CRWD, PANW, NET, ZS: One Cybersecurity Stock Won Over Retail Investors – But Another Tops Wall Street’s List",
+            "summary": "In a Stocktwits poll that sought to gauge which names would post the best performance over the next 12 months, nearly half the users polled picked CrowdStrike as the clear winner.",
             "koreanSummary": {
-              "title": "Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months",
-              "content": "CrowdStrike Holdings Inc. 관련 기사는 Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months 이슈를 다루며, 주가 변동률 +29.00%를 핵심 내용으로 봅니다.",
-              "implication": "CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
-            },
-            "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-07-14T21:53:12.000Z",
-            "eventType": "general_market",
-            "directness": "direct_ticker",
-            "direction": "mixed",
-            "freshnessBucket": "under_6h",
-            "url": "https://247wallst.com/investing/etf/2026/07/14/missed-crwds-rally-this-etf-paid-29-in-the-same-six-months/?.tsrc=rss"
-          },
-          {
-            "title": "Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)",
-            "summary": "Stock Market Today: The Dow Jones index creeps up Tuesday even as IBM stock tanks. CrowdStrike tops the S&P 500.",
-            "koreanSummary": {
-              "title": "Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)",
-              "content": "CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Stock Market Today: The Dow Jones index creeps up Tuesday even as IBM stock tanks.입니다.",
-              "implication": "단기 부정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "title": "CRWD, PANW, NET, ZS: One Cybersecurity Stock Won Over Retail Investors – But Another Tops Wall Street’s List",
+              "content": "CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 In a Stocktwits poll that sought to gauge which names would post the best performance over the next 12 months, nearly half the users polled picked CrowdStrike as the clear winner.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-07-14T21:06:33.000Z",
+            "publishedAt": "2026-07-15T06:02:06.000Z",
             "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://stocktwits.com/news-articles/markets/equity/crwd-panw-net-zs-one-cybersecurity-stock-won-over-retail-investors-but-another-tops-wall-street-s-list/cZZ2uR7R7Ad?.tsrc=rss"
+          },
+          {
+            "title": "Dow Jones Futures: Techs Rise, Oil Hits $80 On Iran News, ASML, Morgan Stanley Lead Earnings Movers",
+            "summary": "Chip-gear giant ASML rose with the Nasdaq and AI stocks at key levels. Oil prices topped $80 a barrel on new U.S. attacks vs. Iran.",
+            "koreanSummary": {
+              "title": "Dow Jones Futures: Techs Rise, Oil Hits $80 On Iran News, ASML, Morgan Stanley Lead Earnings Movers",
+              "content": "CrowdStrike Holdings Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Chip-gear giant ASML rose with the Nasdaq and AI stocks at key levels.입니다.",
+              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+            },
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-15T12:05:08.000Z",
+            "eventType": "earnings",
             "directness": "sector_theme",
-            "direction": "negative",
+            "direction": "positive",
             "freshnessBucket": "under_6h",
-            "url": "https://finance.yahoo.com/m/5d020334-7a7d-3075-adc2-c428ddde2504/stock-market-today%3A-nasdaq.html?.tsrc=rss"
+            "url": "https://finance.yahoo.com/m/ff2fea6d-f6fc-389f-b0c6-62b745afe36d/dow-jones-futures%3A-techs.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 부정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning\"입니다.",
-          "directLine": "CrowdStrike Holdings Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning\"이며, 매크로 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"CrowdStrike Appoints AJ Shipley as Chief Product Officer\"입니다.",
+          "directLine": "CrowdStrike Holdings Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"CrowdStrike Appoints AJ Shipley as Chief Product Officer\"이며, 제품/서비스 재료로 봅니다.",
           "bullets": [
             {
-              "title": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
-              "content": "CrowdStrike Holdings Inc. 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 US and international security agencies issued a joint advisory on Russian state-sponsored cyber threats targeting critical infrastructure.입니다.",
+              "title": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
+              "content": "CrowdStrike Holdings Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 AUSTIN, Texas, July 15, 2026--CrowdStrike (NASDAQ: CRWD) today announced the appointment of AJ Shipley as Chief Product Officer.입니다.",
               "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months",
-              "content": "CrowdStrike Holdings Inc. 관련 기사는 Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months 이슈를 다루며, 주가 변동률 +29.00%를 핵심 내용으로 봅니다.",
-              "implication": "CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "CRWD, PANW, NET, ZS: One Cybersecurity Stock Won Over Retail Investors – But Another Tops Wall Street’s List",
+              "content": "CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 In a Stocktwits poll that sought to gauge which names would post the best performance over the next 12 months, nearly half the users polled picked CrowdStrike as the clear winner.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)",
-              "content": "CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Stock Market Today: The Dow Jones index creeps up Tuesday even as IBM stock tanks.입니다.",
-              "implication": "단기 부정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
-              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+              "title": "Dow Jones Futures: Techs Rise, Oil Hits $80 On Iran News, ASML, Morgan Stanley Lead Earnings Movers",
+              "content": "CrowdStrike Holdings Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Chip-gear giant ASML rose with the Nasdaq and AI stocks at key levels.입니다.",
+              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
@@ -4207,10 +4207,10 @@
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 부정 우위. 핵심 확인 뉴스: CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: CrowdStrike Appoints AJ Shipley as Chief Product Officer"
       },
-      "tieBreakerReason": "최종 원점수 98, 리스크 패널티 -8, 5일 수익률 +8.28%, 상대 거래량 1.07배 순으로 정렬",
-      "entryQualityScore": 17,
+      "tieBreakerReason": "최종 원점수 106, 리스크 패널티 -8, 5일 수익률 +8.28%, 상대 거래량 1.07배 순으로 정렬",
+      "entryQualityScore": 18,
       "entryQualityLabel": "낮음",
       "trendStrengthIndex": 72,
       "trendStateLabel": "확인",
@@ -4225,18 +4225,18 @@
         "label": "자금흐름 예외 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 17 < 50이나 moneyFlow 98, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
+          "Entry Quality 18 < 50이나 moneyFlow 100, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
         ],
         "rescueType": "STRONG_MONEY_FLOW"
       },
       "marketContext": {
         "marketRegime": "중립",
         "candidateEnvironment": "제한적",
-        "reason": "고점 근처 추격 리스크 / Entry Quality 17 < 50이나 moneyFlow 98, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
+        "reason": "고점 근처 추격 리스크 / Entry Quality 18 < 50이나 moneyFlow 100, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
       },
       "linkedNarrative": "사이버보안 지출 재가속",
       "narrativeStatus": "부상",
-      "narrativeScore": 69,
+      "narrativeScore": 70,
       "relatedEtfs": [
         "HACK",
         "CIBR",
@@ -4255,14 +4255,14 @@
       "name": "CrowdStrike Holdings Inc.",
       "actionLabel": "자금흐름 예외 조건부",
       "status": "진입 후보",
-      "moneyFlowScore": 98,
+      "moneyFlowScore": 100,
       "moneyFlowScoreInitial": 91,
-      "moneyFlowScoreFinal": 98,
-      "finalRawScore": 98,
-      "finalDisplayScore": 98,
-      "wasCapped": false,
-      "capReason": "cap not applied",
-      "formulaText": "+91 + +4 + 0 + +5 + +6 - 8 + 0 = 98",
+      "moneyFlowScoreFinal": 100,
+      "finalRawScore": 106,
+      "finalDisplayScore": 100,
+      "wasCapped": true,
+      "capReason": "raw score 106 capped to displayed score 100",
+      "formulaText": "+91 + +12 + 0 + +5 + +6 - 8 + 0 = 106 -> 100",
       "riskPenalty": -8,
       "riskPenaltySummary": {
         "totalPenalty": -8,
@@ -4287,13 +4287,13 @@
         "summary": "2개 감점 리스크로 총 -8점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer",
       "candidateNewsSummary": {
         "ticker": "CRWD",
-        "checkedAt": "2026-07-14T23:55:20.174Z",
+        "checkedAt": "2026-07-15T15:35:59.379Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4332,95 +4332,95 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-07-14T23:47:50.000Z",
+        "lastPublishedAt": "2026-07-15T15:32:00.000Z",
         "freshnessStatus": "FRESH",
-        "trendTone": "부정 우위",
+        "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
+        "headline": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
         "directCatalyst": {
-          "title": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
+          "title": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-07-14T22:14:55.000Z",
-          "eventType": "macro",
+          "publishedAt": "2026-07-15T12:04:00.000Z",
+          "eventType": "product",
           "direction": "mixed",
           "freshnessBucket": "under_6h",
-          "url": "https://finance.yahoo.com/technology/ai/articles/crowdstrike-crwd-stock-gets-fresh-221455933.html?.tsrc=rss"
+          "url": "https://finance.yahoo.com/technology/ai/articles/crowdstrike-appoints-aj-shipley-chief-120400732.html?.tsrc=rss"
         },
         "items": [
           {
-            "title": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
-            "summary": "US and international security agencies issued a joint advisory on Russian state-sponsored cyber threats targeting critical infrastructure. The alert highlights cyber actors focusing on sectors such as energy, transportation and government services. The warning has renewed attention on cybersecurity providers like CrowdStrike Holdings (NasdaqGS:CRWD) and their role in defending critical systems. CrowdStrike operates as a cybersecurity company, offering cloud based protection for endpoints,...",
+            "title": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
+            "summary": "AUSTIN, Texas, July 15, 2026--CrowdStrike (NASDAQ: CRWD) today announced the appointment of AJ Shipley as Chief Product Officer. Shipley now leads CrowdStrike's product organization, accelerating innovation across the CrowdStrike Falcon® platform to advance the company’s mission of stopping breaches and securing the world’s adoption of AI.",
             "koreanSummary": {
-              "title": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
-              "content": "CrowdStrike Holdings Inc. 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 US and international security agencies issued a joint advisory on Russian state-sponsored cyber threats targeting critical infrastructure.입니다.",
+              "title": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
+              "content": "CrowdStrike Holdings Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 AUSTIN, Texas, July 15, 2026--CrowdStrike (NASDAQ: CRWD) today announced the appointment of AJ Shipley as Chief Product Officer.입니다.",
               "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-07-14T22:14:55.000Z",
-            "eventType": "macro",
+            "publishedAt": "2026-07-15T12:04:00.000Z",
+            "eventType": "product",
             "directness": "direct_ticker",
             "direction": "mixed",
             "freshnessBucket": "under_6h",
-            "url": "https://finance.yahoo.com/technology/ai/articles/crowdstrike-crwd-stock-gets-fresh-221455933.html?.tsrc=rss"
+            "url": "https://finance.yahoo.com/technology/ai/articles/crowdstrike-appoints-aj-shipley-chief-120400732.html?.tsrc=rss"
           },
           {
-            "title": "Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months",
-            "summary": "CrowdStrike's split-adjusted run looked great in everyone's group chat, but there was a quieter position in the same theme that still turned heads at dinner parties without requiring a single correct prediction about which AI-security vendor wins.",
+            "title": "CRWD, PANW, NET, ZS: One Cybersecurity Stock Won Over Retail Investors – But Another Tops Wall Street’s List",
+            "summary": "In a Stocktwits poll that sought to gauge which names would post the best performance over the next 12 months, nearly half the users polled picked CrowdStrike as the clear winner.",
             "koreanSummary": {
-              "title": "Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months",
-              "content": "CrowdStrike Holdings Inc. 관련 기사는 Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months 이슈를 다루며, 주가 변동률 +29.00%를 핵심 내용으로 봅니다.",
-              "implication": "CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
-            },
-            "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-07-14T21:53:12.000Z",
-            "eventType": "general_market",
-            "directness": "direct_ticker",
-            "direction": "mixed",
-            "freshnessBucket": "under_6h",
-            "url": "https://247wallst.com/investing/etf/2026/07/14/missed-crwds-rally-this-etf-paid-29-in-the-same-six-months/?.tsrc=rss"
-          },
-          {
-            "title": "Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)",
-            "summary": "Stock Market Today: The Dow Jones index creeps up Tuesday even as IBM stock tanks. CrowdStrike tops the S&P 500.",
-            "koreanSummary": {
-              "title": "Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)",
-              "content": "CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Stock Market Today: The Dow Jones index creeps up Tuesday even as IBM stock tanks.입니다.",
-              "implication": "단기 부정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "title": "CRWD, PANW, NET, ZS: One Cybersecurity Stock Won Over Retail Investors – But Another Tops Wall Street’s List",
+              "content": "CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 In a Stocktwits poll that sought to gauge which names would post the best performance over the next 12 months, nearly half the users polled picked CrowdStrike as the clear winner.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-07-14T21:06:33.000Z",
+            "publishedAt": "2026-07-15T06:02:06.000Z",
             "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://stocktwits.com/news-articles/markets/equity/crwd-panw-net-zs-one-cybersecurity-stock-won-over-retail-investors-but-another-tops-wall-street-s-list/cZZ2uR7R7Ad?.tsrc=rss"
+          },
+          {
+            "title": "Dow Jones Futures: Techs Rise, Oil Hits $80 On Iran News, ASML, Morgan Stanley Lead Earnings Movers",
+            "summary": "Chip-gear giant ASML rose with the Nasdaq and AI stocks at key levels. Oil prices topped $80 a barrel on new U.S. attacks vs. Iran.",
+            "koreanSummary": {
+              "title": "Dow Jones Futures: Techs Rise, Oil Hits $80 On Iran News, ASML, Morgan Stanley Lead Earnings Movers",
+              "content": "CrowdStrike Holdings Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Chip-gear giant ASML rose with the Nasdaq and AI stocks at key levels.입니다.",
+              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+            },
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-07-15T12:05:08.000Z",
+            "eventType": "earnings",
             "directness": "sector_theme",
-            "direction": "negative",
+            "direction": "positive",
             "freshnessBucket": "under_6h",
-            "url": "https://finance.yahoo.com/m/5d020334-7a7d-3075-adc2-c428ddde2504/stock-market-today%3A-nasdaq.html?.tsrc=rss"
+            "url": "https://finance.yahoo.com/m/ff2fea6d-f6fc-389f-b0c6-62b745afe36d/dow-jones-futures%3A-techs.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 부정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning\"입니다.",
-          "directLine": "CrowdStrike Holdings Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning\"이며, 매크로 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"CrowdStrike Appoints AJ Shipley as Chief Product Officer\"입니다.",
+          "directLine": "CrowdStrike Holdings Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"CrowdStrike Appoints AJ Shipley as Chief Product Officer\"이며, 제품/서비스 재료로 봅니다.",
           "bullets": [
             {
-              "title": "CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
-              "content": "CrowdStrike Holdings Inc. 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 US and international security agencies issued a joint advisory on Russian state-sponsored cyber threats targeting critical infrastructure.입니다.",
+              "title": "CrowdStrike Appoints AJ Shipley as Chief Product Officer",
+              "content": "CrowdStrike Holdings Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 AUSTIN, Texas, July 15, 2026--CrowdStrike (NASDAQ: CRWD) today announced the appointment of AJ Shipley as Chief Product Officer.입니다.",
               "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months",
-              "content": "CrowdStrike Holdings Inc. 관련 기사는 Missed CRWD’s Rally? This ETF Paid 29% in the Same Six Months 이슈를 다루며, 주가 변동률 +29.00%를 핵심 내용으로 봅니다.",
-              "implication": "CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "CRWD, PANW, NET, ZS: One Cybersecurity Stock Won Over Retail Investors – But Another Tops Wall Street’s List",
+              "content": "CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 In a Stocktwits poll that sought to gauge which names would post the best performance over the next 12 months, nearly half the users polled picked CrowdStrike as the clear winner.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)",
-              "content": "CrowdStrike Holdings Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Stock Market Today: The Dow Jones index creeps up Tuesday even as IBM stock tanks.입니다.",
-              "implication": "단기 부정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
-              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+              "title": "Dow Jones Futures: Techs Rise, Oil Hits $80 On Iran News, ASML, Morgan Stanley Lead Earnings Movers",
+              "content": "CrowdStrike Holdings Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Chip-gear giant ASML rose with the Nasdaq and AI stocks at key levels.입니다.",
+              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
@@ -4430,10 +4430,10 @@
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 부정 우위. 핵심 확인 뉴스: CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: CrowdStrike Appoints AJ Shipley as Chief Product Officer"
       },
-      "tieBreakerReason": "최종 원점수 98, 리스크 패널티 -8, 5일 수익률 +8.28%, 상대 거래량 1.07배 순으로 정렬",
-      "entryQualityScore": 17,
+      "tieBreakerReason": "최종 원점수 106, 리스크 패널티 -8, 5일 수익률 +8.28%, 상대 거래량 1.07배 순으로 정렬",
+      "entryQualityScore": 18,
       "entryQualityLabel": "낮음",
       "trendStrengthIndex": 72,
       "trendStateLabel": "확인",
@@ -4448,18 +4448,18 @@
         "label": "자금흐름 예외 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 17 < 50이나 moneyFlow 98, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
+          "Entry Quality 18 < 50이나 moneyFlow 100, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
         ],
         "rescueType": "STRONG_MONEY_FLOW"
       },
       "marketContext": {
         "marketRegime": "중립",
         "candidateEnvironment": "제한적",
-        "reason": "고점 근처 추격 리스크 / Entry Quality 17 < 50이나 moneyFlow 98, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
+        "reason": "고점 근처 추격 리스크 / Entry Quality 18 < 50이나 moneyFlow 100, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
       },
       "linkedNarrative": "사이버보안 지출 재가속",
       "narrativeStatus": "부상",
-      "narrativeScore": 69,
+      "narrativeScore": 70,
       "relatedEtfs": [
         "HACK",
         "CIBR",
@@ -4511,7 +4511,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - CRWD, PANW, ZS, OKTA In Focus — Cybersecurity Stocks Get Boost As IBM CEO Flags Rising Concerns",
+      "directCatalyst": "",
       "tieBreakerReason": "최종 원점수 77, 리스크 패널티 -8, 5일 수익률 +4.70%, 상대 거래량 0.78배 순으로 정렬",
       "entryQualityScore": 31,
       "entryQualityLabel": "낮음",
@@ -4540,7 +4540,7 @@
       },
       "linkedNarrative": "사이버보안 지출 재가속",
       "narrativeStatus": "부상",
-      "narrativeScore": 69,
+      "narrativeScore": 70,
       "relatedEtfs": [
         "HACK",
         "CIBR",
@@ -4582,7 +4582,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Fortinet's AI Surge Is Impressive. Is Microsoft The Smarter Play?",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Cybersecurity Space is Buzzing on Recent Catalysts: 3 Top Picks",
       "tieBreakerReason": "최종 원점수 63, 리스크 패널티 -4, 5일 수익률 +5.14%, 상대 거래량 0.76배 순으로 정렬",
       "entryQualityScore": 38,
       "entryQualityLabel": "낮음",
@@ -4611,7 +4611,7 @@
       },
       "linkedNarrative": "사이버보안 지출 재가속",
       "narrativeStatus": "부상",
-      "narrativeScore": 69,
+      "narrativeScore": 70,
       "relatedEtfs": [
         "HACK",
         "CIBR",
@@ -4660,11 +4660,11 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - DigitalOcean vs. Datadog: What the Revenue Trends of These Tech Companies Reveal for Investors",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h - DigitalOcean vs. Datadog: What the Revenue Trends of These Tech Companies Reveal for Investors",
       "tieBreakerReason": "최종 원점수 61, 리스크 패널티 -8, 5일 수익률 +5.42%, 상대 거래량 0.76배 순으로 정렬",
-      "entryQualityScore": 29,
+      "entryQualityScore": 28,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 29,
+      "trendStrengthIndex": 27,
       "trendStateLabel": "잠복",
       "trendDecisionLine": "ETF 동조성이 약해 테마 자금 확인이 부족하다.",
       "exhaustionRisk": 1,
@@ -4677,7 +4677,7 @@
         "label": "거래량 확인 전 관찰",
         "status": "관찰",
         "reasons": [
-          "Entry Quality 29 < 40",
+          "Entry Quality 28 < 40",
           "RVOL 0.76x < 1.00x"
         ],
         "rescueType": null
@@ -4685,7 +4685,7 @@
       "marketContext": {
         "marketRegime": "중립",
         "candidateEnvironment": "관찰",
-        "reason": "고점 근처 추격 리스크 / Entry Quality 29 < 40 / RVOL 0.76x < 1.00x"
+        "reason": "고점 근처 추격 리스크 / Entry Quality 28 < 40 / RVOL 0.76x < 1.00x"
       },
       "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
       "narrativeStatus": "약화",
@@ -4732,7 +4732,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - &#x2018;It&#x2019;s heartbreaking&#x2019;: My brother claimed Social Security at 70. He died from cancer after one payment. Why wait to claim?",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Is Massive AI Spending Favoring Chip ETFs More Than Big Tech?",
       "tieBreakerReason": "최종 원점수 13, 리스크 패널티 -6, 5일 수익률 +3.24%, 상대 거래량 0.60배 순으로 정렬",
       "entryQualityScore": 17,
       "entryQualityLabel": "낮음",
@@ -4798,7 +4798,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - &#x2018;It&#x2019;s heartbreaking&#x2019;: My brother claimed Social Security at 70. He died from cancer after one payment. Why wait to claim?",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Warren Buffett calls Bill Gates&apos; actions with Epstein &apos;distasteful&apos; but says people make mistakes",
       "tieBreakerReason": "최종 원점수 0, 리스크 패널티 -6, 5일 수익률 +2.94%, 상대 거래량 0.73배 순으로 정렬",
       "entryQualityScore": 12,
       "entryQualityLabel": "낮음",
@@ -4871,11 +4871,11 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - &#x2018;It&#x2019;s heartbreaking&#x2019;: My brother claimed Social Security at 70. He died from cancer after one payment. Why wait to claim?",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_72h / positive - AIQ Gained 25% While Everyone Was Busy Watching ANET",
       "tieBreakerReason": "최종 원점수 -15, 리스크 패널티 -11, 5일 수익률 -0.19%, 상대 거래량 0.44배 순으로 정렬",
-      "entryQualityScore": 1,
+      "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 29,
+      "trendStrengthIndex": 27,
       "trendStateLabel": "잠복",
       "trendDecisionLine": "ETF 동조성이 약해 테마 자금 확인이 부족하다.",
       "exhaustionRisk": 1,
@@ -4888,7 +4888,7 @@
         "label": "거래량 확인 전 관찰",
         "status": "관찰",
         "reasons": [
-          "Entry Quality 1 < 40",
+          "Entry Quality 0 < 40",
           "RVOL 0.44x < 1.00x",
           "거래대금 유동성 LOW/UNKNOWN"
         ],
@@ -4897,7 +4897,7 @@
       "marketContext": {
         "marketRegime": "중립",
         "candidateEnvironment": "관찰",
-        "reason": "Entry Quality 1 < 40 / RVOL 0.44x < 1.00x"
+        "reason": "Entry Quality 0 < 40 / RVOL 0.44x < 1.00x"
       },
       "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
       "narrativeStatus": "약화",
@@ -4947,7 +4947,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - &#x2018;It&#x2019;s heartbreaking&#x2019;: My brother claimed Social Security at 70. He died from cancer after one payment. Why wait to claim?",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / stale / neutral - 3 Robotics ETFs Positioned to Capitalize on America’s Reshoring Boom in 2026",
       "tieBreakerReason": "최종 원점수 -25, 리스크 패널티 -11, 5일 수익률 -1.94%, 상대 거래량 0.52배 순으로 정렬",
       "relativeVolume": 0.52,
       "marketDataStatus": "ok",
@@ -5016,7 +5016,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - &#x2018;It&#x2019;s heartbreaking&#x2019;: My brother claimed Social Security at 70. He died from cancer after one payment. Why wait to claim?",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Warren Buffett calls Bill Gates&apos; actions with Epstein &apos;distasteful&apos; but says people make mistakes",
       "tieBreakerReason": "최종 원점수 -18, 리스크 패널티 -11, 5일 수익률 -1.39%, 상대 거래량 0.52배 순으로 정렬",
       "relativeVolume": 0.52,
       "marketDataStatus": "ok",
@@ -5055,14 +5055,14 @@
     "name": "CrowdStrike Holdings Inc.",
     "actionLabel": "자금흐름 예외 조건부",
     "status": "진입 후보",
-    "moneyFlowScore": 98,
+    "moneyFlowScore": 100,
     "moneyFlowScoreInitial": 91,
-    "moneyFlowScoreFinal": 98,
-    "finalRawScore": 98,
-    "finalDisplayScore": 98,
-    "wasCapped": false,
-    "capReason": "cap not applied",
-    "formulaText": "+91 + +4 + 0 + +5 + +6 - 8 + 0 = 98",
+    "moneyFlowScoreFinal": 100,
+    "finalRawScore": 106,
+    "finalDisplayScore": 100,
+    "wasCapped": true,
+    "capReason": "raw score 106 capped to displayed score 100",
+    "formulaText": "+91 + +12 + 0 + +5 + +6 - 8 + 0 = 106 -> 100",
     "riskPenalty": -8,
     "riskPenaltySummary": {
       "totalPenalty": -8,
@@ -5087,10 +5087,10 @@
       "summary": "2개 감점 리스크로 총 -8점 반영."
     },
     "reasonConfidence": "HIGH",
-    "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-    "directCatalyst": "직접 촉매: Yahoo Finance RSS / macro / under_6h / mixed - CrowdStrike (CRWD) Stock Gets Fresh Attention After Russian Cyber Threat Warning",
-    "tieBreakerReason": "최종 원점수 98, 리스크 패널티 -8, 5일 수익률 +8.28%, 상대 거래량 1.07배 순으로 정렬",
-    "entryQualityScore": 17,
+    "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+    "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_6h / mixed - CrowdStrike Appoints AJ Shipley as Chief Product Officer",
+    "tieBreakerReason": "최종 원점수 106, 리스크 패널티 -8, 5일 수익률 +8.28%, 상대 거래량 1.07배 순으로 정렬",
+    "entryQualityScore": 18,
     "entryQualityLabel": "낮음",
     "trendStrengthIndex": 72,
     "trendStateLabel": "확인",
@@ -5105,18 +5105,18 @@
       "label": "자금흐름 예외 조건부",
       "status": "진입 후보",
       "reasons": [
-        "Entry Quality 17 < 50이나 moneyFlow 98, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
+        "Entry Quality 18 < 50이나 moneyFlow 100, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
       ],
       "rescueType": "STRONG_MONEY_FLOW"
     },
     "marketContext": {
       "marketRegime": "중립",
       "candidateEnvironment": "제한적",
-      "reason": "고점 근처 추격 리스크 / Entry Quality 17 < 50이나 moneyFlow 98, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
+      "reason": "고점 근처 추격 리스크 / Entry Quality 18 < 50이나 moneyFlow 100, confidence HIGH, RVOL 1.07x로 강한 자금흐름 예외 조건 충족"
     },
     "linkedNarrative": "사이버보안 지출 재가속",
     "narrativeStatus": "부상",
-    "narrativeScore": 69,
+    "narrativeScore": 70,
     "relatedEtfs": [
       "HACK",
       "CIBR",
@@ -5134,11 +5134,11 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-14",
     "priceAsOfLabel": "2026-07-14 US regular close",
-    "reportGeneratedAtKST": "2026-07-15 08:55",
+    "reportGeneratedAtKST": "2026-07-16 00:35",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-07-14T23:55:19.393Z",
-    "newsLastUpdatedAt": "2026-07-14T23:55:19.393Z",
-    "latestNewsPublishedAt": "2026-07-14T23:47:50.000Z",
+    "newsFetchedAt": "2026-07-15T15:35:59.073Z",
+    "newsLastUpdatedAt": "2026-07-15T15:35:59.073Z",
+    "latestNewsPublishedAt": "2026-07-15T15:32:00.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
     "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
@@ -5157,7 +5157,7 @@
       "프리/애프터마켓 확인 불가"
     ],
     "providers": "yfinance, Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API, config fallback sample, price-volume dollar-volume fallback",
-    "recommendationSession": "2026-07-14 US regular session",
+    "recommendationSession": "2026-07-15 US regular session",
     "grade": "LOW",
     "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 프리마켓/정규장 거래량을 별도 확인해야 한다."
   },

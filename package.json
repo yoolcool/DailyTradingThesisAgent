@@ -15,6 +15,7 @@
     "verify-report": "node scripts/verify-report.js",
     "verify-report:us": "node scripts/verify-report.js --market us",
     "verify-report:kr": "node scripts/verify-report.js --market kr",
+    "verify-market-regime": "node scripts/verify-market-regime-label.js",
     "screenshot-report": "node scripts/screenshot-report.js",
     "screenshot-report:us": "node scripts/screenshot-report.js --market us",
     "screenshot-report:kr": "node scripts/screenshot-report.js --market kr",

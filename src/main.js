@@ -8,6 +8,7 @@ const { fetchLiquidityProfile } = require("./data/liquidityProvider");
 const { fetchNasdaq100Universe } = require("./data/nasdaq100Universe");
 const { fetchNewsForTicker } = require("./data/newsProvider");
 const { aggregateStatus, statusLabel } = require("./data/providerUtils");
+const { marketRegimeLabel } = require("./marketRegimeLabel");
 const { loadMarketProfile } = require("./marketProfile");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -1139,7 +1140,7 @@ function buildMarketRegimeAssessment(marketData, etfs = [], previousRegime = nul
     macroTotal: macroSignals.length
   };
   const finalScore = rounded(technicalScore * 0.65 + macroScore * 0.35);
-  const label = marketRegimeLabel(finalScore);
+  const label = marketRegimeLabel(finalScore, benchmarks, macroScore);
   const actionBias = marketRegimeActionBias(label, technicalScore, macroScore);
   const conclusion = marketRegimeConclusion(label, technicalScore, macroScore, benchmarks, macroSignals);
   const reliability = marketRegimeReliability(benchmarks, macroSignals);
@@ -1308,14 +1309,6 @@ function weightedAverage(items, fallback = 0) {
   const totalWeight = valid.reduce((sum, row) => sum + Number(row.weight || 1), 0);
   if (!valid.length || totalWeight <= 0) return fallback;
   return valid.reduce((sum, row) => sum + Number(row.value) * Number(row.weight || 1), 0) / totalWeight;
-}
-
-function marketRegimeLabel(score) {
-  if (score >= 70) return "강세장";
-  if (score >= 55) return "중립-상승";
-  if (score >= 40) return "중립";
-  if (score >= 25) return "중립-하락";
-  return "약세장";
 }
 
 function technicalRegimeLabel(score) {
@@ -1624,6 +1617,7 @@ function marketRegimeRank(label) {
     "중립-하락": 1,
     "중립": 2,
     "중립-상승": 3,
+    "기간 조정": 3.5,
     "강세장": 4
   };
   return ranks[label] ?? 2;
@@ -1649,6 +1643,7 @@ function marketRegimeChangeSummary(status, current, previousRegime, scoreDelta) 
 
 function marketRegimeActionBias(label, technicalScore, macroScore) {
   if (label === "강세장") return macroScore >= 45 ? "선별 매수 우위, 과열 추격만 제한" : "추세는 강하지만 매크로 부담으로 진입 속도 조절";
+  if (label === "기간 조정") return "추격 보류, 돌파 확인";
   if (label === "중립-상승") return "눌림 매수와 돌파 확인 병행";
   if (label === "중립") return "강한 테마만 선별, 신규 추격 제한";
   if (label === "중립-하락") return technicalScore >= macroScore ? "반등 확인 전까지 방어적 관찰" : "매크로 부담 우선, 현금 비중과 손절 기준 강화";
@@ -1659,6 +1654,7 @@ function marketRegimeConclusion(label, technicalScore, macroScore, benchmarks, m
   const strongBenchmarks = benchmarks.filter((row) => row.score >= 60).map((row) => row.label);
   const weakMacro = macroSignals.filter((row) => row.score < 45).map((row) => row.label);
   if (label === "강세장") return `기술적 추세가 강세장 조건에 가깝다. ${weakMacro.length ? `${weakMacro.join(", ")} 부담은 확인 필요.` : "매크로도 큰 부담은 제한적이다."}`;
+  if (label === "기간 조정") return `장기 추세는 유지되지만 단기 추세가 둔화되어 기간 조정으로 본다. 기술 ${rounded(technicalScore)}점, 매크로 ${rounded(macroScore)}점.`;
   if (label === "중립-상승") return `${strongBenchmarks.join(", ") || "주요 지수"} 중심으로 상승 우위지만, 매크로 점수 ${rounded(macroScore)}라 추격보다 확인 매수가 낫다.`;
   if (label === "중립") return `기술 점수 ${rounded(technicalScore)}, 매크로 점수 ${rounded(macroScore)}로 방향성이 엇갈린다. 후보별 게이트를 더 엄격히 본다.`;
   if (label === "중립-하락") return `주요 지수 또는 매크로 중 하나가 약세장 쪽으로 기울었다. 반등 확인 전까지 진입 크기를 줄인다.`;

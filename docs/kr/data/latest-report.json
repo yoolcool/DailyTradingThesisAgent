@@ -12,8 +12,8 @@
     ],
     "sessionLabel": "KRX regular session"
   },
-  "reportDate": "2026-07-15",
-  "generatedAt": "2026년 7월 15일 수요일 오전 9:05",
+  "reportDate": "2026-07-16",
+  "generatedAt": "2026년 7월 16일 목요일 오전 12:36",
   "marketRegimeAssessment": {
     "label": "약세장",
     "score": 17,
@@ -307,8 +307,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 63,
         "moneyFlowScoreInitial": 63,
-        "moneyFlowScoreFinal": 78,
-        "finalRawScore": 78,
+        "moneyFlowScoreFinal": 68,
+        "finalRawScore": 68,
         "todayActionLabel": "제외",
         "reasonConfidence": "MEDIUM",
         "oneDayReturn": 1.06,
@@ -329,8 +329,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 57,
         "moneyFlowScoreInitial": 57,
-        "moneyFlowScoreFinal": 67,
-        "finalRawScore": 67,
+        "moneyFlowScoreFinal": 62,
+        "finalRawScore": 62,
         "todayActionLabel": "제외",
         "reasonConfidence": "MEDIUM",
         "oneDayReturn": 1.19,
@@ -417,8 +417,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 31,
         "moneyFlowScoreInitial": 31,
-        "moneyFlowScoreFinal": 42,
-        "finalRawScore": 42,
+        "moneyFlowScoreFinal": 36,
+        "finalRawScore": 36,
         "todayActionLabel": "제외",
         "reasonConfidence": "MEDIUM",
         "oneDayReturn": 0.86,
@@ -505,10 +505,10 @@
         "assetType": "STOCK",
         "moneyFlowScore": 28,
         "moneyFlowScoreInitial": 28,
-        "moneyFlowScoreFinal": 35,
-        "finalRawScore": 35,
+        "moneyFlowScoreFinal": 33,
+        "finalRawScore": 33,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "LOW",
         "oneDayReturn": -3.17,
         "fiveDayReturn": 1.26,
         "twentyDayReturn": 3.72,
@@ -524,10 +524,10 @@
         "assetType": "STOCK",
         "moneyFlowScore": 28,
         "moneyFlowScoreInitial": 28,
-        "moneyFlowScoreFinal": 35,
-        "finalRawScore": 35,
+        "moneyFlowScoreFinal": 33,
+        "finalRawScore": 33,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "LOW",
         "oneDayReturn": -0.86,
         "fiveDayReturn": 1.09,
         "twentyDayReturn": -4.35,
@@ -656,8 +656,8 @@
         "assetType": "STOCK",
         "moneyFlowScore": 18,
         "moneyFlowScoreInitial": 18,
-        "moneyFlowScoreFinal": 25,
-        "finalRawScore": 25,
+        "moneyFlowScoreFinal": 23,
+        "finalRawScore": 23,
         "todayActionLabel": "제외",
         "reasonConfidence": "LOW",
         "oneDayReturn": -0.27,
@@ -4662,8 +4662,8 @@
     {
       "name": "금융/밸류업 주주환원",
       "status": "소멸",
-      "narrativeScore": 11,
-      "rawScore": 11,
+      "narrativeScore": 9,
+      "rawScore": 9,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS"
@@ -4699,7 +4699,7 @@
       "name": "Financials 자금 유입",
       "status": "소멸",
       "narrativeScore": 0,
-      "rawScore": -3,
+      "rawScore": -4,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS",
@@ -5276,8 +5276,8 @@
     {
       "name": "금융/밸류업 주주환원",
       "status": "소멸",
-      "narrativeScore": 11,
-      "rawScore": 11,
+      "narrativeScore": 9,
+      "rawScore": 9,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS"
@@ -5313,7 +5313,7 @@
       "name": "Financials 자금 유입",
       "status": "소멸",
       "narrativeScore": 0,
-      "rawScore": -3,
+      "rawScore": -4,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "069500.KS",
@@ -5421,7 +5421,9 @@
               "action": "Hold off until 20-day moving average is recovered."
             }
           ],
-          "watchItems": [],
+          "watchItems": [
+            "news data not connected or unavailable"
+          ],
           "summary": "1개 감점 리스크로 총 -6점 반영."
         },
         "reasonConfidence": "LOW",
@@ -5429,13 +5431,13 @@
         "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "069500.KS",
-          "checkedAt": "2026-07-15T00:05:35.186Z",
+          "checkedAt": "2026-07-15T15:36:03.707Z",
           "status": "CONNECTED",
           "source": "Google News RSS",
           "sourceStatuses": [
             {
               "source": "DART",
-              "status": "CONNECTED"
+              "status": "DISABLED"
             },
             {
               "source": "Google News RSS",
@@ -5443,7 +5445,7 @@
             }
           ],
           "lastPublishedAt": "2026-07-14T05:22:22.000Z",
-          "freshnessStatus": "FRESH",
+          "freshnessStatus": "STALE",
           "trendTone": "긍정 우위",
           "directnessLabel": "종목 직접 뉴스 확인",
           "headline": "삼성운용, ‘KODEX 200커버드콜액티브’ 상장…주도주 투자·월배당 결합 - 브릿지경제",
@@ -5453,7 +5455,7 @@
             "publishedAt": "2026-07-14T00:22:00.000Z",
             "eventType": "투자/증설",
             "direction": "positive",
-            "freshnessBucket": "under_24h",
+            "freshnessBucket": "under_72h",
             "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9EV1JPN1dNWG9KY0NHaWVhOGxBLVJURUFuQVpKZ3MyNEVWUEZjQVpySTJMbmVQWFVYQW9VcjVwMDR4LWdENmRKTDNfQ0JGb09fNzVmaW01NXpSQQ?oc=5"
           },
           "items": [
@@ -5471,7 +5473,7 @@
               "eventType": "투자/증설",
               "directness": "direct_ticker",
               "direction": "positive",
-              "freshnessBucket": "under_24h",
+              "freshnessBucket": "under_72h",
               "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9EV1JPN1dNWG9KY0NHaWVhOGxBLVJURUFuQVpKZ3MyNEVWUEZjQVpySTJMbmVQWFVYQW9VcjVwMDR4LWdENmRKTDNfQ0JGb09fNzVmaW01NXpSQQ?oc=5"
             },
             {
@@ -5488,8 +5490,8 @@
               "eventType": "시장 일반",
               "directness": "direct_ticker",
               "direction": "neutral",
-              "freshnessBucket": "under_24h",
-              "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1JZ2Q2azB4V1o4b1oxY3BCZDRIdHhlV0ZBdmJqRjhnR2xMNmlXZ3hhR0Qta1puSXBwejFkNjhLaEJUaklXTlFsR2tkUnRzaW8?oc=5"
+              "freshnessBucket": "under_72h",
+              "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1helRwWV9sSGh0ZGZYcF9xNk13Sng2SHYwemZnNElpYXAxUG5ua1FTcFQyMnVCUW5fYUdPSzV1M3dVU21oRHc?oc=5"
             },
             {
               "title": "삼성운용, 월분배금 지급 'KODEX 200커버드콜액티브' 상장 - 연합뉴스",
@@ -5505,7 +5507,7 @@
               "eventType": "시장 일반",
               "directness": "direct_ticker",
               "direction": "neutral",
-              "freshnessBucket": "under_24h",
+              "freshnessBucket": "under_72h",
               "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBaZVJNX2IwS2M1enAwOHpEbmprcS1IN2hSemhaWTl5bUpkRExweHQtZlZmWFlNSDlnaFEwcGtwWWF4UVBaQmg3SUxDcmt2YnJJUlFMTGtJNmQyODJkdjlfV9IBYEFVX3lxTFBaZVJNX2IwS2M1enAwOHpEbmprcS1IN2hSemhaWTl5bUpkRExweHQtZlZmWFlNSDlnaFEwcGtwWWF4UVBaQmg3SUxDcmt2YnJJUlFMTGtJNmQyODJkdjlfVw?oc=5"
             }
           ],
@@ -5537,6 +5539,7 @@
           },
           "notes": [
             "DART fallback: 의미 있는 신규 DART 공시 없음",
+            "DART_API_KEY 또는 OPENDART_API_KEY not configured",
             "해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음"
           ],
           "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: 삼성운용, ‘KODEX 200커버드콜액티브’ 상장…주도주 투자·월배당 결합 - 브릿지경제"
@@ -5569,7 +5572,7 @@
         },
         "linkedNarrative": "금융/밸류업 주주환원",
         "narrativeStatus": "소멸",
-        "narrativeScore": 11,
+        "narrativeScore": 9,
         "relatedEtfs": [],
         "closePriceAtRecommendation": 109720,
         "recommendationDate": "2026-07-14"
@@ -5601,7 +5604,9 @@
               "action": "Hold off until 20-day moving average is recovered."
             }
           ],
-          "watchItems": [],
+          "watchItems": [
+            "news data not connected or unavailable"
+          ],
           "summary": "1개 감점 리스크로 총 -6점 반영."
         },
         "reasonConfidence": "LOW",
@@ -5609,13 +5614,13 @@
         "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "229200.KS",
-          "checkedAt": "2026-07-15T00:05:35.201Z",
+          "checkedAt": "2026-07-15T15:36:03.923Z",
           "status": "CONNECTED",
           "source": "Google News RSS",
           "sourceStatuses": [
             {
               "source": "DART",
-              "status": "CONNECTED"
+              "status": "DISABLED"
             },
             {
               "source": "Google News RSS",
@@ -5625,35 +5630,18 @@
           "lastPublishedAt": "2026-07-10T00:09:43.000Z",
           "freshnessStatus": "UNKNOWN",
           "trendTone": "긍정 우위",
-          "directnessLabel": "종목 직접 뉴스 확인",
-          "headline": "08일, 기관 거래소에서 SK하이닉스(-5.68%), KODEX 코스닥150레버리지(-12.46%) 등 순매도 - 네이트",
+          "directnessLabel": "섹터/테마 뉴스 중심",
+          "headline": "9% 내렸다지만…투자 고수는 실적 보고 '이 종목' 샀다 - 한국경제",
           "directCatalyst": {
-            "title": "08일, 기관 거래소에서 SK하이닉스(-5.68%), KODEX 코스닥150레버리지(-12.46%) 등 순매도 - 네이트",
-            "source": "네이트",
-            "publishedAt": "2026-07-08T09:36:00.000Z",
-            "eventType": "시장 일반",
-            "direction": "neutral",
+            "title": "9% 내렸다지만…투자 고수는 실적 보고 '이 종목' 샀다 - 한국경제",
+            "source": "한국경제",
+            "publishedAt": "2026-07-10T00:09:43.000Z",
+            "eventType": "실적",
+            "direction": "positive",
             "freshnessBucket": "stale",
-            "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBaVHJqS1pvRkxGRC0tdFZBbUt0YU9fb1lMZzZxbmt0aVZQaDdFTGRLMHI3TW14RDdOV0R6VktjZ2NHdGM5M1FuazVYVTNLWEVkLUFDT3Exa2hMc3hxelppRTIwZUVFUmZhWUM0RGg0dHV4R0JMMlNFWg?oc=5"
+            "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5MU0VwWXQ5TF92VzNkNko2RkhTdHBKMmJNc2tqa1NFOVFIa1pQTkZNcnRTdVdYcFZ0ZV9uc3hnWS01SEljTG5mdkNHTmYzSkhaMkd0UlFPdzhFUdIBVEFVX3lxTE1NTTViS1ExeDBJenpNQzZNZ2tIdGo5T2VqdW9MVjV6Um5mWm5MamRYR1M2SkFmaUFjdkpmTGZHUGxUd09KQ3JlZlFMOGtkQ1Nzd3lsYw?oc=5"
           },
           "items": [
-            {
-              "title": "08일, 기관 거래소에서 SK하이닉스(-5.68%), KODEX 코스닥150레버리지(-12.46%) 등 순매도 - 네이트",
-              "summary": "08일, 기관 거래소에서 SK하이닉스(-5.68%), KODEX 코스닥150레버리지(-12.46%) 등 순매도&nbsp;&nbsp;네이트",
-              "koreanSummary": {
-                "title": "08일, 기관 거래소에서 SK하이닉스(-5.68%), KODEX 코스닥150레버리지(-12.46%) 등 순매도 - 네이트",
-                "content": "KODEX 코스닥150 관련 시장 일반 뉴스입니다. 제목상 핵심은 \"08일, 기관 거래소에서 SK하이닉스(-5.68%), KODEX 코스닥150레버리지(-12.46%) 등 순매도\"입니다.",
-                "implication": "KODEX 코스닥150의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-                "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
-              },
-              "source": "네이트",
-              "publishedAt": "2026-07-08T09:36:00.000Z",
-              "eventType": "시장 일반",
-              "directness": "direct_ticker",
-              "direction": "neutral",
-              "freshnessBucket": "stale",
-              "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBaVHJqS1pvRkxGRC0tdFZBbUt0YU9fb1lMZzZxbmt0aVZQaDdFTGRLMHI3TW14RDdOV0R6VktjZ2NHdGM5M1FuazVYVTNLWEVkLUFDT3Exa2hMc3hxelppRTIwZUVFUmZhWUM0RGg0dHV4R0JMMlNFWg?oc=5"
-            },
             {
               "title": "9% 내렸다지만…투자 고수는 실적 보고 '이 종목' 샀다 - 한국경제",
               "summary": "9% 내렸다지만…투자 고수는 실적 보고 '이 종목' 샀다&nbsp;&nbsp;한국경제",
@@ -5674,15 +5662,9 @@
           ],
           "koreanSummary": {
             "title": "최근 뉴스/동향 한국어 요약",
-            "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"08일, 기관 거래소에서 SK하이닉스(-5.68%), KODEX 코스닥150레버리지(-12.46%) 등 순매도 - 네이트\"입니다.",
-            "directLine": "KODEX 코스닥150에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"08일, 기관 거래소에서 SK하이닉스(-5.68%), KODEX 코스닥150레버리지(-12.46%) 등 순매도 - 네이트\"이며, 일반 재료로 봅니다.",
+            "overview": "섹터/테마 뉴스 중심 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"9% 내렸다지만…투자 고수는 실적 보고 '이 종목' 샀다 - 한국경제\"입니다.",
+            "directLine": "KODEX 코스닥150에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"9% 내렸다지만…투자 고수는 실적 보고 '이 종목' 샀다 - 한국경제\"이며, 일반 재료로 봅니다.",
             "bullets": [
-              {
-                "title": "08일, 기관 거래소에서 SK하이닉스(-5.68%), KODEX 코스닥150레버리지(-12.46%) 등 순매도 - 네이트",
-                "content": "KODEX 코스닥150 관련 시장 일반 뉴스입니다. 제목상 핵심은 \"08일, 기관 거래소에서 SK하이닉스(-5.68%), KODEX 코스닥150레버리지(-12.46%) 등 순매도\"입니다.",
-                "implication": "KODEX 코스닥150의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-                "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
-              },
               {
                 "title": "9% 내렸다지만…투자 고수는 실적 보고 '이 종목' 샀다 - 한국경제",
                 "content": "KODEX 코스닥150의 실적 관련 뉴스입니다. 제목 기준 방향성은 긍정이며, 매출·이익 수치와 컨센서스 대비 차이를 확인해야 합니다.",
@@ -5694,9 +5676,10 @@
           },
           "notes": [
             "DART fallback: 의미 있는 신규 DART 공시 없음",
+            "DART_API_KEY 또는 OPENDART_API_KEY not configured",
             "해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음"
           ],
-          "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: 08일, 기관 거래소에서 SK하이닉스(-5.68%), KODEX 코스닥150레버리지(-12.46%) 등 순매도 - 네이트"
+          "oneLine": "섹터/테마 뉴스 중심, 흐름은 긍정 우위. 핵심 확인 뉴스: 9% 내렸다지만…투자 고수는 실적 보고 '이 종목' 샀다 - 한국경제"
         },
         "tieBreakerReason": "최종 원점수 -24, 리스크 패널티 -6, 5일 수익률 -7.74%, 상대 거래량 1.49배 순으로 정렬",
         "entryQualityScore": 0,
@@ -5739,113 +5722,145 @@
         "name": "하나금융지주",
         "actionLabel": "제외",
         "status": "매매 금지",
-        "moneyFlowScore": 78,
+        "moneyFlowScore": 68,
         "moneyFlowScoreInitial": 63,
-        "moneyFlowScoreFinal": 78,
-        "finalRawScore": 78,
-        "finalDisplayScore": 78,
+        "moneyFlowScoreFinal": 68,
+        "finalRawScore": 68,
+        "finalDisplayScore": 68,
         "wasCapped": false,
         "capReason": "cap not applied",
-        "formulaText": "+63 + +10 + 0 + +5 + 0 + 0 + 0 = 78",
+        "formulaText": "+63 + 0 + 0 + +5 + 0 + 0 + 0 = 68",
         "riskPenalty": 0,
         "riskPenaltySummary": {
           "totalPenalty": 0,
           "riskLevel": "LOW",
           "items": [],
           "watchItems": [
+            "news data not connected or unavailable",
             "related ETF relative strength mapping needs confirmation"
           ],
           "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
         },
         "reasonConfidence": "MEDIUM",
-        "reasonConfidenceExplanation": "보조 근거 일부 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-        "directCatalyst": "직접 촉매: DART / 자사주/주주환원 / under_72h / positive / 중요도 4 - [기재정정]주식소각결정              ",
+        "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+        "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "086790.KS",
-          "checkedAt": "2026-07-15T00:05:34.840Z",
+          "checkedAt": "2026-07-15T15:36:04.078Z",
           "status": "CONNECTED",
-          "source": "DART",
+          "source": "Google News RSS",
           "sourceStatuses": [
             {
               "source": "DART",
+              "status": "DISABLED"
+            },
+            {
+              "source": "Google News RSS",
               "status": "CONNECTED"
             }
           ],
-          "lastPublishedAt": "2026-07-13T15:00:00.000Z",
+          "lastPublishedAt": "2026-07-14T01:26:26.000Z",
           "freshnessStatus": "STALE",
           "trendTone": "긍정 우위",
           "directnessLabel": "종목 직접 뉴스 확인",
-          "headline": "[기재정정]주식소각결정              ",
+          "headline": "상승 여력만 32%…하나금융지주 목표가 17만원 상향 - 경제타임스",
           "directCatalyst": {
-            "title": "[기재정정]주식소각결정              ",
-            "source": "DART",
-            "publishedAt": "2026-07-14T00:00:00.000+09:00",
-            "eventType": "자사주/주주환원",
+            "title": "상승 여력만 32%…하나금융지주 목표가 17만원 상향 - 경제타임스",
+            "source": "경제타임스",
+            "publishedAt": "2026-07-13T01:14:56.000Z",
+            "eventType": "목표가/의견 상향",
             "direction": "positive",
             "freshnessBucket": "under_72h",
-            "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260714800361"
+            "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBUSlpRUVRrME91Um1Fejh1YktfQVdUU1NZcEhhVWF3X1k2c0dETWZzSzM0YUlzY3JxdGh3ZG5HNS1Ub05Henl2X3JaZTFuSnV2YlFV?oc=5"
           },
           "items": [
             {
-              "title": "[기재정정]주식소각결정              ",
-              "summary": "하나금융지주 [기재정정]주식소각결정              ",
+              "title": "상승 여력만 32%…하나금융지주 목표가 17만원 상향 - 경제타임스",
+              "summary": "상승 여력만 32%…하나금융지주 목표가 17만원 상향&nbsp;&nbsp;경제타임스",
               "koreanSummary": {
-                "title": "[기재정정]주식소각결정",
-                "content": "하나금융지주 관련 일반 뉴스입니다. 제목상 핵심은 \"[기재정정]주식소각결정\"입니다.",
-                "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
-                "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+                "title": "상승 여력만 32%…하나금융지주 목표가 17만원 상향 - 경제타임스",
+                "content": "하나금융지주에 대한 증권사 목표가 또는 투자의견 변화 뉴스입니다.",
+                "implication": "하나금융지주의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+                "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
               },
-              "source": "DART",
-              "publishedAt": "2026-07-14T00:00:00.000+09:00",
-              "eventType": "자사주/주주환원",
+              "source": "경제타임스",
+              "publishedAt": "2026-07-13T01:14:56.000Z",
+              "eventType": "목표가/의견 상향",
               "directness": "direct_ticker",
               "direction": "positive",
               "freshnessBucket": "under_72h",
-              "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260714800361"
+              "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBUSlpRUVRrME91Um1Fejh1YktfQVdUU1NZcEhhVWF3X1k2c0dETWZzSzM0YUlzY3JxdGh3ZG5HNS1Ub05Henl2X3JaZTFuSnV2YlFV?oc=5"
             },
             {
-              "title": "자기주식취득결과보고서",
-              "summary": "하나금융지주 자기주식취득결과보고서",
+              "title": "하나금융지주 주가↑...2분기 실적 선방에 목표주가 상향 - gukjenews.com",
+              "summary": "하나금융지주 주가↑...2분기 실적 선방에 목표주가 상향&nbsp;&nbsp;gukjenews.com",
               "koreanSummary": {
-                "title": "자기주식취득결과보고서",
-                "content": "하나금융지주 관련 일반 뉴스입니다. 제목상 핵심은 \"자기주식취득결과보고서\"입니다.",
-                "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
-                "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+                "title": "하나금융지주 주가↑...2분기 실적 선방에 목표주가 상향 - gukjenews.com",
+                "content": "하나금융지주의 실적 관련 뉴스입니다. 제목 기준 방향성은 긍정이며, 매출·이익 수치와 컨센서스 대비 차이를 확인해야 합니다.",
+                "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+                "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
               },
-              "source": "DART",
-              "publishedAt": "2026-07-14T00:00:00.000+09:00",
-              "eventType": "자사주/주주환원",
+              "source": "gukjenews.com",
+              "publishedAt": "2026-07-13T03:56:02.000Z",
+              "eventType": "실적",
               "directness": "direct_ticker",
               "direction": "positive",
               "freshnessBucket": "under_72h",
-              "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260714000187"
+              "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9TVHYxWWRCSl9UdEM0LV9PeEVJQlMtREZ6bjY2aHlTM0pEWUhtejlpNktub1lDLUZvNERxdXVxVGZyck8xcnhsUTV3RG9LTkloVllKNk8wem5DZGZ2V0V2eUQteDR2WGJYUkQ5SE1R?oc=5"
+            },
+            {
+              "title": "[리포트 브리핑]하나금융지주, '2Q26 Preview' 목표가 176,000원 - 한화투자증권 - 뉴스핌",
+              "summary": "[리포트 브리핑]하나금융지주, '2Q26 Preview' 목표가 176,000원 - 한화투자증권&nbsp;&nbsp;뉴스핌",
+              "koreanSummary": {
+                "title": "[리포트 브리핑]하나금융지주, '2Q26 Preview' 목표가 176,000원 - 한화투자증권 - 뉴스핌",
+                "content": "하나금융지주에 대한 증권사 목표가 또는 투자의견 변화 뉴스입니다.",
+                "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+                "check": "투자/증설의 금액, 기간, 실적 반영 시점"
+              },
+              "source": "뉴스핌",
+              "publishedAt": "2026-07-09T23:33:00.000Z",
+              "eventType": "투자/증설",
+              "directness": "direct_ticker",
+              "direction": "positive",
+              "freshnessBucket": "stale",
+              "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5MZEVhWm9NNkszclM2bDFOMXZWNlpoNWNjUEMzdTlRc3V6N08xWDlpVWNWZzEzN1FDUVJObTZFdXhXYTduZGdsLWpubENYbW9DNGxXQ01yUkEzLUZ1?oc=5"
             }
           ],
           "koreanSummary": {
             "title": "최근 뉴스/동향 한국어 요약",
-            "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"[기재정정]주식소각결정              \"입니다.",
-            "directLine": "하나금융지주에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"[기재정정]주식소각결정              \"이며, 일반 재료로 봅니다.",
+            "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"상승 여력만 32%…하나금융지주 목표가 17만원 상향 - 경제타임스\"입니다.",
+            "directLine": "하나금융지주에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"상승 여력만 32%…하나금융지주 목표가 17만원 상향 - 경제타임스\"이며, 일반 재료로 봅니다.",
             "bullets": [
               {
-                "title": "[기재정정]주식소각결정",
-                "content": "하나금융지주 관련 일반 뉴스입니다. 제목상 핵심은 \"[기재정정]주식소각결정\"입니다.",
-                "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
-                "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+                "title": "상승 여력만 32%…하나금융지주 목표가 17만원 상향 - 경제타임스",
+                "content": "하나금융지주에 대한 증권사 목표가 또는 투자의견 변화 뉴스입니다.",
+                "implication": "하나금융지주의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+                "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
               },
               {
-                "title": "자기주식취득결과보고서",
-                "content": "하나금융지주 관련 일반 뉴스입니다. 제목상 핵심은 \"자기주식취득결과보고서\"입니다.",
-                "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
-                "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+                "title": "하나금융지주 주가↑...2분기 실적 선방에 목표주가 상향 - gukjenews.com",
+                "content": "하나금융지주의 실적 관련 뉴스입니다. 제목 기준 방향성은 긍정이며, 매출·이익 수치와 컨센서스 대비 차이를 확인해야 합니다.",
+                "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+                "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              },
+              {
+                "title": "[리포트 브리핑]하나금융지주, '2Q26 Preview' 목표가 176,000원 - 한화투자증권 - 뉴스핌",
+                "content": "하나금융지주에 대한 증권사 목표가 또는 투자의견 변화 뉴스입니다.",
+                "implication": "투자/증설 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+                "check": "투자/증설의 금액, 기간, 실적 반영 시점"
               }
             ],
             "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
           },
-          "notes": [],
-          "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: [기재정정]주식소각결정              "
+          "notes": [
+            "DART fallback: 의미 있는 신규 DART 공시 없음",
+            "DART_API_KEY 또는 OPENDART_API_KEY not configured",
+            "해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음"
+          ],
+          "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: 상승 여력만 32%…하나금융지주 목표가 17만원 상향 - 경제타임스"
         },
-        "tieBreakerReason": "최종 원점수 78, 리스크 패널티 0, 5일 수익률 +5.59%, 상대 거래량 1.57배 순으로 정렬",
-        "entryQualityScore": 30,
+        "tieBreakerReason": "최종 원점수 68, 리스크 패널티 0, 5일 수익률 +5.59%, 상대 거래량 1.57배 순으로 정렬",
+        "entryQualityScore": 27,
         "entryQualityLabel": "낮음",
         "trendStrengthIndex": 18,
         "trendStateLabel": "잠복",
@@ -5860,7 +5875,7 @@
           "label": "제외",
           "status": "매매 금지",
           "reasons": [
-            "Entry Quality 30 < 40",
+            "Entry Quality 27 < 40",
             "진입 품질 부족"
           ],
           "rescueType": null
@@ -5868,11 +5883,11 @@
         "marketContext": {
           "marketRegime": "위험회피",
           "candidateEnvironment": "관찰",
-          "reason": "전체 시장은 위험회피 / Entry Quality 30 < 40 / 진입 품질 부족"
+          "reason": "전체 시장은 위험회피 / Entry Quality 27 < 40 / 진입 품질 부족"
         },
         "linkedNarrative": "금융/밸류업 주주환원",
         "narrativeStatus": "소멸",
-        "narrativeScore": 11,
+        "narrativeScore": 9,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -5886,90 +5901,145 @@
         "name": "DB손해보험",
         "actionLabel": "제외",
         "status": "매매 금지",
-        "moneyFlowScore": 67,
+        "moneyFlowScore": 62,
         "moneyFlowScoreInitial": 57,
-        "moneyFlowScoreFinal": 67,
-        "finalRawScore": 67,
-        "finalDisplayScore": 67,
+        "moneyFlowScoreFinal": 62,
+        "finalRawScore": 62,
+        "finalDisplayScore": 62,
         "wasCapped": false,
         "capReason": "cap not applied",
-        "formulaText": "+57 + +5 + 0 + +5 + 0 + 0 + 0 = 67",
+        "formulaText": "+57 + 0 + 0 + +5 + 0 + 0 + 0 = 62",
         "riskPenalty": 0,
         "riskPenaltySummary": {
           "totalPenalty": 0,
           "riskLevel": "LOW",
           "items": [],
           "watchItems": [
+            "news data not connected or unavailable",
             "related ETF relative strength mapping needs confirmation"
           ],
           "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
         },
         "reasonConfidence": "MEDIUM",
-        "reasonConfidenceExplanation": "보조 근거 일부 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-        "directCatalyst": "직접 촉매: DART / 정기/기타공시 / under_72h / neutral / 중요도 2 - 계열금융회사의약관에의한금융거래-[유가증권-수익증권]",
+        "reasonConfidenceExplanation": "직접 촉매 부재, 뉴스 미사용 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+        "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "005830.KS",
-          "checkedAt": "2026-07-15T00:05:34.840Z",
+          "checkedAt": "2026-07-15T15:36:03.888Z",
           "status": "CONNECTED",
-          "source": "DART",
+          "source": "Google News RSS",
           "sourceStatuses": [
             {
               "source": "DART",
+              "status": "DISABLED"
+            },
+            {
+              "source": "Google News RSS",
               "status": "CONNECTED"
             }
           ],
-          "lastPublishedAt": "2026-07-12T15:00:00.000Z",
-          "freshnessStatus": "STALE",
-          "trendTone": "중립 또는 혼재",
+          "lastPublishedAt": "2026-07-15T01:45:00.000Z",
+          "freshnessStatus": "FRESH",
+          "trendTone": "긍정 우위",
           "directnessLabel": "종목 직접 뉴스 확인",
-          "headline": "계열금융회사의약관에의한금융거래-[유가증권-수익증권]",
+          "headline": "[리포트 브리핑]DB손해보험, '투자손익 중심의 호실적 예상' 목표가 220,000원 - iM증권 - 뉴스핌",
           "directCatalyst": {
-            "title": "계열금융회사의약관에의한금융거래-[유가증권-수익증권]",
-            "source": "DART",
-            "publishedAt": "2026-07-13T00:00:00.000+09:00",
-            "eventType": "정기/기타공시",
-            "direction": "neutral",
+            "title": "[리포트 브리핑]DB손해보험, '투자손익 중심의 호실적 예상' 목표가 220,000원 - iM증권 - 뉴스핌",
+            "source": "뉴스핌",
+            "publishedAt": "2026-07-13T02:25:00.000Z",
+            "eventType": "실적",
+            "direction": "positive",
             "freshnessBucket": "under_72h",
-            "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260713000454"
+            "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5zSmVDQkFiNzBMb1BJbnpMdEVqV25qQW1ucVZSeXVCbmxQTTJtbjV5eUVLQ1hqUGRVa1NIbm8xWmdHaEZhV0RiSkVTNzFwRDZVX0xpZW5SZkNnaWVN?oc=5"
           },
           "items": [
             {
-              "title": "계열금융회사의약관에의한금융거래-[유가증권-수익증권]",
-              "summary": "DB손해보험 계열금융회사의약관에의한금융거래-[유가증권-수익증권]",
+              "title": "[리포트 브리핑]DB손해보험, '투자손익 중심의 호실적 예상' 목표가 220,000원 - iM증권 - 뉴스핌",
+              "summary": "[리포트 브리핑]DB손해보험, '투자손익 중심의 호실적 예상' 목표가 220,000원 - iM증권&nbsp;&nbsp;뉴스핌",
               "koreanSummary": {
-                "title": "계열금융회사의약관에의한금융거래-[유가증권-수익증권]",
-                "content": "DB손해보험 관련 일반 뉴스입니다. 제목상 핵심은 \"계열금융회사의약관에의한금융거래-[유가증권-수익증권]\"입니다.",
-                "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
-                "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+                "title": "[리포트 브리핑]DB손해보험, '투자손익 중심의 호실적 예상' 목표가 220,000원 - iM증권 - 뉴스핌",
+                "content": "DB손해보험의 실적 관련 뉴스입니다. 제목 기준 방향성은 긍정이며, 매출·이익 수치와 컨센서스 대비 차이를 확인해야 합니다.",
+                "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+                "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
               },
-              "source": "DART",
-              "publishedAt": "2026-07-13T00:00:00.000+09:00",
-              "eventType": "정기/기타공시",
+              "source": "뉴스핌",
+              "publishedAt": "2026-07-13T02:25:00.000Z",
+              "eventType": "실적",
               "directness": "direct_ticker",
-              "direction": "neutral",
+              "direction": "positive",
               "freshnessBucket": "under_72h",
-              "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260713000454"
+              "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5zSmVDQkFiNzBMb1BJbnpMdEVqV25qQW1ucVZSeXVCbmxQTTJtbjV5eUVLQ1hqUGRVa1NIbm8xWmdHaEZhV0RiSkVTNzFwRDZVX0xpZW5SZkNnaWVN?oc=5"
+            },
+            {
+              "title": "iM증권 “DB손해보험, 신계약 물량 축소 예상…투자손익 중심 호실적” - v.daum.net",
+              "summary": "iM증권 “DB손해보험, 신계약 물량 축소 예상…투자손익 중심 호실적”&nbsp;&nbsp;v.daum.net",
+              "koreanSummary": {
+                "title": "iM증권 “DB손해보험, 신계약 물량 축소 예상…투자손익 중심 호실적” - v.daum.net",
+                "content": "DB손해보험의 수주·계약·공급 관련 뉴스입니다. 제목 기준으로 실적 가시성에 영향을 줄 수 있는 직접 재료입니다.",
+                "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+                "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              },
+              "source": "v.daum.net",
+              "publishedAt": "2026-07-12T23:48:04.000Z",
+              "eventType": "실적",
+              "directness": "direct_ticker",
+              "direction": "positive",
+              "freshnessBucket": "under_72h",
+              "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5rOVRtMFVWYnU4R3pFaWRTeXJyaDVGSHduZkZhYXhGaXFudHpnV3hRNzNVblpLRVdaQXlrX2MtcXZiemxwZkxmYU96X2I0aW8?oc=5"
+            },
+            {
+              "title": "iM증권 “DB손해보험, 신계약 물량 축소 예상…투자손익 중심 호실적” - 매일경제",
+              "summary": "iM증권 “DB손해보험, 신계약 물량 축소 예상…투자손익 중심 호실적”&nbsp;&nbsp;매일경제",
+              "koreanSummary": {
+                "title": "iM증권 “DB손해보험, 신계약 물량 축소 예상…투자손익 중심 호실적” - 매일경제",
+                "content": "DB손해보험의 수주·계약·공급 관련 뉴스입니다. 제목 기준으로 실적 가시성에 영향을 줄 수 있는 직접 재료입니다.",
+                "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+                "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              },
+              "source": "매일경제",
+              "publishedAt": "2026-07-12T23:47:45.000Z",
+              "eventType": "실적",
+              "directness": "direct_ticker",
+              "direction": "positive",
+              "freshnessBucket": "under_72h",
+              "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5kTmJNcUpBZUxoLWFtb0pjd2RiMG9wYnlzek5VNVpYWDVsVU1hSmRrekRoVEREdXB1MjFSandPMzhuMWpxME9jY25mNFRaYjM3alE?oc=5"
             }
           ],
           "koreanSummary": {
             "title": "최근 뉴스/동향 한국어 요약",
-            "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 중립 또는 혼재입니다. 후보 선정 후 재확인한 핵심 이슈는 \"계열금융회사의약관에의한금융거래-[유가증권-수익증권]\"입니다.",
-            "directLine": "DB손해보험에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"계열금융회사의약관에의한금융거래-[유가증권-수익증권]\"이며, 일반 재료로 봅니다.",
+            "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"[리포트 브리핑]DB손해보험, '투자손익 중심의 호실적 예상' 목표가 220,000원 - iM증권 - 뉴스핌\"입니다.",
+            "directLine": "DB손해보험에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"[리포트 브리핑]DB손해보험, '투자손익 중심의 호실적 예상' 목표가 220,000원 - iM증권 - 뉴스핌\"이며, 일반 재료로 봅니다.",
             "bullets": [
               {
-                "title": "계열금융회사의약관에의한금융거래-[유가증권-수익증권]",
-                "content": "DB손해보험 관련 일반 뉴스입니다. 제목상 핵심은 \"계열금융회사의약관에의한금융거래-[유가증권-수익증권]\"입니다.",
-                "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
-                "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+                "title": "[리포트 브리핑]DB손해보험, '투자손익 중심의 호실적 예상' 목표가 220,000원 - iM증권 - 뉴스핌",
+                "content": "DB손해보험의 실적 관련 뉴스입니다. 제목 기준 방향성은 긍정이며, 매출·이익 수치와 컨센서스 대비 차이를 확인해야 합니다.",
+                "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+                "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              },
+              {
+                "title": "iM증권 “DB손해보험, 신계약 물량 축소 예상…투자손익 중심 호실적” - v.daum.net",
+                "content": "DB손해보험의 수주·계약·공급 관련 뉴스입니다. 제목 기준으로 실적 가시성에 영향을 줄 수 있는 직접 재료입니다.",
+                "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+                "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              },
+              {
+                "title": "iM증권 “DB손해보험, 신계약 물량 축소 예상…투자손익 중심 호실적” - 매일경제",
+                "content": "DB손해보험의 수주·계약·공급 관련 뉴스입니다. 제목 기준으로 실적 가시성에 영향을 줄 수 있는 직접 재료입니다.",
+                "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
+                "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
               }
             ],
             "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
           },
-          "notes": [],
-          "oneLine": "종목 직접 뉴스 확인, 흐름은 중립 또는 혼재. 핵심 확인 뉴스: 계열금융회사의약관에의한금융거래-[유가증권-수익증권]"
+          "notes": [
+            "DART fallback: 의미 있는 신규 DART 공시 없음",
+            "DART_API_KEY 또는 OPENDART_API_KEY not configured",
+            "해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음"
+          ],
+          "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: [리포트 브리핑]DB손해보험, '투자손익 중심의 호실적 예상' 목표가 220,000원 - iM증권 - 뉴스핌"
         },
-        "tieBreakerReason": "최종 원점수 67, 리스크 패널티 0, 5일 수익률 +7.26%, 상대 거래량 1.54배 순으로 정렬",
-        "entryQualityScore": 21,
+        "tieBreakerReason": "최종 원점수 62, 리스크 패널티 0, 5일 수익률 +7.26%, 상대 거래량 1.54배 순으로 정렬",
+        "entryQualityScore": 19,
         "entryQualityLabel": "낮음",
         "trendStrengthIndex": 4,
         "trendStateLabel": "잠복",
@@ -5984,7 +6054,7 @@
           "label": "제외",
           "status": "매매 금지",
           "reasons": [
-            "Entry Quality 21 < 40",
+            "Entry Quality 19 < 40",
             "진입 품질 부족"
           ],
           "rescueType": null
@@ -5992,7 +6062,7 @@
         "marketContext": {
           "marketRegime": "위험회피",
           "candidateEnvironment": "관찰",
-          "reason": "전체 시장은 위험회피 / Entry Quality 21 < 40 / 진입 품질 부족"
+          "reason": "전체 시장은 위험회피 / Entry Quality 19 < 40 / 진입 품질 부족"
         },
         "linkedNarrative": "Financials 자금 유입",
         "narrativeStatus": "소멸",
@@ -6024,6 +6094,7 @@
           "riskLevel": "LOW",
           "items": [],
           "watchItems": [
+            "news data not connected or unavailable",
             "related ETF relative strength mapping needs confirmation"
           ],
           "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
@@ -6033,13 +6104,13 @@
         "directCatalyst": "",
         "candidateNewsSummary": {
           "ticker": "105560.KS",
-          "checkedAt": "2026-07-15T00:05:35.355Z",
+          "checkedAt": "2026-07-15T15:36:04.058Z",
           "status": "CONNECTED",
           "source": "Google News RSS",
           "sourceStatuses": [
             {
               "source": "DART",
-              "status": "CONNECTED"
+              "status": "DISABLED"
             },
             {
               "source": "Google News RSS",
@@ -6110,7 +6181,7 @@
               "directness": "direct_ticker",
               "direction": "positive",
               "freshnessBucket": "stale",
-              "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9qZUt3SUllVEtFLUswTFlWbWkzakxEUzBFaEYtLVdMckJ4emdvNElBdWJxY0hvM1VLVkV0c1J6SlJyNGdqT2h6Y3R5UQ?oc=5"
+              "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBpclJQXzhZQWlpLWJaQ2xKaE01cG5TR200eE1iSU9pTW9RVE91M2xhaFVNZDF1a3hyeUFKUmUyMEMwLU9vOGFraGh1OVk5MEk?oc=5"
             }
           ],
           "koreanSummary": {
@@ -6141,6 +6212,7 @@
           },
           "notes": [
             "DART fallback: 의미 있는 신규 DART 공시 없음",
+            "DART_API_KEY 또는 OPENDART_API_KEY not configured",
             "해당 티커의 신규 DART 공시가 없거나 API 결과가 비어 있음"
           ],
           "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: 하나증권 \"금융지주별 2분기 실적 차별화 가능성, 최선호주 KB금융지주 신한금융지주\" - 비즈니스포스트"
@@ -6173,7 +6245,7 @@
         },
         "linkedNarrative": "금융/밸류업 주주환원",
         "narrativeStatus": "소멸",
-        "narrativeScore": 11,
+        "narrativeScore": 9,
         "relatedEtfs": [
           "069500.KS",
           "229200.KS"
@@ -6191,32 +6263,32 @@
     "priceVolumeMissingCount": 0,
     "priceAsOfDate": "2026-07-15",
     "priceAsOfLabel": "2026-07-15 KRX 정규장 종가",
-    "reportGeneratedAtKST": "2026-07-15 09:05",
-    "newsStatus": "CONNECTED",
-    "newsFetchedAt": "2026-07-15T00:05:34.759Z",
-    "newsLastUpdatedAt": "2026-07-15T00:05:34.759Z",
-    "latestNewsPublishedAt": "2026-07-13T15:00:00.000Z",
-    "newsFreshnessStatus": "STALE",
+    "reportGeneratedAtKST": "2026-07-16 00:36",
+    "newsStatus": "DISABLED",
+    "newsFetchedAt": "2026-07-15T15:36:03.039Z",
+    "newsLastUpdatedAt": "2026-07-15T15:36:03.039Z",
+    "latestNewsPublishedAt": null,
+    "newsFreshnessStatus": "UNKNOWN",
     "newsSources": "DART",
-    "newsSourceStatus": "DART CONNECTED",
-    "newsReliability": "HIGH",
+    "newsSourceStatus": "DART DISABLED",
+    "newsReliability": "LOW",
     "etfBreadthStatus": "PARTIAL",
     "etfBreadthSampleCount": "20~30",
     "etfBreadthReliability": "HIGH",
     "liquidityStatus": "PARTIAL",
     "prePostMarketStatus": "NOT_APPLICABLE",
-    "analysisReliability": "MEDIUM",
+    "analysisReliability": "LOW",
     "executionReliability": "MEDIUM",
     "reliabilityNotes": [
       "장전/시간외 데이터 확인 불가"
     ],
     "providers": "yfinance, DART, config fallback sample, price-volume dollar-volume fallback",
-    "recommendationSession": "2026-07-15 KRX 정규장",
-    "grade": "MEDIUM",
+    "recommendationSession": "2026-07-16 KRX 정규장",
+    "grade": "LOW",
     "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 장전/시간외 가격과 정규장 거래대금을 별도 확인해야 한다."
   },
   "todayDecision": {
-    "label": "신규 추격 없음 / 관찰",
+    "label": "매매 보류",
     "screeningUnavailable": false,
     "entryReadyCount": 0,
     "conditionalCount": 0,
@@ -6264,7 +6336,7 @@
       },
       {
         "label": "뉴스 직접성 부족",
-        "count": 196
+        "count": 202
       }
     ],
     "topLimiters": [

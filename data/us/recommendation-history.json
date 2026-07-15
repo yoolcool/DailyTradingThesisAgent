@@ -1,8 +1,31 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-14T23:55:20.258Z",
+  "updatedAt": "2026-07-15T15:35:59.479Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
+    {
+      "reportDate": "2026-07-16",
+      "reportGeneratedAt": "2026-07-15T15:35:59.446Z",
+      "reportGeneratedAtET": "2026-07-15 11:35:59 ET",
+      "ticker": "CRWD",
+      "assetType": "STOCK",
+      "rank": 1,
+      "recommendationPrice": 210.73,
+      "recommendationClosePrice": 210.73,
+      "narrative": "사이버보안 지출 재가속",
+      "moneyFlowScore": 100,
+      "finalRawScore": 106,
+      "confidence": "HIGH",
+      "actionLabel": "자금흐름 예외 조건부",
+      "trackingSessionDate": "2026-07-15",
+      "trackingStatus": "pending",
+      "intradayHighAfterRecommendation": null,
+      "trackingClose": null,
+      "highReturnPct": null,
+      "closeReturnPct": null,
+      "resultLabel": "추적 대기",
+      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음"
+    },
     {
       "reportDate": "2026-07-15",
       "reportGeneratedAt": "2026-07-14T23:55:20.234Z",
