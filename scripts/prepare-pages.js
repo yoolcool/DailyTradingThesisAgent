@@ -117,6 +117,7 @@ function writeRootIndex() {
     <nav aria-label="Market reports">
       <a href="./us/"><strong>US Market</strong><span>NASDAQ-100, US ETFs, and US narrative review</span></a>
       <a href="./kr/"><strong>Korean Market</strong><span>KOSPI200, KRX data, DART disclosures, and KR narrative review</span></a>
+      <a href="https://yoolcool.github.io/StockTracker/"><strong>Stock Tracker</strong><span>Stock Tracker project dashboard and analysis</span></a>
     </nav>
   </main>
 </body>
