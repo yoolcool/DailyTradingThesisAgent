@@ -160,7 +160,9 @@
     "stocks": [
       "DDOG",
       "WDAY",
-      "ROP"
+      "TEAM",
+      "ADSK",
+      "INTU"
     ],
     "nextBuyer": "소프트웨어 실적/AI 수익화을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -171,7 +173,8 @@
     "preferredStocks": [
       "DDOG",
       "WDAY",
-      "ROP"
+      "TEAM",
+      "ADSK"
     ],
     "breakCondition": "IGV 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -403,9 +406,7 @@
     "stocks": [
       "RTX",
       "LMT",
-      "NOC",
-      "AVAV",
-      "KTOS"
+      "AVAV"
     ],
     "nextBuyer": "Aerospace & Defense 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -416,7 +417,6 @@
     "preferredStocks": [
       "RTX",
       "LMT",
-      "NOC",
       "AVAV"
     ],
     "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -476,7 +476,8 @@
     ],
     "stocks": [
       "TRI",
-      "CTAS"
+      "CTAS",
+      "CPRT"
     ],
     "nextBuyer": "Specialty Business Services 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -486,7 +487,8 @@
     ],
     "preferredStocks": [
       "TRI",
-      "CTAS"
+      "CTAS",
+      "CPRT"
     ],
     "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
