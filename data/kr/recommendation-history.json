@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-03T00:11:39.881Z",
+  "updatedAt": "2026-08-04T00:17:21.452Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
     {
@@ -18,13 +18,13 @@
       "confidence": "MEDIUM",
       "actionLabel": "자금흐름 예외 조건부",
       "trackingSessionDate": "2026-08-03",
-      "trackingStatus": "pending",
-      "intradayHighAfterRecommendation": null,
-      "trackingClose": null,
-      "highReturnPct": null,
-      "closeReturnPct": null,
-      "resultLabel": "추적 대기",
-      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음"
+      "trackingStatus": "complete",
+      "intradayHighAfterRecommendation": 7490,
+      "trackingClose": 6660,
+      "highReturnPct": 2.74,
+      "closeReturnPct": -8.64,
+      "resultLabel": "제한적 유효",
+      "resultComment": "제한적인 장중 기회만 발생 (일봉 기준)"
     },
     {
       "reportDate": "2026-08-03",
@@ -41,13 +41,13 @@
       "confidence": "MEDIUM",
       "actionLabel": "자금흐름 예외 조건부",
       "trackingSessionDate": "2026-08-03",
-      "trackingStatus": "pending",
-      "intradayHighAfterRecommendation": null,
-      "trackingClose": null,
-      "highReturnPct": null,
-      "closeReturnPct": null,
-      "resultLabel": "추적 대기",
-      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음"
+      "trackingStatus": "complete",
+      "intradayHighAfterRecommendation": 299000,
+      "trackingClose": 283500,
+      "highReturnPct": 4.18,
+      "closeReturnPct": -1.22,
+      "resultLabel": "단타 유효",
+      "resultComment": "장중 기회는 있었지만 종가 유지력은 약함 (일봉 기준)"
     },
     {
       "reportDate": "2026-07-31",
@@ -1125,9 +1125,9 @@
       "trackingEndDate": "2026-06-26",
       "trackingStatus": "complete",
       "weeklyHigh": 150735,
-      "latestClose": 108820,
+      "latestClose": 99105,
       "weeklyHighReturnPct": 2.6,
-      "latestCloseReturnPct": -25.93,
+      "latestCloseReturnPct": -32.54,
       "resultLabel": "단기 고점 후 반납",
       "resultComment": "1주 내 상승 기회는 있었지만 현재가는 반납"
     },
