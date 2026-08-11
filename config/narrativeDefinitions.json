@@ -407,7 +407,6 @@
     ],
     "stocks": [
       "RTX",
-      "LMT",
       "KTOS",
       "AXON",
       "AVAV"
@@ -420,9 +419,9 @@
     ],
     "preferredStocks": [
       "RTX",
-      "LMT",
       "KTOS",
-      "AXON"
+      "AXON",
+      "AVAV"
     ],
     "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -435,6 +434,7 @@
     "stocks": [
       "REGN",
       "AMGN",
+      "VRTX",
       "INSM"
     ],
     "nextBuyer": "바이오/헬스케어 촉매을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
@@ -444,6 +444,7 @@
     "preferredStocks": [
       "REGN",
       "AMGN",
+      "VRTX",
       "INSM"
     ],
     "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -537,6 +538,26 @@
     "preferredStocks": [
       "PDD",
       "AMZN"
+    ],
+    "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+    "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
+  },
+  {
+    "name": "Travel Services 자금 유입",
+    "etfs": [
+      "QQQ"
+    ],
+    "stocks": [
+      "BKNG",
+      "ABNB"
+    ],
+    "nextBuyer": "Travel Services 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+    "preferredEtfs": [
+      "QQQ"
+    ],
+    "preferredStocks": [
+      "BKNG",
+      "ABNB"
     ],
     "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
