@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2026년 8월 24일 월요일 오전 7:47",
+  "generatedAtKST": "2026년 8월 26일 수요일 오전 7:54",
   "marketId": "us",
   "marketProfile": {
     "id": "us",
@@ -2867,7 +2867,7 @@
     {
       "key": "Software",
       "proposedName": "소프트웨어 실적/AI 수익화",
-      "discoveryScore": 141.3,
+      "discoveryScore": 135.3,
       "recurrenceDays": 4,
       "avgCandidateScore": 87.2,
       "avgRawScore": 88.4,
@@ -2882,7 +2882,7 @@
         "소프트웨어 실적/AI 수익화",
         "비트코인/디지털 자산 위험선호"
       ],
-      "overlapWithExistingTemplateCount": 2,
+      "overlapWithExistingTemplateCount": 3,
       "members": [
         {
           "ticker": "ADBE",
@@ -2890,7 +2890,7 @@
           "assetType": "STOCK",
           "sector": "Technology",
           "industry": "Software",
-          "alreadyCovered": false
+          "alreadyCovered": true
         },
         {
           "ticker": "MSTR",
