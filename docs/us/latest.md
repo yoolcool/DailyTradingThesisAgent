@@ -8,41 +8,41 @@
 
 ## 시장 국면 판단
 
-- 최종 판정: 기간 조정 (83점)
-- 전일 대비: 강세장에서 기간 조정으로 악화됐다(0점).
+- 최종 판정: 기간 조정 (67점)
+- 전일 대비: 기간 조정은 유지됐지만 점수는 전일보다 약화됐다(-16점).
 - 판정 신뢰도: 높음 (100점) - 핵심 지수와 매크로 데이터가 대부분 직접 수집되어 판정 신뢰도가 높다.
 - 행동 바이어스: 추격 보류, 돌파 확인
-- 한 줄 결론: 장기 추세는 유지되지만 단기 추세가 둔화되어 기간 조정으로 본다. 기술 100점, 매크로 50점.
-- 기술적 지표: 상승 추세 우위 (100점, 가중치 65%)
-- S&P 500: 100점 | 50일선 위, 200일선 위, 20일 +1.13%, 60일 +1.00%, 52주 고점 대비 -1.67% -> 기술 점수 100
-- Nasdaq 100: 100점 | 50일선 위, 200일선 위, 20일 +2.36%, 60일 -3.00%, 52주 고점 대비 -4.24% -> 기술 점수 100
-- 매크로 시황: 매크로 중립 (50점, 가중치 35%)
-- 매크로 요약: 신용/유동성은 우호적이나 물가 부담이 남아 있다.
-- 금리: 중립 49점 / 금리 중립 / confidence HIGH
-  - 주요 근거: US 10Y yield 20일 +1.54%, 5일 +1.15%; US 3M yield 20일 +0.86%, 단기금리 방향 확인; US long-duration bonds 20일 +0.40%, 장기채 가격 기준 할인율 부담 확인
+- 한 줄 결론: 장기 추세는 유지되지만 단기 추세가 둔화되어 기간 조정으로 본다. 기술 80점, 매크로 45점.
+- 기술적 지표: 상승 추세 우위 (80점, 가중치 65%)
+- S&P 500: 96점 | 50일선 위, 200일선 위, 20일 -1.36%, 60일 +3.00%, 52주 고점 대비 -2.37% -> 기술 점수 96
+- Nasdaq 100: 63점 | 50일선 아래, 200일선 위, 20일 -2.21%, 60일 0.00%, 52주 고점 대비 -5.48% -> 기술 점수 63
+- 매크로 시황: 매크로 중립 (45점, 가중치 35%)
+- 매크로 요약: 물가 부담으로 매크로 환경은 방어적이다.
+- 금리: 중립 45점 / 금리 중립 / confidence HIGH
+  - 주요 근거: US 10Y yield 20일 +3.65%, 5일 +3.38%; US 3M yield 20일 +1.13%, 단기금리 방향 확인; US long-duration bonds 20일 -1.15%, 장기채 가격 기준 할인율 부담 확인
   - 확인 사항: 추가 확인 이벤트 없음
-- 물가: 부담 44점 / 물가 부담 / confidence HIGH
-  - 주요 근거: Oil ETF 20일 +9.48%, 유가 기반 물가 압력 확인; TIPS ETF 20일 -0.04%, 물가연동채 흐름은 보조 근거; Gold 20일 +9.88%, 금 강세는 방어 수요 여부 확인
+- 물가: 부담 36점 / 물가 부담 / confidence HIGH
+  - 주요 근거: Oil ETF 20일 +21.78%, 유가 기반 물가 압력 확인; TIPS ETF 20일 -0.22%, 물가연동채 흐름은 보조 근거; Gold 20일 +6.04%, 금 강세는 방어 수요 여부 확인
   - 확인 사항: 금 강세가 인플레 헤지 또는 방어 수요일 수 있어 위험자산 해석을 제한한다.
 - 정책: 중립 50점 / 정책 이벤트 확인 전 중립 / confidence LOW
   - 주요 근거: 정책 톤은 1차 버전에서 일정/이벤트 리스크 기반 중립값으로 반영한다.
   - 확인 사항: FOMC, CPI, PCE, 고용지표 발표 전후에는 매크로 confidence를 보수적으로 해석한다.
-- 신용/유동성: 중립-우호 55점 / 신용/유동성 중립 / confidence HIGH
-  - 주요 근거: High yield credit 20일 +0.63%, 하이일드 위험선호 확인; HYG-LQD 20일 상대강도 +0.54%, 신용위험 선호/회피 확인; VIX 20일 -5.93%, 변동성 부담 확인
+- 신용/유동성: 중립 49점 / 신용/유동성 중립 / confidence HIGH
+  - 주요 근거: High yield credit 20일 -0.57%, 하이일드 위험선호 확인; HYG-LQD 20일 상대강도 +0.87%, 신용위험 선호/회피 확인; VIX 20일 -0.97%, 변동성 부담 확인
   - 확인 사항: 추가 확인 이벤트 없음
-- 환율/글로벌: 중립 50점 / 환율/글로벌 중립 / confidence MEDIUM
-  - 주요 근거: US dollar 20일 -0.18%, 달러 강세/약세 확인
+- 환율/글로벌: 중립 49점 / 환율/글로벌 중립 / confidence MEDIUM
+  - 주요 근거: US dollar 20일 +0.18%, 달러 강세/약세 확인
   - 확인 사항: 추가 확인 이벤트 없음
-- US 10Y yield: 47점 | 하락 시 주식 우호; 5일 +1.15%, 20일 +1.54% -> 매크로 점수 47
-- US 3M yield: 48점 | 하락 시 주식 우호; 5일 +0.78%, 20일 +0.86% -> 매크로 점수 48
-- US long-duration bonds: 51점 | 상승 시 주식 우호; 5일 -0.05%, 20일 +0.40% -> 매크로 점수 51
-- TIPS ETF: 50점 | 상승 시 주식 우호; 5일 -0.40%, 20일 -0.04% -> 매크로 점수 50
-- Oil ETF: 34점 | 하락 시 주식 우호; 5일 +1.13%, 20일 +9.48% -> 매크로 점수 34
-- Gold: 50점 | 상승 시 주식 우호; 5일 -4.28%, 20일 +9.88% -> 매크로 점수 50
-- US dollar: 50점 | 하락 시 주식 우호; 5일 +0.57%, 20일 -0.18% -> 매크로 점수 50
-- High yield credit: 51점 | 상승 시 주식 우호; 5일 +0.14%, 20일 +0.63% -> 매크로 점수 51
-- Investment grade credit: 50점 | 상승 시 주식 우호; 5일 +0.03%, 20일 +0.09% -> 매크로 점수 50
-- VIX: 64점 | 하락 시 주식 우호; 5일 -5.87%, 20일 -5.93% -> 매크로 점수 64
+- US 10Y yield: 41점 | 하락 시 주식 우호; 5일 +3.38%, 20일 +3.65% -> 매크로 점수 41
+- US 3M yield: 47점 | 하락 시 주식 우호; 5일 +1.81%, 20일 +1.13% -> 매크로 점수 47
+- US long-duration bonds: 47점 | 상승 시 주식 우호; 5일 -1.92%, 20일 -1.15% -> 매크로 점수 47
+- TIPS ETF: 50점 | 상승 시 주식 우호; 5일 -0.77%, 20일 -0.22% -> 매크로 점수 50
+- Oil ETF: 6점 | 하락 시 주식 우호; 5일 +11.77%, 20일 +21.78% -> 매크로 점수 6
+- Gold: 50점 | 상승 시 주식 우호; 5일 -7.32%, 20일 +6.04% -> 매크로 점수 50
+- US dollar: 49점 | 하락 시 주식 우호; 5일 +0.97%, 20일 +0.18% -> 매크로 점수 49
+- High yield credit: 48점 | 상승 시 주식 우호; 5일 -1.03%, 20일 -0.57% -> 매크로 점수 48
+- Investment grade credit: 50점 | 상승 시 주식 우호; 5일 -1.53%, 20일 -1.44% -> 매크로 점수 50
+- VIX: 47점 | 하락 시 주식 우호; 5일 +5.76%, 20일 -0.97% -> 매크로 점수 47
 - 데이터 커버리지: 기술 2/2, 매크로 10/10
 - 데이터 신뢰도 근거:
   - 직접 지수 데이터: S&P 500, Nasdaq 100
@@ -59,37 +59,35 @@
 생성 성공 / 데이터 모드: REAL_TEST
 
 시장:
-- 중립
+- 위험회피
 
 시장 지배 서사:
-1. 사이버보안 지출 재가속 - 부상 - First Trust NASDAQ Cybersecurity ETF(CIBR), iShares Cybersecurity and Tech ETF(IHAK), CrowdStrike Holdings Inc.(CRWD), Palo Alto Networks Inc.(PANW) 중심으로 5일 +9.62%, 20일 +10.40% 흐름이 형성됨. 직접 촉매 일부 확인.
-2. AI 소프트웨어/사이버보안 확산 - 약화 - iShares Expanded Tech-Software Sector ETF(IGV), Global X Artificial Intelligence & Technology ETF(AIQ), Zscaler Inc.(ZS), Atlassian Corporation(TEAM) 중심으로 5일 +5.93%, 20일 +21.20% 흐름이 형성됨. 직접 촉매 일부 확인.
-3. Integrated Oil & Gas 자금 유입 - 관찰 - VanEck Oil Services ETF(OIH), Energy Select Sector SPDR Fund(XLE), Chevron(CVX), Exxon Mobil(XOM) 중심으로 5일 +0.94%, 20일 +4.92% 흐름이 형성됨. 직접 촉매 일부 확인.
+1. 매크로 방어/헤지 - 관찰 - Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH), Chevron(CVX), Exxon Mobil(XOM) 중심으로 5일 +1.39%, 20일 +7.03% 흐름이 형성됨. 직접 촉매 일부 확인.
+2. Integrated Oil & Gas 자금 유입 - 관찰 - Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH), Chevron(CVX), Exxon Mobil(XOM) 중심으로 5일 +1.96%, 20일 +4.30% 흐름이 형성됨. 직접 촉매 일부 확인.
+3. 바이오/헬스케어 촉매 - 약화 - Invesco QQQ Trust(QQQ), Amgen Inc.(AMGN), Vertex Pharmaceuticals Incorporated(VRTX) 중심으로 5일 -1.08%, 20일 +11.17% 흐름이 형성됨. 뉴스 직접성 제한.
 
 트렌드 강도:
-1. 사이버보안 지출 재가속 - TSI 82 - 확인 - 진입품질 보통
-2. AI 소프트웨어/사이버보안 확산 - TSI 59 - 약화 - 진입품질 관찰
-3. Integrated Oil & Gas 자금 유입 - TSI 50 - 부상 - 진입품질 낮음
+1. 매크로 방어/헤지 - TSI 40 - 잠복 - 진입품질 낮음
+2. Integrated Oil & Gas 자금 유입 - TSI 44 - 잠복 - 진입품질 낮음
+3. 바이오/헬스케어 촉매 - TSI 16 - 잠복 - 진입품질 낮음
 
 오늘 결론:
-- 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
+- 메가캡 플랫폼 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 행동 후보는 linkedNarrative와 함께 확인한다.
 - 추격보다 진입 조건 확인 후 접근한다.
 
 오늘 실제 행동 후보:
-1. CrowdStrike Holdings Inc.(CRWD)(STOCK) - 사이버보안 지출 재가속 - 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
-2. Zscaler Inc.(ZS)(STOCK) - 사이버보안 지출 재가속 - 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
-3. Palo Alto Networks Inc.(PANW)(STOCK) - 사이버보안 지출 재가속 - 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
+1. Chevron(CVX)(STOCK) - 매크로 방어/헤지 - 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 
 다크호스 후보:
-1. Fortinet Inc.(FTNT) - darkHorseScore 91 - 베이스 돌파 직전
+1. 다크호스 후보 없음 - 조건 충족 후보 없음
 
 ETF 후보 TOP 5:
-1. First Trust NASDAQ Cybersecurity ETF(CIBR) - 사이버보안 지출 재가속 - 조건부 진입
-2. iShares Cybersecurity and Tech ETF(IHAK) - 사이버보안 지출 재가속 - 제외
-3. VanEck Oil Services ETF(OIH) - Integrated Oil & Gas 자금 유입 - 관찰
-4. Energy Select Sector SPDR Fund(XLE) - Integrated Oil & Gas 자금 유입 - 관찰
-5. iShares Expanded Tech-Software Sector ETF(IGV) - AI 소프트웨어/사이버보안 확산 - 거래량 확인 전 관찰
+1. Energy Select Sector SPDR Fund(XLE) - 매크로 방어/헤지 - 관찰
+2. VanEck Oil Services ETF(OIH) - 매크로 방어/헤지 - 제외
+3. iShares Expanded Tech-Software Sector ETF(IGV) - AI 소프트웨어/사이버보안 확산 - 제외
+4. Roundhill Magnificent Seven ETF(MAGS) - 소프트웨어 실적/AI 수익화 - 제외
+5. First Trust NASDAQ Cybersecurity ETF(CIBR) - 사이버보안 지출 재가속 - 제외
 
 웹 리포트:
 https://yoolcool.github.io/DailyTradingThesisAgent/
@@ -98,19 +96,19 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 - 오늘 결론: 조건부 진입
 - 신규 진입 후보: 0개
-- 조건부 진입 후보: 6개
-- 관찰 후보: 89개
+- 조건부 진입 후보: 1개
+- 관찰 후보: 101개
 - 주요 제한 요인: Entry Quality < 40, 뉴스 직접성 부족, RVOL 미달
 - 주문 판단: 시장가 금지 / 지정가 또는 관찰
 - 실전 판단: 진입 후보는 있으나, 전일 고점 돌파와 거래량 확인 후 선별적으로 접근한다.
 
 ### 후보 제한 요인 집계
 
-- RVOL < 1.00x: 82개
-- 거래대금 유동성 낮음: 17개
-- Entry Quality 50~54 near miss: 1개
-- Entry Quality 40~49 관찰: 10개
-- Entry Quality < 40: 143개
+- RVOL < 1.00x: 98개
+- 거래대금 유동성 낮음: 13개
+- Entry Quality 50~54 near miss: 0개
+- Entry Quality 40~49 관찰: 4개
+- Entry Quality < 40: 153개
 - Exhaustion Risk >= 70: 0개
 - ETF breadth 샘플 부족: 37개
 - 뉴스 직접성 부족: 100개
@@ -121,17 +119,17 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 분석 신뢰도: LOW
 - 주문 실행 신뢰도: LOW
 - ETF breadth 신뢰도: LOW
-- 신뢰도 해석: 테마 확산 판단 제한, 거래대금 유동성 낮음 또는 확인 불가, 프리/애프터마켓 확인 불가
-- 리포트 생성 시각: 2026-09-01 10:42 KST
-- 가격 기준 거래일: 2026-08-31 US regular close
-- 뉴스 수집 시각: 2026-09-01 10:42 KST
-- 가장 최근 뉴스 발행 시각: 2026-09-01 09:53 KST
+- 신뢰도 해석: 가격/거래량 stale fallback 1개 사용, 테마 확산 판단 제한, 거래대금 유동성 낮음 또는 확인 불가, 프리/애프터마켓 확인 불가
+- 리포트 생성 시각: 2026-09-02 09:51 KST
+- 가격 기준 거래일: 2026-09-01 US regular close
+- 뉴스 수집 시각: 2026-09-02 09:51 KST
+- 가장 최근 뉴스 발행 시각: 2026-09-02 09:44 KST
 - 뉴스 신선도 상태: FRESH
 - 뉴스 소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API
 - 뉴스 소스 상태: Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED
 - 뉴스 신뢰도: MEDIUM
-- 추천 적용 거래일: 2026-08-31 US regular session
-- 가격/거래량 데이터 상태: 연결됨
+- 추천 적용 거래일: 2026-09-01 US regular session
+- 가격/거래량 데이터 상태: 일부 연결
 - 뉴스 데이터 상태: 일부 연결
 - ETF 구성종목 확산도 상태: 일부 연결
 - ETF 구성종목 샘플 수: 1~4
@@ -143,14 +141,14 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 ## 0. 시장 상태
 
 - 데이터 모드: REAL_TEST
-- 가격/거래량: 연결됨
+- 가격/거래량: 일부 연결
 - 뉴스: 일부 연결
 - ETF 구성종목 확산도: 일부 연결
 - 거래대금 유동성: 일부 연결
-- 생성 시각: 2026년 9월 1일 화요일 AM 10:42
-- 시장 상태: 중립
-- 오늘 돈의 방향: 사이버보안 개별 종목 흐름이 ETF 대비 강한지 확인 필요
-- 강한 테마 TOP 3: 사이버보안(98), Financials(86), 전통 에너지 ETF(70)
+- 생성 시각: 2026년 9월 2일 수요일 AM 9:51
+- 시장 상태: 위험회피
+- 오늘 돈의 방향: 메가캡 플랫폼 개별 종목 흐름이 ETF 대비 강한지 확인 필요
+- 강한 테마 TOP 3: 전통 에너지 ETF(74), 클라우드/엔터프라이즈 소프트웨어 ETF(47), 사이버보안(45)
 - 데이터 한계:
   - API 또는 provider 상태에 따라 뉴스/ETF 확산도/거래대금 유동성 반영 범위가 달라질 수 있다.
   - 수집 실패 데이터는 점수 반영에서 제외하거나 confidence를 제한한다.
@@ -160,79 +158,46 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 ### 오늘 시장을 지배하는 서사 TOP 3
 
-#### 1. 사이버보안 지출 재가속
-- 상태: 부상
-- narrativeScore: 87
-- reasonConfidence: MEDIUM
-- 근거 ETF: CIBR, IHAK, HACK
-- 근거 개별 종목: CRWD, PANW, FTNT, ZS
-- 돈이 몰리는 이유: 사이버보안 지출 재가속 관련 First Trust NASDAQ Cybersecurity ETF(CIBR), iShares Cybersecurity and Tech ETF(IHAK), Amplify Cybersecurity ETF(HACK)와 CrowdStrike Holdings Inc.(CRWD), Palo Alto Networks Inc.(PANW), Fortinet Inc.(FTNT), Zscaler Inc.(ZS)의 5일(+9.62%)·20일(+10.40%) 흐름을 함께 본다. 평균 상대 거래량은 1.34배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.
-- 다음 매수 주체: 사이버보안 지출 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금
-- 가장 좋은 트레이딩 수단: ETF 우선: HACK, CIBR, IHAK / 개별 종목 우선: ZS, CRWD, PANW
-- 서사가 깨지는 조건: HACK 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈
-- 오늘 행동: 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입
-
-<details>
-<summary>상세 narrativeScore 근거 보기</summary>
-
-- rawScore: 87
-- ETF 평균 moneyFlowScore: 59
-- 개별 종목 평균 moneyFlowScore: 98
-- ETF 후보 비율: 50%
-- 개별 종목 후보 비율: 100%
-- 5일 평균 수익률: +10.00%
-- 20일 평균 수익률: +10.00%
-- 평균 상대 거래량: 1.00배
-- ETF 평균 상대 거래량: 1.00배
-- 개별주 평균 상대 거래량: 2.00배
-- 52주 고점 근접 후보 비율: 75%
-- 뉴스 직접성 점수: 11
-- ETF 확산도 점수: 0
-- 유동성 점수: 1
-- 과열 리스크 차감: 0
-
-</details>
-
-#### 2. AI 소프트웨어/사이버보안 확산
-- 상태: 약화
-- narrativeScore: 56
+#### 1. 매크로 방어/헤지
+- 상태: 관찰
+- narrativeScore: 54
 - reasonConfidence: LOW
-- 근거 ETF: IGV, AIQ, QQQ
-- 근거 개별 종목: ZS, TEAM, PLTR, MSFT, DDOG
-- 돈이 몰리는 이유: AI 소프트웨어/사이버보안 확산 관련 iShares Expanded Tech-Software Sector ETF(IGV), Global X Artificial Intelligence & Technology ETF(AIQ), Invesco QQQ Trust(QQQ)와 Zscaler Inc.(ZS), Atlassian Corporation(TEAM), Palantir Technologies Inc.(PLTR), Microsoft Corporation(MSFT)의 5일(+5.93%)·20일(+21.20%) 흐름을 함께 본다. 평균 상대 거래량은 0.85배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.
-- 다음 매수 주체: AI 소프트웨어 실적 기대를 사는 ETF 자금, 엔터프라이즈 소프트웨어 스윙 트레이더, 신고가 추종 자금
-- 가장 좋은 트레이딩 수단: ETF 우선: IGV, AIQ, QQQ / 개별 종목 우선: PLTR, DDOG, TEAM
-- 서사가 깨지는 조건: IGV/AIQ 20일선 이탈, 관련 소프트웨어 종목 절반 이상 5일선 이탈, 상대 거래량 둔화
-- 오늘 행동: 추격보다 눌림 후 재상승 확인
+- 근거 ETF: XLE, OIH, GLD, TLT
+- 근거 개별 종목: CVX, XOM
+- 돈이 몰리는 이유: 매크로 방어/헤지 관련 Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH), SPDR Gold Shares(GLD)와 Chevron(CVX), Exxon Mobil(XOM)의 5일(+1.39%)·20일(+7.03%) 흐름을 함께 본다. 평균 상대 거래량은 1.06배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.
+- 다음 매수 주체: 금리/에너지/방어 헤지를 찾는 매크로 자금
+- 가장 좋은 트레이딩 수단: ETF 우선: GLD, TLT, XLE / 개별 종목 우선: XOM, CVX
+- 서사가 깨지는 조건: 방어 ETF 상대강도 둔화와 위험선호 성장주 재강세
+- 오늘 행동: 위험회피가 확인될 때만 헤지성 접근
 
 <details>
 <summary>상세 narrativeScore 근거 보기</summary>
 
-- rawScore: 56
-- ETF 평균 moneyFlowScore: 33
-- 개별 종목 평균 moneyFlowScore: 61
-- ETF 후보 비율: 0%
-- 개별 종목 후보 비율: 40%
-- 5일 평균 수익률: +6.00%
-- 20일 평균 수익률: +21.00%
+- rawScore: 54
+- ETF 평균 moneyFlowScore: 37
+- 개별 종목 평균 moneyFlowScore: 68
+- ETF 후보 비율: 50%
+- 개별 종목 후보 비율: 50%
+- 5일 평균 수익률: +1.00%
+- 20일 평균 수익률: +7.00%
 - 평균 상대 거래량: 1.00배
 - ETF 평균 상대 거래량: 1.00배
 - 개별주 평균 상대 거래량: 1.00배
-- 52주 고점 근접 후보 비율: 25%
-- 뉴스 직접성 점수: 10
+- 52주 고점 근접 후보 비율: 33%
+- 뉴스 직접성 점수: 7
 - ETF 확산도 점수: 0
-- 유동성 점수: 2
+- 유동성 점수: 5
 - 과열 리스크 차감: 0
 
 </details>
 
-#### 3. Integrated Oil & Gas 자금 유입
+#### 2. Integrated Oil & Gas 자금 유입
 - 상태: 관찰
 - narrativeScore: 53
 - reasonConfidence: LOW
-- 근거 ETF: OIH, XLE, SPY, QQQ, IWM
+- 근거 ETF: XLE, OIH, SPY, IWM, QQQ
 - 근거 개별 종목: CVX, XOM
-- 돈이 몰리는 이유: Integrated Oil & Gas 자금 유입 관련 VanEck Oil Services ETF(OIH), Energy Select Sector SPDR Fund(XLE), SPDR S&P 500 ETF Trust(SPY)와 Chevron(CVX), Exxon Mobil(XOM)의 5일(+0.94%)·20일(+4.92%) 흐름을 함께 본다. 평균 상대 거래량은 1.20배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.
+- 돈이 몰리는 이유: Integrated Oil & Gas 자금 유입 관련 Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH), SPDR S&P 500 ETF Trust(SPY)와 Chevron(CVX), Exxon Mobil(XOM)의 5일(+1.96%)·20일(+4.30%) 흐름을 함께 본다. 평균 상대 거래량은 1.16배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.
 - 다음 매수 주체: Integrated Oil & Gas 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금
 - 가장 좋은 트레이딩 수단: ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: CVX, XOM
 - 서사가 깨지는 조건: QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈
@@ -242,19 +207,52 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 <summary>상세 narrativeScore 근거 보기</summary>
 
 - rawScore: 53
-- ETF 평균 moneyFlowScore: 42
-- 개별 종목 평균 moneyFlowScore: 60
+- ETF 평균 moneyFlowScore: 36
+- 개별 종목 평균 moneyFlowScore: 68
 - ETF 후보 비율: 40%
 - 개별 종목 후보 비율: 50%
-- 5일 평균 수익률: +1.00%
-- 20일 평균 수익률: +5.00%
+- 5일 평균 수익률: +2.00%
+- 20일 평균 수익률: +4.00%
 - 평균 상대 거래량: 1.00배
 - ETF 평균 상대 거래량: 1.00배
 - 개별주 평균 상대 거래량: 1.00배
-- 52주 고점 근접 후보 비율: 71%
-- 뉴스 직접성 점수: 7
-- ETF 확산도 점수: -2
-- 유동성 점수: 4
+- 52주 고점 근접 후보 비율: 57%
+- 뉴스 직접성 점수: 6
+- ETF 확산도 점수: 0
+- 유동성 점수: 5
+- 과열 리스크 차감: 0
+
+</details>
+
+#### 3. 바이오/헬스케어 촉매
+- 상태: 약화
+- narrativeScore: 29
+- reasonConfidence: LOW
+- 근거 ETF: QQQ
+- 근거 개별 종목: AMGN, VRTX, REGN, INSM
+- 돈이 몰리는 이유: 바이오/헬스케어 촉매 관련 Invesco QQQ Trust(QQQ)와 Amgen Inc.(AMGN), Vertex Pharmaceuticals Incorporated(VRTX), Regeneron Pharmaceuticals Inc.(REGN), Insmed Incorporated(INSM)의 5일(-1.08%)·20일(+11.17%) 흐름을 함께 본다. 평균 상대 거래량은 0.84배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.
+- 다음 매수 주체: 바이오/헬스케어 촉매을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금
+- 가장 좋은 트레이딩 수단: ETF 우선: QQQ / 개별 종목 우선: REGN, AMGN, VRTX
+- 서사가 깨지는 조건: QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈
+- 오늘 행동: 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입
+
+<details>
+<summary>상세 narrativeScore 근거 보기</summary>
+
+- rawScore: 29
+- ETF 평균 moneyFlowScore: 7
+- 개별 종목 평균 moneyFlowScore: 37
+- ETF 후보 비율: 0%
+- 개별 종목 후보 비율: 0%
+- 5일 평균 수익률: -1.00%
+- 20일 평균 수익률: +11.00%
+- 평균 상대 거래량: 1.00배
+- ETF 평균 상대 거래량: 1.00배
+- 개별주 평균 상대 거래량: 1.00배
+- 52주 고점 근접 후보 비율: 60%
+- 뉴스 직접성 점수: 8
+- ETF 확산도 점수: 0
+- 유동성 점수: 3
 - 과열 리스크 차감: 0
 
 </details>
@@ -263,99 +261,99 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 서사명 | 상태 | narrativeScore | reasonConfidence | 대표 ETF | 대표 종목 | 오늘 행동 |
 | --- | --- | ---: | --- | --- | --- | --- |
-| 사이버보안 지출 재가속 | 부상 | 87 | MEDIUM | CIBR, IHAK, HACK | CRWD, PANW, FTNT, ZS | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| AI 소프트웨어/사이버보안 확산 | 약화 | 56 | LOW | IGV, AIQ, QQQ | ZS, TEAM, PLTR, MSFT | 추격보다 눌림 후 재상승 확인 |
-| Integrated Oil & Gas 자금 유입 | 관찰 | 53 | LOW | OIH, XLE, SPY | CVX, XOM | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| 소프트웨어 실적/AI 수익화 | 약화 | 50 | LOW | IGV, AIQ, QQQ | ADBE, MSTR, MSFT, SHOP | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| 매크로 방어/헤지 | 관찰 | 50 | LOW | OIH, XLE, TLT | CVX, XOM | 위험회피가 확인될 때만 헤지성 접근 |
-| 위험선호 성장주 재진입 | 약화 | 44 | LOW | ARKK, QQQ, IPO | TSLA, COIN, ARM | 지수 위험선호가 유지될 때만 선별 진입 |
-| 바이오/헬스케어 촉매 | 약화 | 31 | LOW | QQQ | VRTX, AMGN, REGN, INSM | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| Travel Services 자금 유입 | 약화 | 25 | LOW | QQQ | ABNB, BKNG | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| 비트코인/디지털 자산 위험선호 | 약화 | 18 | LOW | IBIT, BLOK | COIN, MSTR, IREN | 비트코인 베타가 살아날 때만 단기 매매 |
-| Internet Content 자금 유입 | 약화 | 18 | LOW | QQQ | DASH, META | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| Specialty Business Services 자금 유입 | 약화 | 17 | LOW | SPY, QQQ, IWM | CPRT, TRI, CTAS | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| Data Storage 자금 유입 | 약화 | 15 | LOW | SPY, QQQ, IWM | STX, WDC | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| 필수소비재 음료 방어 성장 | 약화 | 15 | LOW | QQQ | CCEP, MNST | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| 전력 유틸리티 수요 재평가 | 약화 | 13 | LOW | SPY, QQQ, IWM | ETN, GEV, VRT | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| 소비 회복/방어주 선별 | 소멸 | 13 | LOW | QQQ | PDD, AMZN | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| AI 인프라 재가속 | 약화 | 8 | LOW | DRAM, SMH, SOXX | MU, NVDA, VRT, ETN | 추격보다 5일선 지지 후 재상승 확인 |
-| Aerospace & Defense 자금 유입 | 약화 | 7 | LOW | SPY, QQQ, IWM | KTOS, AVAV, AXON | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| 반도체 장비 사이클 재평가 | 약화 | 6 | LOW | SMH, SOXX, SOXQ | AMAT, LRCX, ASML | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| 반도체 설계/공급망 재가속 | 약화 | 4 | LOW | SMH, SOXX, SOXQ | ARM, AMD, TXN, ADI | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| 방산/안보 프리미엄 | 약화 | 4 | LOW | XAR, SHLD, ITA | PLTR, AVAV, KTOS | 뉴스 촉매가 직접 확인될 때만 추세 추종 |
-| 전력망/원전/인프라 병목 | 약화 | 3 | LOW | URA, GRID, PAVE | CEG, VRT, ETN, PWR | ETF 확산도와 거래량이 같이 살아날 때만 진입 |
+| 매크로 방어/헤지 | 관찰 | 54 | LOW | XLE, OIH, GLD | CVX, XOM | 위험회피가 확인될 때만 헤지성 접근 |
+| Integrated Oil & Gas 자금 유입 | 관찰 | 53 | LOW | XLE, OIH, SPY | CVX, XOM | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| 바이오/헬스케어 촉매 | 약화 | 29 | LOW | QQQ | AMGN, VRTX, REGN, INSM | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| 사이버보안 지출 재가속 | 약화 | 28 | LOW | CIBR, HACK, IHAK | CRWD, ZS, FTNT, PANW | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| AI 소프트웨어/사이버보안 확산 | 약화 | 20 | LOW | IGV, QQQ, AIQ | TEAM, PLTR, MSFT, DDOG | 추격보다 눌림 후 재상승 확인 |
+| 소프트웨어 실적/AI 수익화 | 약화 | 18 | LOW | IGV, QQQ, AIQ | ADBE, MSTR, MSFT, SHOP | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| 위험선호 성장주 재진입 | 약화 | 10 | LOW | ARKK, QQQ, IPO | TSLA, COIN, ARM | 지수 위험선호가 유지될 때만 선별 진입 |
+| Specialty Business Services 자금 유입 | 약화 | 8 | LOW | SPY, IWM, QQQ | CPRT, TRI, CTAS | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| Travel Services 자금 유입 | 약화 | 8 | LOW | QQQ | ABNB, BKNG | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| Internet Content 자금 유입 | 약화 | 7 | LOW | QQQ | META, DASH | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| Data Storage 자금 유입 | 소멸 | 5 | LOW | SPY, IWM, QQQ | STX, WDC | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| 전력 유틸리티 수요 재평가 | 소멸 | 4 | LOW | SPY, IWM, QQQ | ETN, GEV, VRT | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| Aerospace & Defense 자금 유입 | 소멸 | 1 | LOW | SPY, IWM, QQQ | KTOS, AVAV | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| 전력망/원전/인프라 병목 | 약화 | 0 | LOW | GRID, PAVE, URA | CEG, VRT, ETN, PWR | ETF 확산도와 거래량이 같이 살아날 때만 진입 |
+| 소비 회복/방어주 선별 | 소멸 | 0 | LOW | QQQ | PDD, AMZN | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| AI 인프라 재가속 | 소멸 | 0 | LOW | SMH, SOXX, DRAM | NVDA, MU, VRT, ETN | 추격보다 5일선 지지 후 재상승 확인 |
+| 방산/안보 프리미엄 | 소멸 | 0 | LOW | XAR, SHLD, ITA | PLTR, AVAV, KTOS | 뉴스 촉매가 직접 확인될 때만 추세 추종 |
+| 반도체 장비 사이클 재평가 | 소멸 | 0 | LOW | SMH, SOXX, SOXQ | AMAT, LRCX, ASML | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| 비트코인/디지털 자산 위험선호 | 약화 | 0 | LOW | IBIT, BLOK | MSTR, COIN, IREN | 비트코인 베타가 살아날 때만 단기 매매 |
+| 반도체 설계/공급망 재가속 | 소멸 | 0 | LOW | SMH, SOXX, SOXQ | ARM, AMD, TXN, ADI | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| 필수소비재 음료 방어 성장 | 소멸 | 0 | LOW | QQQ | CCEP, MNST | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
 
 ## 트렌드 강도 판단
 
-### 1. 사이버보안 지출 재가속
-- Trend Strength Index: 82
-- 트렌드 상태 라벨: 확인
-- 테마 확산도: 강함
-- ETF 동조성: 강함
-- 거래량 강도: 보통
-- 과열 위험: 낮음 (20)
-- 오늘 진입 품질: 보통 (64)
-- 한 줄 판단: 사이버보안 지출 재가속는 가격, 거래량, ETF, 확산도가 함께 확인되어 테마 단위 자금 유입이 선명하다.
-- 오늘 접근법: First Trust NASDAQ Cybersecurity ETF(CIBR)/iShares Cybersecurity and Tech ETF(IHAK)/Amplify Cybersecurity ETF(HACK) 동반 강세가 유지되는 동안 돌파 추격보다 전일 고점 재돌파 또는 5일선 눌림 회복을 기다린다.
+### 1. 매크로 방어/헤지
+- Trend Strength Index: 40
+- 트렌드 상태 라벨: 잠복
+- 테마 확산도: 약함
+- ETF 동조성: 보통
+- 거래량 강도: 약함
+- 과열 위험: 낮음 (16)
+- 오늘 진입 품질: 낮음 (28)
+- 한 줄 판단: 매크로 방어/헤지는 Trend Strength는 높아도 시장 위험선호가 약해 시장 환경 비우호 구간이다.
+- 오늘 접근법: Energy Select Sector SPDR Fund(XLE)/VanEck Oil Services ETF(OIH)/SPDR Gold Shares(GLD)와 Chevron(CVX)/Exxon Mobil(XOM)의 거래량 확산이 확인되기 전까지 관찰한다.
 
 <details>
 <summary>트렌드 강도 상세 근거 보기</summary>
 
-- 가격 모멘텀: 가격 모멘텀 25/25. 평균 5D +9.62%, 20D +10.40%.
-- 거래량 강도: 거래량 강도 11/20. 평균 RVOL 1.34배.
-- ETF 동조성: ETF 동조성 16/15. 관련 ETF Amplify Cybersecurity ETF(HACK), First Trust NASDAQ Cybersecurity ETF(CIBR), iShares Cybersecurity and Tech ETF(IHAK), iShares Expanded Tech-Software Sector ETF(IGV) 흐름을 기준으로 판단.
-- 테마 확산도: 테마 확산도 15/20. 상위 1~2개 쏠림 감점 0점 반영.
-- 뉴스 촉매: 뉴스/촉매 신선도 10/10. HIGH 직접 촉매 4개.
-- 과열 리스크: 과열 리스크 20/100. 단기 급등, 고점 근접, ETF-개별주 괴리, 쏠림을 함께 반영.
-- 시장 환경: 시장 환경 5/10. QQQ/SPY/IWM 가격 흐름 기반 위험선호 점수.
+- 가격 모멘텀: 가격 모멘텀 8/25. 평균 5D +1.39%, 20D +7.03%.
+- 거래량 강도: 거래량 강도 8/20. 평균 RVOL 1.06배.
+- ETF 동조성: ETF 동조성 11/15. 관련 ETF SPDR Gold Shares(GLD), iShares 20+ Year Treasury Bond ETF(TLT), Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH) 흐름을 기준으로 판단.
+- 테마 확산도: 테마 확산도 8/20. 상위 1~2개 쏠림 감점 3점 반영.
+- 뉴스 촉매: 뉴스/촉매 신선도 2/10. HIGH 직접 촉매 1개.
+- 과열 리스크: 과열 리스크 16/100. 단기 급등, 고점 근접, ETF-개별주 괴리, 쏠림을 함께 반영.
+- 시장 환경: 시장 환경 3/10. QQQ/SPY/IWM 가격 흐름 기반 위험선호 점수.
 
 </details>
 
-### 2. AI 소프트웨어/사이버보안 확산
-- Trend Strength Index: 59
-- 트렌드 상태 라벨: 약화
+### 2. Integrated Oil & Gas 자금 유입
+- Trend Strength Index: 44
+- 트렌드 상태 라벨: 잠복
 - 테마 확산도: 보통
-- ETF 동조성: 강함
+- ETF 동조성: 보통
+- 거래량 강도: 약함
+- 과열 위험: 낮음 (6)
+- 오늘 진입 품질: 낮음 (33)
+- 한 줄 판단: Integrated Oil & Gas 자금 유입는 Trend Strength는 높아도 시장 위험선호가 약해 시장 환경 비우호 구간이다.
+- 오늘 접근법: Energy Select Sector SPDR Fund(XLE)/VanEck Oil Services ETF(OIH)/SPDR S&P 500 ETF Trust(SPY)와 Chevron(CVX)/Exxon Mobil(XOM)의 거래량 확산이 확인되기 전까지 관찰한다.
+
+<details>
+<summary>트렌드 강도 상세 근거 보기</summary>
+
+- 가격 모멘텀: 가격 모멘텀 10/25. 평균 5D +1.96%, 20D +4.30%.
+- 거래량 강도: 거래량 강도 9/20. 평균 RVOL 1.16배.
+- ETF 동조성: ETF 동조성 10/15. 관련 ETF Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM), Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH) 흐름을 기준으로 판단.
+- 테마 확산도: 테마 확산도 10/20. 상위 1~2개 쏠림 감점 0점 반영.
+- 뉴스 촉매: 뉴스/촉매 신선도 2/10. HIGH 직접 촉매 1개.
+- 과열 리스크: 과열 리스크 6/100. 단기 급등, 고점 근접, ETF-개별주 괴리, 쏠림을 함께 반영.
+- 시장 환경: 시장 환경 3/10. QQQ/SPY/IWM 가격 흐름 기반 위험선호 점수.
+
+</details>
+
+### 3. 바이오/헬스케어 촉매
+- Trend Strength Index: 16
+- 트렌드 상태 라벨: 잠복
+- 테마 확산도: 부족
+- ETF 동조성: 부족
 - 거래량 강도: 부족
-- 과열 위험: 낮음 (19)
-- 오늘 진입 품질: 관찰 (41)
-- 한 줄 판단: AI 소프트웨어/사이버보안 확산는 Trend Strength는 중간이지만 진입 품질이 살아나는 초기 진입 후보 성격이다.
-- 오늘 접근법: 상승률이 남아 있어도 iShares Expanded Tech-Software Sector ETF(IGV)/Global X Artificial Intelligence & Technology ETF(AIQ)/Invesco QQQ Trust(QQQ)와 구성 종목 확산도가 회복될 때까지 신규 진입은 낮춘다.
+- 과열 위험: 낮음 (18)
+- 오늘 진입 품질: 낮음 (9)
+- 한 줄 판단: 바이오/헬스케어 촉매는 Trend Strength는 높아도 시장 위험선호가 약해 시장 환경 비우호 구간이다.
+- 오늘 접근법: Invesco QQQ Trust(QQQ)와 Amgen Inc.(AMGN)/Vertex Pharmaceuticals Incorporated(VRTX)/Regeneron Pharmaceuticals Inc.(REGN)의 거래량 확산이 확인되기 전까지 관찰한다.
 
 <details>
 <summary>트렌드 강도 상세 근거 보기</summary>
 
-- 가격 모멘텀: 가격 모멘텀 20/25. 평균 5D +5.93%, 20D +21.20%.
-- 거래량 강도: 거래량 강도 3/20. 평균 RVOL 0.85배.
-- ETF 동조성: ETF 동조성 15/15. 관련 ETF iShares Expanded Tech-Software Sector ETF(IGV), Global X Artificial Intelligence & Technology ETF(AIQ), Invesco QQQ Trust(QQQ) 흐름을 기준으로 판단.
-- 테마 확산도: 테마 확산도 11/20. 상위 1~2개 쏠림 감점 0점 반영.
-- 뉴스 촉매: 뉴스/촉매 신선도 5/10. HIGH 직접 촉매 2개.
-- 과열 리스크: 과열 리스크 19/100. 단기 급등, 고점 근접, ETF-개별주 괴리, 쏠림을 함께 반영.
-- 시장 환경: 시장 환경 5/10. QQQ/SPY/IWM 가격 흐름 기반 위험선호 점수.
-
-</details>
-
-### 3. Integrated Oil & Gas 자금 유입
-- Trend Strength Index: 50
-- 트렌드 상태 라벨: 부상
-- 테마 확산도: 보통
-- ETF 동조성: 강함
-- 거래량 강도: 보통
-- 과열 위험: 낮음 (7)
-- 오늘 진입 품질: 낮음 (39)
-- 한 줄 판단: Integrated Oil & Gas 자금 유입는 관찰 가능한 흐름은 있으나 가격, 거래량, 확산도 중 일부 확인이 더 필요하다.
-- 오늘 접근법: VanEck Oil Services ETF(OIH)/Energy Select Sector SPDR Fund(XLE)/SPDR S&P 500 ETF Trust(SPY) 거래량 증가와 Chevron(CVX)/Exxon Mobil(XOM) 확산을 확인하며 작은 사이즈의 초기 진입 후보로만 본다.
-
-<details>
-<summary>트렌드 강도 상세 근거 보기</summary>
-
-- 가격 모멘텀: 가격 모멘텀 8/25. 평균 5D +0.94%, 20D +4.92%.
-- 거래량 강도: 거래량 강도 11/20. 평균 RVOL 1.20배.
-- ETF 동조성: ETF 동조성 12/15. 관련 ETF Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM), Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH) 흐름을 기준으로 판단.
-- 테마 확산도: 테마 확산도 11/20. 상위 1~2개 쏠림 감점 0점 반영.
-- 뉴스 촉매: 뉴스/촉매 신선도 3/10. HIGH 직접 촉매 1개.
-- 과열 리스크: 과열 리스크 7/100. 단기 급등, 고점 근접, ETF-개별주 괴리, 쏠림을 함께 반영.
-- 시장 환경: 시장 환경 5/10. QQQ/SPY/IWM 가격 흐름 기반 위험선호 점수.
+- 가격 모멘텀: 가격 모멘텀 5/25. 평균 5D -1.08%, 20D +11.17%.
+- 거래량 강도: 거래량 강도 2/20. 평균 RVOL 0.84배.
+- ETF 동조성: ETF 동조성 4/15. 관련 ETF Invesco QQQ Trust(QQQ) 흐름을 기준으로 판단.
+- 테마 확산도: 테마 확산도 2/20. 상위 1~2개 쏠림 감점 3점 반영.
+- 뉴스 촉매: 뉴스/촉매 신선도 0/10. HIGH 직접 촉매 0개.
+- 과열 리스크: 과열 리스크 18/100. 단기 급등, 고점 근접, ETF-개별주 괴리, 쏠림을 함께 반영.
+- 시장 환경: 시장 환경 3/10. QQQ/SPY/IWM 가격 흐름 기반 위험선호 점수.
 
 </details>
 
@@ -364,42 +362,43 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 개별주는 데이트레이딩 관점으로 추천 이후 첫 정규장의 장중 최고가와 종가를 추적한다. ETF는 테마/스윙 관점으로 추천 이후 1주일 동안의 최고가와 현재 종가를 추적한다.
 
 ### 개별주 Top 3 추천 성과 요약
-- 최근 5개 리포트 표본: 15개 (초기 검증 단계)
+- 최근 5개 리포트 표본: 13개 (초기 검증 단계)
 - 장중 최고가 기준 성공률: +33.33%
 - 종가 기준 성공률: +33.33%
-- 평균 장중 최고 수익률: +3.26%
-- 평균 종가 수익률: +1.55%
+- 평균 장중 최고 수익률: +2.72%
+- 평균 종가 수익률: +0.08%
 
 ### ETF 추천 성과 요약
 - 최근 5개 리포트 표본: 6개 (초기 검증 단계)
-- 1주 최고가 기준 성공률: +25.00%
+- 1주 최고가 기준 성공률: +20.00%
 - 현재 종가 기준 성공률: +16.67%
-- 평균 1주 최고 수익률: +2.55%
-- 평균 현재 수익률: +1.09%
+- 평균 1주 최고 수익률: +1.90%
+- 평균 현재 수익률: -2.07%
 
 <details>
 <summary>최근 추천 결과 상세 테이블 펼치기</summary>
 
 | 추천일 | 유형 | 순위 | 티커 | 기준가 | 추적 기간 | 상태 | High 수익률 | Close 수익률 | 결과 | 코멘트 |
 | --- | --- | ---: | --- | ---: | --- | --- | ---: | ---: | --- | --- |
-| 2026-09-01 | STOCK | 3 | PANW | $382.13 | 2026-09-01 | pending | 데이터 없음 | 데이터 없음 | 추적 대기 | 아직 추적 거래일 데이터가 완성되지 않음 |
-| 2026-09-01 | STOCK | 2 | ZS | $188.39 | 2026-09-01 | pending | 데이터 없음 | 데이터 없음 | 추적 대기 | 아직 추적 거래일 데이터가 완성되지 않음 |
-| 2026-09-01 | STOCK | 1 | CRWD | $231 | 2026-09-01 | pending | 데이터 없음 | 데이터 없음 | 추적 대기 | 아직 추적 거래일 데이터가 완성되지 않음 |
-| 2026-09-01 | ETF | 1 | CIBR | $100.15 | 2026-09-01~2026-09-08 | in_progress | 데이터 없음 | 0.00% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 (일봉 high 미확보 시 close 기준 보조) |
+| 2026-09-02 | STOCK | 1 | CVX | $211.05 | 2026-09-02 | pending | 데이터 없음 | 데이터 없음 | 추적 대기 | 아직 추적 거래일 데이터가 완성되지 않음 |
+| 2026-09-01 | STOCK | 3 | PANW | $382.13 | 2026-09-01 | complete | -1.63% | -5.24% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
+| 2026-09-01 | STOCK | 2 | ZS | $188.39 | 2026-09-01 | complete | -1.06% | -5.32% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
+| 2026-09-01 | STOCK | 1 | CRWD | $231 | 2026-09-01 | complete | +0.13% | -6.90% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
+| 2026-09-01 | ETF | 1 | CIBR | $100.15 | 2026-09-01~2026-09-08 | in_progress | 데이터 없음 | -3.94% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 (일봉 high 미확보 시 close 기준 보조) |
 | 2026-08-31 | STOCK | 3 | MSFT | $513.53 | 2026-08-31 | complete | -0.26% | -1.22% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
 | 2026-08-31 | STOCK | 2 | WDAY | $204.72 | 2026-08-31 | complete | -0.53% | -3.55% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
-| 2026-08-31 | STOCK | 1 | CRWD | $218.4 | 2026-08-31 | complete | +7.07% | +5.77% | 성공 | 장중 기회와 종가 유지가 모두 확인됨 (일봉 기준) |
-| 2026-08-31 | ETF | 1 | IGV | $109.5 | 2026-08-31~2026-09-07 | in_progress | 데이터 없음 | +0.44% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 (일봉 high 미확보 시 close 기준 보조) |
+| 2026-08-31 | STOCK | 1 | CRWD | $218.4 | 2026-08-31 | complete | +7.09% | +5.77% | 성공 | 장중 기회와 종가 유지가 모두 확인됨 (일봉 기준) |
+| 2026-08-31 | ETF | 1 | IGV | $109.5 | 2026-08-31~2026-09-07 | in_progress | -0.70% | -3.03% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
 | 2026-08-28 | STOCK | 3 | ZS | $187.3 | 2026-08-28 | complete | +0.47% | -1.64% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
 | 2026-08-28 | STOCK | 2 | ADSK | $270.58 | 2026-08-28 | complete | -1.32% | -3.67% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
 | 2026-08-28 | STOCK | 1 | ADBE | $289.15 | 2026-08-28 | complete | +1.71% | +0.82% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
-| 2026-08-28 | ETF | 3 | IBIT | $45.29 | 2026-08-28~2026-09-04 | in_progress | -0.86% | -1.37% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
-| 2026-08-28 | ETF | 2 | CIBR | $100.79 | 2026-08-28~2026-09-04 | in_progress | -0.35% | -0.63% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
-| 2026-08-28 | ETF | 1 | IGV | $110.32 | 2026-08-28~2026-09-04 | in_progress | +0.22% | -0.31% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
+| 2026-08-28 | ETF | 3 | IBIT | $45.29 | 2026-08-28~2026-09-04 | in_progress | -0.86% | -3.38% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
+| 2026-08-28 | ETF | 2 | CIBR | $100.79 | 2026-08-28~2026-09-04 | in_progress | -0.35% | -4.55% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
+| 2026-08-28 | ETF | 1 | IGV | $110.32 | 2026-08-28~2026-09-04 | in_progress | +0.23% | -3.75% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
 | 2026-08-21 | STOCK | 3 | FCX | $71.22 | 2026-08-21 | complete | +8.58% | +7.64% | 성공 | 장중 기회와 종가 유지가 모두 확인됨 (일봉 기준) |
 | 2026-08-21 | STOCK | 2 | COIN | $172.35 | 2026-08-21 | complete | +11.03% | +8.20% | 성공 | 장중 기회와 종가 유지가 모두 확인됨 (일봉 기준) |
 | 2026-08-21 | STOCK | 1 | MSTR | $112.39 | 2026-08-21 | complete | +8.47% | +6.10% | 성공 | 장중 기회와 종가 유지가 모두 확인됨 (일봉 기준) |
-| 2026-08-21 | ETF | 1 | IBIT | $41.2 | 2026-08-21~2026-08-28 | complete | +11.19% | +8.42% | 성공 | 추천 이후 테마 추세가 유지됨 |
+| 2026-08-21 | ETF | 1 | IBIT | $41.2 | 2026-08-21~2026-08-28 | complete | +11.19% | +6.21% | 성공 | 추천 이후 테마 추세가 유지됨 |
 | 2026-08-20 | STOCK | 3 | ADBE | $272.47 | 2026-08-20 | complete | +0.65% | -0.09% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
 | 2026-08-20 | STOCK | 2 | TEAM | $174.23 | 2026-08-20 | complete | +2.09% | +0.39% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
 | 2026-08-20 | STOCK | 1 | INTU | $362.47 | 2026-08-20 | complete | +1.15% | -0.17% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
@@ -411,8 +410,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 2026-08-14 | STOCK | 3 | ADSK | $257.96 | 2026-08-14 | complete | +1.08% | -2.44% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
 | 2026-08-14 | STOCK | 2 | TEAM | $165.98 | 2026-08-14 | complete | +1.07% | -2.27% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
 | 2026-08-14 | STOCK | 1 | INTU | $358.29 | 2026-08-14 | complete | +1.04% | -3.53% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
-| 2026-08-14 | ETF | 2 | IGV | $106.28 | 2026-08-14~2026-08-21 | complete | -2.05% | +3.48% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
-| 2026-08-14 | ETF | 1 | CIBR | $102.2 | 2026-08-14~2026-08-21 | complete | -2.50% | -2.01% | 실패 | 추천 이후 ETF 흐름이 약화됨 |
+| 2026-08-14 | ETF | 2 | IGV | $106.28 | 2026-08-14~2026-08-21 | complete | -2.05% | -0.09% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
+| 2026-08-14 | ETF | 1 | CIBR | $102.2 | 2026-08-14~2026-08-21 | complete | -2.50% | -5.87% | 실패 | 추천 이후 ETF 흐름이 약화됨 |
 | 2026-08-13 | STOCK | 1 | ABNB | $180.1 | 2026-08-13 | complete | +2.91% | +2.80% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
 | 2026-08-12 | STOCK | 3 | ABNB | $184.98 | 2026-08-12 | complete | -0.47% | -2.64% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
 | 2026-08-12 | STOCK | 2 | AXON | $636.31 | 2026-08-12 | complete | +1.00% | -5.74% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
@@ -420,646 +419,140 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 2026-08-11 | STOCK | 3 | ZS | $176.68 | 2026-08-11 | complete | +2.33% | +1.06% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
 | 2026-08-11 | STOCK | 2 | PLTR | $175.23 | 2026-08-11 | complete | +1.55% | -0.17% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
 | 2026-08-11 | STOCK | 1 | TEAM | $151.87 | 2026-08-11 | complete | +2.86% | +1.46% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
-| 2026-08-11 | ETF | 3 | GLD | $402.54 | 2026-08-11~2026-08-18 | complete | +1.20% | +1.46% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
-| 2026-08-11 | ETF | 2 | OIH | $411.34 | 2026-08-11~2026-08-18 | complete | +4.23% | +4.34% | 성공 | 추천 이후 테마 추세가 유지됨 |
-| 2026-08-11 | ETF | 1 | CIBR | $100.6 | 2026-08-11~2026-08-18 | complete | +1.74% | -0.45% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
+| 2026-08-11 | ETF | 3 | GLD | $402.54 | 2026-08-11~2026-08-18 | complete | +1.20% | -1.44% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
+| 2026-08-11 | ETF | 2 | OIH | $411.34 | 2026-08-11~2026-08-18 | complete | +4.23% | +3.78% | 성공 | 추천 이후 테마 추세가 유지됨 |
+| 2026-08-11 | ETF | 1 | CIBR | $100.6 | 2026-08-11~2026-08-18 | complete | +1.74% | -4.37% | 실패 | 추천 이후 ETF 흐름이 약화됨 |
 | 2026-08-10 | STOCK | 3 | SHOP | $151.57 | 2026-08-10 | complete | +2.67% | +2.38% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
 | 2026-08-10 | STOCK | 2 | FAST | $51.84 | 2026-08-10 | complete | +0.75% | +0.60% | 추적 대기 | 아직 추적 거래일 데이터가 완성되지 않음 (일봉 기준) |
 | 2026-08-10 | STOCK | 1 | BKNG | $214.42 | 2026-08-10 | complete | +0.48% | -0.72% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
-| 2026-08-10 | ETF | 2 | XME | $115.74 | 2026-08-10~2026-08-17 | complete | +3.45% | +2.06% | 성공 | 추천 이후 테마 추세가 유지됨 |
-| 2026-08-10 | ETF | 1 | COPX | $88.03 | 2026-08-10~2026-08-17 | complete | +2.52% | +5.49% | 성공 | 추천 이후 테마 추세가 유지됨 |
+| 2026-08-10 | ETF | 2 | XME | $115.74 | 2026-08-10~2026-08-17 | complete | +3.45% | +0.03% | 단기 고점 후 반납 | 1주 내 상승 기회는 있었지만 현재가는 반납 |
+| 2026-08-10 | ETF | 1 | COPX | $88.03 | 2026-08-10~2026-08-17 | complete | +2.52% | +1.37% | 성공 | 추천 이후 테마 추세가 유지됨 |
 | 2026-08-07 | STOCK | 3 | KTOS | $57.41 | 2026-08-07 | complete | +6.41% | +5.85% | 성공 | 장중 기회와 종가 유지가 모두 확인됨 (일봉 기준) |
 | 2026-08-07 | STOCK | 2 | BKNG | $207.39 | 2026-08-07 | complete | +4.00% | +3.39% | 성공 | 장중 기회와 종가 유지가 모두 확인됨 (일봉 기준) |
 | 2026-08-07 | STOCK | 1 | SHOP | $147.44 | 2026-08-07 | complete | +3.67% | +2.80% | 성공 | 장중 기회와 종가 유지가 모두 확인됨 (일봉 기준) |
 | 2026-08-06 | STOCK | 3 | KTOS | $55.34 | 2026-08-06 | complete | +6.79% | +3.74% | 성공 | 장중 기회와 종가 유지가 모두 확인됨 (일봉 기준) |
 | 2026-08-06 | STOCK | 2 | AMGN | $407.83 | 2026-08-06 | complete | +2.59% | -0.73% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
 | 2026-08-06 | STOCK | 1 | TEAM | $113.32 | 2026-08-06 | complete | -2.15% | -2.78% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
-| 2026-08-06 | ETF | 2 | XME | $111.92 | 2026-08-06~2026-08-13 | complete | +6.98% | +5.55% | 성공 | 추천 이후 테마 추세가 유지됨 |
-| 2026-08-06 | ETF | 1 | COPX | $86.72 | 2026-08-06~2026-08-13 | complete | +4.07% | +7.08% | 성공 | 추천 이후 테마 추세가 유지됨 |
+| 2026-08-06 | ETF | 2 | XME | $111.92 | 2026-08-06~2026-08-13 | complete | +6.98% | +3.44% | 성공 | 추천 이후 테마 추세가 유지됨 |
+| 2026-08-06 | ETF | 1 | COPX | $86.72 | 2026-08-06~2026-08-13 | complete | +4.07% | +2.91% | 성공 | 추천 이후 테마 추세가 유지됨 |
 | 2026-08-05 | STOCK | 3 | DXCM | $86.94 | 2026-08-05 | complete | -0.54% | -4.92% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
 | 2026-08-05 | STOCK | 2 | DDOG | $288.15 | 2026-08-05 | complete | +1.59% | -1.73% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
 | 2026-08-05 | STOCK | 1 | MSFT | $492.81 | 2026-08-05 | complete | +1.10% | -1.09% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
-| 2026-08-05 | ETF | 3 | MAGS | $68.96 | 2026-08-05~2026-08-12 | complete | +0.81% | -0.32% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
-| 2026-08-05 | ETF | 2 | COPX | $83.99 | 2026-08-05~2026-08-12 | complete | +7.45% | +10.56% | 성공 | 추천 이후 테마 추세가 유지됨 |
-| 2026-08-05 | ETF | 1 | CIBR | $97.94 | 2026-08-05~2026-08-12 | complete | +3.31% | +2.26% | 성공 | 추천 이후 테마 추세가 유지됨 |
+| 2026-08-05 | ETF | 3 | MAGS | $68.96 | 2026-08-05~2026-08-12 | complete | +0.81% | -1.06% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
+| 2026-08-05 | ETF | 2 | COPX | $83.99 | 2026-08-05~2026-08-12 | complete | +7.45% | +6.25% | 성공 | 추천 이후 테마 추세가 유지됨 |
 
 </details>
 
 ## 오늘 실제 행동 후보
 
-### 1. CrowdStrike Holdings Inc.(CRWD)
+### 1. Chevron(CVX)
 - 자산 유형: STOCK
-- linkedNarrative: 사이버보안 지출 재가속
-- narrativeStatus: 부상
-- narrativeScore: 87
-- Trend Strength Index: 82
-- Exhaustion Risk: 20 (낮음)
-- Entry Quality Score: 49 (관찰)
+- linkedNarrative: 매크로 방어/헤지
+- narrativeStatus: 관찰
+- narrativeScore: 54
+- Trend Strength Index: 40
+- Exhaustion Risk: 16 (낮음)
+- Entry Quality Score: 41 (관찰)
 - 트렌드 판단: 시장 위험선호가 약해 시장 환경 비우호 구간이다.
-- moneyFlowScore: 100
-- finalRawScore: 114
+- moneyFlowScore: 85
+- finalRawScore: 85
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / product / under_6h / positive - CrowdStrike Launches AI Partner Specialization, Defining Cybersecurity’s Ecosystem for the Agentic Era 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- tieBreakerReason: 최종 원점수 114, 리스크 패널티 -6, 5일 수익률 +21.15%, 상대 거래량 1.88배 순으로 정렬
-- 후보별 시장 해석: 중립 / 제한적 - 고점 근처 추격 리스크 / Entry Quality 49 < 50이나 moneyFlow 100, confidence HIGH, RVOL 1.88x로 강한 자금흐름 예외 조건 충족
-- 게이트 사유: Entry Quality 49 < 50이나 moneyFlow 100, confidence HIGH, RVOL 1.88x로 강한 자금흐름 예외 조건 충족
+- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / product / under_6h - Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- tieBreakerReason: 최종 원점수 85, 리스크 패널티 0, 5일 수익률 +5.58%, 상대 거래량 1.08배 순으로 정렬
+- 후보별 시장 해석: 위험회피 / 제한적 - 전체 시장은 위험회피 / 고점 근처 추격 리스크 / Entry Quality 41 < 50이나 moneyFlow 85, confidence HIGH, RVOL 1.08x로 강한 자금흐름 예외 조건 충족
+- 게이트 사유: Entry Quality 41 < 50이나 moneyFlow 85, confidence HIGH, RVOL 1.08x로 강한 자금흐름 예외 조건 충족
 - 주문 실행: 시장가 가능
-- 직접 촉매: Yahoo Finance RSS / product / under_6h / positive - CrowdStrike Launches AI Partner Specialization, Defining Cybersecurity’s Ecosystem for the Agentic Era
-- 왜 돈이 몰리는가: 20일 +14.05%, 5일 +21.15%, 상대 거래량 1.88배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS product/under_6h / 유동성: LIQUID
+- 직접 촉매: Yahoo Finance RSS / product / under_6h - Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.
+- 왜 돈이 몰리는가: 20일 +10.85%, 5일 +5.58%, 상대 거래량 1.08배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID
 - 누가 더 비싸게 사줄 수 있는지: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - 진입 조건: 전일 고점 돌파와 5일선 유지 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - todayActionLabel: 자금흐름 예외 조건부
 #### 최근 뉴스/동향 한국어 요약
 
-- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "CrowdStrike (CRWD) Q2 2027 Earnings Call Transcript"입니다.
-- 직접 촉매 판단: CrowdStrike Holdings Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "CrowdStrike (CRWD) Q2 2027 Earnings Call Transcript"이며, 실적 재료로 봅니다.
-- 뉴스 1: CrowdStrike (CRWD) Q2 2027 Earnings Call Transcript
-  - 내용: CrowdStrike Holdings Inc. 관련 기사는 CrowdStrike (CRWD) Q2 2027 Earnings Call Transcript 이슈를 다루며, 주가 변동률 +51.00%를 핵심 내용으로 봅니다.
-  - 투자 의미: CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
+- 요약: 섹터/테마 뉴스 중심 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook"입니다.
+- 직접 촉매 판단: Chevron에 대해 강한 직접 촉매는 확인되지 않았습니다.
+- 뉴스 1: Palo Alto Networks&#x2019; stock falls despite strong AI cybersecurity demand
+  - 내용: Chevron 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Enterprise cyber threats and AI adoption are giving Palo Alto Networks &#x2018;durable tailwinds,&#x2019; according to CEO Nikesh Arora, but the stock retreated after an earning...입니다.
+  - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
+  - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
+- 뉴스 2: Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.
+  - 내용: Chevron 관련 기사는 Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 이슈를 다루며, 주가 변동률 +50.00%를 핵심 내용으로 봅니다.
+  - 투자 의미: Chevron의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
   - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 뉴스 2: Why CrowdStrike (CRWD) Stock Is Trading Up Today
-  - 내용: CrowdStrike Holdings Inc. 관련 기사는 Why CrowdStrike (CRWD) Stock Is Trading Up Today 이슈를 다루며, 주가 변동률 +4.00%를 핵심 내용으로 봅니다.
-  - 투자 의미: CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 뉴스 3: CrowdStrike Launches AI Partner Specialization, Defining Cybersecurity’s Ecosystem for the Agentic Era
-  - 내용: CrowdStrike Holdings Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 AUSTIN, Texas & LAS VEGAS, August 31, 2026--Fal.Con 2026 — CrowdStrike (NASDAQ: CRWD) today announced its new AI Partner Specialization within the CrowdStrike Accelerate Partner...입니다.
+- 뉴스 3: Oil giant Chevron is expected to announce it will expand operations in Venezuela, US official says
+  - 내용: Chevron 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 Oil giant Chevron is planning to expand its operations in Venezuela, a U.S.입니다.
   - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
   - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
 - 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
-- 차트: ![CRWD chart](charts/CRWD.png)
-
-### 2. Zscaler Inc.(ZS)
-- 자산 유형: STOCK
-- linkedNarrative: 사이버보안 지출 재가속
-- narrativeStatus: 부상
-- narrativeScore: 87
-- Trend Strength Index: 82
-- Exhaustion Risk: 20 (낮음)
-- Entry Quality Score: 56 (보통)
-- 트렌드 판단: 시장 위험선호가 약해 시장 환경 비우호 구간이다.
-- moneyFlowScore: 90
-- finalRawScore: 90
-- reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- tieBreakerReason: 최종 원점수 90, 리스크 패널티 0, 5일 수익률 +7.00%, 상대 거래량 1.14배 순으로 정렬
-- 후보별 시장 해석: 중립 / 제한적 - 특이 충돌 없음
-- 게이트 사유: 통과
-- 주문 실행: 지정가 권장
-- 직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock?
-- 왜 돈이 몰리는가: 20일 +21.96%, 5일 +7.00%, 상대 거래량 1.14배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS earnings/under_24h / 유동성: ACCEPTABLE
-- 누가 더 비싸게 사줄 수 있는지: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
-- 진입 조건: 20일선 위 눌림 후 재상승 확인
-- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-- todayActionLabel: 조건부 진입
-#### 최근 뉴스/동향 한국어 요약
-
-- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock?"입니다.
-- 직접 촉매 판단: Zscaler Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock?"이며, 실적 재료로 봅니다.
-- 뉴스 1: Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock?
-  - 내용: Zscaler Inc. 관련 기사는 Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock? 이슈를 다루며, 주가 변동률 +22.00%를 핵심 내용으로 봅니다.
-  - 투자 의미: Zscaler Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 뉴스 2: Zscaler (ZS) Ascends While Market Falls: Some Facts to Note
-  - 내용: Zscaler Inc. 관련 기사는 Zscaler (ZS) Ascends While Market Falls: Some Facts to Note 이슈를 다루며, 주가 변동률 +1.12%를 핵심 내용으로 봅니다.
-  - 투자 의미: Zscaler Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 뉴스 3: Zscaler and SentinelOne Spike 10% as Cybersecurity Re-Rating Reaches the Laggards
-  - 내용: Zscaler Inc. 관련 기사는 Zscaler and SentinelOne Spike 10% as Cybersecurity Re-Rating Reaches the Laggards 이슈를 다루며, 주가 변동률 +10.00%를 핵심 내용으로 봅니다.
-  - 투자 의미: Zscaler Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
-- 차트: ![ZS chart](charts/ZS.png)
-
-### 3. Palo Alto Networks Inc.(PANW)
-- 자산 유형: STOCK
-- linkedNarrative: 사이버보안 지출 재가속
-- narrativeStatus: 부상
-- narrativeScore: 87
-- Trend Strength Index: 82
-- Exhaustion Risk: 20 (낮음)
-- Entry Quality Score: 60 (보통)
-- 트렌드 판단: Trend Strength는 중간이지만 Entry Quality가 좋아 초기 진입 후보로 본다.
-- moneyFlowScore: 100
-- finalRawScore: 105
-- reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / product / under_24h / positive - Palo Alto Networks set to beat fiscal Q4 metrics, guide above consensus 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- tieBreakerReason: 최종 원점수 105, 리스크 패널티 0, 5일 수익률 +8.90%, 상대 거래량 1.56배 순으로 정렬
-- 후보별 시장 해석: 중립 / 제한적 - 고점 근처 추격 리스크
-- 게이트 사유: 통과
-- 주문 실행: 시장가 가능
-- 직접 촉매: Yahoo Finance RSS / product / under_24h / positive - Palo Alto Networks set to beat fiscal Q4 metrics, guide above consensus
-- 왜 돈이 몰리는가: 20일 +10.08%, 5일 +8.90%, 상대 거래량 1.56배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS product/under_24h / 유동성: LIQUID
-- 누가 더 비싸게 사줄 수 있는지: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
-- 진입 조건: 전일 고점 돌파와 5일선 유지 확인
-- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-- todayActionLabel: 조건부 진입
-#### 최근 뉴스/동향 한국어 요약
-
-- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Is Palo Alto Networks (PANW) a 'Buy' Ahead of Earnings?"입니다.
-- 직접 촉매 판단: Palo Alto Networks Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "Is Palo Alto Networks (PANW) a 'Buy' Ahead of Earnings?"이며, 실적 재료로 봅니다.
-- 뉴스 1: Is Palo Alto Networks (PANW) a 'Buy' Ahead of Earnings?
-  - 내용: Palo Alto Networks Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 The company continues to benefit from higher cybersecurity priority as enterprises deploy AI.입니다.
-  - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-  - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-- 뉴스 2: Palo Alto Networks (PANW) Reports Q2: Everything You Need To Know Ahead Of Earnings
-  - 내용: Palo Alto Networks Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Cybersecurity platform provider Palo Alto Networks (NASDAQ:PANW) will be reporting earnings this Tuesday after market hours.입니다.
-  - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-  - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-- 뉴스 3: This Is What Investors Should Watch Before Buying PANW Stock. Most Will Ignore It on September 1.
-  - 내용: Palo Alto Networks Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Palo Alto Networks heads into earnings with surging expectations, but investors may need more than strong headline growth to justify the stock's enormous rally.입니다.
-  - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-  - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-- 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
-- 차트: ![PANW chart](charts/PANW.png)
+- 차트: ![CVX chart](charts/CVX.png)
 
 ## 다크호스 후보
 
-> 메인 행동 후보를 대체하지 않는 보조 관찰 섹션이다. 상위 서사 안에서 아직 과열되지 않았지만 초기 추세 전환, 베이스 돌파, 거래량 회복이 시작되는 개별주만 표시한다.
+다크호스 후보 없음. 상위 서사 정렬, MA20 위 안착, MA5/MA20 구조 개선, RVOL 0.90x 이상 조건을 동시에 충족한 개별주가 없다.
 
-### 1. Fortinet Inc.(FTNT)
-- 소속 서사: 사이버보안 지출 재가속
-- darkHorseScore: 91 (강한 다크호스)
-- 단계: 베이스 돌파 직전
-- Confidence: HIGH
-- 5D / 20D / RVOL: +12.46% / +4.73% / 1.45x
-- MA 구조: 종가 $170.93 / MA5 $164.18 / MA20 $160.42
-- 선정 이유: FTNT는 사이버보안 지출 재가속 서사에 속하고 종가가 MA20 위에 있으며 MA5/MA20 정렬이 개선되고 있다. 최근 15거래일 베이스는 상단 돌파 직전 상태이고, RVOL 1.45x로 거래량 확인은 충분하다. Exhaustion Risk 20로 아직 메인 후보 대비 과열 상한 안에 있다.
-- 확인 조건: 최근 15거래일 고점 $173.89 돌파, MA5 위 종가 유지, 관련 ETF 동반 강세
-- 무효화 조건: MA20 $160.42 종가 이탈, 최근 스윙 저점 $148.25 이탈, RVOL 0.80x 이하 둔화
-- 왜 아직 메인이 아닌가: 최근 고점 돌파 확인 전
-#### 최근 뉴스/동향 한국어 요약
-
-- 요약: 후보 선정 후 재확인 뉴스 데이터 없음
+- darkHorseScore: 조건 충족 후보 없음
+- 왜 아직 메인이 아닌가: 확인 조건을 통과한 보조 관찰 후보가 없다.
 
 <details>
 <summary>darkHorseScore 상세 근거 보기</summary>
 
-- 서사 정렬: 20/20
-- 초기 추세 구조: 30/30
-- 베이스 돌파/정돈: 12/20
-- 거래량 확인: 14/15
-- 낮은 과열: 10/10
-- 유동성 리스크 보정: 5/5
-- 리스크 차감: -0
-- rawScore: 91
+- 서사 정렬: 조건 미충족
+- 초기 추세 구조: 조건 미충족
+- 베이스 돌파/정돈: 조건 미충족
+- 거래량 확인: 조건 미충족
+- rawScore: 데이터 없음
 
 </details>
-
-- 차트: ![FTNT chart](charts/FTNT.png)
 
 
 
 ## 오늘 돈이 몰리는 테마
 
-- 사이버보안: PANW, CRWD, FTNT, ZS | 평균 moneyFlowScore 98 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
-- Financials: COIN | 평균 moneyFlowScore 86 | 단일 종목 이벤트보다 테마 단위 자금 흐름이 선명한 구간으로 본다.
-- 전통 에너지 ETF: XLE, OIH | 평균 moneyFlowScore 70 | 추세는 확인되지만 선별 진입이 필요한 중간 강도의 테마로 본다.
-- 사이버보안 ETF: CIBR, HACK, IHAK | 평균 moneyFlowScore 62 | 추세는 확인되지만 선별 진입이 필요한 중간 강도의 테마로 본다.
-- 클라우드/엔터프라이즈 소프트웨어 ETF: IGV | 평균 moneyFlowScore 49 | 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
-- 혁신 성장 ETF: ARKK | 평균 moneyFlowScore 45 | 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
+- 전통 에너지 ETF: XLE, OIH | 평균 moneyFlowScore 74 | 추세는 확인되지만 선별 진입이 필요한 중간 강도의 테마로 본다.
+- 클라우드/엔터프라이즈 소프트웨어 ETF: IGV | 평균 moneyFlowScore 47 | 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
+- 사이버보안: PANW, CRWD, FTNT, ZS | 평균 moneyFlowScore 45 | 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
+- Energy: BKR, FANG, CCJ, XOM, CVX | 평균 moneyFlowScore 45 | 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
+- 메가캡 플랫폼 ETF: MAGS | 평균 moneyFlowScore 35 | 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
+- 바이오/헬스케어: AMGN, GILD, ISRG, VRTX, REGN, IDXX, ALNY, DXCM | 평균 moneyFlowScore 28 | 관심은 유지하되 우선순위는 낮추고 추가 거래량 확인을 기다린다.
 
 ## 1. ETF 트레이딩 보고서
 ### 1-1. ETF 결론
 - ETF 우선 후보: 없음
-- ETF 관찰 후보: Roundhill Memory ETF(DRAM), VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Invesco PHLX Semiconductor ETF(SOXQ), iShares Expanded Tech-Software Sector ETF(IGV)
-- ETF 매매 금지: iShares Semiconductor ETF(SOXX), Invesco PHLX Semiconductor ETF(SOXQ), Global X Robotics & Artificial Intelligence ETF(BOTZ), ROBO Global Robotics and Automation Index ETF(ROBO), iShares U.S. Aerospace & Defense ETF(ITA)
-- 오늘 ETF 최우선 1개: First Trust NASDAQ Cybersecurity ETF(CIBR) - 전일 고점 돌파와 5일선 유지 확인
+- ETF 관찰 후보: Roundhill Memory ETF(DRAM), VanEck Semiconductor ETF(SMH), Global X Artificial Intelligence & Technology ETF(AIQ), ROBO Global Robotics and Automation Index ETF(ROBO), iShares Cybersecurity and Tech ETF(IHAK)
+- ETF 매매 금지: Roundhill Memory ETF(DRAM), VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Invesco PHLX Semiconductor ETF(SOXQ), Global X Artificial Intelligence & Technology ETF(AIQ)
+- 오늘 ETF 최우선 1개: 없음
 - ETF 섹션 해석: 이 섹션은 개별 종목 선택이 아니라 테마/섹터 단위 자금 흐름을 ETF로 매매할지 판단하기 위한 영역이다.
 
 ### 1-2. ETF 후보 TOP 5
 
 선정 기준: ETF 후보는 가격/거래량 1차 점수에 뉴스, ETF 구성종목 확산도, 유동성, 리스크 패널티를 반영한 finalRawScore 기준으로 정렬한다. 표시 점수 100점 후보가 겹치면 tieBreakerReason으로 우선순위를 설명한다.
 
-### [ETF] First Trust NASDAQ Cybersecurity ETF(CIBR)
-- 자산 유형: ETF
-- ETF 세부 카테고리: 사이버보안 ETF
-- ETF 역할: 테마 베타 매수
-- 상태: 진입 후보
-- linkedNarrative: 사이버보안 지출 재가속
-- narrativeStatus: 부상
-- narrativeScore: 87
-- moneyFlowScore: 78
-- finalRawScore: 78
-- tieBreakerReason: 최종 원점수 78, 리스크 패널티 0, 5일 수익률 +7.42%, 상대 거래량 1.04배 순으로 정렬
-- 과열 리스크: 낮음
-- reasonConfidence: MEDIUM
-- reasonConfidenceExplanation: ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
-
-- todayActionLabel: 조건부 진입
-- 주문 실행: 지정가 권장
-- 기준일: 2026-08-31
-- 종가: $100.15
-- 1일 수익률: +1.61%
-- 5일 수익률: +7.42%
-- 20일 수익률: +6.64%
-- 상대 거래량: 1.04배
-- 52주 고점 대비 위치: -2.15%
-- whyMoneyIsFlowing: 20일 +6.64%, 5일 +7.42%, 상대 거래량 1.04배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE
-- likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
-- whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
-#### 최근 뉴스/동향 한국어 요약
-
-- 요약: 섹터/테마 뉴스 중심 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Amazon&#x2019;s stock slips as the FTC alleges billions of dollars in hidden ad fees"입니다.
-- 직접 촉매 판단: First Trust NASDAQ Cybersecurity ETF에 대해 강한 직접 촉매는 확인되지 않았습니다.
-- 뉴스 1: Cybersecurity Stocks Rally on Twin Earnings Beats: Okta Spikes 22%, CrowdStrike Jumps 13%
-  - 내용: First Trust NASDAQ Cybersecurity ETF 관련 기사는 Cybersecurity Stocks Rally on Twin Earnings Beats: Okta Spikes 22%, CrowdStrike Jumps 13% 이슈를 다루며, 주가 변동률 +22.00%, 동반 비교 수치 +13.00%를 핵심 내용으로 봅니다.
-  - 투자 의미: First Trust NASDAQ Cybersecurity ETF의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 뉴스 2: Cybersecurity Demand Fuels CrowdStrike's Earnings Beat: ETFs in Focus
-  - 내용: First Trust NASDAQ Cybersecurity ETF 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 CrowdStrike's earnings beat highlights strong cybersecurity demand.입니다.
-  - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-  - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-- 뉴스 3: SentinelOne Slides 8% as Trimmed Profit Forecast Outweighs Revenue Beat, CrowdStrike Declines 7%
-  - 내용: First Trust NASDAQ Cybersecurity ETF 관련 기사는 SentinelOne Slides 8% as Trimmed Profit Forecast Outweighs Revenue Beat, CrowdStrike Declines 7% 이슈를 다루며, 주가 변동률 +8.00%, 동반 비교 수치 +7.00%를 핵심 내용으로 봅니다.
-  - 투자 의미: First Trust NASDAQ Cybersecurity ETF의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
-- 진입 조건: 전일 고점 돌파와 5일선 유지 확인
-- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-- 차트: ![CIBR chart](charts/CIBR.png)
-
-#### 상세 근거
-<details>
-<summary>First Trust NASDAQ Cybersecurity ETF(CIBR) 상세 근거 펼치기</summary>
-
-- moneyFlowScore(최종) 산정 근거:
-  - moneyFlowScore(1차): 64
-  - 최종 원점수: 78
-  - 최종 표시 점수: 78
-  - cap 적용: cap 미적용
-  - 계산식: +64 + +12 + 0 + +2 + 0 + 0 + 0 = 78
-  - 점수 해석: 관심 후보. 눌림 또는 돌파 확인 후 진입 검토.
-  - 가격/거래량 1차 점수: +64
-    - 추세: +16
-    - 단기 모멘텀: +8
-    - 중기 모멘텀: +4
-    - 거래량: +10
-    - 신고가 근접: +12
-    - 이동평균: +14
-  - 하위 점수 cap:
-    - 가격 모멘텀: 원점수 +16, 상한 적용 +16 / 최대 25
-    - 단기 모멘텀: 원점수 +8, 상한 적용 +8 / 최대 20
-    - 중기 모멘텀: 원점수 +4, 상한 적용 +4 / 최대 16
-    - 거래량: 원점수 +10, 상한 적용 +10 / 최대 20
-    - 신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12
-    - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
-  - 추가 데이터 가감점:
-    - 뉴스: +12
-    - 유동성: +2
-  - ETF 확산도: 0
-  - 리스크 패널티: 0
-  - 주요 근거: 1차 64, 최종 원점수 78, 표시 78. 5일 수익률 강함, 52주 고점 근처, 이동평균 위 추세 유지. 주의: 큰 감점 제한적.
-  - 리스크 패널티 산정 근거:
-    - 총 리스크 패널티: 0
-    - 리스크 등급: LOW
-    - 감점된 리스크: 없음
-    - 관찰 리스크: 주요 관찰 리스크 없음
-    - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
-- 데이터 사용 현황:
-  - 가격/거래량: 사용
-  - 뉴스: 사용
-  - ETF 확산도: 일부 연결
-  - 거래대금 유동성: 사용
-  - 관련 ETF 상대강도: 사용
-- 뉴스 확인:
-  - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 13/3/0
-  - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 1
-  - 중요 공시 수: 0
-  - 직접 촉매: 없음
-  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-01 10:42 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-01 08:23 KST
-  - 뉴스 신선도 상태: FRESH
-  - 뉴스 이후 가격 반응: 긍정
-  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: August was the month of the comeback kids. Cramer reviews what drove the biggest winners
-  - 원점수/상한 점수: +22 / +12
-  - 점수 반영: +12
-  - 주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured
-- ETF 구성종목 확산도:
-  - 구성종목 데이터 상태: 일부 연결
-  - 샘플 수: 2/2
-  - 샘플 신뢰도: INSUFFICIENT
-  - 상승 종목 비율: 100%
-  - 20일선 위 비율: 100%
-  - 50일선 위 비율: 100%
-  - 상위 기여 종목: PLTR, MSFT
-  - 확산도 판단: SAMPLE_TOO_SMALL
-  - 원점수/샘플 상한/반영 점수: 0 / 0 / 0
-  - 점수 반영: 0
-- 거래대금 유동성:
-  - 데이터 상태: 일부 연결
-  - 거래대금 기준 유동성: ACCEPTABLE
-  - 거래대금: $169,948,541
-  - 평균 거래대금: $163,794,023
-  - 주문 영향: 지정가 권장
-  - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
-- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
-- 후보 선정 후 뉴스/동향 재확인:
-  - 재확인 상태: 일부 연결
-  - 재확인 시각: 2026-09-01 10:42 KST
-  - 최근 발행 시각: 2026-09-01 07:24 KST
-  - 신선도: FRESH
-  - 출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 한국어 요약: 섹터/테마 뉴스 중심 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Amazon&#x2019;s stock slips as the FTC alleges billions of dollars in hidden ad fees"입니다.
-  - 직접 촉매: 없음
-  - 한국어 뉴스 요약 1: Cybersecurity Stocks Rally on Twin Earnings Beats: Okta Spikes 22%, CrowdStrike Jumps 13%
-    - 내용: First Trust NASDAQ Cybersecurity ETF 관련 기사는 Cybersecurity Stocks Rally on Twin Earnings Beats: Okta Spikes 22%, CrowdStrike Jumps 13% 이슈를 다루며, 주가 변동률 +22.00%, 동반 비교 수치 +13.00%를 핵심 내용으로 봅니다.
-    - 투자 의미: First Trust NASDAQ Cybersecurity ETF의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-    - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-  - 한국어 뉴스 요약 2: Cybersecurity Demand Fuels CrowdStrike's Earnings Beat: ETFs in Focus
-    - 내용: First Trust NASDAQ Cybersecurity ETF 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 CrowdStrike's earnings beat highlights strong cybersecurity demand.입니다.
-    - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-    - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-  - 한국어 뉴스 요약 3: SentinelOne Slides 8% as Trimmed Profit Forecast Outweighs Revenue Beat, CrowdStrike Declines 7%
-    - 내용: First Trust NASDAQ Cybersecurity ETF 관련 기사는 SentinelOne Slides 8% as Trimmed Profit Forecast Outweighs Revenue Beat, CrowdStrike Declines 7% 이슈를 다루며, 주가 변동률 +8.00%, 동반 비교 수치 +7.00%를 핵심 내용으로 봅니다.
-    - 투자 의미: First Trust NASDAQ Cybersecurity ETF의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-    - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-  - 원문 헤드라인 1: Yahoo Finance RSS / earnings / stale / positive - Cybersecurity Stocks Rally on Twin Earnings Beats: Okta Spikes 22%, CrowdStrike Jumps 13%
-  - 원문 헤드라인 2: Yahoo Finance RSS / earnings / stale / positive - Cybersecurity Demand Fuels CrowdStrike's Earnings Beat: ETFs in Focus
-  - 원문 헤드라인 3: Yahoo Finance RSS / guidance / stale / positive - SentinelOne Slides 8% as Trimmed Profit Forecast Outweighs Revenue Beat, CrowdStrike Declines 7%
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
-- 차트 요약: 단기 추세 중립
-- 기준일 2026-08-31 | 종가 $100.15 | 1일 +1.61% | 5일 +7.42% | 20일 +6.64% | 상대 거래량 1.04배 | 52주 고점 대비 -2.15% | 데이터 소스: yfinance
-
-</details>
-
-### [ETF] iShares Cybersecurity and Tech ETF(IHAK)
-- 자산 유형: ETF
-- ETF 세부 카테고리: 사이버보안 ETF
-- ETF 역할: 테마 베타 매수
-- 상태: 매매 금지
-- linkedNarrative: 사이버보안 지출 재가속
-- narrativeStatus: 부상
-- narrativeScore: 87
-- moneyFlowScore: 71
-- finalRawScore: 71
-- tieBreakerReason: 최종 원점수 71, 리스크 패널티 -5, 5일 수익률 +5.95%, 상대 거래량 2.36배 순으로 정렬
-- 과열 리스크: 낮음
-- reasonConfidence: MEDIUM
-- reasonConfidenceExplanation: ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
-
-- todayActionLabel: 제외
-- 주문 실행: 추격 금지
-- 기준일: 2026-08-31
-- 종가: $66.24
-- 1일 수익률: +1.27%
-- 5일 수익률: +5.95%
-- 20일 수익률: +6.14%
-- 상대 거래량: 2.36배
-- 52주 고점 대비 위치: -3.23%
-- whyMoneyIsFlowing: 20일 +6.14%, 5일 +5.95%, 상대 거래량 2.36배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h
-- likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
-- whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
-#### 최근 뉴스/동향 한국어 요약
-
-- 요약: 후보 선정 후 재확인 뉴스 데이터 없음
-- 진입 조건: 전일 고점 돌파와 5일선 유지 확인
-- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-- 차트: ![IHAK chart](charts/IHAK.png)
-
-#### 상세 근거
-<details>
-<summary>iShares Cybersecurity and Tech ETF(IHAK) 상세 근거 펼치기</summary>
-
-- moneyFlowScore(최종) 산정 근거:
-  - moneyFlowScore(1차): 69
-  - 최종 원점수: 71
-  - 최종 표시 점수: 71
-  - cap 적용: cap 미적용
-  - 계산식: +69 + +12 + 0 - 5 + 0 - 5 + 0 = 71
-  - 점수 해석: 관심 후보. 눌림 또는 돌파 확인 후 진입 검토.
-  - 가격/거래량 1차 점수: +69
-    - 추세: +15
-    - 단기 모멘텀: +6
-    - 중기 모멘텀: +4
-    - 거래량: +18
-    - 신고가 근접: +12
-    - 이동평균: +14
-  - 하위 점수 cap:
-    - 가격 모멘텀: 원점수 +15, 상한 적용 +15 / 최대 25
-    - 단기 모멘텀: 원점수 +6, 상한 적용 +6 / 최대 20
-    - 중기 모멘텀: 원점수 +4, 상한 적용 +4 / 최대 16
-    - 거래량: 원점수 +18, 상한 적용 +18 / 최대 20
-    - 신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12
-    - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
-  - 추가 데이터 가감점:
-    - 뉴스: +12
-    - 유동성: -5
-  - ETF 확산도: 0
-  - 리스크 패널티: -5
-  - 주요 근거: 1차 69, 최종 원점수 71, 표시 71. 5일 수익률 강함, 상대 거래량 증가, 52주 고점 근처. 주의: 단기 과열/추격 위험 존재, ETF 구성종목 확산도 데이터 미연결.
-  - 리스크 패널티 산정 근거:
-    - 총 리스크 패널티: -5
-    - 리스크 등급: LOW
-    - 감점된 리스크:
-      - low liquidity: -5 | 근거: Liquidity signal: LOW. | 대응: Avoid market-order chasing.
-    - 관찰 리스크: ETF breadth data not connected
-    - 한 줄 해석: 1개 감점 리스크로 총 -5점 반영.
-- 데이터 사용 현황:
-  - 가격/거래량: 사용
-  - 뉴스: 사용
-  - ETF 확산도: 미연결
-  - 거래대금 유동성: 사용
-  - 관련 ETF 상대강도: 사용
-- 뉴스 확인:
-  - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 12/4/0
-  - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 1
-  - 중요 공시 수: 0
-  - 직접 촉매: 없음
-  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-01 10:42 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-01 08:23 KST
-  - 뉴스 신선도 상태: FRESH
-  - 뉴스 이후 가격 반응: 긍정
-  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: August was the month of the comeback kids. Cramer reviews what drove the biggest winners
-  - 원점수/상한 점수: +23 / +12
-  - 점수 반영: +12
-  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
-- ETF 구성종목 확산도:
-  - 구성종목 데이터 상태: 미연결
-  - 샘플 수: 0/0
-  - 샘플 신뢰도: UNKNOWN
-  - 상승 종목 비율: 데이터 없음
-  - 20일선 위 비율: 데이터 없음
-  - 50일선 위 비율: 데이터 없음
-  - 상위 기여 종목: 데이터 없음
-  - 확산도 판단: UNKNOWN
-  - 원점수/샘플 상한/반영 점수: 0 / N/A / 0
-  - 점수 반영: 0
-- 거래대금 유동성:
-  - 데이터 상태: 일부 연결
-  - 거래대금 기준 유동성: LOW
-  - 거래대금: $27,709,252
-  - 평균 거래대금: $11,754,950
-  - 주문 영향: 추격 금지
-  - 매매 영향: 유동성 부족으로 추격 금지 또는 우선순위 하향
-- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
-- 후보 선정 후 뉴스/동향 재확인:
-  - 재확인 상태: 데이터 없음
-- 차트 요약: 단기 추세 중립
-- 기준일 2026-08-31 | 종가 $66.24 | 1일 +1.27% | 5일 +5.95% | 20일 +6.14% | 상대 거래량 2.36배 | 52주 고점 대비 -3.23% | 데이터 소스: yfinance
-
-</details>
-
-### [ETF] VanEck Oil Services ETF(OIH)
-- 자산 유형: ETF
-- ETF 세부 카테고리: 전통 에너지 ETF
-- ETF 역할: 테마 베타 매수
-- 상태: 관찰
-- linkedNarrative: Integrated Oil & Gas 자금 유입
-- narrativeStatus: 관찰
-- narrativeScore: 53
-- moneyFlowScore: 76
-- finalRawScore: 76
-- tieBreakerReason: 최종 원점수 76, 리스크 패널티 0, 5일 수익률 +5.01%, 상대 거래량 1.38배 순으로 정렬
-- 과열 리스크: 낮음
-- reasonConfidence: MEDIUM
-- reasonConfidenceExplanation: ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
-
-- todayActionLabel: 관찰
-- 주문 실행: 지정가 권장
-- 기준일: 2026-08-31
-- 종가: $429.18
-- 1일 수익률: +2.60%
-- 5일 수익률: +5.01%
-- 20일 수익률: +12.31%
-- 상대 거래량: 1.38배
-- 52주 고점 대비 위치: -6.55%
-- whyMoneyIsFlowing: 20일 +12.31%, 5일 +5.01%, 상대 거래량 1.38배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE
-- likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
-- whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
-#### 최근 뉴스/동향 한국어 요약
-
-- 요약: 후보 선정 후 재확인 뉴스 데이터 없음
-- 진입 조건: 20일선 위 눌림 후 재상승 확인
-- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-- 차트: ![OIH chart](charts/OIH.png)
-
-#### 상세 근거
-<details>
-<summary>VanEck Oil Services ETF(OIH) 상세 근거 펼치기</summary>
-
-- moneyFlowScore(최종) 산정 근거:
-  - moneyFlowScore(1차): 66
-  - 최종 원점수: 76
-  - 최종 표시 점수: 76
-  - cap 적용: cap 미적용
-  - 계산식: +66 + +12 - 4 + +2 + 0 + 0 + 0 = 76
-  - 점수 해석: 관심 후보. 눌림 또는 돌파 확인 후 진입 검토.
-  - 가격/거래량 1차 점수: +66
-    - 추세: +17
-    - 단기 모멘텀: +7
-    - 중기 모멘텀: +8
-    - 거래량: +14
-    - 신고가 근접: +6
-    - 이동평균: +14
-  - 하위 점수 cap:
-    - 가격 모멘텀: 원점수 +17, 상한 적용 +17 / 최대 25
-    - 단기 모멘텀: 원점수 +7, 상한 적용 +7 / 최대 20
-    - 중기 모멘텀: 원점수 +8, 상한 적용 +8 / 최대 16
-    - 거래량: 원점수 +14, 상한 적용 +14 / 최대 20
-    - 신고가 근접: 원점수 +6, 상한 적용 +6 / 최대 12
-    - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
-  - 추가 데이터 가감점:
-    - 뉴스: +12
-    - 유동성: +2
-  - ETF 확산도: -4
-  - 리스크 패널티: 0
-  - 주요 근거: 1차 66, 최종 원점수 76, 표시 76. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
-  - 리스크 패널티 산정 근거:
-    - 총 리스크 패널티: 0
-    - 리스크 등급: LOW
-    - 감점된 리스크: 없음
-    - 관찰 리스크: 주요 관찰 리스크 없음
-    - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
-- 데이터 사용 현황:
-  - 가격/거래량: 사용
-  - 뉴스: 사용
-  - ETF 확산도: 일부 연결
-  - 거래대금 유동성: 사용
-  - 관련 ETF 상대강도: 사용
-- 뉴스 확인:
-  - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 8/7/1
-  - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 1
-  - 중요 공시 수: 0
-  - 직접 촉매: 없음
-  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-01 10:42 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-01 07:24 KST
-  - 뉴스 신선도 상태: FRESH
-  - 뉴스 이후 가격 반응: 긍정
-  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Amazon&#x2019;s stock slips as the FTC alleges billions of dollars in hidden ad fees
-  - 원점수/상한 점수: +19 / +12
-  - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured
-- ETF 구성종목 확산도:
-  - 구성종목 데이터 상태: 일부 연결
-  - 샘플 수: 1/1
-  - 샘플 신뢰도: INSUFFICIENT
-  - 상승 종목 비율: 0%
-  - 20일선 위 비율: 100%
-  - 50일선 위 비율: 100%
-  - 상위 기여 종목: XOM
-  - 확산도 판단: WEAK_BREADTH
-  - 원점수/샘플 상한/반영 점수: -4 / 0 / -4
-  - 점수 반영: -4
-- 거래대금 유동성:
-  - 데이터 상태: 일부 연결
-  - 거래대금 기준 유동성: ACCEPTABLE
-  - 거래대금: $140,482,202
-  - 평균 거래대금: $101,647,420
-  - 주문 영향: 지정가 권장
-  - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
-- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
-- 후보 선정 후 뉴스/동향 재확인:
-  - 재확인 상태: 데이터 없음
-- 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
-- 기준일 2026-08-31 | 종가 $429.18 | 1일 +2.60% | 5일 +5.01% | 20일 +12.31% | 상대 거래량 1.38배 | 52주 고점 대비 -6.55% | 데이터 소스: yfinance
-
-</details>
-
 ### [ETF] Energy Select Sector SPDR Fund(XLE)
 - 자산 유형: ETF
 - ETF 세부 카테고리: 전통 에너지 ETF
 - ETF 역할: 테마 베타 매수
 - 상태: 관찰
-- linkedNarrative: Integrated Oil & Gas 자금 유입
+- linkedNarrative: 매크로 방어/헤지
 - narrativeStatus: 관찰
-- narrativeScore: 53
-- moneyFlowScore: 64
-- finalRawScore: 64
-- tieBreakerReason: 최종 원점수 64, 리스크 패널티 0, 5일 수익률 +1.35%, 상대 거래량 1.04배 순으로 정렬
-- 과열 리스크: 낮음~중간
+- narrativeScore: 54
+- moneyFlowScore: 84
+- finalRawScore: 84
+- tieBreakerReason: 최종 원점수 84, 리스크 패널티 0, 5일 수익률 +4.37%, 상대 거래량 1.28배 순으로 정렬
+- 과열 리스크: 낮음
 - reasonConfidence: MEDIUM
 - reasonConfidenceExplanation: ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
 
 - todayActionLabel: 관찰
 - 주문 실행: 시장가 가능
-- 기준일: 2026-08-31
-- 종가: $63.96
-- 1일 수익률: +2.04%
-- 5일 수익률: +1.35%
-- 20일 수익률: +8.79%
-- 상대 거래량: 1.04배
-- 52주 고점 대비 위치: -1.14%
-- whyMoneyIsFlowing: 20일 +8.79%, 5일 +1.35%, 상대 거래량 1.04배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID
+- 기준일: 2026-09-01
+- 종가: $64.77
+- 1일 수익률: +1.27%
+- 5일 수익률: +4.37%
+- 20일 수익률: +10.68%
+- 상대 거래량: 1.28배
+- 52주 고점 대비 위치: -0.28%
+- whyMoneyIsFlowing: 20일 +10.68%, 5일 +4.37%, 상대 거래량 1.28배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 #### 최근 뉴스/동향 한국어 요약
@@ -1074,32 +567,32 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 <summary>Energy Select Sector SPDR Fund(XLE) 상세 근거 펼치기</summary>
 
 - moneyFlowScore(최종) 산정 근거:
-  - moneyFlowScore(1차): 51
-  - 최종 원점수: 64
-  - 최종 표시 점수: 64
+  - moneyFlowScore(1차): 67
+  - 최종 원점수: 84
+  - 최종 표시 점수: 84
   - cap 적용: cap 미적용
-  - 계산식: +51 + +12 - 4 + +5 + 0 + 0 + 0 = 64
-  - 점수 해석: 관찰 후보. 흐름은 있으나 우선순위는 낮음.
-  - 가격/거래량 1차 점수: +51
-    - 추세: +5
-    - 단기 모멘텀: +4
-    - 중기 모멘텀: +6
-    - 거래량: +10
+  - 계산식: +67 + +12 + 0 + +5 + 0 + 0 + 0 = 84
+  - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
+  - 가격/거래량 1차 점수: +67
+    - 추세: +15
+    - 단기 모멘텀: +5
+    - 중기 모멘텀: +7
+    - 거래량: +14
     - 신고가 근접: +12
     - 이동평균: +14
   - 하위 점수 cap:
-    - 가격 모멘텀: 원점수 +5, 상한 적용 +5 / 최대 25
-    - 단기 모멘텀: 원점수 +4, 상한 적용 +4 / 최대 20
-    - 중기 모멘텀: 원점수 +6, 상한 적용 +6 / 최대 16
-    - 거래량: 원점수 +10, 상한 적용 +10 / 최대 20
+    - 가격 모멘텀: 원점수 +15, 상한 적용 +15 / 최대 25
+    - 단기 모멘텀: 원점수 +5, 상한 적용 +5 / 최대 20
+    - 중기 모멘텀: 원점수 +7, 상한 적용 +7 / 최대 16
+    - 거래량: 원점수 +14, 상한 적용 +14 / 최대 20
     - 신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12
     - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
   - 추가 데이터 가감점:
     - 뉴스: +12
     - 유동성: +5
-  - ETF 확산도: -4
+  - ETF 확산도: 0
   - 리스크 패널티: 0
-  - 주요 근거: 1차 51, 최종 원점수 64, 표시 64. 20일 수익률 강함, 1일 단기 모멘텀 확인, 52주 고점 근처. 주의: 큰 감점 제한적.
+  - 주요 근거: 1차 67, 최종 원점수 84, 표시 84. 20일 수익률 강함, 상대 거래량 증가, 52주 고점 근처. 주의: 큰 감점 제한적.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: 0
     - 리스크 등급: LOW
@@ -1116,119 +609,118 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 최근 뉴스 상태: 일부 연결
   - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 9/7/0
+  - 긍정/중립/부정: 8/8/0
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 0
+  - 강한 촉매 수: 1
   - 중요 공시 수: 0
   - 직접 촉매: 없음
-  - 보조 뉴스: MarketWatch RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-01 10:42 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-01 07:24 KST
+  - 보조 뉴스: MarketWatch RSS sector_theme / macro / under_6h
+  - 뉴스 수집 시각: 2026-09-02 09:51 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-02 09:19 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Amazon&#x2019;s stock slips as the FTC alleges billions of dollars in hidden ad fees
-  - 원점수/상한 점수: +18 / +12
+  - 핵심 뉴스 요약: Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook
+  - 원점수/상한 점수: +19 / +12
   - 점수 반영: +12
   - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 1/1
   - 샘플 신뢰도: INSUFFICIENT
-  - 상승 종목 비율: 0%
+  - 상승 종목 비율: 100%
   - 20일선 위 비율: 100%
   - 50일선 위 비율: 100%
   - 상위 기여 종목: XOM
-  - 확산도 판단: WEAK_BREADTH
-  - 원점수/샘플 상한/반영 점수: -4 / 0 / -4
-  - 점수 반영: -4
+  - 확산도 판단: SAMPLE_TOO_SMALL
+  - 원점수/샘플 상한/반영 점수: 0 / 0 / 0
+  - 점수 반영: 0
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
   - 거래대금 기준 유동성: LIQUID
-  - 거래대금: $1,732,112,209
-  - 평균 거래대금: $1,662,221,774
+  - 거래대금: $2,142,251,298
+  - 평균 거래대금: $1,668,717,893
   - 주문 영향: 시장가 가능
   - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
 - reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
 - 후보 선정 후 뉴스/동향 재확인:
   - 재확인 상태: 데이터 없음
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
-- 기준일 2026-08-31 | 종가 $63.96 | 1일 +2.04% | 5일 +1.35% | 20일 +8.79% | 상대 거래량 1.04배 | 52주 고점 대비 -1.14% | 데이터 소스: yfinance
+- 기준일 2026-09-01 | 종가 $64.77 | 1일 +1.27% | 5일 +4.37% | 20일 +10.68% | 상대 거래량 1.28배 | 52주 고점 대비 -0.28% | 데이터 소스: yfinance
 
 </details>
 
-### [ETF] iShares Expanded Tech-Software Sector ETF(IGV)
+### [ETF] VanEck Oil Services ETF(OIH)
 - 자산 유형: ETF
-- ETF 세부 카테고리: 클라우드/엔터프라이즈 소프트웨어 ETF
+- ETF 세부 카테고리: 전통 에너지 ETF
 - ETF 역할: 테마 베타 매수
-- 상태: 관찰
-- linkedNarrative: AI 소프트웨어/사이버보안 확산
-- narrativeStatus: 약화
-- narrativeScore: 56
-- moneyFlowScore: 49
-- finalRawScore: 49
-- tieBreakerReason: 최종 원점수 49, 리스크 패널티 -4, 5일 수익률 +7.35%, 상대 거래량 0.74배 순으로 정렬
+- 상태: 매매 금지
+- linkedNarrative: 매크로 방어/헤지
+- narrativeStatus: 관찰
+- narrativeScore: 54
+- moneyFlowScore: 63
+- finalRawScore: 63
+- tieBreakerReason: 최종 원점수 63, 리스크 패널티 0, 5일 수익률 +5.22%, 상대 거래량 1.43배 순으로 정렬
 - 과열 리스크: 낮음
-- reasonConfidence: LOW
-- reasonConfidenceExplanation: 가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.
+- reasonConfidence: MEDIUM
+- reasonConfidenceExplanation: ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
 
-- todayActionLabel: 거래량 확인 전 관찰
+- todayActionLabel: 제외
 - 주문 실행: 지정가 권장
-- 기준일: 2026-08-31
-- 종가: $109.98
-- 1일 수익률: +0.44%
-- 5일 수익률: +7.35%
-- 20일 수익률: +12.89%
-- 상대 거래량: 0.74배
-- 52주 고점 대비 위치: -6.79%
-- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.74배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE
+- 기준일: 2026-09-01
+- 종가: $426.88
+- 1일 수익률: -0.54%
+- 5일 수익률: +5.22%
+- 20일 수익률: +8.86%
+- 상대 거래량: 1.43배
+- 52주 고점 대비 위치: -7.05%
+- whyMoneyIsFlowing: 20일 +8.86%, 5일 +5.22%, 상대 거래량 1.43배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
 #### 최근 뉴스/동향 한국어 요약
 
 - 요약: 후보 선정 후 재확인 뉴스 데이터 없음
-- 진입 조건: 상대 거래량 1.0배 회복 후 관찰
-- 무효화 조건: 거래량 회복 실패
-- 차트: ![IGV chart](charts/IGV.png)
+- 진입 조건: 20일선 위 눌림 후 재상승 확인
+- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+- 차트: ![OIH chart](charts/OIH.png)
 
 #### 상세 근거
 <details>
-<summary>iShares Expanded Tech-Software Sector ETF(IGV) 상세 근거 펼치기</summary>
+<summary>VanEck Oil Services ETF(OIH) 상세 근거 펼치기</summary>
 
 - moneyFlowScore(최종) 산정 근거:
-  - moneyFlowScore(1차): 39
-  - 최종 원점수: 49
-  - 최종 표시 점수: 49
+  - moneyFlowScore(1차): 59
+  - 최종 원점수: 63
+  - 최종 표시 점수: 63
   - cap 적용: cap 미적용
-  - 계산식: +39 + +12 + 0 + +2 + 0 - 4 + 0 = 49
-  - 점수 해석: 매매 금지 또는 우선순위 낮은 후보.
-  - 가격/거래량 1차 점수: +39
-    - 추세: +13
-    - 단기 모멘텀: +6
-    - 중기 모멘텀: +8
-    - 거래량: -8
+  - 계산식: +59 + +2 + 0 + +2 + 0 + 0 + 0 = 63
+  - 점수 해석: 관찰 후보. 흐름은 있으나 우선순위는 낮음.
+  - 가격/거래량 1차 점수: +59
+    - 추세: +15
+    - 단기 모멘텀: +4
+    - 중기 모멘텀: +6
+    - 거래량: +14
     - 신고가 근접: +6
     - 이동평균: +14
   - 하위 점수 cap:
-    - 가격 모멘텀: 원점수 +13, 상한 적용 +13 / 최대 25
-    - 단기 모멘텀: 원점수 +6, 상한 적용 +6 / 최대 20
-    - 중기 모멘텀: 원점수 +8, 상한 적용 +8 / 최대 16
-    - 거래량: 원점수 -8, 상한 적용 -8 / 최대 20
+    - 가격 모멘텀: 원점수 +15, 상한 적용 +15 / 최대 25
+    - 단기 모멘텀: 원점수 +4, 상한 적용 +4 / 최대 20
+    - 중기 모멘텀: 원점수 +6, 상한 적용 +6 / 최대 16
+    - 거래량: 원점수 +14, 상한 적용 +14 / 최대 20
     - 신고가 근접: 원점수 +6, 상한 적용 +6 / 최대 12
     - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
   - 추가 데이터 가감점:
-    - 뉴스: +12
+    - 뉴스: +2
     - 유동성: +2
   - ETF 확산도: 0
-  - 리스크 패널티: -4
-  - 주요 근거: 1차 39, 최종 원점수 49, 표시 49. 20일 수익률 강함, 5일 수익률 강함, 이동평균 위 추세 유지. 주의: 단기 과열/추격 위험 존재.
+  - 리스크 패널티: 0
+  - 주요 근거: 1차 59, 최종 원점수 63, 표시 63. 20일 수익률 강함, 5일 수익률 강함, 상대 거래량 증가. 주의: 큰 감점 제한적.
   - 리스크 패널티 산정 근거:
-    - 총 리스크 패널티: -4
+    - 총 리스크 패널티: 0
     - 리스크 등급: LOW
-    - 감점된 리스크:
-      - volume divergence: -4 | 근거: 5d price strength is not confirmed by relative volume 0.74x. | 대응: Require relative volume recovery above 1.0x.
+    - 감점된 리스크: 없음
     - 관찰 리스크: 주요 관찰 리스크 없음
-    - 한 줄 해석: 1개 감점 리스크로 총 -4점 반영.
+    - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
 - 데이터 사용 현황:
   - 가격/거래량: 사용
   - 뉴스: 사용
@@ -1237,23 +729,145 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 13/3/0
+  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 7/8/1
   - 직접성/방향성/신선도: 2/1/4
   - 강한 촉매 수: 2
   - 중요 공시 수: 0
   - 직접 촉매: 없음
-  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-01 10:42 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-01 08:23 KST
+  - 보조 뉴스: MarketWatch RSS sector_theme / macro / under_6h
+  - 뉴스 수집 시각: 2026-09-02 09:51 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-02 09:19 KST
   - 뉴스 신선도 상태: FRESH
-  - 뉴스 이후 가격 반응: 긍정
-  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: August was the month of the comeback kids. Cramer reviews what drove the biggest winners
-  - 원점수/상한 점수: +24 / +12
+  - 뉴스 이후 가격 반응: 부정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
+  - 핵심 뉴스 요약: Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook
+  - 원점수/상한 점수: +20 / +12
   - 점수 반영: +12
-  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+- ETF 구성종목 확산도:
+  - 구성종목 데이터 상태: 일부 연결
+  - 샘플 수: 1/1
+  - 샘플 신뢰도: INSUFFICIENT
+  - 상승 종목 비율: 100%
+  - 20일선 위 비율: 100%
+  - 50일선 위 비율: 100%
+  - 상위 기여 종목: XOM
+  - 확산도 판단: SAMPLE_TOO_SMALL
+  - 원점수/샘플 상한/반영 점수: 0 / 0 / 0
+  - 점수 반영: 0
+- 거래대금 유동성:
+  - 데이터 상태: 일부 연결
+  - 거래대금 기준 유동성: ACCEPTABLE
+  - 거래대금: $148,231,946
+  - 평균 거래대금: $103,690,006
+  - 주문 영향: 지정가 권장
+  - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
+- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 데이터 없음
+- 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
+- 기준일 2026-09-01 | 종가 $426.88 | 1일 -0.54% | 5일 +5.22% | 20일 +8.86% | 상대 거래량 1.43배 | 52주 고점 대비 -7.05% | 데이터 소스: yfinance
+
+</details>
+
+### [ETF] iShares Expanded Tech-Software Sector ETF(IGV)
+- 자산 유형: ETF
+- ETF 세부 카테고리: 클라우드/엔터프라이즈 소프트웨어 ETF
+- ETF 역할: 테마 베타 매수
+- 상태: 매매 금지
+- linkedNarrative: AI 소프트웨어/사이버보안 확산
+- narrativeStatus: 약화
+- narrativeScore: 20
+- moneyFlowScore: 47
+- finalRawScore: 47
+- tieBreakerReason: 최종 원점수 47, 리스크 패널티 0, 5일 수익률 +4.25%, 상대 거래량 1.10배 순으로 정렬
+- 과열 리스크: 낮음
+- reasonConfidence: MEDIUM
+- reasonConfidenceExplanation: ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
+
+- todayActionLabel: 제외
+- 주문 실행: 시장가 가능
+- 기준일: 2026-09-01
+- 종가: $106.18
+- 1일 수익률: -3.46%
+- 5일 수익률: +4.25%
+- 20일 수익률: +4.10%
+- 상대 거래량: 1.10배
+- 52주 고점 대비 위치: -10.01%
+- whyMoneyIsFlowing: 20일 +4.10%, 5일 +4.25%, 상대 거래량 1.10배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: LIQUID
+- likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
+- whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
+#### 최근 뉴스/동향 한국어 요약
+
+- 요약: 후보 선정 후 재확인 뉴스 데이터 없음
+- 진입 조건: 20일선 위 눌림 후 재상승 확인
+- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+- 차트: ![IGV chart](charts/IGV.png)
+
+#### 상세 근거
+<details>
+<summary>iShares Expanded Tech-Software Sector ETF(IGV) 상세 근거 펼치기</summary>
+
+- moneyFlowScore(최종) 산정 근거:
+  - moneyFlowScore(1차): 40
+  - 최종 원점수: 47
+  - 최종 표시 점수: 47
+  - cap 적용: cap 미적용
+  - 계산식: +40 + +2 + 0 + +5 + 0 + 0 + 0 = 47
+  - 점수 해석: 매매 금지 또는 우선순위 낮은 후보.
+  - 가격/거래량 1차 점수: +40
+    - 추세: +12
+    - 단기 모멘텀: -1
+    - 중기 모멘텀: +3
+    - 거래량: +10
+    - 신고가 근접: +6
+    - 이동평균: +10
+  - 하위 점수 cap:
+    - 가격 모멘텀: 원점수 +12, 상한 적용 +12 / 최대 25
+    - 단기 모멘텀: 원점수 -1, 상한 적용 -1 / 최대 20
+    - 중기 모멘텀: 원점수 +3, 상한 적용 +3 / 최대 16
+    - 거래량: 원점수 +10, 상한 적용 +10 / 최대 20
+    - 신고가 근접: 원점수 +6, 상한 적용 +6 / 최대 12
+    - 이동평균: 원점수 +10, 상한 적용 +10 / 최대 14
+  - 추가 데이터 가감점:
+    - 뉴스: +2
+    - 유동성: +5
+  - ETF 확산도: 0
+  - 리스크 패널티: 0
+  - 주요 근거: 1차 40, 최종 원점수 47, 표시 47. 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 기준 유동성 양호. 주의: 큰 감점 제한적.
+  - 리스크 패널티 산정 근거:
+    - 총 리스크 패널티: 0
+    - 리스크 등급: LOW
+    - 감점된 리스크: 없음
+    - 관찰 리스크: 주요 관찰 리스크 없음
+    - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
+- 데이터 사용 현황:
+  - 가격/거래량: 사용
+  - 뉴스: 사용
+  - ETF 확산도: 일부 연결
+  - 거래대금 유동성: 사용
+  - 관련 ETF 상대강도: 사용
+- 뉴스 확인:
+  - 최근 뉴스 상태: 일부 연결
+  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 11/5/0
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 3
+  - 중요 공시 수: 0
+  - 직접 촉매: 없음
+  - 보조 뉴스: MarketWatch RSS sector_theme / macro / under_6h
+  - 뉴스 수집 시각: 2026-09-02 09:51 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-02 09:19 KST
+  - 뉴스 신선도 상태: FRESH
+  - 뉴스 이후 가격 반응: 부정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
+  - 핵심 뉴스 요약: Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook
+  - 원점수/상한 점수: +26 / +12
+  - 점수 반영: +12
+  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 3/3
@@ -1261,66 +875,305 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 상승 종목 비율: 100%
   - 20일선 위 비율: 100%
   - 50일선 위 비율: 100%
-  - 상위 기여 종목: PLTR, MSFT, AAPL
+  - 상위 기여 종목: AAPL, PLTR, MSFT
+  - 확산도 판단: SAMPLE_TOO_SMALL
+  - 원점수/샘플 상한/반영 점수: 0 / 0 / 0
+  - 점수 반영: 0
+- 거래대금 유동성:
+  - 데이터 상태: 일부 연결
+  - 거래대금 기준 유동성: LIQUID
+  - 거래대금: $1,354,925,923
+  - 평균 거래대금: $1,226,852,244
+  - 주문 영향: 시장가 가능
+  - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
+- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 데이터 없음
+- 차트 요약: 20일선 위에서 단기 눌림 확인 구간
+- 기준일 2026-09-01 | 종가 $106.18 | 1일 -3.46% | 5일 +4.25% | 20일 +4.10% | 상대 거래량 1.10배 | 52주 고점 대비 -10.01% | 데이터 소스: yfinance
+
+</details>
+
+### [ETF] Roundhill Magnificent Seven ETF(MAGS)
+- 자산 유형: ETF
+- ETF 세부 카테고리: 메가캡 플랫폼 ETF
+- ETF 역할: 테마 베타 매수
+- 상태: 매매 금지
+- linkedNarrative: 소프트웨어 실적/AI 수익화
+- narrativeStatus: 약화
+- narrativeScore: 18
+- moneyFlowScore: 35
+- finalRawScore: 35
+- tieBreakerReason: 최종 원점수 35, 리스크 패널티 0, 5일 수익률 +0.92%, 상대 거래량 1.00배 순으로 정렬
+- 과열 리스크: 낮음
+- reasonConfidence: MEDIUM
+- reasonConfidenceExplanation: ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
+
+- todayActionLabel: 제외
+- 주문 실행: 지정가 권장
+- 기준일: 2026-09-01
+- 종가: $68.23
+- 1일 수익률: -0.74%
+- 5일 수익률: +0.92%
+- 20일 수익률: -1.06%
+- 상대 거래량: 1.00배
+- 52주 고점 대비 위치: -4.12%
+- whyMoneyIsFlowing: 20일 -1.06%, 5일 +0.92%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE
+- likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
+- whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
+#### 최근 뉴스/동향 한국어 요약
+
+- 요약: 후보 선정 후 재확인 뉴스 데이터 없음
+- 진입 조건: 전일 고점 돌파와 5일선 유지 확인
+- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+- 차트: ![MAGS chart](charts/MAGS.png)
+
+#### 상세 근거
+<details>
+<summary>Roundhill Magnificent Seven ETF(MAGS) 상세 근거 펼치기</summary>
+
+- moneyFlowScore(최종) 산정 근거:
+  - moneyFlowScore(1차): 31
+  - 최종 원점수: 35
+  - 최종 표시 점수: 35
+  - cap 적용: cap 미적용
+  - 계산식: +31 + +2 + 0 + +2 + 0 + 0 + 0 = 35
+  - 점수 해석: 매매 금지 또는 우선순위 낮은 후보.
+  - 가격/거래량 1차 점수: +31
+    - 추세: 0
+    - 단기 모멘텀: 0
+    - 중기 모멘텀: -1
+    - 거래량: +10
+    - 신고가 근접: +12
+    - 이동평균: +10
+  - 하위 점수 cap:
+    - 가격 모멘텀: 원점수 0, 상한 적용 0 / 최대 25
+    - 단기 모멘텀: 원점수 0, 상한 적용 0 / 최대 20
+    - 중기 모멘텀: 원점수 -1, 상한 적용 -1 / 최대 16
+    - 거래량: 원점수 +10, 상한 적용 +10 / 최대 20
+    - 신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12
+    - 이동평균: 원점수 +10, 상한 적용 +10 / 최대 14
+  - 추가 데이터 가감점:
+    - 뉴스: +2
+    - 유동성: +2
+  - ETF 확산도: 0
+  - 리스크 패널티: 0
+  - 주요 근거: 1차 31, 최종 원점수 35, 표시 35. 52주 고점 근처, 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 기준 유동성 양호. 주의: ETF 구성종목 확산도 데이터 미연결.
+  - 리스크 패널티 산정 근거:
+    - 총 리스크 패널티: 0
+    - 리스크 등급: LOW
+    - 감점된 리스크: 없음
+    - 관찰 리스크: ETF breadth data not connected
+    - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
+- 데이터 사용 현황:
+  - 가격/거래량: 사용
+  - 뉴스: 사용
+  - ETF 확산도: 미연결
+  - 거래대금 유동성: 사용
+  - 관련 ETF 상대강도: 사용
+- 뉴스 확인:
+  - 최근 뉴스 상태: 일부 연결
+  - 뉴스 소스: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 11/5/0
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 1
+  - 중요 공시 수: 0
+  - 직접 촉매: 없음
+  - 보조 뉴스: MarketWatch RSS sector_theme / macro / under_6h
+  - 뉴스 수집 시각: 2026-09-02 09:51 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-02 09:19 KST
+  - 뉴스 신선도 상태: FRESH
+  - 뉴스 이후 가격 반응: 부정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
+  - 핵심 뉴스 요약: Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook
+  - 원점수/상한 점수: +22 / +12
+  - 점수 반영: +12
+  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+- ETF 구성종목 확산도:
+  - 구성종목 데이터 상태: 미연결
+  - 샘플 수: 0/0
+  - 샘플 신뢰도: UNKNOWN
+  - 상승 종목 비율: 데이터 없음
+  - 20일선 위 비율: 데이터 없음
+  - 50일선 위 비율: 데이터 없음
+  - 상위 기여 종목: 데이터 없음
+  - 확산도 판단: UNKNOWN
+  - 원점수/샘플 상한/반영 점수: 0 / N/A / 0
+  - 점수 반영: 0
+- 거래대금 유동성:
+  - 데이터 상태: 일부 연결
+  - 거래대금 기준 유동성: ACCEPTABLE
+  - 거래대금: $181,003,000
+  - 평균 거래대금: $181,662,102
+  - 주문 영향: 지정가 권장
+  - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
+- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 데이터 없음
+- 차트 요약: 20일선 위에서 단기 눌림 확인 구간
+- 기준일 2026-09-01 | 종가 $68.23 | 1일 -0.74% | 5일 +0.92% | 20일 -1.06% | 상대 거래량 1.00배 | 52주 고점 대비 -4.12% | 데이터 소스: yfinance
+
+</details>
+
+### [ETF] First Trust NASDAQ Cybersecurity ETF(CIBR)
+- 자산 유형: ETF
+- ETF 세부 카테고리: 사이버보안 ETF
+- ETF 역할: 테마 베타 매수
+- 상태: 매매 금지
+- linkedNarrative: 사이버보안 지출 재가속
+- narrativeStatus: 약화
+- narrativeScore: 28
+- moneyFlowScore: 17
+- finalRawScore: 17
+- tieBreakerReason: 최종 원점수 17, 리스크 패널티 -6, 5일 수익률 +4.04%, 상대 거래량 1.43배 순으로 정렬
+- 과열 리스크: 낮음
+- reasonConfidence: LOW
+- reasonConfidenceExplanation: 가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.
+
+- todayActionLabel: 제외
+- 주문 실행: 지정가 권장
+- 기준일: 2026-09-01
+- 종가: $96.2
+- 1일 수익률: -3.94%
+- 5일 수익률: +4.04%
+- 20일 수익률: -1.78%
+- 상대 거래량: 1.43배
+- 52주 고점 대비 위치: -6.01%
+- whyMoneyIsFlowing: 20일 -1.78%, 5일 +4.04%, 상대 거래량 1.43배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE
+- likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
+- whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
+#### 최근 뉴스/동향 한국어 요약
+
+- 요약: 후보 선정 후 재확인 뉴스 데이터 없음
+- 진입 조건: 20일선 위 눌림 후 재상승 확인
+- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+- 차트: ![CIBR chart](charts/CIBR.png)
+
+#### 상세 근거
+<details>
+<summary>First Trust NASDAQ Cybersecurity ETF(CIBR) 상세 근거 펼치기</summary>
+
+- moneyFlowScore(최종) 산정 근거:
+  - moneyFlowScore(1차): 19
+  - 최종 원점수: 17
+  - 최종 표시 점수: 17
+  - cap 적용: cap 미적용
+  - 계산식: +19 + +2 + 0 + +2 + 0 - 6 + 0 = 17
+  - 점수 해석: 매매 금지 또는 우선순위 낮은 후보.
+  - 가격/거래량 1차 점수: +19
+    - 추세: +3
+    - 단기 모멘텀: -1
+    - 중기 모멘텀: -1
+    - 거래량: +14
+    - 신고가 근접: +6
+    - 이동평균: -2
+  - 하위 점수 cap:
+    - 가격 모멘텀: 원점수 +3, 상한 적용 +3 / 최대 25
+    - 단기 모멘텀: 원점수 -1, 상한 적용 -1 / 최대 20
+    - 중기 모멘텀: 원점수 -1, 상한 적용 -1 / 최대 16
+    - 거래량: 원점수 +14, 상한 적용 +14 / 최대 20
+    - 신고가 근접: 원점수 +6, 상한 적용 +6 / 최대 12
+    - 이동평균: 원점수 -2, 상한 적용 -2 / 최대 14
+  - 추가 데이터 가감점:
+    - 뉴스: +2
+    - 유동성: +2
+  - ETF 확산도: 0
+  - 리스크 패널티: -6
+  - 주요 근거: 1차 19, 최종 원점수 17, 표시 17. 상대 거래량 증가, 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 기준 유동성 양호. 주의: 단기 과열/추격 위험 존재.
+  - 리스크 패널티 산정 근거:
+    - 총 리스크 패널티: -6
+    - 리스크 등급: LOW
+    - 감점된 리스크:
+      - 20d moving average break risk: -6 | 근거: Close is below the 20-day moving average. | 대응: Hold off until 20-day moving average is recovered.
+    - 관찰 리스크: 주요 관찰 리스크 없음
+    - 한 줄 해석: 1개 감점 리스크로 총 -6점 반영.
+- 데이터 사용 현황:
+  - 가격/거래량: 사용
+  - 뉴스: 사용
+  - ETF 확산도: 일부 연결
+  - 거래대금 유동성: 사용
+  - 관련 ETF 상대강도: 사용
+- 뉴스 확인:
+  - 최근 뉴스 상태: 일부 연결
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 13/3/0
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 2
+  - 중요 공시 수: 0
+  - 직접 촉매: 없음
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-09-02 09:51 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-02 09:44 KST
+  - 뉴스 신선도 상태: FRESH
+  - 뉴스 이후 가격 반응: 부정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
+  - 핵심 뉴스 요약: U.S. completes fresh strikes on Iran as Mideast tensions flare again
+  - 원점수/상한 점수: +24 / +12
+  - 점수 반영: +12
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+- ETF 구성종목 확산도:
+  - 구성종목 데이터 상태: 일부 연결
+  - 샘플 수: 2/2
+  - 샘플 신뢰도: INSUFFICIENT
+  - 상승 종목 비율: 100%
+  - 20일선 위 비율: 100%
+  - 50일선 위 비율: 100%
+  - 상위 기여 종목: PLTR, MSFT
   - 확산도 판단: SAMPLE_TOO_SMALL
   - 원점수/샘플 상한/반영 점수: 0 / 0 / 0
   - 점수 반영: 0
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
   - 거래대금 기준 유동성: ACCEPTABLE
-  - 거래대금: $936,983,848
-  - 평균 거래대금: $1,266,566,963
+  - 거래대금: $229,080,868
+  - 평균 거래대금: $160,040,148
   - 주문 영향: 지정가 권장
   - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
 - reasonConfidence 근거: 가격/거래량이 약하거나 주요 데이터가 부족해 낮음.
 - 후보 선정 후 뉴스/동향 재확인:
   - 재확인 상태: 데이터 없음
-- 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
-- 기준일 2026-08-31 | 종가 $109.98 | 1일 +0.44% | 5일 +7.35% | 20일 +12.89% | 상대 거래량 0.74배 | 52주 고점 대비 -6.79% | 데이터 소스: yfinance
+- 차트 요약: 20일선 아래라 추세 확인 전까지 보수적 접근
+- 기준일 2026-09-01 | 종가 $96.2 | 1일 -3.94% | 5일 +4.04% | 20일 -1.78% | 상대 거래량 1.43배 | 52주 고점 대비 -6.01% | 데이터 소스: yfinance
 
 </details>
 
 ### 1-3. ETF 과열/주의 후보
 
-#### Energy Select Sector SPDR Fund(XLE)
-- moneyFlowScore(최종): 64
-- moneyFlowScore 산정 근거 요약: 1차 51, 최종 원점수 64, 표시 64. 20일 수익률 강함, 1일 단기 모멘텀 확인, 52주 고점 근처. 주의: 큰 감점 제한적.
-- 과열 리스크: 낮음~중간
-- 과열 근거: 전통 에너지 ETF 기준 단기 급등과 고점 근접 조합 확인
-- 대응: 돌파 확인 후 진입
-
+해당 없음
 
 ### 1-4. ETF 제외/매매 금지 후보
 
-#### iShares Semiconductor ETF(SOXX)
+#### Roundhill Memory ETF(DRAM)
 - moneyFlowScore(최종): 0
-- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -1, 표시 0. 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 기준 유동성 양호. 주의: 단기 과열/추격 위험 존재.
+- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -21, 표시 0. 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 기준 유동성 양호. 주의: 단기 과열/추격 위험 존재, ETF 구성종목 확산도 데이터 미연결.
 - 제외 사유: 테마 자금 흐름 약함
 - 해제 조건: 상대 거래량 1.0배 회복 후 관찰
+
+#### VanEck Semiconductor ETF(SMH)
+- moneyFlowScore(최종): 0
+- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -28, 표시 0. 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 기준 유동성 양호. 주의: 단기 과열/추격 위험 존재.
+- 제외 사유: 테마 자금 흐름 약함
+- 해제 조건: 상대 거래량 1.0배 회복 후 관찰
+
+#### iShares Semiconductor ETF(SOXX)
+- moneyFlowScore(최종): 0
+- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -15, 표시 0. 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 기준 유동성 양호. 주의: 단기 과열/추격 위험 존재.
+- 제외 사유: 테마 자금 흐름 약함
+- 해제 조건: 20일선 위 눌림 후 재상승 확인
 
 #### Invesco PHLX Semiconductor ETF(SOXQ)
 - moneyFlowScore(최종): 0
-- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -15, 표시 0. 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 유동성 주의. 주의: 단기 과열/추격 위험 존재.
-- 제외 사유: 테마 자금 흐름 약함
-- 해제 조건: 상대 거래량 1.0배 회복 후 관찰
-
-#### Global X Robotics & Artificial Intelligence ETF(BOTZ)
-- moneyFlowScore(최종): 0
-- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -10, 표시 0. 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 유동성 주의. 주의: 단기 과열/추격 위험 존재, ETF 구성종목 확산도 데이터 미연결.
-- 제외 사유: 테마 자금 흐름 약함
-- 해제 조건: 상대 거래량 1.0배 회복 후 관찰
-
-#### ROBO Global Robotics and Automation Index ETF(ROBO)
-- moneyFlowScore(최종): 0
-- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -23, 표시 0. 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 유동성 주의. 주의: 단기 과열/추격 위험 존재, ETF 구성종목 확산도 데이터 미연결.
-- 제외 사유: 테마 자금 흐름 약함
-- 해제 조건: 상대 거래량 1.0배 회복 후 관찰
-
-#### iShares U.S. Aerospace & Defense ETF(ITA)
-- moneyFlowScore(최종): 0
-- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -6, 표시 0. 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 기준 유동성 양호. 주의: 단기 과열/추격 위험 존재, ETF 구성종목 확산도 데이터 미연결.
+- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -9, 표시 0. 상대 거래량 증가, 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 기준 유동성 양호. 주의: 단기 과열/추격 위험 존재.
 - 제외 사유: 테마 자금 흐름 약함
 - 해제 조건: 20일선 위 눌림 후 재상승 확인
+
+#### Global X Artificial Intelligence & Technology ETF(AIQ)
+- moneyFlowScore(최종): 0
+- moneyFlowScore 산정 근거 요약: 1차 0, 최종 원점수 -20, 표시 0. 뉴스 흐름이 가격/거래량 근거 보강, 거래대금 유동성 주의. 주의: 단기 과열/추격 위험 존재.
+- 제외 사유: 테마 자금 흐름 약함
+- 해제 조건: 상대 거래량 1.0배 회복 후 관찰
 
 
 ## 2. 개별 종목 트레이딩 보고서
@@ -1332,14 +1185,14 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 데이터 수집 성공: 120
 - 데이터 수집 실패: -19
 - 상세 데이터 수집 대상: 가격/거래량 1차 스캔 상위 20개
-- 오늘 진입 후보: 4
-- 오늘 눌림 대기: 2
-- 오늘 관찰: 64
-- 오늘 매매 금지: 50
-- 개별 종목 진입 후보: CrowdStrike Holdings Inc.(CRWD), Zscaler Inc.(ZS), Tesla Inc.(TSLA)
-- 개별 종목 눌림 대기: Palo Alto Networks Inc.(PANW), Fortinet Inc.(FTNT)
-- 개별 종목 매매 금지: QUALCOMM Incorporated(QCOM)
-- 오늘 개별 종목 최우선 1개: CrowdStrike Holdings Inc.(CRWD) - 관련 ETF보다 강함 | 주식 5일 +21.15% vs ETF 평균 +6.87%, 주식 20일 +14.05% vs ETF 평균 +8.09%, 상대 거래량 1.88배 vs ETF 평균 1.17배
+- 오늘 진입 후보: 1
+- 오늘 눌림 대기: 0
+- 오늘 관찰: 85
+- 오늘 매매 금지: 34
+- 개별 종목 진입 후보: Chevron(CVX)
+- 개별 종목 눌림 대기: 없음
+- 개별 종목 매매 금지: Diamondback Energy Inc.(FANG), Alnylam Pharmaceuticals Inc.(ALNY)
+- 오늘 개별 종목 최우선 1개: Chevron(CVX) - 관련 ETF보다 강함 | 주식 5일 +5.58% vs ETF 평균 -1.29%, 주식 20일 +10.85% vs ETF 평균 -2.39%, 상대 거래량 1.08배 vs ETF 평균 1.18배
 - 개별 종목 섹션 해석: 이 섹션은 ETF로 확인된 테마 자금 흐름 안에서 ETF보다 더 강한 돌파 가능성이 있는 개별 종목만 선별하는 영역이다.
 
 ### 2-2. 오늘 개별 종목 신규 후보 TOP 5
@@ -1350,98 +1203,83 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 3. 뉴스/유동성/관련 ETF 대비 상대강도/리스크 패널티를 반영
 4. moneyFlowScore(최종), 최종 원점수, 리스크 패널티, 5일 수익률, 상대 거래량 순으로 재정렬
 
-### CrowdStrike Holdings Inc.(CRWD)
+### Apple Inc.(AAPL)
 - 자산 유형: STOCK
-- 상태: 진입 후보
-- primaryTheme: 사이버보안
+- 상태: 관찰
+- primaryTheme: 메가캡 플랫폼
 - primarySector: Technology
-- industry: Cybersecurity
-- relatedEtfs: HACK, CIBR, IHAK, IGV
-- linkedNarrative: 사이버보안 지출 재가속
-- narrativeStatus: 부상
-- narrativeScore: 87
-- moneyFlowScore: 100
-- finalRawScore: 114
-- tieBreakerReason: 최종 원점수 114, 리스크 패널티 -6, 5일 수익률 +21.15%, 상대 거래량 1.88배 순으로 정렬
-- 과열 리스크: 낮음~중간
+- industry: Consumer Electronics
+- relatedEtfs: QQQ, MAGS, SPY
+- linkedNarrative: Integrated Oil & Gas 자금 유입
+- narrativeStatus: 관찰
+- narrativeScore: 53
+- moneyFlowScore: 77
+- finalRawScore: 77
+- tieBreakerReason: 최종 원점수 77, 리스크 패널티 0, 5일 수익률 +4.91%, 상대 거래량 1.29배 순으로 정렬
+- 과열 리스크: 낮음
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / product / under_6h / positive - CrowdStrike Launches AI Partner Specialization, Defining Cybersecurity’s Ecosystem for the Agentic Era 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / product / under_6h / positive - CrowdStrike Launches AI Partner Specialization, Defining Cybersecurity’s Ecosystem for the Agentic Era
-- todayActionLabel: 자금흐름 예외 조건부
+- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / product / under_6h / positive - John Ternus Takes Over Apple with Just Eight Days Until His First Big Test 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- 직접 촉매: Yahoo Finance RSS / product / under_6h / positive - John Ternus Takes Over Apple with Just Eight Days Until His First Big Test
+- todayActionLabel: 관찰
 - 주문 실행: 시장가 가능
-- 기준일: 2026-08-31
-- 종가: $231
-- 1일 수익률: +5.77%
-- 5일 수익률: +21.15%
-- 20일 수익률: +14.05%
-- 상대 거래량: 1.88배
-- 52주 고점 대비 위치: -1.22%
-- 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +21.15% vs ETF 평균 +6.87%, 주식 20일 +14.05% vs ETF 평균 +8.09%, 상대 거래량 1.88배 vs ETF 평균 1.17배
-- whyMoneyIsFlowing: 20일 +14.05%, 5일 +21.15%, 상대 거래량 1.88배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS product/under_6h / 유동성: LIQUID
+- 기준일: 2026-09-01
+- 종가: $325.13
+- 1일 수익률: +2.61%
+- 5일 수익률: +4.91%
+- 20일 수익률: +5.09%
+- 상대 거래량: 1.29배
+- 52주 고점 대비 위치: -5.64%
+- 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +4.91% vs ETF 평균 -0.02%, 주식 20일 +5.09% vs ETF 평균 -1.51%, 상대 거래량 1.29배 vs ETF 평균 1.06배
+- whyMoneyIsFlowing: 20일 +5.09%, 5일 +4.91%, 상대 거래량 1.29배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS product/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
-- whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
-- 왜 ETF가 아니라 이 종목인가: CRWD가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
-- ETF가 더 나은 경우: CRWD가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
+- whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
+- 왜 ETF가 아니라 이 종목인가: AAPL가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
+- ETF가 더 나은 경우: AAPL가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
 #### 최근 뉴스/동향 한국어 요약
 
-- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "CrowdStrike (CRWD) Q2 2027 Earnings Call Transcript"입니다.
-- 직접 촉매 판단: CrowdStrike Holdings Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "CrowdStrike (CRWD) Q2 2027 Earnings Call Transcript"이며, 실적 재료로 봅니다.
-- 뉴스 1: CrowdStrike (CRWD) Q2 2027 Earnings Call Transcript
-  - 내용: CrowdStrike Holdings Inc. 관련 기사는 CrowdStrike (CRWD) Q2 2027 Earnings Call Transcript 이슈를 다루며, 주가 변동률 +51.00%를 핵심 내용으로 봅니다.
-  - 투자 의미: CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 뉴스 2: Why CrowdStrike (CRWD) Stock Is Trading Up Today
-  - 내용: CrowdStrike Holdings Inc. 관련 기사는 Why CrowdStrike (CRWD) Stock Is Trading Up Today 이슈를 다루며, 주가 변동률 +4.00%를 핵심 내용으로 봅니다.
-  - 투자 의미: CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 뉴스 3: CrowdStrike Launches AI Partner Specialization, Defining Cybersecurity’s Ecosystem for the Agentic Era
-  - 내용: CrowdStrike Holdings Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 AUSTIN, Texas & LAS VEGAS, August 31, 2026--Fal.Con 2026 — CrowdStrike (NASDAQ: CRWD) today announced its new AI Partner Specialization within the CrowdStrike Accelerate Partner...입니다.
-  - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
-  - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-- 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
-- 진입 조건: 전일 고점 돌파와 5일선 유지 확인
+- 요약: 후보 선정 후 재확인 뉴스 데이터 없음
+- 진입 조건: 20일선 위 눌림 후 재상승 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-- 차트: ![CRWD chart](charts/CRWD.png)
+- 차트: ![AAPL chart](charts/AAPL.png)
 
 #### 상세 근거
 <details>
-<summary>CrowdStrike Holdings Inc.(CRWD) 상세 근거 펼치기</summary>
+<summary>Apple Inc.(AAPL) 상세 근거 펼치기</summary>
 
 - moneyFlowScore(최종) 산정 근거:
-  - moneyFlowScore(1차): 96
-  - 최종 원점수: 114
-  - 최종 표시 점수: 100
-  - cap 적용: raw score 114 capped to displayed score 100
-  - 계산식: +96 + +12 + 0 + +5 + +7 - 6 + 0 = 114 -> 100
-  - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
-  - 가격/거래량 1차 점수: +96
-    - 추세: +24
-    - 단기 모멘텀: +19
-    - 중기 모멘텀: +9
-    - 거래량: +18
-    - 신고가 근접: +12
+  - moneyFlowScore(1차): 57
+  - 최종 원점수: 77
+  - 최종 표시 점수: 77
+  - cap 적용: cap 미적용
+  - 계산식: +57 + +12 + 0 + +5 + +3 + 0 + 0 = 77
+  - 점수 해석: 관심 후보. 눌림 또는 돌파 확인 후 진입 검토.
+  - 가격/거래량 1차 점수: +57
+    - 추세: +13
+    - 단기 모멘텀: +7
+    - 중기 모멘텀: +3
+    - 거래량: +14
+    - 신고가 근접: +6
     - 이동평균: +14
   - 하위 점수 cap:
-    - 가격 모멘텀: 원점수 +24, 상한 적용 +24 / 최대 25
-    - 단기 모멘텀: 원점수 +19, 상한 적용 +19 / 최대 20
-    - 중기 모멘텀: 원점수 +9, 상한 적용 +9 / 최대 16
-    - 거래량: 원점수 +18, 상한 적용 +18 / 최대 20
-    - 신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12
+    - 가격 모멘텀: 원점수 +13, 상한 적용 +13 / 최대 25
+    - 단기 모멘텀: 원점수 +7, 상한 적용 +7 / 최대 20
+    - 중기 모멘텀: 원점수 +3, 상한 적용 +3 / 최대 16
+    - 거래량: 원점수 +14, 상한 적용 +14 / 최대 20
+    - 신고가 근접: 원점수 +6, 상한 적용 +6 / 최대 12
     - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
-    - 관련 ETF 상대강도: 원점수 +7, 상한 적용 +7 / 최대 8
+    - 관련 ETF 상대강도: 원점수 +3, 상한 적용 +3 / 최대 8
   - 추가 데이터 가감점:
     - 뉴스: +12
     - 유동성: +5
-  - ETF 대비 상대강도: +7
-  - 리스크 패널티: -6
-  - 주요 근거: 1차 96, 최종 원점수 114, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 단기 과열/추격 위험 존재.
+  - ETF 대비 상대강도: +3
+  - 리스크 패널티: 0
+  - 주요 근거: 1차 57, 최종 원점수 77, 표시 77. 1일 단기 모멘텀 확인, 상대 거래량 증가, 이동평균 위 추세 유지. 주의: 큰 감점 제한적.
   - 리스크 패널티 산정 근거:
-    - 총 리스크 패널티: -6
+    - 총 리스크 패널티: 0
     - 리스크 등급: LOW
-    - 감점된 리스크:
-      - short-term overheat: -6 | 근거: 5d return +21.15% is extended. | 대응: Prefer pullback or prior high reclaim over chasing.
+    - 감점된 리스크: 없음
     - 관찰 리스크: 주요 관찰 리스크 없음
-    - 한 줄 해석: 1개 감점 리스크로 총 -6점 반영.
+    - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
 - 데이터 사용 현황:
   - 가격/거래량: 사용
   - 뉴스: 사용
@@ -1452,145 +1290,263 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 최근 뉴스 상태: 일부 연결
   - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 13/3/0
+  - 긍정/중립/부정: 11/4/1
   - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 1
+  - 강한 촉매 수: 3
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / product / under_6h / positive - CrowdStrike Launches AI Partner Specialization, Defining Cybersecurity’s Ecosystem for the Agentic Era
+  - 직접 촉매: Yahoo Finance RSS / product / under_6h / positive - John Ternus Takes Over Apple with Just Eight Days Until His First Big Test
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-01 10:42 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-01 08:23 KST
+  - 뉴스 수집 시각: 2026-09-02 09:51 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-02 09:44 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: August was the month of the comeback kids. Cramer reviews what drove the biggest winners
-  - 원점수/상한 점수: +24 / +12
+  - 핵심 뉴스 요약: U.S. completes fresh strikes on Iran as Mideast tensions flare again
+  - 원점수/상한 점수: +26 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
   - 거래대금 기준 유동성: LIQUID
-  - 거래대금: $4,099,648,938
-  - 평균 거래대금: $2,180,131,569
+  - 거래대금: $17,047,349,788
+  - 평균 거래대금: $13,196,841,376
+  - 주문 영향: 시장가 가능
+  - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
+- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 데이터 없음
+- 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
+- 기준일 2026-09-01 | 종가 $325.13 | 1일 +2.61% | 5일 +4.91% | 20일 +5.09% | 상대 거래량 1.29배 | 52주 고점 대비 -5.64% | 데이터 소스: yfinance
+
+</details>
+
+### Chevron(CVX)
+- 자산 유형: STOCK
+- 상태: 진입 후보
+- primaryTheme: Energy
+- primarySector: Energy
+- industry: Integrated Oil & Gas
+- relatedEtfs: QQQ, SPY, IWM
+- linkedNarrative: 매크로 방어/헤지
+- narrativeStatus: 관찰
+- narrativeScore: 54
+- moneyFlowScore: 85
+- finalRawScore: 85
+- tieBreakerReason: 최종 원점수 85, 리스크 패널티 0, 5일 수익률 +5.58%, 상대 거래량 1.08배 순으로 정렬
+- 과열 리스크: 낮음~중간
+- reasonConfidence: HIGH
+- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / product / under_6h - Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- 직접 촉매: Yahoo Finance RSS / product / under_6h - Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.
+- todayActionLabel: 자금흐름 예외 조건부
+- 주문 실행: 시장가 가능
+- 기준일: 2026-09-01
+- 종가: $211.05
+- 1일 수익률: +2.38%
+- 5일 수익률: +5.58%
+- 20일 수익률: +10.85%
+- 상대 거래량: 1.08배
+- 52주 고점 대비 위치: -1.70%
+- 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +5.58% vs ETF 평균 -1.29%, 주식 20일 +10.85% vs ETF 평균 -2.39%, 상대 거래량 1.08배 vs ETF 평균 1.18배
+- whyMoneyIsFlowing: 20일 +10.85%, 5일 +5.58%, 상대 거래량 1.08배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID
+- likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
+- whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
+- 왜 ETF가 아니라 이 종목인가: CVX가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
+- ETF가 더 나은 경우: CVX가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
+#### 최근 뉴스/동향 한국어 요약
+
+- 요약: 섹터/테마 뉴스 중심 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook"입니다.
+- 직접 촉매 판단: Chevron에 대해 강한 직접 촉매는 확인되지 않았습니다.
+- 뉴스 1: Palo Alto Networks&#x2019; stock falls despite strong AI cybersecurity demand
+  - 내용: Chevron 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Enterprise cyber threats and AI adoption are giving Palo Alto Networks &#x2018;durable tailwinds,&#x2019; according to CEO Nikesh Arora, but the stock retreated after an earning...입니다.
+  - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
+  - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
+- 뉴스 2: Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.
+  - 내용: Chevron 관련 기사는 Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 이슈를 다루며, 주가 변동률 +50.00%를 핵심 내용으로 봅니다.
+  - 투자 의미: Chevron의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
+  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
+- 뉴스 3: Oil giant Chevron is expected to announce it will expand operations in Venezuela, US official says
+  - 내용: Chevron 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 Oil giant Chevron is planning to expand its operations in Venezuela, a U.S.입니다.
+  - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
+  - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
+- 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
+- 진입 조건: 전일 고점 돌파와 5일선 유지 확인
+- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+- 차트: ![CVX chart](charts/CVX.png)
+
+#### 상세 근거
+<details>
+<summary>Chevron(CVX) 상세 근거 펼치기</summary>
+
+- moneyFlowScore(최종) 산정 근거:
+  - moneyFlowScore(1차): 66
+  - 최종 원점수: 85
+  - 최종 표시 점수: 85
+  - cap 적용: cap 미적용
+  - 계산식: +66 + +12 + 0 + +5 + +2 + 0 + 0 = 85
+  - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
+  - 가격/거래량 1차 점수: +66
+    - 추세: +16
+    - 단기 모멘텀: +7
+    - 중기 모멘텀: +7
+    - 거래량: +10
+    - 신고가 근접: +12
+    - 이동평균: +14
+  - 하위 점수 cap:
+    - 가격 모멘텀: 원점수 +16, 상한 적용 +16 / 최대 25
+    - 단기 모멘텀: 원점수 +7, 상한 적용 +7 / 최대 20
+    - 중기 모멘텀: 원점수 +7, 상한 적용 +7 / 최대 16
+    - 거래량: 원점수 +10, 상한 적용 +10 / 최대 20
+    - 신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12
+    - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
+    - 관련 ETF 상대강도: 원점수 +2, 상한 적용 +2 / 최대 8
+  - 추가 데이터 가감점:
+    - 뉴스: +12
+    - 유동성: +5
+  - ETF 대비 상대강도: +2
+  - 리스크 패널티: 0
+  - 주요 근거: 1차 66, 최종 원점수 85, 표시 85. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
+  - 리스크 패널티 산정 근거:
+    - 총 리스크 패널티: 0
+    - 리스크 등급: LOW
+    - 감점된 리스크: 없음
+    - 관찰 리스크: 주요 관찰 리스크 없음
+    - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
+- 데이터 사용 현황:
+  - 가격/거래량: 사용
+  - 뉴스: 사용
+  - ETF 확산도: 관련 ETF에서 확인
+  - 거래대금 유동성: 사용
+  - 관련 ETF 상대강도: 사용
+- 뉴스 확인:
+  - 최근 뉴스 상태: 일부 연결
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 12/3/1
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 2
+  - 중요 공시 수: 0
+  - 직접 촉매: 없음
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-09-02 09:51 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-02 09:44 KST
+  - 뉴스 신선도 상태: FRESH
+  - 뉴스 이후 가격 반응: 긍정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
+  - 핵심 뉴스 요약: U.S. completes fresh strikes on Iran as Mideast tensions flare again
+  - 원점수/상한 점수: +23 / +12
+  - 점수 반영: +12
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+- ETF 구성종목 확산도: 관련 ETF에서 확인
+- 거래대금 유동성:
+  - 데이터 상태: 일부 연결
+  - 거래대금 기준 유동성: LIQUID
+  - 거래대금: $1,802,381,140
+  - 평균 거래대금: $1,674,341,537
   - 주문 영향: 시장가 가능
   - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
 - reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
 - 후보 선정 후 뉴스/동향 재확인:
   - 재확인 상태: 일부 연결
-  - 재확인 시각: 2026-09-01 10:42 KST
-  - 최근 발행 시각: 2026-09-01 07:24 KST
+  - 재확인 시각: 2026-09-02 09:51 KST
+  - 최근 발행 시각: 2026-09-02 09:19 KST
   - 신선도: FRESH
   - 출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "CrowdStrike (CRWD) Q2 2027 Earnings Call Transcript"입니다.
-  - 직접 촉매: Yahoo Finance RSS / earnings / under_24h - CrowdStrike (CRWD) Q2 2027 Earnings Call Transcript
-  - 한국어 뉴스 요약 1: CrowdStrike (CRWD) Q2 2027 Earnings Call Transcript
-    - 내용: CrowdStrike Holdings Inc. 관련 기사는 CrowdStrike (CRWD) Q2 2027 Earnings Call Transcript 이슈를 다루며, 주가 변동률 +51.00%를 핵심 내용으로 봅니다.
-    - 투자 의미: CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
+  - 한국어 요약: 섹터/테마 뉴스 중심 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook"입니다.
+  - 직접 촉매: 없음
+  - 한국어 뉴스 요약 1: Palo Alto Networks&#x2019; stock falls despite strong AI cybersecurity demand
+    - 내용: Chevron 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Enterprise cyber threats and AI adoption are giving Palo Alto Networks &#x2018;durable tailwinds,&#x2019; according to CEO Nikesh Arora, but the stock retreated after an earning...입니다.
+    - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
+    - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
+  - 한국어 뉴스 요약 2: Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.
+    - 내용: Chevron 관련 기사는 Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 이슈를 다루며, 주가 변동률 +50.00%를 핵심 내용으로 봅니다.
+    - 투자 의미: Chevron의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
     - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-  - 한국어 뉴스 요약 2: Why CrowdStrike (CRWD) Stock Is Trading Up Today
-    - 내용: CrowdStrike Holdings Inc. 관련 기사는 Why CrowdStrike (CRWD) Stock Is Trading Up Today 이슈를 다루며, 주가 변동률 +4.00%를 핵심 내용으로 봅니다.
-    - 투자 의미: CrowdStrike Holdings Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-    - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-  - 한국어 뉴스 요약 3: CrowdStrike Launches AI Partner Specialization, Defining Cybersecurity’s Ecosystem for the Agentic Era
-    - 내용: CrowdStrike Holdings Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 AUSTIN, Texas & LAS VEGAS, August 31, 2026--Fal.Con 2026 — CrowdStrike (NASDAQ: CRWD) today announced its new AI Partner Specialization within the CrowdStrike Accelerate Partner...입니다.
+  - 한국어 뉴스 요약 3: Oil giant Chevron is expected to announce it will expand operations in Venezuela, US official says
+    - 내용: Chevron 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 Oil giant Chevron is planning to expand its operations in Venezuela, a U.S.입니다.
     - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
     - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-  - 원문 헤드라인 1: Yahoo Finance RSS / earnings / under_24h / positive - CrowdStrike (CRWD) Q2 2027 Earnings Call Transcript
-  - 원문 헤드라인 2: Yahoo Finance RSS / general_market / under_24h / positive - Why CrowdStrike (CRWD) Stock Is Trading Up Today
-  - 원문 헤드라인 3: Yahoo Finance RSS / product / under_6h / positive - CrowdStrike Launches AI Partner Specialization, Defining Cybersecurity’s Ecosystem for the Agentic Era
+  - 원문 헤드라인 1: MarketWatch RSS / earnings / under_6h / mixed - Palo Alto Networks&#x2019; stock falls despite strong AI cybersecurity demand
+  - 원문 헤드라인 2: Yahoo Finance RSS / product / under_6h / positive - Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.
+  - 원문 헤드라인 3: Yahoo Finance RSS / macro / under_24h / positive - Oil giant Chevron is expected to announce it will expand operations in Venezuela, US official says
   - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
-- 기준일 2026-08-31 | 종가 $231 | 1일 +5.77% | 5일 +21.15% | 20일 +14.05% | 상대 거래량 1.88배 | 52주 고점 대비 -1.22% | 데이터 소스: yfinance
+- 기준일 2026-09-01 | 종가 $211.05 | 1일 +2.38% | 5일 +5.58% | 20일 +10.85% | 상대 거래량 1.08배 | 52주 고점 대비 -1.70% | 데이터 소스: yfinance
 
 </details>
 
-### Zscaler Inc.(ZS)
+### CrowdStrike Holdings Inc.(CRWD)
 - 자산 유형: STOCK
-- 상태: 진입 후보
+- 상태: 관찰
 - primaryTheme: 사이버보안
 - primarySector: Technology
 - industry: Cybersecurity
 - relatedEtfs: HACK, CIBR, IHAK, IGV
 - linkedNarrative: 사이버보안 지출 재가속
-- narrativeStatus: 부상
-- narrativeScore: 87
-- moneyFlowScore: 90
-- finalRawScore: 90
-- tieBreakerReason: 최종 원점수 90, 리스크 패널티 0, 5일 수익률 +7.00%, 상대 거래량 1.14배 순으로 정렬
+- narrativeStatus: 약화
+- narrativeScore: 28
+- moneyFlowScore: 67
+- finalRawScore: 67
+- tieBreakerReason: 최종 원점수 67, 리스크 패널티 0, 5일 수익률 +16.02%, 상대 거래량 1.39배 순으로 정렬
 - 과열 리스크: 낮음
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock?
-- todayActionLabel: 조건부 진입
-- 주문 실행: 지정가 권장
-- 기준일: 2026-08-31
-- 종가: $188.39
-- 1일 수익률: +2.26%
-- 5일 수익률: +7.00%
-- 20일 수익률: +21.96%
-- 상대 거래량: 1.14배
-- 52주 고점 대비 위치: -44.10%
-- 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +7.00% vs ETF 평균 +6.87%, 주식 20일 +21.96% vs ETF 평균 +8.09%, 상대 거래량 1.14배 vs ETF 평균 1.17배
-- whyMoneyIsFlowing: 20일 +21.96%, 5일 +7.00%, 상대 거래량 1.14배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS earnings/under_24h / 유동성: ACCEPTABLE
+- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / product / under_6h / positive - Why Is CrowdStrike (CRWD) Building An AI Cyber Lab And New Defense Tools? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- 직접 촉매: Yahoo Finance RSS / product / under_6h / positive - Why Is CrowdStrike (CRWD) Building An AI Cyber Lab And New Defense Tools?
+- todayActionLabel: 관찰
+- 주문 실행: 시장가 가능
+- 기준일: 2026-09-01
+- 종가: $215.07
+- 1일 수익률: -6.90%
+- 5일 수익률: +16.02%
+- 20일 수익률: +1.82%
+- 상대 거래량: 1.39배
+- 52주 고점 대비 위치: -8.04%
+- 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +16.02% vs ETF 평균 +3.83%, 주식 20일 +1.82% vs ETF 평균 -0.20%, 상대 거래량 1.39배 vs ETF 평균 1.11배
+- whyMoneyIsFlowing: 20일 +1.82%, 5일 +16.02%, 상대 거래량 1.39배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS product/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
-- 왜 ETF가 아니라 이 종목인가: ZS가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
-- ETF가 더 나은 경우: ZS가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
+- 왜 ETF가 아니라 이 종목인가: CRWD가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
+- ETF가 더 나은 경우: CRWD가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
 #### 최근 뉴스/동향 한국어 요약
 
-- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock?"입니다.
-- 직접 촉매 판단: Zscaler Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock?"이며, 실적 재료로 봅니다.
-- 뉴스 1: Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock?
-  - 내용: Zscaler Inc. 관련 기사는 Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock? 이슈를 다루며, 주가 변동률 +22.00%를 핵심 내용으로 봅니다.
-  - 투자 의미: Zscaler Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 뉴스 2: Zscaler (ZS) Ascends While Market Falls: Some Facts to Note
-  - 내용: Zscaler Inc. 관련 기사는 Zscaler (ZS) Ascends While Market Falls: Some Facts to Note 이슈를 다루며, 주가 변동률 +1.12%를 핵심 내용으로 봅니다.
-  - 투자 의미: Zscaler Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 뉴스 3: Zscaler and SentinelOne Spike 10% as Cybersecurity Re-Rating Reaches the Laggards
-  - 내용: Zscaler Inc. 관련 기사는 Zscaler and SentinelOne Spike 10% as Cybersecurity Re-Rating Reaches the Laggards 이슈를 다루며, 주가 변동률 +10.00%를 핵심 내용으로 봅니다.
-  - 투자 의미: Zscaler Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
+- 요약: 후보 선정 후 재확인 뉴스 데이터 없음
 - 진입 조건: 20일선 위 눌림 후 재상승 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-- 차트: ![ZS chart](charts/ZS.png)
+- 차트: ![CRWD chart](charts/CRWD.png)
 
 #### 상세 근거
 <details>
-<summary>Zscaler Inc.(ZS) 상세 근거 펼치기</summary>
+<summary>CrowdStrike Holdings Inc.(CRWD) 상세 근거 펼치기</summary>
 
 - moneyFlowScore(최종) 산정 근거:
-  - moneyFlowScore(1차): 69
-  - 최종 원점수: 90
-  - 최종 표시 점수: 90
+  - moneyFlowScore(1차): 56
+  - 최종 원점수: 67
+  - 최종 표시 점수: 67
   - cap 적용: cap 미적용
-  - 계산식: +69 + +12 + 0 + +2 + +7 + 0 + 0 = 90
-  - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
-  - 가격/거래량 1차 점수: +69
-    - 추세: +23
-    - 단기 모멘텀: +8
-    - 중기 모멘텀: +14
-    - 거래량: +10
-    - 신고가 근접: 0
-    - 이동평균: +14
+  - 계산식: +56 + +2 + 0 + +5 + +4 + 0 + 0 = 67
+  - 점수 해석: 관심 후보. 눌림 또는 돌파 확인 후 진입 검토.
+  - 가격/거래량 1차 점수: +56
+    - 추세: +19
+    - 단기 모멘텀: +6
+    - 중기 모멘텀: +1
+    - 거래량: +14
+    - 신고가 근접: +6
+    - 이동평균: +10
   - 하위 점수 cap:
-    - 가격 모멘텀: 원점수 +23, 상한 적용 +23 / 최대 25
-    - 단기 모멘텀: 원점수 +8, 상한 적용 +8 / 최대 20
-    - 중기 모멘텀: 원점수 +14, 상한 적용 +14 / 최대 16
-    - 거래량: 원점수 +10, 상한 적용 +10 / 최대 20
-    - 신고가 근접: 원점수 0, 상한 적용 0 / 최대 12
-    - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
-    - 관련 ETF 상대강도: 원점수 +7, 상한 적용 +7 / 최대 8
+    - 가격 모멘텀: 원점수 +19, 상한 적용 +19 / 최대 25
+    - 단기 모멘텀: 원점수 +6, 상한 적용 +6 / 최대 20
+    - 중기 모멘텀: 원점수 +1, 상한 적용 +1 / 최대 16
+    - 거래량: 원점수 +14, 상한 적용 +14 / 최대 20
+    - 신고가 근접: 원점수 +6, 상한 적용 +6 / 최대 12
+    - 이동평균: 원점수 +10, 상한 적용 +10 / 최대 14
+    - 관련 ETF 상대강도: 원점수 +4, 상한 적용 +4 / 최대 8
   - 추가 데이터 가감점:
-    - 뉴스: +12
-    - 유동성: +2
-  - ETF 대비 상대강도: +7
+    - 뉴스: +2
+    - 유동성: +5
+  - ETF 대비 상대강도: +4
   - 리스크 패널티: 0
-  - 주요 근거: 1차 69, 최종 원점수 90, 표시 90. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
+  - 주요 근거: 1차 56, 최종 원점수 67, 표시 67. 5일 수익률 강함, 상대 거래량 증가, 관련 ETF 강세 테마 안의 개별 종목. 주의: 큰 감점 제한적.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: 0
     - 리스크 등급: LOW
@@ -1607,300 +1563,108 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 최근 뉴스 상태: 일부 연결
   - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 13/3/0
+  - 긍정/중립/부정: 12/4/0
   - 직접성/방향성/신선도: 4/1/4
   - 강한 촉매 수: 2
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock?
+  - 직접 촉매: Yahoo Finance RSS / product / under_6h / positive - Why Is CrowdStrike (CRWD) Building An AI Cyber Lab And New Defense Tools?
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-01 10:42 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-01 08:23 KST
+  - 뉴스 수집 시각: 2026-09-02 09:51 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-02 09:44 KST
   - 뉴스 신선도 상태: FRESH
-  - 뉴스 이후 가격 반응: 긍정
-  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: August was the month of the comeback kids. Cramer reviews what drove the biggest winners
-  - 원점수/상한 점수: +26 / +12
+  - 뉴스 이후 가격 반응: 부정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
+  - 핵심 뉴스 요약: U.S. completes fresh strikes on Iran as Mideast tensions flare again
+  - 원점수/상한 점수: +25 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
-  - 거래대금 기준 유동성: ACCEPTABLE
-  - 거래대금: $482,182,145
-  - 평균 거래대금: $422,387,805
-  - 주문 영향: 지정가 권장
-  - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
-- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
-- 후보 선정 후 뉴스/동향 재확인:
-  - 재확인 상태: 일부 연결
-  - 재확인 시각: 2026-09-01 10:42 KST
-  - 최근 발행 시각: 2026-09-01 07:24 KST
-  - 신선도: FRESH
-  - 출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS FAILED; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock?"입니다.
-  - 직접 촉매: Yahoo Finance RSS / earnings / under_24h - Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock?
-  - 한국어 뉴스 요약 1: Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock?
-    - 내용: Zscaler Inc. 관련 기사는 Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock? 이슈를 다루며, 주가 변동률 +22.00%를 핵심 내용으로 봅니다.
-    - 투자 의미: Zscaler Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-    - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-  - 한국어 뉴스 요약 2: Zscaler (ZS) Ascends While Market Falls: Some Facts to Note
-    - 내용: Zscaler Inc. 관련 기사는 Zscaler (ZS) Ascends While Market Falls: Some Facts to Note 이슈를 다루며, 주가 변동률 +1.12%를 핵심 내용으로 봅니다.
-    - 투자 의미: Zscaler Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-    - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-  - 한국어 뉴스 요약 3: Zscaler and SentinelOne Spike 10% as Cybersecurity Re-Rating Reaches the Laggards
-    - 내용: Zscaler Inc. 관련 기사는 Zscaler and SentinelOne Spike 10% as Cybersecurity Re-Rating Reaches the Laggards 이슈를 다루며, 주가 변동률 +10.00%를 핵심 내용으로 봅니다.
-    - 투자 의미: Zscaler Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-    - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-  - 원문 헤드라인 1: Yahoo Finance RSS / earnings / under_24h / positive - Zscaler to Report Q4 Earnings: Should You Buy, Hold or Sell the Stock?
-  - 원문 헤드라인 2: Yahoo Finance RSS / general_market / stale / negative - Zscaler (ZS) Ascends While Market Falls: Some Facts to Note
-  - 원문 헤드라인 3: Yahoo Finance RSS / analyst_upgrade / stale / positive - Zscaler and SentinelOne Spike 10% as Cybersecurity Re-Rating Reaches the Laggards
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: This operation was aborted; Finnhub API: FINNHUB_API_KEY not configured
-- 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
-- 기준일 2026-08-31 | 종가 $188.39 | 1일 +2.26% | 5일 +7.00% | 20일 +21.96% | 상대 거래량 1.14배 | 52주 고점 대비 -44.10% | 데이터 소스: yfinance
-
-</details>
-
-### Palo Alto Networks Inc.(PANW)
-- 자산 유형: STOCK
-- 상태: 진입 후보
-- primaryTheme: 사이버보안
-- primarySector: Technology
-- industry: Cybersecurity
-- relatedEtfs: HACK, CIBR, IHAK, IGV
-- linkedNarrative: 사이버보안 지출 재가속
-- narrativeStatus: 부상
-- narrativeScore: 87
-- moneyFlowScore: 100
-- finalRawScore: 105
-- tieBreakerReason: 최종 원점수 105, 리스크 패널티 0, 5일 수익률 +8.90%, 상대 거래량 1.56배 순으로 정렬
-- 과열 리스크: 낮음~중간
-- reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / product / under_24h / positive - Palo Alto Networks set to beat fiscal Q4 metrics, guide above consensus 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / product / under_24h / positive - Palo Alto Networks set to beat fiscal Q4 metrics, guide above consensus
-- todayActionLabel: 조건부 진입
-- 주문 실행: 시장가 가능
-- 기준일: 2026-08-31
-- 종가: $382.13
-- 1일 수익률: +2.84%
-- 5일 수익률: +8.90%
-- 20일 수익률: +10.08%
-- 상대 거래량: 1.56배
-- 52주 고점 대비 위치: -4.20%
-- 관련 ETF 대비 상대강도: 관련 ETF와 비슷함 | 주식 5일 +8.90% vs ETF 평균 +6.87%, 주식 20일 +10.08% vs ETF 평균 +8.09%, 상대 거래량 1.56배 vs ETF 평균 1.17배
-- whyMoneyIsFlowing: 20일 +10.08%, 5일 +8.90%, 상대 거래량 1.56배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS product/under_24h / 유동성: LIQUID
-- likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
-- whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
-- 왜 ETF가 아니라 이 종목인가: 관련 ETF와 비슷함 | 주식 5일 +8.90% vs ETF 평균 +6.87%, 주식 20일 +10.08% vs ETF 평균 +8.09%, 상대 거래량 1.56배 vs ETF 평균 1.17배. 개별 종목 우선으로 격상하려면 관련 ETF 대비 상대강도 유지가 더 필요하다.
-- ETF가 더 나은 경우: PANW가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
-#### 최근 뉴스/동향 한국어 요약
-
-- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Is Palo Alto Networks (PANW) a 'Buy' Ahead of Earnings?"입니다.
-- 직접 촉매 판단: Palo Alto Networks Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "Is Palo Alto Networks (PANW) a 'Buy' Ahead of Earnings?"이며, 실적 재료로 봅니다.
-- 뉴스 1: Is Palo Alto Networks (PANW) a 'Buy' Ahead of Earnings?
-  - 내용: Palo Alto Networks Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 The company continues to benefit from higher cybersecurity priority as enterprises deploy AI.입니다.
-  - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-  - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-- 뉴스 2: Palo Alto Networks (PANW) Reports Q2: Everything You Need To Know Ahead Of Earnings
-  - 내용: Palo Alto Networks Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Cybersecurity platform provider Palo Alto Networks (NASDAQ:PANW) will be reporting earnings this Tuesday after market hours.입니다.
-  - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-  - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-- 뉴스 3: This Is What Investors Should Watch Before Buying PANW Stock. Most Will Ignore It on September 1.
-  - 내용: Palo Alto Networks Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Palo Alto Networks heads into earnings with surging expectations, but investors may need more than strong headline growth to justify the stock's enormous rally.입니다.
-  - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-  - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-- 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
-- 진입 조건: 전일 고점 돌파와 5일선 유지 확인
-- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-- 차트: ![PANW chart](charts/PANW.png)
-
-#### 상세 근거
-<details>
-<summary>Palo Alto Networks Inc.(PANW) 상세 근거 펼치기</summary>
-
-- moneyFlowScore(최종) 산정 근거:
-  - moneyFlowScore(1차): 81
-  - 최종 원점수: 105
-  - 최종 표시 점수: 100
-  - cap 적용: raw score 105 capped to displayed score 100
-  - 계산식: +81 + +12 + 0 + +5 + +7 + 0 + 0 = 105 -> 100
-  - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
-  - 가격/거래량 1차 점수: +81
-    - 추세: +19
-    - 단기 모멘텀: +11
-    - 중기 모멘텀: +7
-    - 거래량: +18
-    - 신고가 근접: +12
-    - 이동평균: +14
-  - 하위 점수 cap:
-    - 가격 모멘텀: 원점수 +19, 상한 적용 +19 / 최대 25
-    - 단기 모멘텀: 원점수 +11, 상한 적용 +11 / 최대 20
-    - 중기 모멘텀: 원점수 +7, 상한 적용 +7 / 최대 16
-    - 거래량: 원점수 +18, 상한 적용 +18 / 최대 20
-    - 신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12
-    - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
-    - 관련 ETF 상대강도: 원점수 +7, 상한 적용 +7 / 최대 8
-  - 추가 데이터 가감점:
-    - 뉴스: +12
-    - 유동성: +5
-  - ETF 대비 상대강도: +7
-  - 리스크 패널티: 0
-  - 주요 근거: 1차 81, 최종 원점수 105, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
-  - 리스크 패널티 산정 근거:
-    - 총 리스크 패널티: 0
-    - 리스크 등급: LOW
-    - 감점된 리스크: 없음
-    - 관찰 리스크: 주요 관찰 리스크 없음
-    - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
-- 데이터 사용 현황:
-  - 가격/거래량: 사용
-  - 뉴스: 사용
-  - ETF 확산도: 관련 ETF에서 확인
-  - 거래대금 유동성: 사용
-  - 관련 ETF 상대강도: 사용
-- 뉴스 확인:
-  - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 12/4/0
-  - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 2
-  - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / product / under_24h / positive - Palo Alto Networks set to beat fiscal Q4 metrics, guide above consensus
-  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-01 10:42 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-01 08:23 KST
-  - 뉴스 신선도 상태: FRESH
-  - 뉴스 이후 가격 반응: 긍정
-  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: August was the month of the comeback kids. Cramer reviews what drove the biggest winners
-  - 원점수/상한 점수: +25 / +12
-  - 점수 반영: +12
-  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
-- ETF 구성종목 확산도: 관련 ETF에서 확인
-- 거래대금 유동성:
-  - 데이터 상태: 일부 연결
   - 거래대금 기준 유동성: LIQUID
-  - 거래대금: $3,343,987,531
-  - 평균 거래대금: $2,148,913,787
+  - 거래대금: $2,901,708,525
+  - 평균 거래대금: $2,086,020,063
   - 주문 영향: 시장가 가능
   - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
 - reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
 - 후보 선정 후 뉴스/동향 재확인:
-  - 재확인 상태: 일부 연결
-  - 재확인 시각: 2026-09-01 10:42 KST
-  - 최근 발행 시각: 2026-09-01 07:24 KST
-  - 신선도: FRESH
-  - 출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Is Palo Alto Networks (PANW) a 'Buy' Ahead of Earnings?"입니다.
-  - 직접 촉매: Yahoo Finance RSS / earnings / under_24h - Is Palo Alto Networks (PANW) a 'Buy' Ahead of Earnings?
-  - 한국어 뉴스 요약 1: Is Palo Alto Networks (PANW) a 'Buy' Ahead of Earnings?
-    - 내용: Palo Alto Networks Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 The company continues to benefit from higher cybersecurity priority as enterprises deploy AI.입니다.
-    - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-    - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-  - 한국어 뉴스 요약 2: Palo Alto Networks (PANW) Reports Q2: Everything You Need To Know Ahead Of Earnings
-    - 내용: Palo Alto Networks Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Cybersecurity platform provider Palo Alto Networks (NASDAQ:PANW) will be reporting earnings this Tuesday after market hours.입니다.
-    - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-    - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-  - 한국어 뉴스 요약 3: This Is What Investors Should Watch Before Buying PANW Stock. Most Will Ignore It on September 1.
-    - 내용: Palo Alto Networks Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Palo Alto Networks heads into earnings with surging expectations, but investors may need more than strong headline growth to justify the stock's enormous rally.입니다.
-    - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-    - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-  - 원문 헤드라인 1: Yahoo Finance RSS / earnings / under_24h / positive - Is Palo Alto Networks (PANW) a 'Buy' Ahead of Earnings?
-  - 원문 헤드라인 2: Yahoo Finance RSS / earnings / under_24h / positive - Palo Alto Networks (PANW) Reports Q2: Everything You Need To Know Ahead Of Earnings
-  - 원문 헤드라인 3: Yahoo Finance RSS / earnings / under_72h / positive - This Is What Investors Should Watch Before Buying PANW Stock. Most Will Ignore It on September 1.
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
-- 차트 요약: 단기 추세 중립
-- 기준일 2026-08-31 | 종가 $382.13 | 1일 +2.84% | 5일 +8.90% | 20일 +10.08% | 상대 거래량 1.56배 | 52주 고점 대비 -4.20% | 데이터 소스: yfinance
+  - 재확인 상태: 데이터 없음
+- 차트 요약: 20일선 위에서 단기 눌림 확인 구간
+- 기준일 2026-09-01 | 종가 $215.07 | 1일 -6.90% | 5일 +16.02% | 20일 +1.82% | 상대 거래량 1.39배 | 52주 고점 대비 -8.04% | 데이터 소스: yfinance
 
 </details>
 
-### Fortinet Inc.(FTNT)
+### Diamondback Energy Inc.(FANG)
 - 자산 유형: STOCK
-- 상태: 진입 후보
-- primaryTheme: 사이버보안
-- primarySector: Technology
-- industry: Cybersecurity
-- relatedEtfs: HACK, CIBR, IHAK, IGV
-- linkedNarrative: 사이버보안 지출 재가속
-- narrativeStatus: 부상
-- narrativeScore: 87
-- moneyFlowScore: 100
-- finalRawScore: 101
-- tieBreakerReason: 최종 원점수 101, 리스크 패널티 0, 5일 수익률 +12.46%, 상대 거래량 1.45배 순으로 정렬
-- 과열 리스크: 낮음~중간
-- reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / product / under_24h / positive - Fortinet Launches Free High School Cybersecurity Curriculum to Build the Next Generation of Cyber Defenders 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / product / under_24h / positive - Fortinet Launches Free High School Cybersecurity Curriculum to Build the Next Generation of Cyber Defenders
-- todayActionLabel: 조건부 진입
-- 주문 실행: 시장가 가능
-- 기준일: 2026-08-31
-- 종가: $170.93
-- 1일 수익률: +2.97%
-- 5일 수익률: +12.46%
-- 20일 수익률: +4.73%
-- 상대 거래량: 1.45배
-- 52주 고점 대비 위치: -1.70%
-- 관련 ETF 대비 상대강도: 관련 ETF와 비슷함 | 주식 5일 +12.46% vs ETF 평균 +6.87%, 주식 20일 +4.73% vs ETF 평균 +8.09%, 상대 거래량 1.45배 vs ETF 평균 1.17배
-- whyMoneyIsFlowing: 20일 +4.73%, 5일 +12.46%, 상대 거래량 1.45배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS product/under_24h / 유동성: LIQUID
+- 상태: 매매 금지
+- primaryTheme: Energy
+- primarySector: Energy
+- industry: Oil & Gas E&P
+- relatedEtfs: QQQ, SPY, IWM
+- linkedNarrative: Integrated Oil & Gas 자금 유입
+- narrativeStatus: 관찰
+- narrativeScore: 53
+- moneyFlowScore: 67
+- finalRawScore: 67
+- tieBreakerReason: 최종 원점수 67, 리스크 패널티 0, 5일 수익률 +1.64%, 상대 거래량 1.40배 순으로 정렬
+- 과열 리스크: 낮음
+- reasonConfidence: MEDIUM
+- reasonConfidenceExplanation: 직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
+
+- todayActionLabel: 제외
+- 주문 실행: 지정가 권장
+- 기준일: 2026-09-01
+- 종가: $203.16
+- 1일 수익률: +1.34%
+- 5일 수익률: +1.64%
+- 20일 수익률: +5.88%
+- 상대 거래량: 1.40배
+- 52주 고점 대비 위치: -6.33%
+- 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +1.64% vs ETF 평균 -1.29%, 주식 20일 +5.88% vs ETF 평균 -2.39%, 상대 거래량 1.40배 vs ETF 평균 1.18배
+- whyMoneyIsFlowing: 20일 +5.88%, 5일 +1.64%, 상대 거래량 1.40배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
-- whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
-- 왜 ETF가 아니라 이 종목인가: 관련 ETF와 비슷함 | 주식 5일 +12.46% vs ETF 평균 +6.87%, 주식 20일 +4.73% vs ETF 평균 +8.09%, 상대 거래량 1.45배 vs ETF 평균 1.17배. 개별 종목 우선으로 격상하려면 관련 ETF 대비 상대강도 유지가 더 필요하다.
-- ETF가 더 나은 경우: FTNT가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
+- whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
+- 왜 ETF가 아니라 이 종목인가: FANG가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
+- ETF가 더 나은 경우: FANG가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
 #### 최근 뉴스/동향 한국어 요약
 
-- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Why Is Fortinet (FTNT) Up 12% Since Last Earnings Report?"입니다.
-- 직접 촉매 판단: Fortinet Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "Why Is Fortinet (FTNT) Up 12% Since Last Earnings Report?"이며, 실적 재료로 봅니다.
-- 뉴스 1: Why Is Fortinet (FTNT) Up 12% Since Last Earnings Report?
-  - 내용: Fortinet Inc. 관련 기사는 Why Is Fortinet (FTNT) Up 12% Since Last Earnings Report? 이슈를 다루며, 주가 변동률 +12.00%를 핵심 내용으로 봅니다.
-  - 투자 의미: Fortinet Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-  - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-- 뉴스 2: Fortinet Launches Free High School Cybersecurity Curriculum to Build the Next Generation of Cyber Defenders
-  - 내용: Fortinet Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Fortinet Training Institute’s New Technical High School Cybersecurity Curriculum gives U.S.입니다.
-  - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
-  - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-- 뉴스 3: How Fortinet Federal’s New CMMC Level 2 Certification At Fortinet (FTNT) Has Changed Its Investment Story
-  - 내용: Fortinet Inc. 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 Fortinet Federal, Inc., a wholly owned subsidiary of Fortinet, Inc., recently achieved Cybersecurity Maturity Model Certification (CMMC) Level 2 after an authorized third-party ...입니다.
-  - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
-  - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-- 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
-- 진입 조건: 전일 고점 돌파와 5일선 유지 확인
+- 요약: 후보 선정 후 재확인 뉴스 데이터 없음
+- 진입 조건: 20일선 위 눌림 후 재상승 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-- 차트: ![FTNT chart](charts/FTNT.png)
+- 차트: ![FANG chart](charts/FANG.png)
 
 #### 상세 근거
 <details>
-<summary>Fortinet Inc.(FTNT) 상세 근거 펼치기</summary>
+<summary>Diamondback Energy Inc.(FANG) 상세 근거 펼치기</summary>
 
 - moneyFlowScore(최종) 산정 근거:
-  - moneyFlowScore(1차): 77
-  - 최종 원점수: 101
-  - 최종 표시 점수: 100
-  - cap 적용: raw score 101 capped to displayed score 100
-  - 계산식: +77 + +12 + 0 + +5 + +7 + 0 + 0 = 101 -> 100
-  - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
-  - 가격/거래량 1차 점수: +77
-    - 추세: +20
-    - 단기 모멘텀: +14
-    - 중기 모멘텀: +3
+  - moneyFlowScore(1차): 51
+  - 최종 원점수: 67
+  - 최종 표시 점수: 67
+  - cap 적용: cap 미적용
+  - 계산식: +51 + +12 + 0 + +2 + +2 + 0 + 0 = 67
+  - 점수 해석: 관심 후보. 눌림 또는 돌파 확인 후 진입 검토.
+  - 가격/거래량 1차 점수: +51
+    - 추세: +10
+    - 단기 모멘텀: +3
+    - 중기 모멘텀: +4
     - 거래량: +14
-    - 신고가 근접: +12
+    - 신고가 근접: +6
     - 이동평균: +14
   - 하위 점수 cap:
-    - 가격 모멘텀: 원점수 +20, 상한 적용 +20 / 최대 25
-    - 단기 모멘텀: 원점수 +14, 상한 적용 +14 / 최대 20
-    - 중기 모멘텀: 원점수 +3, 상한 적용 +3 / 최대 16
+    - 가격 모멘텀: 원점수 +10, 상한 적용 +10 / 최대 25
+    - 단기 모멘텀: 원점수 +3, 상한 적용 +3 / 최대 20
+    - 중기 모멘텀: 원점수 +4, 상한 적용 +4 / 최대 16
     - 거래량: 원점수 +14, 상한 적용 +14 / 최대 20
-    - 신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12
+    - 신고가 근접: 원점수 +6, 상한 적용 +6 / 최대 12
     - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
-    - 관련 ETF 상대강도: 원점수 +7, 상한 적용 +7 / 최대 8
+    - 관련 ETF 상대강도: 원점수 +2, 상한 적용 +2 / 최대 8
   - 추가 데이터 가감점:
     - 뉴스: +12
-    - 유동성: +5
-  - ETF 대비 상대강도: +7
+    - 유동성: +2
+  - ETF 대비 상대강도: +2
   - 리스크 패널티: 0
-  - 주요 근거: 1차 77, 최종 원점수 101, 표시 100. 5일 수익률 강함, 1일 단기 모멘텀 확인, 상대 거래량 증가. 주의: 큰 감점 제한적.
+  - 주요 근거: 1차 51, 최종 원점수 67, 표시 67. 상대 거래량 증가, 이동평균 위 추세 유지, 관련 ETF 강세 테마 안의 개별 종목. 주의: 큰 감점 제한적.
   - 리스크 패널티 산정 근거:
     - 총 리스크 패널티: 0
     - 리스크 등급: LOW
@@ -1915,139 +1679,117 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
   - 긍정/중립/부정: 13/3/0
-  - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 1
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 2
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / product / under_24h / positive - Fortinet Launches Free High School Cybersecurity Curriculum to Build the Next Generation of Cyber Defenders
+  - 직접 촉매: 없음
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-01 10:42 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-01 08:23 KST
+  - 뉴스 수집 시각: 2026-09-02 09:51 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-02 09:44 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: August was the month of the comeback kids. Cramer reviews what drove the biggest winners
+  - 핵심 뉴스 요약: U.S. completes fresh strikes on Iran as Mideast tensions flare again
   - 원점수/상한 점수: +24 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
-  - 거래대금 기준 유동성: LIQUID
-  - 거래대금: $1,126,270,932
-  - 평균 거래대금: $778,326,849
-  - 주문 영향: 시장가 가능
-  - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
-- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
+  - 거래대금 기준 유동성: ACCEPTABLE
+  - 거래대금: $503,381,518
+  - 평균 거래대금: $360,433,673
+  - 주문 영향: 지정가 권장
+  - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
+- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
 - 후보 선정 후 뉴스/동향 재확인:
-  - 재확인 상태: 일부 연결
-  - 재확인 시각: 2026-09-01 10:42 KST
-  - 최근 발행 시각: 2026-09-01 07:24 KST
-  - 신선도: FRESH
-  - 출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Why Is Fortinet (FTNT) Up 12% Since Last Earnings Report?"입니다.
-  - 직접 촉매: Yahoo Finance RSS / earnings / stale - Why Is Fortinet (FTNT) Up 12% Since Last Earnings Report?
-  - 한국어 뉴스 요약 1: Why Is Fortinet (FTNT) Up 12% Since Last Earnings Report?
-    - 내용: Fortinet Inc. 관련 기사는 Why Is Fortinet (FTNT) Up 12% Since Last Earnings Report? 이슈를 다루며, 주가 변동률 +12.00%를 핵심 내용으로 봅니다.
-    - 투자 의미: Fortinet Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.
-    - 확인할 점: 거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세
-  - 한국어 뉴스 요약 2: Fortinet Launches Free High School Cybersecurity Curriculum to Build the Next Generation of Cyber Defenders
-    - 내용: Fortinet Inc. 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Fortinet Training Institute’s New Technical High School Cybersecurity Curriculum gives U.S.입니다.
-    - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
-    - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-  - 한국어 뉴스 요약 3: How Fortinet Federal’s New CMMC Level 2 Certification At Fortinet (FTNT) Has Changed Its Investment Story
-    - 내용: Fortinet Inc. 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 Fortinet Federal, Inc., a wholly owned subsidiary of Fortinet, Inc., recently achieved Cybersecurity Maturity Model Certification (CMMC) Level 2 after an authorized third-party ...입니다.
-    - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
-    - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-  - 원문 헤드라인 1: Yahoo Finance RSS / earnings / stale / neutral - Why Is Fortinet (FTNT) Up 12% Since Last Earnings Report?
-  - 원문 헤드라인 2: Yahoo Finance RSS / product / under_24h / positive - Fortinet Launches Free High School Cybersecurity Curriculum to Build the Next Generation of Cyber Defenders
-  - 원문 헤드라인 3: Yahoo Finance RSS / macro / stale / positive - How Fortinet Federal’s New CMMC Level 2 Certification At Fortinet (FTNT) Has Changed Its Investment Story
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
-- 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
-- 기준일 2026-08-31 | 종가 $170.93 | 1일 +2.97% | 5일 +12.46% | 20일 +4.73% | 상대 거래량 1.45배 | 52주 고점 대비 -1.70% | 데이터 소스: yfinance
+  - 재확인 상태: 데이터 없음
+- 차트 요약: 단기 추세 중립
+- 기준일 2026-09-01 | 종가 $203.16 | 1일 +1.34% | 5일 +1.64% | 20일 +5.88% | 상대 거래량 1.40배 | 52주 고점 대비 -6.33% | 데이터 소스: yfinance
 
 </details>
 
-### Adobe Inc.(ADBE)
+### Atlassian Corporation(TEAM)
 - 자산 유형: STOCK
 - 상태: 관찰
 - primaryTheme: 클라우드/엔터프라이즈 소프트웨어
 - primarySector: Technology
-- industry: Software
+- industry: Software Application
 - relatedEtfs: IGV, AIQ, QQQ
-- linkedNarrative: 소프트웨어 실적/AI 수익화
+- linkedNarrative: AI 소프트웨어/사이버보안 확산
 - narrativeStatus: 약화
-- narrativeScore: 50
-- moneyFlowScore: 80
-- finalRawScore: 80
-- tieBreakerReason: 최종 원점수 80, 리스크 패널티 0, 5일 수익률 +5.98%, 상대 거래량 1.19배 순으로 정렬
+- narrativeScore: 20
+- moneyFlowScore: 61
+- finalRawScore: 61
+- tieBreakerReason: 최종 원점수 61, 리스크 패널티 -4, 5일 수익률 +12.34%, 상대 거래량 0.68배 순으로 정렬
 - 과열 리스크: 낮음
-- reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / earnings / under_24h / neutral - Adobe to Announce Q3 FY2026 Earnings Results on Sept. 10, 2026 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / earnings / under_24h / neutral - Adobe to Announce Q3 FY2026 Earnings Results on Sept. 10, 2026
-- todayActionLabel: 관찰
-- 주문 실행: 시장가 가능
-- 기준일: 2026-08-31
-- 종가: $292.79
-- 1일 수익률: +0.44%
-- 5일 수익률: +5.98%
-- 20일 수익률: +16.49%
-- 상대 거래량: 1.19배
-- 52주 고점 대비 위치: -21.05%
-- 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +5.98% vs ETF 평균 +4.01%, 주식 20일 +16.49% vs ETF 평균 +7.14%, 상대 거래량 1.19배 vs ETF 평균 0.78배
-- whyMoneyIsFlowing: 20일 +16.49%, 5일 +5.98%, 상대 거래량 1.19배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS earnings/under_24h / 유동성: LIQUID
+- reasonConfidence: LOW
+- reasonConfidenceExplanation: 가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.
+
+- todayActionLabel: 거래량 확인 전 관찰
+- 주문 실행: 지정가 권장
+- 기준일: 2026-09-01
+- 종가: $187.03
+- 1일 수익률: -3.68%
+- 5일 수익률: +12.34%
+- 20일 수익률: +69.55%
+- 상대 거래량: 0.68배
+- 52주 고점 대비 위치: -5.21%
+- 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +12.34% vs ETF 평균 +1.26%, 주식 20일 +69.55% vs ETF 평균 +0.58%, 상대 거래량 0.68배 vs ETF 평균 0.96배
+- whyMoneyIsFlowing: 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
-- 왜 ETF가 아니라 이 종목인가: ADBE가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
-- ETF가 더 나은 경우: ADBE가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
+- 왜 ETF가 아니라 이 종목인가: TEAM가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
+- ETF가 더 나은 경우: TEAM가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
 #### 최근 뉴스/동향 한국어 요약
 
 - 요약: 후보 선정 후 재확인 뉴스 데이터 없음
-- 진입 조건: 20일선 위 눌림 후 재상승 확인
-- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-- 차트: ![ADBE chart](charts/ADBE.png)
+- 진입 조건: 상대 거래량 1.0배 회복 후 관찰
+- 무효화 조건: 거래량 회복 실패
+- 차트: ![TEAM chart](charts/TEAM.png)
 
 #### 상세 근거
 <details>
-<summary>Adobe Inc.(ADBE) 상세 근거 펼치기</summary>
+<summary>Atlassian Corporation(TEAM) 상세 근거 펼치기</summary>
 
 - moneyFlowScore(최종) 산정 근거:
-  - moneyFlowScore(1차): 59
-  - 최종 원점수: 80
-  - 최종 표시 점수: 80
+  - moneyFlowScore(1차): 57
+  - 최종 원점수: 61
+  - 최종 표시 점수: 61
   - cap 적용: cap 미적용
-  - 계산식: +59 + +12 + 0 + +5 + +4 + 0 + 0 = 80
-  - 점수 해석: 강한 자금 유입 후보. 단, 과열 여부 확인 필수.
-  - 가격/거래량 1차 점수: +59
-    - 추세: +19
+  - 계산식: +57 + +2 + 0 + +2 + +4 - 4 + 0 = 61
+  - 점수 해석: 관찰 후보. 흐름은 있으나 우선순위는 낮음.
+  - 가격/거래량 1차 점수: +57
+    - 추세: +24
     - 단기 모멘텀: +5
-    - 중기 모멘텀: +11
-    - 거래량: +10
-    - 신고가 근접: 0
+    - 중기 모멘텀: +16
+    - 거래량: -8
+    - 신고가 근접: +6
     - 이동평균: +14
   - 하위 점수 cap:
-    - 가격 모멘텀: 원점수 +19, 상한 적용 +19 / 최대 25
+    - 가격 모멘텀: 원점수 +24, 상한 적용 +24 / 최대 25
     - 단기 모멘텀: 원점수 +5, 상한 적용 +5 / 최대 20
-    - 중기 모멘텀: 원점수 +11, 상한 적용 +11 / 최대 16
-    - 거래량: 원점수 +10, 상한 적용 +10 / 최대 20
-    - 신고가 근접: 원점수 0, 상한 적용 0 / 최대 12
+    - 중기 모멘텀: 원점수 +45, 상한 적용 +16 / 최대 16 (cap 적용)
+    - 거래량: 원점수 -8, 상한 적용 -8 / 최대 20
+    - 신고가 근접: 원점수 +6, 상한 적용 +6 / 최대 12
     - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
     - 관련 ETF 상대강도: 원점수 +4, 상한 적용 +4 / 최대 8
   - 추가 데이터 가감점:
-    - 뉴스: +12
-    - 유동성: +5
+    - 뉴스: +2
+    - 유동성: +2
   - ETF 대비 상대강도: +4
-  - 리스크 패널티: 0
-  - 주요 근거: 1차 59, 최종 원점수 80, 표시 80. 20일 수익률 강함, 5일 수익률 강함, 이동평균 위 추세 유지. 주의: 큰 감점 제한적.
+  - 리스크 패널티: -4
+  - 주요 근거: 1차 57, 최종 원점수 61, 표시 61. 20일 수익률 강함, 5일 수익률 강함, 이동평균 위 추세 유지. 주의: 단기 과열/추격 위험 존재.
   - 리스크 패널티 산정 근거:
-    - 총 리스크 패널티: 0
+    - 총 리스크 패널티: -4
     - 리스크 등급: LOW
-    - 감점된 리스크: 없음
+    - 감점된 리스크:
+      - volume divergence: -4 | 근거: 5d price strength is not confirmed by relative volume 0.68x. | 대응: Require relative volume recovery above 1.0x.
     - 관찰 리스크: 주요 관찰 리스크 없음
-    - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
+    - 한 줄 해석: 1개 감점 리스크로 총 -4점 반영.
 - 데이터 사용 현황:
   - 가격/거래량: 사용
   - 뉴스: 사용
@@ -2056,36 +1798,36 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 12/4/0
+  - 긍정/중립/부정: 13/3/0
   - 직접성/방향성/신선도: 4/1/4
   - 강한 촉매 수: 2
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / earnings / under_24h / neutral - Adobe to Announce Q3 FY2026 Earnings Results on Sept. 10, 2026
+  - 직접 촉매: CNBC Markets RSS / general_market / under_6h / positive - Stan Kroenke agrees to buy MLB&apos;s Angels, valuing team and regional network at $4 billion
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-01 10:42 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-01 08:23 KST
+  - 뉴스 수집 시각: 2026-09-02 09:51 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-02 09:44 KST
   - 뉴스 신선도 상태: FRESH
-  - 뉴스 이후 가격 반응: 긍정
-  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: August was the month of the comeback kids. Cramer reviews what drove the biggest winners
-  - 원점수/상한 점수: +25 / +12
+  - 뉴스 이후 가격 반응: 부정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응 부정 -> 긍정 점수 제한
+  - 핵심 뉴스 요약: U.S. completes fresh strikes on Iran as Mideast tensions flare again
+  - 원점수/상한 점수: +26 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
 - 거래대금 유동성:
   - 데이터 상태: 일부 연결
-  - 거래대금 기준 유동성: LIQUID
-  - 거래대금: $1,491,373,004
-  - 평균 거래대금: $1,254,989,583
-  - 주문 영향: 시장가 가능
-  - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
-- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
+  - 거래대금 기준 유동성: ACCEPTABLE
+  - 거래대금: $713,107,984
+  - 평균 거래대금: $1,047,527,911
+  - 주문 영향: 지정가 권장
+  - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
+- reasonConfidence 근거: 가격/거래량이 약하거나 주요 데이터가 부족해 낮음.
 - 후보 선정 후 뉴스/동향 재확인:
   - 재확인 상태: 데이터 없음
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
-- 기준일 2026-08-31 | 종가 $292.79 | 1일 +0.44% | 5일 +5.98% | 20일 +16.49% | 상대 거래량 1.19배 | 52주 고점 대비 -21.05% | 데이터 소스: yfinance
+- 기준일 2026-09-01 | 종가 $187.03 | 1일 -3.68% | 5일 +12.34% | 20일 +69.55% | 상대 거래량 0.68배 | 52주 고점 대비 -5.21% | 데이터 소스: yfinance
 
 </details>
 
@@ -2093,74 +1835,46 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 이 섹션은 실제 계좌 보유 종목이 아니라 전일 리포트에서 제시된 개별 종목 후보의 사후 점검이다.
 실제 보유 수량/평단이 입력되지 않았으므로 계좌 수익률이 아니라 추천 기준일 이후 가격 변화를 추적한다.
 
-#### Adobe Inc.(ADBE)
-- 전일 추천일: 2026-08-27
-- 전일 actionLabel: 자금흐름 예외 조건부
-- 전일 moneyFlowScore: 100
-- 전일 종가 또는 추천 기준가: $289.15
-- 오늘 종가: $292.79
-- 추천 이후 수익률: +1.26%
-- 진입 조건 충족 여부: 미충족
-- 무효화 조건 발생 여부: 미발생
-- 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 유지
-- 오늘 판단 근거: ADBE는 전일 추천 이후 +1.26% 변화. 관련 ETF보다 강함 | 주식 5일 +5.98% vs ETF 평균 +4.01%, 주식 20일 +16.49% vs ETF 평균 +7.14%, 상대 거래량 1.19배 vs ETF 평균 0.78배
-- 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-
-#### Autodesk Inc.(ADSK)
-- 전일 추천일: 2026-08-27
-- 전일 actionLabel: 자금흐름 예외 조건부
-- 전일 moneyFlowScore: 98
-- 전일 종가 또는 추천 기준가: $270.58
-- 오늘 종가: $258.53
-- 추천 이후 수익률: -4.45%
-- 진입 조건 충족 여부: 미충족
-- 무효화 조건 발생 여부: 발생
-- 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 무효화
-- 오늘 판단 근거: ADSK는 전일 추천 이후 -4.45% 변화. 관련 ETF와 비슷함 | 주식 5일 +1.62% vs ETF 평균 +4.01%, 주식 20일 +10.15% vs ETF 평균 +7.14%, 상대 거래량 0.97배 vs ETF 평균 0.78배
-- 다음 확인 조건: 거래량 회복 실패
-
-#### Zscaler Inc.(ZS)
-- 전일 추천일: 2026-08-27
-- 전일 actionLabel: 자금흐름 예외 조건부
-- 전일 moneyFlowScore: 100
-- 전일 종가 또는 추천 기준가: $187.3
-- 오늘 종가: $188.39
-- 추천 이후 수익률: +0.58%
-- 진입 조건 충족 여부: 충족 또는 유지
-- 무효화 조건 발생 여부: 미발생
-- 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 눌림 대기
-- 오늘 판단 근거: ZS는 전일 추천 이후 +0.58% 변화. 관련 ETF보다 강함 | 주식 5일 +7.00% vs ETF 평균 +6.87%, 주식 20일 +21.96% vs ETF 평균 +8.09%, 상대 거래량 1.14배 vs ETF 평균 1.17배
-- 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-
-#### Freeport-McMoRan(FCX)
-- 전일 추천일: 2026-08-27
+#### CrowdStrike Holdings Inc.(CRWD)
+- 전일 추천일: 2026-08-28
 - 전일 actionLabel: 조건부 진입
-- 전일 moneyFlowScore: 94
-- 전일 종가 또는 추천 기준가: $78.42
-- 오늘 종가: $75.74
-- 추천 이후 수익률: -3.42%
-- 진입 조건 충족 여부: 미충족
-- 무효화 조건 발생 여부: 발생
-- 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 무효화
-- 오늘 판단 근거: FCX는 전일 추천 이후 -3.42% 변화. 관련 ETF보다 강함 | 주식 5일 -2.65% vs ETF 평균 +0.20%, 주식 20일 +19.01% vs ETF 평균 +0.95%, 상대 거래량 0.95배 vs ETF 평균 1.08배
-- 다음 확인 조건: 거래량 회복 실패
-
-#### Strategy Inc.(MSTR)
-- 전일 추천일: 2026-08-27
-- 전일 actionLabel: 자금흐름 예외 조건부
-- 전일 moneyFlowScore: 100
-- 전일 종가 또는 추천 기준가: $137.4
-- 오늘 종가: $132.94
-- 추천 이후 수익률: -3.25%
+- 전일 moneyFlowScore: 96
+- 전일 종가 또는 추천 기준가: $218.4
+- 오늘 종가: $215.07
+- 추천 이후 수익률: -1.52%
 - 진입 조건 충족 여부: 미충족
 - 무효화 조건 발생 여부: 미발생
 - 관련 ETF 대비 상대강도 유지 여부: 유지
 - 오늘 상태: 유지
-- 오늘 판단 근거: MSTR는 전일 추천 이후 -3.25% 변화. 관련 ETF보다 강함 | 주식 5일 +8.41% vs ETF 평균 +4.01%, 주식 20일 +40.14% vs ETF 평균 +7.14%, 상대 거래량 0.93배 vs ETF 평균 0.78배
+- 오늘 판단 근거: CRWD는 전일 추천 이후 -1.52% 변화. 관련 ETF보다 강함 | 주식 5일 +16.02% vs ETF 평균 +3.83%, 주식 20일 +1.82% vs ETF 평균 -0.20%, 상대 거래량 1.39배 vs ETF 평균 1.11배
+- 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+
+#### Workday Inc.(WDAY)
+- 전일 추천일: 2026-08-28
+- 전일 actionLabel: 자금흐름 예외 조건부
+- 전일 moneyFlowScore: 94
+- 전일 종가 또는 추천 기준가: $204.72
+- 오늘 종가: $198.38
+- 추천 이후 수익률: -3.10%
+- 진입 조건 충족 여부: 미충족
+- 무효화 조건 발생 여부: 미발생
+- 관련 ETF 대비 상대강도 유지 여부: 유지
+- 오늘 상태: 유지
+- 오늘 판단 근거: WDAY는 전일 추천 이후 -3.10% 변화. 관련 ETF보다 강함 | 주식 5일 +2.04% vs ETF 평균 +1.26%, 주식 20일 +15.82% vs ETF 평균 +0.58%, 상대 거래량 0.73배 vs ETF 평균 0.96배
+- 다음 확인 조건: 거래량 회복 실패
+
+#### Microsoft Corporation(MSFT)
+- 전일 추천일: 2026-08-28
+- 전일 actionLabel: 조건부 진입
+- 전일 moneyFlowScore: 84
+- 전일 종가 또는 추천 기준가: $513.53
+- 오늘 종가: $501.02
+- 추천 이후 수익률: -2.44%
+- 진입 조건 충족 여부: 미충족
+- 무효화 조건 발생 여부: 발생
+- 관련 ETF 대비 상대강도 유지 여부: 유지
+- 오늘 상태: 무효화
+- 오늘 판단 근거: MSFT는 전일 추천 이후 -2.44% 변화. 관련 ETF와 비슷함 | 주식 5일 +1.89% vs ETF 평균 +1.18%, 주식 20일 +1.67% vs ETF 평균 +0.17%, 상대 거래량 0.77배 vs ETF 평균 0.97배
 - 다음 확인 조건: 거래량 회복 실패
 
 ### 2-4. ETF 대비 개별 종목 판단 로직
@@ -2173,34 +1887,34 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 ### 2-5. 개별 종목 제외/주의 후보
 
-#### Palo Alto Networks Inc.(PANW)
-- moneyFlowScore(최종): 100
-- moneyFlowScore 산정 근거 요약: 1차 81, 최종 원점수 105, 표시 100. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
+#### Apple Inc.(AAPL)
+- moneyFlowScore(최종): 77
+- moneyFlowScore 산정 근거 요약: 1차 57, 최종 원점수 77, 표시 77. 1일 단기 모멘텀 확인, 상대 거래량 증가, 이동평균 위 추세 유지. 주의: 큰 감점 제한적.
 - 제외/주의 사유: 개별 종목 우선 근거 부족
-- 해제 조건: 전일 고점 돌파와 5일선 유지 확인
+- 해제 조건: 20일선 위 눌림 후 재상승 확인
 
-#### Fortinet Inc.(FTNT)
-- moneyFlowScore(최종): 100
-- moneyFlowScore 산정 근거 요약: 1차 77, 최종 원점수 101, 표시 100. 5일 수익률 강함, 1일 단기 모멘텀 확인, 상대 거래량 증가. 주의: 큰 감점 제한적.
+#### CrowdStrike Holdings Inc.(CRWD)
+- moneyFlowScore(최종): 67
+- moneyFlowScore 산정 근거 요약: 1차 56, 최종 원점수 67, 표시 67. 5일 수익률 강함, 상대 거래량 증가, 관련 ETF 강세 테마 안의 개별 종목. 주의: 큰 감점 제한적.
 - 제외/주의 사유: 개별 종목 우선 근거 부족
-- 해제 조건: 전일 고점 돌파와 5일선 유지 확인
+- 해제 조건: 20일선 위 눌림 후 재상승 확인
 
-#### Atlassian Corporation(TEAM)
-- moneyFlowScore(최종): 85
-- moneyFlowScore 산정 근거 요약: 1차 71, 최종 원점수 85, 표시 85. 20일 수익률 강함, 5일 수익률 강함, 52주 고점 근처. 주의: 단기 과열/추격 위험 존재.
-- 제외/주의 사유: 개별 종목 우선 근거 부족
-- 해제 조건: 상대 거래량 1.0배 회복 후 관찰
-
-#### QUALCOMM Incorporated(QCOM)
-- moneyFlowScore(최종): 81
-- moneyFlowScore 산정 근거 요약: 1차 62, 최종 원점수 81, 표시 81. 20일 수익률 강함, 5일 수익률 강함, 1일 단기 모멘텀 확인. 주의: 큰 감점 제한적.
+#### Diamondback Energy Inc.(FANG)
+- moneyFlowScore(최종): 67
+- moneyFlowScore 산정 근거 요약: 1차 51, 최종 원점수 67, 표시 67. 상대 거래량 증가, 이동평균 위 추세 유지, 관련 ETF 강세 테마 안의 개별 종목. 주의: 큰 감점 제한적.
 - 제외/주의 사유: 매매 조건 미충족
 - 해제 조건: 20일선 위 눌림 후 재상승 확인
 
-#### Adobe Inc.(ADBE)
-- moneyFlowScore(최종): 80
-- moneyFlowScore 산정 근거 요약: 1차 59, 최종 원점수 80, 표시 80. 20일 수익률 강함, 5일 수익률 강함, 이동평균 위 추세 유지. 주의: 큰 감점 제한적.
+#### Atlassian Corporation(TEAM)
+- moneyFlowScore(최종): 61
+- moneyFlowScore 산정 근거 요약: 1차 57, 최종 원점수 61, 표시 61. 20일 수익률 강함, 5일 수익률 강함, 이동평균 위 추세 유지. 주의: 단기 과열/추격 위험 존재.
 - 제외/주의 사유: 개별 종목 우선 근거 부족
+- 해제 조건: 상대 거래량 1.0배 회복 후 관찰
+
+#### Alnylam Pharmaceuticals Inc.(ALNY)
+- moneyFlowScore(최종): 56
+- moneyFlowScore 산정 근거 요약: 1차 41, 최종 원점수 56, 표시 56. 20일 수익률 강함, 1일 단기 모멘텀 확인, 이동평균 위 추세 유지. 주의: 큰 감점 제한적.
+- 제외/주의 사유: 매매 조건 미충족
 - 해제 조건: 20일선 위 눌림 후 재상승 확인
 
 
@@ -2212,161 +1926,161 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 총 스캔 종목 수: 101
 - 점수 계산 성공: 120
 - 점수 계산 실패: 0
-- moneyFlowScore(1차) 80점 이상: 2
-- moneyFlowScore(1차) 65~79점: 5
-- moneyFlowScore(1차) 50~64점: 8
-- moneyFlowScore(1차) 50점 미만: 105
+- moneyFlowScore(1차) 80점 이상: 0
+- moneyFlowScore(1차) 65~79점: 1
+- moneyFlowScore(1차) 50~64점: 4
+- moneyFlowScore(1차) 50점 미만: 115
 
 상위 20개 요약:
 
 | 순위 | 티커 | 이름 | moneyFlowScore(1차) | 최종 표시 점수 | 최종 원점수 | 점수 구간 | 오늘 판단 | 신뢰도 | 1일 | 5일 | 20일 | 상대 거래량 | 관련 ETF |
 |---:|---|---|---:|---:|---:|---|---|---|---:|---:|---:|---:|---|
-| 1 | CRWD | CrowdStrike Holdings Inc. | 96 | 100 | 114 | 강한 자금 유입 후보 | 자금흐름 예외 조건부 | HIGH | +5.77% | +21.15% | +14.05% | 1.88 | HACK, CIBR, IHAK, IGV |
-| 2 | PANW | Palo Alto Networks Inc. | 81 | 100 | 105 | 강한 자금 유입 후보 | 조건부 진입 | HIGH | +2.84% | +8.90% | +10.08% | 1.56 | HACK, CIBR, IHAK, IGV |
-| 3 | FTNT | Fortinet Inc. | 77 | 100 | 101 | 관심 후보 | 조건부 진입 | HIGH | +2.97% | +12.46% | +4.73% | 1.45 | HACK, CIBR, IHAK, IGV |
-| 4 | TEAM | Atlassian Corporation | 71 | 85 | 85 | 관심 후보 | 거래량 확인 전 관찰 | LOW | +1.97% | +13.33% | +87.22% | 0.90 | IGV, AIQ, QQQ |
-| 5 | TSLA | Tesla Inc. | 70 | 89 | 89 | 관심 후보 | 자금흐름 예외 조건부 | HIGH | +5.51% | +5.44% | +14.24% | 1.78 | QQQ |
-| 6 | ZS | Zscaler Inc. | 69 | 90 | 90 | 관심 후보 | 조건부 진입 | HIGH | +2.26% | +7.00% | +21.96% | 1.14 | HACK, CIBR, IHAK, IGV |
-| 7 | COIN | Coinbase | 67 | 86 | 86 | 관심 후보 | 자금흐름 예외 조건부 | HIGH | +5.31% | +4.81% | +28.41% | 1.10 | QQQ, SPY, IWM |
-| 8 | SNPS | Synopsys Inc. | 63 | 71 | 71 | 관찰 후보 | 관찰 | HIGH | -0.68% | +11.43% | +12.12% | 1.03 | IGV, AIQ, QQQ |
-| 9 | QCOM | QUALCOMM Incorporated | 62 | 81 | 81 | 관찰 후보 | 제외 | HIGH | +3.83% | +7.54% | +12.48% | 1.32 | SMH, SOXX, SOXQ, AIQ |
-| 10 | ADBE | Adobe Inc. | 59 | 80 | 80 | 관찰 후보 | 관찰 | HIGH | +0.44% | +5.98% | +16.49% | 1.19 | IGV, AIQ, QQQ |
-| 11 | CVX | Chevron | 57 | 76 | 76 | 관찰 후보 | 관찰 | HIGH | +2.12% | +1.50% | +6.71% | 1.51 | QQQ, SPY, IWM |
-| 12 | BKR | Baker Hughes Company | 56 | 72 | 72 | 관찰 후보 | 관찰 | HIGH | +1.83% | +2.52% | +4.51% | 1.75 | QQQ, SPY, IWM |
-| 13 | MSTR | Strategy Inc. | 54 | 71 | 71 | 관찰 후보 | 거래량 확인 전 관찰 | LOW | +4.42% | +8.41% | +40.14% | 0.93 | IGV, AIQ, QQQ |
-| 14 | PLTR | Palantir Technologies Inc. | 51 | 71 | 71 | 관찰 후보 | 거래량 확인 전 관찰 | LOW | +0.05% | +5.96% | +48.33% | 0.58 | IGV, AIQ, CIBR, QQQ |
-| 15 | CTSH | Cognizant Technology Solutions Corporation | 51 | 67 | 67 | 관찰 후보 | 관찰 | HIGH | +0.84% | +3.83% | +17.06% | 1.09 | QQQ, SPY, IWM |
-| 16 | VRTX | Vertex Pharmaceuticals Incorporated | 48 | 64 | 64 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | +0.52% | -0.56% | +15.68% | 1.01 | QQQ |
-| 17 | MSFT | Microsoft Corporation | 47 | 58 | 58 | 우선순위 낮음/매매 금지 | 제외 | HIGH | -1.22% | +4.10% | +4.03% | 1.01 | QQQ, MAGS, IGV, AIQ |
-| 18 | WBD | Warner Bros. Discovery Inc. | 45 | 51 | 51 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | -0.83% | -0.59% | +9.35% | 1.29 | QQQ |
-| 19 | ABNB | Airbnb Inc. | 43 | 52 | 52 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | -3.28% | -3.67% | +21.63% | 1.31 | QQQ |
-| 20 | ROP | Roper Technologies Inc. | 42 | 50 | 50 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | -0.37% | +2.20% | +8.17% | 1.02 | IGV, AIQ, QQQ |
+| 1 | CVX | Chevron | 66 | 85 | 85 | 관심 후보 | 자금흐름 예외 조건부 | HIGH | +2.38% | +5.58% | +10.85% | 1.08 | QQQ, SPY, IWM |
+| 2 | TEAM | Atlassian Corporation | 57 | 61 | 61 | 관찰 후보 | 거래량 확인 전 관찰 | LOW | -3.68% | +12.34% | +69.55% | 0.68 | IGV, AIQ, QQQ |
+| 3 | AAPL | Apple Inc. | 57 | 77 | 77 | 관찰 후보 | 관찰 | HIGH | +2.61% | +4.91% | +5.09% | 1.29 | QQQ, MAGS, SPY |
+| 4 | CRWD | CrowdStrike Holdings Inc. | 56 | 67 | 67 | 관찰 후보 | 관찰 | HIGH | -6.90% | +16.02% | +1.82% | 1.39 | HACK, CIBR, IHAK, IGV |
+| 5 | FANG | Diamondback Energy Inc. | 51 | 67 | 67 | 관찰 후보 | 제외 | MEDIUM | +1.34% | +1.64% | +5.88% | 1.40 | QQQ, SPY, IWM |
+| 6 | ADBE | Adobe Inc. | 43 | 54 | 54 | 우선순위 낮음/매매 금지 | 제외 | HIGH | -2.29% | +4.44% | +11.10% | 1.02 | IGV, AIQ, QQQ |
+| 7 | ZS | Zscaler Inc. | 41 | 49 | 49 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | -5.32% | +5.91% | +9.28% | 1.02 | HACK, CIBR, IHAK, IGV |
+| 8 | ALNY | Alnylam Pharmaceuticals Inc. | 41 | 56 | 56 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | +2.25% | +2.51% | +12.38% | 1.11 | QQQ |
+| 9 | GILD | Gilead Sciences Inc. | 35 | 50 | 50 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +2.45% | +0.77% | +10.85% | 0.80 | QQQ |
+| 10 | NFLX | Netflix Inc. | 33 | 41 | 41 | 우선순위 낮음/매매 금지 | 제외 | HIGH | -0.82% | +1.30% | +10.53% | 1.00 | QQQ |
+| 11 | AMGN | Amgen Inc. | 33 | 51 | 51 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +1.92% | -0.93% | +12.33% | 0.96 | QQQ |
+| 12 | VRTX | Vertex Pharmaceuticals Incorporated | 33 | 48 | 48 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.57% | -0.94% | +14.40% | 0.65 | QQQ |
+| 13 | TSLA | Tesla Inc. | 29 | 37 | 37 | 우선순위 낮음/매매 금지 | 제외 | HIGH | -3.22% | +1.67% | +8.78% | 1.04 | QQQ |
+| 14 | REGN | Regeneron Pharmaceuticals Inc. | 29 | 44 | 44 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +3.10% | -1.17% | +8.30% | 0.96 | QQQ |
+| 15 | XOM | Exxon Mobil | 27 | 51 | 51 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +2.24% | +2.43% | +6.88% | 0.77 | XLE, OIH |
+| 16 | WDAY | Workday Inc. | 27 | 45 | 45 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.47% | +2.04% | +15.82% | 0.73 | IGV, AIQ, QQQ |
+| 17 | PANW | Palo Alto Networks Inc. | 26 | 31 | 31 | 우선순위 낮음/매매 금지 | 제외 | LOW | -5.24% | +6.53% | -1.16% | 1.58 | HACK, CIBR, IHAK, IGV |
+| 18 | FTNT | Fortinet Inc. | 26 | 34 | 34 | 우선순위 낮음/매매 금지 | 제외 | LOW | -5.31% | +5.33% | -3.83% | 1.19 | HACK, CIBR, IHAK, IGV |
+| 19 | SNPS | Synopsys Inc. | 26 | 34 | 34 | 우선순위 낮음/매매 금지 | 제외 | LOW | -5.63% | +1.48% | +2.71% | 1.22 | IGV, AIQ, QQQ |
+| 20 | ABNB | Airbnb Inc. | 24 | 29 | 29 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.37% | -4.18% | +21.76% | 0.74 | QQQ |
 
 <details>
 <summary>NASDAQ_100 전체 moneyFlowScore(1차) 표 펼치기</summary>
 
 | 순위 | 티커 | 이름 | moneyFlowScore(1차) | 최종 표시 점수 | 최종 원점수 | 점수 구간 | 오늘 판단 | 신뢰도 | 1일 | 5일 | 20일 | 상대 거래량 | 관련 ETF |
 |---:|---|---|---:|---:|---:|---|---|---|---:|---:|---:|---:|---|
-| 1 | CRWD | CrowdStrike Holdings Inc. | 96 | 100 | 114 | 강한 자금 유입 후보 | 자금흐름 예외 조건부 | HIGH | +5.77% | +21.15% | +14.05% | 1.88 | HACK, CIBR, IHAK, IGV |
-| 2 | PANW | Palo Alto Networks Inc. | 81 | 100 | 105 | 강한 자금 유입 후보 | 조건부 진입 | HIGH | +2.84% | +8.90% | +10.08% | 1.56 | HACK, CIBR, IHAK, IGV |
-| 3 | FTNT | Fortinet Inc. | 77 | 100 | 101 | 관심 후보 | 조건부 진입 | HIGH | +2.97% | +12.46% | +4.73% | 1.45 | HACK, CIBR, IHAK, IGV |
-| 4 | TEAM | Atlassian Corporation | 71 | 85 | 85 | 관심 후보 | 거래량 확인 전 관찰 | LOW | +1.97% | +13.33% | +87.22% | 0.90 | IGV, AIQ, QQQ |
-| 5 | TSLA | Tesla Inc. | 70 | 89 | 89 | 관심 후보 | 자금흐름 예외 조건부 | HIGH | +5.51% | +5.44% | +14.24% | 1.78 | QQQ |
-| 6 | ZS | Zscaler Inc. | 69 | 90 | 90 | 관심 후보 | 조건부 진입 | HIGH | +2.26% | +7.00% | +21.96% | 1.14 | HACK, CIBR, IHAK, IGV |
-| 7 | COIN | Coinbase | 67 | 86 | 86 | 관심 후보 | 자금흐름 예외 조건부 | HIGH | +5.31% | +4.81% | +28.41% | 1.10 | QQQ, SPY, IWM |
-| 8 | SNPS | Synopsys Inc. | 63 | 71 | 71 | 관찰 후보 | 관찰 | HIGH | -0.68% | +11.43% | +12.12% | 1.03 | IGV, AIQ, QQQ |
-| 9 | QCOM | QUALCOMM Incorporated | 62 | 81 | 81 | 관찰 후보 | 제외 | HIGH | +3.83% | +7.54% | +12.48% | 1.32 | SMH, SOXX, SOXQ, AIQ |
-| 10 | ADBE | Adobe Inc. | 59 | 80 | 80 | 관찰 후보 | 관찰 | HIGH | +0.44% | +5.98% | +16.49% | 1.19 | IGV, AIQ, QQQ |
-| 11 | CVX | Chevron | 57 | 76 | 76 | 관찰 후보 | 관찰 | HIGH | +2.12% | +1.50% | +6.71% | 1.51 | QQQ, SPY, IWM |
-| 12 | BKR | Baker Hughes Company | 56 | 72 | 72 | 관찰 후보 | 관찰 | HIGH | +1.83% | +2.52% | +4.51% | 1.75 | QQQ, SPY, IWM |
-| 13 | MSTR | Strategy Inc. | 54 | 71 | 71 | 관찰 후보 | 거래량 확인 전 관찰 | LOW | +4.42% | +8.41% | +40.14% | 0.93 | IGV, AIQ, QQQ |
-| 14 | PLTR | Palantir Technologies Inc. | 51 | 71 | 71 | 관찰 후보 | 거래량 확인 전 관찰 | LOW | +0.05% | +5.96% | +48.33% | 0.58 | IGV, AIQ, CIBR, QQQ |
-| 15 | CTSH | Cognizant Technology Solutions Corporation | 51 | 67 | 67 | 관찰 후보 | 관찰 | HIGH | +0.84% | +3.83% | +17.06% | 1.09 | QQQ, SPY, IWM |
-| 16 | VRTX | Vertex Pharmaceuticals Incorporated | 48 | 64 | 64 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | +0.52% | -0.56% | +15.68% | 1.01 | QQQ |
-| 17 | MSFT | Microsoft Corporation | 47 | 58 | 58 | 우선순위 낮음/매매 금지 | 제외 | HIGH | -1.22% | +4.10% | +4.03% | 1.01 | QQQ, MAGS, IGV, AIQ |
-| 18 | WBD | Warner Bros. Discovery Inc. | 45 | 51 | 51 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | -0.83% | -0.59% | +9.35% | 1.29 | QQQ |
-| 19 | ABNB | Airbnb Inc. | 43 | 52 | 52 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | -3.28% | -3.67% | +21.63% | 1.31 | QQQ |
-| 20 | ROP | Roper Technologies Inc. | 42 | 50 | 50 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | -0.37% | +2.20% | +8.17% | 1.02 | IGV, AIQ, QQQ |
-| 21 | PAYX | Paychex Inc. | 41 | 43 | 43 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | +0.24% | +1.06% | +8.22% | 1.11 | QQQ, SPY, IWM |
-| 22 | GILD | Gilead Sciences Inc. | 39 | 41 | 41 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | +0.45% | -0.27% | +11.58% | 1.03 | QQQ |
-| 23 | XOM | Exxon Mobil | 38 | 44 | 44 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | +2.71% | -1.89% | +3.80% | 1.26 | XLE, OIH |
-| 24 | MU | Micron Technology Inc. | 36 | 36 | 36 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +2.77% | +5.31% | +15.58% | 0.76 | DRAM, SMH, SOXX, SOXQ |
-| 25 | VRSK | Verisk Analytics Inc. | 35 | 37 | 37 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | +1.05% | +2.23% | +0.35% | 1.01 | QQQ, SPY, IWM |
-| 26 | NFLX | Netflix Inc. | 33 | 35 | 35 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | -0.82% | +1.30% | +10.53% | 1.00 | QQQ |
-| 27 | NVDA | NVIDIA Corporation | 31 | 29 | 29 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +1.48% | +5.90% | +6.84% | 0.97 | SMH, SOXX, SOXQ, AIQ, QQQ |
-| 28 | CSGP | CoStar Group Inc. | 31 | 33 | 33 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.47% | -2.34% | +6.79% | 4.82 | QQQ, SPY, IWM |
-| 29 | CHTR | Charter Communications Inc. | 28 | 30 | 30 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.77% | +1.42% | +5.79% | 1.06 | QQQ, SPY, IWM |
-| 30 | LIN | Linde plc | 28 | 30 | 30 | 우선순위 낮음/매매 금지 | 제외 | LOW | +0.01% | -0.09% | +1.90% | 1.05 | QQQ, SPY, IWM |
-| 31 | KHC | The Kraft Heinz Company | 27 | 29 | 29 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.12% | 0.00% | -2.84% | 1.18 | QQQ |
-| 32 | FANG | Diamondback Energy Inc. | 25 | 21 | 21 | 우선순위 낮음/매매 금지 | 제외 | LOW | +1.42% | -2.49% | +0.87% | 1.95 | QQQ, SPY, IWM |
-| 33 | CMCSA | Comcast Corporation | 24 | 26 | 26 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.63% | -1.48% | +8.39% | 1.06 | QQQ, SPY, IWM |
-| 34 | KDP | Keurig Dr Pepper Inc. | 24 | 26 | 26 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.99% | -2.00% | +3.07% | 1.01 | QQQ |
-| 35 | DXCM | DexCom Inc. | 23 | 25 | 25 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.26% | 0.00% | +4.30% | 0.64 | QQQ |
-| 36 | FCX | Freeport-McMoRan | 23 | 25 | 25 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.93% | -2.65% | +19.01% | 0.95 | QQQ, SPY, IWM |
-| 37 | AMGN | Amgen Inc. | 23 | 25 | 25 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.59% | -3.15% | +13.46% | 0.92 | QQQ |
-| 38 | WDAY | Workday Inc. | 22 | 26 | 26 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -3.55% | -0.85% | +19.63% | 0.92 | IGV, AIQ, QQQ |
-| 39 | AAPL | Apple Inc. | 20 | 22 | 22 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.89% | +2.10% | +4.43% | 0.98 | QQQ, MAGS, SPY |
-| 40 | ADP | Automatic Data Processing Inc. | 20 | 22 | 22 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.46% | +1.11% | +6.07% | 0.75 | QQQ, SPY, IWM |
-| 41 | SBUX | Starbucks Corporation | 19 | 15 | 15 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.48% | -1.15% | +2.79% | 1.19 | QQQ, SPY, IWM |
-| 42 | DASH | DoorDash Inc. | 18 | 20 | 20 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.11% | +1.17% | +15.58% | 0.73 | QQQ |
-| 43 | EA | Electronic Arts Inc. | 18 | 20 | 20 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | 0.00% | +0.38% | - | 0.00 | QQQ |
-| 44 | CPRT | Copart Inc. | 18 | 20 | 20 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | 0.00% | -0.81% | +12.40% | 0.94 | QQQ, SPY, IWM |
-| 45 | REGN | Regeneron Pharmaceuticals Inc. | 18 | 14 | 14 | 우선순위 낮음/매매 금지 | 제외 | LOW | +0.62% | -3.55% | +5.25% | 1.26 | QQQ |
-| 46 | ALNY | Alnylam Pharmaceuticals Inc. | 17 | 19 | 19 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +1.51% | +1.98% | +9.24% | 0.92 | QQQ |
-| 47 | CDNS | Cadence Design Systems Inc. | 16 | 16 | 16 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.47% | +7.24% | +0.78% | 0.78 | IGV, AIQ, QQQ |
-| 48 | INSM | Insmed Incorporated | 16 | 12 | 12 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +2.77% | -1.74% | +23.74% | 0.84 | QQQ |
-| 49 | ADSK | Autodesk Inc. | 15 | 19 | 19 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.82% | +1.62% | +10.15% | 0.97 | IGV, AIQ, QQQ |
-| 50 | CSX | CSX Corporation | 15 | 11 | 11 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.50% | -1.81% | +1.36% | 1.28 | QQQ, SPY, IWM |
-| 51 | INTU | Intuit Inc. | 15 | 19 | 19 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.35% | -2.87% | +12.85% | 0.76 | IGV, AIQ, QQQ |
-| 52 | CCJ | Cameco | 12 | 8 | 8 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.25% | -3.43% | +10.08% | 1.07 | QQQ, SPY, IWM |
-| 53 | TRI | Thomson Reuters Corporation | 11 | 13 | 13 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +1.03% | -1.20% | +5.62% | 0.47 | QQQ, SPY, IWM |
-| 54 | SHOP | Shopify Inc. | 10 | 8 | 8 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -3.62% | -1.62% | +25.95% | 0.69 | IGV, AIQ, QQQ |
-| 55 | CCEP | Coca-Cola Europacific Partners PLC | 9 | 11 | 11 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.99% | -1.91% | -0.16% | 0.90 | QQQ |
-| 56 | FAST | Fastenal Company | 9 | 5 | 5 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.94% | -3.84% | +2.49% | 1.07 | QQQ, SPY, IWM |
-| 57 | AVGO | Broadcom Inc. | 8 | 4 | 4 | 우선순위 낮음/매매 금지 | 제외 | LOW | +0.42% | +3.23% | -5.58% | 1.11 | SMH, SOXX, SOXQ, AIQ |
-| 58 | IDXX | IDEXX Laboratories Inc. | 6 | 2 | 2 | 우선순위 낮음/매매 금지 | 제외 | LOW | +0.31% | -0.50% | -1.96% | 1.16 | QQQ |
-| 59 | WMT | Walmart Inc. | 6 | 2 | 2 | 우선순위 낮음/매매 금지 | 제외 | LOW | +1.73% | -1.52% | -5.28% | 1.21 | QQQ |
-| 60 | XEL | Xcel Energy Inc. | 6 | 2 | 2 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.99% | -2.12% | -2.57% | 1.42 | QQQ, SPY, IWM |
-| 61 | GEHC | GE HealthCare Technologies Inc. | 6 | 2 | 2 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.69% | -3.99% | +2.15% | 1.24 | QQQ |
-| 62 | MDLZ | Mondelez International Inc. | 6 | 2 | 2 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.47% | -4.06% | +0.55% | 1.02 | QQQ |
-| 63 | EXC | Exelon Corporation | 4 | 0 | 0 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.48% | -1.40% | -4.19% | 1.59 | QQQ, SPY, IWM |
-| 64 | CEG | Constellation Energy Corporation | 3 | 5 | 5 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.72% | +0.49% | +0.39% | 0.96 | QQQ, SPY, IWM |
-| 65 | AMZN | Amazon.com Inc. | 3 | 0 | -1 | 우선순위 낮음/매매 금지 | 제외 | LOW | -2.50% | -0.88% | -8.54% | 1.26 | QQQ |
-| 66 | ORLY | O'Reilly Automotive Inc. | 3 | 0 | -1 | 우선순위 낮음/매매 금지 | 제외 | LOW | +0.34% | -2.07% | -1.07% | 1.37 | QQQ, SPY, IWM |
-| 67 | ASML | ASML Holding N.V. | 3 | 0 | -1 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.01% | -2.54% | +3.26% | 1.02 | SMH, SOXX, SOXQ, AIQ |
-| 68 | COST | Costco Wholesale Corporation | 2 | 0 | -2 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.17% | -2.83% | -1.07% | 1.35 | QQQ |
-| 69 | PEP | PepsiCo Inc. | 2 | 0 | -2 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.52% | -2.99% | +0.51% | 1.00 | QQQ |
-| 70 | MELI | MercadoLibre Inc. | 1 | 3 | 3 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.53% | -0.60% | +1.97% | 0.68 | QQQ |
-| 71 | ODFL | Old Dominion Freight Line Inc. | 1 | 0 | -3 | 우선순위 낮음/매매 금지 | 제외 | LOW | +0.67% | -0.75% | -5.47% | 1.14 | QQQ, SPY, IWM |
-| 72 | TMUS | T-Mobile US Inc. | 1 | 3 | 3 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.51% | -1.19% | +1.89% | 0.94 | QQQ, SPY, IWM |
-| 73 | DDOG | Datadog Inc. | 0 | 0 | -15 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.03% | +4.99% | -13.36% | 0.84 | IGV, AIQ, QQQ |
-| 74 | APP | AppLovin Corporation | 0 | 0 | -22 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.79% | +4.51% | -23.17% | 0.77 | IGV, AIQ, QQQ |
-| 75 | STX | Seagate Technology Holdings plc | 0 | 0 | -11 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.17% | +4.24% | -0.32% | 0.84 | QQQ, SPY, IWM |
-| 76 | WDC | Western Digital Corporation | 0 | 0 | -27 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.94% | +3.48% | -14.54% | 0.76 | QQQ, SPY, IWM |
-| 77 | AMD | Advanced Micro Devices Inc. | 0 | 0 | -14 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +1.10% | +3.06% | -2.87% | 0.56 | SMH, SOXX, SOXQ, AIQ |
-| 78 | INTC | Intel Corporation | 0 | 0 | -11 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.04% | +2.58% | -1.64% | 0.64 | SMH, SOXX, SOXQ, AIQ |
-| 79 | META | Meta Platforms Inc. | 0 | 0 | -18 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.98% | +2.38% | -3.03% | 0.86 | QQQ |
-| 80 | VRT | Vertiv | 0 | 0 | -16 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.64% | +1.47% | -1.65% | 0.95 | QQQ, SPY, IWM |
-| 81 | ARM | Arm Holdings plc | 0 | 0 | -13 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +1.20% | +1.31% | +1.19% | 0.52 | SMH, SOXX, SOXQ, AIQ |
-| 82 | TSM | Taiwan Semiconductor | 0 | 0 | -17 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.53% | +1.27% | +2.27% | 0.67 | SMH, SOXX, SOXQ |
-| 83 | NXPI | NXP Semiconductors N.V. | 0 | 0 | -12 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.47% | +0.99% | +0.21% | 0.89 | SMH, SOXX, SOXQ, AIQ |
-| 84 | CIFR | Cipher Mining | 0 | 0 | -24 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +2.18% | +0.91% | -35.84% | 0.52 | IBIT, BLOK |
-| 85 | ISRG | Intuitive Surgical Inc. | 0 | 0 | -11 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +1.14% | +0.88% | +0.39% | 0.76 | QQQ |
-| 86 | TXN | Texas Instruments Incorporated | 0 | 0 | -19 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.88% | +0.76% | -3.02% | 0.98 | SMH, SOXX, SOXQ, AIQ |
-| 87 | AEP | American Electric Power Company Inc. | 0 | 0 | -5 | 우선순위 낮음/매매 금지 | 제외 | LOW | +0.10% | +0.37% | -4.59% | 1.18 | QQQ, SPY, IWM |
-| 88 | CSCO | Cisco Systems Inc. | 0 | 0 | -22 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.51% | +0.24% | -4.63% | 0.99 | QQQ, SPY, IWM |
-| 89 | AVAV | AeroVironment | 0 | 0 | -27 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.28% | +0.10% | -6.80% | 0.71 | XAR, SHLD, ITA, PPA |
-| 90 | LMT | Lockheed Martin | 0 | 0 | -20 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.46% | -0.52% | -4.27% | 0.94 | QQQ, SPY, IWM |
-| 91 | HON | Honeywell International Inc. | 0 | 0 | -8 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.79% | -0.58% | -13.47% | 1.68 | QQQ, SPY, IWM |
-| 92 | RTX | RTX | 0 | 0 | -17 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.88% | -0.71% | -4.12% | 0.90 | QQQ, SPY, IWM |
-| 93 | MCHP | Microchip Technology Incorporated | 0 | 0 | -22 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.71% | -1.02% | -2.35% | 0.73 | SMH, SOXX, SOXQ, AIQ |
-| 94 | MPWR | Monolithic Power Systems Inc. | 0 | 0 | -8 | 우선순위 낮음/매매 금지 | 제외 | LOW | +0.92% | -1.34% | -5.70% | 1.00 | SMH, SOXX, SOXQ, AIQ |
-| 95 | PWR | Quanta Services | 0 | 0 | -9 | 우선순위 낮음/매매 금지 | 제외 | LOW | +0.73% | -1.57% | -10.75% | 1.27 | QQQ, SPY, IWM |
-| 96 | ETN | Eaton | 0 | 0 | -8 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.22% | -1.66% | -8.29% | 1.20 | QQQ, SPY, IWM |
-| 97 | NOC | Northrop Grumman | 0 | 0 | -6 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.08% | -1.74% | -1.60% | 1.14 | QQQ, SPY, IWM |
-| 98 | ADI | Analog Devices Inc. | 0 | 0 | -22 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.10% | -2.43% | +0.07% | 0.75 | SMH, SOXX, SOXQ, AIQ |
-| 99 | GOOGL | Alphabet Inc. Class A | 0 | 0 | -13 | 우선순위 낮음/매매 금지 | 제외 | LOW | -2.09% | -2.50% | -9.15% | 1.38 | QQQ |
-| 100 | GOOG | Alphabet Inc. Class C | 0 | 0 | -14 | 우선순위 낮음/매매 금지 | 제외 | LOW | -2.18% | -2.66% | -9.95% | 1.40 | QQQ |
-| 101 | CTAS | Cintas Corporation | 0 | 0 | -16 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.17% | -2.70% | -1.09% | 0.97 | QQQ, SPY, IWM |
-| 102 | LRCX | Lam Research Corporation | 0 | 0 | -20 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.14% | -2.80% | +2.34% | 0.87 | SMH, SOXX, SOXQ, AIQ |
-| 103 | KLAC | KLA Corporation | 0 | 0 | -29 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.05% | -3.37% | -3.99% | 0.76 | SMH, SOXX, SOXQ, AIQ |
-| 104 | PDD | PDD Holdings Inc. | 0 | 0 | -8 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.97% | -3.53% | -6.82% | 1.91 | QQQ |
-| 105 | MARA | MARA Holdings | 0 | 0 | -12 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.94% | -3.67% | -8.34% | 0.49 | IBIT, BLOK |
-| 106 | KTOS | Kratos Defense & Security Solutions | 0 | 0 | -24 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.96% | -3.94% | +3.60% | 0.57 | QQQ, SPY, IWM |
-| 107 | PCAR | PACCAR Inc. | 0 | 0 | -28 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.97% | -4.47% | -6.00% | 0.92 | QQQ, SPY, IWM |
-| 108 | GEV | GE Vernova | 0 | 0 | -13 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.47% | -4.62% | -10.75% | 1.76 | QQQ, SPY, IWM |
-| 109 | RIOT | Riot Platforms | 0 | 0 | -36 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.03% | -5.02% | -11.32% | 0.50 | IBIT, BLOK |
-| 110 | MAR | Marriott International Inc. | 0 | 0 | -32 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.65% | -5.12% | -1.46% | 0.89 | QQQ, SPY, IWM |
-| 111 | AXON | Axon Enterprise Inc. | 0 | 0 | -9 | 우선순위 낮음/매매 금지 | 제외 | LOW | -5.69% | -5.19% | -1.62% | 1.20 | QQQ, SPY, IWM |
-| 112 | AMAT | Applied Materials Inc. | 0 | 0 | -40 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.71% | -5.33% | -11.54% | 0.84 | SMH, SOXX, SOXQ, AIQ |
-| 113 | ROST | Ross Stores Inc. | 0 | 0 | -31 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | 0.00% | -5.37% | -9.64% | 0.87 | QQQ, SPY, IWM |
-| 114 | TTWO | Take-Two Interactive Software Inc. | 0 | 0 | -19 | 우선순위 낮음/매매 금지 | 제외 | LOW | -6.67% | -5.91% | -10.38% | 2.49 | QQQ |
-| 115 | MNST | Monster Beverage Corporation | 0 | 0 | -14 | 우선순위 낮음/매매 금지 | 제외 | LOW | -2.01% | -6.13% | -4.71% | 1.31 | QQQ |
-| 116 | FER | Ferrovial N.V. | 0 | 0 | -41 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.31% | -6.68% | -11.40% | 0.96 | QQQ, SPY, IWM |
-| 117 | BKNG | Booking Holdings Inc. | 0 | 0 | -20 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -3.18% | -6.69% | +3.31% | 0.95 | QQQ |
-| 118 | IREN | IREN | 0 | 0 | -29 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +4.70% | -6.77% | -6.63% | 0.88 | IBIT, BLOK |
-| 119 | MRVL | Marvell Technology Inc. | 0 | 0 | -23 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.29% | -7.69% | +9.23% | 0.94 | SMH, SOXX, SOXQ, AIQ |
-| 120 | PYPL | PayPal Holdings Inc. | 0 | 0 | -16 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.85% | -14.62% | -8.99% | 1.70 | QQQ, SPY, IWM |
+| 1 | CVX | Chevron | 66 | 85 | 85 | 관심 후보 | 자금흐름 예외 조건부 | HIGH | +2.38% | +5.58% | +10.85% | 1.08 | QQQ, SPY, IWM |
+| 2 | TEAM | Atlassian Corporation | 57 | 61 | 61 | 관찰 후보 | 거래량 확인 전 관찰 | LOW | -3.68% | +12.34% | +69.55% | 0.68 | IGV, AIQ, QQQ |
+| 3 | AAPL | Apple Inc. | 57 | 77 | 77 | 관찰 후보 | 관찰 | HIGH | +2.61% | +4.91% | +5.09% | 1.29 | QQQ, MAGS, SPY |
+| 4 | CRWD | CrowdStrike Holdings Inc. | 56 | 67 | 67 | 관찰 후보 | 관찰 | HIGH | -6.90% | +16.02% | +1.82% | 1.39 | HACK, CIBR, IHAK, IGV |
+| 5 | FANG | Diamondback Energy Inc. | 51 | 67 | 67 | 관찰 후보 | 제외 | MEDIUM | +1.34% | +1.64% | +5.88% | 1.40 | QQQ, SPY, IWM |
+| 6 | ADBE | Adobe Inc. | 43 | 54 | 54 | 우선순위 낮음/매매 금지 | 제외 | HIGH | -2.29% | +4.44% | +11.10% | 1.02 | IGV, AIQ, QQQ |
+| 7 | ZS | Zscaler Inc. | 41 | 49 | 49 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | -5.32% | +5.91% | +9.28% | 1.02 | HACK, CIBR, IHAK, IGV |
+| 8 | ALNY | Alnylam Pharmaceuticals Inc. | 41 | 56 | 56 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | +2.25% | +2.51% | +12.38% | 1.11 | QQQ |
+| 9 | GILD | Gilead Sciences Inc. | 35 | 50 | 50 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +2.45% | +0.77% | +10.85% | 0.80 | QQQ |
+| 10 | NFLX | Netflix Inc. | 33 | 41 | 41 | 우선순위 낮음/매매 금지 | 제외 | HIGH | -0.82% | +1.30% | +10.53% | 1.00 | QQQ |
+| 11 | AMGN | Amgen Inc. | 33 | 51 | 51 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +1.92% | -0.93% | +12.33% | 0.96 | QQQ |
+| 12 | VRTX | Vertex Pharmaceuticals Incorporated | 33 | 48 | 48 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.57% | -0.94% | +14.40% | 0.65 | QQQ |
+| 13 | TSLA | Tesla Inc. | 29 | 37 | 37 | 우선순위 낮음/매매 금지 | 제외 | HIGH | -3.22% | +1.67% | +8.78% | 1.04 | QQQ |
+| 14 | REGN | Regeneron Pharmaceuticals Inc. | 29 | 44 | 44 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +3.10% | -1.17% | +8.30% | 0.96 | QQQ |
+| 15 | XOM | Exxon Mobil | 27 | 51 | 51 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +2.24% | +2.43% | +6.88% | 0.77 | XLE, OIH |
+| 16 | WDAY | Workday Inc. | 27 | 45 | 45 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.47% | +2.04% | +15.82% | 0.73 | IGV, AIQ, QQQ |
+| 17 | PANW | Palo Alto Networks Inc. | 26 | 31 | 31 | 우선순위 낮음/매매 금지 | 제외 | LOW | -5.24% | +6.53% | -1.16% | 1.58 | HACK, CIBR, IHAK, IGV |
+| 18 | FTNT | Fortinet Inc. | 26 | 34 | 34 | 우선순위 낮음/매매 금지 | 제외 | LOW | -5.31% | +5.33% | -3.83% | 1.19 | HACK, CIBR, IHAK, IGV |
+| 19 | SNPS | Synopsys Inc. | 26 | 34 | 34 | 우선순위 낮음/매매 금지 | 제외 | LOW | -5.63% | +1.48% | +2.71% | 1.22 | IGV, AIQ, QQQ |
+| 20 | ABNB | Airbnb Inc. | 24 | 29 | 29 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.37% | -4.18% | +21.76% | 0.74 | QQQ |
+| 21 | DXCM | DexCom Inc. | 23 | 24 | 24 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.01% | +1.10% | +3.68% | 0.47 | QQQ |
+| 22 | META | Meta Platforms Inc. | 22 | 23 | 23 | 우선순위 낮음/매매 금지 | 제외 | LOW | +1.08% | +1.49% | -1.60% | 1.01 | QQQ |
+| 23 | BKR | Baker Hughes Company | 21 | 23 | 23 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.17% | +2.97% | +3.12% | 0.93 | QQQ, SPY, IWM |
+| 24 | MSTR | Strategy Inc. | 21 | 25 | 25 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -6.06% | -1.54% | +27.89% | 0.84 | IGV, AIQ, QQQ |
+| 25 | EA | Electronic Arts Inc. | 18 | 19 | 19 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | 0.00% | +0.38% | - | 0.00 | QQQ |
+| 26 | PLTR | Palantir Technologies Inc. | 17 | 21 | 21 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -3.47% | +4.16% | +10.61% | 0.66 | IGV, AIQ, CIBR, QQQ |
+| 27 | CEG | Constellation Energy Corporation | 15 | 17 | 17 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +2.02% | +0.68% | +4.89% | 0.95 | QQQ, SPY, IWM |
+| 28 | KHC | The Kraft Heinz Company | 14 | 15 | 15 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.78% | +2.17% | -2.89% | 0.91 | QQQ |
+| 29 | PAYX | Paychex Inc. | 14 | 16 | 16 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.34% | +0.52% | +5.88% | 0.79 | QQQ, SPY, IWM |
+| 30 | CTSH | Cognizant Technology Solutions Corporation | 14 | 16 | 16 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.84% | +0.52% | +12.93% | 0.57 | QQQ, SPY, IWM |
+| 31 | WBD | Warner Bros. Discovery Inc. | 14 | 15 | 15 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.74% | -2.01% | +9.81% | 0.77 | QQQ |
+| 32 | VRSK | Verisk Analytics Inc. | 13 | 15 | 15 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.29% | +3.11% | +0.80% | 0.78 | QQQ, SPY, IWM |
+| 33 | MSFT | Microsoft Corporation | 12 | 16 | 16 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.24% | +1.89% | +1.67% | 0.77 | QQQ, MAGS, IGV, AIQ |
+| 34 | ADP | Automatic Data Processing Inc. | 12 | 14 | 14 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.93% | +0.25% | +4.76% | 0.83 | QQQ, SPY, IWM |
+| 35 | TMUS | T-Mobile US Inc. | 11 | 13 | 13 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.95% | +0.30% | +2.79% | 0.98 | QQQ, SPY, IWM |
+| 36 | KDP | Keurig Dr Pepper Inc. | 11 | 12 | 12 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.09% | +0.16% | +2.54% | 0.64 | QQQ |
+| 37 | INSM | Insmed Incorporated | 11 | 6 | 6 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.25% | -1.92% | +23.05% | 0.52 | QQQ |
+| 38 | CSGP | CoStar Group Inc. | 10 | 12 | 12 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.28% | -2.53% | +7.24% | 0.88 | QQQ, SPY, IWM |
+| 39 | QCOM | QUALCOMM Incorporated | 9 | 9 | 9 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.27% | +3.77% | +2.42% | 0.95 | SMH, SOXX, SOXQ, AIQ |
+| 40 | ROP | Roper Technologies Inc. | 9 | 13 | 13 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.49% | +1.20% | +6.51% | 0.73 | IGV, AIQ, QQQ |
+| 41 | MELI | MercadoLibre Inc. | 9 | 10 | 10 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +1.41% | -1.68% | +3.97% | 0.66 | QQQ |
+| 42 | XEL | Xcel Energy Inc. | 8 | 4 | 4 | 우선순위 낮음/매매 금지 | 제외 | LOW | +0.26% | -1.68% | -2.39% | 1.48 | QQQ, SPY, IWM |
+| 43 | MDLZ | Mondelez International Inc. | 8 | 3 | 3 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.74% | -2.19% | -0.76% | 1.14 | QQQ |
+| 44 | CPRT | Copart Inc. | 7 | 9 | 9 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.59% | -2.60% | +10.43% | 0.55 | QQQ, SPY, IWM |
+| 45 | TRI | Thomson Reuters Corporation | 5 | 7 | 7 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.90% | +1.89% | -2.57% | 0.79 | QQQ, SPY, IWM |
+| 46 | DASH | DoorDash Inc. | 5 | 6 | 6 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.62% | -3.36% | +11.51% | 0.77 | QQQ |
+| 47 | COIN | Coinbase | 5 | 7 | 7 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -6.01% | -5.52% | +17.31% | 0.87 | QQQ, SPY, IWM |
+| 48 | SBUX | Starbucks Corporation | 4 | 0 | 0 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.09% | +0.37% | +1.12% | 0.79 | QQQ, SPY, IWM |
+| 49 | LIN | Linde plc | 3 | 5 | 5 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.58% | -0.09% | +0.44% | 0.84 | QQQ, SPY, IWM |
+| 50 | CMCSA | Comcast Corporation | 2 | 4 | 4 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.20% | -2.95% | +5.50% | 0.91 | QQQ, SPY, IWM |
+| 51 | NVDA | NVIDIA Corporation | 1 | 0 | -4 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.51% | +2.06% | +2.60% | 0.85 | SMH, SOXX, SOXQ, AIQ, QQQ |
+| 52 | EXC | Exelon Corporation | 1 | 0 | -3 | 우선순위 낮음/매매 금지 | 제외 | LOW | +0.25% | -1.08% | -4.38% | 1.23 | QQQ, SPY, IWM |
+| 53 | AVGO | Broadcom Inc. | 0 | 0 | -21 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.18% | +3.63% | -11.59% | 0.98 | SMH, SOXX, SOXQ, AIQ |
+| 54 | INTC | Intel Corporation | 0 | 0 | -29 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.60% | +1.70% | -11.79% | 0.75 | SMH, SOXX, SOXQ, AIQ |
+| 55 | PWR | Quanta Services | 0 | 0 | -27 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.71% | +1.26% | -11.78% | 0.92 | QQQ, SPY, IWM |
+| 56 | WMT | Walmart Inc. | 0 | 0 | -18 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +1.00% | +0.51% | -5.05% | 0.80 | QQQ |
+| 57 | APP | AppLovin Corporation | 0 | 0 | -28 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.10% | +0.39% | -25.72% | 0.61 | IGV, AIQ, QQQ |
+| 58 | DDOG | Datadog Inc. | 0 | 0 | -34 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -5.57% | +0.38% | -22.32% | 0.68 | IGV, AIQ, QQQ |
+| 59 | AEP | American Electric Power Company Inc. | 0 | 0 | -18 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.43% | +0.15% | -4.20% | 0.80 | QQQ, SPY, IWM |
+| 60 | VRT | Vertiv | 0 | 0 | -6 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.06% | +0.09% | -5.17% | 1.00 | QQQ, SPY, IWM |
+| 61 | MU | Micron Technology Inc. | 0 | 0 | 0 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.64% | +0.05% | +4.57% | 0.95 | DRAM, SMH, SOXX, SOXQ |
+| 62 | WDC | Western Digital Corporation | 0 | 0 | -30 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.02% | -0.07% | -17.89% | 0.72 | QQQ, SPY, IWM |
+| 63 | STX | Seagate Technology Holdings plc | 0 | 0 | -24 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.42% | -0.61% | -3.40% | 0.59 | QQQ, SPY, IWM |
+| 64 | ISRG | Intuitive Surgical Inc. | 0 | 0 | -23 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.02% | -0.70% | +0.27% | 0.76 | QQQ |
+| 65 | TSM | Taiwan Semiconductor | 0 | 0 | -22 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.32% | -0.82% | -0.76% | 0.83 | SMH, SOXX, SOXQ |
+| 66 | IDXX | IDEXX Laboratories Inc. | 0 | 0 | -31 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.07% | -0.88% | -7.30% | 0.84 | QQQ |
+| 67 | NXPI | NXP Semiconductors N.V. | 0 | 0 | -12 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.00% | -1.05% | -6.40% | 1.00 | SMH, SOXX, SOXQ, AIQ |
+| 68 | CSCO | Cisco Systems Inc. | 0 | 0 | -31 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.68% | -1.23% | -9.86% | 0.69 | QQQ, SPY, IWM |
+| 69 | ADSK | Autodesk Inc. | 0 | 0 | -14 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -4.19% | -1.40% | +4.42% | 0.97 | IGV, AIQ, QQQ |
+| 70 | PEP | PepsiCo Inc. | 0 | 0 | -19 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.39% | -1.74% | +0.50% | 0.84 | QQQ |
+| 71 | NOC | Northrop Grumman | 0 | 0 | -26 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.26% | -1.77% | -3.38% | 0.76 | QQQ, SPY, IWM |
+| 72 | CTAS | Cintas Corporation | 0 | 0 | -14 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.59% | -2.04% | -1.50% | 0.88 | QQQ, SPY, IWM |
+| 73 | CCEP | Coca-Cola Europacific Partners PLC | 0 | 0 | -11 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.39% | -2.05% | +1.39% | 0.66 | QQQ |
+| 74 | COST | Costco Wholesale Corporation | 0 | 0 | -24 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.42% | -2.09% | -0.83% | 0.86 | QQQ |
+| 75 | LMT | Lockheed Martin | 0 | 0 | -16 | 우선순위 낮음/매매 금지 | 제외 | LOW | -2.98% | -2.16% | -7.61% | 1.07 | QQQ, SPY, IWM |
+| 76 | AVAV | AeroVironment | 0 | 0 | -39 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.82% | -2.20% | -14.70% | 0.87 | XAR, SHLD, ITA, PPA |
+| 77 | AMZN | Amazon.com Inc. | 0 | 0 | -24 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.87% | -2.35% | -8.11% | 0.92 | QQQ |
+| 78 | RTX | RTX | 0 | 0 | -24 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.24% | -2.43% | -5.86% | 0.71 | QQQ, SPY, IWM |
+| 79 | TXN | Texas Instruments Incorporated | 0 | 0 | -18 | 우선순위 낮음/매매 금지 | 제외 | LOW | -2.90% | -2.58% | -10.68% | 1.25 | SMH, SOXX, SOXQ, AIQ |
+| 80 | ORLY | O'Reilly Automotive Inc. | 0 | 0 | -11 | 우선순위 낮음/매매 금지 | 제외 | LOW | -0.96% | -2.62% | -4.23% | 1.09 | QQQ, SPY, IWM |
+| 81 | HON | Honeywell International Inc. | 0 | 0 | -37 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.66% | -2.64% | -15.60% | 0.78 | QQQ, SPY, IWM |
+| 82 | ARM | Arm Holdings plc | 0 | 0 | -41 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.93% | -2.79% | -16.30% | 0.79 | SMH, SOXX, SOXQ, AIQ |
+| 83 | MCHP | Microchip Technology Incorporated | 0 | 0 | -22 | 우선순위 낮음/매매 금지 | 제외 | LOW | -2.78% | -2.84% | -11.48% | 1.08 | SMH, SOXX, SOXQ, AIQ |
+| 84 | GEV | GE Vernova | 0 | 0 | -17 | 우선순위 낮음/매매 금지 | 제외 | LOW | 0.00% | -3.04% | -11.78% | 1.14 | QQQ, SPY, IWM |
+| 85 | FAST | Fastenal Company | 0 | 0 | -17 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.14% | -3.10% | -1.93% | 0.85 | QQQ, SPY, IWM |
+| 86 | GOOG | Alphabet Inc. Class C | 0 | 0 | -38 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.01% | -3.29% | -11.54% | 0.89 | QQQ |
+| 87 | GOOGL | Alphabet Inc. Class A | 0 | 0 | -37 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.28% | -3.44% | -11.29% | 0.90 | QQQ |
+| 88 | INTU | Intuit Inc. | 0 | 0 | -17 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -4.00% | -3.51% | +6.59% | 0.66 | IGV, AIQ, QQQ |
+| 89 | AMD | Advanced Micro Devices Inc. | 0 | 0 | -41 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.36% | -4.08% | -11.37% | 0.80 | SMH, SOXX, SOXQ, AIQ |
+| 90 | ETN | Eaton | 0 | 0 | -24 | 우선순위 낮음/매매 금지 | 제외 | LOW | -2.78% | -4.52% | -12.15% | 1.16 | QQQ, SPY, IWM |
+| 91 | ASML | ASML Holding N.V. | 0 | 0 | -34 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.82% | -4.53% | -2.73% | 0.79 | SMH, SOXX, SOXQ, AIQ |
+| 92 | GEHC | GE HealthCare Technologies Inc. | 0 | 0 | -7 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.14% | -4.72% | +0.23% | 1.04 | QQQ |
+| 93 | ROST | Ross Stores Inc. | 0 | 0 | -31 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +0.31% | -4.95% | -8.69% | 0.76 | QQQ, SPY, IWM |
+| 94 | ADI | Analog Devices Inc. | 0 | 0 | -39 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.10% | -5.12% | -6.78% | 0.83 | SMH, SOXX, SOXQ, AIQ |
+| 95 | PDD | PDD Holdings Inc. | 0 | 0 | -39 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.99% | -5.22% | -8.63% | 0.89 | QQQ |
+| 96 | PCAR | PACCAR Inc. | 0 | 0 | -39 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.35% | -5.24% | -9.94% | 0.95 | QQQ, SPY, IWM |
+| 97 | CSX | CSX Corporation | 0 | 0 | -6 | 우선순위 낮음/매매 금지 | 제외 | LOW | -3.58% | -5.46% | -4.57% | 1.69 | QQQ, SPY, IWM |
+| 98 | CDNS | Cadence Design Systems Inc. | 0 | 0 | -22 | 우선순위 낮음/매매 금지 | 제외 | LOW | -7.60% | -5.68% | -8.10% | 1.10 | IGV, AIQ, QQQ |
+| 99 | ODFL | Old Dominion Freight Line Inc. | 0 | 0 | -20 | 우선순위 낮음/매매 금지 | 제외 | LOW | -6.48% | -5.71% | -14.73% | 1.68 | QQQ, SPY, IWM |
+| 100 | CHTR | Charter Communications Inc. | 0 | 0 | -17 | 우선순위 낮음/매매 금지 | 제외 | LOW | -4.10% | -5.77% | -4.49% | 1.00 | QQQ, SPY, IWM |
+| 101 | MPWR | Monolithic Power Systems Inc. | 0 | 0 | -22 | 우선순위 낮음/매매 금지 | 제외 | LOW | -3.30% | -6.00% | -8.17% | 1.27 | SMH, SOXX, SOXQ, AIQ |
+| 102 | KTOS | Kratos Defense & Security Solutions | 0 | 0 | -20 | 우선순위 낮음/매매 금지 | 제외 | LOW | -3.22% | -6.27% | -4.88% | 1.01 | QQQ, SPY, IWM |
+| 103 | MAR | Marriott International Inc. | 0 | 0 | -17 | 우선순위 낮음/매매 금지 | 제외 | LOW | -2.11% | -6.49% | -3.09% | 1.10 | QQQ, SPY, IWM |
+| 104 | KLAC | KLA Corporation | 0 | 0 | -29 | 우선순위 낮음/매매 금지 | 제외 | LOW | -2.60% | -6.79% | -12.57% | 1.10 | SMH, SOXX, SOXQ, AIQ |
+| 105 | TTWO | Take-Two Interactive Software Inc. | 0 | 0 | -24 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.37% | -6.98% | -9.80% | 1.00 | QQQ |
+| 106 | MNST | Monster Beverage Corporation | 0 | 0 | -45 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.03% | -7.67% | -51.91% | 0.76 | QQQ |
+| 107 | LRCX | Lam Research Corporation | 0 | 0 | -28 | 우선순위 낮음/매매 금지 | 제외 | LOW | -3.74% | -7.77% | -8.67% | 1.07 | SMH, SOXX, SOXQ, AIQ |
+| 108 | AMAT | Applied Materials Inc. | 0 | 0 | -48 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -3.61% | -7.96% | -19.17% | 0.98 | SMH, SOXX, SOXQ, AIQ |
+| 109 | BKNG | Booking Holdings Inc. | 0 | 0 | -11 | 우선순위 낮음/매매 금지 | 제외 | LOW | -1.71% | -8.46% | +0.73% | 1.03 | QQQ |
+| 110 | FER | Ferrovial N.V. | 0 | 0 | -44 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -1.45% | -8.46% | -13.26% | 0.88 | QQQ, SPY, IWM |
+| 111 | SHOP | Shopify Inc. | 0 | 0 | -13 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -5.12% | -9.14% | +13.40% | 0.97 | IGV, AIQ, QQQ |
+| 112 | FCX | Freeport-McMoRan | 0 | 2 | 2 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -4.32% | -9.31% | +7.68% | 0.88 | QQQ, SPY, IWM |
+| 113 | CCJ | Cameco | 0 | 0 | -25 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -2.53% | -10.00% | +3.41% | 0.78 | QQQ, SPY, IWM |
+| 114 | CIFR | Cipher Mining | 0 | 0 | -46 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -5.74% | -10.42% | -28.31% | 0.57 | IBIT, BLOK |
+| 115 | MRVL | Marvell Technology Inc. | 0 | 0 | -37 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.60% | -12.48% | -3.75% | 0.87 | SMH, SOXX, SOXQ, AIQ |
+| 116 | IREN | IREN | 0 | 0 | -41 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.79% | -12.77% | -9.87% | 0.75 | IBIT, BLOK |
+| 117 | MARA | MARA Holdings | 0 | 0 | -46 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -5.01% | -13.52% | -12.94% | 0.62 | IBIT, BLOK |
+| 118 | AXON | Axon Enterprise Inc. | 0 | 0 | -20 | 우선순위 낮음/매매 금지 | 제외 | LOW | -8.52% | -15.48% | -14.64% | 1.51 | QQQ, SPY, IWM |
+| 119 | PYPL | PayPal Holdings Inc. | 0 | 0 | -42 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -0.50% | -15.85% | -10.49% | 0.85 | QQQ, SPY, IWM |
+| 120 | RIOT | Riot Platforms | 0 | 0 | -46 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | -6.34% | -16.48% | -17.49% | 0.65 | IBIT, BLOK |
 
 </details>
 
@@ -2377,49 +2091,49 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 티커 | 카테고리 | moneyFlowScore | 상태 | reasonConfidence | 주요 이유 |
 | --- | --- | ---: | --- | --- | --- |
-| Roundhill Memory ETF(DRAM) | 메모리/HBM ETF | 42 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.44배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
-| VanEck Semiconductor ETF(SMH) | AI 반도체 ETF | 3 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.61배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
-| iShares Semiconductor ETF(SOXX) | AI 반도체 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.85배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
-| Invesco PHLX Semiconductor ETF(SOXQ) | AI 반도체 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.67배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| iShares Expanded Tech-Software Sector ETF(IGV) | 클라우드/엔터프라이즈 소프트웨어 ETF | 49 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.74배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| Global X Artificial Intelligence & Technology ETF(AIQ) | AI 소프트웨어 ETF | 27 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.62배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
-| Global X Robotics & Artificial Intelligence ETF(BOTZ) | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| ROBO Global Robotics and Automation Index ETF(ROBO) | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.50배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| First Trust NASDAQ Cybersecurity ETF(CIBR) | 사이버보안 ETF | 78 | 진입 후보 | MEDIUM | 20일 +6.64%, 5일 +7.42%, 상대 거래량 1.04배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| Amplify Cybersecurity ETF(HACK) | 사이버보안 ETF | 37 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.54배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
-| iShares Cybersecurity and Tech ETF(IHAK) | 사이버보안 ETF | 71 | 매매 금지 | MEDIUM | 20일 +6.14%, 5일 +5.95%, 상대 거래량 2.36배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
-| iShares U.S. Aerospace & Defense ETF(ITA) | 방산 ETF | 0 | 매매 금지 | LOW | 20일 -7.20%, 5일 -2.16%, 상대 거래량 1.08배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS product/under_24h / 유동성: ACCEPTABLE |
-| SPDR S&P Aerospace & Defense ETF(XAR) | 방산 ETF | 0 | 매매 금지 | LOW | 20일 -6.25%, 5일 -3.42%, 상대 거래량 1.24배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
-| Global X Defense Tech ETF(SHLD) | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.92배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
-| Invesco Aerospace & Defense ETF(PPA) | 방산 ETF | 0 | 매매 금지 | LOW | 20일 -6.56%, 5일 -1.99%, 상대 거래량 1.58배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h |
-| Global X U.S. Infrastructure Development ETF(PAVE) | 인프라 ETF | 0 | 매매 금지 | LOW | 20일 -4.94%, 5일 -2.18%, 상대 거래량 1.03배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale |
-| First Trust NASDAQ Clean Edge Smart Grid Infrastructure ETF(GRID) | 전력망 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.64배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
-| iShares U.S. Infrastructure ETF(IFRA) | 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.71배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
-| Utilities Select Sector SPDR Fund(XLU) | 전력/유틸리티 ETF | 9 | 매매 금지 | LOW | 20일 -4.80%, 5일 -2.29%, 상대 거래량 1.58배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS analyst_upgrade/under_24h / 유동성: LIQUID |
-| Global X Uranium ETF(URA) | 원전/우라늄 ETF | 6 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.59배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
-| VanEck Uranium and Nuclear ETF(NLR) | 원전/우라늄 ETF | 10 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.77배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
-| Global X Lithium & Battery Tech ETF(LIT) | 배터리/리튬 ETF | 15 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.83배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h |
-| Global X Copper Miners ETF(COPX) | 구리/금속 ETF | 26 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| SPDR S&P Metals & Mining ETF(XME) | 금속/광산 ETF | 22 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.50배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| Energy Select Sector SPDR Fund(XLE) | 전통 에너지 ETF | 64 | 관찰 | MEDIUM | 20일 +8.79%, 5일 +1.35%, 상대 거래량 1.04배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
-| VanEck Oil Services ETF(OIH) | 전통 에너지 ETF | 76 | 관찰 | MEDIUM | 20일 +12.31%, 5일 +5.01%, 상대 거래량 1.38배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| ARK Innovation ETF(ARKK) | 혁신 성장 ETF | 45 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.64배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
-| Renaissance IPO ETF(IPO) | IPO/신규상장 ETF | 6 | 매매 금지 | LOW | 20일 +0.24%, 5일 -0.58%, 상대 거래량 1.06배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS mna/stale |
-| KraneShares CSI China Internet ETF(KWEB) | 중국 인터넷 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.71배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| Roundhill Magnificent Seven ETF(MAGS) | 메가캡 플랫폼 ETF | 26 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.67배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| Invesco QQQ Trust(QQQ) | 시장 기준 ETF | 23 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.98배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: LIQUID |
-| SPDR S&P 500 ETF Trust(SPY) | 시장 기준 ETF | 29 | 매매 금지 | LOW | 20일 +1.24%, 5일 +0.47%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h / 유동성: LIQUID |
-| iShares Russell 2000 ETF(IWM) | 시장 기준 ETF | 16 | 매매 금지 | LOW | 20일 -0.77%, 5일 -1.36%, 상대 거래량 1.25배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS macro/stale / 유동성: LIQUID |
-| iShares 20+ Year Treasury Bond ETF(TLT) | 채권 ETF | 28 | 매매 금지 | LOW | 20일 +0.40%, 5일 -0.05%, 상대 거래량 1.05배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS offering/stale / 유동성: LIQUID |
-| SPDR Gold Shares(GLD) | 금 ETF | 11 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.79배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
-| iShares Bitcoin Trust ETF(IBIT) | 비트코인 ETF | 47 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.77배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS macro/under_6h / 유동성: LIQUID |
-| Amplify Transformational Data Sharing ETF(BLOK) | 비트코인 ETF | 25 | 매매 금지 | LOW | 20일 +2.01%, 5일 +0.27%, 상대 거래량 1.23배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS general_market/under_6h |
+| Roundhill Memory ETF(DRAM) | 메모리/HBM ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.59배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
+| VanEck Semiconductor ETF(SMH) | AI 반도체 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.90배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
+| iShares Semiconductor ETF(SOXX) | AI 반도체 ETF | 0 | 매매 금지 | LOW | 20일 -7.73%, 5일 -2.67%, 상대 거래량 1.10배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
+| Invesco PHLX Semiconductor ETF(SOXQ) | AI 반도체 ETF | 0 | 매매 금지 | LOW | 20일 -7.26%, 5일 -2.51%, 상대 거래량 2.03배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| iShares Expanded Tech-Software Sector ETF(IGV) | 클라우드/엔터프라이즈 소프트웨어 ETF | 47 | 매매 금지 | MEDIUM | 20일 +4.10%, 5일 +4.25%, 상대 거래량 1.10배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: LIQUID |
+| Global X Artificial Intelligence & Technology ETF(AIQ) | AI 소프트웨어 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| Global X Robotics & Artificial Intelligence ETF(BOTZ) | 로봇/자동화 ETF | 0 | 매매 금지 | LOW | 20일 -5.23%, 5일 -1.95%, 상대 거래량 1.37배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
+| ROBO Global Robotics and Automation Index ETF(ROBO) | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.94배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| First Trust NASDAQ Cybersecurity ETF(CIBR) | 사이버보안 ETF | 17 | 매매 금지 | LOW | 20일 -1.78%, 5일 +4.04%, 상대 거래량 1.43배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| Amplify Cybersecurity ETF(HACK) | 사이버보안 ETF | 4 | 매매 금지 | LOW | 20일 -1.95%, 5일 +3.48%, 상대 거래량 1.21배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale |
+| iShares Cybersecurity and Tech ETF(IHAK) | 사이버보안 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.72배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| iShares U.S. Aerospace & Defense ETF(ITA) | 방산 ETF | 0 | 매매 금지 | LOW | 20일 -10.05%, 5일 -3.77%, 상대 거래량 1.72배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS offering/under_24h / 유동성: ACCEPTABLE |
+| SPDR S&P Aerospace & Defense ETF(XAR) | 방산 ETF | 0 | 매매 금지 | LOW | 20일 -10.65%, 5일 -4.84%, 상대 거래량 1.74배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
+| Global X Defense Tech ETF(SHLD) | 방산 ETF | 0 | 매매 금지 | LOW | 20일 -5.12%, 5일 -2.35%, 상대 거래량 1.24배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
+| Invesco Aerospace & Defense ETF(PPA) | 방산 ETF | 0 | 매매 금지 | LOW | 20일 -10.04%, 5일 -3.22%, 상대 거래량 1.47배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS offering/under_24h |
+| Global X U.S. Infrastructure Development ETF(PAVE) | 인프라 ETF | 0 | 매매 금지 | LOW | 20일 -7.95%, 5일 -3.07%, 상대 거래량 1.81배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
+| First Trust NASDAQ Clean Edge Smart Grid Infrastructure ETF(GRID) | 전력망 인프라 ETF | 0 | 매매 금지 | LOW | 20일 -6.05%, 5일 -2.20%, 상대 거래량 1.73배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
+| iShares U.S. Infrastructure ETF(IFRA) | 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.62배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
+| Utilities Select Sector SPDR Fund(XLU) | 전력/유틸리티 ETF | 24 | 매매 금지 | LOW | 20일 -3.51%, 5일 -1.73%, 상대 거래량 1.52배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS analyst_upgrade/under_72h / 유동성: LIQUID |
+| Global X Uranium ETF(URA) | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.85배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE |
+| VanEck Uranium and Nuclear ETF(NLR) | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.98배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS macro/under_6h |
+| Global X Lithium & Battery Tech ETF(LIT) | 배터리/리튬 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.79배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS macro/under_6h |
+| Global X Copper Miners ETF(COPX) | 구리/금속 ETF | 11 | 매매 금지 | LOW | 20일 +6.25%, 5일 -7.35%, 상대 거래량 1.59배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE |
+| SPDR S&P Metals & Mining ETF(XME) | 금속/광산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE |
+| Energy Select Sector SPDR Fund(XLE) | 전통 에너지 ETF | 84 | 관찰 | MEDIUM | 20일 +10.68%, 5일 +4.37%, 상대 거래량 1.28배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: LIQUID |
+| VanEck Oil Services ETF(OIH) | 전통 에너지 ETF | 63 | 매매 금지 | MEDIUM | 20일 +8.86%, 5일 +5.22%, 상대 거래량 1.43배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE |
+| ARK Innovation ETF(ARKK) | 혁신 성장 ETF | 10 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.88배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE |
+| Renaissance IPO ETF(IPO) | IPO/신규상장 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.80배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS mna/stale |
+| KraneShares CSI China Internet ETF(KWEB) | 중국 인터넷 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.61배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE |
+| Roundhill Magnificent Seven ETF(MAGS) | 메가캡 플랫폼 ETF | 35 | 매매 금지 | MEDIUM | 20일 -1.06%, 5일 +0.92%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE |
+| Invesco QQQ Trust(QQQ) | 시장 기준 ETF | 7 | 매매 금지 | LOW | 20일 -2.24%, 5일 -0.43%, 상대 거래량 1.10배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: LIQUID |
+| SPDR S&P 500 ETF Trust(SPY) | 시장 기준 ETF | 18 | 매매 금지 | LOW | 20일 -1.24%, 5일 -0.54%, 상대 거래량 1.08배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: LIQUID |
+| iShares Russell 2000 ETF(IWM) | 시장 기준 ETF | 10 | 매매 금지 | LOW | 20일 -3.69%, 5일 -2.89%, 상대 거래량 1.36배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: LIQUID |
+| iShares 20+ Year Treasury Bond ETF(TLT) | 채권 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.77배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS macro/stale / 유동성: LIQUID |
+| SPDR Gold Shares(GLD) | 금 ETF | 1 | 매매 금지 | LOW | 20일 +6.04%, 5일 -7.32%, 상대 거래량 1.03배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: LIQUID |
+| iShares Bitcoin Trust ETF(IBIT) | 비트코인 ETF | 21 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.90배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS macro/under_72h / 유동성: LIQUID |
+| Amplify Transformational Data Sharing ETF(BLOK) | 비트코인 ETF | 0 | 매매 금지 | LOW | 20일 -2.49%, 5일 -6.05%, 상대 거래량 2.45배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h |
 
 ## 3. 최종 실행 판단
 
 ### 3-1. 오늘 실제로 할 일
-1. ETF에서 할 일: First Trust NASDAQ Cybersecurity ETF(CIBR) 포함 ETF 후보의 전일 고점 돌파와 5일선 유지를 확인한다.
-2. 개별 종목에서 할 일: CrowdStrike Holdings Inc.(CRWD) 등은 관련 ETF 대비 상대강도가 유지되는지 확인하고 눌림 또는 돌파 조건에서만 검토한다.
+1. ETF에서 할 일: ETF 후보는 관찰한다.
+2. 개별 종목에서 할 일: Chevron(CVX) 등은 관련 ETF 대비 상대강도가 유지되는지 확인하고 눌림 또는 돌파 조건에서만 검토한다.
 3. 하지 말아야 할 일: ETF와 개별 종목을 같은 테마 안에서 중복 매수하지 않는다.
 
 ### 3-2. 내일 확인할 조건
@@ -2431,7 +2145,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 ## 데이터 수집 상태
 
 - 가격/거래량:
-  - 상태: 연결됨
+  - 상태: 일부 연결
   - 소스: yfinance
   - 비고: REAL_TEST 가격/거래량 및 차트 생성 사용
 
@@ -2456,7 +2170,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 - 전일 추천 snapshot:
   - 상태: 연결됨
-  - 점검 대상: 5
+  - 점검 대상: 3
   - 저장 위치: data/latest-report.json, data/previous-report.json, data/dailyReports/
 
 - 거래대금 유동성:
