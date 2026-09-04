@@ -13,13 +13,13 @@
     ],
     "sessionLabel": "US regular session"
   },
-  "reportDate": "2026-09-02",
-  "generatedAt": "2026년 9월 2일 수요일 AM 9:51",
+  "reportDate": "2026-09-03",
+  "generatedAt": "2026년 9월 3일 목요일 AM 9:59",
   "marketRegimeAssessment": {
     "label": "기간 조정",
-    "score": 67,
+    "score": 68,
     "actionBias": "추격 보류, 돌파 확인",
-    "conclusion": "장기 추세는 유지되지만 단기 추세가 둔화되어 기간 조정으로 본다. 기술 80점, 매크로 45점.",
+    "conclusion": "장기 추세는 유지되지만 단기 추세가 둔화되어 기간 조정으로 본다. 기술 81점, 매크로 46점.",
     "reliability": {
       "grade": "HIGH",
       "score": 100,
@@ -42,11 +42,11 @@
       "label": "약화",
       "previousLabel": "기간 조정",
       "previousScore": 83,
-      "scoreDelta": -16,
-      "summary": "기간 조정은 유지됐지만 점수는 전일보다 약화됐다(-16점)."
+      "scoreDelta": -15,
+      "summary": "기간 조정은 유지됐지만 점수는 전일보다 약화됐다(-15점)."
     },
     "technical": {
-      "score": 80,
+      "score": 81,
       "label": "상승 추세 우위",
       "benchmarks": [
         {
@@ -58,19 +58,19 @@
           "weight": 0.5,
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
-          "score": 96,
-          "lastClose": 7631.4702,
-          "dataDate": "2026-09-01",
-          "dailyChangePct": -0.71,
-          "return5dPct": -0.6,
-          "return20dPct": -1.36,
-          "return60dPct": 3,
-          "drawdownFrom52wHighPct": -2.37,
-          "ma50": 7570.67,
+          "score": 98,
+          "lastClose": 7666.6001,
+          "dataDate": "2026-09-02",
+          "dailyChangePct": 0.46,
+          "return5dPct": -0.12,
+          "return20dPct": -0.74,
+          "return60dPct": 4,
+          "drawdownFrom52wHighPct": -1.92,
+          "ma50": 7576.7,
           "ma200": null,
           "aboveMa50": true,
           "aboveMa200": true,
-          "reason": "50일선 위, 200일선 위, 20일 -1.36%, 60일 +3.00%, 52주 고점 대비 -2.37% -> 기술 점수 96"
+          "reason": "50일선 위, 200일선 위, 20일 -0.74%, 60일 +4.00%, 52주 고점 대비 -1.92% -> 기술 점수 98"
         },
         {
           "ticker": "^NDX",
@@ -82,23 +82,23 @@
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
           "score": 63,
-          "lastClose": 29077.2207,
-          "dataDate": "2026-09-01",
-          "dailyChangePct": -1.29,
-          "return5dPct": -0.45,
-          "return20dPct": -2.21,
-          "return60dPct": 0,
-          "drawdownFrom52wHighPct": -5.48,
-          "ma50": 29225.85,
+          "lastClose": 29143.3301,
+          "dataDate": "2026-09-02",
+          "dailyChangePct": 0.23,
+          "return5dPct": -0.28,
+          "return20dPct": -1.17,
+          "return60dPct": -1,
+          "drawdownFrom52wHighPct": -5.26,
+          "ma50": 29221.77,
           "ma200": null,
           "aboveMa50": false,
           "aboveMa200": true,
-          "reason": "50일선 아래, 200일선 위, 20일 -2.21%, 60일 0.00%, 52주 고점 대비 -5.48% -> 기술 점수 63"
+          "reason": "50일선 아래, 200일선 위, 20일 -1.17%, 60일 -1.00%, 52주 고점 대비 -5.26% -> 기술 점수 63"
         }
       ]
     },
     "macro": {
-      "score": 45,
+      "score": 46,
       "label": "매크로 중립",
       "summary": "물가 부담으로 매크로 환경은 방어적이다.",
       "components": {
@@ -110,8 +110,8 @@
           "stance": "금리 중립",
           "confidence": "HIGH",
           "reasons": [
-            "US 10Y yield 20일 +3.65%, 5일 +3.38%",
-            "US 3M yield 20일 +1.13%, 단기금리 방향 확인",
+            "US 10Y yield 20일 +3.88%, 5일 +2.83%",
+            "US 3M yield 20일 +1.26%, 단기금리 방향 확인",
             "US long-duration bonds 20일 -1.15%, 장기채 가격 기준 할인율 부담 확인"
           ],
           "watchItems": [
@@ -151,14 +151,14 @@
         "creditLiquidity": {
           "key": "creditLiquidity",
           "title": "신용/유동성",
-          "score": 49,
+          "score": 52,
           "label": "중립",
           "stance": "신용/유동성 중립",
           "confidence": "HIGH",
           "reasons": [
             "High yield credit 20일 -0.57%, 하이일드 위험선호 확인",
             "HYG-LQD 20일 상대강도 +0.87%, 신용위험 선호/회피 확인",
-            "VIX 20일 -0.97%, 변동성 부담 확인"
+            "VIX 20일 -3.86%, 변동성 부담 확인"
           ],
           "watchItems": [
             "추가 확인 이벤트 없음"
@@ -194,11 +194,11 @@
           "riskOnWhen": "down",
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
-          "score": 41,
-          "dataDate": "2026-09-01",
-          "return5dPct": 3.38,
-          "return20dPct": 3.65,
-          "reason": "하락 시 주식 우호; 5일 +3.38%, 20일 +3.65% -> 매크로 점수 41"
+          "score": 42,
+          "dataDate": "2026-09-02",
+          "return5dPct": 2.83,
+          "return20dPct": 3.88,
+          "reason": "하락 시 주식 우호; 5일 +2.83%, 20일 +3.88% -> 매크로 점수 42"
         },
         {
           "ticker": "^IRX",
@@ -207,11 +207,11 @@
           "riskOnWhen": "down",
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
-          "score": 47,
-          "dataDate": "2026-09-01",
-          "return5dPct": 1.81,
-          "return20dPct": 1.13,
-          "reason": "하락 시 주식 우호; 5일 +1.81%, 20일 +1.13% -> 매크로 점수 47"
+          "score": 46,
+          "dataDate": "2026-09-02",
+          "return5dPct": 2.22,
+          "return20dPct": 1.26,
+          "reason": "하락 시 주식 우호; 5일 +2.22%, 20일 +1.26% -> 매크로 점수 46"
         },
         {
           "ticker": "TLT",
@@ -311,11 +311,11 @@
           "riskOnWhen": "down",
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
-          "score": 47,
-          "dataDate": "2026-09-01",
-          "return5dPct": 5.76,
-          "return20dPct": -0.97,
-          "reason": "하락 시 주식 우호; 5일 +5.76%, 20일 -0.97% -> 매크로 점수 47"
+          "score": 56,
+          "dataDate": "2026-09-02",
+          "return5dPct": -0.07,
+          "return20dPct": -3.86,
+          "reason": "하락 시 주식 우호; 5일 -0.07%, 20일 -3.86% -> 매크로 점수 56"
         }
       ]
     },
@@ -379,7 +379,7 @@
         "oneDayReturn": -3.68,
         "fiveDayReturn": 12.34,
         "twentyDayReturn": 69.55,
-        "relativeVolume": 0.68,
+        "relativeVolume": 0.69,
         "relatedEtfs": [
           "IGV",
           "AIQ",
@@ -402,7 +402,7 @@
         "oneDayReturn": 2.61,
         "fiveDayReturn": 4.91,
         "twentyDayReturn": 5.09,
-        "relativeVolume": 1.29,
+        "relativeVolume": 1.31,
         "relatedEtfs": [
           "QQQ",
           "MAGS",
@@ -425,7 +425,7 @@
         "oneDayReturn": -6.9,
         "fiveDayReturn": 16.02,
         "twentyDayReturn": 1.82,
-        "relativeVolume": 1.39,
+        "relativeVolume": 1.41,
         "relatedEtfs": [
           "HACK",
           "CIBR",
@@ -445,11 +445,11 @@
         "moneyFlowScoreFinal": 67,
         "finalRawScore": 67,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": 1.34,
         "fiveDayReturn": 1.64,
         "twentyDayReturn": 5.88,
-        "relativeVolume": 1.4,
+        "relativeVolume": 1.45,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -472,7 +472,7 @@
         "oneDayReturn": -2.29,
         "fiveDayReturn": 4.44,
         "twentyDayReturn": 11.1,
-        "relativeVolume": 1.02,
+        "relativeVolume": 1.03,
         "relatedEtfs": [
           "IGV",
           "AIQ",
@@ -519,7 +519,7 @@
         "oneDayReturn": 2.25,
         "fiveDayReturn": 2.51,
         "twentyDayReturn": 12.38,
-        "relativeVolume": 1.11,
+        "relativeVolume": 1.13,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -540,28 +540,7 @@
         "oneDayReturn": 2.45,
         "fiveDayReturn": 0.77,
         "twentyDayReturn": 10.85,
-        "relativeVolume": 0.8,
-        "relatedEtfs": [
-          "QQQ"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "NFLX",
-        "name": "Netflix Inc.",
-        "assetType": "STOCK",
-        "moneyFlowScore": 33,
-        "moneyFlowScoreInitial": 33,
-        "moneyFlowScoreFinal": 41,
-        "finalRawScore": 41,
-        "todayActionLabel": "제외",
-        "reasonConfidence": "HIGH",
-        "oneDayReturn": -0.82,
-        "fiveDayReturn": 1.3,
-        "twentyDayReturn": 10.53,
-        "relativeVolume": 1,
+        "relativeVolume": 0.81,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -603,9 +582,33 @@
         "oneDayReturn": 0.57,
         "fiveDayReturn": -0.94,
         "twentyDayReturn": 14.4,
-        "relativeVolume": 0.65,
+        "relativeVolume": 0.66,
         "relatedEtfs": [
           "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "FTNT",
+        "name": "Fortinet Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 30,
+        "moneyFlowScoreInitial": 30,
+        "moneyFlowScoreFinal": 38,
+        "finalRawScore": 38,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "MEDIUM",
+        "oneDayReturn": -5.31,
+        "fiveDayReturn": 5.33,
+        "twentyDayReturn": -3.83,
+        "relativeVolume": 1.22,
+        "relatedEtfs": [
+          "HACK",
+          "CIBR",
+          "IHAK",
+          "IGV"
         ],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -624,9 +627,32 @@
         "oneDayReturn": -3.22,
         "fiveDayReturn": 1.67,
         "twentyDayReturn": 8.78,
-        "relativeVolume": 1.04,
+        "relativeVolume": 1.05,
         "relatedEtfs": [
           "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "TMUS",
+        "name": "T-Mobile US Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 29,
+        "moneyFlowScoreInitial": 29,
+        "moneyFlowScoreFinal": 45,
+        "finalRawScore": 45,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "HIGH",
+        "oneDayReturn": 0.95,
+        "fiveDayReturn": 0.3,
+        "twentyDayReturn": 2.79,
+        "relativeVolume": 1.01,
+        "relatedEtfs": [
+          "QQQ",
+          "SPY",
+          "IWM"
         ],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -645,7 +671,7 @@
         "oneDayReturn": 3.1,
         "fiveDayReturn": -1.17,
         "twentyDayReturn": 8.3,
-        "relativeVolume": 0.96,
+        "relativeVolume": 0.97,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -666,7 +692,7 @@
         "oneDayReturn": 2.24,
         "fiveDayReturn": 2.43,
         "twentyDayReturn": 6.88,
-        "relativeVolume": 0.77,
+        "relativeVolume": 0.81,
         "relatedEtfs": [
           "XLE",
           "OIH"
@@ -711,31 +737,7 @@
         "oneDayReturn": -5.24,
         "fiveDayReturn": 6.53,
         "twentyDayReturn": -1.16,
-        "relativeVolume": 1.58,
-        "relatedEtfs": [
-          "HACK",
-          "CIBR",
-          "IHAK",
-          "IGV"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "FTNT",
-        "name": "Fortinet Inc.",
-        "assetType": "STOCK",
-        "moneyFlowScore": 26,
-        "moneyFlowScoreInitial": 26,
-        "moneyFlowScoreFinal": 34,
-        "finalRawScore": 34,
-        "todayActionLabel": "제외",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -5.31,
-        "fiveDayReturn": 5.33,
-        "twentyDayReturn": -3.83,
-        "relativeVolume": 1.19,
+        "relativeVolume": 1.63,
         "relatedEtfs": [
           "HACK",
           "CIBR",
@@ -803,7 +805,7 @@
         "oneDayReturn": -1.01,
         "fiveDayReturn": 1.1,
         "twentyDayReturn": 3.68,
-        "relativeVolume": 0.47,
+        "relativeVolume": 0.48,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -843,9 +845,9 @@
         "todayActionLabel": "거래량 확인 전 관찰",
         "reasonConfidence": "LOW",
         "oneDayReturn": 0.17,
-        "fiveDayReturn": 2.97,
-        "twentyDayReturn": 3.12,
-        "relativeVolume": 0.93,
+        "fiveDayReturn": 2.98,
+        "twentyDayReturn": 3.13,
+        "relativeVolume": 0.95,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -868,7 +870,7 @@
         "oneDayReturn": -6.06,
         "fiveDayReturn": -1.54,
         "twentyDayReturn": 27.89,
-        "relativeVolume": 0.84,
+        "relativeVolume": 0.86,
         "relatedEtfs": [
           "IGV",
           "AIQ",
@@ -959,7 +961,7 @@
         "oneDayReturn": 0.78,
         "fiveDayReturn": 2.17,
         "twentyDayReturn": -2.89,
-        "relativeVolume": 0.91,
+        "relativeVolume": 0.92,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -1026,7 +1028,7 @@
         "oneDayReturn": -0.74,
         "fiveDayReturn": -2.01,
         "twentyDayReturn": 9.81,
-        "relativeVolume": 0.77,
+        "relativeVolume": 0.78,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -1070,7 +1072,7 @@
         "oneDayReturn": -1.24,
         "fiveDayReturn": 1.89,
         "twentyDayReturn": 1.67,
-        "relativeVolume": 0.77,
+        "relativeVolume": 0.84,
         "relatedEtfs": [
           "QQQ",
           "MAGS",
@@ -1094,7 +1096,7 @@
         "oneDayReturn": -0.93,
         "fiveDayReturn": 0.25,
         "twentyDayReturn": 4.76,
-        "relativeVolume": 0.83,
+        "relativeVolume": 0.86,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -1105,19 +1107,19 @@
         "failureReason": ""
       },
       {
-        "ticker": "TMUS",
-        "name": "T-Mobile US Inc.",
+        "ticker": "XEL",
+        "name": "Xcel Energy Inc.",
         "assetType": "STOCK",
-        "moneyFlowScore": 11,
-        "moneyFlowScoreInitial": 11,
-        "moneyFlowScoreFinal": 13,
-        "finalRawScore": 13,
-        "todayActionLabel": "거래량 확인 전 관찰",
+        "moneyFlowScore": 12,
+        "moneyFlowScoreInitial": 12,
+        "moneyFlowScoreFinal": 8,
+        "finalRawScore": 8,
+        "todayActionLabel": "제외",
         "reasonConfidence": "LOW",
-        "oneDayReturn": 0.95,
-        "fiveDayReturn": 0.3,
-        "twentyDayReturn": 2.79,
-        "relativeVolume": 0.98,
+        "oneDayReturn": 0.26,
+        "fiveDayReturn": -1.68,
+        "twentyDayReturn": -2.39,
+        "relativeVolume": 1.56,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -1140,7 +1142,7 @@
         "oneDayReturn": 0.09,
         "fiveDayReturn": 0.16,
         "twentyDayReturn": 2.54,
-        "relativeVolume": 0.64,
+        "relativeVolume": 0.65,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -1205,7 +1207,7 @@
         "oneDayReturn": -2.27,
         "fiveDayReturn": 3.77,
         "twentyDayReturn": 2.42,
-        "relativeVolume": 0.95,
+        "relativeVolume": 0.96,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -1252,7 +1254,7 @@
         "oneDayReturn": 1.41,
         "fiveDayReturn": -1.68,
         "twentyDayReturn": 3.97,
-        "relativeVolume": 0.66,
+        "relativeVolume": 0.67,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -1261,23 +1263,21 @@
         "failureReason": ""
       },
       {
-        "ticker": "XEL",
-        "name": "Xcel Energy Inc.",
+        "ticker": "NFLX",
+        "name": "Netflix Inc.",
         "assetType": "STOCK",
-        "moneyFlowScore": 8,
-        "moneyFlowScoreInitial": 8,
-        "moneyFlowScoreFinal": 4,
-        "finalRawScore": 4,
-        "todayActionLabel": "제외",
+        "moneyFlowScore": 9,
+        "moneyFlowScoreInitial": 9,
+        "moneyFlowScoreFinal": 10,
+        "finalRawScore": 10,
+        "todayActionLabel": "거래량 확인 전 관찰",
         "reasonConfidence": "LOW",
-        "oneDayReturn": 0.26,
-        "fiveDayReturn": -1.68,
-        "twentyDayReturn": -2.39,
-        "relativeVolume": 1.48,
+        "oneDayReturn": -0.3,
+        "fiveDayReturn": -1.73,
+        "twentyDayReturn": 9.84,
+        "relativeVolume": 0.76,
         "relatedEtfs": [
-          "QQQ",
-          "SPY",
-          "IWM"
+          "QQQ"
         ],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -1314,9 +1314,9 @@
         "finalRawScore": 9,
         "todayActionLabel": "거래량 확인 전 관찰",
         "reasonConfidence": "LOW",
-        "oneDayReturn": -1.59,
-        "fiveDayReturn": -2.6,
-        "twentyDayReturn": 10.43,
+        "oneDayReturn": -1.58,
+        "fiveDayReturn": -2.58,
+        "twentyDayReturn": 10.44,
         "relativeVolume": 0.55,
         "relatedEtfs": [
           "QQQ",
@@ -1340,7 +1340,7 @@
         "oneDayReturn": -0.9,
         "fiveDayReturn": 1.89,
         "twentyDayReturn": -2.57,
-        "relativeVolume": 0.79,
+        "relativeVolume": 0.97,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -1407,11 +1407,35 @@
         "oneDayReturn": -0.09,
         "fiveDayReturn": 0.37,
         "twentyDayReturn": 1.12,
-        "relativeVolume": 0.79,
+        "relativeVolume": 0.8,
         "relatedEtfs": [
           "QQQ",
           "SPY",
           "IWM"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "AVGO",
+        "name": "Broadcom Inc.",
+        "assetType": "STOCK",
+        "moneyFlowScore": 3,
+        "moneyFlowScoreInitial": 3,
+        "moneyFlowScoreFinal": 0,
+        "finalRawScore": -3,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": -0.18,
+        "fiveDayReturn": 3.63,
+        "twentyDayReturn": -11.59,
+        "relativeVolume": 1.01,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
         ],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -1430,7 +1454,7 @@
         "oneDayReturn": -0.58,
         "fiveDayReturn": -0.09,
         "twentyDayReturn": 0.44,
-        "relativeVolume": 0.84,
+        "relativeVolume": 0.85,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -1476,7 +1500,7 @@
         "oneDayReturn": -1.51,
         "fiveDayReturn": 2.06,
         "twentyDayReturn": 2.6,
-        "relativeVolume": 0.85,
+        "relativeVolume": 0.87,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -1501,35 +1525,11 @@
         "oneDayReturn": 0.25,
         "fiveDayReturn": -1.08,
         "twentyDayReturn": -4.38,
-        "relativeVolume": 1.23,
+        "relativeVolume": 1.26,
         "relatedEtfs": [
           "QQQ",
           "SPY",
           "IWM"
-        ],
-        "scoreBandLabel": "우선순위 낮음/매매 금지",
-        "scanStatus": "OK",
-        "failureReason": ""
-      },
-      {
-        "ticker": "AVGO",
-        "name": "Broadcom Inc.",
-        "assetType": "STOCK",
-        "moneyFlowScore": 0,
-        "moneyFlowScoreInitial": 0,
-        "moneyFlowScoreFinal": 0,
-        "finalRawScore": -21,
-        "todayActionLabel": "거래량 확인 전 관찰",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": -0.18,
-        "fiveDayReturn": 3.63,
-        "twentyDayReturn": -11.59,
-        "relativeVolume": 0.98,
-        "relatedEtfs": [
-          "SMH",
-          "SOXX",
-          "SOXQ",
-          "AIQ"
         ],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -1548,7 +1548,7 @@
         "oneDayReturn": -0.6,
         "fiveDayReturn": 1.7,
         "twentyDayReturn": -11.79,
-        "relativeVolume": 0.75,
+        "relativeVolume": 0.76,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -1572,7 +1572,7 @@
         "oneDayReturn": 0.71,
         "fiveDayReturn": 1.26,
         "twentyDayReturn": -11.78,
-        "relativeVolume": 0.92,
+        "relativeVolume": 0.93,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -1639,7 +1639,7 @@
         "oneDayReturn": -5.57,
         "fiveDayReturn": 0.38,
         "twentyDayReturn": -22.32,
-        "relativeVolume": 0.68,
+        "relativeVolume": 0.69,
         "relatedEtfs": [
           "IGV",
           "AIQ",
@@ -1662,7 +1662,7 @@
         "oneDayReturn": 0.43,
         "fiveDayReturn": 0.15,
         "twentyDayReturn": -4.2,
-        "relativeVolume": 0.8,
+        "relativeVolume": 0.86,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -1685,7 +1685,7 @@
         "oneDayReturn": -1.06,
         "fiveDayReturn": 0.09,
         "twentyDayReturn": -5.17,
-        "relativeVolume": 1,
+        "relativeVolume": 1.02,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -1708,7 +1708,7 @@
         "oneDayReturn": -2.64,
         "fiveDayReturn": 0.05,
         "twentyDayReturn": 4.57,
-        "relativeVolume": 0.95,
+        "relativeVolume": 0.96,
         "relatedEtfs": [
           "DRAM",
           "SMH",
@@ -1755,7 +1755,7 @@
         "oneDayReturn": -1.42,
         "fiveDayReturn": -0.61,
         "twentyDayReturn": -3.4,
-        "relativeVolume": 0.59,
+        "relativeVolume": 0.6,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -1778,7 +1778,7 @@
         "oneDayReturn": -2.02,
         "fiveDayReturn": -0.7,
         "twentyDayReturn": 0.27,
-        "relativeVolume": 0.76,
+        "relativeVolume": 0.77,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -1822,7 +1822,7 @@
         "oneDayReturn": -2.07,
         "fiveDayReturn": -0.88,
         "twentyDayReturn": -7.3,
-        "relativeVolume": 0.84,
+        "relativeVolume": 0.87,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -1843,7 +1843,7 @@
         "oneDayReturn": -1,
         "fiveDayReturn": -1.05,
         "twentyDayReturn": -6.4,
-        "relativeVolume": 1,
+        "relativeVolume": 1.02,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -1867,7 +1867,7 @@
         "oneDayReturn": -0.68,
         "fiveDayReturn": -1.23,
         "twentyDayReturn": -9.86,
-        "relativeVolume": 0.69,
+        "relativeVolume": 0.71,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -1913,7 +1913,7 @@
         "oneDayReturn": -0.39,
         "fiveDayReturn": -1.74,
         "twentyDayReturn": 0.5,
-        "relativeVolume": 0.84,
+        "relativeVolume": 0.87,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -1934,7 +1934,7 @@
         "oneDayReturn": -1.26,
         "fiveDayReturn": -1.77,
         "twentyDayReturn": -3.38,
-        "relativeVolume": 0.76,
+        "relativeVolume": 0.79,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -1980,7 +1980,7 @@
         "oneDayReturn": -0.39,
         "fiveDayReturn": -2.05,
         "twentyDayReturn": 1.39,
-        "relativeVolume": 0.66,
+        "relativeVolume": 0.85,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -2001,7 +2001,7 @@
         "oneDayReturn": -0.42,
         "fiveDayReturn": -2.09,
         "twentyDayReturn": -0.83,
-        "relativeVolume": 0.86,
+        "relativeVolume": 0.88,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -2045,7 +2045,7 @@
         "oneDayReturn": -2.82,
         "fiveDayReturn": -2.2,
         "twentyDayReturn": -14.7,
-        "relativeVolume": 0.87,
+        "relativeVolume": 0.88,
         "relatedEtfs": [
           "XAR",
           "SHLD",
@@ -2069,7 +2069,7 @@
         "oneDayReturn": -1.87,
         "fiveDayReturn": -2.35,
         "twentyDayReturn": -8.11,
-        "relativeVolume": 0.92,
+        "relativeVolume": 0.93,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -2090,7 +2090,7 @@
         "oneDayReturn": -1.24,
         "fiveDayReturn": -2.43,
         "twentyDayReturn": -5.86,
-        "relativeVolume": 0.71,
+        "relativeVolume": 0.73,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2113,7 +2113,7 @@
         "oneDayReturn": -2.9,
         "fiveDayReturn": -2.58,
         "twentyDayReturn": -10.68,
-        "relativeVolume": 1.25,
+        "relativeVolume": 1.28,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -2137,7 +2137,7 @@
         "oneDayReturn": -0.96,
         "fiveDayReturn": -2.62,
         "twentyDayReturn": -4.23,
-        "relativeVolume": 1.09,
+        "relativeVolume": 1.17,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2160,7 +2160,7 @@
         "oneDayReturn": -1.66,
         "fiveDayReturn": -2.64,
         "twentyDayReturn": -15.6,
-        "relativeVolume": 0.78,
+        "relativeVolume": 0.79,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2231,7 +2231,7 @@
         "oneDayReturn": 0,
         "fiveDayReturn": -3.04,
         "twentyDayReturn": -11.78,
-        "relativeVolume": 1.14,
+        "relativeVolume": 1.15,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2254,7 +2254,7 @@
         "oneDayReturn": -1.14,
         "fiveDayReturn": -3.1,
         "twentyDayReturn": -1.93,
-        "relativeVolume": 0.85,
+        "relativeVolume": 0.86,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2271,13 +2271,13 @@
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
         "moneyFlowScoreFinal": 0,
-        "finalRawScore": -38,
-        "todayActionLabel": "거래량 확인 전 관찰",
+        "finalRawScore": -20,
+        "todayActionLabel": "제외",
         "reasonConfidence": "LOW",
         "oneDayReturn": -1.01,
         "fiveDayReturn": -3.29,
         "twentyDayReturn": -11.54,
-        "relativeVolume": 0.89,
+        "relativeVolume": 1,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -2298,7 +2298,7 @@
         "oneDayReturn": -1.28,
         "fiveDayReturn": -3.44,
         "twentyDayReturn": -11.29,
-        "relativeVolume": 0.9,
+        "relativeVolume": 0.99,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -2319,7 +2319,7 @@
         "oneDayReturn": -4,
         "fiveDayReturn": -3.51,
         "twentyDayReturn": 6.59,
-        "relativeVolume": 0.66,
+        "relativeVolume": 0.67,
         "relatedEtfs": [
           "IGV",
           "AIQ",
@@ -2389,7 +2389,7 @@
         "oneDayReturn": -1.82,
         "fiveDayReturn": -4.53,
         "twentyDayReturn": -2.73,
-        "relativeVolume": 0.79,
+        "relativeVolume": 0.88,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -2434,7 +2434,7 @@
         "oneDayReturn": 0.31,
         "fiveDayReturn": -4.95,
         "twentyDayReturn": -8.69,
-        "relativeVolume": 0.76,
+        "relativeVolume": 0.78,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2451,13 +2451,13 @@
         "moneyFlowScore": 0,
         "moneyFlowScoreInitial": 0,
         "moneyFlowScoreFinal": 0,
-        "finalRawScore": -39,
-        "todayActionLabel": "거래량 확인 전 관찰",
+        "finalRawScore": -21,
+        "todayActionLabel": "제외",
         "reasonConfidence": "LOW",
         "oneDayReturn": -2.1,
         "fiveDayReturn": -5.12,
         "twentyDayReturn": -6.78,
-        "relativeVolume": 0.83,
+        "relativeVolume": 1.01,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -2481,7 +2481,7 @@
         "oneDayReturn": -0.99,
         "fiveDayReturn": -5.22,
         "twentyDayReturn": -8.63,
-        "relativeVolume": 0.89,
+        "relativeVolume": 0.91,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -2502,7 +2502,7 @@
         "oneDayReturn": -1.35,
         "fiveDayReturn": -5.24,
         "twentyDayReturn": -9.94,
-        "relativeVolume": 0.95,
+        "relativeVolume": 0.96,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2525,7 +2525,7 @@
         "oneDayReturn": -3.58,
         "fiveDayReturn": -5.46,
         "twentyDayReturn": -4.57,
-        "relativeVolume": 1.69,
+        "relativeVolume": 1.72,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2548,7 +2548,7 @@
         "oneDayReturn": -7.6,
         "fiveDayReturn": -5.68,
         "twentyDayReturn": -8.1,
-        "relativeVolume": 1.1,
+        "relativeVolume": 1.11,
         "relatedEtfs": [
           "IGV",
           "AIQ",
@@ -2594,7 +2594,7 @@
         "oneDayReturn": -4.1,
         "fiveDayReturn": -5.77,
         "twentyDayReturn": -4.49,
-        "relativeVolume": 1,
+        "relativeVolume": 1.01,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2641,7 +2641,7 @@
         "oneDayReturn": -3.22,
         "fiveDayReturn": -6.27,
         "twentyDayReturn": -4.88,
-        "relativeVolume": 1.01,
+        "relativeVolume": 1.02,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2664,7 +2664,7 @@
         "oneDayReturn": -2.11,
         "fiveDayReturn": -6.49,
         "twentyDayReturn": -3.09,
-        "relativeVolume": 1.1,
+        "relativeVolume": 1.11,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2687,7 +2687,7 @@
         "oneDayReturn": -2.6,
         "fiveDayReturn": -6.79,
         "twentyDayReturn": -12.57,
-        "relativeVolume": 1.1,
+        "relativeVolume": 1.12,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -2711,7 +2711,7 @@
         "oneDayReturn": -1.37,
         "fiveDayReturn": -6.98,
         "twentyDayReturn": -9.8,
-        "relativeVolume": 1,
+        "relativeVolume": 1.01,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -2732,7 +2732,7 @@
         "oneDayReturn": -2.03,
         "fiveDayReturn": -7.67,
         "twentyDayReturn": -51.91,
-        "relativeVolume": 0.76,
+        "relativeVolume": 0.78,
         "relatedEtfs": [
           "QQQ"
         ],
@@ -2753,7 +2753,7 @@
         "oneDayReturn": -3.74,
         "fiveDayReturn": -7.77,
         "twentyDayReturn": -8.67,
-        "relativeVolume": 1.07,
+        "relativeVolume": 1.08,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -2777,7 +2777,7 @@
         "oneDayReturn": -3.61,
         "fiveDayReturn": -7.96,
         "twentyDayReturn": -19.17,
-        "relativeVolume": 0.98,
+        "relativeVolume": 0.99,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -2868,7 +2868,7 @@
         "oneDayReturn": -4.32,
         "fiveDayReturn": -9.31,
         "twentyDayReturn": 7.68,
-        "relativeVolume": 0.88,
+        "relativeVolume": 0.89,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2891,7 +2891,7 @@
         "oneDayReturn": -2.53,
         "fiveDayReturn": -10,
         "twentyDayReturn": 3.41,
-        "relativeVolume": 0.78,
+        "relativeVolume": 0.8,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2914,7 +2914,7 @@
         "oneDayReturn": -5.74,
         "fiveDayReturn": -10.42,
         "twentyDayReturn": -28.31,
-        "relativeVolume": 0.57,
+        "relativeVolume": 0.58,
         "relatedEtfs": [
           "IBIT",
           "BLOK"
@@ -2936,7 +2936,7 @@
         "oneDayReturn": -0.6,
         "fiveDayReturn": -12.48,
         "twentyDayReturn": -3.75,
-        "relativeVolume": 0.87,
+        "relativeVolume": 0.91,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -3004,7 +3004,7 @@
         "oneDayReturn": -8.52,
         "fiveDayReturn": -15.48,
         "twentyDayReturn": -14.64,
-        "relativeVolume": 1.51,
+        "relativeVolume": 1.52,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -3027,7 +3027,7 @@
         "oneDayReturn": -0.5,
         "fiveDayReturn": -15.85,
         "twentyDayReturn": -10.49,
-        "relativeVolume": 0.85,
+        "relativeVolume": 0.87,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -3050,7 +3050,7 @@
         "oneDayReturn": -6.34,
         "fiveDayReturn": -16.48,
         "twentyDayReturn": -17.49,
-        "relativeVolume": 0.65,
+        "relativeVolume": 0.69,
         "relatedEtfs": [
           "IBIT",
           "BLOK"
@@ -3087,7 +3087,7 @@
         "CVX",
         "XOM"
       ],
-      "whyMoneyIsFlowing": "매크로 방어/헤지 관련 Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH), SPDR Gold Shares(GLD)와 Chevron(CVX), Exxon Mobil(XOM)의 5일(+1.39%)·20일(+7.03%) 흐름을 함께 본다. 평균 상대 거래량은 1.06배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "whyMoneyIsFlowing": "매크로 방어/헤지 관련 Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH), SPDR Gold Shares(GLD)와 Chevron(CVX), Exxon Mobil(XOM)의 5일(+1.39%)·20일(+7.03%) 흐름을 함께 본다. 평균 상대 거래량은 1.07배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
       "likelyNextBuyer": "금리/에너지/방어 헤지를 찾는 매크로 자금",
       "bestTradingVehicle": "ETF 우선: GLD, TLT, XLE / 개별 종목 우선: XOM, CVX",
       "breakCondition": "방어 ETF 상대강도 둔화와 위험선호 성장주 재강세",
@@ -3125,7 +3125,7 @@
         "CVX",
         "XOM"
       ],
-      "whyMoneyIsFlowing": "Integrated Oil & Gas 자금 유입 관련 Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH), SPDR S&P 500 ETF Trust(SPY)와 Chevron(CVX), Exxon Mobil(XOM)의 5일(+1.96%)·20일(+4.30%) 흐름을 함께 본다. 평균 상대 거래량은 1.16배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "whyMoneyIsFlowing": "Integrated Oil & Gas 자금 유입 관련 Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH), SPDR S&P 500 ETF Trust(SPY)와 Chevron(CVX), Exxon Mobil(XOM)의 5일(+1.96%)·20일(+4.30%) 흐름을 함께 본다. 평균 상대 거래량은 1.17배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
       "likelyNextBuyer": "Integrated Oil & Gas 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: CVX, XOM",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3161,7 +3161,7 @@
         "REGN",
         "INSM"
       ],
-      "whyMoneyIsFlowing": "바이오/헬스케어 촉매 관련 Invesco QQQ Trust(QQQ)와 Amgen Inc.(AMGN), Vertex Pharmaceuticals Incorporated(VRTX), Regeneron Pharmaceuticals Inc.(REGN), Insmed Incorporated(INSM)의 5일(-1.08%)·20일(+11.17%) 흐름을 함께 본다. 평균 상대 거래량은 0.84배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "바이오/헬스케어 촉매 관련 Invesco QQQ Trust(QQQ)와 Amgen Inc.(AMGN), Vertex Pharmaceuticals Incorporated(VRTX), Regeneron Pharmaceuticals Inc.(REGN), Insmed Incorporated(INSM)의 5일(-1.08%)·20일(+11.17%) 흐름을 함께 본다. 평균 상대 거래량은 0.85배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "바이오/헬스케어 촉매을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: REGN, AMGN, VRTX",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3201,7 +3201,7 @@
         "FTNT",
         "PANW"
       ],
-      "whyMoneyIsFlowing": "사이버보안 지출 재가속 관련 First Trust NASDAQ Cybersecurity ETF(CIBR), Amplify Cybersecurity ETF(HACK), iShares Cybersecurity and Tech ETF(IHAK)와 CrowdStrike Holdings Inc.(CRWD), Zscaler Inc.(ZS), Fortinet Inc.(FTNT), Palo Alto Networks Inc.(PANW)의 5일(+6.14%)·20일(+0.66%) 흐름을 함께 본다. 평균 상대 거래량은 1.20배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "whyMoneyIsFlowing": "사이버보안 지출 재가속 관련 First Trust NASDAQ Cybersecurity ETF(CIBR), Amplify Cybersecurity ETF(HACK), iShares Cybersecurity and Tech ETF(IHAK)와 CrowdStrike Holdings Inc.(CRWD), Zscaler Inc.(ZS), Fortinet Inc.(FTNT), Palo Alto Networks Inc.(PANW)의 5일(+6.14%)·20일(+0.66%) 흐름을 함께 본다. 평균 상대 거래량은 1.22배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
       "likelyNextBuyer": "사이버보안 지출 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: HACK, CIBR, IHAK / 개별 종목 우선: ZS, PANW, CRWD",
       "breakCondition": "HACK 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3241,7 +3241,7 @@
         "MSFT",
         "DDOG"
       ],
-      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 iShares Expanded Tech-Software Sector ETF(IGV), Invesco QQQ Trust(QQQ), Global X Artificial Intelligence & Technology ETF(AIQ)와 Atlassian Corporation(TEAM), Palantir Technologies Inc.(PLTR), Microsoft Corporation(MSFT), Datadog Inc.(DDOG)의 5일(+3.56%)·20일(+8.82%) 흐름을 함께 본다. 평균 상대 거래량은 0.84배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 iShares Expanded Tech-Software Sector ETF(IGV), Invesco QQQ Trust(QQQ), Global X Artificial Intelligence & Technology ETF(AIQ)와 Atlassian Corporation(TEAM), Palantir Technologies Inc.(PLTR), Microsoft Corporation(MSFT), Datadog Inc.(DDOG)의 5일(+3.56%)·20일(+8.82%) 흐름을 함께 본다. 평균 상대 거래량은 0.85배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "AI 소프트웨어 실적 기대를 사는 ETF 자금, 엔터프라이즈 소프트웨어 스윙 트레이더, 신고가 추종 자금",
       "bestTradingVehicle": "ETF 우선: IGV, AIQ, QQQ / 개별 종목 우선: PLTR, DDOG, TEAM",
       "breakCondition": "IGV/AIQ 20일선 이탈, 관련 소프트웨어 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
@@ -3281,7 +3281,7 @@
         "MSFT",
         "SHOP"
       ],
-      "whyMoneyIsFlowing": "소프트웨어 실적/AI 수익화 관련 iShares Expanded Tech-Software Sector ETF(IGV), Invesco QQQ Trust(QQQ), Global X Artificial Intelligence & Technology ETF(AIQ)와 Adobe Inc.(ADBE), Strategy Inc.(MSTR), Microsoft Corporation(MSFT), Shopify Inc.(SHOP)의 5일(+0.04%)·20일(+6.84%) 흐름을 함께 본다. 평균 상대 거래량은 0.94배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "whyMoneyIsFlowing": "소프트웨어 실적/AI 수익화 관련 iShares Expanded Tech-Software Sector ETF(IGV), Invesco QQQ Trust(QQQ), Global X Artificial Intelligence & Technology ETF(AIQ)와 Adobe Inc.(ADBE), Strategy Inc.(MSTR), Microsoft Corporation(MSFT), Shopify Inc.(SHOP)의 5일(+0.04%)·20일(+6.84%) 흐름을 함께 본다. 평균 상대 거래량은 0.95배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
       "likelyNextBuyer": "소프트웨어 실적/AI 수익화을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: IGV, AIQ, QQQ / 개별 종목 우선: SHOP, ADBE, MSTR",
       "breakCondition": "IGV 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3357,12 +3357,12 @@
         "TRI",
         "CTAS"
       ],
-      "whyMoneyIsFlowing": "Specialty Business Services 자금 유입 관련 SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ)와 Copart Inc.(CPRT), Thomson Reuters Corporation(TRI), Cintas Corporation(CTAS)의 5일(-1.10%)·20일(-0.14%) 흐름을 함께 본다. 평균 상대 거래량은 0.96배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "Specialty Business Services 자금 유입 관련 SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ)와 Copart Inc.(CPRT), Thomson Reuters Corporation(TRI), Cintas Corporation(CTAS)의 5일(-1.10%)·20일(-0.13%) 흐름을 함께 본다. 평균 상대 거래량은 1.00배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "Specialty Business Services 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: TRI, CTAS, CPRT",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM), Copart Inc.(CPRT), Thomson Reuters Corporation(TRI) 중심으로 5일 -1.10%, 20일 -0.14% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "summaryReason": "SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM), Copart Inc.(CPRT), Thomson Reuters Corporation(TRI) 중심으로 5일 -1.10%, 20일 -0.13% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -3421,7 +3421,7 @@
         "META",
         "DASH"
       ],
-      "whyMoneyIsFlowing": "Internet Content 자금 유입 관련 Invesco QQQ Trust(QQQ)와 Meta Platforms Inc.(META), DoorDash Inc.(DASH)의 5일(-0.77%)·20일(+2.56%) 흐름을 함께 본다. 평균 상대 거래량은 0.96배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "Internet Content 자금 유입 관련 Invesco QQQ Trust(QQQ)와 Meta Platforms Inc.(META), DoorDash Inc.(DASH)의 5일(-0.77%)·20일(+2.56%) 흐름을 함께 본다. 평균 상대 거래량은 0.97배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "Internet Content 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: META, DASH",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3457,7 +3457,7 @@
         "STX",
         "WDC"
       ],
-      "whyMoneyIsFlowing": "Data Storage 자금 유입 관련 SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ)와 Seagate Technology Holdings plc(STX), Western Digital Corporation(WDC)의 5일(-0.91%)·20일(-5.69%) 흐름을 함께 본다. 평균 상대 거래량은 0.97배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "Data Storage 자금 유입 관련 SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ)와 Seagate Technology Holdings plc(STX), Western Digital Corporation(WDC)의 5일(-0.91%)·20일(-5.69%) 흐름을 함께 본다. 평균 상대 거래량은 0.98배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "Data Storage 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: STX, WDC",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3495,7 +3495,7 @@
         "GEV",
         "VRT"
       ],
-      "whyMoneyIsFlowing": "전력 유틸리티 수요 재평가 관련 SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ)와 Eaton(ETN), GE Vernova(GEV), Vertiv(VRT)의 5일(-1.89%)·20일(-6.05%) 흐름을 함께 본다. 평균 상대 거래량은 1.14배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "전력 유틸리티 수요 재평가 관련 SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ)와 Eaton(ETN), GE Vernova(GEV), Vertiv(VRT)의 5일(-1.89%)·20일(-6.05%) 흐름을 함께 본다. 평균 상대 거래량은 1.15배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "전력 유틸리티 수요 재평가을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: ETN, GEV, VRT",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3531,7 +3531,7 @@
         "KTOS",
         "AVAV"
       ],
-      "whyMoneyIsFlowing": "Aerospace & Defense 자금 유입 관련 SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ)와 Kratos Defense & Security Solutions(KTOS), AeroVironment(AVAV)의 5일(-2.79%)·20일(-6.07%) 흐름을 함께 본다. 평균 상대 거래량은 1.20배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "Aerospace & Defense 자금 유입 관련 SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ)와 Kratos Defense & Security Solutions(KTOS), AeroVironment(AVAV)의 5일(-2.79%)·20일(-6.07%) 흐름을 함께 본다. 평균 상대 거래량은 1.21배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "Aerospace & Defense 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: KTOS, AVAV",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3603,7 +3603,7 @@
         "PDD",
         "AMZN"
       ],
-      "whyMoneyIsFlowing": "소비 회복/방어주 선별 관련 Invesco QQQ Trust(QQQ)와 PDD Holdings Inc.(PDD), Amazon.com Inc.(AMZN)의 5일(-2.67%)·20일(-6.33%) 흐름을 함께 본다. 평균 상대 거래량은 0.97배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "소비 회복/방어주 선별 관련 Invesco QQQ Trust(QQQ)와 PDD Holdings Inc.(PDD), Amazon.com Inc.(AMZN)의 5일(-2.67%)·20일(-6.33%) 흐름을 함께 본다. 평균 상대 거래량은 0.99배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "소비 회복/방어주 선별을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: PDD, AMZN",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3643,7 +3643,7 @@
         "VRT",
         "ETN"
       ],
-      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Roundhill Memory ETF(DRAM)와 NVIDIA Corporation(NVDA), Micron Technology Inc.(MU), Vertiv(VRT), Eaton(ETN)의 5일(-1.62%)·20일(-5.66%) 흐름을 함께 본다. 평균 상대 거래량은 1.12배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Roundhill Memory ETF(DRAM)와 NVIDIA Corporation(NVDA), Micron Technology Inc.(MU), Vertiv(VRT), Eaton(ETN)의 5일(-1.62%)·20일(-5.66%) 흐름을 함께 본다. 평균 상대 거래량은 1.13배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "AI 인프라 CAPEX와 데이터센터 병목을 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
       "bestTradingVehicle": "ETF 우선: SMH, SOXX, DRAM / 개별 종목 우선: NVDA, MU, VRT",
       "breakCondition": "SMH/SOXX/DRAM 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
@@ -3697,7 +3697,7 @@
       "name": "반도체 장비 사이클 재평가",
       "status": "소멸",
       "narrativeScore": 0,
-      "rawScore": -9,
+      "rawScore": -8,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "SMH",
@@ -3719,12 +3719,52 @@
         "LRCX",
         "ASML"
       ],
-      "whyMoneyIsFlowing": "반도체 장비 사이클 재평가 관련 VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Invesco PHLX Semiconductor ETF(SOXQ)와 Applied Materials Inc.(AMAT), Lam Research Corporation(LRCX), ASML Holding N.V.(ASML)의 5일(-3.91%)·20일(-7.28%) 흐름을 함께 본다. 평균 상대 거래량은 1.08배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "반도체 장비 사이클 재평가 관련 VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Invesco PHLX Semiconductor ETF(SOXQ)와 Applied Materials Inc.(AMAT), Lam Research Corporation(LRCX), ASML Holding N.V.(ASML)의 5일(-3.91%)·20일(-7.28%) 흐름을 함께 본다. 평균 상대 거래량은 1.10배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "반도체 장비 사이클 재평가을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: AMAT, LRCX, ASML",
       "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
       "summaryReason": "VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Applied Materials Inc.(AMAT), Lam Research Corporation(LRCX) 중심으로 5일 -3.91%, 20일 -7.28% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": -3,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
+      "name": "반도체 설계/공급망 재가속",
+      "status": "소멸",
+      "narrativeScore": 0,
+      "rawScore": -9,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ"
+      ],
+      "supportStocks": [
+        "ARM",
+        "AMD",
+        "TXN",
+        "ADI"
+      ],
+      "representativeEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ"
+      ],
+      "representativeStocks": [
+        "ARM",
+        "AMD",
+        "TXN",
+        "ADI"
+      ],
+      "whyMoneyIsFlowing": "반도체 설계/공급망 재가속 관련 VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Invesco PHLX Semiconductor ETF(SOXQ)와 Arm Holdings plc(ARM), Advanced Micro Devices Inc.(AMD), Texas Instruments Incorporated(TXN), Analog Devices Inc.(ADI)의 5일(-3.03%)·20일(-7.44%) 흐름을 함께 본다. 평균 상대 거래량은 1.01배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: ARM, AMD, TXN",
+      "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
+      "summaryReason": "VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Arm Holdings plc(ARM), Advanced Micro Devices Inc.(AMD) 중심으로 5일 -3.03%, 20일 -7.44% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": -3,
       "relativeVolumeAvg": 1,
@@ -3755,7 +3795,7 @@
         "COIN",
         "IREN"
       ],
-      "whyMoneyIsFlowing": "비트코인/디지털 자산 위험선호 관련 iShares Bitcoin Trust ETF(IBIT), Amplify Transformational Data Sharing ETF(BLOK)와 Strategy Inc.(MSTR), Coinbase(COIN), IREN의 5일(-8.56%)·20일(-0.71%) 흐름을 함께 본다. 평균 상대 거래량은 0.96배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "비트코인/디지털 자산 위험선호 관련 iShares Bitcoin Trust ETF(IBIT), Amplify Transformational Data Sharing ETF(BLOK)와 Strategy Inc.(MSTR), Coinbase(COIN), IREN의 5일(-8.56%)·20일(-0.71%) 흐름을 함께 본다. 평균 상대 거래량은 0.97배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "비트코인 현물 ETF와 디지털 자산 베타를 사는 위험선호 자금",
       "bestTradingVehicle": "ETF 우선: IBIT, BLOK / 개별 종목 우선: MSTR, COIN, IREN",
       "breakCondition": "IBIT/BLOK 20일선 이탈 또는 채굴주 상대강도 급락",
@@ -3765,46 +3805,6 @@
       "etfBreadthScore": -4,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 2,
-      "stockRelativeVolumeAvg": 1
-    },
-    {
-      "name": "반도체 설계/공급망 재가속",
-      "status": "소멸",
-      "narrativeScore": 0,
-      "rawScore": -10,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ"
-      ],
-      "supportStocks": [
-        "ARM",
-        "AMD",
-        "TXN",
-        "ADI"
-      ],
-      "representativeEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ"
-      ],
-      "representativeStocks": [
-        "ARM",
-        "AMD",
-        "TXN",
-        "ADI"
-      ],
-      "whyMoneyIsFlowing": "반도체 설계/공급망 재가속 관련 VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Invesco PHLX Semiconductor ETF(SOXQ)와 Arm Holdings plc(ARM), Advanced Micro Devices Inc.(AMD), Texas Instruments Incorporated(TXN), Analog Devices Inc.(ADI)의 5일(-3.03%)·20일(-7.44%) 흐름을 함께 본다. 평균 상대 거래량은 0.98배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: ARM, AMD, TXN",
-      "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Arm Holdings plc(ARM), Advanced Micro Devices Inc.(AMD) 중심으로 5일 -3.03%, 20일 -7.44% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": -3,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
       "stockRelativeVolumeAvg": 1
     },
     {
@@ -3827,7 +3827,7 @@
         "CCEP",
         "MNST"
       ],
-      "whyMoneyIsFlowing": "필수소비재 음료 방어 성장 관련 Invesco QQQ Trust(QQQ)와 Coca-Cola Europacific Partners PLC(CCEP), Monster Beverage Corporation(MNST)의 5일(-3.38%)·20일(-17.59%) 흐름을 함께 본다. 평균 상대 거래량은 0.84배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "필수소비재 음료 방어 성장 관련 Invesco QQQ Trust(QQQ)와 Coca-Cola Europacific Partners PLC(CCEP), Monster Beverage Corporation(MNST)의 5일(-3.38%)·20일(-17.59%) 흐름을 함께 본다. 평균 상대 거래량은 0.92배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "필수소비재 음료 방어 성장을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: CCEP, MNST",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3866,7 +3866,7 @@
         "CVX",
         "XOM"
       ],
-      "whyMoneyIsFlowing": "매크로 방어/헤지 관련 Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH), SPDR Gold Shares(GLD)와 Chevron(CVX), Exxon Mobil(XOM)의 5일(+1.39%)·20일(+7.03%) 흐름을 함께 본다. 평균 상대 거래량은 1.06배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "whyMoneyIsFlowing": "매크로 방어/헤지 관련 Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH), SPDR Gold Shares(GLD)와 Chevron(CVX), Exxon Mobil(XOM)의 5일(+1.39%)·20일(+7.03%) 흐름을 함께 본다. 평균 상대 거래량은 1.07배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
       "likelyNextBuyer": "금리/에너지/방어 헤지를 찾는 매크로 자금",
       "bestTradingVehicle": "ETF 우선: GLD, TLT, XLE / 개별 종목 우선: XOM, CVX",
       "breakCondition": "방어 ETF 상대강도 둔화와 위험선호 성장주 재강세",
@@ -3904,7 +3904,7 @@
         "CVX",
         "XOM"
       ],
-      "whyMoneyIsFlowing": "Integrated Oil & Gas 자금 유입 관련 Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH), SPDR S&P 500 ETF Trust(SPY)와 Chevron(CVX), Exxon Mobil(XOM)의 5일(+1.96%)·20일(+4.30%) 흐름을 함께 본다. 평균 상대 거래량은 1.16배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "whyMoneyIsFlowing": "Integrated Oil & Gas 자금 유입 관련 Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH), SPDR S&P 500 ETF Trust(SPY)와 Chevron(CVX), Exxon Mobil(XOM)의 5일(+1.96%)·20일(+4.30%) 흐름을 함께 본다. 평균 상대 거래량은 1.17배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
       "likelyNextBuyer": "Integrated Oil & Gas 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: CVX, XOM",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3940,7 +3940,7 @@
         "REGN",
         "INSM"
       ],
-      "whyMoneyIsFlowing": "바이오/헬스케어 촉매 관련 Invesco QQQ Trust(QQQ)와 Amgen Inc.(AMGN), Vertex Pharmaceuticals Incorporated(VRTX), Regeneron Pharmaceuticals Inc.(REGN), Insmed Incorporated(INSM)의 5일(-1.08%)·20일(+11.17%) 흐름을 함께 본다. 평균 상대 거래량은 0.84배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "바이오/헬스케어 촉매 관련 Invesco QQQ Trust(QQQ)와 Amgen Inc.(AMGN), Vertex Pharmaceuticals Incorporated(VRTX), Regeneron Pharmaceuticals Inc.(REGN), Insmed Incorporated(INSM)의 5일(-1.08%)·20일(+11.17%) 흐름을 함께 본다. 평균 상대 거래량은 0.85배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "바이오/헬스케어 촉매을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: REGN, AMGN, VRTX",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3978,11 +3978,11 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / product / under_6h - Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_6h - Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_24h / negative - Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / negative - Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
       "candidateNewsSummary": {
         "ticker": "CVX",
-        "checkedAt": "2026-09-02T00:51:42.467Z",
+        "checkedAt": "2026-09-03T00:59:51.074Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -4023,86 +4023,94 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-09-02T00:19:00.000Z",
+        "lastPublishedAt": "2026-09-03T00:23:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
-        "directnessLabel": "섹터/테마 뉴스 중심",
-        "headline": "Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook",
-        "directCatalyst": null,
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+        "directCatalyst": {
+          "title": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-09-02T18:39:50.000Z",
+          "eventType": "mna",
+          "direction": "negative",
+          "freshnessBucket": "under_24h",
+          "url": "https://www.fool.com/investing/2026/09/02/chevron-just-committed-7-billion-to-venezuela-heres-what-it-means-for-cvx-stock/?.tsrc=rss"
+        },
         "items": [
           {
-            "title": "Palo Alto Networks&#x2019; stock falls despite strong AI cybersecurity demand",
-            "summary": "Enterprise cyber threats and AI adoption are giving Palo Alto Networks &#x2018;durable tailwinds,&#x2019; according to CEO Nikesh Arora, but the stock retreated after an earnings beat",
+            "title": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+            "summary": "Chevron just doubled down on Venezuela right after Washington cut an oil deal there. Will this bet pay off?",
             "koreanSummary": {
-              "title": "Palo Alto Networks&#x2019; stock falls despite strong AI cybersecurity demand",
-              "content": "Chevron 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Enterprise cyber threats and AI adoption are giving Palo Alto Networks &#x2018;durable tailwinds,&#x2019; according to CEO Nikesh Arora, but the stock retreated after an earning...입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
-            },
-            "source": "MarketWatch RSS",
-            "publishedAt": "2026-09-02T00:18:00.000Z",
-            "eventType": "earnings",
-            "directness": "sector_theme",
-            "direction": "mixed",
-            "freshnessBucket": "under_6h",
-            "url": "https://www.marketwatch.com/story/palo-alto-networks-stock-climbs-as-demand-for-ai-cybersecurity-powers-an-earnings-beat-4b39578c?mod=mw_rss_topstories"
-          },
-          {
-            "title": "Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.",
-            "summary": "Chevron already produces about 280,000 barrels of oil a day in Venezuela through joint ventures. The company has said it can expand by another 50% over the next two years,",
-            "koreanSummary": {
-              "title": "Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.",
-              "content": "Chevron 관련 기사는 Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 이슈를 다루며, 주가 변동률 +50.00%를 핵심 내용으로 봅니다.",
-              "implication": "Chevron의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+              "content": "Chevron 관련 M&A 뉴스입니다. 기사 스니펫상 핵심 내용은 Chevron just doubled down on Venezuela right after Washington cut an oil deal there.입니다.",
+              "implication": "M&A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-01T21:53:00.000Z",
-            "eventType": "product",
-            "directness": "sector_theme",
-            "direction": "positive",
-            "freshnessBucket": "under_6h",
-            "url": "https://finance.yahoo.com/m/ffba5d10-cca9-3035-99c9-7c86bc2439ed/chevron-will-grow-venezuelan.html?.tsrc=rss"
+            "publishedAt": "2026-09-02T18:39:50.000Z",
+            "eventType": "mna",
+            "directness": "direct_ticker",
+            "direction": "negative",
+            "freshnessBucket": "under_24h",
+            "url": "https://www.fool.com/investing/2026/09/02/chevron-just-committed-7-billion-to-venezuela-heres-what-it-means-for-cvx-stock/?.tsrc=rss"
           },
           {
-            "title": "Oil giant Chevron is expected to announce it will expand operations in Venezuela, US official says",
-            "summary": "Oil giant Chevron is planning to expand its operations in Venezuela, a U.S. official said Tuesday, just days after President Donald Trump announced an ambitious deal to develop the nation's oil reserves and give the Pentagon a stake in the profits. The official, who briefed reporters on the expected announcement, said the company’s officials and Energy Secretary Chris Wright are expected to visit Venezuela on Wednesday where the new investment will be formally unveiled. The official spoke on condition of anonymity under ground rules set by the White House for the call.",
+            "title": "Chevron Outlines $7 Billion Investment Plan to Double Venezuela Oil Production in 5 Years",
+            "summary": "Chevron (CVX) outlined a plan to invest more than $7 billion in Venezuela and double its oil product",
             "koreanSummary": {
-              "title": "Oil giant Chevron is expected to announce it will expand operations in Venezuela, US official says",
-              "content": "Chevron 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 Oil giant Chevron is planning to expand its operations in Venezuela, a U.S.입니다.",
-              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "title": "Chevron Outlines $7 Billion Investment Plan to Double Venezuela Oil Production in 5 Years",
+              "content": "Chevron 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Chevron (CVX) outlined a plan to invest more than $7 billion in Venezuela and double its oil product입니다.",
+              "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-01T16:56:34.000Z",
-            "eventType": "macro",
-            "directness": "sector_theme",
-            "direction": "positive",
+            "publishedAt": "2026-09-02T17:04:54.000Z",
+            "eventType": "product",
+            "directness": "direct_ticker",
+            "direction": "neutral",
             "freshnessBucket": "under_24h",
-            "url": "https://finance.yahoo.com/energy/articles/oil-giant-chevron-expected-announce-165634833.html?.tsrc=rss"
+            "url": "https://finance.yahoo.com/energy/articles/chevron-outlines-7-billion-investment-170454444.html?.tsrc=rss"
+          },
+          {
+            "title": "Chevron, Eni Lead Wave of Deals to Lift Venezuela Oil Output",
+            "summary": "Executives from Chevron Corp., GE Vernova Inc. and Eni SpA joined US Energy Secretary Chris Wright and acting Venezuelan President Delcy Rodríguez to unveil a wave of energy deals aimed at boosting crude production in the South American nation.",
+            "koreanSummary": {
+              "title": "Chevron, Eni Lead Wave of Deals to Lift Venezuela Oil Output",
+              "content": "Chevron 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Executives from Chevron Corp., GE Vernova Inc.입니다.",
+              "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+            },
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-09-02T18:47:23.000Z",
+            "eventType": "product",
+            "directness": "sector_theme",
+            "direction": "mixed",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/energy/articles/chevron-eni-lead-wave-deals-184723189.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "섹터/테마 뉴스 중심 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook\"입니다.",
-          "directLine": "Chevron에 대해 강한 직접 촉매는 확인되지 않았습니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.\"입니다.",
+          "directLine": "Chevron에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.\"이며, M&A 재료로 봅니다.",
           "bullets": [
             {
-              "title": "Palo Alto Networks&#x2019; stock falls despite strong AI cybersecurity demand",
-              "content": "Chevron 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Enterprise cyber threats and AI adoption are giving Palo Alto Networks &#x2018;durable tailwinds,&#x2019; according to CEO Nikesh Arora, but the stock retreated after an earning...입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              "title": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+              "content": "Chevron 관련 M&A 뉴스입니다. 기사 스니펫상 핵심 내용은 Chevron just doubled down on Venezuela right after Washington cut an oil deal there.입니다.",
+              "implication": "M&A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             },
             {
-              "title": "Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.",
-              "content": "Chevron 관련 기사는 Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 이슈를 다루며, 주가 변동률 +50.00%를 핵심 내용으로 봅니다.",
-              "implication": "Chevron의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "Chevron Outlines $7 Billion Investment Plan to Double Venezuela Oil Production in 5 Years",
+              "content": "Chevron 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Chevron (CVX) outlined a plan to invest more than $7 billion in Venezuela and double its oil product입니다.",
+              "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Oil giant Chevron is expected to announce it will expand operations in Venezuela, US official says",
-              "content": "Chevron 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 Oil giant Chevron is planning to expand its operations in Venezuela, a U.S.입니다.",
-              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "title": "Chevron, Eni Lead Wave of Deals to Lift Venezuela Oil Output",
+              "content": "Chevron 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Executives from Chevron Corp., GE Vernova Inc.입니다.",
+              "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             }
           ],
@@ -4113,7 +4121,7 @@
           "SEC EDGAR RSS: This operation was aborted",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "섹터/테마 뉴스 중심, 흐름은 긍정 우위. 핵심 확인 뉴스: Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock."
       },
       "tieBreakerReason": "최종 원점수 85, 리스크 패널티 0, 5일 수익률 +5.58%, 상대 거래량 1.08배 순으로 정렬",
       "entryQualityScore": 41,
@@ -4176,11 +4184,11 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / product / under_6h - Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_6h - Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_24h / negative - Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / negative - Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
       "candidateNewsSummary": {
         "ticker": "CVX",
-        "checkedAt": "2026-09-02T00:51:42.467Z",
+        "checkedAt": "2026-09-03T00:59:51.074Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -4221,86 +4229,94 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-09-02T00:19:00.000Z",
+        "lastPublishedAt": "2026-09-03T00:23:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
-        "directnessLabel": "섹터/테마 뉴스 중심",
-        "headline": "Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook",
-        "directCatalyst": null,
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+        "directCatalyst": {
+          "title": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-09-02T18:39:50.000Z",
+          "eventType": "mna",
+          "direction": "negative",
+          "freshnessBucket": "under_24h",
+          "url": "https://www.fool.com/investing/2026/09/02/chevron-just-committed-7-billion-to-venezuela-heres-what-it-means-for-cvx-stock/?.tsrc=rss"
+        },
         "items": [
           {
-            "title": "Palo Alto Networks&#x2019; stock falls despite strong AI cybersecurity demand",
-            "summary": "Enterprise cyber threats and AI adoption are giving Palo Alto Networks &#x2018;durable tailwinds,&#x2019; according to CEO Nikesh Arora, but the stock retreated after an earnings beat",
+            "title": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+            "summary": "Chevron just doubled down on Venezuela right after Washington cut an oil deal there. Will this bet pay off?",
             "koreanSummary": {
-              "title": "Palo Alto Networks&#x2019; stock falls despite strong AI cybersecurity demand",
-              "content": "Chevron 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Enterprise cyber threats and AI adoption are giving Palo Alto Networks &#x2018;durable tailwinds,&#x2019; according to CEO Nikesh Arora, but the stock retreated after an earning...입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
-            },
-            "source": "MarketWatch RSS",
-            "publishedAt": "2026-09-02T00:18:00.000Z",
-            "eventType": "earnings",
-            "directness": "sector_theme",
-            "direction": "mixed",
-            "freshnessBucket": "under_6h",
-            "url": "https://www.marketwatch.com/story/palo-alto-networks-stock-climbs-as-demand-for-ai-cybersecurity-powers-an-earnings-beat-4b39578c?mod=mw_rss_topstories"
-          },
-          {
-            "title": "Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.",
-            "summary": "Chevron already produces about 280,000 barrels of oil a day in Venezuela through joint ventures. The company has said it can expand by another 50% over the next two years,",
-            "koreanSummary": {
-              "title": "Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.",
-              "content": "Chevron 관련 기사는 Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 이슈를 다루며, 주가 변동률 +50.00%를 핵심 내용으로 봅니다.",
-              "implication": "Chevron의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+              "content": "Chevron 관련 M&A 뉴스입니다. 기사 스니펫상 핵심 내용은 Chevron just doubled down on Venezuela right after Washington cut an oil deal there.입니다.",
+              "implication": "M&A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-01T21:53:00.000Z",
-            "eventType": "product",
-            "directness": "sector_theme",
-            "direction": "positive",
-            "freshnessBucket": "under_6h",
-            "url": "https://finance.yahoo.com/m/ffba5d10-cca9-3035-99c9-7c86bc2439ed/chevron-will-grow-venezuelan.html?.tsrc=rss"
+            "publishedAt": "2026-09-02T18:39:50.000Z",
+            "eventType": "mna",
+            "directness": "direct_ticker",
+            "direction": "negative",
+            "freshnessBucket": "under_24h",
+            "url": "https://www.fool.com/investing/2026/09/02/chevron-just-committed-7-billion-to-venezuela-heres-what-it-means-for-cvx-stock/?.tsrc=rss"
           },
           {
-            "title": "Oil giant Chevron is expected to announce it will expand operations in Venezuela, US official says",
-            "summary": "Oil giant Chevron is planning to expand its operations in Venezuela, a U.S. official said Tuesday, just days after President Donald Trump announced an ambitious deal to develop the nation's oil reserves and give the Pentagon a stake in the profits. The official, who briefed reporters on the expected announcement, said the company’s officials and Energy Secretary Chris Wright are expected to visit Venezuela on Wednesday where the new investment will be formally unveiled. The official spoke on condition of anonymity under ground rules set by the White House for the call.",
+            "title": "Chevron Outlines $7 Billion Investment Plan to Double Venezuela Oil Production in 5 Years",
+            "summary": "Chevron (CVX) outlined a plan to invest more than $7 billion in Venezuela and double its oil product",
             "koreanSummary": {
-              "title": "Oil giant Chevron is expected to announce it will expand operations in Venezuela, US official says",
-              "content": "Chevron 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 Oil giant Chevron is planning to expand its operations in Venezuela, a U.S.입니다.",
-              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "title": "Chevron Outlines $7 Billion Investment Plan to Double Venezuela Oil Production in 5 Years",
+              "content": "Chevron 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Chevron (CVX) outlined a plan to invest more than $7 billion in Venezuela and double its oil product입니다.",
+              "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-01T16:56:34.000Z",
-            "eventType": "macro",
-            "directness": "sector_theme",
-            "direction": "positive",
+            "publishedAt": "2026-09-02T17:04:54.000Z",
+            "eventType": "product",
+            "directness": "direct_ticker",
+            "direction": "neutral",
             "freshnessBucket": "under_24h",
-            "url": "https://finance.yahoo.com/energy/articles/oil-giant-chevron-expected-announce-165634833.html?.tsrc=rss"
+            "url": "https://finance.yahoo.com/energy/articles/chevron-outlines-7-billion-investment-170454444.html?.tsrc=rss"
+          },
+          {
+            "title": "Chevron, Eni Lead Wave of Deals to Lift Venezuela Oil Output",
+            "summary": "Executives from Chevron Corp., GE Vernova Inc. and Eni SpA joined US Energy Secretary Chris Wright and acting Venezuelan President Delcy Rodríguez to unveil a wave of energy deals aimed at boosting crude production in the South American nation.",
+            "koreanSummary": {
+              "title": "Chevron, Eni Lead Wave of Deals to Lift Venezuela Oil Output",
+              "content": "Chevron 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Executives from Chevron Corp., GE Vernova Inc.입니다.",
+              "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+            },
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-09-02T18:47:23.000Z",
+            "eventType": "product",
+            "directness": "sector_theme",
+            "direction": "mixed",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/energy/articles/chevron-eni-lead-wave-deals-184723189.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "섹터/테마 뉴스 중심 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook\"입니다.",
-          "directLine": "Chevron에 대해 강한 직접 촉매는 확인되지 않았습니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.\"입니다.",
+          "directLine": "Chevron에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.\"이며, M&A 재료로 봅니다.",
           "bullets": [
             {
-              "title": "Palo Alto Networks&#x2019; stock falls despite strong AI cybersecurity demand",
-              "content": "Chevron 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Enterprise cyber threats and AI adoption are giving Palo Alto Networks &#x2018;durable tailwinds,&#x2019; according to CEO Nikesh Arora, but the stock retreated after an earning...입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              "title": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+              "content": "Chevron 관련 M&A 뉴스입니다. 기사 스니펫상 핵심 내용은 Chevron just doubled down on Venezuela right after Washington cut an oil deal there.입니다.",
+              "implication": "M&A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             },
             {
-              "title": "Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.",
-              "content": "Chevron 관련 기사는 Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 이슈를 다루며, 주가 변동률 +50.00%를 핵심 내용으로 봅니다.",
-              "implication": "Chevron의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "Chevron Outlines $7 Billion Investment Plan to Double Venezuela Oil Production in 5 Years",
+              "content": "Chevron 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Chevron (CVX) outlined a plan to invest more than $7 billion in Venezuela and double its oil product입니다.",
+              "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Oil giant Chevron is expected to announce it will expand operations in Venezuela, US official says",
-              "content": "Chevron 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 Oil giant Chevron is planning to expand its operations in Venezuela, a U.S.입니다.",
-              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "title": "Chevron, Eni Lead Wave of Deals to Lift Venezuela Oil Output",
+              "content": "Chevron 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Executives from Chevron Corp., GE Vernova Inc.입니다.",
+              "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             }
           ],
@@ -4311,7 +4327,7 @@
           "SEC EDGAR RSS: This operation was aborted",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "섹터/테마 뉴스 중심, 흐름은 긍정 우위. 핵심 확인 뉴스: Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock."
       },
       "tieBreakerReason": "최종 원점수 85, 리스크 패널티 0, 5일 수익률 +5.58%, 상대 거래량 1.08배 순으로 정렬",
       "entryQualityScore": 41,
@@ -4375,11 +4391,11 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / product / under_6h - Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_6h - Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_24h / negative - Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / negative - Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
       "candidateNewsSummary": {
         "ticker": "CVX",
-        "checkedAt": "2026-09-02T00:51:42.467Z",
+        "checkedAt": "2026-09-03T00:59:51.074Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
@@ -4420,86 +4436,94 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-09-02T00:19:00.000Z",
+        "lastPublishedAt": "2026-09-03T00:23:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
-        "directnessLabel": "섹터/테마 뉴스 중심",
-        "headline": "Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook",
-        "directCatalyst": null,
+        "directnessLabel": "종목 직접 뉴스 확인",
+        "headline": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+        "directCatalyst": {
+          "title": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+          "source": "Yahoo Finance RSS",
+          "publishedAt": "2026-09-02T18:39:50.000Z",
+          "eventType": "mna",
+          "direction": "negative",
+          "freshnessBucket": "under_24h",
+          "url": "https://www.fool.com/investing/2026/09/02/chevron-just-committed-7-billion-to-venezuela-heres-what-it-means-for-cvx-stock/?.tsrc=rss"
+        },
         "items": [
           {
-            "title": "Palo Alto Networks&#x2019; stock falls despite strong AI cybersecurity demand",
-            "summary": "Enterprise cyber threats and AI adoption are giving Palo Alto Networks &#x2018;durable tailwinds,&#x2019; according to CEO Nikesh Arora, but the stock retreated after an earnings beat",
+            "title": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+            "summary": "Chevron just doubled down on Venezuela right after Washington cut an oil deal there. Will this bet pay off?",
             "koreanSummary": {
-              "title": "Palo Alto Networks&#x2019; stock falls despite strong AI cybersecurity demand",
-              "content": "Chevron 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Enterprise cyber threats and AI adoption are giving Palo Alto Networks &#x2018;durable tailwinds,&#x2019; according to CEO Nikesh Arora, but the stock retreated after an earning...입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
-            },
-            "source": "MarketWatch RSS",
-            "publishedAt": "2026-09-02T00:18:00.000Z",
-            "eventType": "earnings",
-            "directness": "sector_theme",
-            "direction": "mixed",
-            "freshnessBucket": "under_6h",
-            "url": "https://www.marketwatch.com/story/palo-alto-networks-stock-climbs-as-demand-for-ai-cybersecurity-powers-an-earnings-beat-4b39578c?mod=mw_rss_topstories"
-          },
-          {
-            "title": "Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.",
-            "summary": "Chevron already produces about 280,000 barrels of oil a day in Venezuela through joint ventures. The company has said it can expand by another 50% over the next two years,",
-            "koreanSummary": {
-              "title": "Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.",
-              "content": "Chevron 관련 기사는 Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 이슈를 다루며, 주가 변동률 +50.00%를 핵심 내용으로 봅니다.",
-              "implication": "Chevron의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+              "content": "Chevron 관련 M&A 뉴스입니다. 기사 스니펫상 핵심 내용은 Chevron just doubled down on Venezuela right after Washington cut an oil deal there.입니다.",
+              "implication": "M&A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-01T21:53:00.000Z",
-            "eventType": "product",
-            "directness": "sector_theme",
-            "direction": "positive",
-            "freshnessBucket": "under_6h",
-            "url": "https://finance.yahoo.com/m/ffba5d10-cca9-3035-99c9-7c86bc2439ed/chevron-will-grow-venezuelan.html?.tsrc=rss"
+            "publishedAt": "2026-09-02T18:39:50.000Z",
+            "eventType": "mna",
+            "directness": "direct_ticker",
+            "direction": "negative",
+            "freshnessBucket": "under_24h",
+            "url": "https://www.fool.com/investing/2026/09/02/chevron-just-committed-7-billion-to-venezuela-heres-what-it-means-for-cvx-stock/?.tsrc=rss"
           },
           {
-            "title": "Oil giant Chevron is expected to announce it will expand operations in Venezuela, US official says",
-            "summary": "Oil giant Chevron is planning to expand its operations in Venezuela, a U.S. official said Tuesday, just days after President Donald Trump announced an ambitious deal to develop the nation's oil reserves and give the Pentagon a stake in the profits. The official, who briefed reporters on the expected announcement, said the company’s officials and Energy Secretary Chris Wright are expected to visit Venezuela on Wednesday where the new investment will be formally unveiled. The official spoke on condition of anonymity under ground rules set by the White House for the call.",
+            "title": "Chevron Outlines $7 Billion Investment Plan to Double Venezuela Oil Production in 5 Years",
+            "summary": "Chevron (CVX) outlined a plan to invest more than $7 billion in Venezuela and double its oil product",
             "koreanSummary": {
-              "title": "Oil giant Chevron is expected to announce it will expand operations in Venezuela, US official says",
-              "content": "Chevron 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 Oil giant Chevron is planning to expand its operations in Venezuela, a U.S.입니다.",
-              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "title": "Chevron Outlines $7 Billion Investment Plan to Double Venezuela Oil Production in 5 Years",
+              "content": "Chevron 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Chevron (CVX) outlined a plan to invest more than $7 billion in Venezuela and double its oil product입니다.",
+              "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-01T16:56:34.000Z",
-            "eventType": "macro",
-            "directness": "sector_theme",
-            "direction": "positive",
+            "publishedAt": "2026-09-02T17:04:54.000Z",
+            "eventType": "product",
+            "directness": "direct_ticker",
+            "direction": "neutral",
             "freshnessBucket": "under_24h",
-            "url": "https://finance.yahoo.com/energy/articles/oil-giant-chevron-expected-announce-165634833.html?.tsrc=rss"
+            "url": "https://finance.yahoo.com/energy/articles/chevron-outlines-7-billion-investment-170454444.html?.tsrc=rss"
+          },
+          {
+            "title": "Chevron, Eni Lead Wave of Deals to Lift Venezuela Oil Output",
+            "summary": "Executives from Chevron Corp., GE Vernova Inc. and Eni SpA joined US Energy Secretary Chris Wright and acting Venezuelan President Delcy Rodríguez to unveil a wave of energy deals aimed at boosting crude production in the South American nation.",
+            "koreanSummary": {
+              "title": "Chevron, Eni Lead Wave of Deals to Lift Venezuela Oil Output",
+              "content": "Chevron 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Executives from Chevron Corp., GE Vernova Inc.입니다.",
+              "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+            },
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-09-02T18:47:23.000Z",
+            "eventType": "product",
+            "directness": "sector_theme",
+            "direction": "mixed",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/energy/articles/chevron-eni-lead-wave-deals-184723189.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "섹터/테마 뉴스 중심 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook\"입니다.",
-          "directLine": "Chevron에 대해 강한 직접 촉매는 확인되지 않았습니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.\"입니다.",
+          "directLine": "Chevron에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.\"이며, M&A 재료로 봅니다.",
           "bullets": [
             {
-              "title": "Palo Alto Networks&#x2019; stock falls despite strong AI cybersecurity demand",
-              "content": "Chevron 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Enterprise cyber threats and AI adoption are giving Palo Alto Networks &#x2018;durable tailwinds,&#x2019; according to CEO Nikesh Arora, but the stock retreated after an earning...입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              "title": "Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
+              "content": "Chevron 관련 M&A 뉴스입니다. 기사 스니펫상 핵심 내용은 Chevron just doubled down on Venezuela right after Washington cut an oil deal there.입니다.",
+              "implication": "M&A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             },
             {
-              "title": "Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.",
-              "content": "Chevron 관련 기사는 Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 이슈를 다루며, 주가 변동률 +50.00%를 핵심 내용으로 봅니다.",
-              "implication": "Chevron의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "Chevron Outlines $7 Billion Investment Plan to Double Venezuela Oil Production in 5 Years",
+              "content": "Chevron 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Chevron (CVX) outlined a plan to invest more than $7 billion in Venezuela and double its oil product입니다.",
+              "implication": "단기 중립 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Oil giant Chevron is expected to announce it will expand operations in Venezuela, US official says",
-              "content": "Chevron 관련 매크로 뉴스입니다. 기사 스니펫상 핵심 내용은 Oil giant Chevron is planning to expand its operations in Venezuela, a U.S.입니다.",
-              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "title": "Chevron, Eni Lead Wave of Deals to Lift Venezuela Oil Output",
+              "content": "Chevron 관련 제품/서비스 뉴스입니다. 기사 스니펫상 핵심 내용은 Executives from Chevron Corp., GE Vernova Inc.입니다.",
+              "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             }
           ],
@@ -4510,7 +4534,7 @@
           "SEC EDGAR RSS: This operation was aborted",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "섹터/테마 뉴스 중심, 흐름은 긍정 우위. 핵심 확인 뉴스: Dell&#x2019;s AI servers drive a stellar earnings performance, and a raised outlook"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock."
       },
       "tieBreakerReason": "최종 원점수 85, 리스크 패널티 0, 5일 수익률 +5.58%, 상대 거래량 1.08배 순으로 정렬",
       "entryQualityScore": 41,
@@ -4574,9 +4598,9 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / product / under_6h / positive - John Ternus Takes Over Apple with Just Eight Days Until His First Big Test 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_6h / positive - John Ternus Takes Over Apple with Just Eight Days Until His First Big Test",
-      "tieBreakerReason": "최종 원점수 77, 리스크 패널티 0, 5일 수익률 +4.91%, 상대 거래량 1.29배 순으로 정렬",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / positive - Apple May Need a Foldable iPhone to Avoid a Revenue Slowdown Next Year 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / analyst_upgrade / under_6h / positive - Apple May Need a Foldable iPhone to Avoid a Revenue Slowdown Next Year",
+      "tieBreakerReason": "최종 원점수 77, 리스크 패널티 0, 5일 수익률 +4.91%, 상대 거래량 1.31배 순으로 정렬",
       "entryQualityScore": 43,
       "entryQualityLabel": "관찰",
       "trendStrengthIndex": 44,
@@ -4584,7 +4608,7 @@
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 6,
       "exhaustionRiskLabel": "낮음",
-      "relativeVolume": 1.29,
+      "relativeVolume": 1.31,
       "marketDataStatus": "ok",
       "entryCondition": "20일선 위 눌림 후 재상승 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -4633,17 +4657,17 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / product / under_6h / positive - Why Is CrowdStrike (CRWD) Building An AI Cyber Lab And New Defense Tools? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_6h / positive - Why Is CrowdStrike (CRWD) Building An AI Cyber Lab And New Defense Tools?",
-      "tieBreakerReason": "최종 원점수 67, 리스크 패널티 0, 5일 수익률 +16.02%, 상대 거래량 1.39배 순으로 정렬",
-      "entryQualityScore": 41,
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / contract / under_24h / positive - CrowdStrike Announces 2026 Customer and Partner Award Winners: The Leaders Securing the Front Lines of AI 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / contract / under_24h / positive - CrowdStrike Announces 2026 Customer and Partner Award Winners: The Leaders Securing the Front Lines of AI",
+      "tieBreakerReason": "최종 원점수 67, 리스크 패널티 0, 5일 수익률 +16.02%, 상대 거래량 1.41배 순으로 정렬",
+      "entryQualityScore": 42,
       "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 49,
-      "trendStateLabel": "잠복",
+      "trendStrengthIndex": 52,
+      "trendStateLabel": "부상",
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 6,
       "exhaustionRiskLabel": "낮음",
-      "relativeVolume": 1.39,
+      "relativeVolume": 1.41,
       "marketDataStatus": "ok",
       "entryCondition": "20일선 위 눌림 후 재상승 확인",
       "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
@@ -4693,7 +4717,7 @@
             "riskType": "VOLUME_DIVERGENCE",
             "label": "volume divergence",
             "penalty": -4,
-            "evidence": "5d price strength is not confirmed by relative volume 0.68x.",
+            "evidence": "5d price strength is not confirmed by relative volume 0.69x.",
             "action": "Require relative volume recovery above 1.0x."
           }
         ],
@@ -4702,8 +4726,8 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h / positive - Stan Kroenke agrees to buy MLB&apos;s Angels, valuing team and regional network at $4 billion",
-      "tieBreakerReason": "최종 원점수 61, 리스크 패널티 -4, 5일 수익률 +12.34%, 상대 거래량 0.68배 순으로 정렬",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h / mixed - NBA suspends Clippers owner Ballmer for one year in Kawhi Leonard salary cap probe",
+      "tieBreakerReason": "최종 원점수 61, 리스크 패널티 -4, 5일 수익률 +12.34%, 상대 거래량 0.69배 순으로 정렬",
       "entryQualityScore": 36,
       "entryQualityLabel": "낮음",
       "trendStrengthIndex": 36,
@@ -4711,7 +4735,7 @@
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 0,
       "exhaustionRiskLabel": "낮음",
-      "relativeVolume": 0.68,
+      "relativeVolume": 0.69,
       "marketDataStatus": "ok",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",
@@ -4720,14 +4744,14 @@
         "status": "관찰",
         "reasons": [
           "Entry Quality 36 < 40",
-          "RVOL 0.68x < 1.00x"
+          "RVOL 0.69x < 1.00x"
         ],
         "rescueType": null
       },
       "marketContext": {
         "marketRegime": "위험회피",
         "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험회피 / 후보는 당일 음봉 또는 약세 / Entry Quality 36 < 40 / RVOL 0.68x < 1.00x"
+        "reason": "전체 시장은 위험회피 / 후보는 당일 음봉 또는 약세 / Entry Quality 36 < 40 / RVOL 0.69x < 1.00x"
       },
       "linkedNarrative": "AI 소프트웨어/사이버보안 확산",
       "narrativeStatus": "약화",
@@ -4776,7 +4800,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - U.S. completes fresh strikes on Iran as Mideast tensions flare again",
+      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Snowflake&#x2019;s stock soars as the company blows away estimates with its AI-fueled forecast",
       "tieBreakerReason": "최종 원점수 -21, 리스크 패널티 -6, 5일 수익률 -2.10%, 상대 거래량 0.59배 순으로 정렬",
       "entryQualityScore": 4,
       "entryQualityLabel": "낮음",
@@ -4842,8 +4866,8 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - U.S. completes fresh strikes on Iran as Mideast tensions flare again",
-      "tieBreakerReason": "최종 원점수 -28, 리스크 패널티 -6, 5일 수익률 -1.91%, 상대 거래량 0.90배 순으로 정렬",
+      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Snowflake&#x2019;s stock soars as the company blows away estimates with its AI-fueled forecast",
+      "tieBreakerReason": "최종 원점수 -28, 리스크 패널티 -6, 5일 수익률 -1.91%, 상대 거래량 0.92배 순으로 정렬",
       "entryQualityScore": 4,
       "entryQualityLabel": "낮음",
       "trendStrengthIndex": 6,
@@ -4851,7 +4875,7 @@
       "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
       "exhaustionRisk": 3,
       "exhaustionRiskLabel": "낮음",
-      "relativeVolume": 0.9,
+      "relativeVolume": 0.92,
       "marketDataStatus": "ok",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",
@@ -4860,14 +4884,14 @@
         "status": "관찰",
         "reasons": [
           "Entry Quality 4 < 40",
-          "RVOL 0.90x < 1.00x"
+          "RVOL 0.92x < 1.00x"
         ],
         "rescueType": null
       },
       "marketContext": {
         "marketRegime": "위험회피",
         "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험회피 / 후보는 당일 음봉 또는 약세 / Entry Quality 4 < 40 / RVOL 0.90x < 1.00x"
+        "reason": "전체 시장은 위험회피 / 후보는 당일 음봉 또는 약세 / Entry Quality 4 < 40 / RVOL 0.92x < 1.00x"
       },
       "linkedNarrative": "AI 인프라 재가속",
       "narrativeStatus": "소멸",
@@ -4915,7 +4939,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - U.S. completes fresh strikes on Iran as Mideast tensions flare again",
+      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Snowflake&#x2019;s stock soars as the company blows away estimates with its AI-fueled forecast",
       "tieBreakerReason": "최종 원점수 -20, 리스크 패널티 -11, 5일 수익률 -0.03%, 상대 거래량 0.68배 순으로 정렬",
       "entryQualityScore": 4,
       "entryQualityLabel": "낮음",
@@ -4991,9 +5015,9 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - U.S. completes fresh strikes on Iran as Mideast tensions flare again",
-      "tieBreakerReason": "최종 원점수 -41, 리스크 패널티 -11, 5일 수익률 -2.55%, 상대 거래량 0.94배 순으로 정렬",
-      "relativeVolume": 0.94,
+      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Snowflake&#x2019;s stock soars as the company blows away estimates with its AI-fueled forecast",
+      "tieBreakerReason": "최종 원점수 -41, 리스크 패널티 -11, 5일 수익률 -2.55%, 상대 거래량 0.95배 순으로 정렬",
+      "relativeVolume": 0.95,
       "marketDataStatus": "ok",
       "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
       "invalidationCondition": "거래량 회복 실패",
@@ -5002,7 +5026,7 @@
         "status": "관찰",
         "reasons": [
           "Entry Quality 0 < 40",
-          "RVOL 0.94x < 1.00x",
+          "RVOL 0.95x < 1.00x",
           "거래대금 유동성 LOW/UNKNOWN"
         ],
         "rescueType": null
@@ -5010,7 +5034,7 @@
       "marketContext": {
         "marketRegime": "위험회피",
         "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험회피 / 후보는 당일 음봉 또는 약세 / Entry Quality 0 < 40 / RVOL 0.94x < 1.00x"
+        "reason": "전체 시장은 위험회피 / 후보는 당일 음봉 또는 약세 / Entry Quality 0 < 40 / RVOL 0.95x < 1.00x"
       },
       "linkedNarrative": "미분류",
       "narrativeStatus": "관찰",
@@ -5060,12 +5084,12 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / stale / positive - 3 Ways to Invest in Cybersecurity Through ETFs",
+      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - Snowflake&#x2019;s stock soars as the company blows away estimates with its AI-fueled forecast",
       "tieBreakerReason": "최종 원점수 -18, 리스크 패널티 -11, 5일 수익률 +3.56%, 상대 거래량 0.72배 순으로 정렬",
-      "entryQualityScore": 7,
+      "entryQualityScore": 8,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 49,
-      "trendStateLabel": "잠복",
+      "trendStrengthIndex": 52,
+      "trendStateLabel": "부상",
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 6,
       "exhaustionRiskLabel": "낮음",
@@ -5077,7 +5101,7 @@
         "label": "거래량 확인 전 관찰",
         "status": "관찰",
         "reasons": [
-          "Entry Quality 7 < 40",
+          "Entry Quality 8 < 40",
           "RVOL 0.72x < 1.00x",
           "거래대금 유동성 LOW/UNKNOWN"
         ],
@@ -5086,7 +5110,7 @@
       "marketContext": {
         "marketRegime": "위험회피",
         "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험회피 / 후보는 당일 음봉 또는 약세 / Entry Quality 7 < 40 / RVOL 0.72x < 1.00x"
+        "reason": "전체 시장은 위험회피 / 후보는 당일 음봉 또는 약세 / Entry Quality 8 < 40 / RVOL 0.72x < 1.00x"
       },
       "linkedNarrative": "사이버보안 지출 재가속",
       "narrativeStatus": "약화",
@@ -5123,8 +5147,8 @@
       "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
     },
     "reasonConfidence": "HIGH",
-    "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / product / under_6h - Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-    "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_6h - Chevron Will Grow Venezuelan Oil Production. It’s Different Than Trump’s Big Bet.",
+    "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_24h / negative - Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock. 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+    "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / negative - Chevron Just Committed $7 Billion to Venezuela. Here's What It Means for CVX Stock.",
     "tieBreakerReason": "최종 원점수 85, 리스크 패널티 0, 5일 수익률 +5.58%, 상대 거래량 1.08배 순으로 정렬",
     "entryQualityScore": 41,
     "entryQualityLabel": "관찰",
@@ -5167,13 +5191,13 @@
     "priceVolumeStaleFallbackCount": 1,
     "priceVolumeExpiredFallbackCount": 0,
     "priceVolumeMissingCount": 0,
-    "priceAsOfDate": "2026-09-01",
-    "priceAsOfLabel": "2026-09-01 US regular close",
-    "reportGeneratedAtKST": "2026-09-02 09:51",
+    "priceAsOfDate": "2026-09-02",
+    "priceAsOfLabel": "2026-09-02 US regular close",
+    "reportGeneratedAtKST": "2026-09-03 09:59",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-09-02T00:51:36.334Z",
-    "newsLastUpdatedAt": "2026-09-02T00:51:36.334Z",
-    "latestNewsPublishedAt": "2026-09-02T00:44:05.000Z",
+    "newsFetchedAt": "2026-09-03T00:59:45.003Z",
+    "newsLastUpdatedAt": "2026-09-03T00:59:45.003Z",
+    "latestNewsPublishedAt": "2026-09-03T00:27:28.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
     "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
@@ -5192,7 +5216,7 @@
       "프리/애프터마켓 확인 불가"
     ],
     "providers": "yfinance, Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API, config fallback sample, price-volume dollar-volume fallback",
-    "recommendationSession": "2026-09-01 US regular session",
+    "recommendationSession": "2026-09-02 US regular session",
     "grade": "LOW",
     "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 프리마켓/정규장 거래량을 별도 확인해야 한다."
   },
@@ -5201,8 +5225,8 @@
     "screeningUnavailable": false,
     "entryReadyCount": 0,
     "conditionalCount": 1,
-    "watchCount": 101,
-    "banCount": 55,
+    "watchCount": 98,
+    "banCount": 58,
     "actionCandidateCount": 1,
     "mainLimiters": [
       "Entry Quality < 40",
@@ -5217,7 +5241,7 @@
     "items": [
       {
         "label": "RVOL < 1.00x",
-        "count": 98
+        "count": 95
       },
       {
         "label": "거래대금 유동성 낮음",
