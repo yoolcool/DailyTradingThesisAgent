@@ -133,9 +133,9 @@
     ],
     "stocks": [
       "ZS",
-      "PANW",
       "CRWD",
-      "FTNT"
+      "FTNT",
+      "PANW"
     ],
     "nextBuyer": "사이버보안 지출 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -145,9 +145,9 @@
     ],
     "preferredStocks": [
       "ZS",
-      "PANW",
       "CRWD",
-      "FTNT"
+      "FTNT",
+      "PANW"
     ],
     "breakCondition": "HACK 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -161,7 +161,6 @@
       "MAGS"
     ],
     "stocks": [
-      "SHOP",
       "ADBE",
       "MSTR",
       "MSFT"
@@ -173,7 +172,6 @@
       "QQQ"
     ],
     "preferredStocks": [
-      "SHOP",
       "ADBE",
       "MSTR",
       "MSFT"
@@ -430,9 +428,11 @@
       "QQQ"
     ],
     "stocks": [
+      "GILD",
+      "ALNY",
       "REGN",
-      "AMGN",
       "VRTX",
+      "AMGN",
       "INSM"
     ],
     "nextBuyer": "바이오/헬스케어 촉매을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
@@ -440,10 +440,10 @@
       "QQQ"
     ],
     "preferredStocks": [
+      "GILD",
+      "ALNY",
       "REGN",
-      "AMGN",
-      "VRTX",
-      "INSM"
+      "VRTX"
     ],
     "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -497,27 +497,27 @@
   {
     "name": "Integrated Oil & Gas 자금 유입",
     "etfs": [
-      "QQQ",
-      "SPY",
-      "IWM",
       "XLE",
-      "OIH"
-    ],
-    "stocks": [
-      "CVX",
-      "XOM"
-    ],
-    "nextBuyer": "Integrated Oil & Gas 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-    "preferredEtfs": [
+      "OIH",
       "QQQ",
       "SPY",
       "IWM"
     ],
-    "preferredStocks": [
-      "CVX",
-      "XOM"
+    "stocks": [
+      "XOM",
+      "CVX"
     ],
-    "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+    "nextBuyer": "Integrated Oil & Gas 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+    "preferredEtfs": [
+      "XLE",
+      "OIH",
+      "QQQ"
+    ],
+    "preferredStocks": [
+      "XOM",
+      "CVX"
+    ],
+    "breakCondition": "XLE 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
   },
   {
