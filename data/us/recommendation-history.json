@@ -1,8 +1,31 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-08T00:56:49.559Z",
+  "updatedAt": "2026-09-09T01:05:47.439Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
+    {
+      "reportDate": "2026-09-09",
+      "reportGeneratedAt": "2026-09-09T01:05:47.394Z",
+      "reportGeneratedAtET": "2026-09-08 21:05:47 ET",
+      "ticker": "MU",
+      "assetType": "STOCK",
+      "rank": 1,
+      "recommendationPrice": 1016.59,
+      "recommendationClosePrice": 1016.59,
+      "narrative": "AI 인프라 재가속",
+      "moneyFlowScore": 95,
+      "finalRawScore": 95,
+      "confidence": "HIGH",
+      "actionLabel": "자금흐름 예외 조건부",
+      "trackingSessionDate": "2026-09-09",
+      "trackingStatus": "pending",
+      "intradayHighAfterRecommendation": null,
+      "trackingClose": null,
+      "highReturnPct": null,
+      "closeReturnPct": null,
+      "resultLabel": "추적 대기",
+      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음"
+    },
     {
       "reportDate": "2026-09-08",
       "reportGeneratedAt": "2026-09-08T00:56:49.514Z",
@@ -2568,13 +2591,13 @@
       "confidence": "HIGH",
       "actionLabel": "자금흐름 예외 조건부",
       "trackingSessionDate": "2026-07-01",
-      "trackingStatus": "error",
+      "trackingStatus": "complete",
       "intradayHighAfterRecommendation": 415.49,
       "trackingClose": 391.26,
       "highReturnPct": -4.12,
       "closeReturnPct": -9.71,
-      "resultLabel": "추적 대기",
-      "resultComment": "가격 데이터 수집 실패"
+      "resultLabel": "실패",
+      "resultComment": "추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준)"
     },
     {
       "reportDate": "2026-07-01",
@@ -2821,13 +2844,13 @@
       "confidence": "HIGH",
       "actionLabel": "자금흐름 예외 조건부",
       "trackingSessionDate": "2026-06-26",
-      "trackingStatus": "error",
+      "trackingStatus": "complete",
       "intradayHighAfterRecommendation": 389.88,
       "trackingClose": 379.09,
       "highReturnPct": -2.97,
       "closeReturnPct": -5.66,
-      "resultLabel": "추적 대기",
-      "resultComment": "가격 데이터 수집 실패"
+      "resultLabel": "실패",
+      "resultComment": "추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준)"
     },
     {
       "reportDate": "2026-06-26",
@@ -3264,13 +3287,13 @@
       "confidence": "HIGH",
       "actionLabel": "조건부 진입",
       "trackingSessionDate": "2026-06-18",
-      "trackingStatus": "error",
+      "trackingStatus": "complete",
       "intradayHighAfterRecommendation": 401,
       "trackingClose": 389.04,
       "highReturnPct": 7.17,
       "closeReturnPct": 3.97,
-      "resultLabel": "추적 대기",
-      "resultComment": "가격 데이터 수집 실패"
+      "resultLabel": "성공",
+      "resultComment": "장중 기회와 종가 유지가 모두 확인됨 (일봉 기준)"
     },
     {
       "reportDate": "2026-06-18",

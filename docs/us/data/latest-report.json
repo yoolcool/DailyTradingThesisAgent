@@ -13,13 +13,13 @@
     ],
     "sessionLabel": "US regular session"
   },
-  "reportDate": "2026-09-08",
-  "generatedAt": "2026년 9월 8일 화요일 AM 9:56",
+  "reportDate": "2026-09-09",
+  "generatedAt": "2026년 9월 9일 수요일 AM 10:05",
   "marketRegimeAssessment": {
     "label": "기간 조정",
-    "score": 81,
+    "score": 80,
     "actionBias": "추격 보류, 돌파 확인",
-    "conclusion": "장기 추세는 유지되지만 단기 추세가 둔화되어 기간 조정으로 본다. 기술 100점, 매크로 47점.",
+    "conclusion": "장기 추세는 유지되지만 단기 추세가 둔화되어 기간 조정으로 본다. 기술 99점, 매크로 47점.",
     "reliability": {
       "grade": "HIGH",
       "score": 100,
@@ -41,12 +41,12 @@
       "status": "UNCHANGED",
       "label": "유지",
       "previousLabel": "기간 조정",
-      "previousScore": 80,
-      "scoreDelta": 1,
-      "summary": "기간 조정 유지, 점수 변화는 제한적이다(+1점)."
+      "previousScore": 81,
+      "scoreDelta": -1,
+      "summary": "기간 조정 유지, 점수 변화는 제한적이다(-1점)."
     },
     "technical": {
-      "score": 100,
+      "score": 99,
       "label": "상승 추세 우위",
       "benchmarks": [
         {
@@ -58,19 +58,19 @@
           "weight": 0.5,
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
-          "score": 100,
-          "lastClose": 7718.6001,
-          "dataDate": "2026-09-04",
-          "dailyChangePct": -0.38,
-          "return5dPct": 0.09,
-          "return20dPct": -0.5,
-          "return60dPct": 6,
-          "drawdownFrom52wHighPct": -1.26,
-          "ma50": 7591.71,
+          "score": 97,
+          "lastClose": 7673.52,
+          "dataDate": "2026-09-08",
+          "dailyChangePct": -0.58,
+          "return5dPct": -0.16,
+          "return20dPct": -1.03,
+          "return60dPct": 4,
+          "drawdownFrom52wHighPct": -1.83,
+          "ma50": 7598.1,
           "ma200": null,
           "aboveMa50": true,
           "aboveMa200": true,
-          "reason": "50일선 위, 200일선 위, 20일 -0.50%, 60일 +6.00%, 52주 고점 대비 -1.26% -> 기술 점수 100"
+          "reason": "50일선 위, 200일선 위, 20일 -1.03%, 60일 +4.00%, 52주 고점 대비 -1.83% -> 기술 점수 97"
         },
         {
           "ticker": "^NDX",
@@ -82,18 +82,18 @@
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
           "score": 100,
-          "lastClose": 29544.1504,
-          "dataDate": "2026-09-04",
-          "dailyChangePct": 0.21,
-          "return5dPct": 0.38,
-          "return20dPct": -0.6,
-          "return60dPct": 4,
-          "drawdownFrom52wHighPct": -3.96,
-          "ma50": 29229.1,
+          "lastClose": 29507.7012,
+          "dataDate": "2026-09-08",
+          "dailyChangePct": -0.12,
+          "return5dPct": 0.17,
+          "return20dPct": -0.39,
+          "return60dPct": 0,
+          "drawdownFrom52wHighPct": -4.08,
+          "ma50": 29236.89,
           "ma200": null,
           "aboveMa50": true,
           "aboveMa200": true,
-          "reason": "50일선 위, 200일선 위, 20일 -0.60%, 60일 +4.00%, 52주 고점 대비 -3.96% -> 기술 점수 100"
+          "reason": "50일선 위, 200일선 위, 20일 -0.39%, 60일 0.00%, 52주 고점 대비 -4.08% -> 기술 점수 100"
         }
       ]
     },
@@ -110,8 +110,8 @@
           "stance": "금리 중립",
           "confidence": "HIGH",
           "reasons": [
-            "US 10Y yield 20일 +2.66%, 5일 +1.36%",
-            "US 3M yield 20일 +1.27%, 단기금리 방향 확인",
+            "US 10Y yield 20일 +2.28%, 5일 +1.01%",
+            "US 3M yield 20일 +1.53%, 단기금리 방향 확인",
             "US long-duration bonds 20일 -0.66%, 장기채 가격 기준 할인율 부담 확인"
           ],
           "watchItems": [
@@ -151,14 +151,14 @@
         "creditLiquidity": {
           "key": "creditLiquidity",
           "title": "신용/유동성",
-          "score": 50,
+          "score": 49,
           "label": "중립",
           "stance": "신용/유동성 중립",
           "confidence": "HIGH",
           "reasons": [
             "High yield credit 20일 -0.57%, 하이일드 위험선호 확인",
             "HYG-LQD 20일 상대강도 +0.43%, 신용위험 선호/회피 확인",
-            "VIX 20일 -1.03%, 변동성 부담 확인"
+            "VIX 20일 +2.88%, 변동성 부담 확인"
           ],
           "watchItems": [
             "추가 확인 이벤트 없음"
@@ -194,11 +194,11 @@
           "riskOnWhen": "down",
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
-          "score": 45,
-          "dataDate": "2026-09-04",
-          "return5dPct": 1.36,
-          "return20dPct": 2.66,
-          "reason": "하락 시 주식 우호; 5일 +1.36%, 20일 +2.66% -> 매크로 점수 45"
+          "score": 46,
+          "dataDate": "2026-09-08",
+          "return5dPct": 1.01,
+          "return20dPct": 2.28,
+          "reason": "하락 시 주식 우호; 5일 +1.01%, 20일 +2.28% -> 매크로 점수 46"
         },
         {
           "ticker": "^IRX",
@@ -208,10 +208,10 @@
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
           "score": 47,
-          "dataDate": "2026-09-04",
-          "return5dPct": 0.72,
-          "return20dPct": 1.27,
-          "reason": "하락 시 주식 우호; 5일 +0.72%, 20일 +1.27% -> 매크로 점수 47"
+          "dataDate": "2026-09-08",
+          "return5dPct": 1.15,
+          "return20dPct": 1.53,
+          "reason": "하락 시 주식 우호; 5일 +1.15%, 20일 +1.53% -> 매크로 점수 47"
         },
         {
           "ticker": "TLT",
@@ -311,11 +311,11 @@
           "riskOnWhen": "down",
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
-          "score": 50,
-          "dataDate": "2026-09-07",
-          "return5dPct": 2.55,
-          "return20dPct": -1.03,
-          "reason": "하락 시 주식 우호; 5일 +2.55%, 20일 -1.03% -> 매크로 점수 50"
+          "score": 48,
+          "dataDate": "2026-09-08",
+          "return5dPct": -3.79,
+          "return20dPct": 2.88,
+          "reason": "하락 시 주식 우호; 5일 -3.79%, 20일 +2.88% -> 매크로 점수 48"
         }
       ]
     },
@@ -334,8 +334,8 @@
     "universeName": "NASDAQ_100",
     "asOfDate": "2026-06-02",
     "totalCount": 101,
-    "successCount": 119,
-    "failedCount": 1,
+    "successCount": 120,
+    "failedCount": 0,
     "scoreBands": {
       "strong": 0,
       "interest": 1,
@@ -781,7 +781,7 @@
         "moneyFlowScoreFinal": 35,
         "finalRawScore": 35,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": -0.17,
         "fiveDayReturn": 1.79,
         "twentyDayReturn": -0.98,
@@ -1056,6 +1056,30 @@
         "relativeVolume": 0.66,
         "relatedEtfs": [
           "QQQ"
+        ],
+        "scoreBandLabel": "우선순위 낮음/매매 금지",
+        "scanStatus": "OK",
+        "failureReason": ""
+      },
+      {
+        "ticker": "LRCX",
+        "name": "Lam Research Corporation",
+        "assetType": "STOCK",
+        "moneyFlowScore": 16,
+        "moneyFlowScoreInitial": 16,
+        "moneyFlowScoreFinal": 14,
+        "finalRawScore": 14,
+        "todayActionLabel": "제외",
+        "reasonConfidence": "LOW",
+        "oneDayReturn": 5.12,
+        "fiveDayReturn": 1.9,
+        "twentyDayReturn": -1.19,
+        "relativeVolume": 1.12,
+        "relatedEtfs": [
+          "SMH",
+          "SOXX",
+          "SOXQ",
+          "AIQ"
         ],
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
@@ -3034,30 +3058,6 @@
         "scoreBandLabel": "우선순위 낮음/매매 금지",
         "scanStatus": "OK",
         "failureReason": ""
-      },
-      {
-        "ticker": "LRCX",
-        "name": "Lam Research Corporation",
-        "assetType": "STOCK",
-        "moneyFlowScore": null,
-        "moneyFlowScoreInitial": null,
-        "moneyFlowScoreFinal": null,
-        "finalRawScore": null,
-        "todayActionLabel": "돌파 확인 후 관찰",
-        "reasonConfidence": "LOW",
-        "oneDayReturn": null,
-        "fiveDayReturn": null,
-        "twentyDayReturn": null,
-        "relativeVolume": null,
-        "relatedEtfs": [
-          "SMH",
-          "SOXX",
-          "SOXQ",
-          "AIQ"
-        ],
-        "scoreBandLabel": "계산 실패",
-        "scanStatus": "FAILED",
-        "failureReason": "['Close']; ['Close']; stooq fallback failed: HTTP Error 404: Not Found"
       }
     ]
   },
@@ -3137,6 +3137,48 @@
       "stockRelativeVolumeAvg": 1
     },
     {
+      "name": "반도체 설계/공급망 재가속",
+      "status": "약화",
+      "narrativeScore": 36,
+      "rawScore": 36,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "QQQ",
+        "SMH",
+        "SOXX",
+        "SOXQ"
+      ],
+      "supportStocks": [
+        "NVDA",
+        "TSM",
+        "INTC",
+        "AMD",
+        "MRVL"
+      ],
+      "representativeEtfs": [
+        "QQQ",
+        "SMH",
+        "SOXX"
+      ],
+      "representativeStocks": [
+        "NVDA",
+        "TSM",
+        "INTC",
+        "AMD"
+      ],
+      "whyMoneyIsFlowing": "반도체 설계/공급망 재가속 관련 Invesco QQQ Trust(QQQ), VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX)와 NVIDIA Corporation(NVDA), Taiwan Semiconductor(TSM), Intel Corporation(INTC), Advanced Micro Devices Inc.(AMD)의 5일(+2.81%)·20일(-1.43%) 흐름을 함께 본다. 평균 상대 거래량은 1.09배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: MRVL, NVDA, TSM",
+      "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
+      "summaryReason": "Invesco QQQ Trust(QQQ), VanEck Semiconductor ETF(SMH), NVIDIA Corporation(NVDA), Taiwan Semiconductor(TSM) 중심으로 5일 +2.81%, 20일 -1.43% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 4,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
       "name": "Internet Content 자금 유입",
       "status": "약화",
       "narrativeScore": 36,
@@ -3210,6 +3252,42 @@
       "stockRelativeVolumeAvg": 1
     },
     {
+      "name": "Integrated Oil & Gas 자금 유입",
+      "status": "약화",
+      "narrativeScore": 31,
+      "rawScore": 31,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "QQQ",
+        "SPY",
+        "IWM"
+      ],
+      "supportStocks": [
+        "CVX",
+        "XOM"
+      ],
+      "representativeEtfs": [
+        "QQQ",
+        "SPY",
+        "IWM"
+      ],
+      "representativeStocks": [
+        "CVX",
+        "XOM"
+      ],
+      "whyMoneyIsFlowing": "Integrated Oil & Gas 자금 유입 관련 Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM)와 Chevron(CVX), Exxon Mobil(XOM)의 5일(+1.13%)·20일(+2.64%) 흐름을 함께 본다. 평균 상대 거래량은 0.94배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "Integrated Oil & Gas 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: CVX, XOM",
+      "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
+      "summaryReason": "Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY), Chevron(CVX), Exxon Mobil(XOM) 중심으로 5일 +1.13%, 20일 +2.64% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
       "name": "위험선호 성장주 재진입",
       "status": "약화",
       "narrativeScore": 29,
@@ -3249,42 +3327,6 @@
       "stockRelativeVolumeAvg": 1
     },
     {
-      "name": "Integrated Oil & Gas 자금 유입",
-      "status": "약화",
-      "narrativeScore": 28,
-      "rawScore": 28,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "QQQ",
-        "XLE",
-        "OIH"
-      ],
-      "supportStocks": [
-        "CVX",
-        "XOM"
-      ],
-      "representativeEtfs": [
-        "QQQ",
-        "XLE",
-        "OIH"
-      ],
-      "representativeStocks": [
-        "CVX",
-        "XOM"
-      ],
-      "whyMoneyIsFlowing": "Integrated Oil & Gas 자금 유입 관련 Invesco QQQ Trust(QQQ), Energy Select Sector SPDR Fund(XLE), VanEck Oil Services ETF(OIH)와 Chevron(CVX), Exxon Mobil(XOM)의 5일(+1.44%)·20일(+4.96%) 흐름을 함께 본다. 평균 상대 거래량은 0.93배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "Integrated Oil & Gas 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: XLE, OIH, QQQ / 개별 종목 우선: XOM, CVX",
-      "breakCondition": "XLE 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "Invesco QQQ Trust(QQQ), Energy Select Sector SPDR Fund(XLE), Chevron(CVX), Exxon Mobil(XOM) 중심으로 5일 +1.44%, 20일 +4.96% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": -2,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 1
-    },
-    {
       "name": "소프트웨어 실적/AI 수익화",
       "status": "약화",
       "narrativeScore": 24,
@@ -3319,47 +3361,6 @@
       "summaryReason": "Invesco QQQ Trust(QQQ), Roundhill Magnificent Seven ETF(MAGS), Strategy Inc.(MSTR), Microsoft Corporation(MSFT) 중심으로 5일 -0.36%, 20일 +6.64% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": -1,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 1
-    },
-    {
-      "name": "반도체 설계/공급망 재가속",
-      "status": "소멸",
-      "narrativeScore": 22,
-      "rawScore": 22,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ"
-      ],
-      "supportStocks": [
-        "TSM",
-        "INTC",
-        "AMD",
-        "ARM",
-        "TXN"
-      ],
-      "representativeEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ"
-      ],
-      "representativeStocks": [
-        "TSM",
-        "INTC",
-        "AMD",
-        "ARM"
-      ],
-      "whyMoneyIsFlowing": "반도체 설계/공급망 재가속 관련 VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Invesco PHLX Semiconductor ETF(SOXQ)와 Taiwan Semiconductor(TSM), Intel Corporation(INTC), Advanced Micro Devices Inc.(AMD), Arm Holdings plc(ARM)의 5일(+2.57%)·20일(-3.69%) 흐름을 함께 본다. 평균 상대 거래량은 1.07배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
-      "likelyNextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: ARM, AMD, TXN",
-      "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Taiwan Semiconductor(TSM), Intel Corporation(INTC) 중심으로 5일 +2.57%, 20일 -3.69% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 3,
-      "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
       "stockRelativeVolumeAvg": 1
@@ -3545,6 +3546,44 @@
       "stockRelativeVolumeAvg": 1
     },
     {
+      "name": "반도체 장비 사이클 재평가",
+      "status": "소멸",
+      "narrativeScore": 14,
+      "rawScore": 14,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ"
+      ],
+      "supportStocks": [
+        "LRCX",
+        "ASML",
+        "AMAT"
+      ],
+      "representativeEtfs": [
+        "SMH",
+        "SOXX",
+        "SOXQ"
+      ],
+      "representativeStocks": [
+        "LRCX",
+        "ASML",
+        "AMAT"
+      ],
+      "whyMoneyIsFlowing": "반도체 장비 사이클 재평가 관련 VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Invesco PHLX Semiconductor ETF(SOXQ)와 Lam Research Corporation(LRCX), ASML Holding N.V.(ASML), Applied Materials Inc.(AMAT)의 5일(+1.25%)·20일(-4.11%) 흐름을 함께 본다. 평균 상대 거래량은 1.08배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "반도체 장비 사이클 재평가을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: AMAT, LRCX, ASML",
+      "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
+      "summaryReason": "VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Lam Research Corporation(LRCX), ASML Holding N.V.(ASML) 중심으로 5일 +1.25%, 20일 -4.11% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": 0,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
       "name": "Travel Services 자금 유입",
       "status": "약화",
       "narrativeScore": 14,
@@ -3570,44 +3609,6 @@
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
       "summaryReason": "Invesco QQQ Trust(QQQ), Booking Holdings Inc.(BKNG), Airbnb Inc.(ABNB) 중심으로 5일 -3.20%, 20일 -2.75% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": 0,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 1
-    },
-    {
-      "name": "반도체 장비 사이클 재평가",
-      "status": "소멸",
-      "narrativeScore": 12,
-      "rawScore": 12,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ"
-      ],
-      "supportStocks": [
-        "ASML",
-        "AMAT",
-        "LRCX"
-      ],
-      "representativeEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ"
-      ],
-      "representativeStocks": [
-        "ASML",
-        "AMAT",
-        "LRCX"
-      ],
-      "whyMoneyIsFlowing": "반도체 장비 사이클 재평가 관련 VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Invesco PHLX Semiconductor ETF(SOXQ)와 ASML Holding N.V.(ASML), Applied Materials Inc.(AMAT), Lam Research Corporation(LRCX)의 5일(+1.14%)·20일(-4.59%) 흐름을 함께 본다. 평균 상대 거래량은 1.08배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "반도체 장비 사이클 재평가을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: AMAT, LRCX, ASML",
-      "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), ASML Holding N.V.(ASML), Applied Materials Inc.(AMAT) 중심으로 5일 +1.14%, 20일 -4.59% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
@@ -3917,32 +3918,42 @@
       "stockRelativeVolumeAvg": 1
     },
     {
-      "name": "Internet Content 자금 유입",
+      "name": "반도체 설계/공급망 재가속",
       "status": "약화",
       "narrativeScore": 36,
       "rawScore": 36,
       "reasonConfidence": "LOW",
       "supportEtfs": [
-        "QQQ"
+        "QQQ",
+        "SMH",
+        "SOXX",
+        "SOXQ"
       ],
       "supportStocks": [
-        "META",
-        "DASH"
+        "NVDA",
+        "TSM",
+        "INTC",
+        "AMD",
+        "MRVL"
       ],
       "representativeEtfs": [
-        "QQQ"
+        "QQQ",
+        "SMH",
+        "SOXX"
       ],
       "representativeStocks": [
-        "META",
-        "DASH"
+        "NVDA",
+        "TSM",
+        "INTC",
+        "AMD"
       ],
-      "whyMoneyIsFlowing": "Internet Content 자금 유입 관련 Invesco QQQ Trust(QQQ)와 Meta Platforms Inc.(META), DoorDash Inc.(DASH)의 5일(-1.17%)·20일(+0.51%) 흐름을 함께 본다. 평균 상대 거래량은 1.02배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
-      "likelyNextBuyer": "Internet Content 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: META, DASH",
-      "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+      "whyMoneyIsFlowing": "반도체 설계/공급망 재가속 관련 Invesco QQQ Trust(QQQ), VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX)와 NVIDIA Corporation(NVDA), Taiwan Semiconductor(TSM), Intel Corporation(INTC), Advanced Micro Devices Inc.(AMD)의 5일(+2.81%)·20일(-1.43%) 흐름을 함께 본다. 평균 상대 거래량은 1.09배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "likelyNextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: MRVL, NVDA, TSM",
+      "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "Invesco QQQ Trust(QQQ), Meta Platforms Inc.(META), DoorDash Inc.(DASH) 중심으로 5일 -1.17%, 20일 +0.51% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 1,
+      "summaryReason": "Invesco QQQ Trust(QQQ), VanEck Semiconductor ETF(SMH), NVIDIA Corporation(NVDA), Taiwan Semiconductor(TSM) 중심으로 5일 +2.81%, 20일 -1.43% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 4,
       "etfBreadthScore": 0,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
@@ -3982,13 +3993,13 @@
         "summary": "1개 감점 리스크로 총 -4점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
       "candidateNewsSummary": {
         "ticker": "MU",
-        "checkedAt": "2026-09-08T00:56:49.414Z",
+        "checkedAt": "2026-09-09T01:05:47.296Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4002,10 +4013,8 @@
           },
           {
             "source": "CNBC Markets RSS",
-            "status": "FAILED",
-            "notes": [
-              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
-            ]
+            "status": "CONNECTED",
+            "notes": []
           },
           {
             "source": "SEC EDGAR RSS",
@@ -4027,105 +4036,104 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-09-07T21:51:38.000Z",
+        "lastPublishedAt": "2026-09-09T00:56:01.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
+        "headline": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
         "directCatalyst": {
-          "title": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
+          "title": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-09-07T14:40:45.000Z",
-          "eventType": "earnings",
+          "publishedAt": "2026-09-08T23:00:42.000Z",
+          "eventType": "general_market",
           "direction": "positive",
-          "freshnessBucket": "under_24h",
-          "url": "https://247wallst.com/investing/2026/09/07/micron-has-skyrocketed-256-in-2026-what-would-it-take-to-get-mu-stock-up-to-1250/?.tsrc=rss"
+          "freshnessBucket": "under_6h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/druckenmiller-exited-micron-bought-alphabet-230042923.html?.tsrc=rss"
         },
         "items": [
           {
-            "title": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
-            "summary": "Micron shares have already rewritten what investors thought possible for a memory stock, but the next leg higher hinges on a single question about contract pricing that the upcoming earnings report will either answer or obliterate.",
+            "title": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
+            "summary": "Micron Technology, Inc. (NASDAQ:MU) and Alphabet Inc. (NASDAQ:GOOGL) offer two ways to invest in AI demand. One sells essential memory; the other must turn computing capacity into services customers will pay for. Insider Monkey’s tracked worksheet sample counted 184 Micron holders in Q2 2026 versus 154 in Q1, while Alphabet’s Class A shares attracted 275 […]",
             "koreanSummary": {
-              "title": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
-              "content": "Micron Technology Inc. 관련 기사는 Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250? 이슈를 다루며, 주가 변동률 +256.00%를 핵심 내용으로 봅니다.",
-              "implication": "Micron Technology Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
-            },
-            "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-07T14:40:45.000Z",
-            "eventType": "earnings",
-            "directness": "direct_ticker",
-            "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://247wallst.com/investing/2026/09/07/micron-has-skyrocketed-256-in-2026-what-would-it-take-to-get-mu-stock-up-to-1250/?.tsrc=rss"
-          },
-          {
-            "title": "Do You Think Micron Technology’s (MU) Return Drivers May Falter Ahead",
-            "summary": "Generation Investment Management, an investment management firm, released its “Global Equity Strategy” second quarter 2026 investor letter. The letter can be downloaded here. The letter discusses the challenges of AI-driven market concentration and emphasizes the potential for long-term investors. It notes that the best companies are currently underperforming due to market returns being concentrated in […]",
-            "koreanSummary": {
-              "title": "Do You Think Micron Technology’s (MU) Return Drivers May Falter Ahead",
-              "content": "Micron Technology Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Generation Investment Management, an investment management firm, released its “Global Equity Strategy” second quarter 2026 investor letter.입니다.",
+              "title": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
+              "content": "Micron Technology Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Micron Technology, Inc.입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-07T13:34:59.000Z",
+            "publishedAt": "2026-09-08T23:00:42.000Z",
             "eventType": "general_market",
             "directness": "direct_ticker",
             "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/think-micron-technology-mu-return-133459987.html?.tsrc=rss"
+            "freshnessBucket": "under_6h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/druckenmiller-exited-micron-bought-alphabet-230042923.html?.tsrc=rss"
           },
           {
-            "title": "Micron, SanDisk get new aggressive price targets from top analyst",
-            "summary": "Here’s what could happen to MU and SNDK shares next",
+            "title": "Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know",
+            "summary": "The latest trading day saw Micron (MU) settling at $1, representing a -1.61% change from its previous close.",
             "koreanSummary": {
-              "title": "Micron, SanDisk get new aggressive price targets from top analyst",
-              "content": "Micron Technology Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 핵심입니다.",
-              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
-              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+              "title": "Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know",
+              "content": "Micron Technology Inc. 관련 기사는 Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know 이슈를 다루며, 주가 변동률 -1.61%를 핵심 내용으로 봅니다.",
+              "implication": "Micron Technology Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-07T20:33:00.000Z",
-            "eventType": "analyst_upgrade",
+            "publishedAt": "2026-09-08T21:45:07.000Z",
+            "eventType": "general_market",
             "directness": "direct_ticker",
-            "direction": "neutral",
+            "direction": "negative",
             "freshnessBucket": "under_6h",
-            "url": "https://www.thestreet.com/investing/stocks/mu-micron-sndk-sandisk-lynx-research-stock-price-targets-september-2026?.tsrc=rss"
+            "url": "https://finance.yahoo.com/markets/stocks/articles/micron-mu-falls-more-steeply-214507442.html?.tsrc=rss"
+          },
+          {
+            "title": "Qualcomm&#x2019;s stock climbs as Amazon chip deal offers investors much-needed good news",
+            "summary": "Qualcomm shares have missed out on the chip sector&#x2019;s rally this year &#x2014; but the company is now working on various chip projects with Amazon.",
+            "koreanSummary": {
+              "title": "Qualcomm&#x2019;s stock climbs as Amazon chip deal offers investors much-needed good news",
+              "content": "Micron Technology Inc. 관련 M&A 뉴스입니다. 기사 스니펫상 핵심 내용은 Qualcomm shares have missed out on the chip sector&#x2019;s rally this year &#x2014; but the company is now working on various chip projects with Amazon.입니다.",
+              "implication": "M&A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
+            },
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-09-08T21:32:00.000Z",
+            "eventType": "mna",
+            "directness": "sector_theme",
+            "direction": "mixed",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/qualcomms-stock-climbs-as-amazon-chip-deal-offers-investors-some-much-needed-good-news-5b6a95ca?mod=mw_rss_topstories"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?\"입니다.",
-          "directLine": "Micron Technology Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?\"이며, 실적 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him\"입니다.",
+          "directLine": "Micron Technology Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him\"이며, 시장 일반 재료로 봅니다.",
           "bullets": [
             {
-              "title": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
-              "content": "Micron Technology Inc. 관련 기사는 Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250? 이슈를 다루며, 주가 변동률 +256.00%를 핵심 내용으로 봅니다.",
-              "implication": "Micron Technology Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
-            },
-            {
-              "title": "Do You Think Micron Technology’s (MU) Return Drivers May Falter Ahead",
-              "content": "Micron Technology Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Generation Investment Management, an investment management firm, released its “Global Equity Strategy” second quarter 2026 investor letter.입니다.",
+              "title": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
+              "content": "Micron Technology Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Micron Technology, Inc.입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Micron, SanDisk get new aggressive price targets from top analyst",
-              "content": "Micron Technology Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 핵심입니다.",
-              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
-              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+              "title": "Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know",
+              "content": "Micron Technology Inc. 관련 기사는 Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know 이슈를 다루며, 주가 변동률 -1.61%를 핵심 내용으로 봅니다.",
+              "implication": "Micron Technology Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
+            {
+              "title": "Qualcomm&#x2019;s stock climbs as Amazon chip deal offers investors much-needed good news",
+              "content": "Micron Technology Inc. 관련 M&A 뉴스입니다. 기사 스니펫상 핵심 내용은 Qualcomm shares have missed out on the chip sector&#x2019;s rally this year &#x2014; but the company is now working on various chip projects with Amazon.입니다.",
+              "implication": "M&A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
         "notes": [
-          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him"
       },
       "tieBreakerReason": "최종 원점수 95, 리스크 패널티 -4, 5일 수익률 +8.98%, 상대 거래량 1.27배 순으로 정렬",
       "entryQualityScore": 40,
@@ -4197,13 +4205,13 @@
         "summary": "1개 감점 리스크로 총 -4점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
       "candidateNewsSummary": {
         "ticker": "MU",
-        "checkedAt": "2026-09-08T00:56:49.414Z",
+        "checkedAt": "2026-09-09T01:05:47.296Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4217,10 +4225,8 @@
           },
           {
             "source": "CNBC Markets RSS",
-            "status": "FAILED",
-            "notes": [
-              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
-            ]
+            "status": "CONNECTED",
+            "notes": []
           },
           {
             "source": "SEC EDGAR RSS",
@@ -4242,105 +4248,104 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-09-07T21:51:38.000Z",
+        "lastPublishedAt": "2026-09-09T00:56:01.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
+        "headline": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
         "directCatalyst": {
-          "title": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
+          "title": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-09-07T14:40:45.000Z",
-          "eventType": "earnings",
+          "publishedAt": "2026-09-08T23:00:42.000Z",
+          "eventType": "general_market",
           "direction": "positive",
-          "freshnessBucket": "under_24h",
-          "url": "https://247wallst.com/investing/2026/09/07/micron-has-skyrocketed-256-in-2026-what-would-it-take-to-get-mu-stock-up-to-1250/?.tsrc=rss"
+          "freshnessBucket": "under_6h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/druckenmiller-exited-micron-bought-alphabet-230042923.html?.tsrc=rss"
         },
         "items": [
           {
-            "title": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
-            "summary": "Micron shares have already rewritten what investors thought possible for a memory stock, but the next leg higher hinges on a single question about contract pricing that the upcoming earnings report will either answer or obliterate.",
+            "title": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
+            "summary": "Micron Technology, Inc. (NASDAQ:MU) and Alphabet Inc. (NASDAQ:GOOGL) offer two ways to invest in AI demand. One sells essential memory; the other must turn computing capacity into services customers will pay for. Insider Monkey’s tracked worksheet sample counted 184 Micron holders in Q2 2026 versus 154 in Q1, while Alphabet’s Class A shares attracted 275 […]",
             "koreanSummary": {
-              "title": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
-              "content": "Micron Technology Inc. 관련 기사는 Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250? 이슈를 다루며, 주가 변동률 +256.00%를 핵심 내용으로 봅니다.",
-              "implication": "Micron Technology Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
-            },
-            "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-07T14:40:45.000Z",
-            "eventType": "earnings",
-            "directness": "direct_ticker",
-            "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://247wallst.com/investing/2026/09/07/micron-has-skyrocketed-256-in-2026-what-would-it-take-to-get-mu-stock-up-to-1250/?.tsrc=rss"
-          },
-          {
-            "title": "Do You Think Micron Technology’s (MU) Return Drivers May Falter Ahead",
-            "summary": "Generation Investment Management, an investment management firm, released its “Global Equity Strategy” second quarter 2026 investor letter. The letter can be downloaded here. The letter discusses the challenges of AI-driven market concentration and emphasizes the potential for long-term investors. It notes that the best companies are currently underperforming due to market returns being concentrated in […]",
-            "koreanSummary": {
-              "title": "Do You Think Micron Technology’s (MU) Return Drivers May Falter Ahead",
-              "content": "Micron Technology Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Generation Investment Management, an investment management firm, released its “Global Equity Strategy” second quarter 2026 investor letter.입니다.",
+              "title": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
+              "content": "Micron Technology Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Micron Technology, Inc.입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-07T13:34:59.000Z",
+            "publishedAt": "2026-09-08T23:00:42.000Z",
             "eventType": "general_market",
             "directness": "direct_ticker",
             "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/think-micron-technology-mu-return-133459987.html?.tsrc=rss"
+            "freshnessBucket": "under_6h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/druckenmiller-exited-micron-bought-alphabet-230042923.html?.tsrc=rss"
           },
           {
-            "title": "Micron, SanDisk get new aggressive price targets from top analyst",
-            "summary": "Here’s what could happen to MU and SNDK shares next",
+            "title": "Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know",
+            "summary": "The latest trading day saw Micron (MU) settling at $1, representing a -1.61% change from its previous close.",
             "koreanSummary": {
-              "title": "Micron, SanDisk get new aggressive price targets from top analyst",
-              "content": "Micron Technology Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 핵심입니다.",
-              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
-              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+              "title": "Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know",
+              "content": "Micron Technology Inc. 관련 기사는 Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know 이슈를 다루며, 주가 변동률 -1.61%를 핵심 내용으로 봅니다.",
+              "implication": "Micron Technology Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-07T20:33:00.000Z",
-            "eventType": "analyst_upgrade",
+            "publishedAt": "2026-09-08T21:45:07.000Z",
+            "eventType": "general_market",
             "directness": "direct_ticker",
-            "direction": "neutral",
+            "direction": "negative",
             "freshnessBucket": "under_6h",
-            "url": "https://www.thestreet.com/investing/stocks/mu-micron-sndk-sandisk-lynx-research-stock-price-targets-september-2026?.tsrc=rss"
+            "url": "https://finance.yahoo.com/markets/stocks/articles/micron-mu-falls-more-steeply-214507442.html?.tsrc=rss"
+          },
+          {
+            "title": "Qualcomm&#x2019;s stock climbs as Amazon chip deal offers investors much-needed good news",
+            "summary": "Qualcomm shares have missed out on the chip sector&#x2019;s rally this year &#x2014; but the company is now working on various chip projects with Amazon.",
+            "koreanSummary": {
+              "title": "Qualcomm&#x2019;s stock climbs as Amazon chip deal offers investors much-needed good news",
+              "content": "Micron Technology Inc. 관련 M&A 뉴스입니다. 기사 스니펫상 핵심 내용은 Qualcomm shares have missed out on the chip sector&#x2019;s rally this year &#x2014; but the company is now working on various chip projects with Amazon.입니다.",
+              "implication": "M&A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
+            },
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-09-08T21:32:00.000Z",
+            "eventType": "mna",
+            "directness": "sector_theme",
+            "direction": "mixed",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/qualcomms-stock-climbs-as-amazon-chip-deal-offers-investors-some-much-needed-good-news-5b6a95ca?mod=mw_rss_topstories"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?\"입니다.",
-          "directLine": "Micron Technology Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?\"이며, 실적 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him\"입니다.",
+          "directLine": "Micron Technology Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him\"이며, 시장 일반 재료로 봅니다.",
           "bullets": [
             {
-              "title": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
-              "content": "Micron Technology Inc. 관련 기사는 Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250? 이슈를 다루며, 주가 변동률 +256.00%를 핵심 내용으로 봅니다.",
-              "implication": "Micron Technology Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
-            },
-            {
-              "title": "Do You Think Micron Technology’s (MU) Return Drivers May Falter Ahead",
-              "content": "Micron Technology Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Generation Investment Management, an investment management firm, released its “Global Equity Strategy” second quarter 2026 investor letter.입니다.",
+              "title": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
+              "content": "Micron Technology Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Micron Technology, Inc.입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Micron, SanDisk get new aggressive price targets from top analyst",
-              "content": "Micron Technology Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 핵심입니다.",
-              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
-              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+              "title": "Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know",
+              "content": "Micron Technology Inc. 관련 기사는 Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know 이슈를 다루며, 주가 변동률 -1.61%를 핵심 내용으로 봅니다.",
+              "implication": "Micron Technology Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
+            {
+              "title": "Qualcomm&#x2019;s stock climbs as Amazon chip deal offers investors much-needed good news",
+              "content": "Micron Technology Inc. 관련 M&A 뉴스입니다. 기사 스니펫상 핵심 내용은 Qualcomm shares have missed out on the chip sector&#x2019;s rally this year &#x2014; but the company is now working on various chip projects with Amazon.입니다.",
+              "implication": "M&A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
         "notes": [
-          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him"
       },
       "tieBreakerReason": "최종 원점수 95, 리스크 패널티 -4, 5일 수익률 +8.98%, 상대 거래량 1.27배 순으로 정렬",
       "entryQualityScore": 40,
@@ -4413,13 +4418,13 @@
         "summary": "1개 감점 리스크로 총 -4점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
       "candidateNewsSummary": {
         "ticker": "MU",
-        "checkedAt": "2026-09-08T00:56:49.414Z",
+        "checkedAt": "2026-09-09T01:05:47.296Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4433,10 +4438,8 @@
           },
           {
             "source": "CNBC Markets RSS",
-            "status": "FAILED",
-            "notes": [
-              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
-            ]
+            "status": "CONNECTED",
+            "notes": []
           },
           {
             "source": "SEC EDGAR RSS",
@@ -4458,105 +4461,104 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-09-07T21:51:38.000Z",
+        "lastPublishedAt": "2026-09-09T00:56:01.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
+        "headline": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
         "directCatalyst": {
-          "title": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
+          "title": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-09-07T14:40:45.000Z",
-          "eventType": "earnings",
+          "publishedAt": "2026-09-08T23:00:42.000Z",
+          "eventType": "general_market",
           "direction": "positive",
-          "freshnessBucket": "under_24h",
-          "url": "https://247wallst.com/investing/2026/09/07/micron-has-skyrocketed-256-in-2026-what-would-it-take-to-get-mu-stock-up-to-1250/?.tsrc=rss"
+          "freshnessBucket": "under_6h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/druckenmiller-exited-micron-bought-alphabet-230042923.html?.tsrc=rss"
         },
         "items": [
           {
-            "title": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
-            "summary": "Micron shares have already rewritten what investors thought possible for a memory stock, but the next leg higher hinges on a single question about contract pricing that the upcoming earnings report will either answer or obliterate.",
+            "title": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
+            "summary": "Micron Technology, Inc. (NASDAQ:MU) and Alphabet Inc. (NASDAQ:GOOGL) offer two ways to invest in AI demand. One sells essential memory; the other must turn computing capacity into services customers will pay for. Insider Monkey’s tracked worksheet sample counted 184 Micron holders in Q2 2026 versus 154 in Q1, while Alphabet’s Class A shares attracted 275 […]",
             "koreanSummary": {
-              "title": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
-              "content": "Micron Technology Inc. 관련 기사는 Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250? 이슈를 다루며, 주가 변동률 +256.00%를 핵심 내용으로 봅니다.",
-              "implication": "Micron Technology Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
-            },
-            "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-07T14:40:45.000Z",
-            "eventType": "earnings",
-            "directness": "direct_ticker",
-            "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://247wallst.com/investing/2026/09/07/micron-has-skyrocketed-256-in-2026-what-would-it-take-to-get-mu-stock-up-to-1250/?.tsrc=rss"
-          },
-          {
-            "title": "Do You Think Micron Technology’s (MU) Return Drivers May Falter Ahead",
-            "summary": "Generation Investment Management, an investment management firm, released its “Global Equity Strategy” second quarter 2026 investor letter. The letter can be downloaded here. The letter discusses the challenges of AI-driven market concentration and emphasizes the potential for long-term investors. It notes that the best companies are currently underperforming due to market returns being concentrated in […]",
-            "koreanSummary": {
-              "title": "Do You Think Micron Technology’s (MU) Return Drivers May Falter Ahead",
-              "content": "Micron Technology Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Generation Investment Management, an investment management firm, released its “Global Equity Strategy” second quarter 2026 investor letter.입니다.",
+              "title": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
+              "content": "Micron Technology Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Micron Technology, Inc.입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-07T13:34:59.000Z",
+            "publishedAt": "2026-09-08T23:00:42.000Z",
             "eventType": "general_market",
             "directness": "direct_ticker",
             "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://finance.yahoo.com/markets/stocks/articles/think-micron-technology-mu-return-133459987.html?.tsrc=rss"
+            "freshnessBucket": "under_6h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/druckenmiller-exited-micron-bought-alphabet-230042923.html?.tsrc=rss"
           },
           {
-            "title": "Micron, SanDisk get new aggressive price targets from top analyst",
-            "summary": "Here’s what could happen to MU and SNDK shares next",
+            "title": "Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know",
+            "summary": "The latest trading day saw Micron (MU) settling at $1, representing a -1.61% change from its previous close.",
             "koreanSummary": {
-              "title": "Micron, SanDisk get new aggressive price targets from top analyst",
-              "content": "Micron Technology Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 핵심입니다.",
-              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
-              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+              "title": "Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know",
+              "content": "Micron Technology Inc. 관련 기사는 Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know 이슈를 다루며, 주가 변동률 -1.61%를 핵심 내용으로 봅니다.",
+              "implication": "Micron Technology Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-07T20:33:00.000Z",
-            "eventType": "analyst_upgrade",
+            "publishedAt": "2026-09-08T21:45:07.000Z",
+            "eventType": "general_market",
             "directness": "direct_ticker",
-            "direction": "neutral",
+            "direction": "negative",
             "freshnessBucket": "under_6h",
-            "url": "https://www.thestreet.com/investing/stocks/mu-micron-sndk-sandisk-lynx-research-stock-price-targets-september-2026?.tsrc=rss"
+            "url": "https://finance.yahoo.com/markets/stocks/articles/micron-mu-falls-more-steeply-214507442.html?.tsrc=rss"
+          },
+          {
+            "title": "Qualcomm&#x2019;s stock climbs as Amazon chip deal offers investors much-needed good news",
+            "summary": "Qualcomm shares have missed out on the chip sector&#x2019;s rally this year &#x2014; but the company is now working on various chip projects with Amazon.",
+            "koreanSummary": {
+              "title": "Qualcomm&#x2019;s stock climbs as Amazon chip deal offers investors much-needed good news",
+              "content": "Micron Technology Inc. 관련 M&A 뉴스입니다. 기사 스니펫상 핵심 내용은 Qualcomm shares have missed out on the chip sector&#x2019;s rally this year &#x2014; but the company is now working on various chip projects with Amazon.입니다.",
+              "implication": "M&A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
+            },
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-09-08T21:32:00.000Z",
+            "eventType": "mna",
+            "directness": "sector_theme",
+            "direction": "mixed",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/qualcomms-stock-climbs-as-amazon-chip-deal-offers-investors-some-much-needed-good-news-5b6a95ca?mod=mw_rss_topstories"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?\"입니다.",
-          "directLine": "Micron Technology Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?\"이며, 실적 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him\"입니다.",
+          "directLine": "Micron Technology Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him\"이며, 시장 일반 재료로 봅니다.",
           "bullets": [
             {
-              "title": "Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
-              "content": "Micron Technology Inc. 관련 기사는 Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250? 이슈를 다루며, 주가 변동률 +256.00%를 핵심 내용으로 봅니다.",
-              "implication": "Micron Technology Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
-            },
-            {
-              "title": "Do You Think Micron Technology’s (MU) Return Drivers May Falter Ahead",
-              "content": "Micron Technology Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Generation Investment Management, an investment management firm, released its “Global Equity Strategy” second quarter 2026 investor letter.입니다.",
+              "title": "Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
+              "content": "Micron Technology Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Micron Technology, Inc.입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Micron, SanDisk get new aggressive price targets from top analyst",
-              "content": "Micron Technology Inc.에 대한 목표주가 상향 또는 애널리스트 평가 변화가 핵심입니다.",
-              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
-              "check": "상향 기관, 목표가 변화폭, 같은 섹터 동반 반응"
+              "title": "Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know",
+              "content": "Micron Technology Inc. 관련 기사는 Micron (MU) Falls More Steeply Than Broader Market: What Investors Need to Know 이슈를 다루며, 주가 변동률 -1.61%를 핵심 내용으로 봅니다.",
+              "implication": "Micron Technology Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
+            {
+              "title": "Qualcomm&#x2019;s stock climbs as Amazon chip deal offers investors much-needed good news",
+              "content": "Micron Technology Inc. 관련 M&A 뉴스입니다. 기사 스니펫상 핵심 내용은 Qualcomm shares have missed out on the chip sector&#x2019;s rally this year &#x2014; but the company is now working on various chip projects with Amazon.입니다.",
+              "implication": "M&A 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
         "notes": [
-          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him"
       },
       "tieBreakerReason": "최종 원점수 95, 리스크 패널티 -4, 5일 수익률 +8.98%, 상대 거래량 1.27배 순으로 정렬",
       "entryQualityScore": 40,
@@ -4621,13 +4623,13 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Tencent Slips 1% While Its AI-Chip Bet Attacks Nvidia's China Moat 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h - Tencent Slips 1% While Its AI-Chip Bet Attacks Nvidia's China Moat",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Microsoft’s ‘Useful Yield’ Test Raises the Stakes for NVIDIA’s AI Economics 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Microsoft’s ‘Useful Yield’ Test Raises the Stakes for NVIDIA’s AI Economics",
       "tieBreakerReason": "최종 원점수 78, 리스크 패널티 0, 5일 수익률 +5.89%, 상대 거래량 1.05배 순으로 정렬",
       "entryQualityScore": 47,
       "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 48,
-      "trendStateLabel": "잠복",
+      "trendStrengthIndex": 50,
+      "trendStateLabel": "부상",
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 0,
       "exhaustionRiskLabel": "낮음",
@@ -4646,9 +4648,9 @@
         "candidateEnvironment": "관찰",
         "reason": "특이 충돌 없음"
       },
-      "linkedNarrative": "AI 인프라 재가속",
+      "linkedNarrative": "반도체 설계/공급망 재가속",
       "narrativeStatus": "약화",
-      "narrativeScore": 32,
+      "narrativeScore": 36,
       "relatedEtfs": [
         "SMH",
         "SOXX",
@@ -4682,8 +4684,8 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / regulation / under_6h / positive - Bixlenvo Gives Gilead a New HIV Growth Path. How Large is the Market? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / regulation / under_6h / positive - Bixlenvo Gives Gilead a New HIV Growth Path. How Large is the Market?",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Gilead Sciences (GILD) Suffers a Larger Drop Than the General Market: Key Insights 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - Gilead Sciences (GILD) Suffers a Larger Drop Than the General Market: Key Insights",
       "tieBreakerReason": "최종 원점수 72, 리스크 패널티 0, 5일 수익률 +3.65%, 상대 거래량 1.15배 순으로 정렬",
       "entryQualityScore": 42,
       "entryQualityLabel": "관찰",
@@ -4739,13 +4741,13 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / guidance / under_24h / positive - Taiwan Semiconductor Manufacturing Company (TSM) Raises Guidance as Demand for Advanced Chips Soars 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / guidance / under_24h / positive - Taiwan Semiconductor Manufacturing Company (TSM) Raises Guidance as Demand for Advanced Chips Soars",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - TSMC, IBD Stock Of The Day, Rises Above Early Buy Point As Chip Stocks Rally 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - TSMC, IBD Stock Of The Day, Rises Above Early Buy Point As Chip Stocks Rally",
       "tieBreakerReason": "최종 원점수 72, 리스크 패널티 0, 5일 수익률 +2.73%, 상대 거래량 1.33배 순으로 정렬",
-      "entryQualityScore": 43,
+      "entryQualityScore": 45,
       "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 44,
-      "trendStateLabel": "잠복",
+      "trendStrengthIndex": 50,
+      "trendStateLabel": "부상",
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 0,
       "exhaustionRiskLabel": "낮음",
@@ -4765,8 +4767,8 @@
         "reason": "특이 충돌 없음"
       },
       "linkedNarrative": "반도체 설계/공급망 재가속",
-      "narrativeStatus": "소멸",
-      "narrativeScore": 22,
+      "narrativeStatus": "약화",
+      "narrativeScore": 36,
       "relatedEtfs": [
         "SMH",
         "SOXX",
@@ -4809,12 +4811,12 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Crashed Amazon cargo jet struck two vehicles, ended up 1,300 feet past runway, NTSB says",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - U.S. military destroys five Iranian oil tankers after attempted attack on American warship, Centcom says",
       "tieBreakerReason": "최종 원점수 1, 리스크 패널티 -6, 5일 수익률 +2.35%, 상대 거래량 0.73배 순으로 정렬",
-      "entryQualityScore": 17,
+      "entryQualityScore": 19,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 44,
-      "trendStateLabel": "잠복",
+      "trendStrengthIndex": 50,
+      "trendStateLabel": "부상",
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 0,
       "exhaustionRiskLabel": "낮음",
@@ -4826,7 +4828,7 @@
         "label": "거래량 확인 전 관찰",
         "status": "관찰",
         "reasons": [
-          "Entry Quality 17 < 40",
+          "Entry Quality 19 < 40",
           "RVOL 0.73x < 1.00x"
         ],
         "rescueType": null
@@ -4834,11 +4836,11 @@
       "marketContext": {
         "marketRegime": "중립",
         "candidateEnvironment": "관찰",
-        "reason": "Entry Quality 17 < 40 / RVOL 0.73x < 1.00x"
+        "reason": "Entry Quality 19 < 40 / RVOL 0.73x < 1.00x"
       },
       "linkedNarrative": "반도체 설계/공급망 재가속",
-      "narrativeStatus": "소멸",
-      "narrativeScore": 22,
+      "narrativeStatus": "약화",
+      "narrativeScore": 36,
       "relatedEtfs": [],
       "closePriceAtRecommendation": 92.4,
       "recommendationDate": "2026-09-04"
@@ -4884,7 +4886,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / product / under_24h - Why the launch of OpenAI&#x2019;s latest Astra model reignited the memory-chip trade",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - The Zacks Analyst Blog Highlights FANUY, ABBNY, KYCCF, NVDA, ISRG, ILMN, NOVT, BOTZ, ROBO, ROBT and IBOT",
       "tieBreakerReason": "최종 원점수 -12, 리스크 패널티 -11, 5일 수익률 -0.09%, 상대 거래량 0.50배 순으로 정렬",
       "relativeVolume": 0.5,
       "marketDataStatus": "ok",
@@ -4951,7 +4953,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / product / under_24h - Why the launch of OpenAI&#x2019;s latest Astra model reignited the memory-chip trade",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - U.S. military destroys five Iranian oil tankers after attempted attack on American warship, Centcom says",
       "tieBreakerReason": "최종 원점수 -34, 리스크 패널티 -11, 5일 수익률 -4.03%, 상대 거래량 0.61배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -5025,7 +5027,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / product / under_24h / neutral - Hacksaw Gaming Expands into Crash Games with Moneyplane",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - U.S. military destroys five Iranian oil tankers after attempted attack on American warship, Centcom says",
       "tieBreakerReason": "최종 원점수 -35, 리스크 패널티 -11, 5일 수익률 -4.15%, 상대 거래량 0.35배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -5101,7 +5103,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Crashed Amazon cargo jet struck two vehicles, ended up 1,300 feet past runway, NTSB says",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / stale / positive - 3 Ways to Invest in Cybersecurity Through ETFs",
       "tieBreakerReason": "최종 원점수 -34, 리스크 패널티 -11, 5일 수익률 -3.62%, 상대 거래량 0.46배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -5172,8 +5174,8 @@
       "summary": "1개 감점 리스크로 총 -4점 반영."
     },
     "reasonConfidence": "HIGH",
-    "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-    "directCatalyst": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / positive - Micron Has Skyrocketed 256% in 2026. What Would It Take to Get MU Stock Up to $1,250?",
+    "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+    "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / positive - Druckenmiller Exited Micron and Bought Alphabet. The AI Risks Moved With Him",
     "tieBreakerReason": "최종 원점수 95, 리스크 패널티 -4, 5일 수익률 +8.98%, 상대 거래량 1.27배 순으로 정렬",
     "entryQualityScore": 40,
     "entryQualityLabel": "관찰",
@@ -5212,18 +5214,18 @@
     "recommendationDate": "2026-09-04"
   },
   "dataReliability": {
-    "priceVolumeStatus": "PARTIAL",
-    "priceVolumeFreshOkCount": 166,
+    "priceVolumeStatus": "CONNECTED",
+    "priceVolumeFreshOkCount": 167,
     "priceVolumeStaleFallbackCount": 0,
-    "priceVolumeExpiredFallbackCount": 1,
-    "priceVolumeMissingCount": 1,
-    "priceAsOfDate": "2026-09-07",
-    "priceAsOfLabel": "2026-09-07 US regular close",
-    "reportGeneratedAtKST": "2026-09-08 09:56",
+    "priceVolumeExpiredFallbackCount": 0,
+    "priceVolumeMissingCount": 0,
+    "priceAsOfDate": "2026-09-08",
+    "priceAsOfLabel": "2026-09-08 US regular close",
+    "reportGeneratedAtKST": "2026-09-09 10:05",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-09-08T00:56:49.202Z",
-    "newsLastUpdatedAt": "2026-09-08T00:56:49.202Z",
-    "latestNewsPublishedAt": "2026-09-08T00:45:22.000Z",
+    "newsFetchedAt": "2026-09-09T01:05:46.153Z",
+    "newsLastUpdatedAt": "2026-09-09T01:05:46.153Z",
+    "latestNewsPublishedAt": "2026-09-09T00:56:01.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
     "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
@@ -5241,7 +5243,7 @@
       "프리/애프터마켓 확인 불가"
     ],
     "providers": "yfinance, Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API, config fallback sample, price-volume dollar-volume fallback",
-    "recommendationSession": "2026-09-07 US regular session",
+    "recommendationSession": "2026-09-08 US regular session",
     "grade": "LOW",
     "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 프리마켓/정규장 거래량을 별도 확인해야 한다."
   },
@@ -5251,7 +5253,7 @@
     "entryReadyCount": 0,
     "conditionalCount": 1,
     "watchCount": 103,
-    "banCount": 52,
+    "banCount": 53,
     "actionCandidateCount": 1,
     "mainLimiters": [
       "Entry Quality < 40",
@@ -5262,7 +5264,7 @@
     "noTradeMessage": "진입 후보는 있으나, 전일 고점 돌파와 거래량 확인 후 선별적으로 접근한다."
   },
   "actionGateSummary": {
-    "total": 156,
+    "total": 157,
     "items": [
       {
         "label": "RVOL < 1.00x",
@@ -5282,7 +5284,7 @@
       },
       {
         "label": "Entry Quality < 40",
-        "count": 151
+        "count": 152
       },
       {
         "label": "Exhaustion Risk >= 70",
@@ -5294,7 +5296,7 @@
       },
       {
         "label": "뉴스 직접성 부족",
-        "count": 99
+        "count": 100
       }
     ],
     "topLimiters": [
