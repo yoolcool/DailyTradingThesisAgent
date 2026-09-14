@@ -44,12 +44,13 @@
       "QQQ"
     ],
     "stocks": [
-      "MRVL",
       "NVDA",
       "TSM",
-      "INTC",
       "AMD",
-      "NXPI"
+      "QCOM",
+      "INTC",
+      "MRVL",
+      "ARM"
     ],
     "nextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -58,10 +59,10 @@
       "SOXQ"
     ],
     "preferredStocks": [
-      "MRVL",
       "NVDA",
       "TSM",
-      "INTC"
+      "AMD",
+      "QCOM"
     ],
     "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -132,9 +133,9 @@
       "IGV"
     ],
     "stocks": [
-      "ZS",
       "CRWD",
       "FTNT",
+      "ZS",
       "PANW"
     ],
     "nextBuyer": "사이버보안 지출 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
@@ -144,9 +145,9 @@
       "IHAK"
     ],
     "preferredStocks": [
-      "ZS",
       "CRWD",
       "FTNT",
+      "ZS",
       "PANW"
     ],
     "breakCondition": "HACK 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -157,13 +158,12 @@
     "etfs": [
       "IGV",
       "AIQ",
-      "QQQ",
-      "MAGS"
+      "QQQ"
     ],
     "stocks": [
-      "ADBE",
-      "MSTR",
-      "MSFT"
+      "WDAY",
+      "TEAM",
+      "SNPS"
     ],
     "nextBuyer": "소프트웨어 실적/AI 수익화을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -172,9 +172,9 @@
       "QQQ"
     ],
     "preferredStocks": [
-      "ADBE",
-      "MSTR",
-      "MSFT"
+      "WDAY",
+      "TEAM",
+      "SNPS"
     ],
     "breakCondition": "IGV 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -428,11 +428,8 @@
       "QQQ"
     ],
     "stocks": [
-      "GILD",
       "ALNY",
-      "REGN",
-      "VRTX",
-      "AMGN",
+      "GILD",
       "INSM"
     ],
     "nextBuyer": "바이오/헬스케어 촉매을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
@@ -440,10 +437,9 @@
       "QQQ"
     ],
     "preferredStocks": [
-      "GILD",
       "ALNY",
-      "REGN",
-      "VRTX"
+      "GILD",
+      "INSM"
     ],
     "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
