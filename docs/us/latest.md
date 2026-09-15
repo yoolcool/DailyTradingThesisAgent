@@ -8,18 +8,18 @@
 
 ## 시장 국면 판단
 
-- 최종 판정: 기간 조정 (75점)
-- 전일 대비: 기간 조정은 유지됐지만 점수는 전일보다 약화됐다(-6점).
+- 최종 판정: 기간 조정 (66점)
+- 전일 대비: 중립-상승에서 기간 조정으로 개선됐다(+10점).
 - 판정 신뢰도: 높음 (100점) - 핵심 지수와 매크로 데이터가 대부분 직접 수집되어 판정 신뢰도가 높다.
 - 행동 바이어스: 추격 보류, 돌파 확인
-- 한 줄 결론: 장기 추세는 유지되지만 단기 추세가 둔화되어 기간 조정으로 본다. 기술 92점, 매크로 43점.
-- 기술적 지표: 상승 추세 우위 (92점, 가중치 65%)
-- S&P 500: 95점 | 50일선 위, 200일선 위, 20일 -1.82%, 60일 +2.00%, 52주 고점 대비 -2.04% -> 기술 점수 95
-- Nasdaq 100: 89점 | 50일선 위, 200일선 위, 20일 -2.38%, 60일 -2.00%, 52주 고점 대비 -4.53% -> 기술 점수 89
+- 한 줄 결론: 장기 추세는 유지되지만 단기 추세가 둔화되어 기간 조정으로 본다. 기술 78점, 매크로 43점.
+- 기술적 지표: 상승 추세 우위 (78점, 가중치 65%)
+- S&P 500: 95점 | 50일선 위, 200일선 위, 20일 -2.13%, 60일 +3.00%, 52주 고점 대비 -2.52% -> 기술 점수 95
+- Nasdaq 100: 61점 | 50일선 아래, 200일선 위, 20일 -3.06%, 60일 -2.00%, 52주 고점 대비 -5.32% -> 기술 점수 61
 - 매크로 시황: 매크로 부담 (43점, 가중치 35%)
 - 매크로 요약: 금리, 물가, 신용/유동성 부담으로 매크로 환경은 방어적이다.
 - 금리: 부담 41점 / 금리 부담 / confidence HIGH
-  - 주요 근거: US 10Y yield 20일 +7.20%, 5일 +4.47%; US 3M yield 20일 +5.61%, 단기금리 방향 확인; US long-duration bonds 20일 -2.08%, 장기채 가격 기준 할인율 부담 확인
+  - 주요 근거: US 10Y yield 20일 +5.64%, 5일 +3.70%; US 3M yield 20일 +6.44%, 단기금리 방향 확인; US long-duration bonds 20일 -2.08%, 장기채 가격 기준 할인율 부담 확인
   - 확인 사항: 추가 확인 이벤트 없음
 - 물가: 부담 37점 / 물가 부담 / confidence HIGH
   - 주요 근거: Oil ETF 20일 +23.89%, 유가 기반 물가 압력 확인; TIPS ETF 20일 -1.23%, 물가연동채 흐름은 보조 근거; Gold 20일 -0.05%, 금 강세는 방어 수요 여부 확인
@@ -27,14 +27,14 @@
 - 정책: 중립 50점 / 정책 이벤트 확인 전 중립 / confidence LOW
   - 주요 근거: 정책 톤은 1차 버전에서 일정/이벤트 리스크 기반 중립값으로 반영한다.
   - 확인 사항: FOMC, CPI, PCE, 고용지표 발표 전후에는 매크로 confidence를 보수적으로 해석한다.
-- 신용/유동성: 부담 42점 / 신용/유동성 부담 / confidence HIGH
-  - 주요 근거: High yield credit 20일 -1.49%, 하이일드 위험선호 확인; HYG-LQD 20일 상대강도 +0.60%, 신용위험 선호/회피 확인; VIX 20일 +11.16%, 변동성 부담 확인
+- 신용/유동성: 부담 40점 / 신용/유동성 부담 / confidence HIGH
+  - 주요 근거: High yield credit 20일 -1.49%, 하이일드 위험선호 확인; HYG-LQD 20일 상대강도 +0.60%, 신용위험 선호/회피 확인; VIX 20일 +12.57%, 변동성 부담 확인
   - 확인 사항: VIX 상승은 유동성/리스크 프리미엄 부담으로 해석한다.
 - 환율/글로벌: 중립 50점 / 환율/글로벌 중립 / confidence MEDIUM
   - 주요 근거: US dollar 20일 -0.39%, 달러 강세/약세 확인
   - 확인 사항: 추가 확인 이벤트 없음
-- US 10Y yield: 35점 | 하락 시 주식 우호; 5일 +4.47%, 20일 +7.20% -> 매크로 점수 35
-- US 3M yield: 37점 | 하락 시 주식 우호; 5일 +4.63%, 20일 +5.61% -> 매크로 점수 37
+- US 10Y yield: 38점 | 하락 시 주식 우호; 5일 +3.70%, 20일 +5.64% -> 매크로 점수 38
+- US 3M yield: 36점 | 하락 시 주식 우호; 5일 +4.74%, 20일 +6.44% -> 매크로 점수 36
 - US long-duration bonds: 46점 | 상승 시 주식 우호; 5일 -1.46%, 20일 -2.08% -> 매크로 점수 46
 - TIPS ETF: 50점 | 상승 시 주식 우호; 5일 -1.08%, 20일 -1.23% -> 매크로 점수 50
 - Oil ETF: 5점 | 하락 시 주식 우호; 5일 +9.02%, 20일 +23.89% -> 매크로 점수 5
@@ -42,7 +42,7 @@
 - US dollar: 50점 | 하락 시 주식 우호; 5일 +0.21%, 20일 -0.39% -> 매크로 점수 50
 - High yield credit: 47점 | 상승 시 주식 우호; 5일 -0.77%, 20일 -1.49% -> 매크로 점수 47
 - Investment grade credit: 50점 | 상승 시 주식 우호; 5일 -1.12%, 20일 -2.09% -> 매크로 점수 50
-- VIX: 25점 | 하락 시 주식 우호; 5일 +9.02%, 20일 +11.16% -> 매크로 점수 25
+- VIX: 20점 | 하락 시 주식 우호; 5일 +11.76%, 20일 +12.57% -> 매크로 점수 20
 - 데이터 커버리지: 기술 2/2, 매크로 10/10
 - 데이터 신뢰도 근거:
   - 직접 지수 데이터: S&P 500, Nasdaq 100
@@ -62,12 +62,12 @@
 - 위험회피
 
 시장 지배 서사:
-1. 반도체 설계/공급망 재가속 - 약화 - iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH), Advanced Micro Devices Inc.(AMD), QUALCOMM Incorporated(QCOM) 중심으로 5일 +5.51%, 20일 -0.14% 흐름이 형성됨. 직접 촉매 일부 확인.
+1. 반도체 설계/공급망 재가속 - 약화 - iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH), Advanced Micro Devices Inc.(AMD), QUALCOMM Incorporated(QCOM) 중심으로 5일 +5.51%, 20일 -0.14% 흐름이 형성됨. 뉴스 직접성 제한.
 2. 매크로 방어/헤지 - 약화 - Energy Select Sector SPDR Fund(XLE), iShares 20+ Year Treasury Bond ETF(TLT), Chevron(CVX), Exxon Mobil(XOM) 중심으로 5일 -0.33%, 20일 +3.32% 흐름이 형성됨. 뉴스 직접성 제한.
 3. Integrated Oil & Gas 자금 유입 - 약화 - SPDR S&P 500 ETF Trust(SPY), iShares Russell 2000 ETF(IWM), Chevron(CVX), Exxon Mobil(XOM) 중심으로 5일 -0.01%, 20일 +0.80% 흐름이 형성됨. 뉴스 직접성 제한.
 
 트렌드 강도:
-1. 반도체 설계/공급망 재가속 - TSI 46 - 약화 - 진입품질 낮음
+1. 반도체 설계/공급망 재가속 - TSI 42 - 잠복 - 진입품질 낮음
 2. 매크로 방어/헤지 - TSI 21 - 잠복 - 진입품질 낮음
 3. Integrated Oil & Gas 자금 유입 - TSI 24 - 잠복 - 진입품질 낮음
 
@@ -86,8 +86,8 @@ ETF 후보 TOP 5:
 1. Energy Select Sector SPDR Fund(XLE) - 매크로 방어/헤지 - 제외
 2. iShares Semiconductor ETF(SOXX) - 반도체 설계/공급망 재가속 - 거래량 확인 전 관찰
 3. Roundhill Memory ETF(DRAM) - AI 인프라 재가속 - 거래량 확인 전 관찰
-4. VanEck Semiconductor ETF(SMH) - 반도체 설계/공급망 재가속 - 거래량 확인 전 관찰
-5. Roundhill Magnificent Seven ETF(MAGS) - 위험선호 성장주 재진입 - 제외
+4. Roundhill Magnificent Seven ETF(MAGS) - 위험선호 성장주 재진입 - 제외
+5. VanEck Semiconductor ETF(SMH) - 반도체 설계/공급망 재가속 - 거래량 확인 전 관찰
 
 웹 리포트:
 https://yoolcool.github.io/DailyTradingThesisAgent/
@@ -97,7 +97,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 오늘 결론: 조건부 진입
 - 신규 진입 후보: 0개
 - 조건부 진입 후보: 1개
-- 관찰 후보: 118개
+- 관찰 후보: 117개
 - 주요 제한 요인: Entry Quality < 40, RVOL 미달, 뉴스 직접성 부족
 - 주문 판단: 시장가 금지 / 지정가 또는 관찰
 - 실전 판단: 진입 후보는 있으나, 전일 고점 돌파와 거래량 확인 후 선별적으로 접근한다.
@@ -107,8 +107,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - RVOL < 1.00x: 116개
 - 거래대금 유동성 낮음: 18개
 - Entry Quality 50~54 near miss: 0개
-- Entry Quality 40~49 관찰: 3개
-- Entry Quality < 40: 154개
+- Entry Quality 40~49 관찰: 2개
+- Entry Quality < 40: 155개
 - Exhaustion Risk >= 70: 0개
 - ETF breadth 샘플 부족: 37개
 - 뉴스 직접성 부족: 100개
@@ -120,15 +120,15 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 주문 실행 신뢰도: LOW
 - ETF breadth 신뢰도: LOW
 - 신뢰도 해석: 테마 확산 판단 제한, 거래대금 유동성 낮음 또는 확인 불가, 프리/애프터마켓 확인 불가
-- 리포트 생성 시각: 2026-09-14 09:47 KST
-- 가격 기준 거래일: 2026-09-11 US regular close
-- 뉴스 수집 시각: 2026-09-14 09:47 KST
-- 가장 최근 뉴스 발행 시각: 2026-09-14 08:47 KST
+- 리포트 생성 시각: 2026-09-15 10:12 KST
+- 가격 기준 거래일: 2026-09-14 US regular close
+- 뉴스 수집 시각: 2026-09-15 10:12 KST
+- 가장 최근 뉴스 발행 시각: 2026-09-15 09:48 KST
 - 뉴스 신선도 상태: FRESH
 - 뉴스 소스: Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API
 - 뉴스 소스 상태: Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED
 - 뉴스 신뢰도: MEDIUM
-- 추천 적용 거래일: 2026-09-13 US regular session
+- 추천 적용 거래일: 2026-09-14 US regular session
 - 가격/거래량 데이터 상태: 연결됨
 - 뉴스 데이터 상태: 일부 연결
 - ETF 구성종목 확산도 상태: 일부 연결
@@ -145,7 +145,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 뉴스: 일부 연결
 - ETF 구성종목 확산도: 일부 연결
 - 거래대금 유동성: 일부 연결
-- 생성 시각: 2026년 9월 14일 월요일 AM 9:47
+- 생성 시각: 2026년 9월 15일 화요일 AM 10:12
 - 시장 상태: 위험회피
 - 오늘 돈의 방향: AI 반도체 개별 종목 흐름이 ETF 대비 강한지 확인 필요
 - 강한 테마 TOP 3: 메가캡 플랫폼 ETF(60), AI 반도체(37), 전통 에너지 ETF(31)
@@ -164,7 +164,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - reasonConfidence: LOW
 - 근거 ETF: SOXX, SMH, SOXQ
 - 근거 개별 종목: AMD, QCOM, TSM, MRVL, ARM
-- 돈이 몰리는 이유: 반도체 설계/공급망 재가속 관련 iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ)와 Advanced Micro Devices Inc.(AMD), QUALCOMM Incorporated(QCOM), Taiwan Semiconductor(TSM), Marvell Technology Inc.(MRVL)의 5일(+5.51%)·20일(-0.14%) 흐름을 함께 본다. 평균 상대 거래량은 0.87배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.
+- 돈이 몰리는 이유: 반도체 설계/공급망 재가속 관련 iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ)와 Advanced Micro Devices Inc.(AMD), QUALCOMM Incorporated(QCOM), Taiwan Semiconductor(TSM), Marvell Technology Inc.(MRVL)의 5일(+5.51%)·20일(-0.14%) 흐름을 함께 본다. 평균 상대 거래량은 0.87배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.
 - 다음 매수 주체: 반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금
 - 가장 좋은 트레이딩 수단: ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: TSM, AMD, QCOM
 - 서사가 깨지는 조건: SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈
@@ -266,13 +266,13 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | Integrated Oil & Gas 자금 유입 | 약화 | 35 | LOW | SPY, IWM, QQQ | CVX, XOM | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
 | 비트코인/디지털 자산 위험선호 | 약화 | 24 | LOW | IBIT, BLOK | MARA, MSTR, COIN, IREN | 비트코인 베타가 살아날 때만 단기 매매 |
 | 위험선호 성장주 재진입 | 약화 | 22 | LOW | MAGS, QQQ, IPO | ARM, COIN, TSLA | 지수 위험선호가 유지될 때만 선별 진입 |
-| AI 인프라 재가속 | 소멸 | 15 | LOW | DRAM, SOXX, SMH | AMD, ETN, MU, NVDA | 추격보다 5일선 지지 후 재상승 확인 |
+| AI 인프라 재가속 | 소멸 | 16 | LOW | DRAM, SOXX, SMH | AMD, ETN, MU, NVDA | 추격보다 5일선 지지 후 재상승 확인 |
 | 전력 유틸리티 수요 재평가 | 소멸 | 15 | LOW | SPY, IWM, QQQ | ETN, GEV, VRT | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
 | Data Storage 자금 유입 | 소멸 | 13 | LOW | SPY, IWM, QQQ | STX, WDC | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
 | Internet Content 자금 유입 | 약화 | 12 | LOW | QQQ | META, DASH | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
 | Specialty Business Services 자금 유입 | 약화 | 10 | LOW | SPY, IWM, QQQ | TRI, CTAS, CPRT | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
 | 반도체 장비 사이클 재평가 | 소멸 | 5 | LOW | SOXX, SMH, SOXQ | AMAT, LRCX, ASML | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
-| Aerospace & Defense 자금 유입 | 소멸 | 3 | LOW | SPY, IWM, QQQ | KTOS, AVAV | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
+| Aerospace & Defense 자금 유입 | 소멸 | 4 | LOW | SPY, IWM, QQQ | KTOS, AVAV | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
 | 바이오/헬스케어 촉매 | 약화 | 3 | LOW | QQQ | INSM, ALNY, GILD | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
 | 전력망/원전/인프라 병목 | 소멸 | 1 | LOW | GRID, PAVE, URA | ETN, PWR, CEG, VRT | ETF 확산도와 거래량이 같이 살아날 때만 진입 |
 | 소비 회복/방어주 선별 | 소멸 | 0 | LOW | QQQ | PDD, AMZN | 기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입 |
@@ -286,15 +286,15 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 ## 트렌드 강도 판단
 
 ### 1. 반도체 설계/공급망 재가속
-- Trend Strength Index: 46
-- 트렌드 상태 라벨: 약화
+- Trend Strength Index: 42
+- 트렌드 상태 라벨: 잠복
 - 테마 확산도: 보통
 - ETF 동조성: 약함
 - 거래량 강도: 부족
 - 과열 위험: 낮음 (3)
-- 오늘 진입 품질: 낮음 (39)
+- 오늘 진입 품질: 낮음 (33)
 - 한 줄 판단: 반도체 설계/공급망 재가속는 Trend Strength는 높아도 시장 위험선호가 약해 시장 환경 비우호 구간이다.
-- 오늘 접근법: 상승률이 남아 있어도 iShares Semiconductor ETF(SOXX)/VanEck Semiconductor ETF(SMH)/Invesco PHLX Semiconductor ETF(SOXQ)와 구성 종목 확산도가 회복될 때까지 신규 진입은 낮춘다.
+- 오늘 접근법: iShares Semiconductor ETF(SOXX)/VanEck Semiconductor ETF(SMH)/Invesco PHLX Semiconductor ETF(SOXQ)와 Advanced Micro Devices Inc.(AMD)/QUALCOMM Incorporated(QCOM)/Taiwan Semiconductor(TSM)의 거래량 확산이 확인되기 전까지 관찰한다.
 
 <details>
 <summary>트렌드 강도 상세 근거 보기</summary>
@@ -303,7 +303,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 거래량 강도: 거래량 강도 4/20. 평균 RVOL 0.87배.
 - ETF 동조성: ETF 동조성 7/15. 관련 ETF VanEck Semiconductor ETF(SMH), iShares Semiconductor ETF(SOXX), Invesco PHLX Semiconductor ETF(SOXQ), Global X Artificial Intelligence & Technology ETF(AIQ), Invesco QQQ Trust(QQQ) 흐름을 기준으로 판단.
 - 테마 확산도: 테마 확산도 10/20. 상위 1~2개 쏠림 감점 0점 반영.
-- 뉴스 촉매: 뉴스/촉매 신선도 7/10. HIGH 직접 촉매 2개.
+- 뉴스 촉매: 뉴스/촉매 신선도 3/10. HIGH 직접 촉매 0개.
 - 과열 리스크: 과열 리스크 3/100. 단기 급등, 고점 근접, ETF-개별주 괴리, 쏠림을 함께 반영.
 - 시장 환경: 시장 환경 3/10. QQQ/SPY/IWM 가격 흐름 기반 위험선호 점수.
 
@@ -364,9 +364,9 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 ### 개별주 Top 3 추천 성과 요약
 - 최근 5개 리포트 표본: 8개 (초기 검증 단계)
 - 장중 최고가 기준 성공률: 0.00%
-- 종가 기준 성공률: +14.29%
-- 평균 장중 최고 수익률: +0.82%
-- 평균 종가 수익률: -1.37%
+- 종가 기준 성공률: +16.67%
+- 평균 장중 최고 수익률: +0.56%
+- 평균 종가 수익률: -1.33%
 
 ### ETF 추천 성과 요약
 - 최근 5개 리포트 표본: 1개 (초기 검증 단계)
@@ -380,6 +380,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 추천일 | 유형 | 순위 | 티커 | 기준가 | 추적 기간 | 상태 | High 수익률 | Close 수익률 | 결과 | 코멘트 |
 | --- | --- | ---: | --- | ---: | --- | --- | ---: | ---: | --- | --- |
+| 2026-09-15 | STOCK | 1 | AMD | $516.13 | 2026-09-15 | pending | 데이터 없음 | 데이터 없음 | 추적 대기 | 아직 추적 거래일 데이터가 완성되지 않음 |
 | 2026-09-14 | STOCK | 1 | AMD | $516.13 | 2026-09-14 | pending | 데이터 없음 | 데이터 없음 | 추적 대기 | 아직 추적 거래일 데이터가 완성되지 않음 |
 | 2026-09-11 | STOCK | 2 | META | $653.69 | 2026-09-11 | complete | +1.61% | -0.87% | 제한적 유효 | 제한적인 장중 기회만 발생 (일봉 기준) |
 | 2026-09-11 | STOCK | 1 | AMD | $521.1 | 2026-09-11 | complete | -0.01% | -0.95% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
@@ -439,7 +440,6 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | 2026-08-10 | STOCK | 2 | FAST | $51.84 | 2026-08-10 | complete | +0.75% | +0.60% | 추적 대기 | 아직 추적 거래일 데이터가 완성되지 않음 (일봉 기준) |
 | 2026-08-10 | STOCK | 1 | BKNG | $214.42 | 2026-08-10 | complete | +0.48% | -0.72% | 실패 | 추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준) |
 | 2026-08-10 | ETF | 2 | XME | $115.74 | 2026-08-10~2026-08-17 | complete | +3.45% | -1.82% | 단기 고점 후 반납 | 1주 내 상승 기회는 있었지만 현재가는 반납 |
-| 2026-08-10 | ETF | 1 | COPX | $88.03 | 2026-08-10~2026-08-17 | complete | +2.52% | +0.57% | 진행 중 | 아직 1주 추적 기간이 끝나지 않음 |
 
 </details>
 
@@ -450,38 +450,38 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - linkedNarrative: 반도체 설계/공급망 재가속
 - narrativeStatus: 약화
 - narrativeScore: 35
-- Trend Strength Index: 46
+- Trend Strength Index: 42
 - Exhaustion Risk: 3 (낮음)
-- Entry Quality Score: 48 (관찰)
+- Entry Quality Score: 47 (관찰)
 - 트렌드 판단: 시장 위험선호가 약해 시장 환경 비우호 구간이다.
 - moneyFlowScore: 88
 - finalRawScore: 88
-- reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- reasonConfidence: MEDIUM
+- reasonConfidenceExplanation: 직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
 - tieBreakerReason: 최종 원점수 88, 리스크 패널티 0, 5일 수익률 +13.15%, 상대 거래량 1.05배 순으로 정렬
-- 후보별 시장 해석: 위험회피 / 제한적 - 전체 시장은 위험회피 / Entry Quality 48 < 50이나 moneyFlow 88, confidence HIGH, RVOL 1.05x로 강한 자금흐름 예외 조건 충족
-- 게이트 사유: Entry Quality 48 < 50이나 moneyFlow 88, confidence HIGH, RVOL 1.05x로 강한 자금흐름 예외 조건 충족
+- 후보별 시장 해석: 위험회피 / 제한적 - 전체 시장은 위험회피 / Entry Quality 47 < 50이나 moneyFlow 88, confidence MEDIUM, RVOL 1.05x로 강한 자금흐름 예외 조건 충족
+- 게이트 사유: Entry Quality 47 < 50이나 moneyFlow 88, confidence MEDIUM, RVOL 1.05x로 강한 자금흐름 예외 조건 충족
 - 주문 실행: 시장가 가능
-- 직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?
-- 왜 돈이 몰리는가: 20일 +6.86%, 5일 +13.15%, 상대 거래량 1.05배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID
+
+- 왜 돈이 몰리는가: 20일 +6.86%, 5일 +13.15%, 상대 거래량 1.05배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID
 - 누가 더 비싸게 사줄 수 있는지: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - 진입 조건: 20일선 위 눌림 후 재상승 확인
 - 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 - todayActionLabel: 자금흐름 예외 조건부
 #### 최근 뉴스/동향 한국어 요약
 
-- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call"입니다.
-- 직접 촉매 판단: Advanced Micro Devices Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call"이며, 실적 재료로 봅니다.
-- 뉴스 1: Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call
-  - 내용: Advanced Micro Devices Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Elon Musk recently praised a specific GPU stock during SpaceX's earnings call.입니다.
-  - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-  - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-- 뉴스 2: Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited
-  - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Advanced Micro Devices, Inc (NASDAQ:AMD) has set its sights on capitalizing on the growing demand for workstations capable of running large artificial intelligence models.입니다.
+- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling"입니다.
+- 직접 촉매 판단: Advanced Micro Devices Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling"이며, 시장 일반 재료로 봅니다.
+- 뉴스 1: AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling
+  - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 혼재으로 분류됩니다.
+  - 투자 의미: 단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
+  - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
+- 뉴스 2: Musk Biographer Says AI Giants May Face Liability After Admitting Risks as Nvidia, AMD Slide
+  - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Walter Isaacson, the Musk biographer and Tulane professor, says AI companies may face greater liability after their leaders acknowledged that increasingly capable systems can ca...입니다.
   - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
   - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-- 뉴스 3: AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?
-  - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AMD and Intel compete for processor customers, but they have a common interest in making developers comfortable staying with x86.입니다.
+- 뉴스 3: Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here&#x2019;s what to know.
+  - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Analysts don&#x2019;t expect the push for more responsible AI development to derail data-center spending.입니다.
   - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
   - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
 - 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
@@ -552,7 +552,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 20일 수익률: +6.68%
 - 상대 거래량: 1.14배
 - 52주 고점 대비 위치: -1.56%
-- whyMoneyIsFlowing: 20일 +6.68%, 5일 +0.80%, 상대 거래량 1.14배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: LIQUID
+- whyMoneyIsFlowing: 20일 +6.68%, 5일 +0.80%, 상대 거래량 1.14배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
 - whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
 #### 최근 뉴스/동향 한국어 요약
@@ -607,23 +607,23 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Federal Reserve RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 5/10/1
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 13/3/0
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 0
+  - 강한 촉매 수: 3
   - 중요 공시 수: 0
   - 직접 촉매: 없음
-  - 보조 뉴스: MarketWatch RSS sector_theme / macro / under_6h
-  - 뉴스 수집 시각: 2026-09-14 09:47 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-14 05:40 KST
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-09-15 10:12 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-15 09:48 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Your Social Security COLA could go up another $71 per month in 2027. That&#x2019;s not necessarily good news.
-  - 원점수/상한 점수: +14 / +12
+  - 핵심 뉴스 요약: Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule
+  - 원점수/상한 점수: +26 / +12
   - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
   - 구성종목 데이터 상태: 일부 연결
   - 샘플 수: 1/1
@@ -731,19 +731,19 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 최근 뉴스 상태: 일부 연결
   - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 11/4/1
+  - 긍정/중립/부정: 13/3/0
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 2
+  - 강한 촉매 수: 3
   - 중요 공시 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-14 09:47 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-14 08:47 KST
+  - 뉴스 수집 시각: 2026-09-15 10:12 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-15 09:48 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer questions Anthropic CEO&apos;s slowdown manifesto and puts forth an action plan
-  - 원점수/상한 점수: +22 / +12
+  - 핵심 뉴스 요약: Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule
+  - 원점수/상한 점수: +26 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
@@ -779,7 +779,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상태: 관찰
 - linkedNarrative: AI 인프라 재가속
 - narrativeStatus: 소멸
-- narrativeScore: 15
+- narrativeScore: 16
 - moneyFlowScore: 30
 - finalRawScore: 30
 - tieBreakerReason: 최종 원점수 30, 리스크 패널티 -4, 5일 수익률 +5.55%, 상대 거래량 0.63배 순으로 정렬
@@ -854,19 +854,19 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 최근 뉴스 상태: 일부 연결
   - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 11/4/1
+  - 긍정/중립/부정: 13/3/0
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 2
+  - 강한 촉매 수: 3
   - 중요 공시 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-14 09:47 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-14 08:47 KST
+  - 뉴스 수집 시각: 2026-09-15 10:12 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-15 09:48 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer questions Anthropic CEO&apos;s slowdown manifesto and puts forth an action plan
-  - 원점수/상한 점수: +22 / +12
+  - 핵심 뉴스 요약: Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule
+  - 원점수/상한 점수: +26 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
@@ -892,6 +892,128 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 재확인 상태: 데이터 없음
 - 차트 요약: 20일선 위에서 단기 눌림 확인 구간
 - 기준일 2026-09-11 | 종가 $59.1 | 1일 +0.92% | 5일 +5.55% | 20일 +3.81% | 상대 거래량 0.63배 | 52주 고점 대비 -27.34% | 데이터 소스: yfinance
+
+</details>
+
+### [ETF] Roundhill Magnificent Seven ETF(MAGS)
+- 자산 유형: ETF
+- ETF 세부 카테고리: 메가캡 플랫폼 ETF
+- ETF 역할: 테마 베타 매수
+- 상태: 매매 금지
+- linkedNarrative: 위험선호 성장주 재진입
+- narrativeStatus: 약화
+- narrativeScore: 22
+- moneyFlowScore: 60
+- finalRawScore: 60
+- tieBreakerReason: 최종 원점수 60, 리스크 패널티 0, 5일 수익률 -0.77%, 상대 거래량 1.54배 순으로 정렬
+- 과열 리스크: 낮음
+- reasonConfidence: MEDIUM
+- reasonConfidenceExplanation: ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
+
+- todayActionLabel: 제외
+- 주문 실행: 지정가 권장
+- 기준일: 2026-09-11
+- 종가: $69.89
+- 1일 수익률: +1.03%
+- 5일 수익률: -0.77%
+- 20일 수익률: +2.04%
+- 상대 거래량: 1.54배
+- 52주 고점 대비 위치: -1.78%
+- whyMoneyIsFlowing: 20일 +2.04%, 5일 -0.77%, 상대 거래량 1.54배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE
+- likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
+- whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
+#### 최근 뉴스/동향 한국어 요약
+
+- 요약: 후보 선정 후 재확인 뉴스 데이터 없음
+- 진입 조건: 전일 고점 돌파와 5일선 유지 확인
+- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
+- 차트: ![MAGS chart](charts/MAGS.png)
+
+#### 상세 근거
+<details>
+<summary>Roundhill Magnificent Seven ETF(MAGS) 상세 근거 펼치기</summary>
+
+- moneyFlowScore(최종) 산정 근거:
+  - moneyFlowScore(1차): 46
+  - 최종 원점수: 60
+  - 최종 표시 점수: 60
+  - cap 적용: cap 미적용
+  - 계산식: +46 + +12 + 0 + +2 + 0 + 0 + 0 = 60
+  - 점수 해석: 관찰 후보. 흐름은 있으나 우선순위는 낮음.
+  - 가격/거래량 1차 점수: +46
+    - 추세: 0
+    - 단기 모멘텀: +1
+    - 중기 모멘텀: +1
+    - 거래량: +18
+    - 신고가 근접: +12
+    - 이동평균: +14
+  - 하위 점수 cap:
+    - 가격 모멘텀: 원점수 0, 상한 적용 0 / 최대 25
+    - 단기 모멘텀: 원점수 +1, 상한 적용 +1 / 최대 20
+    - 중기 모멘텀: 원점수 +1, 상한 적용 +1 / 최대 16
+    - 거래량: 원점수 +18, 상한 적용 +18 / 최대 20
+    - 신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12
+    - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
+  - 추가 데이터 가감점:
+    - 뉴스: +12
+    - 유동성: +2
+  - ETF 확산도: 0
+  - 리스크 패널티: 0
+  - 주요 근거: 1차 46, 최종 원점수 60, 표시 60. 상대 거래량 증가, 52주 고점 근처, 이동평균 위 추세 유지. 주의: ETF 구성종목 확산도 데이터 미연결.
+  - 리스크 패널티 산정 근거:
+    - 총 리스크 패널티: 0
+    - 리스크 등급: LOW
+    - 감점된 리스크: 없음
+    - 관찰 리스크: ETF breadth data not connected
+    - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
+- 데이터 사용 현황:
+  - 가격/거래량: 사용
+  - 뉴스: 사용
+  - ETF 확산도: 미연결
+  - 거래대금 유동성: 사용
+  - 관련 ETF 상대강도: 사용
+- 뉴스 확인:
+  - 최근 뉴스 상태: 일부 연결
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
+  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
+  - 긍정/중립/부정: 13/3/0
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 3
+  - 중요 공시 수: 0
+  - 직접 촉매: 없음
+  - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
+  - 뉴스 수집 시각: 2026-09-15 10:12 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-15 09:48 KST
+  - 뉴스 신선도 상태: FRESH
+  - 뉴스 이후 가격 반응: 긍정
+  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
+  - 핵심 뉴스 요약: Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule
+  - 원점수/상한 점수: +26 / +12
+  - 점수 반영: +12
+  - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
+- ETF 구성종목 확산도:
+  - 구성종목 데이터 상태: 미연결
+  - 샘플 수: 0/0
+  - 샘플 신뢰도: UNKNOWN
+  - 상승 종목 비율: 데이터 없음
+  - 20일선 위 비율: 데이터 없음
+  - 50일선 위 비율: 데이터 없음
+  - 상위 기여 종목: 데이터 없음
+  - 확산도 판단: UNKNOWN
+  - 원점수/샘플 상한/반영 점수: 0 / N/A / 0
+  - 점수 반영: 0
+- 거래대금 유동성:
+  - 데이터 상태: 일부 연결
+  - 거래대금 기준 유동성: ACCEPTABLE
+  - 거래대금: $303,713,984
+  - 평균 거래대금: $197,074,774
+  - 주문 영향: 지정가 권장
+  - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
+- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
+- 후보 선정 후 뉴스/동향 재확인:
+  - 재확인 상태: 데이터 없음
+- 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
+- 기준일 2026-09-11 | 종가 $69.89 | 1일 +1.03% | 5일 -0.77% | 20일 +2.04% | 상대 거래량 1.54배 | 52주 고점 대비 -1.78% | 데이터 소스: yfinance
 
 </details>
 
@@ -976,19 +1098,19 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 최근 뉴스 상태: 일부 연결
   - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 11/4/1
+  - 긍정/중립/부정: 13/3/0
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 2
+  - 강한 촉매 수: 3
   - 중요 공시 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-14 09:47 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-14 08:47 KST
+  - 뉴스 수집 시각: 2026-09-15 10:12 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-15 09:48 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer questions Anthropic CEO&apos;s slowdown manifesto and puts forth an action plan
-  - 원점수/상한 점수: +22 / +12
+  - 핵심 뉴스 요약: Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule
+  - 원점수/상한 점수: +26 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도:
@@ -1014,128 +1136,6 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 재확인 상태: 데이터 없음
 - 차트 요약: 20일선 위에서 단기 눌림 확인 구간
 - 기준일 2026-09-11 | 종가 $568.53 | 1일 +1.47% | 5일 +2.88% | 20일 -3.50% | 상대 거래량 0.78배 | 52주 고점 대비 -15.38% | 데이터 소스: yfinance
-
-</details>
-
-### [ETF] Roundhill Magnificent Seven ETF(MAGS)
-- 자산 유형: ETF
-- ETF 세부 카테고리: 메가캡 플랫폼 ETF
-- ETF 역할: 테마 베타 매수
-- 상태: 매매 금지
-- linkedNarrative: 위험선호 성장주 재진입
-- narrativeStatus: 약화
-- narrativeScore: 22
-- moneyFlowScore: 60
-- finalRawScore: 60
-- tieBreakerReason: 최종 원점수 60, 리스크 패널티 0, 5일 수익률 -0.77%, 상대 거래량 1.54배 순으로 정렬
-- 과열 리스크: 낮음
-- reasonConfidence: MEDIUM
-- reasonConfidenceExplanation: ETF 확산도 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
-
-- todayActionLabel: 제외
-- 주문 실행: 지정가 권장
-- 기준일: 2026-09-11
-- 종가: $69.89
-- 1일 수익률: +1.03%
-- 5일 수익률: -0.77%
-- 20일 수익률: +2.04%
-- 상대 거래량: 1.54배
-- 52주 고점 대비 위치: -1.78%
-- whyMoneyIsFlowing: 20일 +2.04%, 5일 -0.77%, 상대 거래량 1.54배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE
-- likelyNextBuyer: 섹터 베타를 노리는 단기 모멘텀 자금과 리밸런싱 자금
-- whyThisCouldTradeHigher: 52주 고점 부근이라 돌파가 확인되면 신고가 추종 매수가 붙을 수 있음
-#### 최근 뉴스/동향 한국어 요약
-
-- 요약: 후보 선정 후 재확인 뉴스 데이터 없음
-- 진입 조건: 전일 고점 돌파와 5일선 유지 확인
-- 무효화 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-- 차트: ![MAGS chart](charts/MAGS.png)
-
-#### 상세 근거
-<details>
-<summary>Roundhill Magnificent Seven ETF(MAGS) 상세 근거 펼치기</summary>
-
-- moneyFlowScore(최종) 산정 근거:
-  - moneyFlowScore(1차): 46
-  - 최종 원점수: 60
-  - 최종 표시 점수: 60
-  - cap 적용: cap 미적용
-  - 계산식: +46 + +12 + 0 + +2 + 0 + 0 + 0 = 60
-  - 점수 해석: 관찰 후보. 흐름은 있으나 우선순위는 낮음.
-  - 가격/거래량 1차 점수: +46
-    - 추세: 0
-    - 단기 모멘텀: +1
-    - 중기 모멘텀: +1
-    - 거래량: +18
-    - 신고가 근접: +12
-    - 이동평균: +14
-  - 하위 점수 cap:
-    - 가격 모멘텀: 원점수 0, 상한 적용 0 / 최대 25
-    - 단기 모멘텀: 원점수 +1, 상한 적용 +1 / 최대 20
-    - 중기 모멘텀: 원점수 +1, 상한 적용 +1 / 최대 16
-    - 거래량: 원점수 +18, 상한 적용 +18 / 최대 20
-    - 신고가 근접: 원점수 +12, 상한 적용 +12 / 최대 12
-    - 이동평균: 원점수 +14, 상한 적용 +14 / 최대 14
-  - 추가 데이터 가감점:
-    - 뉴스: +12
-    - 유동성: +2
-  - ETF 확산도: 0
-  - 리스크 패널티: 0
-  - 주요 근거: 1차 46, 최종 원점수 60, 표시 60. 상대 거래량 증가, 52주 고점 근처, 이동평균 위 추세 유지. 주의: ETF 구성종목 확산도 데이터 미연결.
-  - 리스크 패널티 산정 근거:
-    - 총 리스크 패널티: 0
-    - 리스크 등급: LOW
-    - 감점된 리스크: 없음
-    - 관찰 리스크: ETF breadth data not connected
-    - 한 줄 해석: 직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다.
-- 데이터 사용 현황:
-  - 가격/거래량: 사용
-  - 뉴스: 사용
-  - ETF 확산도: 미연결
-  - 거래대금 유동성: 사용
-  - 관련 ETF 상대강도: 사용
-- 뉴스 확인:
-  - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: MarketWatch RSS, Federal Reserve RSS, Yahoo Finance RSS
-  - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 7/8/1
-  - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 0
-  - 중요 공시 수: 0
-  - 직접 촉매: 없음
-  - 보조 뉴스: MarketWatch RSS sector_theme / macro / under_6h
-  - 뉴스 수집 시각: 2026-09-14 09:47 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-14 05:40 KST
-  - 뉴스 신선도 상태: FRESH
-  - 뉴스 이후 가격 반응: 긍정
-  - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Your Social Security COLA could go up another $71 per month in 2027. That&#x2019;s not necessarily good news.
-  - 원점수/상한 점수: +16 / +12
-  - 점수 반영: +12
-  - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
-- ETF 구성종목 확산도:
-  - 구성종목 데이터 상태: 미연결
-  - 샘플 수: 0/0
-  - 샘플 신뢰도: UNKNOWN
-  - 상승 종목 비율: 데이터 없음
-  - 20일선 위 비율: 데이터 없음
-  - 50일선 위 비율: 데이터 없음
-  - 상위 기여 종목: 데이터 없음
-  - 확산도 판단: UNKNOWN
-  - 원점수/샘플 상한/반영 점수: 0 / N/A / 0
-  - 점수 반영: 0
-- 거래대금 유동성:
-  - 데이터 상태: 일부 연결
-  - 거래대금 기준 유동성: ACCEPTABLE
-  - 거래대금: $303,713,984
-  - 평균 거래대금: $197,074,774
-  - 주문 영향: 지정가 권장
-  - 매매 영향: 거래대금은 허용 가능하나 지정가를 우선한다
-- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
-- 후보 선정 후 뉴스/동향 재확인:
-  - 재확인 상태: 데이터 없음
-- 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
-- 기준일 2026-09-11 | 종가 $69.89 | 1일 +1.03% | 5일 -0.77% | 20일 +2.04% | 상대 거래량 1.54배 | 52주 고점 대비 -1.78% | 데이터 소스: yfinance
 
 </details>
 
@@ -1187,11 +1187,11 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상세 데이터 수집 대상: 가격/거래량 1차 스캔 상위 20개
 - 오늘 진입 후보: 1
 - 오늘 눌림 대기: 0
-- 오늘 관찰: 90
-- 오늘 매매 금지: 29
+- 오늘 관찰: 89
+- 오늘 매매 금지: 30
 - 개별 종목 진입 후보: Advanced Micro Devices Inc.(AMD)
 - 개별 종목 눌림 대기: 없음
-- 개별 종목 매매 금지: Apple Inc.(AAPL), NXP Semiconductors N.V.(NXPI)
+- 개별 종목 매매 금지: Apple Inc.(AAPL), Taiwan Semiconductor(TSM), NXP Semiconductors N.V.(NXPI)
 - 오늘 개별 종목 최우선 1개: Advanced Micro Devices Inc.(AMD) - 관련 ETF보다 강함 | 주식 5일 +13.15% vs ETF 평균 +2.87%, 주식 20일 +6.86% vs ETF 평균 -3.47%, 상대 거래량 1.05배 vs ETF 평균 0.70배
 - 개별 종목 섹션 해석: 이 섹션은 ETF로 확인된 테마 자금 흐름 안에서 ETF보다 더 강한 돌파 가능성이 있는 개별 종목만 선별하는 영역이다.
 
@@ -1217,9 +1217,9 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - finalRawScore: 88
 - tieBreakerReason: 최종 원점수 88, 리스크 패널티 0, 5일 수익률 +13.15%, 상대 거래량 1.05배 순으로 정렬
 - 과열 리스크: 낮음
-- reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?
+- reasonConfidence: MEDIUM
+- reasonConfidenceExplanation: 직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
+
 - todayActionLabel: 자금흐름 예외 조건부
 - 주문 실행: 시장가 가능
 - 기준일: 2026-09-11
@@ -1230,25 +1230,25 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 1.05배
 - 52주 고점 대비 위치: -11.73%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +13.15% vs ETF 평균 +2.87%, 주식 20일 +6.86% vs ETF 평균 -3.47%, 상대 거래량 1.05배 vs ETF 평균 0.70배
-- whyMoneyIsFlowing: 20일 +6.86%, 5일 +13.15%, 상대 거래량 1.05배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID
+- whyMoneyIsFlowing: 20일 +6.86%, 5일 +13.15%, 상대 거래량 1.05배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
 - 왜 ETF가 아니라 이 종목인가: AMD가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
 - ETF가 더 나은 경우: AMD가 관련 ETF 평균보다 약하거나 거래량이 둔화되면 개별 종목보다 관련 ETF를 우선한다.
 #### 최근 뉴스/동향 한국어 요약
 
-- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call"입니다.
-- 직접 촉매 판단: Advanced Micro Devices Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call"이며, 실적 재료로 봅니다.
-- 뉴스 1: Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call
-  - 내용: Advanced Micro Devices Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Elon Musk recently praised a specific GPU stock during SpaceX's earnings call.입니다.
-  - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-  - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-- 뉴스 2: Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited
-  - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Advanced Micro Devices, Inc (NASDAQ:AMD) has set its sights on capitalizing on the growing demand for workstations capable of running large artificial intelligence models.입니다.
+- 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling"입니다.
+- 직접 촉매 판단: Advanced Micro Devices Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling"이며, 시장 일반 재료로 봅니다.
+- 뉴스 1: AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling
+  - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 혼재으로 분류됩니다.
+  - 투자 의미: 단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
+  - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
+- 뉴스 2: Musk Biographer Says AI Giants May Face Liability After Admitting Risks as Nvidia, AMD Slide
+  - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Walter Isaacson, the Musk biographer and Tulane professor, says AI companies may face greater liability after their leaders acknowledged that increasingly capable systems can ca...입니다.
   - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
   - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-- 뉴스 3: AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?
-  - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AMD and Intel compete for processor customers, but they have a common interest in making developers comfortable staying with x86.입니다.
+- 뉴스 3: Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here&#x2019;s what to know.
+  - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Analysts don&#x2019;t expect the push for more responsible AI development to derail data-center spending.입니다.
   - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
   - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
 - 매매 해석: 매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다.
@@ -1302,20 +1302,20 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, Yahoo Finance RSS, MarketWatch RSS
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 12/3/1
-  - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 1
+  - 긍정/중립/부정: 12/4/0
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 2
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?
+  - 직접 촉매: 없음
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-14 09:47 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-14 08:47 KST
+  - 뉴스 수집 시각: 2026-09-15 10:12 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-15 09:48 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer questions Anthropic CEO&apos;s slowdown manifesto and puts forth an action plan
+  - 핵심 뉴스 요약: Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule
   - 원점수/상한 점수: +23 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
@@ -1327,31 +1327,31 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 평균 거래대금: $9,298,980,016
   - 주문 영향: 시장가 가능
   - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
-- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
+- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
 - 후보 선정 후 뉴스/동향 재확인:
   - 재확인 상태: 일부 연결
-  - 재확인 시각: 2026-09-14 09:47 KST
-  - 최근 발행 시각: 2026-09-14 06:10 KST
+  - 재확인 시각: 2026-09-15 10:12 KST
+  - 최근 발행 시각: 2026-09-15 08:19 KST
   - 신선도: FRESH
-  - 출처: Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS
+  - 출처: MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS FAILED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call"입니다.
-  - 직접 촉매: Yahoo Finance RSS / earnings / under_72h - Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call
-  - 한국어 뉴스 요약 1: Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call
-    - 내용: Advanced Micro Devices Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Elon Musk recently praised a specific GPU stock during SpaceX's earnings call.입니다.
-    - 투자 의미: 실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.
-    - 확인할 점: 매출/마진/가이던스 수치, 컨센서스 대비 차이
-  - 한국어 뉴스 요약 2: Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited
-    - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Advanced Micro Devices, Inc (NASDAQ:AMD) has set its sights on capitalizing on the growing demand for workstations capable of running large artificial intelligence models.입니다.
+  - 한국어 요약: 종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling"입니다.
+  - 직접 촉매: Yahoo Finance RSS / general_market / under_24h - AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling
+  - 한국어 뉴스 요약 1: AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling
+    - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 혼재으로 분류됩니다.
+    - 투자 의미: 단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
+    - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
+  - 한국어 뉴스 요약 2: Musk Biographer Says AI Giants May Face Liability After Admitting Risks as Nvidia, AMD Slide
+    - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Walter Isaacson, the Musk biographer and Tulane professor, says AI companies may face greater liability after their leaders acknowledged that increasingly capable systems can ca...입니다.
     - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
     - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-  - 한국어 뉴스 요약 3: AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?
-    - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AMD and Intel compete for processor customers, but they have a common interest in making developers comfortable staying with x86.입니다.
+  - 한국어 뉴스 요약 3: Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here&#x2019;s what to know.
+    - 내용: Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Analysts don&#x2019;t expect the push for more responsible AI development to derail data-center spending.입니다.
     - 투자 의미: 단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.
     - 확인할 점: 원문 수치, 후속 보도, 가격이 진입 조건을 지키는지
-  - 원문 헤드라인 1: Yahoo Finance RSS / earnings / under_72h / positive - Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call
-  - 원문 헤드라인 2: Yahoo Finance RSS / general_market / under_72h / positive - Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited
-  - 원문 헤드라인 3: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?
+  - 원문 헤드라인 1: Yahoo Finance RSS / general_market / under_24h / mixed - AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling
+  - 원문 헤드라인 2: Yahoo Finance RSS / general_market / under_24h / positive - Musk Biographer Says AI Giants May Face Liability After Admitting Risks as Nvidia, AMD Slide
+  - 원문 헤드라인 3: MarketWatch RSS / general_market / under_6h / positive - Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here&#x2019;s what to know.
   - 주의: CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html; SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
 - 기준일 2026-09-11 | 종가 $516.13 | 1일 +2.49% | 5일 +13.15% | 20일 +6.86% | 상대 거래량 1.05배 | 52주 고점 대비 -11.73% | 데이터 소스: yfinance
@@ -1443,21 +1443,21 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 11/4/1
+  - 긍정/중립/부정: 13/3/0
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 2
+  - 강한 촉매 수: 3
   - 중요 공시 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-14 09:47 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-14 08:47 KST
+  - 뉴스 수집 시각: 2026-09-15 10:12 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-15 09:48 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer questions Anthropic CEO&apos;s slowdown manifesto and puts forth an action plan
-  - 원점수/상한 점수: +22 / +12
+  - 핵심 뉴스 요약: Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule
+  - 원점수/상한 점수: +26 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
@@ -1491,8 +1491,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - tieBreakerReason: 최종 원점수 59, 리스크 패널티 0, 5일 수익률 +5.17%, 상대 거래량 1.02배 순으로 정렬
 - 과열 리스크: 낮음
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / general_market / under_72h / mixed - NXP Semiconductors Eyes Physical AI Leadership, Sees Data Center Growth Surge 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / general_market / under_72h / mixed - NXP Semiconductors Eyes Physical AI Leadership, Sees Data Center Growth Surge
+- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - NXP Semiconductors (NXPI) Registers a Bigger Fall Than the Market: Important Facts to Note 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- 직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - NXP Semiconductors (NXPI) Registers a Bigger Fall Than the Market: Important Facts to Note
 - todayActionLabel: 제외
 - 주문 실행: 지정가 권장
 - 기준일: 2026-09-11
@@ -1503,7 +1503,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 1.02배
 - 52주 고점 대비 위치: -30.40%
 - 관련 ETF 대비 상대강도: 관련 ETF보다 강함 | 주식 5일 +5.17% vs ETF 평균 +2.87%, 주식 20일 +2.03% vs ETF 평균 -3.47%, 상대 거래량 1.02배 vs ETF 평균 0.70배
-- whyMoneyIsFlowing: 20일 +2.03%, 5일 +5.17%, 상대 거래량 1.02배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: ACCEPTABLE
+- whyMoneyIsFlowing: 20일 +2.03%, 5일 +5.17%, 상대 거래량 1.02배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: ACCEPTABLE
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
 - 왜 ETF가 아니라 이 종목인가: NXPI가 관련 ETF 평균보다 5일/20일 흐름 또는 거래량에서 강해 개별 종목 우선 후보로 본다.
@@ -1563,19 +1563,19 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 최근 뉴스 상태: 일부 연결
   - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 10/5/1
+  - 긍정/중립/부정: 12/4/0
   - 직접성/방향성/신선도: 4/1/4
   - 강한 촉매 수: 2
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / general_market / under_72h / mixed - NXP Semiconductors Eyes Physical AI Leadership, Sees Data Center Growth Surge
+  - 직접 촉매: Yahoo Finance RSS / general_market / under_6h / neutral - NXP Semiconductors (NXPI) Registers a Bigger Fall Than the Market: Important Facts to Note
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-14 09:47 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-14 08:47 KST
+  - 뉴스 수집 시각: 2026-09-15 10:12 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-15 09:48 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer questions Anthropic CEO&apos;s slowdown manifesto and puts forth an action plan
-  - 원점수/상한 점수: +23 / +12
+  - 핵심 뉴스 요약: Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule
+  - 원점수/상한 점수: +25 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
@@ -1596,7 +1596,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 ### Taiwan Semiconductor(TSM)
 - 자산 유형: STOCK
-- 상태: 관찰
+- 상태: 매매 금지
 - primaryTheme: AI 반도체
 - primarySector: Technology
 - industry: Semiconductors
@@ -1608,10 +1608,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - finalRawScore: 64
 - tieBreakerReason: 최종 원점수 64, 리스크 패널티 0, 5일 수익률 +3.89%, 상대 거래량 1.15배 순으로 정렬
 - 과열 리스크: 낮음
-- reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / general_market / under_72h / positive - Apple, Taiwan Semi Lead Five Stocks Near Buy Points 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / general_market / under_72h / positive - Apple, Taiwan Semi Lead Five Stocks Near Buy Points
-- todayActionLabel: 관찰
+- reasonConfidence: MEDIUM
+- reasonConfidenceExplanation: 직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.
+
+- todayActionLabel: 제외
 - 주문 실행: 시장가 가능
 - 기준일: 2026-09-11
 - 종가: $433.24
@@ -1621,7 +1621,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - 상대 거래량: 1.15배
 - 52주 고점 대비 위치: -9.55%
 - 관련 ETF 대비 상대강도: 관련 ETF와 비슷함 | 주식 5일 +3.89% vs ETF 평균 +3.99%, 주식 20일 +0.64% vs ETF 평균 -4.30%, 상대 거래량 1.15배 vs ETF 평균 0.72배
-- whyMoneyIsFlowing: 20일 +0.64%, 5일 +3.89%, 상대 거래량 1.15배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: LIQUID
+- whyMoneyIsFlowing: 20일 +0.64%, 5일 +3.89%, 상대 거래량 1.15배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID
 - likelyNextBuyer: 개별 주도주를 따라붙는 단기 모멘텀 자금과 관련 ETF 강세를 확인한 트레이더
 - whyThisCouldTradeHigher: 단기 추세가 유지되고 거래량이 1.0배 이상이면 눌림 이후 재상승을 시도할 수 있음
 - 왜 ETF가 아니라 이 종목인가: 관련 ETF와 비슷함 | 주식 5일 +3.89% vs ETF 평균 +3.99%, 주식 20일 +0.64% vs ETF 평균 -4.30%, 상대 거래량 1.15배 vs ETF 평균 0.72배. 개별 종목 우선으로 격상하려면 관련 ETF 대비 상대강도 유지가 더 필요하다.
@@ -1679,21 +1679,21 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 11/4/1
-  - 직접성/방향성/신선도: 4/1/4
-  - 강한 촉매 수: 1
+  - 긍정/중립/부정: 13/3/0
+  - 직접성/방향성/신선도: 2/1/4
+  - 강한 촉매 수: 3
   - 중요 공시 수: 0
-  - 직접 촉매: Yahoo Finance RSS / general_market / under_72h / positive - Apple, Taiwan Semi Lead Five Stocks Near Buy Points
+  - 직접 촉매: 없음
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-14 09:47 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-14 08:47 KST
+  - 뉴스 수집 시각: 2026-09-15 10:12 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-15 09:48 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer questions Anthropic CEO&apos;s slowdown manifesto and puts forth an action plan
-  - 원점수/상한 점수: +22 / +12
+  - 핵심 뉴스 요약: Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule
+  - 원점수/상한 점수: +26 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
@@ -1704,7 +1704,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 평균 거래대금: $4,009,545,220
   - 주문 영향: 시장가 가능
   - 매매 영향: 거래대금이 충분해 시장가 가능 범위로 본다
-- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도 데이터가 확인되어 신뢰도를 높게 본다.
+- reasonConfidence 근거: 가격/거래량, 뉴스, 거래대금 유동성, 관련 ETF 상대강도은 확인됐지만 일부 보조 데이터가 미연결 또는 fallback이라 중간으로 제한한다.
 - 후보 선정 후 뉴스/동향 재확인:
   - 재확인 상태: 데이터 없음
 - 차트 요약: 최근 20거래일 기준 5일선이 20일선 위에 있음
@@ -1727,8 +1727,8 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 - tieBreakerReason: 최종 원점수 72, 리스크 패널티 0, 5일 수익률 +1.24%, 상대 거래량 1.19배 순으로 정렬
 - 과열 리스크: 낮음
 - reasonConfidence: HIGH
-- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / general_market / under_24h - Apple wants AI to listen all day without creeping people out 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
-- 직접 촉매: Yahoo Finance RSS / general_market / under_24h - Apple wants AI to listen all day without creeping people out
+- reasonConfidenceExplanation: 직접 촉매: Yahoo Finance RSS / general_market / under_6h - OpenAI Left Exposed After Apple's Surprise Legal Break 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.
+- 직접 촉매: Yahoo Finance RSS / general_market / under_6h - OpenAI Left Exposed After Apple's Surprise Legal Break
 - todayActionLabel: 제외
 - 주문 실행: 시장가 가능
 - 기준일: 2026-09-11
@@ -1797,21 +1797,21 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
   - 관련 ETF 상대강도: 사용
 - 뉴스 확인:
   - 최근 뉴스 상태: 일부 연결
-  - 뉴스 소스: CNBC Markets RSS, Yahoo Finance RSS, MarketWatch RSS
+  - 뉴스 소스: CNBC Markets RSS, MarketWatch RSS, Yahoo Finance RSS
   - 소스별 상태: Yahoo Finance RSS CONNECTED; MarketWatch RSS CONNECTED; CNBC Markets RSS CONNECTED; SEC EDGAR RSS PARTIAL; Federal Reserve RSS CONNECTED; Finnhub API DISABLED
-  - 긍정/중립/부정: 12/3/1
+  - 긍정/중립/부정: 13/3/0
   - 직접성/방향성/신선도: 2/1/4
-  - 강한 촉매 수: 1
+  - 강한 촉매 수: 2
   - 중요 공시 수: 0
   - 직접 촉매: 없음
   - 보조 뉴스: CNBC Markets RSS sector_theme / general_market / under_6h
-  - 뉴스 수집 시각: 2026-09-14 09:47 KST
-  - 가장 최근 뉴스 발행 시각: 2026-09-14 08:47 KST
+  - 뉴스 수집 시각: 2026-09-15 10:12 KST
+  - 가장 최근 뉴스 발행 시각: 2026-09-15 09:48 KST
   - 뉴스 신선도 상태: FRESH
   - 뉴스 이후 가격 반응: 긍정
   - 가격 반응 점수 제한: 뉴스 이후 가격 반응과 점수 제한 특이사항 없음
-  - 핵심 뉴스 요약: Jim Cramer questions Anthropic CEO&apos;s slowdown manifesto and puts forth an action plan
-  - 원점수/상한 점수: +21 / +12
+  - 핵심 뉴스 요약: Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule
+  - 원점수/상한 점수: +24 / +12
   - 점수 반영: +12
   - 주의: SEC EDGAR RSS: no matching RSS items; Finnhub API: FINNHUB_API_KEY not configured
 - ETF 구성종목 확산도: 관련 ETF에서 확인
@@ -1834,74 +1834,32 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 이 섹션은 실제 계좌 보유 종목이 아니라 전일 리포트에서 제시된 개별 종목 후보의 사후 점검이다.
 실제 보유 수량/평단이 입력되지 않았으므로 계좌 수익률이 아니라 추천 기준일 이후 가격 변화를 추적한다.
 
-#### Constellation Energy Corporation(CEG)
-- 전일 추천일: 2026-09-08
-- 전일 actionLabel: 조건부 진입
-- 전일 moneyFlowScore: 85
-- 전일 종가 또는 추천 기준가: $299.05
-- 오늘 종가: $284.75
-- 추천 이후 수익률: -4.78%
-- 진입 조건 충족 여부: 미충족
-- 무효화 조건 발생 여부: 발생
-- 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 무효화
-- 오늘 판단 근거: CEG는 전일 추천 이후 -4.78% 변화. 관련 ETF와 비슷함 | 주식 5일 -0.11% vs ETF 평균 -1.22%, 주식 20일 +2.19% vs ETF 평균 -2.97%, 상대 거래량 0.70배 vs ETF 평균 1.18배
-- 다음 확인 조건: 거래량 회복 실패
-
 #### Advanced Micro Devices Inc.(AMD)
-- 전일 추천일: 2026-09-08
-- 전일 actionLabel: 자금흐름 예외 조건부
-- 전일 moneyFlowScore: 89
-- 전일 종가 또는 추천 기준가: $505.74
+- 전일 추천일: 2026-09-09
+- 전일 actionLabel: 조건부 진입
+- 전일 moneyFlowScore: 95
+- 전일 종가 또는 추천 기준가: $521.1
 - 오늘 종가: $516.13
-- 추천 이후 수익률: +2.05%
+- 추천 이후 수익률: -0.95%
 - 진입 조건 충족 여부: 충족 또는 유지
 - 무효화 조건 발생 여부: 미발생
 - 관련 ETF 대비 상대강도 유지 여부: 유지
 - 오늘 상태: 눌림 대기
-- 오늘 판단 근거: AMD는 전일 추천 이후 +2.05% 변화. 관련 ETF보다 강함 | 주식 5일 +13.15% vs ETF 평균 +2.87%, 주식 20일 +6.86% vs ETF 평균 -3.47%, 상대 거래량 1.05배 vs ETF 평균 0.70배
+- 오늘 판단 근거: AMD는 전일 추천 이후 -0.95% 변화. 관련 ETF보다 강함 | 주식 5일 +13.15% vs ETF 평균 +2.87%, 주식 20일 +6.86% vs ETF 평균 -3.47%, 상대 거래량 1.05배 vs ETF 평균 0.70배
 - 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
 
-#### Taiwan Semiconductor(TSM)
-- 전일 추천일: 2026-09-08
-- 전일 actionLabel: 조건부 진입
-- 전일 moneyFlowScore: 80
-- 전일 종가 또는 추천 기준가: $439
-- 오늘 종가: $433.24
-- 추천 이후 수익률: -1.31%
+#### Meta Platforms Inc.(META)
+- 전일 추천일: 2026-09-09
+- 전일 actionLabel: 자금흐름 예외 조건부
+- 전일 moneyFlowScore: 91
+- 전일 종가 또는 추천 기준가: $653.69
+- 오늘 종가: $648.03
+- 추천 이후 수익률: -0.87%
 - 진입 조건 충족 여부: 미충족
 - 무효화 조건 발생 여부: 미발생
 - 관련 ETF 대비 상대강도 유지 여부: 유지
 - 오늘 상태: 유지
-- 오늘 판단 근거: TSM는 전일 추천 이후 -1.31% 변화. 관련 ETF와 비슷함 | 주식 5일 +3.89% vs ETF 평균 +3.99%, 주식 20일 +0.64% vs ETF 평균 -4.30%, 상대 거래량 1.15배 vs ETF 평균 0.72배
-- 다음 확인 조건: 20일선 이탈 또는 상대 거래량 0.8배 이하 둔화
-
-#### IREN
-- 전일 추천일: 2026-09-08
-- 전일 actionLabel: 자금흐름 예외 조건부
-- 전일 moneyFlowScore: 95
-- 전일 종가 또는 추천 기준가: $46.93
-- 오늘 종가: $43.83
-- 추천 이후 수익률: -6.61%
-- 진입 조건 충족 여부: 미충족
-- 무효화 조건 발생 여부: 발생
-- 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 무효화
-- 오늘 판단 근거: IREN는 전일 추천 이후 -6.61% 변화. 관련 ETF와 비슷함 | 주식 5일 +5.23% vs ETF 평균 -3.87%, 주식 20일 -2.08% vs ETF 평균 +13.93%, 상대 거래량 0.68배 vs ETF 평균 0.67배
-- 다음 확인 조건: 거래량 회복 실패
-
-#### MARA Holdings(MARA)
-- 전일 추천일: 2026-09-08
-- 전일 actionLabel: 자금흐름 예외 조건부
-- 전일 moneyFlowScore: 94
-- 전일 종가 또는 추천 기준가: $11.83
-- 오늘 종가: $11.98
-- 추천 이후 수익률: +1.27%
-- 진입 조건 충족 여부: 미충족
-- 무효화 조건 발생 여부: 미발생
-- 관련 ETF 대비 상대강도 유지 여부: 유지
-- 오늘 상태: 유지
-- 오늘 판단 근거: MARA는 전일 추천 이후 +1.27% 변화. 관련 ETF보다 강함 | 주식 5일 +3.28% vs ETF 평균 -3.87%, 주식 20일 +30.08% vs ETF 평균 +13.93%, 상대 거래량 0.90배 vs ETF 평균 0.67배
+- 오늘 판단 근거: META는 전일 추천 이후 -0.87% 변화. 관련 ETF보다 강함 | 주식 5일 +6.12% vs ETF 평균 -0.39%, 주식 20일 +8.92% vs ETF 평균 -2.35%, 상대 거래량 0.94배 vs ETF 평균 0.87배
 - 다음 확인 조건: 거래량 회복 실패
 
 ### 2-4. ETF 대비 개별 종목 판단 로직
@@ -1929,7 +1887,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 #### Taiwan Semiconductor(TSM)
 - moneyFlowScore(최종): 64
 - moneyFlowScore 산정 근거 요약: 1차 45, 최종 원점수 64, 표시 64. 이동평균 위 추세 유지, 관련 ETF 강세 테마 안의 개별 종목, 뉴스 흐름이 가격/거래량 근거 보강. 주의: 큰 감점 제한적.
-- 제외/주의 사유: 개별 종목 우선 근거 부족
+- 제외/주의 사유: 매매 조건 미충족
 - 해제 조건: 20일선 위 눌림 후 재상승 확인
 
 #### MARA Holdings(MARA)
@@ -1962,10 +1920,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 순위 | 티커 | 이름 | moneyFlowScore(1차) | 최종 표시 점수 | 최종 원점수 | 점수 구간 | 오늘 판단 | 신뢰도 | 1일 | 5일 | 20일 | 상대 거래량 | 관련 ETF |
 |---:|---|---|---:|---:|---:|---|---|---|---:|---:|---:|---:|---|
-| 1 | AMD | Advanced Micro Devices Inc. | 69 | 88 | 88 | 관심 후보 | 자금흐름 예외 조건부 | HIGH | +2.49% | +13.15% | +6.86% | 1.05 | SMH, SOXX, SOXQ, AIQ |
+| 1 | AMD | Advanced Micro Devices Inc. | 69 | 88 | 88 | 관심 후보 | 자금흐름 예외 조건부 | MEDIUM | +2.49% | +13.15% | +6.86% | 1.05 | SMH, SOXX, SOXQ, AIQ |
 | 2 | QCOM | QUALCOMM Incorporated | 60 | 79 | 79 | 관찰 후보 | 관찰 | MEDIUM | +2.88% | +7.95% | +10.43% | 1.05 | SMH, SOXX, SOXQ, AIQ |
 | 3 | AAPL | Apple Inc. | 50 | 72 | 72 | 관찰 후보 | 제외 | HIGH | +1.75% | +1.24% | +8.85% | 1.19 | QQQ, MAGS, SPY |
-| 4 | TSM | Taiwan Semiconductor | 45 | 64 | 64 | 우선순위 낮음/매매 금지 | 관찰 | HIGH | +1.22% | +3.89% | +0.64% | 1.15 | SMH, SOXX, SOXQ |
+| 4 | TSM | Taiwan Semiconductor | 45 | 64 | 64 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | +1.22% | +3.89% | +0.64% | 1.15 | SMH, SOXX, SOXQ |
 | 5 | MARA | MARA Holdings | 45 | 62 | 62 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +4.81% | +3.28% | +30.08% | 0.90 | IBIT, BLOK |
 | 6 | NXPI | NXP Semiconductors N.V. | 43 | 59 | 59 | 우선순위 낮음/매매 금지 | 제외 | HIGH | +4.48% | +5.17% | +2.03% | 1.02 | SMH, SOXX, SOXQ, AIQ |
 | 7 | MRVL | Marvell Technology Inc. | 40 | 55 | 55 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +4.03% | +13.06% | +6.27% | 0.71 | SMH, SOXX, SOXQ, AIQ |
@@ -1988,10 +1946,10 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 | 순위 | 티커 | 이름 | moneyFlowScore(1차) | 최종 표시 점수 | 최종 원점수 | 점수 구간 | 오늘 판단 | 신뢰도 | 1일 | 5일 | 20일 | 상대 거래량 | 관련 ETF |
 |---:|---|---|---:|---:|---:|---|---|---|---:|---:|---:|---:|---|
-| 1 | AMD | Advanced Micro Devices Inc. | 69 | 88 | 88 | 관심 후보 | 자금흐름 예외 조건부 | HIGH | +2.49% | +13.15% | +6.86% | 1.05 | SMH, SOXX, SOXQ, AIQ |
+| 1 | AMD | Advanced Micro Devices Inc. | 69 | 88 | 88 | 관심 후보 | 자금흐름 예외 조건부 | MEDIUM | +2.49% | +13.15% | +6.86% | 1.05 | SMH, SOXX, SOXQ, AIQ |
 | 2 | QCOM | QUALCOMM Incorporated | 60 | 79 | 79 | 관찰 후보 | 관찰 | MEDIUM | +2.88% | +7.95% | +10.43% | 1.05 | SMH, SOXX, SOXQ, AIQ |
 | 3 | AAPL | Apple Inc. | 50 | 72 | 72 | 관찰 후보 | 제외 | HIGH | +1.75% | +1.24% | +8.85% | 1.19 | QQQ, MAGS, SPY |
-| 4 | TSM | Taiwan Semiconductor | 45 | 64 | 64 | 우선순위 낮음/매매 금지 | 관찰 | HIGH | +1.22% | +3.89% | +0.64% | 1.15 | SMH, SOXX, SOXQ |
+| 4 | TSM | Taiwan Semiconductor | 45 | 64 | 64 | 우선순위 낮음/매매 금지 | 제외 | MEDIUM | +1.22% | +3.89% | +0.64% | 1.15 | SMH, SOXX, SOXQ |
 | 5 | MARA | MARA Holdings | 45 | 62 | 62 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +4.81% | +3.28% | +30.08% | 0.90 | IBIT, BLOK |
 | 6 | NXPI | NXP Semiconductors N.V. | 43 | 59 | 59 | 우선순위 낮음/매매 금지 | 제외 | HIGH | +4.48% | +5.17% | +2.03% | 1.02 | SMH, SOXX, SOXQ, AIQ |
 | 7 | MRVL | Marvell Technology Inc. | 40 | 55 | 55 | 우선순위 낮음/매매 금지 | 거래량 확인 전 관찰 | LOW | +4.03% | +13.06% | +6.27% | 0.71 | SMH, SOXX, SOXQ, AIQ |
@@ -2125,36 +2083,36 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 | iShares Expanded Tech-Software Sector ETF(IGV) | 클라우드/엔터프라이즈 소프트웨어 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.53배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
 | Global X Artificial Intelligence & Technology ETF(AIQ) | AI 소프트웨어 ETF | 9 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.63배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
 | Global X Robotics & Artificial Intelligence ETF(BOTZ) | 로봇/자동화 ETF | 0 | 매매 금지 | LOW | 20일 -6.72%, 5일 -1.48%, 상대 거래량 1.59배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
-| ROBO Global Robotics and Automation Index ETF(ROBO) | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.41배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
-| First Trust NASDAQ Cybersecurity ETF(CIBR) | 사이버보안 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.71배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
+| ROBO Global Robotics and Automation Index ETF(ROBO) | 로봇/자동화 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.41배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| First Trust NASDAQ Cybersecurity ETF(CIBR) | 사이버보안 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.71배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
 | Amplify Cybersecurity ETF(HACK) | 사이버보안 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.97배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
 | iShares Cybersecurity and Tech ETF(IHAK) | 사이버보안 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.48배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
 | iShares U.S. Aerospace & Defense ETF(ITA) | 방산 ETF | 0 | 매매 금지 | LOW | 20일 -12.29%, 5일 -3.08%, 상대 거래량 1.00배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| SPDR S&P Aerospace & Defense ETF(XAR) | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.73배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS offering/stale |
+| SPDR S&P Aerospace & Defense ETF(XAR) | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.73배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
 | Global X Defense Tech ETF(SHLD) | 방산 ETF | 0 | 매매 금지 | LOW | 20일 -12.12%, 5일 -3.14%, 상대 거래량 1.15배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
-| Invesco Aerospace & Defense ETF(PPA) | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.77배라 신규 자금 유입 강도는 약함 |
-| Global X U.S. Infrastructure Development ETF(PAVE) | 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.75배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
-| First Trust NASDAQ Clean Edge Smart Grid Infrastructure ETF(GRID) | 전력망 인프라 ETF | 11 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.57배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
-| iShares U.S. Infrastructure ETF(IFRA) | 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.32배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
-| Utilities Select Sector SPDR Fund(XLU) | 전력/유틸리티 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.77배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: ACCEPTABLE |
-| Global X Uranium ETF(URA) | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.86배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE |
-| VanEck Uranium and Nuclear ETF(NLR) | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.90배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS macro/under_6h |
-| Global X Lithium & Battery Tech ETF(LIT) | 배터리/리튬 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.48배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS macro/under_6h |
-| Global X Copper Miners ETF(COPX) | 구리/금속 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.92배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE |
-| SPDR S&P Metals & Mining ETF(XME) | 금속/광산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.95배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE |
-| Energy Select Sector SPDR Fund(XLE) | 전통 에너지 ETF | 62 | 매매 금지 | MEDIUM | 20일 +6.68%, 5일 +0.80%, 상대 거래량 1.14배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: LIQUID |
-| VanEck Oil Services ETF(OIH) | 전통 에너지 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.91배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale |
-| ARK Innovation ETF(ARKK) | 혁신 성장 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: ACCEPTABLE |
-| Renaissance IPO ETF(IPO) | IPO/신규상장 ETF | 0 | 매매 금지 | LOW | 20일 -8.47%, 5일 -2.46%, 상대 거래량 1.25배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS mna/stale |
-| KraneShares CSI China Internet ETF(KWEB) | 중국 인터넷 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.90배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE |
-| Roundhill Magnificent Seven ETF(MAGS) | 메가캡 플랫폼 ETF | 60 | 매매 금지 | MEDIUM | 20일 +2.04%, 5일 -0.77%, 상대 거래량 1.54배로 가격과 거래량이 함께 개선. 뉴스: MarketWatch RSS macro/under_6h / 유동성: ACCEPTABLE |
-| Invesco QQQ Trust(QQQ) | 시장 기준 ETF | 7 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.87배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_72h / 유동성: LIQUID |
-| SPDR S&P 500 ETF Trust(SPY) | 시장 기준 ETF | 36 | 매매 금지 | MEDIUM | 20일 -1.75%, 5일 -1.15%, 상대 거래량 1.22배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS general_market/under_24h / 유동성: LIQUID |
-| iShares Russell 2000 ETF(IWM) | 시장 기준 ETF | 17 | 매매 금지 | LOW | 20일 -4.81%, 5일 -2.13%, 상대 거래량 1.45배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS macro/stale / 유동성: LIQUID |
-| iShares 20+ Year Treasury Bond ETF(TLT) | 채권 ETF | 11 | 매매 금지 | LOW | 20일 -2.08%, 5일 -1.46%, 상대 거래량 1.06배로 가격과 거래량이 함께 개선. 뉴스: Yahoo Finance RSS macro/under_72h / 유동성: LIQUID |
-| SPDR Gold Shares(GLD) | 금 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.90배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: LIQUID |
-| iShares Bitcoin Trust ETF(IBIT) | 비트코인 ETF | 33 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.78배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/stale / 유동성: LIQUID |
-| Amplify Transformational Data Sharing ETF(BLOK) | 비트코인 ETF | 8 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.56배라 신규 자금 유입 강도는 약함. 뉴스: MarketWatch RSS macro/under_6h |
+| Invesco Aerospace & Defense ETF(PPA) | 방산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.77배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| Global X U.S. Infrastructure Development ETF(PAVE) | 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.75배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| First Trust NASDAQ Clean Edge Smart Grid Infrastructure ETF(GRID) | 전력망 인프라 ETF | 11 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.57배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| iShares U.S. Infrastructure ETF(IFRA) | 인프라 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.32배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| Utilities Select Sector SPDR Fund(XLU) | 전력/유틸리티 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.77배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| Global X Uranium ETF(URA) | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.86배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| VanEck Uranium and Nuclear ETF(NLR) | 원전/우라늄 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.90배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| Global X Lithium & Battery Tech ETF(LIT) | 배터리/리튬 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.48배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| Global X Copper Miners ETF(COPX) | 구리/금속 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.92배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| SPDR S&P Metals & Mining ETF(XME) | 금속/광산 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.95배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| Energy Select Sector SPDR Fund(XLE) | 전통 에너지 ETF | 62 | 매매 금지 | MEDIUM | 20일 +6.68%, 5일 +0.80%, 상대 거래량 1.14배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
+| VanEck Oil Services ETF(OIH) | 전통 에너지 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.91배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
+| ARK Innovation ETF(ARKK) | 혁신 성장 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.68배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| Renaissance IPO ETF(IPO) | IPO/신규상장 ETF | 0 | 매매 금지 | LOW | 20일 -8.47%, 5일 -2.46%, 상대 거래량 1.25배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h |
+| KraneShares CSI China Internet ETF(KWEB) | 중국 인터넷 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.90배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| Roundhill Magnificent Seven ETF(MAGS) | 메가캡 플랫폼 ETF | 60 | 매매 금지 | MEDIUM | 20일 +2.04%, 5일 -0.77%, 상대 거래량 1.54배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: ACCEPTABLE |
+| Invesco QQQ Trust(QQQ) | 시장 기준 ETF | 7 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.87배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS general_market/under_6h / 유동성: LIQUID |
+| SPDR S&P 500 ETF Trust(SPY) | 시장 기준 ETF | 36 | 매매 금지 | MEDIUM | 20일 -1.75%, 5일 -1.15%, 상대 거래량 1.22배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
+| iShares Russell 2000 ETF(IWM) | 시장 기준 ETF | 17 | 매매 금지 | LOW | 20일 -4.81%, 5일 -2.13%, 상대 거래량 1.45배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
+| iShares 20+ Year Treasury Bond ETF(TLT) | 채권 ETF | 11 | 매매 금지 | LOW | 20일 -2.08%, 5일 -1.46%, 상대 거래량 1.06배로 가격과 거래량이 함께 개선. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
+| SPDR Gold Shares(GLD) | 금 ETF | 0 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.90배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h / 유동성: LIQUID |
+| iShares Bitcoin Trust ETF(IBIT) | 비트코인 ETF | 33 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.78배라 신규 자금 유입 강도는 약함. 뉴스: Yahoo Finance RSS macro/under_72h / 유동성: LIQUID |
+| Amplify Transformational Data Sharing ETF(BLOK) | 비트코인 ETF | 8 | 관찰 | LOW | 최근 수익률은 확인되지만 상대 거래량 0.56배라 신규 자금 유입 강도는 약함. 뉴스: CNBC Markets RSS general_market/under_6h |
 
 ## 3. 최종 실행 판단
 
@@ -2197,7 +2155,7 @@ https://yoolcool.github.io/DailyTradingThesisAgent/
 
 - 전일 추천 snapshot:
   - 상태: 연결됨
-  - 점검 대상: 5
+  - 점검 대상: 2
   - 저장 위치: data/latest-report.json, data/previous-report.json, data/dailyReports/
 
 - 거래대금 유동성:

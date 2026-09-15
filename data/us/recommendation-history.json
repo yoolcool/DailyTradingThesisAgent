@@ -1,8 +1,31 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-14T00:47:25.657Z",
+  "updatedAt": "2026-09-15T01:12:42.352Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
+    {
+      "reportDate": "2026-09-15",
+      "reportGeneratedAt": "2026-09-15T01:12:42.307Z",
+      "reportGeneratedAtET": "2026-09-14 21:12:42 ET",
+      "ticker": "AMD",
+      "assetType": "STOCK",
+      "rank": 1,
+      "recommendationPrice": 516.13,
+      "recommendationClosePrice": 516.13,
+      "narrative": "반도체 설계/공급망 재가속",
+      "moneyFlowScore": 88,
+      "finalRawScore": 88,
+      "confidence": "MEDIUM",
+      "actionLabel": "자금흐름 예외 조건부",
+      "trackingSessionDate": "2026-09-15",
+      "trackingStatus": "pending",
+      "intradayHighAfterRecommendation": null,
+      "trackingClose": null,
+      "highReturnPct": null,
+      "closeReturnPct": null,
+      "resultLabel": "추적 대기",
+      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음"
+    },
     {
       "reportDate": "2026-09-14",
       "reportGeneratedAt": "2026-09-14T00:47:25.611Z",
