@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-15T01:27:06.581Z",
+  "updatedAt": "2026-09-16T01:24:35.751Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
     {
@@ -20,9 +20,9 @@
       "trackingSessionDate": "2026-09-15",
       "trackingStatus": "complete",
       "intradayHighAfterRecommendation": 15250,
-      "trackingClose": 14830,
+      "trackingClose": 14780,
       "highReturnPct": 2.83,
-      "closeReturnPct": 0,
+      "closeReturnPct": -0.34,
       "resultLabel": "제한적 유효",
       "resultComment": "제한적인 장중 기회만 발생 (일봉 기준)"
     },
@@ -2413,9 +2413,9 @@
       "trackingEndDate": "2026-06-26",
       "trackingStatus": "complete",
       "weeklyHigh": 150735,
-      "latestClose": 105495,
+      "latestClose": 105215,
       "weeklyHighReturnPct": 2.6,
-      "latestCloseReturnPct": -28.19,
+      "latestCloseReturnPct": -28.38,
       "resultLabel": "단기 고점 후 반납",
       "resultComment": "1주 내 상승 기회는 있었지만 현재가는 반납"
     },
