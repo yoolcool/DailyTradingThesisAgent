@@ -13,13 +13,13 @@
     ],
     "sessionLabel": "US regular session"
   },
-  "reportDate": "2026-09-14",
-  "generatedAt": "2026년 9월 14일 월요일 AM 9:47",
+  "reportDate": "2026-09-15",
+  "generatedAt": "2026년 9월 15일 화요일 AM 10:12",
   "marketRegimeAssessment": {
     "label": "기간 조정",
-    "score": 75,
+    "score": 66,
     "actionBias": "추격 보류, 돌파 확인",
-    "conclusion": "장기 추세는 유지되지만 단기 추세가 둔화되어 기간 조정으로 본다. 기술 92점, 매크로 43점.",
+    "conclusion": "장기 추세는 유지되지만 단기 추세가 둔화되어 기간 조정으로 본다. 기술 78점, 매크로 43점.",
     "reliability": {
       "grade": "HIGH",
       "score": 100,
@@ -38,15 +38,15 @@
       ]
     },
     "change": {
-      "status": "SOFTER",
-      "label": "약화",
-      "previousLabel": "기간 조정",
-      "previousScore": 81,
-      "scoreDelta": -6,
-      "summary": "기간 조정은 유지됐지만 점수는 전일보다 약화됐다(-6점)."
+      "status": "IMPROVED",
+      "label": "개선",
+      "previousLabel": "중립-상승",
+      "previousScore": 56,
+      "scoreDelta": 10,
+      "summary": "중립-상승에서 기간 조정으로 개선됐다(+10점)."
     },
     "technical": {
-      "score": 92,
+      "score": 78,
       "label": "상승 추세 우위",
       "benchmarks": [
         {
@@ -59,18 +59,18 @@
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
           "score": 95,
-          "lastClose": 7656.98,
-          "dataDate": "2026-09-11",
-          "dailyChangePct": 0.86,
-          "return5dPct": -1.17,
-          "return20dPct": -1.82,
-          "return60dPct": 2,
-          "drawdownFrom52wHighPct": -2.04,
-          "ma50": 7607.34,
+          "lastClose": 7619.98,
+          "dataDate": "2026-09-14",
+          "dailyChangePct": -0.48,
+          "return5dPct": -1.28,
+          "return20dPct": -2.13,
+          "return60dPct": 3,
+          "drawdownFrom52wHighPct": -2.52,
+          "ma50": 7610.07,
           "ma200": null,
           "aboveMa50": true,
           "aboveMa200": true,
-          "reason": "50일선 위, 200일선 위, 20일 -1.82%, 60일 +2.00%, 52주 고점 대비 -2.04% -> 기술 점수 95"
+          "reason": "50일선 위, 200일선 위, 20일 -2.13%, 60일 +3.00%, 52주 고점 대비 -2.52% -> 기술 점수 95"
         },
         {
           "ticker": "^NDX",
@@ -81,19 +81,19 @@
           "weight": 0.5,
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
-          "score": 89,
-          "lastClose": 29368.4395,
-          "dataDate": "2026-09-11",
-          "dailyChangePct": 0.91,
-          "return5dPct": -0.39,
-          "return20dPct": -2.38,
+          "score": 61,
+          "lastClose": 29127.1582,
+          "dataDate": "2026-09-14",
+          "dailyChangePct": -0.82,
+          "return5dPct": -1.41,
+          "return20dPct": -3.06,
           "return60dPct": -2,
-          "drawdownFrom52wHighPct": -4.53,
-          "ma50": 29197.55,
+          "drawdownFrom52wHighPct": -5.32,
+          "ma50": 29193.51,
           "ma200": null,
-          "aboveMa50": true,
+          "aboveMa50": false,
           "aboveMa200": true,
-          "reason": "50일선 위, 200일선 위, 20일 -2.38%, 60일 -2.00%, 52주 고점 대비 -4.53% -> 기술 점수 89"
+          "reason": "50일선 아래, 200일선 위, 20일 -3.06%, 60일 -2.00%, 52주 고점 대비 -5.32% -> 기술 점수 61"
         }
       ]
     },
@@ -110,8 +110,8 @@
           "stance": "금리 부담",
           "confidence": "HIGH",
           "reasons": [
-            "US 10Y yield 20일 +7.20%, 5일 +4.47%",
-            "US 3M yield 20일 +5.61%, 단기금리 방향 확인",
+            "US 10Y yield 20일 +5.64%, 5일 +3.70%",
+            "US 3M yield 20일 +6.44%, 단기금리 방향 확인",
             "US long-duration bonds 20일 -2.08%, 장기채 가격 기준 할인율 부담 확인"
           ],
           "watchItems": [
@@ -151,14 +151,14 @@
         "creditLiquidity": {
           "key": "creditLiquidity",
           "title": "신용/유동성",
-          "score": 42,
+          "score": 40,
           "label": "부담",
           "stance": "신용/유동성 부담",
           "confidence": "HIGH",
           "reasons": [
             "High yield credit 20일 -1.49%, 하이일드 위험선호 확인",
             "HYG-LQD 20일 상대강도 +0.60%, 신용위험 선호/회피 확인",
-            "VIX 20일 +11.16%, 변동성 부담 확인"
+            "VIX 20일 +12.57%, 변동성 부담 확인"
           ],
           "watchItems": [
             "VIX 상승은 유동성/리스크 프리미엄 부담으로 해석한다."
@@ -194,11 +194,11 @@
           "riskOnWhen": "down",
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
-          "score": 35,
-          "dataDate": "2026-09-11",
-          "return5dPct": 4.47,
-          "return20dPct": 7.2,
-          "reason": "하락 시 주식 우호; 5일 +4.47%, 20일 +7.20% -> 매크로 점수 35"
+          "score": 38,
+          "dataDate": "2026-09-14",
+          "return5dPct": 3.7,
+          "return20dPct": 5.64,
+          "reason": "하락 시 주식 우호; 5일 +3.70%, 20일 +5.64% -> 매크로 점수 38"
         },
         {
           "ticker": "^IRX",
@@ -207,11 +207,11 @@
           "riskOnWhen": "down",
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
-          "score": 37,
-          "dataDate": "2026-09-11",
-          "return5dPct": 4.63,
-          "return20dPct": 5.61,
-          "reason": "하락 시 주식 우호; 5일 +4.63%, 20일 +5.61% -> 매크로 점수 37"
+          "score": 36,
+          "dataDate": "2026-09-14",
+          "return5dPct": 4.74,
+          "return20dPct": 6.44,
+          "reason": "하락 시 주식 우호; 5일 +4.74%, 20일 +6.44% -> 매크로 점수 36"
         },
         {
           "ticker": "TLT",
@@ -311,11 +311,11 @@
           "riskOnWhen": "down",
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
-          "score": 25,
-          "dataDate": "2026-09-11",
-          "return5dPct": 9.02,
-          "return20dPct": 11.16,
-          "reason": "하락 시 주식 우호; 5일 +9.02%, 20일 +11.16% -> 매크로 점수 25"
+          "score": 20,
+          "dataDate": "2026-09-14",
+          "return5dPct": 11.76,
+          "return20dPct": 12.57,
+          "reason": "하락 시 주식 우호; 5일 +11.76%, 20일 +12.57% -> 매크로 점수 20"
         }
       ]
     },
@@ -352,7 +352,7 @@
         "moneyFlowScoreFinal": 88,
         "finalRawScore": 88,
         "todayActionLabel": "자금흐름 예외 조건부",
-        "reasonConfidence": "HIGH",
+        "reasonConfidence": "MEDIUM",
         "oneDayReturn": 2.49,
         "fiveDayReturn": 13.15,
         "twentyDayReturn": 6.86,
@@ -422,8 +422,8 @@
         "moneyFlowScoreInitial": 45,
         "moneyFlowScoreFinal": 64,
         "finalRawScore": 64,
-        "todayActionLabel": "관찰",
-        "reasonConfidence": "HIGH",
+        "todayActionLabel": "제외",
+        "reasonConfidence": "MEDIUM",
         "oneDayReturn": 1.22,
         "fiveDayReturn": 3.89,
         "twentyDayReturn": 0.64,
@@ -3091,13 +3091,13 @@
         "TSM",
         "MRVL"
       ],
-      "whyMoneyIsFlowing": "반도체 설계/공급망 재가속 관련 iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ)와 Advanced Micro Devices Inc.(AMD), QUALCOMM Incorporated(QCOM), Taiwan Semiconductor(TSM), Marvell Technology Inc.(MRVL)의 5일(+5.51%)·20일(-0.14%) 흐름을 함께 본다. 평균 상대 거래량은 0.87배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "whyMoneyIsFlowing": "반도체 설계/공급망 재가속 관련 iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ)와 Advanced Micro Devices Inc.(AMD), QUALCOMM Incorporated(QCOM), Taiwan Semiconductor(TSM), Marvell Technology Inc.(MRVL)의 5일(+5.51%)·20일(-0.14%) 흐름을 함께 본다. 평균 상대 거래량은 0.87배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: TSM, AMD, QCOM",
       "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH), Advanced Micro Devices Inc.(AMD), QUALCOMM Incorporated(QCOM) 중심으로 5일 +5.51%, 20일 -0.14% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 2,
+      "summaryReason": "iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH), Advanced Micro Devices Inc.(AMD), QUALCOMM Incorporated(QCOM) 중심으로 5일 +5.51%, 20일 -0.14% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
       "etfBreadthScore": -2,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
@@ -3255,8 +3255,8 @@
     {
       "name": "AI 인프라 재가속",
       "status": "소멸",
-      "narrativeScore": 15,
-      "rawScore": 15,
+      "narrativeScore": 16,
+      "rawScore": 16,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "DRAM",
@@ -3281,13 +3281,13 @@
         "MU",
         "NVDA"
       ],
-      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 Roundhill Memory ETF(DRAM), iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH)와 Advanced Micro Devices Inc.(AMD), Eaton(ETN), Micron Technology Inc.(MU), NVIDIA Corporation(NVDA)의 5일(+2.68%)·20일(-3.11%) 흐름을 함께 본다. 평균 상대 거래량은 0.77배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "whyMoneyIsFlowing": "AI 인프라 재가속 관련 Roundhill Memory ETF(DRAM), iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH)와 Advanced Micro Devices Inc.(AMD), Eaton(ETN), Micron Technology Inc.(MU), NVIDIA Corporation(NVDA)의 5일(+2.68%)·20일(-3.11%) 흐름을 함께 본다. 평균 상대 거래량은 0.77배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "AI 인프라 CAPEX와 데이터센터 병목을 사는 반도체/전력망 ETF 자금과 신고가 모멘텀 추종 자금",
       "bestTradingVehicle": "ETF 우선: SMH, SOXX, DRAM / 개별 종목 우선: NVDA, MU, VRT",
       "breakCondition": "SMH/SOXX/DRAM 20일선 이탈, 관련 반도체와 전력 인프라 종목 절반 이상 5일선 이탈",
       "todayAction": "추격보다 5일선 지지 후 재상승 확인",
-      "summaryReason": "Roundhill Memory ETF(DRAM), iShares Semiconductor ETF(SOXX), Advanced Micro Devices Inc.(AMD), Eaton(ETN) 중심으로 5일 +2.68%, 20일 -3.11% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 1,
+      "summaryReason": "Roundhill Memory ETF(DRAM), iShares Semiconductor ETF(SOXX), Advanced Micro Devices Inc.(AMD), Eaton(ETN) 중심으로 5일 +2.68%, 20일 -3.11% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
       "etfBreadthScore": -1,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
@@ -3478,8 +3478,8 @@
     {
       "name": "Aerospace & Defense 자금 유입",
       "status": "소멸",
-      "narrativeScore": 3,
-      "rawScore": 3,
+      "narrativeScore": 4,
+      "rawScore": 4,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "SPY",
@@ -3763,7 +3763,7 @@
       "name": "방산/안보 프리미엄",
       "status": "소멸",
       "narrativeScore": 0,
-      "rawScore": -12,
+      "rawScore": -10,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "XAR",
@@ -3868,13 +3868,13 @@
         "TSM",
         "MRVL"
       ],
-      "whyMoneyIsFlowing": "반도체 설계/공급망 재가속 관련 iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ)와 Advanced Micro Devices Inc.(AMD), QUALCOMM Incorporated(QCOM), Taiwan Semiconductor(TSM), Marvell Technology Inc.(MRVL)의 5일(+5.51%)·20일(-0.14%) 흐름을 함께 본다. 평균 상대 거래량은 0.87배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
+      "whyMoneyIsFlowing": "반도체 설계/공급망 재가속 관련 iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH), Invesco PHLX Semiconductor ETF(SOXQ)와 Advanced Micro Devices Inc.(AMD), QUALCOMM Incorporated(QCOM), Taiwan Semiconductor(TSM), Marvell Technology Inc.(MRVL)의 5일(+5.51%)·20일(-0.14%) 흐름을 함께 본다. 평균 상대 거래량은 0.87배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: SMH, SOXX, SOXQ / 개별 종목 우선: TSM, AMD, QCOM",
       "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH), Advanced Micro Devices Inc.(AMD), QUALCOMM Incorporated(QCOM) 중심으로 5일 +5.51%, 20일 -0.14% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 2,
+      "summaryReason": "iShares Semiconductor ETF(SOXX), VanEck Semiconductor ETF(SMH), Advanced Micro Devices Inc.(AMD), QUALCOMM Incorporated(QCOM) 중심으로 5일 +5.51%, 20일 -0.14% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
       "etfBreadthScore": -2,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
@@ -3977,14 +3977,14 @@
         "watchItems": [],
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "AMD",
-        "checkedAt": "2026-09-14T00:47:25.476Z",
+        "checkedAt": "2026-09-15T01:12:42.200Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4023,93 +4023,93 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-09-13T21:10:05.000Z",
+        "lastPublishedAt": "2026-09-14T23:19:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
+        "headline": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
         "directCatalyst": {
-          "title": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
+          "title": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-09-12T21:20:00.000Z",
-          "eventType": "earnings",
-          "direction": "positive",
-          "freshnessBucket": "under_72h",
-          "url": "https://www.fool.com/investing/2026/09/12/nvidia-vs-amd-elon-musk-picked-a-side-on-the-space/?.tsrc=rss"
+          "publishedAt": "2026-09-14T19:09:09.000Z",
+          "eventType": "general_market",
+          "direction": "mixed",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/news/ai-warning-sends-nvidia-amd-190909953.html?.tsrc=rss"
         },
         "items": [
           {
-            "title": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
-            "summary": "Elon Musk recently praised a specific GPU stock during SpaceX's earnings call.",
+            "title": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
+            "summary": "Nvidia, Intel And AMD Shares Sink As AI Leaders Sound Fresh Warning",
             "koreanSummary": {
-              "title": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
-              "content": "Advanced Micro Devices Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Elon Musk recently praised a specific GPU stock during SpaceX's earnings call.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
-            },
-            "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-12T21:20:00.000Z",
-            "eventType": "earnings",
-            "directness": "direct_ticker",
-            "direction": "positive",
-            "freshnessBucket": "under_72h",
-            "url": "https://www.fool.com/investing/2026/09/12/nvidia-vs-amd-elon-musk-picked-a-side-on-the-space/?.tsrc=rss"
-          },
-          {
-            "title": "Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited",
-            "summary": "Advanced Micro Devices, Inc (NASDAQ:AMD) has set its sights on capitalizing on the growing demand for workstations capable of running large artificial intelligence models. On September 4, the company unveiled the Threadripper Halo Station, expanding its AI strategy beyond data centers and into high-end local AI computing. AI Workstation Opportunity Designed for AI development and inference, […]",
-            "koreanSummary": {
-              "title": "Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited",
-              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Advanced Micro Devices, Inc (NASDAQ:AMD) has set its sights on capitalizing on the growing demand for workstations capable of running large artificial intelligence models.입니다.",
-              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "title": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 혼재으로 분류됩니다.",
+              "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-12T23:54:30.000Z",
+            "publishedAt": "2026-09-14T19:09:09.000Z",
             "eventType": "general_market",
             "directness": "direct_ticker",
-            "direction": "positive",
-            "freshnessBucket": "under_72h",
-            "url": "https://finance.yahoo.com/technology/ai/articles/advanced-micro-devices-inc-amd-235430291.html?.tsrc=rss"
+            "direction": "mixed",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/news/ai-warning-sends-nvidia-amd-190909953.html?.tsrc=rss"
           },
           {
-            "title": "AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
-            "summary": "AMD and Intel compete for processor customers, but they have a common interest in making developers comfortable staying with x86. A September 2 GCC commit added initial support for their AI Compute Extensions, or ACE, bringing that shared strategy into a widely used compiler’s development code. For Advanced Micro Devices, Inc. (NASDAQ:AMD) and Intel Corporation […]",
+            "title": "Musk Biographer Says AI Giants May Face Liability After Admitting Risks as Nvidia, AMD Slide",
+            "summary": "Walter Isaacson, the Musk biographer and Tulane professor, says AI companies may face greater liability after their leaders acknowledged that increasingly capable systems can cause harm, as Nvidia Corp. (NASDAQ:NVDA) and Advanced Micro Devices Inc. (NASDAQ:AMD) slid Monday. “The definition...",
             "koreanSummary": {
-              "title": "AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
-              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AMD and Intel compete for processor customers, but they have a common interest in making developers comfortable staying with x86.입니다.",
+              "title": "Musk Biographer Says AI Giants May Face Liability After Admitting Risks as Nvidia, AMD Slide",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Walter Isaacson, the Musk biographer and Tulane professor, says AI companies may face greater liability after their leaders acknowledged that increasingly capable systems can ca...입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-13T16:59:17.000Z",
+            "publishedAt": "2026-09-14T18:03:15.000Z",
             "eventType": "general_market",
             "directness": "direct_ticker",
             "direction": "positive",
             "freshnessBucket": "under_24h",
-            "url": "https://finance.yahoo.com/technology/ai/articles/amd-intel-shared-ai-instructions-165917161.html?.tsrc=rss"
+            "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61773745/walter-isaacson-ai-liability?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss"
+          },
+          {
+            "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here&#x2019;s what to know.",
+            "summary": "Analysts don&#x2019;t expect the push for more responsible AI development to derail data-center spending.",
+            "koreanSummary": {
+              "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here&#x2019;s what to know.",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Analysts don&#x2019;t expect the push for more responsible AI development to derail data-center spending.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+            },
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-09-14T20:56:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "positive",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/how-investors-are-reacting-to-the-ai-pause-calls-from-anthropic-and-other-frontier-labs-f69391b8?mod=mw_rss_topstories"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call\"입니다.",
-          "directLine": "Advanced Micro Devices Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call\"이며, 실적 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling\"입니다.",
+          "directLine": "Advanced Micro Devices Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling\"이며, 시장 일반 재료로 봅니다.",
           "bullets": [
             {
-              "title": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
-              "content": "Advanced Micro Devices Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Elon Musk recently praised a specific GPU stock during SpaceX's earnings call.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              "title": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 혼재으로 분류됩니다.",
+              "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited",
-              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Advanced Micro Devices, Inc (NASDAQ:AMD) has set its sights on capitalizing on the growing demand for workstations capable of running large artificial intelligence models.입니다.",
+              "title": "Musk Biographer Says AI Giants May Face Liability After Admitting Risks as Nvidia, AMD Slide",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Walter Isaacson, the Musk biographer and Tulane professor, says AI companies may face greater liability after their leaders acknowledged that increasingly capable systems can ca...입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
-              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AMD and Intel compete for processor customers, but they have a common interest in making developers comfortable staying with x86.입니다.",
+              "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here&#x2019;s what to know.",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Analysts don&#x2019;t expect the push for more responsible AI development to derail data-center spending.입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             }
@@ -4121,13 +4121,13 @@
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling"
       },
       "tieBreakerReason": "최종 원점수 88, 리스크 패널티 0, 5일 수익률 +13.15%, 상대 거래량 1.05배 순으로 정렬",
-      "entryQualityScore": 48,
+      "entryQualityScore": 47,
       "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 46,
-      "trendStateLabel": "약화",
+      "trendStrengthIndex": 42,
+      "trendStateLabel": "잠복",
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 3,
       "exhaustionRiskLabel": "낮음",
@@ -4139,14 +4139,14 @@
         "label": "자금흐름 예외 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 48 < 50이나 moneyFlow 88, confidence HIGH, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
+          "Entry Quality 47 < 50이나 moneyFlow 88, confidence MEDIUM, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
         ],
         "rescueType": "STRONG_MONEY_FLOW"
       },
       "marketContext": {
         "marketRegime": "위험회피",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험회피 / Entry Quality 48 < 50이나 moneyFlow 88, confidence HIGH, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
+        "reason": "전체 시장은 위험회피 / Entry Quality 47 < 50이나 moneyFlow 88, confidence MEDIUM, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
       },
       "linkedNarrative": "반도체 설계/공급망 재가속",
       "narrativeStatus": "약화",
@@ -4184,14 +4184,14 @@
         "watchItems": [],
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "AMD",
-        "checkedAt": "2026-09-14T00:47:25.476Z",
+        "checkedAt": "2026-09-15T01:12:42.200Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4230,93 +4230,93 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-09-13T21:10:05.000Z",
+        "lastPublishedAt": "2026-09-14T23:19:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
+        "headline": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
         "directCatalyst": {
-          "title": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
+          "title": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-09-12T21:20:00.000Z",
-          "eventType": "earnings",
-          "direction": "positive",
-          "freshnessBucket": "under_72h",
-          "url": "https://www.fool.com/investing/2026/09/12/nvidia-vs-amd-elon-musk-picked-a-side-on-the-space/?.tsrc=rss"
+          "publishedAt": "2026-09-14T19:09:09.000Z",
+          "eventType": "general_market",
+          "direction": "mixed",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/news/ai-warning-sends-nvidia-amd-190909953.html?.tsrc=rss"
         },
         "items": [
           {
-            "title": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
-            "summary": "Elon Musk recently praised a specific GPU stock during SpaceX's earnings call.",
+            "title": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
+            "summary": "Nvidia, Intel And AMD Shares Sink As AI Leaders Sound Fresh Warning",
             "koreanSummary": {
-              "title": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
-              "content": "Advanced Micro Devices Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Elon Musk recently praised a specific GPU stock during SpaceX's earnings call.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
-            },
-            "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-12T21:20:00.000Z",
-            "eventType": "earnings",
-            "directness": "direct_ticker",
-            "direction": "positive",
-            "freshnessBucket": "under_72h",
-            "url": "https://www.fool.com/investing/2026/09/12/nvidia-vs-amd-elon-musk-picked-a-side-on-the-space/?.tsrc=rss"
-          },
-          {
-            "title": "Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited",
-            "summary": "Advanced Micro Devices, Inc (NASDAQ:AMD) has set its sights on capitalizing on the growing demand for workstations capable of running large artificial intelligence models. On September 4, the company unveiled the Threadripper Halo Station, expanding its AI strategy beyond data centers and into high-end local AI computing. AI Workstation Opportunity Designed for AI development and inference, […]",
-            "koreanSummary": {
-              "title": "Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited",
-              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Advanced Micro Devices, Inc (NASDAQ:AMD) has set its sights on capitalizing on the growing demand for workstations capable of running large artificial intelligence models.입니다.",
-              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "title": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 혼재으로 분류됩니다.",
+              "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-12T23:54:30.000Z",
+            "publishedAt": "2026-09-14T19:09:09.000Z",
             "eventType": "general_market",
             "directness": "direct_ticker",
-            "direction": "positive",
-            "freshnessBucket": "under_72h",
-            "url": "https://finance.yahoo.com/technology/ai/articles/advanced-micro-devices-inc-amd-235430291.html?.tsrc=rss"
+            "direction": "mixed",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/news/ai-warning-sends-nvidia-amd-190909953.html?.tsrc=rss"
           },
           {
-            "title": "AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
-            "summary": "AMD and Intel compete for processor customers, but they have a common interest in making developers comfortable staying with x86. A September 2 GCC commit added initial support for their AI Compute Extensions, or ACE, bringing that shared strategy into a widely used compiler’s development code. For Advanced Micro Devices, Inc. (NASDAQ:AMD) and Intel Corporation […]",
+            "title": "Musk Biographer Says AI Giants May Face Liability After Admitting Risks as Nvidia, AMD Slide",
+            "summary": "Walter Isaacson, the Musk biographer and Tulane professor, says AI companies may face greater liability after their leaders acknowledged that increasingly capable systems can cause harm, as Nvidia Corp. (NASDAQ:NVDA) and Advanced Micro Devices Inc. (NASDAQ:AMD) slid Monday. “The definition...",
             "koreanSummary": {
-              "title": "AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
-              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AMD and Intel compete for processor customers, but they have a common interest in making developers comfortable staying with x86.입니다.",
+              "title": "Musk Biographer Says AI Giants May Face Liability After Admitting Risks as Nvidia, AMD Slide",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Walter Isaacson, the Musk biographer and Tulane professor, says AI companies may face greater liability after their leaders acknowledged that increasingly capable systems can ca...입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-13T16:59:17.000Z",
+            "publishedAt": "2026-09-14T18:03:15.000Z",
             "eventType": "general_market",
             "directness": "direct_ticker",
             "direction": "positive",
             "freshnessBucket": "under_24h",
-            "url": "https://finance.yahoo.com/technology/ai/articles/amd-intel-shared-ai-instructions-165917161.html?.tsrc=rss"
+            "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61773745/walter-isaacson-ai-liability?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss"
+          },
+          {
+            "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here&#x2019;s what to know.",
+            "summary": "Analysts don&#x2019;t expect the push for more responsible AI development to derail data-center spending.",
+            "koreanSummary": {
+              "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here&#x2019;s what to know.",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Analysts don&#x2019;t expect the push for more responsible AI development to derail data-center spending.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+            },
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-09-14T20:56:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "positive",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/how-investors-are-reacting-to-the-ai-pause-calls-from-anthropic-and-other-frontier-labs-f69391b8?mod=mw_rss_topstories"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call\"입니다.",
-          "directLine": "Advanced Micro Devices Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call\"이며, 실적 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling\"입니다.",
+          "directLine": "Advanced Micro Devices Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling\"이며, 시장 일반 재료로 봅니다.",
           "bullets": [
             {
-              "title": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
-              "content": "Advanced Micro Devices Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Elon Musk recently praised a specific GPU stock during SpaceX's earnings call.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              "title": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 혼재으로 분류됩니다.",
+              "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited",
-              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Advanced Micro Devices, Inc (NASDAQ:AMD) has set its sights on capitalizing on the growing demand for workstations capable of running large artificial intelligence models.입니다.",
+              "title": "Musk Biographer Says AI Giants May Face Liability After Admitting Risks as Nvidia, AMD Slide",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Walter Isaacson, the Musk biographer and Tulane professor, says AI companies may face greater liability after their leaders acknowledged that increasingly capable systems can ca...입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
-              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AMD and Intel compete for processor customers, but they have a common interest in making developers comfortable staying with x86.입니다.",
+              "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here&#x2019;s what to know.",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Analysts don&#x2019;t expect the push for more responsible AI development to derail data-center spending.입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             }
@@ -4328,13 +4328,13 @@
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling"
       },
       "tieBreakerReason": "최종 원점수 88, 리스크 패널티 0, 5일 수익률 +13.15%, 상대 거래량 1.05배 순으로 정렬",
-      "entryQualityScore": 48,
+      "entryQualityScore": 47,
       "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 46,
-      "trendStateLabel": "약화",
+      "trendStrengthIndex": 42,
+      "trendStateLabel": "잠복",
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 3,
       "exhaustionRiskLabel": "낮음",
@@ -4346,14 +4346,14 @@
         "label": "자금흐름 예외 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 48 < 50이나 moneyFlow 88, confidence HIGH, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
+          "Entry Quality 47 < 50이나 moneyFlow 88, confidence MEDIUM, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
         ],
         "rescueType": "STRONG_MONEY_FLOW"
       },
       "marketContext": {
         "marketRegime": "위험회피",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험회피 / Entry Quality 48 < 50이나 moneyFlow 88, confidence HIGH, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
+        "reason": "전체 시장은 위험회피 / Entry Quality 47 < 50이나 moneyFlow 88, confidence MEDIUM, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
       },
       "linkedNarrative": "반도체 설계/공급망 재가속",
       "narrativeStatus": "약화",
@@ -4392,14 +4392,14 @@
         "watchItems": [],
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
+      "reasonConfidence": "MEDIUM",
+      "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "AMD",
-        "checkedAt": "2026-09-14T00:47:25.476Z",
+        "checkedAt": "2026-09-15T01:12:42.200Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4438,93 +4438,93 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-09-13T21:10:05.000Z",
+        "lastPublishedAt": "2026-09-14T23:19:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
+        "headline": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
         "directCatalyst": {
-          "title": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
+          "title": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-09-12T21:20:00.000Z",
-          "eventType": "earnings",
-          "direction": "positive",
-          "freshnessBucket": "under_72h",
-          "url": "https://www.fool.com/investing/2026/09/12/nvidia-vs-amd-elon-musk-picked-a-side-on-the-space/?.tsrc=rss"
+          "publishedAt": "2026-09-14T19:09:09.000Z",
+          "eventType": "general_market",
+          "direction": "mixed",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/news/ai-warning-sends-nvidia-amd-190909953.html?.tsrc=rss"
         },
         "items": [
           {
-            "title": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
-            "summary": "Elon Musk recently praised a specific GPU stock during SpaceX's earnings call.",
+            "title": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
+            "summary": "Nvidia, Intel And AMD Shares Sink As AI Leaders Sound Fresh Warning",
             "koreanSummary": {
-              "title": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
-              "content": "Advanced Micro Devices Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Elon Musk recently praised a specific GPU stock during SpaceX's earnings call.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
-            },
-            "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-12T21:20:00.000Z",
-            "eventType": "earnings",
-            "directness": "direct_ticker",
-            "direction": "positive",
-            "freshnessBucket": "under_72h",
-            "url": "https://www.fool.com/investing/2026/09/12/nvidia-vs-amd-elon-musk-picked-a-side-on-the-space/?.tsrc=rss"
-          },
-          {
-            "title": "Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited",
-            "summary": "Advanced Micro Devices, Inc (NASDAQ:AMD) has set its sights on capitalizing on the growing demand for workstations capable of running large artificial intelligence models. On September 4, the company unveiled the Threadripper Halo Station, expanding its AI strategy beyond data centers and into high-end local AI computing. AI Workstation Opportunity Designed for AI development and inference, […]",
-            "koreanSummary": {
-              "title": "Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited",
-              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Advanced Micro Devices, Inc (NASDAQ:AMD) has set its sights on capitalizing on the growing demand for workstations capable of running large artificial intelligence models.입니다.",
-              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "title": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 혼재으로 분류됩니다.",
+              "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-12T23:54:30.000Z",
+            "publishedAt": "2026-09-14T19:09:09.000Z",
             "eventType": "general_market",
             "directness": "direct_ticker",
-            "direction": "positive",
-            "freshnessBucket": "under_72h",
-            "url": "https://finance.yahoo.com/technology/ai/articles/advanced-micro-devices-inc-amd-235430291.html?.tsrc=rss"
+            "direction": "mixed",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/news/ai-warning-sends-nvidia-amd-190909953.html?.tsrc=rss"
           },
           {
-            "title": "AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
-            "summary": "AMD and Intel compete for processor customers, but they have a common interest in making developers comfortable staying with x86. A September 2 GCC commit added initial support for their AI Compute Extensions, or ACE, bringing that shared strategy into a widely used compiler’s development code. For Advanced Micro Devices, Inc. (NASDAQ:AMD) and Intel Corporation […]",
+            "title": "Musk Biographer Says AI Giants May Face Liability After Admitting Risks as Nvidia, AMD Slide",
+            "summary": "Walter Isaacson, the Musk biographer and Tulane professor, says AI companies may face greater liability after their leaders acknowledged that increasingly capable systems can cause harm, as Nvidia Corp. (NASDAQ:NVDA) and Advanced Micro Devices Inc. (NASDAQ:AMD) slid Monday. “The definition...",
             "koreanSummary": {
-              "title": "AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
-              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AMD and Intel compete for processor customers, but they have a common interest in making developers comfortable staying with x86.입니다.",
+              "title": "Musk Biographer Says AI Giants May Face Liability After Admitting Risks as Nvidia, AMD Slide",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Walter Isaacson, the Musk biographer and Tulane professor, says AI companies may face greater liability after their leaders acknowledged that increasingly capable systems can ca...입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-09-13T16:59:17.000Z",
+            "publishedAt": "2026-09-14T18:03:15.000Z",
             "eventType": "general_market",
             "directness": "direct_ticker",
             "direction": "positive",
             "freshnessBucket": "under_24h",
-            "url": "https://finance.yahoo.com/technology/ai/articles/amd-intel-shared-ai-instructions-165917161.html?.tsrc=rss"
+            "url": "https://www.benzinga.com/markets/prediction-markets/26/09/61773745/walter-isaacson-ai-liability?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss"
+          },
+          {
+            "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here&#x2019;s what to know.",
+            "summary": "Analysts don&#x2019;t expect the push for more responsible AI development to derail data-center spending.",
+            "koreanSummary": {
+              "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here&#x2019;s what to know.",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Analysts don&#x2019;t expect the push for more responsible AI development to derail data-center spending.입니다.",
+              "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
+            },
+            "source": "MarketWatch RSS",
+            "publishedAt": "2026-09-14T20:56:00.000Z",
+            "eventType": "general_market",
+            "directness": "sector_theme",
+            "direction": "positive",
+            "freshnessBucket": "under_6h",
+            "url": "https://www.marketwatch.com/story/how-investors-are-reacting-to-the-ai-pause-calls-from-anthropic-and-other-frontier-labs-f69391b8?mod=mw_rss_topstories"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call\"입니다.",
-          "directLine": "Advanced Micro Devices Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call\"이며, 실적 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling\"입니다.",
+          "directLine": "Advanced Micro Devices Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling\"이며, 시장 일반 재료로 봅니다.",
           "bullets": [
             {
-              "title": "Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call",
-              "content": "Advanced Micro Devices Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 Elon Musk recently praised a specific GPU stock during SpaceX's earnings call.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              "title": "AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 현재 방향성은 혼재으로 분류됩니다.",
+              "implication": "단기 혼재 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
+              "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "Advanced Micro Devices, Inc. (AMD)’s Halo Station Could Strengthen Its AI Position, but Near-Term Revenue Impact May Be Limited",
-              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Advanced Micro Devices, Inc (NASDAQ:AMD) has set its sights on capitalizing on the growing demand for workstations capable of running large artificial intelligence models.입니다.",
+              "title": "Musk Biographer Says AI Giants May Face Liability After Admitting Risks as Nvidia, AMD Slide",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Walter Isaacson, the Musk biographer and Tulane professor, says AI companies may face greater liability after their leaders acknowledged that increasingly capable systems can ca...입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
-              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 AMD and Intel compete for processor customers, but they have a common interest in making developers comfortable staying with x86.입니다.",
+              "title": "Micron, Nvidia and other chip stocks fall after tech leaders call for an AI slowdown. Here&#x2019;s what to know.",
+              "content": "Advanced Micro Devices Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Analysts don&#x2019;t expect the push for more responsible AI development to derail data-center spending.입니다.",
               "implication": "단기 긍정 뉴스 흐름으로 볼 수 있지만, 단독 매수 근거보다는 가격·거래량 조건을 확인하는 보조 근거로 사용합니다.",
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             }
@@ -4536,13 +4536,13 @@
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Nvidia vs. AMD: Elon Musk Picked a Side on the SpaceX Earnings Call"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: AI Warning Sends Nvidia, AMD, Micron and Intel Shares Tumbling"
       },
       "tieBreakerReason": "최종 원점수 88, 리스크 패널티 0, 5일 수익률 +13.15%, 상대 거래량 1.05배 순으로 정렬",
-      "entryQualityScore": 48,
+      "entryQualityScore": 47,
       "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 46,
-      "trendStateLabel": "약화",
+      "trendStrengthIndex": 42,
+      "trendStateLabel": "잠복",
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 3,
       "exhaustionRiskLabel": "낮음",
@@ -4554,14 +4554,14 @@
         "label": "자금흐름 예외 조건부",
         "status": "진입 후보",
         "reasons": [
-          "Entry Quality 48 < 50이나 moneyFlow 88, confidence HIGH, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
+          "Entry Quality 47 < 50이나 moneyFlow 88, confidence MEDIUM, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
         ],
         "rescueType": "STRONG_MONEY_FLOW"
       },
       "marketContext": {
         "marketRegime": "위험회피",
         "candidateEnvironment": "제한적",
-        "reason": "전체 시장은 위험회피 / Entry Quality 48 < 50이나 moneyFlow 88, confidence HIGH, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
+        "reason": "전체 시장은 위험회피 / Entry Quality 47 < 50이나 moneyFlow 88, confidence MEDIUM, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
       },
       "linkedNarrative": "반도체 설계/공급망 재가속",
       "narrativeStatus": "약화",
@@ -4604,10 +4604,10 @@
       "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
       "directCatalyst": "",
       "tieBreakerReason": "최종 원점수 79, 리스크 패널티 0, 5일 수익률 +7.95%, 상대 거래량 1.05배 순으로 정렬",
-      "entryQualityScore": 45,
+      "entryQualityScore": 44,
       "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 46,
-      "trendStateLabel": "약화",
+      "trendStrengthIndex": 42,
+      "trendStateLabel": "잠복",
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 3,
       "exhaustionRiskLabel": "낮음",
@@ -4636,65 +4636,6 @@
         "AIQ"
       ],
       "closePriceAtRecommendation": 181.97,
-      "recommendationDate": "2026-09-11"
-    },
-    {
-      "ticker": "TSM",
-      "assetType": "STOCK",
-      "name": "Taiwan Semiconductor",
-      "actionLabel": "관찰",
-      "status": "관찰",
-      "moneyFlowScore": 64,
-      "moneyFlowScoreInitial": 45,
-      "moneyFlowScoreFinal": 64,
-      "finalRawScore": 64,
-      "finalDisplayScore": 64,
-      "wasCapped": false,
-      "capReason": "cap not applied",
-      "formulaText": "+45 + +12 + 0 + +5 + +2 + 0 + 0 = 64",
-      "riskPenalty": 0,
-      "riskPenaltySummary": {
-        "totalPenalty": 0,
-        "riskLevel": "LOW",
-        "items": [],
-        "watchItems": [],
-        "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
-      },
-      "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_72h / positive - Apple, Taiwan Semi Lead Five Stocks Near Buy Points 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_72h / positive - Apple, Taiwan Semi Lead Five Stocks Near Buy Points",
-      "tieBreakerReason": "최종 원점수 64, 리스크 패널티 0, 5일 수익률 +3.89%, 상대 거래량 1.15배 순으로 정렬",
-      "entryQualityScore": 40,
-      "entryQualityLabel": "관찰",
-      "trendStrengthIndex": 46,
-      "trendStateLabel": "약화",
-      "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
-      "exhaustionRisk": 3,
-      "exhaustionRiskLabel": "낮음",
-      "relativeVolume": 1.15,
-      "marketDataStatus": "ok",
-      "entryCondition": "20일선 위 눌림 후 재상승 확인",
-      "invalidationCondition": "20일선 이탈 또는 상대 거래량 0.8배 이하 둔화",
-      "actionGate": {
-        "label": "관찰",
-        "status": "관찰",
-        "reasons": [],
-        "rescueType": null
-      },
-      "marketContext": {
-        "marketRegime": "위험회피",
-        "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험회피"
-      },
-      "linkedNarrative": "반도체 설계/공급망 재가속",
-      "narrativeStatus": "약화",
-      "narrativeScore": 35,
-      "relatedEtfs": [
-        "SMH",
-        "SOXX",
-        "SOXQ"
-      ],
-      "closePriceAtRecommendation": 433.24,
       "recommendationDate": "2026-09-11"
     },
     {
@@ -4794,11 +4735,11 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - This investment is safe from both Trump and the Democrats &#x2014; and it pays 4.7%",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule",
       "tieBreakerReason": "최종 원점수 30, 리스크 패널티 -4, 5일 수익률 +5.55%, 상대 거래량 0.63배 순으로 정렬",
-      "entryQualityScore": 25,
+      "entryQualityScore": 24,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 34,
+      "trendStrengthIndex": 32,
       "trendStateLabel": "잠복",
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 0,
@@ -4811,7 +4752,7 @@
         "label": "거래량 확인 전 관찰",
         "status": "관찰",
         "reasons": [
-          "Entry Quality 25 < 40",
+          "Entry Quality 24 < 40",
           "RVOL 0.63x < 1.00x"
         ],
         "rescueType": null
@@ -4819,11 +4760,11 @@
       "marketContext": {
         "marketRegime": "위험회피",
         "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험회피 / Entry Quality 25 < 40 / RVOL 0.63x < 1.00x"
+        "reason": "전체 시장은 위험회피 / Entry Quality 24 < 40 / RVOL 0.63x < 1.00x"
       },
       "linkedNarrative": "AI 인프라 재가속",
       "narrativeStatus": "소멸",
-      "narrativeScore": 15,
+      "narrativeScore": 16,
       "relatedEtfs": [],
       "closePriceAtRecommendation": 59.1,
       "recommendationDate": "2026-09-11"
@@ -4852,12 +4793,12 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - This investment is safe from both Trump and the Democrats &#x2014; and it pays 4.7%",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule",
       "tieBreakerReason": "최종 원점수 18, 리스크 패널티 0, 5일 수익률 +2.88%, 상대 거래량 0.78배 순으로 정렬",
-      "entryQualityScore": 24,
+      "entryQualityScore": 23,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 46,
-      "trendStateLabel": "약화",
+      "trendStrengthIndex": 42,
+      "trendStateLabel": "잠복",
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 3,
       "exhaustionRiskLabel": "낮음",
@@ -4869,7 +4810,7 @@
         "label": "거래량 확인 전 관찰",
         "status": "관찰",
         "reasons": [
-          "Entry Quality 24 < 40",
+          "Entry Quality 23 < 40",
           "RVOL 0.78x < 1.00x"
         ],
         "rescueType": null
@@ -4877,7 +4818,7 @@
       "marketContext": {
         "marketRegime": "위험회피",
         "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험회피 / Entry Quality 24 < 40 / RVOL 0.78x < 1.00x"
+        "reason": "전체 시장은 위험회피 / Entry Quality 23 < 40 / RVOL 0.78x < 1.00x"
       },
       "linkedNarrative": "반도체 설계/공급망 재가속",
       "narrativeStatus": "약화",
@@ -4910,12 +4851,12 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - This investment is safe from both Trump and the Democrats &#x2014; and it pays 4.7%",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule",
       "tieBreakerReason": "최종 원점수 25, 리스크 패널티 0, 5일 수익률 +4.95%, 상대 거래량 0.81배 순으로 정렬",
-      "entryQualityScore": 27,
+      "entryQualityScore": 25,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 46,
-      "trendStateLabel": "약화",
+      "trendStrengthIndex": 42,
+      "trendStateLabel": "잠복",
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 3,
       "exhaustionRiskLabel": "낮음",
@@ -4927,7 +4868,7 @@
         "label": "거래량 확인 전 관찰",
         "status": "관찰",
         "reasons": [
-          "Entry Quality 27 < 40",
+          "Entry Quality 25 < 40",
           "RVOL 0.81x < 1.00x"
         ],
         "rescueType": null
@@ -4935,7 +4876,7 @@
       "marketContext": {
         "marketRegime": "위험회피",
         "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험회피 / Entry Quality 27 < 40 / RVOL 0.81x < 1.00x"
+        "reason": "전체 시장은 위험회피 / Entry Quality 25 < 40 / RVOL 0.81x < 1.00x"
       },
       "linkedNarrative": "반도체 설계/공급망 재가속",
       "narrativeStatus": "약화",
@@ -4976,12 +4917,12 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - This investment is safe from both Trump and the Democrats &#x2014; and it pays 4.7%",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule",
       "tieBreakerReason": "최종 원점수 8, 리스크 패널티 -5, 5일 수익률 +4.14%, 상대 거래량 0.56배 순으로 정렬",
-      "entryQualityScore": 9,
+      "entryQualityScore": 8,
       "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 46,
-      "trendStateLabel": "약화",
+      "trendStrengthIndex": 42,
+      "trendStateLabel": "잠복",
       "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
       "exhaustionRisk": 3,
       "exhaustionRiskLabel": "낮음",
@@ -4993,7 +4934,7 @@
         "label": "거래량 확인 전 관찰",
         "status": "관찰",
         "reasons": [
-          "Entry Quality 9 < 40",
+          "Entry Quality 8 < 40",
           "RVOL 0.56x < 1.00x",
           "거래대금 유동성 LOW/UNKNOWN"
         ],
@@ -5002,7 +4943,7 @@
       "marketContext": {
         "marketRegime": "위험회피",
         "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험회피 / Entry Quality 9 < 40 / RVOL 0.56x < 1.00x"
+        "reason": "전체 시장은 위험회피 / Entry Quality 8 < 40 / RVOL 0.56x < 1.00x"
       },
       "linkedNarrative": "반도체 설계/공급망 재가속",
       "narrativeStatus": "약화",
@@ -5043,7 +4984,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - This investment is safe from both Trump and the Democrats &#x2014; and it pays 4.7%",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Supreme Court rejects Trump bid to lift block on U.S. Postal Service mail-in ballots rule",
       "tieBreakerReason": "최종 원점수 -20, 리스크 패널티 -6, 5일 수익률 -5.08%, 상대 거래량 0.53배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -5104,14 +5045,14 @@
       "watchItems": [],
       "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
     },
-    "reasonConfidence": "HIGH",
-    "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-    "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_24h / positive - AMD and Intel’s Shared AI Instructions Reach GCC. Can Software Cooperation Strengthen Both Stocks?",
+    "reasonConfidence": "MEDIUM",
+    "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+    "directCatalyst": "",
     "tieBreakerReason": "최종 원점수 88, 리스크 패널티 0, 5일 수익률 +13.15%, 상대 거래량 1.05배 순으로 정렬",
-    "entryQualityScore": 48,
+    "entryQualityScore": 47,
     "entryQualityLabel": "관찰",
-    "trendStrengthIndex": 46,
-    "trendStateLabel": "약화",
+    "trendStrengthIndex": 42,
+    "trendStateLabel": "잠복",
     "trendDecisionLine": "시장 위험선호가 약해 시장 환경 비우호 구간이다.",
     "exhaustionRisk": 3,
     "exhaustionRiskLabel": "낮음",
@@ -5123,14 +5064,14 @@
       "label": "자금흐름 예외 조건부",
       "status": "진입 후보",
       "reasons": [
-        "Entry Quality 48 < 50이나 moneyFlow 88, confidence HIGH, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
+        "Entry Quality 47 < 50이나 moneyFlow 88, confidence MEDIUM, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
       ],
       "rescueType": "STRONG_MONEY_FLOW"
     },
     "marketContext": {
       "marketRegime": "위험회피",
       "candidateEnvironment": "제한적",
-      "reason": "전체 시장은 위험회피 / Entry Quality 48 < 50이나 moneyFlow 88, confidence HIGH, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
+      "reason": "전체 시장은 위험회피 / Entry Quality 47 < 50이나 moneyFlow 88, confidence MEDIUM, RVOL 1.05x로 강한 자금흐름 예외 조건 충족"
     },
     "linkedNarrative": "반도체 설계/공급망 재가속",
     "narrativeStatus": "약화",
@@ -5150,13 +5091,13 @@
     "priceVolumeStaleFallbackCount": 0,
     "priceVolumeExpiredFallbackCount": 0,
     "priceVolumeMissingCount": 0,
-    "priceAsOfDate": "2026-09-11",
-    "priceAsOfLabel": "2026-09-11 US regular close",
-    "reportGeneratedAtKST": "2026-09-14 09:47",
+    "priceAsOfDate": "2026-09-14",
+    "priceAsOfLabel": "2026-09-14 US regular close",
+    "reportGeneratedAtKST": "2026-09-15 10:12",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-09-14T00:47:25.194Z",
-    "newsLastUpdatedAt": "2026-09-14T00:47:25.194Z",
-    "latestNewsPublishedAt": "2026-09-13T23:47:14.000Z",
+    "newsFetchedAt": "2026-09-15T01:12:41.454Z",
+    "newsLastUpdatedAt": "2026-09-15T01:12:41.454Z",
+    "latestNewsPublishedAt": "2026-09-15T00:48:36.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
     "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
@@ -5174,7 +5115,7 @@
       "프리/애프터마켓 확인 불가"
     ],
     "providers": "yfinance, Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API, config fallback sample, price-volume dollar-volume fallback",
-    "recommendationSession": "2026-09-13 US regular session",
+    "recommendationSession": "2026-09-14 US regular session",
     "grade": "LOW",
     "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 프리마켓/정규장 거래량을 별도 확인해야 한다."
   },
@@ -5183,8 +5124,8 @@
     "screeningUnavailable": false,
     "entryReadyCount": 0,
     "conditionalCount": 1,
-    "watchCount": 118,
-    "banCount": 38,
+    "watchCount": 117,
+    "banCount": 39,
     "actionCandidateCount": 1,
     "mainLimiters": [
       "Entry Quality < 40",
@@ -5211,11 +5152,11 @@
       },
       {
         "label": "Entry Quality 40~49 관찰",
-        "count": 3
+        "count": 2
       },
       {
         "label": "Entry Quality < 40",
-        "count": 154
+        "count": 155
       },
       {
         "label": "Exhaustion Risk >= 70",
