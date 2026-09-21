@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-09-18T01:17:35.672Z",
+  "updatedAt": "2026-09-21T01:04:50.158Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
     {
@@ -19,12 +19,12 @@
       "actionLabel": "자금흐름 예외 조건부",
       "trackingSessionDate": "2026-09-18",
       "trackingStatus": "complete",
-      "intradayHighAfterRecommendation": 31600,
+      "intradayHighAfterRecommendation": 32050,
       "trackingClose": 31450,
-      "highReturnPct": 0.48,
+      "highReturnPct": 1.91,
       "closeReturnPct": 0,
-      "resultLabel": "추적 대기",
-      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음 (일봉 기준)"
+      "resultLabel": "제한적 유효",
+      "resultComment": "제한적인 장중 기회만 발생 (일봉 기준)"
     },
     {
       "reportDate": "2026-09-18",
@@ -43,11 +43,11 @@
       "trackingSessionDate": "2026-09-18",
       "trackingStatus": "complete",
       "intradayHighAfterRecommendation": 55200,
-      "trackingClose": 54700,
+      "trackingClose": 51800,
       "highReturnPct": 0.91,
-      "closeReturnPct": 0,
-      "resultLabel": "추적 대기",
-      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음 (일봉 기준)"
+      "closeReturnPct": -5.3,
+      "resultLabel": "실패",
+      "resultComment": "추천 이후 의미 있는 장중 기회가 부족하고 종가도 약함 (일봉 기준)"
     },
     {
       "reportDate": "2026-09-15",
@@ -2459,9 +2459,9 @@
       "trackingEndDate": "2026-06-26",
       "trackingStatus": "complete",
       "weeklyHigh": 150735,
-      "latestClose": 108870,
+      "latestClose": 110655,
       "weeklyHighReturnPct": 2.6,
-      "latestCloseReturnPct": -25.89,
+      "latestCloseReturnPct": -24.68,
       "resultLabel": "단기 고점 후 반납",
       "resultComment": "1주 내 상승 기회는 있었지만 현재가는 반납"
     },
