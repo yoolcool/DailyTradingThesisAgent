@@ -49,7 +49,8 @@
       "AMD",
       "QCOM",
       "INTC",
-      "MRVL"
+      "ARM",
+      "ADI"
     ],
     "nextBuyer": "반도체 설계/공급망 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -560,6 +561,7 @@
     "stocks": [
       "IREN",
       "MARA",
+      "RIOT",
       "CIFR"
     ],
     "nextBuyer": "Bitcoin Mining 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
@@ -570,9 +572,30 @@
     "preferredStocks": [
       "IREN",
       "MARA",
+      "RIOT",
       "CIFR"
     ],
     "breakCondition": "IBIT 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+    "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
+  },
+  {
+    "name": "Medical Devices 자금 유입",
+    "etfs": [
+      "QQQ"
+    ],
+    "stocks": [
+      "ISRG",
+      "DXCM"
+    ],
+    "nextBuyer": "Medical Devices 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+    "preferredEtfs": [
+      "QQQ"
+    ],
+    "preferredStocks": [
+      "ISRG",
+      "DXCM"
+    ],
+    "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
   }
 ]
