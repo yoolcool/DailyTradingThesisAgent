@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2026년 10월 5일 월요일 오전 10:06",
+  "generatedAtKST": "2026년 10월 7일 수요일 오전 10:43",
   "marketId": "us",
   "marketProfile": {
     "id": "us",
@@ -12,8 +12,6 @@
     "dailyReports": "data/dailyReports/*.json last 10"
   },
   "lookbackReports": [
-    "2026-09-17",
-    "2026-09-18",
     "2026-09-21",
     "2026-09-22",
     "2026-09-23",
@@ -21,47 +19,26 @@
     "2026-09-28",
     "2026-09-29",
     "2026-09-30",
-    "2026-10-01"
+    "2026-10-01",
+    "2026-10-05",
+    "2026-10-06"
   ],
   "existingNarratives": [
     {
       "name": "AI 인프라 재가속",
       "verdict": "REWORK",
-      "avgScore": 24,
+      "avgScore": 32.4,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
-      "directNewsDays": 5,
+      "directNewsDays": 7,
       "itemDays": 8,
       "latestStatus": "약화",
-      "latestScore": 27,
+      "latestScore": 32,
       "statusCounts": {
-        "소멸": 2,
-        "약화": 7,
-        "관찰": 1
+        "약화": 8,
+        "관찰": 2
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 1,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 1,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 31,
@@ -149,48 +126,47 @@
           "topRank": null,
           "itemCount": 1,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 52,
+          "trendStrengthIndex": 0,
+          "status": "관찰",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 1,
+          "topRank": null,
+          "itemCount": 1,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 32,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 1,
+          "topRank": null,
+          "itemCount": 1,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "반도체 설계/공급망 재가속",
       "verdict": "KEEP",
-      "avgScore": 37.1,
+      "avgScore": 46.3,
       "avgTrendStrengthIndex": 0,
-      "top3Days": 3,
-      "directNewsDays": 7,
+      "top3Days": 4,
+      "directNewsDays": 9,
       "itemDays": 9,
       "latestStatus": "약화",
-      "latestScore": 35,
+      "latestScore": 41,
       "statusCounts": {
-        "소멸": 1,
         "약화": 7,
         "지배": 1,
-        "관찰": 1
+        "관찰": 2
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 5,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 6,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 1,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 44,
@@ -278,47 +254,46 @@
           "topRank": null,
           "itemCount": 7,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 57,
+          "trendStrengthIndex": 0,
+          "status": "관찰",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 1,
+          "topRank": 2,
+          "itemCount": 2,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 41,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 2,
+          "topRank": null,
+          "itemCount": 4,
+          "actionCount": 3
         }
       ]
     },
     {
       "name": "반도체 장비 사이클 재평가",
-      "verdict": "REWORK",
-      "avgScore": 25,
+      "verdict": "KEEP",
+      "avgScore": 35.8,
       "avgTrendStrengthIndex": 0,
-      "top3Days": 2,
+      "top3Days": 4,
       "directNewsDays": 2,
-      "itemDays": 2,
+      "itemDays": 4,
       "latestStatus": "약화",
-      "latestScore": 33,
+      "latestScore": 45,
       "statusCounts": {
-        "소멸": 2,
-        "약화": 7,
-        "관찰": 1
+        "약화": 8,
+        "관찰": 2
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 14,
@@ -406,45 +381,45 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 63,
+          "trendStrengthIndex": 0,
+          "status": "관찰",
+          "reasonConfidence": "MEDIUM",
+          "directNewsCount": 0,
+          "topRank": 1,
+          "itemCount": 6,
+          "actionCount": 2
+        },
+        {
+          "date": "2026-10-06",
+          "score": 45,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": 3,
+          "itemCount": 3,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "AI 소프트웨어/사이버보안 확산",
       "verdict": "REWORK",
-      "avgScore": 29.6,
+      "avgScore": 32.6,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
-      "directNewsDays": 4,
-      "itemDays": 7,
+      "directNewsDays": 5,
+      "itemDays": 6,
       "latestStatus": "약화",
-      "latestScore": 25,
+      "latestScore": 40,
       "statusCounts": {
         "약화": 10
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 28,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 12,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 3,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 45,
@@ -532,48 +507,47 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 30,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 40,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 1,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "사이버보안 지출 재가속",
       "verdict": "KEEP",
-      "avgScore": 46.2,
+      "avgScore": 45.6,
       "avgTrendStrengthIndex": 0,
       "top3Days": 5,
       "directNewsDays": 3,
       "itemDays": 8,
       "latestStatus": "약화",
-      "latestScore": 42,
+      "latestScore": 57,
       "statusCounts": {
-        "지배": 1,
-        "약화": 6,
         "관찰": 2,
+        "약화": 7,
         "부상": 1
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 81,
-          "trendStrengthIndex": 0,
-          "status": "지배",
-          "reasonConfidence": "MEDIUM",
-          "directNewsCount": 0,
-          "topRank": 1,
-          "itemCount": 7,
-          "actionCount": 6
-        },
-        {
-          "date": "2026-09-18",
-          "score": 38,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": 1,
-          "itemCount": 8,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 61,
@@ -661,45 +635,45 @@
           "topRank": 2,
           "itemCount": 2,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 56,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": 3,
+          "itemCount": 2,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 57,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": 1,
+          "itemCount": 4,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "소프트웨어 실적/AI 수익화",
       "verdict": "REWORK",
-      "avgScore": 25,
+      "avgScore": 30.9,
       "avgTrendStrengthIndex": 0,
-      "top3Days": 1,
-      "directNewsDays": 2,
-      "itemDays": 2,
+      "top3Days": 2,
+      "directNewsDays": 4,
+      "itemDays": 4,
       "latestStatus": "약화",
-      "latestScore": 37,
+      "latestScore": 47,
       "statusCounts": {
         "약화": 10
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 11,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 11,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 39,
@@ -787,47 +761,47 @@
           "topRank": 3,
           "itemCount": 2,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 34,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 1,
+          "topRank": null,
+          "itemCount": 4,
+          "actionCount": 3
+        },
+        {
+          "date": "2026-10-06",
+          "score": 47,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 1,
+          "topRank": 2,
+          "itemCount": 5,
+          "actionCount": 3
         }
       ]
     },
     {
       "name": "위험선호 성장주 재진입",
       "verdict": "REWORK",
-      "avgScore": 31.3,
+      "avgScore": 37.2,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
-      "directNewsDays": 5,
+      "directNewsDays": 6,
       "itemDays": 3,
       "latestStatus": "약화",
-      "latestScore": 12,
+      "latestScore": 37,
       "statusCounts": {
-        "약화": 7,
         "관찰": 2,
-        "부상": 1
+        "부상": 1,
+        "약화": 7
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 3,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 5,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 54,
@@ -915,13 +889,35 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 30,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 37,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 1,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "방산/안보 프리미엄",
       "verdict": "RETIRE_WATCH",
-      "avgScore": 2,
+      "avgScore": 1.5,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
       "directNewsDays": 1,
@@ -932,28 +928,6 @@
         "소멸": 10
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 3,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 2,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 4,
@@ -1041,45 +1015,45 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 0,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 0,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "전력망/원전/인프라 병목",
       "verdict": "RETIRE_WATCH",
-      "avgScore": 3.5,
+      "avgScore": 6.7,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
       "directNewsDays": 1,
       "itemDays": 0,
       "latestStatus": "소멸",
-      "latestScore": 0,
+      "latestScore": 13,
       "statusCounts": {
         "소멸": 10
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 6,
@@ -1167,47 +1141,47 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 19,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 13,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "비트코인/디지털 자산 위험선호",
       "verdict": "KEEP",
-      "avgScore": 31.8,
+      "avgScore": 31.3,
       "avgTrendStrengthIndex": 0,
       "top3Days": 3,
-      "directNewsDays": 3,
+      "directNewsDays": 4,
       "itemDays": 4,
       "latestStatus": "약화",
       "latestScore": 0,
       "statusCounts": {
-        "약화": 7,
         "부상": 2,
-        "지배": 1
+        "지배": 1,
+        "약화": 7
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 5,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 85,
@@ -1295,46 +1269,46 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 0,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 1,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 0,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "매크로 방어/헤지",
       "verdict": "RETIRE_WATCH",
-      "avgScore": 10.9,
+      "avgScore": 6.3,
       "avgTrendStrengthIndex": 0,
-      "top3Days": 2,
+      "top3Days": 0,
       "directNewsDays": 0,
       "itemDays": 0,
       "latestStatus": "소멸",
-      "latestScore": 0,
+      "latestScore": 11,
       "statusCounts": {
-        "약화": 8,
-        "소멸": 2
+        "약화": 6,
+        "소멸": 4
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 49,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": 2,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 14,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": 3,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 21,
@@ -1422,47 +1396,46 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 6,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 11,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "Data Storage 자금 유입",
-      "verdict": "RETIRE_WATCH",
-      "avgScore": 26.5,
+      "verdict": "REWORK",
+      "avgScore": 32.1,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
       "directNewsDays": 1,
       "itemDays": 1,
       "latestStatus": "약화",
-      "latestScore": 18,
+      "latestScore": 23,
       "statusCounts": {
-        "소멸": 2,
-        "약화": 7,
+        "약화": 9,
         "관찰": 1
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 45,
@@ -1550,46 +1523,45 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 33,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 23,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "전력 유틸리티 수요 재평가",
-      "verdict": "RETIRE_WATCH",
-      "avgScore": 19.1,
+      "verdict": "REWORK",
+      "avgScore": 24.9,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
       "directNewsDays": 1,
       "itemDays": 0,
       "latestStatus": "약화",
-      "latestScore": 12,
+      "latestScore": 21,
       "statusCounts": {
-        "소멸": 2,
-        "약화": 8
+        "약화": 10
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 2,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 30,
@@ -1677,27 +1649,10 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
-        }
-      ]
-    },
-    {
-      "name": "필수소비재 음료 방어 성장",
-      "verdict": "RETIRE_WATCH",
-      "avgScore": 20,
-      "avgTrendStrengthIndex": 0,
-      "top3Days": 0,
-      "directNewsDays": 0,
-      "itemDays": 0,
-      "latestStatus": "약화",
-      "latestScore": 12,
-      "statusCounts": {
-        "약화": 2,
-        "소멸": 8
-      },
-      "daily": [
+        },
         {
-          "date": "2026-09-17",
-          "score": 0,
+          "date": "2026-10-05",
+          "score": 39,
           "trendStrengthIndex": 0,
           "status": "약화",
           "reasonConfidence": "LOW",
@@ -1707,16 +1662,33 @@
           "actionCount": 0
         },
         {
-          "date": "2026-09-18",
-          "score": 5,
+          "date": "2026-10-06",
+          "score": 21,
           "trendStrengthIndex": 0,
-          "status": "소멸",
+          "status": "약화",
           "reasonConfidence": "LOW",
           "directNewsCount": 0,
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
-        },
+        }
+      ]
+    },
+    {
+      "name": "필수소비재 음료 방어 성장",
+      "verdict": "REWORK",
+      "avgScore": 25,
+      "avgTrendStrengthIndex": 0,
+      "top3Days": 0,
+      "directNewsDays": 0,
+      "itemDays": 0,
+      "latestStatus": "약화",
+      "latestScore": 23,
+      "statusCounts": {
+        "소멸": 7,
+        "약화": 3
+      },
+      "daily": [
         {
           "date": "2026-09-21",
           "score": 46,
@@ -1804,6 +1776,28 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 32,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 23,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
@@ -1816,33 +1810,11 @@
       "directNewsDays": 0,
       "itemDays": 0,
       "latestStatus": "소멸",
-      "latestScore": 2,
+      "latestScore": 9,
       "statusCounts": {
         "소멸": 10
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 12,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 10,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 18,
@@ -1930,47 +1902,48 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 13,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 9,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "바이오/헬스케어 촉매",
       "verdict": "KEEP",
-      "avgScore": 34.4,
+      "avgScore": 37,
       "avgTrendStrengthIndex": 0,
       "top3Days": 4,
       "directNewsDays": 1,
       "itemDays": 3,
-      "latestStatus": "약화",
-      "latestScore": 14,
+      "latestStatus": "소멸",
+      "latestScore": 8,
       "statusCounts": {
-        "약화": 7,
         "부상": 2,
-        "관찰": 1
+        "약화": 5,
+        "관찰": 1,
+        "소멸": 2
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 1,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 5,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 69,
@@ -2058,30 +2031,12 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
-        }
-      ]
-    },
-    {
-      "name": "Internet Content 자금 유입",
-      "verdict": "KEEP",
-      "avgScore": 40.7,
-      "avgTrendStrengthIndex": 0,
-      "top3Days": 4,
-      "directNewsDays": 4,
-      "itemDays": 5,
-      "latestStatus": "약화",
-      "latestScore": 47,
-      "statusCounts": {
-        "약화": 6,
-        "관찰": 3,
-        "부상": 1
-      },
-      "daily": [
+        },
         {
-          "date": "2026-09-17",
-          "score": 25,
+          "date": "2026-10-05",
+          "score": 24,
           "trendStrengthIndex": 0,
-          "status": "약화",
+          "status": "소멸",
           "reasonConfidence": "LOW",
           "directNewsCount": 0,
           "topRank": null,
@@ -2089,16 +2044,34 @@
           "actionCount": 0
         },
         {
-          "date": "2026-09-18",
-          "score": 19,
+          "date": "2026-10-06",
+          "score": 8,
           "trendStrengthIndex": 0,
-          "status": "약화",
+          "status": "소멸",
           "reasonConfidence": "LOW",
           "directNewsCount": 0,
-          "topRank": 2,
-          "itemCount": 1,
+          "topRank": null,
+          "itemCount": 0,
           "actionCount": 0
-        },
+        }
+      ]
+    },
+    {
+      "name": "Internet Content 자금 유입",
+      "verdict": "KEEP",
+      "avgScore": 43.3,
+      "avgTrendStrengthIndex": 0,
+      "top3Days": 3,
+      "directNewsDays": 4,
+      "itemDays": 4,
+      "latestStatus": "약화",
+      "latestScore": 34,
+      "statusCounts": {
+        "관찰": 3,
+        "부상": 1,
+        "약화": 6
+      },
+      "daily": [
         {
           "date": "2026-09-21",
           "score": 54,
@@ -2186,46 +2159,45 @@
           "topRank": 1,
           "itemCount": 1,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 36,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 34,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "Specialty Business Services 자금 유입",
       "verdict": "RETIRE_WATCH",
-      "avgScore": 13.4,
+      "avgScore": 15.4,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
       "directNewsDays": 0,
       "itemDays": 0,
       "latestStatus": "소멸",
-      "latestScore": 6,
+      "latestScore": 13,
       "statusCounts": {
-        "약화": 2,
-        "소멸": 8
+        "소멸": 10
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 4,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 9,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 25,
@@ -2313,45 +2285,45 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 20,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 13,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "Integrated Oil & Gas 자금 유입",
-      "verdict": "RETIRE_WATCH",
-      "avgScore": 23.9,
+      "verdict": "REWORK",
+      "avgScore": 23.6,
       "avgTrendStrengthIndex": 0,
-      "top3Days": 1,
+      "top3Days": 0,
       "directNewsDays": 0,
-      "itemDays": 1,
+      "itemDays": 0,
       "latestStatus": "약화",
-      "latestScore": 13,
+      "latestScore": 21,
       "statusCounts": {
         "약화": 10
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 38,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": 3,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 14,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 1,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 43,
@@ -2439,46 +2411,46 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 28,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 21,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "소비 회복/방어주 선별",
-      "verdict": "RETIRE_WATCH",
-      "avgScore": 19,
+      "verdict": "REWORK",
+      "avgScore": 24.1,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
       "directNewsDays": 0,
       "itemDays": 0,
       "latestStatus": "약화",
-      "latestScore": 15,
+      "latestScore": 20,
       "statusCounts": {
-        "소멸": 7,
-        "약화": 3
+        "소멸": 5,
+        "약화": 5
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 38,
@@ -2566,45 +2538,45 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 31,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 20,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "Travel Services 자금 유입",
       "verdict": "RETIRE_WATCH",
-      "avgScore": 15.1,
+      "avgScore": 18.8,
       "avgTrendStrengthIndex": 0,
       "top3Days": 0,
       "directNewsDays": 0,
       "itemDays": 0,
       "latestStatus": "소멸",
-      "latestScore": 13,
+      "latestScore": 12,
       "statusCounts": {
         "소멸": 10
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "소멸",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 37,
@@ -2692,6 +2664,28 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 25,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 12,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
@@ -2703,36 +2697,15 @@
       "top3Days": 3,
       "directNewsDays": 3,
       "itemDays": 0,
-      "latestStatus": "약화",
+      "latestStatus": "소멸",
       "latestScore": 0,
       "statusCounts": {
-        "약화": 7,
         "부상": 2,
-        "지배": 1
+        "지배": 1,
+        "약화": 5,
+        "소멸": 2
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "약화",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 76,
@@ -2820,47 +2793,47 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 0,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 0,
+          "trendStrengthIndex": 0,
+          "status": "소멸",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     },
     {
       "name": "Medical Devices 자금 유입",
-      "verdict": "RETIRE_WATCH",
-      "avgScore": 20.6,
+      "verdict": "REWORK",
+      "avgScore": 26,
       "avgTrendStrengthIndex": 0,
       "top3Days": 2,
       "directNewsDays": 1,
       "itemDays": 1,
       "latestStatus": "약화",
-      "latestScore": 18,
+      "latestScore": 23,
       "statusCounts": {
-        "없음": 4,
+        "없음": 2,
         "부상": 1,
-        "약화": 5
+        "약화": 7
       },
       "daily": [
-        {
-          "date": "2026-09-17",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "없음",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
-        {
-          "date": "2026-09-18",
-          "score": 0,
-          "trendStrengthIndex": 0,
-          "status": "없음",
-          "reasonConfidence": "LOW",
-          "directNewsCount": 0,
-          "topRank": null,
-          "itemCount": 0,
-          "actionCount": 0
-        },
         {
           "date": "2026-09-21",
           "score": 0,
@@ -2948,6 +2921,28 @@
           "topRank": null,
           "itemCount": 0,
           "actionCount": 0
+        },
+        {
+          "date": "2026-10-05",
+          "score": 31,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
+        },
+        {
+          "date": "2026-10-06",
+          "score": 23,
+          "trendStrengthIndex": 0,
+          "status": "약화",
+          "reasonConfidence": "LOW",
+          "directNewsCount": 0,
+          "topRank": null,
+          "itemCount": 0,
+          "actionCount": 0
         }
       ]
     }
@@ -2956,15 +2951,15 @@
     {
       "key": "Semiconductors",
       "proposedName": "반도체 설계/공급망 재가속",
-      "discoveryScore": 326.4,
-      "recurrenceDays": 9,
-      "avgCandidateScore": 77.6,
-      "avgRawScore": 80.1,
-      "avgRelativeVolume": 1.38,
+      "discoveryScore": 365,
+      "recurrenceDays": 10,
+      "avgCandidateScore": 80,
+      "avgRawScore": 82.3,
+      "avgRelativeVolume": 1.35,
       "confidenceCounts": {
-        "MEDIUM": 6,
-        "HIGH": 24,
-        "LOW": 4
+        "HIGH": 29,
+        "MEDIUM": 3,
+        "LOW": 5
       },
       "linkedNarratives": [
         "반도체 설계/공급망 재가속",
@@ -2975,8 +2970,8 @@
       "overlapWithExistingTemplateCount": 8,
       "members": [
         {
-          "ticker": "MCHP",
-          "name": "Microchip Technology Incorporated",
+          "ticker": "MPWR",
+          "name": "Monolithic Power Systems Inc.",
           "assetType": "STOCK",
           "sector": "Technology",
           "industry": "Semiconductors",
@@ -3073,10 +3068,10 @@
           "QQQ"
         ],
         "stocks": [
-          "QCOM",
           "AMD",
           "ARM",
           "INTC",
+          "QCOM",
           "ADI",
           "NXPI",
           "TSM",
@@ -3089,10 +3084,10 @@
           "SOXQ"
         ],
         "preferredStocks": [
-          "QCOM",
           "AMD",
           "ARM",
-          "INTC"
+          "INTC",
+          "QCOM"
         ],
         "breakCondition": "SMH 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
         "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -3166,17 +3161,106 @@
       }
     },
     {
+      "key": "Software Application",
+      "proposedName": "소프트웨어 실적/AI 수익화",
+      "discoveryScore": 181.4,
+      "recurrenceDays": 6,
+      "avgCandidateScore": 84.6,
+      "avgRawScore": 84.9,
+      "avgRelativeVolume": 1.71,
+      "confidenceCounts": {
+        "HIGH": 9,
+        "MEDIUM": 5
+      },
+      "linkedNarratives": [
+        "AI 소프트웨어/사이버보안 확산",
+        "소프트웨어 실적/AI 수익화"
+      ],
+      "overlapWithExistingTemplateCount": 2,
+      "members": [
+        {
+          "ticker": "ADSK",
+          "name": "Autodesk Inc.",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Software Application",
+          "alreadyCovered": false
+        },
+        {
+          "ticker": "CDNS",
+          "name": "Cadence Design Systems Inc.",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Software Application",
+          "alreadyCovered": false
+        },
+        {
+          "ticker": "SNPS",
+          "name": "Synopsys Inc.",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Software Application",
+          "alreadyCovered": false
+        },
+        {
+          "ticker": "DDOG",
+          "name": "Datadog Inc.",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Software Application",
+          "alreadyCovered": true
+        },
+        {
+          "ticker": "TEAM",
+          "name": "Atlassian Corporation",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Software Application",
+          "alreadyCovered": true
+        }
+      ],
+      "proposedDefinition": {
+        "name": "소프트웨어 실적/AI 수익화",
+        "etfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "stocks": [
+          "TEAM",
+          "DDOG",
+          "SNPS",
+          "ADSK",
+          "CDNS"
+        ],
+        "nextBuyer": "소프트웨어 실적/AI 수익화을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+        "preferredEtfs": [
+          "IGV",
+          "AIQ",
+          "QQQ"
+        ],
+        "preferredStocks": [
+          "TEAM",
+          "DDOG",
+          "SNPS",
+          "ADSK"
+        ],
+        "breakCondition": "IGV 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+        "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
+      }
+    },
+    {
       "key": "Cybersecurity",
       "proposedName": "사이버보안 지출 재가속",
-      "discoveryScore": 150,
+      "discoveryScore": 129,
       "recurrenceDays": 8,
-      "avgCandidateScore": 79.6,
-      "avgRawScore": 81.4,
-      "avgRelativeVolume": 1.11,
+      "avgCandidateScore": 82,
+      "avgRawScore": 82.7,
+      "avgRelativeVolume": 1.02,
       "confidenceCounts": {
-        "MEDIUM": 13,
-        "LOW": 10,
-        "HIGH": 3
+        "HIGH": 3,
+        "MEDIUM": 6,
+        "LOW": 9
       },
       "linkedNarratives": [
         "사이버보안 지출 재가속"
@@ -3226,9 +3310,9 @@
         ],
         "stocks": [
           "CRWD",
-          "FTNT",
           "ZS",
-          "PANW"
+          "PANW",
+          "FTNT"
         ],
         "nextBuyer": "사이버보안 지출 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
         "preferredEtfs": [
@@ -3238,102 +3322,21 @@
         ],
         "preferredStocks": [
           "CRWD",
-          "FTNT",
           "ZS",
-          "PANW"
+          "PANW",
+          "FTNT"
         ],
         "breakCondition": "HACK 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
         "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
       }
     },
     {
-      "key": "Software Application",
-      "proposedName": "소프트웨어 실적/AI 수익화",
-      "discoveryScore": 136.2,
-      "recurrenceDays": 5,
-      "avgCandidateScore": 82.8,
-      "avgRawScore": 83.3,
-      "avgRelativeVolume": 1.87,
-      "confidenceCounts": {
-        "LOW": 1,
-        "HIGH": 6,
-        "MEDIUM": 2
-      },
-      "linkedNarratives": [
-        "AI 소프트웨어/사이버보안 확산",
-        "소프트웨어 실적/AI 수익화"
-      ],
-      "overlapWithExistingTemplateCount": 2,
-      "members": [
-        {
-          "ticker": "CDNS",
-          "name": "Cadence Design Systems Inc.",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Software Application",
-          "alreadyCovered": false
-        },
-        {
-          "ticker": "SNPS",
-          "name": "Synopsys Inc.",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Software Application",
-          "alreadyCovered": false
-        },
-        {
-          "ticker": "DDOG",
-          "name": "Datadog Inc.",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Software Application",
-          "alreadyCovered": true
-        },
-        {
-          "ticker": "TEAM",
-          "name": "Atlassian Corporation",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Software Application",
-          "alreadyCovered": true
-        }
-      ],
-      "proposedDefinition": {
-        "name": "소프트웨어 실적/AI 수익화",
-        "etfs": [
-          "IGV",
-          "AIQ",
-          "QQQ"
-        ],
-        "stocks": [
-          "TEAM",
-          "DDOG",
-          "SNPS",
-          "CDNS"
-        ],
-        "nextBuyer": "소프트웨어 실적/AI 수익화을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-        "preferredEtfs": [
-          "IGV",
-          "AIQ",
-          "QQQ"
-        ],
-        "preferredStocks": [
-          "TEAM",
-          "DDOG",
-          "SNPS",
-          "CDNS"
-        ],
-        "breakCondition": "IGV 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-        "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
-      }
-    },
-    {
       "key": "Software",
       "proposedName": "소프트웨어 실적/AI 수익화",
-      "discoveryScore": 109.4,
+      "discoveryScore": 103.3,
       "recurrenceDays": 5,
-      "avgCandidateScore": 81.7,
-      "avgRawScore": 87.1,
+      "avgCandidateScore": 81.6,
+      "avgRawScore": 86.4,
       "avgRelativeVolume": 1.74,
       "confidenceCounts": {
         "MEDIUM": 1,
@@ -3343,16 +3346,8 @@
         "비트코인/디지털 자산 위험선호",
         "AI 소프트웨어/사이버보안 확산"
       ],
-      "overlapWithExistingTemplateCount": 2,
+      "overlapWithExistingTemplateCount": 3,
       "members": [
-        {
-          "ticker": "SHOP",
-          "name": "Shopify Inc.",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Software",
-          "alreadyCovered": false
-        },
         {
           "ticker": "MSFT",
           "name": "Microsoft Corporation",
@@ -3364,6 +3359,14 @@
         {
           "ticker": "MSTR",
           "name": "Strategy Inc.",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Software",
+          "alreadyCovered": true
+        },
+        {
+          "ticker": "SHOP",
+          "name": "Shopify Inc.",
           "assetType": "STOCK",
           "sector": "Technology",
           "industry": "Software",
