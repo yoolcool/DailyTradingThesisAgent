@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-06T02:57:58.325Z",
+  "updatedAt": "2026-10-07T02:21:45.921Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
     {
@@ -19,12 +19,12 @@
       "actionLabel": "자금흐름 예외 조건부",
       "trackingSessionDate": "2026-10-06",
       "trackingStatus": "complete",
-      "intradayHighAfterRecommendation": 636000,
-      "trackingClose": 631000,
-      "highReturnPct": 0.79,
-      "closeReturnPct": 0,
-      "resultLabel": "추적 대기",
-      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음 (일봉 기준)"
+      "intradayHighAfterRecommendation": 644000,
+      "trackingClose": 644000,
+      "highReturnPct": 2.06,
+      "closeReturnPct": 2.06,
+      "resultLabel": "제한적 유효",
+      "resultComment": "제한적인 장중 기회만 발생 (일봉 기준)"
     },
     {
       "reportDate": "2026-10-06",
@@ -43,9 +43,9 @@
       "trackingSessionDate": "2026-10-06",
       "trackingStatus": "complete",
       "intradayHighAfterRecommendation": 112700,
-      "trackingClose": 111300,
+      "trackingClose": 111700,
       "highReturnPct": 1.26,
-      "closeReturnPct": 0,
+      "closeReturnPct": 0.36,
       "resultLabel": "제한적 유효",
       "resultComment": "제한적인 장중 기회만 발생 (일봉 기준)"
     },
@@ -2758,9 +2758,9 @@
       "trackingEndDate": "2026-06-26",
       "trackingStatus": "complete",
       "weeklyHigh": 150735,
-      "latestClose": 110910,
+      "latestClose": 109575,
       "weeklyHighReturnPct": 2.6,
-      "latestCloseReturnPct": -24.5,
+      "latestCloseReturnPct": -25.41,
       "resultLabel": "단기 고점 후 반납",
       "resultComment": "1주 내 상승 기회는 있었지만 현재가는 반납"
     },
