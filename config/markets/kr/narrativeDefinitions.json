@@ -356,7 +356,8 @@
       "093370.KS",
       "011790.KS",
       "009830.KS",
-      "457190.KS"
+      "005420.KS",
+      "051910.KS"
     ],
     "nextBuyer": "Energy & Chemicals 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -453,7 +454,7 @@
     ],
     "stocks": [
       "003030.KS",
-      "001430.KS"
+      "002030.KS"
     ],
     "nextBuyer": "Steels & Materials 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -462,7 +463,7 @@
     ],
     "preferredStocks": [
       "003030.KS",
-      "001430.KS"
+      "002030.KS"
     ],
     "breakCondition": "069500.KS 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -498,8 +499,7 @@
     "stocks": [
       "003490.KS",
       "001440.KS",
-      "272210.KS",
-      "066970.KS"
+      "361610.KS"
     ],
     "nextBuyer": "Industrials 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -509,8 +509,29 @@
     "preferredStocks": [
       "003490.KS",
       "001440.KS",
-      "272210.KS",
-      "066970.KS"
+      "361610.KS"
+    ],
+    "breakCondition": "069500.KS 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+    "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
+  },
+  {
+    "name": "Battery materials 자금 유입",
+    "etfs": [
+      "069500.KS",
+      "229200.KS"
+    ],
+    "stocks": [
+      "450080.KS",
+      "003670.KS"
+    ],
+    "nextBuyer": "Battery materials 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+    "preferredEtfs": [
+      "069500.KS",
+      "229200.KS"
+    ],
+    "preferredStocks": [
+      "450080.KS",
+      "003670.KS"
     ],
     "breakCondition": "069500.KS 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
