@@ -1,5 +1,5 @@
 {
-  "generatedAtKST": "2026년 10월 19일 월요일 오전 9:21",
+  "generatedAtKST": "2026년 10월 21일 수요일 오전 9:44",
   "marketId": "us",
   "marketProfile": {
     "id": "us",
@@ -3153,7 +3153,7 @@
     {
       "key": "Semiconductors",
       "proposedName": "반도체 설계/공급망 재가속",
-      "discoveryScore": 198,
+      "discoveryScore": 192.9,
       "recurrenceDays": 7,
       "avgCandidateScore": 81,
       "avgRawScore": 82.6,
@@ -3168,7 +3168,7 @@
         "반도체 설계/공급망 재가속",
         "AI 인프라 재가속"
       ],
-      "overlapWithExistingTemplateCount": 5,
+      "overlapWithExistingTemplateCount": 7,
       "members": [
         {
           "ticker": "ADI",
@@ -3176,15 +3176,7 @@
           "assetType": "STOCK",
           "sector": "Technology",
           "industry": "Semiconductors",
-          "alreadyCovered": false
-        },
-        {
-          "ticker": "TXN",
-          "name": "Texas Instruments Incorporated",
-          "assetType": "STOCK",
-          "sector": "Technology",
-          "industry": "Semiconductors",
-          "alreadyCovered": false
+          "alreadyCovered": true
         },
         {
           "ticker": "AMD",
@@ -3221,6 +3213,14 @@
         {
           "ticker": "TSM",
           "name": "Taiwan Semiconductor",
+          "assetType": "STOCK",
+          "sector": "Technology",
+          "industry": "Semiconductors",
+          "alreadyCovered": true
+        },
+        {
+          "ticker": "TXN",
+          "name": "Texas Instruments Incorporated",
           "assetType": "STOCK",
           "sector": "Technology",
           "industry": "Semiconductors",
