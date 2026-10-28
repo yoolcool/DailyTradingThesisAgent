@@ -132,10 +132,10 @@
       "IGV"
     ],
     "stocks": [
-      "CRWD",
-      "PANW",
+      "ZS",
       "FTNT",
-      "ZS"
+      "PANW",
+      "CRWD"
     ],
     "nextBuyer": "사이버보안 지출 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -144,10 +144,10 @@
       "IHAK"
     ],
     "preferredStocks": [
-      "CRWD",
-      "PANW",
+      "ZS",
       "FTNT",
-      "ZS"
+      "PANW",
+      "CRWD"
     ],
     "breakCondition": "HACK 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -157,13 +157,15 @@
     "etfs": [
       "IGV",
       "AIQ",
-      "QQQ",
-      "MAGS"
+      "QQQ"
     ],
     "stocks": [
-      "SHOP",
-      "MSFT",
-      "MSTR"
+      "ADSK",
+      "SNPS",
+      "DDOG",
+      "TEAM",
+      "ROP",
+      "INTU"
     ],
     "nextBuyer": "소프트웨어 실적/AI 수익화을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -172,9 +174,10 @@
       "QQQ"
     ],
     "preferredStocks": [
-      "SHOP",
-      "MSFT",
-      "MSTR"
+      "ADSK",
+      "SNPS",
+      "DDOG",
+      "TEAM"
     ],
     "breakCondition": "IGV 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -401,13 +404,12 @@
     "etfs": [
       "QQQ",
       "SPY",
-      "IWM",
-      "XAR",
-      "SHLD"
+      "IWM"
     ],
     "stocks": [
-      "KTOS",
-      "AVAV"
+      "NOC",
+      "LMT",
+      "RTX"
     ],
     "nextBuyer": "Aerospace & Defense 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -416,8 +418,9 @@
       "IWM"
     ],
     "preferredStocks": [
-      "KTOS",
-      "AVAV"
+      "NOC",
+      "LMT",
+      "RTX"
     ],
     "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -610,6 +613,30 @@
     "preferredStocks": [
       "WMT",
       "COST"
+    ],
+    "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+    "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
+  },
+  {
+    "name": "Staffing & Employment 자금 유입",
+    "etfs": [
+      "QQQ",
+      "SPY",
+      "IWM"
+    ],
+    "stocks": [
+      "ADP",
+      "PAYX"
+    ],
+    "nextBuyer": "Staffing & Employment 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+    "preferredEtfs": [
+      "QQQ",
+      "SPY",
+      "IWM"
+    ],
+    "preferredStocks": [
+      "ADP",
+      "PAYX"
     ],
     "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
