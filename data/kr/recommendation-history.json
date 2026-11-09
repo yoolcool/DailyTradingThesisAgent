@@ -1,8 +1,31 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-06T03:25:41.757Z",
+  "updatedAt": "2026-11-09T02:39:53.407Z",
   "description": "DailyTradingThesisAgent recommendation tracking history. STOCK tracks first regular session; ETF tracks one-week theme/swing window.",
   "items": [
+    {
+      "reportDate": "2026-11-09",
+      "reportGeneratedAt": "2026-11-09T02:39:53.383Z",
+      "reportGeneratedAtET": "2026-11-08 21:39:53 ET",
+      "ticker": "180640.KS",
+      "assetType": "STOCK",
+      "rank": 1,
+      "recommendationPrice": 219000,
+      "recommendationClosePrice": 219000,
+      "narrative": "경기소비재/자동차",
+      "moneyFlowScore": 96,
+      "finalRawScore": 96,
+      "confidence": "MEDIUM",
+      "actionLabel": "자금흐름 예외 조건부",
+      "trackingSessionDate": "2026-11-09",
+      "trackingStatus": "complete",
+      "intradayHighAfterRecommendation": 219000,
+      "trackingClose": 219000,
+      "highReturnPct": 0,
+      "closeReturnPct": 0,
+      "resultLabel": "추적 대기",
+      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음 (일봉 기준)"
+    },
     {
       "reportDate": "2026-11-06",
       "reportGeneratedAt": "2026-11-06T03:25:41.727Z",
@@ -19,12 +42,12 @@
       "actionLabel": "자금흐름 예외 조건부",
       "trackingSessionDate": "2026-11-06",
       "trackingStatus": "complete",
-      "intradayHighAfterRecommendation": 215500,
-      "trackingClose": 214500,
-      "highReturnPct": 0.47,
-      "closeReturnPct": 0,
-      "resultLabel": "추적 대기",
-      "resultComment": "아직 추적 거래일 데이터가 완성되지 않음 (일봉 기준)"
+      "intradayHighAfterRecommendation": 223500,
+      "trackingClose": 196100,
+      "highReturnPct": 4.2,
+      "closeReturnPct": -8.58,
+      "resultLabel": "단타 유효",
+      "resultComment": "장중 기회는 있었지만 종가 유지력은 약함 (일봉 기준)"
     },
     {
       "reportDate": "2026-11-05",
@@ -3080,9 +3103,9 @@
       "trackingEndDate": "2026-06-26",
       "trackingStatus": "complete",
       "weeklyHigh": 150735,
-      "latestClose": 81435,
+      "latestClose": 80685,
       "weeklyHighReturnPct": 2.6,
-      "latestCloseReturnPct": -44.57,
+      "latestCloseReturnPct": -45.08,
       "resultLabel": "단기 고점 후 반납",
       "resultComment": "1주 내 상승 기회는 있었지만 현재가는 반납"
     },
