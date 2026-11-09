@@ -162,8 +162,8 @@
     "stocks": [
       "TEAM",
       "ROP",
-      "INTU",
-      "ADSK"
+      "ADSK",
+      "INTU"
     ],
     "nextBuyer": "소프트웨어 실적/AI 수익화을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -174,8 +174,8 @@
     "preferredStocks": [
       "TEAM",
       "ROP",
-      "INTU",
-      "ADSK"
+      "ADSK",
+      "INTU"
     ],
     "breakCondition": "IGV 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -384,7 +384,9 @@
     ],
     "stocks": [
       "CCEP",
-      "MNST"
+      "KDP",
+      "MNST",
+      "PEP"
     ],
     "nextBuyer": "필수소비재 음료 방어 성장을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -392,7 +394,9 @@
     ],
     "preferredStocks": [
       "CCEP",
-      "MNST"
+      "KDP",
+      "MNST",
+      "PEP"
     ],
     "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -434,8 +438,7 @@
       "AMGN",
       "VRTX",
       "GILD",
-      "REGN",
-      "INSM"
+      "REGN"
     ],
     "nextBuyer": "바이오/헬스케어 촉매을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
