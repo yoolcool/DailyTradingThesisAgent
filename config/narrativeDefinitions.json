@@ -156,8 +156,8 @@
       "QQQ"
     ],
     "stocks": [
-      "ROP",
-      "ADSK"
+      "APP",
+      "MSFT"
     ],
     "nextBuyer": "소프트웨어 실적/AI 수익화을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
     "preferredEtfs": [
@@ -166,8 +166,8 @@
       "QQQ"
     ],
     "preferredStocks": [
-      "ROP",
-      "ADSK"
+      "APP",
+      "MSFT"
     ],
     "breakCondition": "IGV 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
@@ -642,6 +642,32 @@
     "preferredStocks": [
       "ADP",
       "PAYX"
+    ],
+    "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+    "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
+  },
+  {
+    "name": "Telecom Services 자금 유입",
+    "etfs": [
+      "QQQ",
+      "SPY",
+      "IWM"
+    ],
+    "stocks": [
+      "CHTR",
+      "CMCSA",
+      "TMUS"
+    ],
+    "nextBuyer": "Telecom Services 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+    "preferredEtfs": [
+      "QQQ",
+      "SPY",
+      "IWM"
+    ],
+    "preferredStocks": [
+      "CHTR",
+      "CMCSA",
+      "TMUS"
     ],
     "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
     "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입"
