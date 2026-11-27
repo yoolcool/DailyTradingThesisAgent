@@ -13,8 +13,8 @@
     ],
     "sessionLabel": "US regular session"
   },
-  "reportDate": "2026-11-26",
-  "generatedAt": "2026년 11월 26일 목요일 PM 1:44",
+  "reportDate": "2026-11-27",
+  "generatedAt": "2026년 11월 27일 금요일 PM 1:49",
   "marketRegimeAssessment": {
     "label": "중립-하락",
     "score": 33,
@@ -41,9 +41,9 @@
       "status": "UNCHANGED",
       "label": "유지",
       "previousLabel": "중립-하락",
-      "previousScore": 35,
-      "scoreDelta": -2,
-      "summary": "중립-하락 유지, 점수 변화는 제한적이다(-2점)."
+      "previousScore": 32,
+      "scoreDelta": 1,
+      "summary": "중립-하락 유지, 점수 변화는 제한적이다(+1점)."
     },
     "technical": {
       "score": 25,
@@ -82,7 +82,7 @@
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
           "score": 0,
-          "lastClose": 26046.8965,
+          "lastClose": 26046.9004,
           "dataDate": "2026-11-25",
           "dailyChangePct": -0.64,
           "return5dPct": -3.94,
@@ -158,7 +158,7 @@
           "reasons": [
             "High yield credit 20일 -1.38%, 하이일드 위험선호 확인",
             "HYG-LQD 20일 상대강도 -1.59%, 신용위험 선호/회피 확인",
-            "VIX 20일 +67.30%, 변동성 부담 확인"
+            "VIX 20일 +55.81%, 변동성 부담 확인"
           ],
           "watchItems": [
             "VIX 상승은 유동성/리스크 프리미엄 부담으로 해석한다."
@@ -312,10 +312,10 @@
           "dataStatus": "ok",
           "dataFreshness": "FRESH",
           "score": 0,
-          "dataDate": "2026-11-25",
-          "return5dPct": 15.19,
-          "return20dPct": 67.3,
-          "reason": "하락 시 주식 우호; 5일 +15.19%, 20일 +67.30% -> 매크로 점수 0"
+          "dataDate": "2026-11-26",
+          "return5dPct": -5.77,
+          "return20dPct": 55.81,
+          "reason": "하락 시 주식 우호; 5일 -5.77%, 20일 +55.81% -> 매크로 점수 0"
         }
       ]
     },
@@ -507,7 +507,7 @@
         "moneyFlowScoreFinal": 72,
         "finalRawScore": 72,
         "todayActionLabel": "제외",
-        "reasonConfidence": "HIGH",
+        "reasonConfidence": "MEDIUM",
         "oneDayReturn": 0.84,
         "fiveDayReturn": 2.55,
         "twentyDayReturn": 6.97,
@@ -595,7 +595,7 @@
         "moneyFlowScoreFinal": 62,
         "finalRawScore": 62,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": 2.48,
         "fiveDayReturn": 3.99,
         "twentyDayReturn": 5.4,
@@ -639,7 +639,7 @@
         "moneyFlowScoreFinal": 50,
         "finalRawScore": 50,
         "todayActionLabel": "제외",
-        "reasonConfidence": "MEDIUM",
+        "reasonConfidence": "HIGH",
         "oneDayReturn": -0.33,
         "fiveDayReturn": 16.7,
         "twentyDayReturn": -9.75,
@@ -1578,7 +1578,7 @@
         "oneDayReturn": 0.89,
         "fiveDayReturn": 4.77,
         "twentyDayReturn": -9.72,
-        "relativeVolume": 0.81,
+        "relativeVolume": 0.82,
         "relatedEtfs": [
           "HACK",
           "CIBR",
@@ -2331,7 +2331,7 @@
         "oneDayReturn": -1.96,
         "fiveDayReturn": -5.59,
         "twentyDayReturn": -22.11,
-        "relativeVolume": 1.18,
+        "relativeVolume": 1.19,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -2400,7 +2400,7 @@
         "oneDayReturn": 1.34,
         "fiveDayReturn": -6.14,
         "twentyDayReturn": -36.1,
-        "relativeVolume": 1.02,
+        "relativeVolume": 1.03,
         "relatedEtfs": [
           "QQQ",
           "SPY",
@@ -2726,7 +2726,7 @@
         "oneDayReturn": 3.11,
         "fiveDayReturn": -11.47,
         "twentyDayReturn": -44.92,
-        "relativeVolume": 1.4,
+        "relativeVolume": 1.42,
         "relatedEtfs": [
           "IGV",
           "AIQ",
@@ -2749,7 +2749,7 @@
         "oneDayReturn": -0.03,
         "fiveDayReturn": -11.63,
         "twentyDayReturn": -31.53,
-        "relativeVolume": 1.21,
+        "relativeVolume": 1.22,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -2797,7 +2797,7 @@
         "oneDayReturn": -0.74,
         "fiveDayReturn": -11.7,
         "twentyDayReturn": -21.51,
-        "relativeVolume": 1.23,
+        "relativeVolume": 1.24,
         "relatedEtfs": [
           "HACK",
           "CIBR",
@@ -2892,7 +2892,7 @@
         "oneDayReturn": -4.53,
         "fiveDayReturn": -14.75,
         "twentyDayReturn": -38.85,
-        "relativeVolume": 1.42,
+        "relativeVolume": 1.43,
         "relatedEtfs": [
           "DRAM",
           "SMH",
@@ -2940,7 +2940,7 @@
         "oneDayReturn": -0.77,
         "fiveDayReturn": -15.68,
         "twentyDayReturn": -55.44,
-        "relativeVolume": 0.96,
+        "relativeVolume": 0.97,
         "relatedEtfs": [
           "IBIT",
           "BLOK"
@@ -2962,7 +2962,7 @@
         "oneDayReturn": -0.18,
         "fiveDayReturn": -16.13,
         "twentyDayReturn": -37.88,
-        "relativeVolume": 0.83,
+        "relativeVolume": 0.84,
         "relatedEtfs": [
           "IBIT",
           "BLOK"
@@ -2984,7 +2984,7 @@
         "oneDayReturn": 0.18,
         "fiveDayReturn": -17.38,
         "twentyDayReturn": -26.26,
-        "relativeVolume": 0.87,
+        "relativeVolume": 0.88,
         "relatedEtfs": [
           "IBIT",
           "BLOK"
@@ -3006,7 +3006,7 @@
         "oneDayReturn": -1.75,
         "fiveDayReturn": -23.41,
         "twentyDayReturn": -29.81,
-        "relativeVolume": 1.09,
+        "relativeVolume": 1.1,
         "relatedEtfs": [
           "SMH",
           "SOXX",
@@ -3167,7 +3167,7 @@
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
       "summaryReason": "iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ), Copart Inc.(CPRT), Cintas Corporation(CTAS) 중심으로 5일 +1.18%, 20일 -1.43% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 2,
+      "directNewsCount": 1,
       "etfBreadthScore": -3,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
@@ -3312,8 +3312,8 @@
     {
       "name": "사이버보안 지출 재가속",
       "status": "소멸",
-      "narrativeScore": 1,
-      "rawScore": 1,
+      "narrativeScore": 2,
+      "rawScore": 2,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "IHAK",
@@ -3333,13 +3333,13 @@
         "ZS",
         "CRWD"
       ],
-      "whyMoneyIsFlowing": "사이버보안 지출 재가속 관련 iShares Cybersecurity and Tech ETF(IHAK), Amplify Cybersecurity ETF(HACK), First Trust NASDAQ Cybersecurity ETF(CIBR)와 Zscaler Inc.(ZS), CrowdStrike Holdings Inc.(CRWD)의 5일(+0.88%)·20일(-12.11%) 흐름을 함께 본다. 평균 상대 거래량은 0.94배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "사이버보안 지출 재가속 관련 iShares Cybersecurity and Tech ETF(IHAK), Amplify Cybersecurity ETF(HACK), First Trust NASDAQ Cybersecurity ETF(CIBR)와 Zscaler Inc.(ZS), CrowdStrike Holdings Inc.(CRWD)의 5일(+0.88%)·20일(-12.11%) 흐름을 함께 본다. 평균 상대 거래량은 0.94배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
       "likelyNextBuyer": "사이버보안 지출 재가속을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: HACK, CIBR, IHAK / 개별 종목 우선: ZS, CRWD",
       "breakCondition": "HACK 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "iShares Cybersecurity and Tech ETF(IHAK), Amplify Cybersecurity ETF(HACK), Zscaler Inc.(ZS), CrowdStrike Holdings Inc.(CRWD) 중심으로 5일 +0.88%, 20일 -12.11% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
+      "summaryReason": "iShares Cybersecurity and Tech ETF(IHAK), Amplify Cybersecurity ETF(HACK), Zscaler Inc.(ZS), CrowdStrike Holdings Inc.(CRWD) 중심으로 5일 +0.88%, 20일 -12.11% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 1,
       "etfBreadthScore": -3,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
@@ -3367,7 +3367,7 @@
         "PEP",
         "KDP"
       ],
-      "whyMoneyIsFlowing": "필수소비재 음료 방어 성장 관련 Invesco QQQ Trust(QQQ)와 Coca-Cola Europacific Partners PLC(CCEP), PepsiCo Inc.(PEP), Keurig Dr Pepper Inc.(KDP)의 5일(-0.35%)·20일(+1.02%) 흐름을 함께 본다. 평균 상대 거래량은 0.78배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "필수소비재 음료 방어 성장 관련 Invesco QQQ Trust(QQQ)와 Coca-Cola Europacific Partners PLC(CCEP), PepsiCo Inc.(PEP), Keurig Dr Pepper Inc.(KDP)의 5일(-0.35%)·20일(+1.02%) 흐름을 함께 본다. 평균 상대 거래량은 0.79배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "필수소비재 음료 방어 성장을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: KDP, PEP, CCEP",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3412,6 +3412,44 @@
       "stockRelativeVolumeAvg": 1
     },
     {
+      "name": "Aerospace & Defense 자금 유입",
+      "status": "소멸",
+      "narrativeScore": 0,
+      "rawScore": -1,
+      "reasonConfidence": "LOW",
+      "supportEtfs": [
+        "IWM",
+        "QQQ",
+        "SPY"
+      ],
+      "supportStocks": [
+        "LMT",
+        "RTX",
+        "KTOS"
+      ],
+      "representativeEtfs": [
+        "IWM",
+        "QQQ",
+        "SPY"
+      ],
+      "representativeStocks": [
+        "LMT",
+        "RTX",
+        "KTOS"
+      ],
+      "whyMoneyIsFlowing": "Aerospace & Defense 자금 유입 관련 iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY)와 Lockheed Martin(LMT), RTX, Kratos Defense & Security Solutions(KTOS)의 5일(-1.24%)·20일(-9.77%) 흐름을 함께 본다. 평균 상대 거래량은 1.07배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "likelyNextBuyer": "Aerospace & Defense 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
+      "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: LMT, RTX, KTOS",
+      "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
+      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
+      "summaryReason": "iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ), Lockheed Martin(LMT), RTX 중심으로 5일 -1.24%, 20일 -9.77% 흐름이 형성됨. 뉴스 직접성 제한.",
+      "directNewsCount": 0,
+      "etfBreadthScore": -3,
+      "relativeVolumeAvg": 1,
+      "etfRelativeVolumeAvg": 1,
+      "stockRelativeVolumeAvg": 1
+    },
+    {
       "name": "소프트웨어 실적/AI 수익화",
       "status": "약화",
       "narrativeScore": 0,
@@ -3443,44 +3481,6 @@
       "summaryReason": "iShares Expanded Tech-Software Sector ETF(IGV), Global X Artificial Intelligence & Technology ETF(AIQ), AppLovin Corporation(APP), Microsoft Corporation(MSFT) 중심으로 5일 -3.35%, 20일 -1.33% 흐름이 형성됨. 뉴스 직접성 제한.",
       "directNewsCount": 0,
       "etfBreadthScore": -4,
-      "relativeVolumeAvg": 1,
-      "etfRelativeVolumeAvg": 1,
-      "stockRelativeVolumeAvg": 1
-    },
-    {
-      "name": "Aerospace & Defense 자금 유입",
-      "status": "소멸",
-      "narrativeScore": 0,
-      "rawScore": -2,
-      "reasonConfidence": "LOW",
-      "supportEtfs": [
-        "IWM",
-        "QQQ",
-        "SPY"
-      ],
-      "supportStocks": [
-        "LMT",
-        "RTX",
-        "KTOS"
-      ],
-      "representativeEtfs": [
-        "IWM",
-        "QQQ",
-        "SPY"
-      ],
-      "representativeStocks": [
-        "LMT",
-        "RTX",
-        "KTOS"
-      ],
-      "whyMoneyIsFlowing": "Aerospace & Defense 자금 유입 관련 iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ), SPDR S&P 500 ETF Trust(SPY)와 Lockheed Martin(LMT), RTX, Kratos Defense & Security Solutions(KTOS)의 5일(-1.24%)·20일(-9.77%) 흐름을 함께 본다. 평균 상대 거래량은 1.07배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
-      "likelyNextBuyer": "Aerospace & Defense 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
-      "bestTradingVehicle": "ETF 우선: QQQ, SPY, IWM / 개별 종목 우선: LMT, RTX, KTOS",
-      "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
-      "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
-      "summaryReason": "iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ), Lockheed Martin(LMT), RTX 중심으로 5일 -1.24%, 20일 -9.77% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
-      "etfBreadthScore": -3,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
       "stockRelativeVolumeAvg": 1
@@ -3579,7 +3579,7 @@
         "BKNG",
         "ABNB"
       ],
-      "whyMoneyIsFlowing": "Travel Services 자금 유입 관련 Invesco QQQ Trust(QQQ)와 Booking Holdings Inc.(BKNG), Airbnb Inc.(ABNB)의 5일(-3.61%)·20일(-2.63%) 흐름을 함께 본다. 평균 상대 거래량은 0.93배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "Travel Services 자금 유입 관련 Invesco QQQ Trust(QQQ)와 Booking Holdings Inc.(BKNG), Airbnb Inc.(ABNB)의 5일(-3.61%)·20일(-2.63%) 흐름을 함께 본다. 평균 상대 거래량은 0.94배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "Travel Services 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: BKNG, ABNB",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3595,7 +3595,7 @@
       "name": "AI 소프트웨어/사이버보안 확산",
       "status": "소멸",
       "narrativeScore": 0,
-      "rawScore": -9,
+      "rawScore": -8,
       "reasonConfidence": "LOW",
       "supportEtfs": [
         "IGV",
@@ -3620,13 +3620,13 @@
         "DDOG",
         "TEAM"
       ],
-      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 iShares Expanded Tech-Software Sector ETF(IGV), Global X Artificial Intelligence & Technology ETF(AIQ), Invesco QQQ Trust(QQQ)와 Zscaler Inc.(ZS), Palantir Technologies Inc.(PLTR), Datadog Inc.(DDOG), Atlassian Corporation(TEAM)의 5일(+1.13%)·20일(-19.58%) 흐름을 함께 본다. 평균 상대 거래량은 1.01배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "AI 소프트웨어/사이버보안 확산 관련 iShares Expanded Tech-Software Sector ETF(IGV), Global X Artificial Intelligence & Technology ETF(AIQ), Invesco QQQ Trust(QQQ)와 Zscaler Inc.(ZS), Palantir Technologies Inc.(PLTR), Datadog Inc.(DDOG), Atlassian Corporation(TEAM)의 5일(+1.13%)·20일(-19.58%) 흐름을 함께 본다. 평균 상대 거래량은 1.01배이고, ETF 확산도는 추가 확인이 필요하다. 직접 뉴스/이벤트가 일부 확인된다.",
       "likelyNextBuyer": "AI 소프트웨어 실적 기대를 사는 ETF 자금, 엔터프라이즈 소프트웨어 스윙 트레이더, 신고가 추종 자금",
       "bestTradingVehicle": "ETF 우선: IGV, AIQ, QQQ / 개별 종목 우선: PLTR, DDOG, TEAM",
       "breakCondition": "IGV/AIQ 20일선 이탈, 관련 소프트웨어 종목 절반 이상 5일선 이탈, 상대 거래량 둔화",
       "todayAction": "추격보다 눌림 후 재상승 확인",
-      "summaryReason": "iShares Expanded Tech-Software Sector ETF(IGV), Global X Artificial Intelligence & Technology ETF(AIQ), Zscaler Inc.(ZS), Palantir Technologies Inc.(PLTR) 중심으로 5일 +1.13%, 20일 -19.58% 흐름이 형성됨. 뉴스 직접성 제한.",
-      "directNewsCount": 0,
+      "summaryReason": "iShares Expanded Tech-Software Sector ETF(IGV), Global X Artificial Intelligence & Technology ETF(AIQ), Zscaler Inc.(ZS), Palantir Technologies Inc.(PLTR) 중심으로 5일 +1.13%, 20일 -19.58% 흐름이 형성됨. 직접 촉매 일부 확인.",
+      "directNewsCount": 1,
       "etfBreadthScore": -4,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
@@ -3658,7 +3658,7 @@
         "COIN",
         "TSLA"
       ],
-      "whyMoneyIsFlowing": "위험선호 성장주 재진입 관련 Invesco QQQ Trust(QQQ), Renaissance IPO ETF(IPO), ARK Innovation ETF(ARKK)와 Arm Holdings plc(ARM), Coinbase(COIN), Tesla Inc.(TSLA)의 5일(-4.44%)·20일(-16.89%) 흐름을 함께 본다. 평균 상대 거래량은 1.04배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "위험선호 성장주 재진입 관련 Invesco QQQ Trust(QQQ), Renaissance IPO ETF(IPO), ARK Innovation ETF(ARKK)와 Arm Holdings plc(ARM), Coinbase(COIN), Tesla Inc.(TSLA)의 5일(-4.44%)·20일(-16.89%) 흐름을 함께 본다. 평균 상대 거래량은 1.05배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "위험선호 회복을 사는 성장주 ETF 자금과 고베타 단기 모멘텀 자금",
       "bestTradingVehicle": "ETF 우선: QQQ, IPO, ARKK / 개별 종목 우선: ARM, COIN, TSLA",
       "breakCondition": "QQQ/IWM 동반 약화, 고베타 성장주 상대 거래량 둔화",
@@ -3806,7 +3806,7 @@
         "GOOGL",
         "GOOG"
       ],
-      "whyMoneyIsFlowing": "Internet Content 자금 유입 관련 Invesco QQQ Trust(QQQ)와 Meta Platforms Inc.(META), Alphabet Inc. Class A(GOOGL), Alphabet Inc. Class C(GOOG)의 5일(-2.79%)·20일(-11.20%) 흐름을 함께 본다. 평균 상대 거래량은 1.03배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "Internet Content 자금 유입 관련 Invesco QQQ Trust(QQQ)와 Meta Platforms Inc.(META), Alphabet Inc. Class A(GOOGL), Alphabet Inc. Class C(GOOG)의 5일(-2.79%)·20일(-11.20%) 흐름을 함께 본다. 평균 상대 거래량은 1.04배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "Internet Content 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: QQQ / 개별 종목 우선: META, GOOGL, GOOG",
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3958,7 +3958,7 @@
         "MARA",
         "CIFR"
       ],
-      "whyMoneyIsFlowing": "Bitcoin Mining 자금 유입 관련 iShares Bitcoin Trust ETF(IBIT), Amplify Transformational Data Sharing ETF(BLOK)와 Riot Platforms(RIOT), MARA Holdings(MARA), Cipher Mining(CIFR)의 5일(-10.51%)·20일(-19.18%) 흐름을 함께 본다. 평균 상대 거래량은 0.97배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "Bitcoin Mining 자금 유입 관련 iShares Bitcoin Trust ETF(IBIT), Amplify Transformational Data Sharing ETF(BLOK)와 Riot Platforms(RIOT), MARA Holdings(MARA), Cipher Mining(CIFR)의 5일(-10.51%)·20일(-19.18%) 흐름을 함께 본다. 평균 상대 거래량은 0.98배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "Bitcoin Mining 자금 유입을 확인한 섹터 ETF 자금과 상대강도 추종 스윙 자금",
       "bestTradingVehicle": "ETF 우선: IBIT, BLOK / 개별 종목 우선: RIOT, MARA, CIFR",
       "breakCondition": "IBIT 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
@@ -3994,7 +3994,7 @@
         "COIN",
         "IREN"
       ],
-      "whyMoneyIsFlowing": "비트코인/디지털 자산 위험선호 관련 iShares Bitcoin Trust ETF(IBIT), Amplify Transformational Data Sharing ETF(BLOK)와 Strategy Inc.(MSTR), Coinbase(COIN), IREN의 5일(-10.73%)·20일(-29.04%) 흐름을 함께 본다. 평균 상대 거래량은 1.03배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
+      "whyMoneyIsFlowing": "비트코인/디지털 자산 위험선호 관련 iShares Bitcoin Trust ETF(IBIT), Amplify Transformational Data Sharing ETF(BLOK)와 Strategy Inc.(MSTR), Coinbase(COIN), IREN의 5일(-10.73%)·20일(-29.04%) 흐름을 함께 본다. 평균 상대 거래량은 1.04배이고, ETF 확산도는 추가 확인이 필요하다. 뉴스 직접성은 아직 제한적이다.",
       "likelyNextBuyer": "비트코인 현물 ETF와 디지털 자산 베타를 사는 위험선호 자금",
       "bestTradingVehicle": "ETF 우선: IBIT, BLOK / 개별 종목 우선: MSTR, COIN, IREN",
       "breakCondition": "IBIT/BLOK 20일선 이탈 또는 채굴주 상대강도 급락",
@@ -4113,7 +4113,7 @@
       "breakCondition": "QQQ 20일선 이탈 또는 관련 종목 절반 이상 5일선 이탈",
       "todayAction": "기존 네러티브와 중복을 확인한 뒤 ETF/대표 종목 동조성이 살아날 때만 관찰 편입",
       "summaryReason": "iShares Russell 2000 ETF(IWM), Invesco QQQ Trust(QQQ), Copart Inc.(CPRT), Cintas Corporation(CTAS) 중심으로 5일 +1.18%, 20일 -1.43% 흐름이 형성됨. 직접 촉매 일부 확인.",
-      "directNewsCount": 2,
+      "directNewsCount": 1,
       "etfBreadthScore": -3,
       "relativeVolumeAvg": 1,
       "etfRelativeVolumeAvg": 1,
@@ -4155,13 +4155,13 @@
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "MEDIUM",
-      "reasonConfidenceExplanation": "보조 근거 일부 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / regulation / under_6h / mixed - Insmed (INSM) Boards Back $39.1 Billion All Cash Deal and Set 2027 Timeline",
+      "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "INSM",
-        "checkedAt": "2026-11-26T04:44:29.960Z",
+        "checkedAt": "2026-11-27T04:49:50.909Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4200,7 +4200,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-11-26T01:17:32.000Z",
+        "lastPublishedAt": "2026-11-27T01:15:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -4211,7 +4211,7 @@
           "publishedAt": "2026-11-26T01:17:32.000Z",
           "eventType": "regulation",
           "direction": "mixed",
-          "freshnessBucket": "under_6h",
+          "freshnessBucket": "under_72h",
           "url": "https://finance.yahoo.com/healthcare/articles/insmed-insm-boards-back-39-011732940.html?.tsrc=rss"
         },
         "items": [
@@ -4229,7 +4229,7 @@
             "eventType": "regulation",
             "directness": "direct_ticker",
             "direction": "mixed",
-            "freshnessBucket": "under_6h",
+            "freshnessBucket": "under_72h",
             "url": "https://finance.yahoo.com/healthcare/articles/insmed-insm-boards-back-39-011732940.html?.tsrc=rss"
           },
           {
@@ -4246,25 +4246,25 @@
             "eventType": "mna",
             "directness": "direct_ticker",
             "direction": "positive",
-            "freshnessBucket": "under_24h",
+            "freshnessBucket": "under_72h",
             "url": "https://finance.yahoo.com/healthcare/articles/sanofi-apos-insmed-acquisition-provides-160426753.html?.tsrc=rss"
           },
           {
-            "title": "International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave",
-            "summary": "International Biotechnology Trust Plc (LSE:IBT, OTC:IBITF) portfolio manager Ailsa Craig talked with Proactive's Stephen Gunnion about Sanofi’s US$41 billion acquisition of Insmed, the implications for shareholders and the growing wave of mergers and acquisitions across biotechnology. Craig explained how the trust’s actively managed strategy targets companies with characteristics attractive to major pharmaceutical groups. Insmed was its largest portfolio holding ahead of the deal, with Sanofi’s US$175-per-share offer representing a 46% premium to the pre-announcement share price and potentially boosting the trust’s net asset value (NAV). She also discussed the sustainability of the trust’s dividend, explaining how acquisition proceeds support its capital-funded dividend policy. Craig said the M&A wave was gathering pace, with ten portfolio companies involved in deals this year, against nine last year and a historical annual average of four to five. She identified the pharmaceutical industry's approaching patent cliff, with around US$400 billion in drug sales facing patent expirations, as a major catalyst. More than 70% of new drugs last year originated in biotechnology, underlining the sector’s growing importance to pharmaceutical innovation. Visit Proactive’s YouTube channel for more biotechnology investment news, company interviews and market insights. Don’t forget to like this video, subscribe to the channel and enable notifications for future content. https://www.proactiveinvestors.com/pages/editorialPolicy #InternationalBiotechnologyTrust #IBT #AilsaCraig #Insmed #Sanofi #Biotechnology #BiotechStocks #BiotechInvesting #MergersAndAcquisitions #Pharmaceuticals #PatentCliff #InvestmentTrust #DividendInvesting #HealthcareInvesting #StockMarket #Proactive",
+            "title": "Sanofi upgraded by BofA and Barclays after $41 billion Insmed deal",
+            "summary": "Investing.com -- Bank of America and Barclays have both upgraded Sanofi after it agreed to buy Insmed for about $41 billion, saying the deal helps offset the looming loss of patent protection for its blockbuster drug Dupixent.",
             "koreanSummary": {
-              "title": "International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave",
-              "content": "Insmed Incorporated 관련 기사는 International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave 이슈를 다루며, 주가 변동률 +46.00%, 동반 비교 수치 +70.00%를 핵심 내용으로 봅니다.",
-              "implication": "Insmed Incorporated의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "Sanofi upgraded by BofA and Barclays after $41 billion Insmed deal",
+              "content": "Insmed Incorporated 관련 기사는 투자의견 상향를 다룹니다. 기사 스니펫상 핵심은 Investing.com -- Bank of America and Barclays have both upgraded Sanofi after it agreed to buy Insmed for about $41 billion, saying the deal helps offset the looming loss of pat...입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-11-25T10:50:25.000Z",
-            "eventType": "regulation",
+            "publishedAt": "2026-11-25T12:39:12.000Z",
+            "eventType": "mna",
             "directness": "sector_theme",
             "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://finance.yahoo.com/video/international-biotechnology-trust-sanofi-deal-105025941.html?.tsrc=rss"
+            "freshnessBucket": "under_72h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/sanofi-upgraded-bofa-barclays-41-123912672.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
@@ -4285,10 +4285,10 @@
               "check": "M&A의 금액, 기간, 실적 반영 시점"
             },
             {
-              "title": "International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave",
-              "content": "Insmed Incorporated 관련 기사는 International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave 이슈를 다루며, 주가 변동률 +46.00%, 동반 비교 수치 +70.00%를 핵심 내용으로 봅니다.",
-              "implication": "Insmed Incorporated의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "Sanofi upgraded by BofA and Barclays after $41 billion Insmed deal",
+              "content": "Insmed Incorporated 관련 기사는 투자의견 상향를 다룹니다. 기사 스니펫상 핵심은 Investing.com -- Bank of America and Barclays have both upgraded Sanofi after it agreed to buy Insmed for about $41 billion, saying the deal helps offset the looming loss of pat...입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
@@ -4357,13 +4357,13 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / guidance / under_6h / mixed - Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / guidance / under_6h / mixed - Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / neutral - Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / neutral - Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
       "candidateNewsSummary": {
         "ticker": "CSGP",
-        "checkedAt": "2026-11-26T04:44:29.931Z",
+        "checkedAt": "2026-11-27T04:49:50.908Z",
         "status": "PARTIAL",
-        "source": "CNBC Markets RSS, Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4377,8 +4377,10 @@
           },
           {
             "source": "CNBC Markets RSS",
-            "status": "CONNECTED",
-            "notes": []
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
           },
           {
             "source": "SEC EDGAR RSS",
@@ -4400,21 +4402,38 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-11-26T04:20:18.000Z",
+        "lastPublishedAt": "2026-11-27T01:15:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
+        "headline": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
         "directCatalyst": {
-          "title": "Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
+          "title": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-11-25T23:14:11.000Z",
-          "eventType": "guidance",
-          "direction": "mixed",
-          "freshnessBucket": "under_6h",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/did-improved-market-outlooks-just-231411770.html?.tsrc=rss"
+          "publishedAt": "2026-11-26T15:30:09.000Z",
+          "eventType": "earnings",
+          "direction": "neutral",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-costar-csgp-23-5-153009967.html?.tsrc=rss"
         },
         "items": [
+          {
+            "title": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
+            "summary": "CoStar (CSGP) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+            "koreanSummary": {
+              "title": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
+              "content": "CoStar Group Inc. 관련 기사는 Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report? 이슈를 다루며, 주가 변동률 +23.50%를 핵심 내용으로 봅니다.",
+              "implication": "CoStar Group Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-11-26T15:30:09.000Z",
+            "eventType": "earnings",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/why-costar-csgp-23-5-153009967.html?.tsrc=rss"
+          },
           {
             "title": "Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
             "summary": "CoStar Group recently appointed Catrina Harding as Chief Human Resources Officer and published upgraded outlooks for Canadian retail rents and U.S. hotel performance, highlighting planned hiring in key U.S. cities, a focus on cost efficiency, and continued adoption of AI. Harding’s background in global expansion, acquisitions, and performance-based compensation, combined with CoStar Group’s more confident sector forecasts, points to tighter execution around talent, expenses, and product...",
@@ -4429,49 +4448,38 @@
             "eventType": "guidance",
             "directness": "direct_ticker",
             "direction": "mixed",
-            "freshnessBucket": "under_6h",
+            "freshnessBucket": "under_72h",
             "url": "https://finance.yahoo.com/markets/stocks/articles/did-improved-market-outlooks-just-231411770.html?.tsrc=rss"
           },
           {
-            "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-            "summary": "SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.",
+            "title": "CoStar (CSGP) Stock Is Up 7.8% Today Without Company News",
+            "summary": "CoStar shares rose 7.8% on Tuesday, Nov. 24, without company-specific news, as the S&P 500 fell 0.9%.",
             "koreanSummary": {
-              "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-              "content": "CoStar Group Inc. 관련 정책/규제 뉴스입니다. 기사 스니펫상 핵심 내용은 SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.입니다.",
-              "implication": "정책/규제 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
-              "check": "정책/규제의 금액, 기간, 실적 반영 시점"
+              "title": "CoStar (CSGP) Stock Is Up 7.8% Today Without Company News",
+              "content": "CoStar Group Inc. 관련 기사는 CoStar (CSGP) Stock Is Up 7.8% Today Without Company News 이슈를 다루며, 주가 변동률 +7.80%, 동반 비교 수치 +0.90%를 핵심 내용으로 봅니다.",
+              "implication": "CoStar Group Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
             },
-            "source": "CNBC Markets RSS",
-            "publishedAt": "2026-11-26T02:35:39.000Z",
-            "eventType": "regulation",
-            "directness": "sector_theme",
-            "direction": "positive",
-            "freshnessBucket": "under_6h",
-            "url": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html"
-          },
-          {
-            "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-            "summary": "PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.",
-            "koreanSummary": {
-              "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-              "content": "CoStar Group Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
-            },
-            "source": "MarketWatch RSS",
-            "publishedAt": "2026-11-25T21:36:00.000Z",
-            "eventType": "earnings",
-            "directness": "sector_theme",
-            "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://www.marketwatch.com/story/hps-stock-is-a-standout-gainer-in-the-tech-rout-as-an-earnings-beat-still-matters-8f6c76ad?mod=mw_rss_topstories"
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-11-24T20:45:33.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_72h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/costar-csgp-stock-7-8-204533055.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?\"입니다.",
-          "directLine": "CoStar Group Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?\"이며, 가이던스 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?\"입니다.",
+          "directLine": "CoStar Group Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?\"이며, 실적 재료로 봅니다.",
           "bullets": [
+            {
+              "title": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
+              "content": "CoStar Group Inc. 관련 기사는 Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report? 이슈를 다루며, 주가 변동률 +23.50%를 핵심 내용으로 봅니다.",
+              "implication": "CoStar Group Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             {
               "title": "Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
               "content": "CoStar Group Inc. 관련 기사는 투자의견 상향를 다룹니다. 기사 스니펫상 핵심은 CoStar Group recently appointed Catrina Harding as Chief Human Resources Officer and published upgraded outlooks for Canadian retail rents and U.S.입니다.",
@@ -4479,25 +4487,20 @@
               "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
             },
             {
-              "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-              "content": "CoStar Group Inc. 관련 정책/규제 뉴스입니다. 기사 스니펫상 핵심 내용은 SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.입니다.",
-              "implication": "정책/규제 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
-              "check": "정책/규제의 금액, 기간, 실적 반영 시점"
-            },
-            {
-              "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-              "content": "CoStar Group Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              "title": "CoStar (CSGP) Stock Is Up 7.8% Today Without Company News",
+              "content": "CoStar Group Inc. 관련 기사는 CoStar (CSGP) Stock Is Up 7.8% Today Without Company News 이슈를 다루며, 주가 변동률 +7.80%, 동반 비교 수치 +0.90%를 핵심 내용으로 봅니다.",
+              "implication": "CoStar Group Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
         "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?"
       },
       "tieBreakerReason": "최종 원점수 100, 리스크 패널티 0, 5일 수익률 +13.78%, 상대 거래량 1.35배 순으로 정렬",
       "entryQualityScore": 27,
@@ -4564,7 +4567,7 @@
       "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "PDD",
-        "checkedAt": "2026-11-26T04:44:29.980Z",
+        "checkedAt": "2026-11-27T04:49:50.862Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Federal Reserve RSS, Yahoo Finance RSS",
         "sourceStatuses": [
@@ -4605,7 +4608,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-11-25T22:45:00.000Z",
+        "lastPublishedAt": "2026-11-27T01:15:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -4668,7 +4671,7 @@
             "eventType": "analyst_upgrade",
             "directness": "direct_ticker",
             "direction": "positive",
-            "freshnessBucket": "under_72h",
+            "freshnessBucket": "stale",
             "url": "https://finance.yahoo.com/markets/stocks/articles/bernstein-gets-bullish-pdd-calls-153056542.html?.tsrc=rss"
           }
         ],
@@ -4770,13 +4773,13 @@
         "summary": "1개 감점 리스크로 총 -4점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving' 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_24h / positive - Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / positive - Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?",
       "candidateNewsSummary": {
         "ticker": "CHTR",
-        "checkedAt": "2026-11-26T04:44:29.965Z",
+        "checkedAt": "2026-11-27T04:49:50.865Z",
         "status": "PARTIAL",
-        "source": "CNBC Markets RSS, Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -4790,8 +4793,10 @@
           },
           {
             "source": "CNBC Markets RSS",
-            "status": "CONNECTED",
-            "notes": []
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
           },
           {
             "source": "SEC EDGAR RSS",
@@ -4813,21 +4818,38 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-11-26T04:20:18.000Z",
+        "lastPublishedAt": "2026-11-27T01:15:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'",
+        "headline": "Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?",
         "directCatalyst": {
-          "title": "CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'",
+          "title": "Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-11-26T01:54:35.000Z",
-          "eventType": "general_market",
-          "direction": "mixed",
-          "freshnessBucket": "under_6h",
-          "url": "https://stocktwits.com/news-articles/markets/equity/chtr-stock-posts-2nd-consecutive-day-of-gains-retail-turns-bullish-the-gift-that-keeps-on-giving/cNbx3BgR9ZT?.tsrc=rss"
+          "publishedAt": "2026-11-26T16:09:04.000Z",
+          "eventType": "mna",
+          "direction": "positive",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/charter-communications-chtr-jumps-cox-160904399.html?.tsrc=rss"
         },
         "items": [
+          {
+            "title": "Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?",
+            "summary": "Why Charter Communications Is Back On Radar After Q3 And Cox Deal Charter Communications (CHTR) is back in focus after an over 8% single day move, fueled by fresh reactions to its recent Cox Communications acquisition and mixed third quarter update. The jump in trading followed a sharp pickup in retail discussion, with online chatter about Charter Communications climbing 154% and sentiment shifting from neutral to bullish in a short window. That reaction sits against Q3 results where reported...",
+            "koreanSummary": {
+              "title": "Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?",
+              "content": "Charter Communications Inc. 관련 기사는 Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap? 이슈를 다루며, 주가 변동률 +8.00%, 동반 비교 수치 +154.00%를 핵심 내용으로 봅니다.",
+              "implication": "Charter Communications Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-11-26T16:09:04.000Z",
+            "eventType": "mna",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/charter-communications-chtr-jumps-cox-160904399.html?.tsrc=rss"
+          },
           {
             "title": "CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'",
             "summary": "Retail sentiment around Charter Communications stock jumped from ‘neutral’ to ‘bullish’ over 24 hours, a marked improvement from the ‘bearish’ territory it was in a week ago.",
@@ -4842,49 +4864,38 @@
             "eventType": "general_market",
             "directness": "direct_ticker",
             "direction": "mixed",
-            "freshnessBucket": "under_6h",
+            "freshnessBucket": "under_72h",
             "url": "https://stocktwits.com/news-articles/markets/equity/chtr-stock-posts-2nd-consecutive-day-of-gains-retail-turns-bullish-the-gift-that-keeps-on-giving/cNbx3BgR9ZT?.tsrc=rss"
           },
           {
-            "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-            "summary": "SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.",
+            "title": "Charter Communications (CHTR) Stock Is Up 7.4% Today Without Company News",
+            "summary": "On Wednesday, Nov. 25, the shares rose 7.4% without company-specific news as the S&P 500 fell 1.3%",
             "koreanSummary": {
-              "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-              "content": "Charter Communications Inc. 관련 정책/규제 뉴스입니다. 기사 스니펫상 핵심 내용은 SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.입니다.",
-              "implication": "정책/규제 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
-              "check": "정책/규제의 금액, 기간, 실적 반영 시점"
+              "title": "Charter Communications (CHTR) Stock Is Up 7.4% Today Without Company News",
+              "content": "Charter Communications Inc. 관련 기사는 Charter Communications (CHTR) Stock Is Up 7.4% Today Without Company News 이슈를 다루며, 주가 변동률 +7.40%, 동반 비교 수치 +1.30%를 핵심 내용으로 봅니다.",
+              "implication": "Charter Communications Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
             },
-            "source": "CNBC Markets RSS",
-            "publishedAt": "2026-11-26T02:35:39.000Z",
-            "eventType": "regulation",
-            "directness": "sector_theme",
-            "direction": "positive",
-            "freshnessBucket": "under_6h",
-            "url": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html"
-          },
-          {
-            "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-            "summary": "PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.",
-            "koreanSummary": {
-              "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-              "content": "Charter Communications Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
-            },
-            "source": "MarketWatch RSS",
-            "publishedAt": "2026-11-25T21:36:00.000Z",
-            "eventType": "earnings",
-            "directness": "sector_theme",
-            "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://www.marketwatch.com/story/hps-stock-is-a-standout-gainer-in-the-tech-rout-as-an-earnings-beat-still-matters-8f6c76ad?mod=mw_rss_topstories"
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-11-25T18:00:17.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_72h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/charter-communications-chtr-stock-7-180017476.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'\"입니다.",
-          "directLine": "Charter Communications Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'\"이며, 시장 일반 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?\"입니다.",
+          "directLine": "Charter Communications Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?\"이며, M&A 재료로 봅니다.",
           "bullets": [
+            {
+              "title": "Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?",
+              "content": "Charter Communications Inc. 관련 기사는 Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap? 이슈를 다루며, 주가 변동률 +8.00%, 동반 비교 수치 +154.00%를 핵심 내용으로 봅니다.",
+              "implication": "Charter Communications Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             {
               "title": "CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'",
               "content": "Charter Communications Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Retail sentiment around Charter Communications stock jumped from ‘neutral’ to ‘bullish’ over 24 hours, a marked improvement from the ‘bearish’ territory it was in a week ago.입니다.",
@@ -4892,25 +4903,20 @@
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-              "content": "Charter Communications Inc. 관련 정책/규제 뉴스입니다. 기사 스니펫상 핵심 내용은 SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.입니다.",
-              "implication": "정책/규제 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
-              "check": "정책/규제의 금액, 기간, 실적 반영 시점"
-            },
-            {
-              "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-              "content": "Charter Communications Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              "title": "Charter Communications (CHTR) Stock Is Up 7.4% Today Without Company News",
+              "content": "Charter Communications Inc. 관련 기사는 Charter Communications (CHTR) Stock Is Up 7.4% Today Without Company News 이슈를 다루며, 주가 변동률 +7.40%, 동반 비교 수치 +1.30%를 핵심 내용으로 봅니다.",
+              "implication": "Charter Communications Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
         "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?"
       },
       "tieBreakerReason": "최종 원점수 87, 리스크 패널티 -4, 5일 수익률 +5.81%, 상대 거래량 1.20배 순으로 정렬",
       "entryQualityScore": 5,
@@ -4983,13 +4989,13 @@
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "MEDIUM",
-      "reasonConfidenceExplanation": "보조 근거 일부 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / regulation / under_6h / mixed - Insmed (INSM) Boards Back $39.1 Billion All Cash Deal and Set 2027 Timeline",
+      "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "INSM",
-        "checkedAt": "2026-11-26T04:44:29.960Z",
+        "checkedAt": "2026-11-27T04:49:50.909Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -5028,7 +5034,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-11-26T01:17:32.000Z",
+        "lastPublishedAt": "2026-11-27T01:15:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -5039,7 +5045,7 @@
           "publishedAt": "2026-11-26T01:17:32.000Z",
           "eventType": "regulation",
           "direction": "mixed",
-          "freshnessBucket": "under_6h",
+          "freshnessBucket": "under_72h",
           "url": "https://finance.yahoo.com/healthcare/articles/insmed-insm-boards-back-39-011732940.html?.tsrc=rss"
         },
         "items": [
@@ -5057,7 +5063,7 @@
             "eventType": "regulation",
             "directness": "direct_ticker",
             "direction": "mixed",
-            "freshnessBucket": "under_6h",
+            "freshnessBucket": "under_72h",
             "url": "https://finance.yahoo.com/healthcare/articles/insmed-insm-boards-back-39-011732940.html?.tsrc=rss"
           },
           {
@@ -5074,25 +5080,25 @@
             "eventType": "mna",
             "directness": "direct_ticker",
             "direction": "positive",
-            "freshnessBucket": "under_24h",
+            "freshnessBucket": "under_72h",
             "url": "https://finance.yahoo.com/healthcare/articles/sanofi-apos-insmed-acquisition-provides-160426753.html?.tsrc=rss"
           },
           {
-            "title": "International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave",
-            "summary": "International Biotechnology Trust Plc (LSE:IBT, OTC:IBITF) portfolio manager Ailsa Craig talked with Proactive's Stephen Gunnion about Sanofi’s US$41 billion acquisition of Insmed, the implications for shareholders and the growing wave of mergers and acquisitions across biotechnology. Craig explained how the trust’s actively managed strategy targets companies with characteristics attractive to major pharmaceutical groups. Insmed was its largest portfolio holding ahead of the deal, with Sanofi’s US$175-per-share offer representing a 46% premium to the pre-announcement share price and potentially boosting the trust’s net asset value (NAV). She also discussed the sustainability of the trust’s dividend, explaining how acquisition proceeds support its capital-funded dividend policy. Craig said the M&A wave was gathering pace, with ten portfolio companies involved in deals this year, against nine last year and a historical annual average of four to five. She identified the pharmaceutical industry's approaching patent cliff, with around US$400 billion in drug sales facing patent expirations, as a major catalyst. More than 70% of new drugs last year originated in biotechnology, underlining the sector’s growing importance to pharmaceutical innovation. Visit Proactive’s YouTube channel for more biotechnology investment news, company interviews and market insights. Don’t forget to like this video, subscribe to the channel and enable notifications for future content. https://www.proactiveinvestors.com/pages/editorialPolicy #InternationalBiotechnologyTrust #IBT #AilsaCraig #Insmed #Sanofi #Biotechnology #BiotechStocks #BiotechInvesting #MergersAndAcquisitions #Pharmaceuticals #PatentCliff #InvestmentTrust #DividendInvesting #HealthcareInvesting #StockMarket #Proactive",
+            "title": "Sanofi upgraded by BofA and Barclays after $41 billion Insmed deal",
+            "summary": "Investing.com -- Bank of America and Barclays have both upgraded Sanofi after it agreed to buy Insmed for about $41 billion, saying the deal helps offset the looming loss of patent protection for its blockbuster drug Dupixent.",
             "koreanSummary": {
-              "title": "International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave",
-              "content": "Insmed Incorporated 관련 기사는 International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave 이슈를 다루며, 주가 변동률 +46.00%, 동반 비교 수치 +70.00%를 핵심 내용으로 봅니다.",
-              "implication": "Insmed Incorporated의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "Sanofi upgraded by BofA and Barclays after $41 billion Insmed deal",
+              "content": "Insmed Incorporated 관련 기사는 투자의견 상향를 다룹니다. 기사 스니펫상 핵심은 Investing.com -- Bank of America and Barclays have both upgraded Sanofi after it agreed to buy Insmed for about $41 billion, saying the deal helps offset the looming loss of pat...입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-11-25T10:50:25.000Z",
-            "eventType": "regulation",
+            "publishedAt": "2026-11-25T12:39:12.000Z",
+            "eventType": "mna",
             "directness": "sector_theme",
             "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://finance.yahoo.com/video/international-biotechnology-trust-sanofi-deal-105025941.html?.tsrc=rss"
+            "freshnessBucket": "under_72h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/sanofi-upgraded-bofa-barclays-41-123912672.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
@@ -5113,10 +5119,10 @@
               "check": "M&A의 금액, 기간, 실적 반영 시점"
             },
             {
-              "title": "International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave",
-              "content": "Insmed Incorporated 관련 기사는 International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave 이슈를 다루며, 주가 변동률 +46.00%, 동반 비교 수치 +70.00%를 핵심 내용으로 봅니다.",
-              "implication": "Insmed Incorporated의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "Sanofi upgraded by BofA and Barclays after $41 billion Insmed deal",
+              "content": "Insmed Incorporated 관련 기사는 투자의견 상향를 다룹니다. 기사 스니펫상 핵심은 Investing.com -- Bank of America and Barclays have both upgraded Sanofi after it agreed to buy Insmed for about $41 billion, saying the deal helps offset the looming loss of pat...입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
@@ -5185,13 +5191,13 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / guidance / under_6h / mixed - Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / guidance / under_6h / mixed - Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / neutral - Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / neutral - Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
       "candidateNewsSummary": {
         "ticker": "CSGP",
-        "checkedAt": "2026-11-26T04:44:29.931Z",
+        "checkedAt": "2026-11-27T04:49:50.908Z",
         "status": "PARTIAL",
-        "source": "CNBC Markets RSS, Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -5205,8 +5211,10 @@
           },
           {
             "source": "CNBC Markets RSS",
-            "status": "CONNECTED",
-            "notes": []
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
           },
           {
             "source": "SEC EDGAR RSS",
@@ -5228,21 +5236,38 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-11-26T04:20:18.000Z",
+        "lastPublishedAt": "2026-11-27T01:15:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
+        "headline": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
         "directCatalyst": {
-          "title": "Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
+          "title": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-11-25T23:14:11.000Z",
-          "eventType": "guidance",
-          "direction": "mixed",
-          "freshnessBucket": "under_6h",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/did-improved-market-outlooks-just-231411770.html?.tsrc=rss"
+          "publishedAt": "2026-11-26T15:30:09.000Z",
+          "eventType": "earnings",
+          "direction": "neutral",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-costar-csgp-23-5-153009967.html?.tsrc=rss"
         },
         "items": [
+          {
+            "title": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
+            "summary": "CoStar (CSGP) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+            "koreanSummary": {
+              "title": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
+              "content": "CoStar Group Inc. 관련 기사는 Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report? 이슈를 다루며, 주가 변동률 +23.50%를 핵심 내용으로 봅니다.",
+              "implication": "CoStar Group Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-11-26T15:30:09.000Z",
+            "eventType": "earnings",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/why-costar-csgp-23-5-153009967.html?.tsrc=rss"
+          },
           {
             "title": "Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
             "summary": "CoStar Group recently appointed Catrina Harding as Chief Human Resources Officer and published upgraded outlooks for Canadian retail rents and U.S. hotel performance, highlighting planned hiring in key U.S. cities, a focus on cost efficiency, and continued adoption of AI. Harding’s background in global expansion, acquisitions, and performance-based compensation, combined with CoStar Group’s more confident sector forecasts, points to tighter execution around talent, expenses, and product...",
@@ -5257,49 +5282,38 @@
             "eventType": "guidance",
             "directness": "direct_ticker",
             "direction": "mixed",
-            "freshnessBucket": "under_6h",
+            "freshnessBucket": "under_72h",
             "url": "https://finance.yahoo.com/markets/stocks/articles/did-improved-market-outlooks-just-231411770.html?.tsrc=rss"
           },
           {
-            "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-            "summary": "SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.",
+            "title": "CoStar (CSGP) Stock Is Up 7.8% Today Without Company News",
+            "summary": "CoStar shares rose 7.8% on Tuesday, Nov. 24, without company-specific news, as the S&P 500 fell 0.9%.",
             "koreanSummary": {
-              "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-              "content": "CoStar Group Inc. 관련 정책/규제 뉴스입니다. 기사 스니펫상 핵심 내용은 SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.입니다.",
-              "implication": "정책/규제 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
-              "check": "정책/규제의 금액, 기간, 실적 반영 시점"
+              "title": "CoStar (CSGP) Stock Is Up 7.8% Today Without Company News",
+              "content": "CoStar Group Inc. 관련 기사는 CoStar (CSGP) Stock Is Up 7.8% Today Without Company News 이슈를 다루며, 주가 변동률 +7.80%, 동반 비교 수치 +0.90%를 핵심 내용으로 봅니다.",
+              "implication": "CoStar Group Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
             },
-            "source": "CNBC Markets RSS",
-            "publishedAt": "2026-11-26T02:35:39.000Z",
-            "eventType": "regulation",
-            "directness": "sector_theme",
-            "direction": "positive",
-            "freshnessBucket": "under_6h",
-            "url": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html"
-          },
-          {
-            "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-            "summary": "PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.",
-            "koreanSummary": {
-              "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-              "content": "CoStar Group Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
-            },
-            "source": "MarketWatch RSS",
-            "publishedAt": "2026-11-25T21:36:00.000Z",
-            "eventType": "earnings",
-            "directness": "sector_theme",
-            "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://www.marketwatch.com/story/hps-stock-is-a-standout-gainer-in-the-tech-rout-as-an-earnings-beat-still-matters-8f6c76ad?mod=mw_rss_topstories"
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-11-24T20:45:33.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_72h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/costar-csgp-stock-7-8-204533055.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?\"입니다.",
-          "directLine": "CoStar Group Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?\"이며, 가이던스 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?\"입니다.",
+          "directLine": "CoStar Group Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?\"이며, 실적 재료로 봅니다.",
           "bullets": [
+            {
+              "title": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
+              "content": "CoStar Group Inc. 관련 기사는 Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report? 이슈를 다루며, 주가 변동률 +23.50%를 핵심 내용으로 봅니다.",
+              "implication": "CoStar Group Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             {
               "title": "Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
               "content": "CoStar Group Inc. 관련 기사는 투자의견 상향를 다룹니다. 기사 스니펫상 핵심은 CoStar Group recently appointed Catrina Harding as Chief Human Resources Officer and published upgraded outlooks for Canadian retail rents and U.S.입니다.",
@@ -5307,25 +5321,20 @@
               "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
             },
             {
-              "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-              "content": "CoStar Group Inc. 관련 정책/규제 뉴스입니다. 기사 스니펫상 핵심 내용은 SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.입니다.",
-              "implication": "정책/규제 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
-              "check": "정책/규제의 금액, 기간, 실적 반영 시점"
-            },
-            {
-              "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-              "content": "CoStar Group Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              "title": "CoStar (CSGP) Stock Is Up 7.8% Today Without Company News",
+              "content": "CoStar Group Inc. 관련 기사는 CoStar (CSGP) Stock Is Up 7.8% Today Without Company News 이슈를 다루며, 주가 변동률 +7.80%, 동반 비교 수치 +0.90%를 핵심 내용으로 봅니다.",
+              "implication": "CoStar Group Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
         "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?"
       },
       "tieBreakerReason": "최종 원점수 100, 리스크 패널티 0, 5일 수익률 +13.78%, 상대 거래량 1.35배 순으로 정렬",
       "entryQualityScore": 27,
@@ -5392,7 +5401,7 @@
       "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "PDD",
-        "checkedAt": "2026-11-26T04:44:29.980Z",
+        "checkedAt": "2026-11-27T04:49:50.862Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Federal Reserve RSS, Yahoo Finance RSS",
         "sourceStatuses": [
@@ -5433,7 +5442,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-11-25T22:45:00.000Z",
+        "lastPublishedAt": "2026-11-27T01:15:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -5496,7 +5505,7 @@
             "eventType": "analyst_upgrade",
             "directness": "direct_ticker",
             "direction": "positive",
-            "freshnessBucket": "under_72h",
+            "freshnessBucket": "stale",
             "url": "https://finance.yahoo.com/markets/stocks/articles/bernstein-gets-bullish-pdd-calls-153056542.html?.tsrc=rss"
           }
         ],
@@ -5603,13 +5612,13 @@
         "summary": "1개 감점 리스크로 총 -6점 반영."
       },
       "reasonConfidence": "MEDIUM",
-      "reasonConfidenceExplanation": "보조 근거 일부 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / regulation / under_6h / mixed - Insmed (INSM) Boards Back $39.1 Billion All Cash Deal and Set 2027 Timeline",
+      "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+      "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "INSM",
-        "checkedAt": "2026-11-26T04:44:29.960Z",
+        "checkedAt": "2026-11-27T04:49:50.909Z",
         "status": "PARTIAL",
-        "source": "Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -5648,7 +5657,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-11-26T01:17:32.000Z",
+        "lastPublishedAt": "2026-11-27T01:15:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -5659,7 +5668,7 @@
           "publishedAt": "2026-11-26T01:17:32.000Z",
           "eventType": "regulation",
           "direction": "mixed",
-          "freshnessBucket": "under_6h",
+          "freshnessBucket": "under_72h",
           "url": "https://finance.yahoo.com/healthcare/articles/insmed-insm-boards-back-39-011732940.html?.tsrc=rss"
         },
         "items": [
@@ -5677,7 +5686,7 @@
             "eventType": "regulation",
             "directness": "direct_ticker",
             "direction": "mixed",
-            "freshnessBucket": "under_6h",
+            "freshnessBucket": "under_72h",
             "url": "https://finance.yahoo.com/healthcare/articles/insmed-insm-boards-back-39-011732940.html?.tsrc=rss"
           },
           {
@@ -5694,25 +5703,25 @@
             "eventType": "mna",
             "directness": "direct_ticker",
             "direction": "positive",
-            "freshnessBucket": "under_24h",
+            "freshnessBucket": "under_72h",
             "url": "https://finance.yahoo.com/healthcare/articles/sanofi-apos-insmed-acquisition-provides-160426753.html?.tsrc=rss"
           },
           {
-            "title": "International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave",
-            "summary": "International Biotechnology Trust Plc (LSE:IBT, OTC:IBITF) portfolio manager Ailsa Craig talked with Proactive's Stephen Gunnion about Sanofi’s US$41 billion acquisition of Insmed, the implications for shareholders and the growing wave of mergers and acquisitions across biotechnology. Craig explained how the trust’s actively managed strategy targets companies with characteristics attractive to major pharmaceutical groups. Insmed was its largest portfolio holding ahead of the deal, with Sanofi’s US$175-per-share offer representing a 46% premium to the pre-announcement share price and potentially boosting the trust’s net asset value (NAV). She also discussed the sustainability of the trust’s dividend, explaining how acquisition proceeds support its capital-funded dividend policy. Craig said the M&A wave was gathering pace, with ten portfolio companies involved in deals this year, against nine last year and a historical annual average of four to five. She identified the pharmaceutical industry's approaching patent cliff, with around US$400 billion in drug sales facing patent expirations, as a major catalyst. More than 70% of new drugs last year originated in biotechnology, underlining the sector’s growing importance to pharmaceutical innovation. Visit Proactive’s YouTube channel for more biotechnology investment news, company interviews and market insights. Don’t forget to like this video, subscribe to the channel and enable notifications for future content. https://www.proactiveinvestors.com/pages/editorialPolicy #InternationalBiotechnologyTrust #IBT #AilsaCraig #Insmed #Sanofi #Biotechnology #BiotechStocks #BiotechInvesting #MergersAndAcquisitions #Pharmaceuticals #PatentCliff #InvestmentTrust #DividendInvesting #HealthcareInvesting #StockMarket #Proactive",
+            "title": "Sanofi upgraded by BofA and Barclays after $41 billion Insmed deal",
+            "summary": "Investing.com -- Bank of America and Barclays have both upgraded Sanofi after it agreed to buy Insmed for about $41 billion, saying the deal helps offset the looming loss of patent protection for its blockbuster drug Dupixent.",
             "koreanSummary": {
-              "title": "International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave",
-              "content": "Insmed Incorporated 관련 기사는 International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave 이슈를 다루며, 주가 변동률 +46.00%, 동반 비교 수치 +70.00%를 핵심 내용으로 봅니다.",
-              "implication": "Insmed Incorporated의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "Sanofi upgraded by BofA and Barclays after $41 billion Insmed deal",
+              "content": "Insmed Incorporated 관련 기사는 투자의견 상향를 다룹니다. 기사 스니펫상 핵심은 Investing.com -- Bank of America and Barclays have both upgraded Sanofi after it agreed to buy Insmed for about $41 billion, saying the deal helps offset the looming loss of pat...입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             },
             "source": "Yahoo Finance RSS",
-            "publishedAt": "2026-11-25T10:50:25.000Z",
-            "eventType": "regulation",
+            "publishedAt": "2026-11-25T12:39:12.000Z",
+            "eventType": "mna",
             "directness": "sector_theme",
             "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://finance.yahoo.com/video/international-biotechnology-trust-sanofi-deal-105025941.html?.tsrc=rss"
+            "freshnessBucket": "under_72h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/sanofi-upgraded-bofa-barclays-41-123912672.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
@@ -5733,10 +5742,10 @@
               "check": "M&A의 금액, 기간, 실적 반영 시점"
             },
             {
-              "title": "International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave",
-              "content": "Insmed Incorporated 관련 기사는 International Biotechnology Trust: Sanofi deal highlights accelerating biotech M&A wave 이슈를 다루며, 주가 변동률 +46.00%, 동반 비교 수치 +70.00%를 핵심 내용으로 봅니다.",
-              "implication": "Insmed Incorporated의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
-              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+              "title": "Sanofi upgraded by BofA and Barclays after $41 billion Insmed deal",
+              "content": "Insmed Incorporated 관련 기사는 투자의견 상향를 다룹니다. 기사 스니펫상 핵심은 Investing.com -- Bank of America and Barclays have both upgraded Sanofi after it agreed to buy Insmed for about $41 billion, saying the deal helps offset the looming loss of pat...입니다.",
+              "implication": "애널리스트 상향은 단기 수급에 우호적일 수 있으나, 목표가 변화가 이미 주가에 반영됐는지 확인해야 합니다.",
+              "check": "M&A의 금액, 기간, 실적 반영 시점"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
@@ -5805,13 +5814,13 @@
         "summary": "직접 감점된 주요 리스크는 없지만 관찰 리스크는 계속 확인해야 한다."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / guidance / under_6h / mixed - Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / guidance / under_6h / mixed - Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / neutral - Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / earnings / under_24h / neutral - Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
       "candidateNewsSummary": {
         "ticker": "CSGP",
-        "checkedAt": "2026-11-26T04:44:29.931Z",
+        "checkedAt": "2026-11-27T04:49:50.908Z",
         "status": "PARTIAL",
-        "source": "CNBC Markets RSS, Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -5825,8 +5834,10 @@
           },
           {
             "source": "CNBC Markets RSS",
-            "status": "CONNECTED",
-            "notes": []
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
           },
           {
             "source": "SEC EDGAR RSS",
@@ -5848,21 +5859,38 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-11-26T04:20:18.000Z",
+        "lastPublishedAt": "2026-11-27T01:15:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
+        "headline": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
         "directCatalyst": {
-          "title": "Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
+          "title": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-11-25T23:14:11.000Z",
-          "eventType": "guidance",
-          "direction": "mixed",
-          "freshnessBucket": "under_6h",
-          "url": "https://finance.yahoo.com/markets/stocks/articles/did-improved-market-outlooks-just-231411770.html?.tsrc=rss"
+          "publishedAt": "2026-11-26T15:30:09.000Z",
+          "eventType": "earnings",
+          "direction": "neutral",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/why-costar-csgp-23-5-153009967.html?.tsrc=rss"
         },
         "items": [
+          {
+            "title": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
+            "summary": "CoStar (CSGP) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.",
+            "koreanSummary": {
+              "title": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
+              "content": "CoStar Group Inc. 관련 기사는 Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report? 이슈를 다루며, 주가 변동률 +23.50%를 핵심 내용으로 봅니다.",
+              "implication": "CoStar Group Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-11-26T15:30:09.000Z",
+            "eventType": "earnings",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/why-costar-csgp-23-5-153009967.html?.tsrc=rss"
+          },
           {
             "title": "Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
             "summary": "CoStar Group recently appointed Catrina Harding as Chief Human Resources Officer and published upgraded outlooks for Canadian retail rents and U.S. hotel performance, highlighting planned hiring in key U.S. cities, a focus on cost efficiency, and continued adoption of AI. Harding’s background in global expansion, acquisitions, and performance-based compensation, combined with CoStar Group’s more confident sector forecasts, points to tighter execution around talent, expenses, and product...",
@@ -5877,49 +5905,38 @@
             "eventType": "guidance",
             "directness": "direct_ticker",
             "direction": "mixed",
-            "freshnessBucket": "under_6h",
+            "freshnessBucket": "under_72h",
             "url": "https://finance.yahoo.com/markets/stocks/articles/did-improved-market-outlooks-just-231411770.html?.tsrc=rss"
           },
           {
-            "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-            "summary": "SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.",
+            "title": "CoStar (CSGP) Stock Is Up 7.8% Today Without Company News",
+            "summary": "CoStar shares rose 7.8% on Tuesday, Nov. 24, without company-specific news, as the S&P 500 fell 0.9%.",
             "koreanSummary": {
-              "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-              "content": "CoStar Group Inc. 관련 정책/규제 뉴스입니다. 기사 스니펫상 핵심 내용은 SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.입니다.",
-              "implication": "정책/규제 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
-              "check": "정책/규제의 금액, 기간, 실적 반영 시점"
+              "title": "CoStar (CSGP) Stock Is Up 7.8% Today Without Company News",
+              "content": "CoStar Group Inc. 관련 기사는 CoStar (CSGP) Stock Is Up 7.8% Today Without Company News 이슈를 다루며, 주가 변동률 +7.80%, 동반 비교 수치 +0.90%를 핵심 내용으로 봅니다.",
+              "implication": "CoStar Group Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
             },
-            "source": "CNBC Markets RSS",
-            "publishedAt": "2026-11-26T02:35:39.000Z",
-            "eventType": "regulation",
-            "directness": "sector_theme",
-            "direction": "positive",
-            "freshnessBucket": "under_6h",
-            "url": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html"
-          },
-          {
-            "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-            "summary": "PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.",
-            "koreanSummary": {
-              "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-              "content": "CoStar Group Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
-            },
-            "source": "MarketWatch RSS",
-            "publishedAt": "2026-11-25T21:36:00.000Z",
-            "eventType": "earnings",
-            "directness": "sector_theme",
-            "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://www.marketwatch.com/story/hps-stock-is-a-standout-gainer-in-the-tech-rout-as-an-earnings-beat-still-matters-8f6c76ad?mod=mw_rss_topstories"
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-11-24T20:45:33.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_72h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/costar-csgp-stock-7-8-204533055.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?\"입니다.",
-          "directLine": "CoStar Group Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?\"이며, 가이던스 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?\"입니다.",
+          "directLine": "CoStar Group Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?\"이며, 실적 재료로 봅니다.",
           "bullets": [
+            {
+              "title": "Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?",
+              "content": "CoStar Group Inc. 관련 기사는 Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report? 이슈를 다루며, 주가 변동률 +23.50%를 핵심 내용으로 봅니다.",
+              "implication": "CoStar Group Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             {
               "title": "Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?",
               "content": "CoStar Group Inc. 관련 기사는 투자의견 상향를 다룹니다. 기사 스니펫상 핵심은 CoStar Group recently appointed Catrina Harding as Chief Human Resources Officer and published upgraded outlooks for Canadian retail rents and U.S.입니다.",
@@ -5927,25 +5944,20 @@
               "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
             },
             {
-              "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-              "content": "CoStar Group Inc. 관련 정책/규제 뉴스입니다. 기사 스니펫상 핵심 내용은 SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.입니다.",
-              "implication": "정책/규제 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
-              "check": "정책/규제의 금액, 기간, 실적 반영 시점"
-            },
-            {
-              "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-              "content": "CoStar Group Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              "title": "CoStar (CSGP) Stock Is Up 7.8% Today Without Company News",
+              "content": "CoStar Group Inc. 관련 기사는 CoStar (CSGP) Stock Is Up 7.8% Today Without Company News 이슈를 다루며, 주가 변동률 +7.80%, 동반 비교 수치 +0.90%를 핵심 내용으로 봅니다.",
+              "implication": "CoStar Group Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
         "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Did Improved Market Outlooks Just Shift CoStar's (CSGP) Investment Narrative?"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Why Is CoStar (CSGP) Up 23.5% Since Last Earnings Report?"
       },
       "tieBreakerReason": "최종 원점수 100, 리스크 패널티 0, 5일 수익률 +13.78%, 상대 거래량 1.35배 순으로 정렬",
       "entryQualityScore": 27,
@@ -6012,7 +6024,7 @@
       "directCatalyst": "",
       "candidateNewsSummary": {
         "ticker": "PDD",
-        "checkedAt": "2026-11-26T04:44:29.980Z",
+        "checkedAt": "2026-11-27T04:49:50.862Z",
         "status": "PARTIAL",
         "source": "MarketWatch RSS, Federal Reserve RSS, Yahoo Finance RSS",
         "sourceStatuses": [
@@ -6053,7 +6065,7 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-11-25T22:45:00.000Z",
+        "lastPublishedAt": "2026-11-27T01:15:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
@@ -6116,7 +6128,7 @@
             "eventType": "analyst_upgrade",
             "directness": "direct_ticker",
             "direction": "positive",
-            "freshnessBucket": "under_72h",
+            "freshnessBucket": "stale",
             "url": "https://finance.yahoo.com/markets/stocks/articles/bernstein-gets-bullish-pdd-calls-153056542.html?.tsrc=rss"
           }
         ],
@@ -6218,13 +6230,13 @@
         "summary": "1개 감점 리스크로 총 -4점 반영."
       },
       "reasonConfidence": "HIGH",
-      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving' 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
-      "directCatalyst": "직접 촉매: Yahoo Finance RSS / general_market / under_6h / mixed - CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'",
+      "reasonConfidenceExplanation": "직접 촉매: Yahoo Finance RSS / mna / under_24h / positive - Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap? 가격/거래량, 관련 ETF 동반 강세, 유동성 근거가 함께 확인되어 HIGH로 분류했다.",
+      "directCatalyst": "직접 촉매: Yahoo Finance RSS / mna / under_24h / positive - Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?",
       "candidateNewsSummary": {
         "ticker": "CHTR",
-        "checkedAt": "2026-11-26T04:44:29.965Z",
+        "checkedAt": "2026-11-27T04:49:50.865Z",
         "status": "PARTIAL",
-        "source": "CNBC Markets RSS, Yahoo Finance RSS, MarketWatch RSS, Federal Reserve RSS",
+        "source": "MarketWatch RSS, Yahoo Finance RSS, Federal Reserve RSS",
         "sourceStatuses": [
           {
             "source": "Yahoo Finance RSS",
@@ -6238,8 +6250,10 @@
           },
           {
             "source": "CNBC Markets RSS",
-            "status": "CONNECTED",
-            "notes": []
+            "status": "FAILED",
+            "notes": [
+              "HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html"
+            ]
           },
           {
             "source": "SEC EDGAR RSS",
@@ -6261,21 +6275,38 @@
             ]
           }
         ],
-        "lastPublishedAt": "2026-11-26T04:20:18.000Z",
+        "lastPublishedAt": "2026-11-27T01:15:00.000Z",
         "freshnessStatus": "FRESH",
         "trendTone": "긍정 우위",
         "directnessLabel": "종목 직접 뉴스 확인",
-        "headline": "CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'",
+        "headline": "Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?",
         "directCatalyst": {
-          "title": "CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'",
+          "title": "Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?",
           "source": "Yahoo Finance RSS",
-          "publishedAt": "2026-11-26T01:54:35.000Z",
-          "eventType": "general_market",
-          "direction": "mixed",
-          "freshnessBucket": "under_6h",
-          "url": "https://stocktwits.com/news-articles/markets/equity/chtr-stock-posts-2nd-consecutive-day-of-gains-retail-turns-bullish-the-gift-that-keeps-on-giving/cNbx3BgR9ZT?.tsrc=rss"
+          "publishedAt": "2026-11-26T16:09:04.000Z",
+          "eventType": "mna",
+          "direction": "positive",
+          "freshnessBucket": "under_24h",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/charter-communications-chtr-jumps-cox-160904399.html?.tsrc=rss"
         },
         "items": [
+          {
+            "title": "Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?",
+            "summary": "Why Charter Communications Is Back On Radar After Q3 And Cox Deal Charter Communications (CHTR) is back in focus after an over 8% single day move, fueled by fresh reactions to its recent Cox Communications acquisition and mixed third quarter update. The jump in trading followed a sharp pickup in retail discussion, with online chatter about Charter Communications climbing 154% and sentiment shifting from neutral to bullish in a short window. That reaction sits against Q3 results where reported...",
+            "koreanSummary": {
+              "title": "Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?",
+              "content": "Charter Communications Inc. 관련 기사는 Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap? 이슈를 다루며, 주가 변동률 +8.00%, 동반 비교 수치 +154.00%를 핵심 내용으로 봅니다.",
+              "implication": "Charter Communications Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-11-26T16:09:04.000Z",
+            "eventType": "mna",
+            "directness": "direct_ticker",
+            "direction": "positive",
+            "freshnessBucket": "under_24h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/charter-communications-chtr-jumps-cox-160904399.html?.tsrc=rss"
+          },
           {
             "title": "CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'",
             "summary": "Retail sentiment around Charter Communications stock jumped from ‘neutral’ to ‘bullish’ over 24 hours, a marked improvement from the ‘bearish’ territory it was in a week ago.",
@@ -6290,49 +6321,38 @@
             "eventType": "general_market",
             "directness": "direct_ticker",
             "direction": "mixed",
-            "freshnessBucket": "under_6h",
+            "freshnessBucket": "under_72h",
             "url": "https://stocktwits.com/news-articles/markets/equity/chtr-stock-posts-2nd-consecutive-day-of-gains-retail-turns-bullish-the-gift-that-keeps-on-giving/cNbx3BgR9ZT?.tsrc=rss"
           },
           {
-            "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-            "summary": "SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.",
+            "title": "Charter Communications (CHTR) Stock Is Up 7.4% Today Without Company News",
+            "summary": "On Wednesday, Nov. 25, the shares rose 7.4% without company-specific news as the S&P 500 fell 1.3%",
             "koreanSummary": {
-              "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-              "content": "Charter Communications Inc. 관련 정책/규제 뉴스입니다. 기사 스니펫상 핵심 내용은 SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.입니다.",
-              "implication": "정책/규제 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
-              "check": "정책/규제의 금액, 기간, 실적 반영 시점"
+              "title": "Charter Communications (CHTR) Stock Is Up 7.4% Today Without Company News",
+              "content": "Charter Communications Inc. 관련 기사는 Charter Communications (CHTR) Stock Is Up 7.4% Today Without Company News 이슈를 다루며, 주가 변동률 +7.40%, 동반 비교 수치 +1.30%를 핵심 내용으로 봅니다.",
+              "implication": "Charter Communications Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
             },
-            "source": "CNBC Markets RSS",
-            "publishedAt": "2026-11-26T02:35:39.000Z",
-            "eventType": "regulation",
-            "directness": "sector_theme",
-            "direction": "positive",
-            "freshnessBucket": "under_6h",
-            "url": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html"
-          },
-          {
-            "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-            "summary": "PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.",
-            "koreanSummary": {
-              "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-              "content": "Charter Communications Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
-            },
-            "source": "MarketWatch RSS",
-            "publishedAt": "2026-11-25T21:36:00.000Z",
-            "eventType": "earnings",
-            "directness": "sector_theme",
-            "direction": "positive",
-            "freshnessBucket": "under_24h",
-            "url": "https://www.marketwatch.com/story/hps-stock-is-a-standout-gainer-in-the-tech-rout-as-an-earnings-beat-still-matters-8f6c76ad?mod=mw_rss_topstories"
+            "source": "Yahoo Finance RSS",
+            "publishedAt": "2026-11-25T18:00:17.000Z",
+            "eventType": "general_market",
+            "directness": "direct_ticker",
+            "direction": "neutral",
+            "freshnessBucket": "under_72h",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/charter-communications-chtr-stock-7-180017476.html?.tsrc=rss"
           }
         ],
         "koreanSummary": {
           "title": "최근 뉴스/동향 한국어 요약",
-          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'\"입니다.",
-          "directLine": "Charter Communications Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'\"이며, 시장 일반 재료로 봅니다.",
+          "overview": "종목 직접 뉴스 확인 상태이며 뉴스 흐름은 긍정 우위입니다. 후보 선정 후 재확인한 핵심 이슈는 \"Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?\"입니다.",
+          "directLine": "Charter Communications Inc.에 대해 직접 촉매로 분류된 뉴스가 확인됐습니다. 핵심은 \"Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?\"이며, M&A 재료로 봅니다.",
           "bullets": [
+            {
+              "title": "Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?",
+              "content": "Charter Communications Inc. 관련 기사는 Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap? 이슈를 다루며, 주가 변동률 +8.00%, 동반 비교 수치 +154.00%를 핵심 내용으로 봅니다.",
+              "implication": "Charter Communications Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
+            },
             {
               "title": "CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'",
               "content": "Charter Communications Inc. 관련 시장 일반 뉴스입니다. 기사 스니펫상 핵심 내용은 Retail sentiment around Charter Communications stock jumped from ‘neutral’ to ‘bullish’ over 24 hours, a marked improvement from the ‘bearish’ territory it was in a week ago.입니다.",
@@ -6340,25 +6360,20 @@
               "check": "원문 수치, 후속 보도, 가격이 진입 조건을 지키는지"
             },
             {
-              "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
-              "content": "Charter Communications Inc. 관련 정책/규제 뉴스입니다. 기사 스니펫상 핵심 내용은 SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.입니다.",
-              "implication": "정책/규제 재료는 실적 가시성이나 밸류에이션 기대에 영향을 줄 수 있어 규모와 일정 확인이 중요합니다.",
-              "check": "정책/규제의 금액, 기간, 실적 반영 시점"
-            },
-            {
-              "title": "HP&#x2019;s stock is a standout gainer in the tech selloff, as an earnings beat still matters",
-              "content": "Charter Communications Inc. 관련 실적 뉴스입니다. 기사 스니펫상 핵심 내용은 PC maker&#x2019;s &#x2018;low-quality&#x2019; beat is enough to propel its shares amid the tech rout.입니다.",
-              "implication": "실적/가이던스 재료는 다음 분기 기대치 변화로 이어질 수 있어 컨센서스 변화와 주가 반응 지속성을 함께 봅니다.",
-              "check": "매출/마진/가이던스 수치, 컨센서스 대비 차이"
+              "title": "Charter Communications (CHTR) Stock Is Up 7.4% Today Without Company News",
+              "content": "Charter Communications Inc. 관련 기사는 Charter Communications (CHTR) Stock Is Up 7.4% Today Without Company News 이슈를 다루며, 주가 변동률 +7.40%, 동반 비교 수치 +1.30%를 핵심 내용으로 봅니다.",
+              "implication": "Charter Communications Inc.의 당일 상대강도 확인에는 도움이 되지만, 실적/가이던스 같은 새 펀더멘털 변화로 보기는 어렵습니다.",
+              "check": "거래량 동반 여부, 장중 고점 유지, 관련 ETF 동반 강세"
             }
           ],
           "tradingImplication": "매매 관점에서는 뉴스 자체보다 가격이 진입 조건을 지키는지, 거래량이 동반되는지, 그리고 뉴스가 이미 주가에 반영됐는지를 우선 확인해야 합니다."
         },
         "notes": [
+          "CNBC Markets RSS: HTTP 403 from https://www.cnbc.com/id/100003114/device/rss/rss.html",
           "SEC EDGAR RSS: no matching RSS items",
           "Finnhub API: FINNHUB_API_KEY not configured"
         ],
-        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: CHTR Stock Posts 2nd Consecutive Day Of Gains: Retail Turns Bullish — 'The Gift That Keeps On Giving'"
+        "oneLine": "종목 직접 뉴스 확인, 흐름은 긍정 우위. 핵심 확인 뉴스: Charter Communications (CHTR) Jumps After Cox Deal, Is It Still Cheap?"
       },
       "tieBreakerReason": "최종 원점수 87, 리스크 패널티 -4, 5일 수익률 +5.81%, 상대 거래량 1.20배 순으로 정렬",
       "entryQualityScore": 5,
@@ -6401,72 +6416,6 @@
   "stockWatchCandidates": [],
   "etfWatchCandidates": [
     {
-      "ticker": "SOXX",
-      "assetType": "ETF",
-      "name": "iShares Semiconductor ETF",
-      "actionLabel": "거래량 확인 전 관찰",
-      "status": "관찰",
-      "moneyFlowScore": 0,
-      "moneyFlowScoreInitial": 0,
-      "moneyFlowScoreFinal": 0,
-      "finalRawScore": -42,
-      "finalDisplayScore": 0,
-      "wasCapped": true,
-      "capReason": "raw score -42 capped to displayed score 0",
-      "formulaText": "-39 + +2 - 4 + +5 + 0 - 6 + 0 = -42 -> 0",
-      "riskPenalty": -6,
-      "riskPenaltySummary": {
-        "totalPenalty": -6,
-        "riskLevel": "LOW",
-        "items": [
-          {
-            "riskType": "MA_BREAK_RISK",
-            "label": "20d moving average break risk",
-            "penalty": -6,
-            "evidence": "Close is below the 20-day moving average.",
-            "action": "Hold off until 20-day moving average is recovered."
-          }
-        ],
-        "watchItems": [],
-        "summary": "1개 감점 리스크로 총 -6점 반영."
-      },
-      "reasonConfidence": "LOW",
-      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Hedge funds are no longer just for the rich. They’re wooing everyday investors",
-      "tieBreakerReason": "최종 원점수 -42, 리스크 패널티 -6, 5일 수익률 -9.78%, 상대 거래량 0.99배 순으로 정렬",
-      "entryQualityScore": 0,
-      "entryQualityLabel": "낮음",
-      "trendStrengthIndex": 0,
-      "trendStateLabel": "잠복",
-      "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
-      "exhaustionRisk": 19,
-      "exhaustionRiskLabel": "낮음",
-      "relativeVolume": 0.99,
-      "marketDataStatus": "ok",
-      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
-      "invalidationCondition": "거래량 회복 실패",
-      "actionGate": {
-        "label": "거래량 확인 전 관찰",
-        "status": "관찰",
-        "reasons": [
-          "Entry Quality 0 < 40",
-          "RVOL 0.99x < 1.00x"
-        ],
-        "rescueType": null
-      },
-      "marketContext": {
-        "marketRegime": "위험회피",
-        "candidateEnvironment": "관찰",
-        "reason": "전체 시장은 위험회피 / 후보는 당일 음봉 또는 약세 / Entry Quality 0 < 40 / RVOL 0.99x < 1.00x"
-      },
-      "linkedNarrative": "AI 인프라 재가속",
-      "narrativeStatus": "소멸",
-      "narrativeScore": 0,
-      "relatedEtfs": [],
-      "closePriceAtRecommendation": 127.98,
-      "recommendationDate": "2026-11-25"
-    },
-    {
       "ticker": "IGV",
       "assetType": "ETF",
       "name": "iShares Expanded Tech-Software Sector ETF",
@@ -6498,7 +6447,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Hedge funds are no longer just for the rich. They’re wooing everyday investors",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SpaceX shares jump on alternative trading platform after Musk says he will expand share donations",
       "tieBreakerReason": "최종 원점수 -32, 리스크 패널티 -6, 5일 수익률 -1.98%, 상대 거래량 0.89배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -6573,7 +6522,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Hedge funds are no longer just for the rich. They’re wooing everyday investors",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SpaceX shares jump on alternative trading platform after Musk says he will expand share donations",
       "tieBreakerReason": "최종 원점수 -50, 리스크 패널티 -11, 5일 수익률 -4.64%, 상대 거래량 0.79배 순으로 정렬",
       "relativeVolume": 0.79,
       "marketDataStatus": "ok",
@@ -6633,7 +6582,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Hedge funds are no longer just for the rich. They’re wooing everyday investors",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SpaceX shares jump on alternative trading platform after Musk says he will expand share donations",
       "tieBreakerReason": "최종 원점수 -19, 리스크 패널티 -6, 5일 수익률 -1.28%, 상대 거래량 0.61배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -6662,7 +6611,7 @@
       },
       "linkedNarrative": "사이버보안 지출 재가속",
       "narrativeStatus": "소멸",
-      "narrativeScore": 1,
+      "narrativeScore": 2,
       "relatedEtfs": [],
       "closePriceAtRecommendation": 94.83,
       "recommendationDate": "2026-11-25"
@@ -6699,7 +6648,7 @@
       },
       "reasonConfidence": "LOW",
       "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
-      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - Hedge funds are no longer just for the rich. They’re wooing everyday investors",
+      "directCatalyst": "직접 촉매: MarketWatch RSS / general_market / under_6h - I hate that Jensen Huang is back at Nvidia, but I love what it&#x2019;s done for my 401(k). Am I a hypocrite?",
       "tieBreakerReason": "최종 원점수 0, 리스크 패널티 -5, 5일 수익률 +0.67%, 상대 거래량 0.71배 순으로 정렬",
       "entryQualityScore": 0,
       "entryQualityLabel": "낮음",
@@ -6729,9 +6678,78 @@
       },
       "linkedNarrative": "사이버보안 지출 재가속",
       "narrativeStatus": "소멸",
-      "narrativeScore": 1,
+      "narrativeScore": 2,
       "relatedEtfs": [],
       "closePriceAtRecommendation": 120.4,
+      "recommendationDate": "2026-11-25"
+    },
+    {
+      "ticker": "IHAK",
+      "assetType": "ETF",
+      "name": "iShares Cybersecurity and Tech ETF",
+      "actionLabel": "거래량 확인 전 관찰",
+      "status": "관찰",
+      "moneyFlowScore": 14,
+      "moneyFlowScoreInitial": 12,
+      "moneyFlowScoreFinal": 14,
+      "finalRawScore": 14,
+      "finalDisplayScore": 14,
+      "wasCapped": false,
+      "capReason": "cap not applied",
+      "formulaText": "+12 + +12 + 0 - 5 + 0 - 5 + 0 = 14",
+      "riskPenalty": -5,
+      "riskPenaltySummary": {
+        "totalPenalty": -5,
+        "riskLevel": "LOW",
+        "items": [
+          {
+            "riskType": "LOW_LIQUIDITY",
+            "label": "low liquidity",
+            "penalty": -5,
+            "evidence": "Liquidity signal: LOW.",
+            "action": "Avoid market-order chasing."
+          }
+        ],
+        "watchItems": [
+          "ETF breadth data not connected"
+        ],
+        "summary": "1개 감점 리스크로 총 -5점 반영."
+      },
+      "reasonConfidence": "LOW",
+      "reasonConfidenceExplanation": "가격/거래량이 약하거나 핵심 보조 근거가 부족해 LOW로 분류했다.",
+      "directCatalyst": "직접 촉매: CNBC Markets RSS / general_market / under_6h - SpaceX shares jump on alternative trading platform after Musk says he will expand share donations",
+      "tieBreakerReason": "최종 원점수 14, 리스크 패널티 -5, 5일 수익률 +2.87%, 상대 거래량 0.85배 순으로 정렬",
+      "entryQualityScore": 0,
+      "entryQualityLabel": "낮음",
+      "trendStrengthIndex": 11,
+      "trendStateLabel": "잠복",
+      "trendDecisionLine": "테마 확산도가 낮아 개별 종목 이벤트성 흐름일 수 있다.",
+      "exhaustionRisk": 18,
+      "exhaustionRiskLabel": "낮음",
+      "relativeVolume": 0.85,
+      "marketDataStatus": "ok",
+      "entryCondition": "상대 거래량 1.0배 회복 후 관찰",
+      "invalidationCondition": "거래량 회복 실패",
+      "actionGate": {
+        "label": "거래량 확인 전 관찰",
+        "status": "관찰",
+        "reasons": [
+          "Entry Quality 0 < 40",
+          "RVOL 0.85x < 1.00x",
+          "거래대금 유동성 LOW/UNKNOWN"
+        ],
+        "rescueType": null
+      },
+      "marketContext": {
+        "marketRegime": "위험회피",
+        "candidateEnvironment": "관찰",
+        "reason": "전체 시장은 위험회피 / Entry Quality 0 < 40 / RVOL 0.85x < 1.00x"
+      },
+      "linkedNarrative": "사이버보안 지출 재가속",
+      "narrativeStatus": "소멸",
+      "narrativeScore": 2,
+      "relatedEtfs": [],
+      "closePriceAtRecommendation": 72.16,
       "recommendationDate": "2026-11-25"
     }
   ],
@@ -6772,8 +6790,8 @@
       "summary": "1개 감점 리스크로 총 -6점 반영."
     },
     "reasonConfidence": "MEDIUM",
-    "reasonConfidenceExplanation": "보조 근거 일부 제한 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
-    "directCatalyst": "직접 촉매: Yahoo Finance RSS / regulation / under_6h / mixed - Insmed (INSM) Boards Back $39.1 Billion All Cash Deal and Set 2027 Timeline",
+    "reasonConfidenceExplanation": "직접 촉매 부재 때문에 HIGH가 아니라 MEDIUM으로 제한했다.",
+    "directCatalyst": "",
     "tieBreakerReason": "최종 원점수 96, 리스크 패널티 -6, 5일 수익률 +42.16%, 상대 거래량 3.28배 순으로 정렬",
     "entryQualityScore": 36,
     "entryQualityLabel": "낮음",
@@ -6814,16 +6832,16 @@
     "priceVolumeStaleFallbackCount": 0,
     "priceVolumeExpiredFallbackCount": 0,
     "priceVolumeMissingCount": 2,
-    "priceAsOfDate": "2026-11-25",
-    "priceAsOfLabel": "2026-11-25 US regular close",
-    "reportGeneratedAtKST": "2026-11-26 13:44",
+    "priceAsOfDate": "2026-11-26",
+    "priceAsOfLabel": "2026-11-26 US regular close",
+    "reportGeneratedAtKST": "2026-11-27 13:49",
     "newsStatus": "PARTIAL",
-    "newsFetchedAt": "2026-11-26T04:44:29.753Z",
-    "newsLastUpdatedAt": "2026-11-26T04:44:29.753Z",
-    "latestNewsPublishedAt": "2026-11-26T04:20:18.000Z",
+    "newsFetchedAt": "2026-11-27T04:49:50.564Z",
+    "newsLastUpdatedAt": "2026-11-27T04:49:50.564Z",
+    "latestNewsPublishedAt": "2026-11-27T04:20:55.000Z",
     "newsFreshnessStatus": "FRESH",
     "newsSources": "Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API",
-    "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS FAILED, Finnhub API DISABLED",
+    "newsSourceStatus": "Yahoo Finance RSS CONNECTED, MarketWatch RSS CONNECTED, CNBC Markets RSS PARTIAL, SEC EDGAR RSS PARTIAL, Federal Reserve RSS CONNECTED, Finnhub API DISABLED",
     "newsReliability": "MEDIUM",
     "etfBreadthStatus": "PARTIAL",
     "etfBreadthSampleCount": "1~4",
@@ -6838,7 +6856,7 @@
       "프리/애프터마켓 확인 불가"
     ],
     "providers": "yfinance, Yahoo Finance RSS, MarketWatch RSS, CNBC Markets RSS, SEC EDGAR RSS, Federal Reserve RSS, Finnhub API, config fallback sample, price-volume dollar-volume fallback",
-    "recommendationSession": "2026-11-25 US regular session",
+    "recommendationSession": "2026-11-26 US regular session",
     "grade": "LOW",
     "warning": "이 리포트는 투자판단 보조용이며, REAL_TEST 모드에서는 일부 데이터가 누락되거나 지연될 수 있다. 실제 주문 전 현재가, 뉴스, 프리마켓/정규장 거래량을 별도 확인해야 한다."
   },
@@ -6847,8 +6865,8 @@
     "screeningUnavailable": false,
     "entryReadyCount": 0,
     "conditionalCount": 4,
-    "watchCount": 83,
-    "banCount": 68,
+    "watchCount": 82,
+    "banCount": 69,
     "actionCandidateCount": 3,
     "mainLimiters": [
       "Entry Quality < 40",
@@ -6863,7 +6881,7 @@
     "items": [
       {
         "label": "RVOL < 1.00x",
-        "count": 83
+        "count": 82
       },
       {
         "label": "거래대금 유동성 낮음",
